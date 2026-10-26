@@ -27,22 +27,9 @@ a few cells short, and replans to the same goal; then a second obstacle hits the
 * **incremental planners**, which keep their search between queries: D* Lite on the lattice and
   D* Lite on the mesh graph (incremental MeshA*).
 
-**Version 2.** This run replaces the first version of the experiment after a review. The changes:
-
-| Problem in v1 | v2 |
-|---|---|
-| No incremental planner; every query was a fresh A* | D* Lite on the lattice and on the mesh graph, checked against the from-scratch optimum after every replan |
-| 8-heading control set whose 40 long primitives were all chains of 1-step primitives | 16-heading car-like set (turning radius 2 cells), redundant primitives removed automatically and tested for |
-| Diagonal steps cut corners | Traces are supercovers: a corner crossing marks both side cells |
-| One blocked cell per edit; 19 of 32 edits left the optimal cost unchanged | A disc of radius 2-4 on the plan, agent replans 4 cells before it; the cost increase is recorded |
-| Collision counts included the start cell of every primitive | Start cells are not counted; MeshA* counts each distinct cell once per expansion, plus its pruning reads |
-| 32 short tasks, one heading draw, kept only if LBA* solved them within 40k expansions | Lengths stratified up to 120 (MovingAI) / 90 (generated), 3 heading draws per pair, only truly unsolvable draws dropped, all drops logged |
-| One timing run, fixed order | 3 repeats in shuffled order; median reported; environment recorded |
-| Weights 1, 2, 5 on query 0 | Weights 1, 1.1, 2, 5, 10 on every query |
-
-Two statements from v1 were also wrong: the maps here are **not** the paper's maps (it uses Labyrinth,
-ht_0_hightown, Moscow_0_512 and one unnamed map; movingai.com was not reachable from the machine that ran this),
-and the paper does not say what language its planner is written in.
+The maps are **not** the paper's maps (it uses Labyrinth, ht_0_hightown, Moscow_0_512 and one unnamed map;
+movingai.com was not reachable from the machine that ran this). The paper does not say what language its planner
+is written in.
 """)
 
 code(r"""
@@ -297,10 +284,10 @@ fig.tight_layout(); plt.show()
 """)
 
 md(r"""
-### Ablation: the v1 control set
+### Ablation: the legacy8 control set
 
-v1 found weighted MeshA* *less* suboptimal than LBA*, the reverse of the paper's Table 1. The same counters on
-the v1 instances with the v1 (legacy, 8-heading) control set:
+Does the gap between weighted MeshA* and LBA* depend on the control set? The same planners with the simplified
+8-heading legacy8 set, whose long primitives are all chains of 1-step primitives, on its own 32 instances:
 """)
 
 code(r"""
