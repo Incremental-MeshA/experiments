@@ -164,7 +164,7 @@ for name in ONE_SHOT:
     axes[2].plot(lw, ys, marker="o", color=COLORS[name], label=DISPLAY[name])
 for ax, title, ylabel in zip(
     axes,
-    ("Стоимость, car16 (v2)", "Время, car16 (v2)", "Стоимость, старый набор legacy8 (v1)\n(LBA* = LazyLBA*, MeshA* = Mesh/ParallA*)"),
+    ("Стоимость, car16", "Время, car16", "Стоимость, упрощённый набор legacy8\n(LBA* = LazyLBA*, MeshA* = Mesh/ParallA*)"),
     ("медиана, % от оптимума", "медиана, % от времени LBA*", "медиана, % от оптимума"),
 ):
     ax.set_xscale("log")

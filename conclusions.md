@@ -9,7 +9,7 @@ replans (2 planners × 561 queries) match the from-scratch optimum. No run hit t
 **One-shot planning (paper setting, `w = 1`, first query).**
 
 * *Collision checks.* MeshA* reads 70% as many cells as our LBA*. The saving is largest on short paths (42% below
-  cost 40) and shrinks on long ones (87% above cost 80). Against a textbook LBA* that checks every primitive
+  cost 40) and shrinks on long ones (74% above cost 80). Against a textbook LBA* that checks every primitive
   before looking at g-values, MeshA* reads about 28% as many cells, which is closer to the paper's claim. In both
   cases MeshA* reads about 2× more cells than LazyLBA*. That is the opposite of the paper's Fig. 5. LazyLBA*
   checks only the primitives it pops, and in this control set most generated primitives are never popped.
@@ -17,15 +17,16 @@ replans (2 planners × 561 queries) match the from-scratch optimum. No run hit t
   5× more nodes, since every cell of a primitive is a queue entry. The paper's 60-80% of LBA* runtime is not
   reproduced here. In Python, per-node interpreter overhead outweighs the cheap grid reads this saves. The
   comparison that carries over to a compiled implementation is the collision-check count.
-* *Mesh/ParallA*.* Median cost is 100.8% of optimal (paper: 100.3-100.7%), optimal in 168 of 561 queries. It is
-  faster than MeshA* (1.7× LBA* time instead of 2.0×), as in the paper.
-* *LazyLBA*.* It is slower than LBA* (1.3× at `w = 1`), as the paper also finds. Grid reads are cheap, so
+* *Mesh/ParallA*.* Median cost is 100.6% of optimal on the first query (100.8% over all 561 queries; paper:
+  100.3-100.7%), optimal in 168 of 561 queries. It is faster than MeshA* (1.7× LBA* time instead of 2.5×), as in
+  the paper.
+* *LazyLBA*.* It is slower than LBA* (1.6× at `w = 1`), as the paper also finds. Grid reads are cheap, so
   checking fewer of them doesn't pay for the extra queue traffic.
 
 **Weighted search.** With the car-like control set, weighted MeshA* is *more* suboptimal than LBA* (at w = 2 / 5
 / 10: 106.0 / 110.7 / 114.0% of optimal, against LBA*'s 104.1 / 108.9 / 112.0%). This is the paper's Table 1
-trend. On the v1 instances with the v1 control set, MeshA* stays at a median of 100% for every weight, so the v1
-"reversal" came from the degenerate control set and not from the algorithm.
+trend. With the 8-heading legacy8 control set (on its own 32 instances), MeshA* stays at a median of 100% for
+every weight, so that effect comes from the degenerate control set and not from the algorithm.
 
 **Incremental replanning (queries 1-2, `w = 1`).**
 
