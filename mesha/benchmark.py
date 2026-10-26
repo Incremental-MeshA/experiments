@@ -418,17 +418,16 @@ def run_benchmark(benchmark: dict | None = None, repeats: int = 3, weights=WEIGH
 
 
 def run_legacy_ablation(weights=(1.0, 2.0, 5.0, 10.0)) -> dict:
-    """The v1 benchmark (8-heading legacy set) with the corrected counters.
+    """Ablation with the 8-heading legacy8 control set on its own 32 instances.
 
-    Used to check whether the v1 finding "weighted MeshA* is less suboptimal than
-    LBA*" comes from the control set.
+    Checks whether "weighted MeshA* is as good as LBA*" depends on the control set.
     """
-    v1 = json.loads((ROOT / "data" / "benchmarks" / "incremental_mesha_v1.json").read_text(encoding="utf-8"))
+    data = json.loads((ROOT / "data" / "benchmarks" / "legacy8_instances.json").read_text(encoding="utf-8"))
     control = build_control_set("legacy8")
     mesh = build_mesh(control)
-    maps = {row["file"]: load_map(MAP_DIR / row["file"]) for row in v1["maps"]}
+    maps = {row["file"]: load_map(MAP_DIR / row["file"]) for row in data["maps"]}
     records = []
-    for instance in v1["instances"]:
+    for instance in data["instances"]:
         for qi, query in enumerate(instance["queries"]):
             grid = apply_blocks(maps[instance["map"]], query["blocks"])
             for weight in weights:
@@ -440,7 +439,7 @@ def run_legacy_ablation(weights=(1.0, 2.0, 5.0, 10.0)) -> dict:
                         "success": r.success, "cost": r.cost if r.success else None,
                         "expansions": r.expansions, "checked_cells": r.checked_cells,
                     })
-    return {"meta": {"control_set": "legacy8", "instances": len(v1["instances"])}, "records": records}
+    return {"meta": {"control_set": "legacy8", "instances": len(data["instances"])}, "records": records}
 
 
 def save_results(results: dict, path: Path | None = None) -> Path:
