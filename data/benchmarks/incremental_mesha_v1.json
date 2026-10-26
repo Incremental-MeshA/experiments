@@ -1,0 +1,2032 @@
+{
+  "problem": "incremental-mesha",
+  "seed": 241210320,
+  "n_tasks_per_map": 8,
+  "control_set": {
+    "name": "car-8x8",
+    "headings": 8,
+    "primitives": 64,
+    "configurations": 72,
+    "description": "Eight headings. Each heading has a 1-step motion, \u00b145 degree 1-step turns, a 5-step straight, and three arcs. Costs are polyline lengths."
+  },
+  "maps": [
+    {
+      "file": "Berlin_2_256.map",
+      "topology": "city",
+      "height": 256,
+      "width": 256,
+      "free": 47938,
+      "note": "MovingAI Berlin street map used with MeshA*."
+    },
+    {
+      "file": "AR0700SR.map",
+      "topology": "indoor",
+      "height": 320,
+      "width": 320,
+      "free": 51586,
+      "note": "MovingAI Dragon Age indoor map used with MeshA*."
+    },
+    {
+      "file": "maze.map",
+      "topology": "maze",
+      "height": 97,
+      "width": 97,
+      "free": 7675,
+      "note": "Wide-corridor maze. Turns need the open junctions."
+    },
+    {
+      "file": "rooms.map",
+      "topology": "rooms",
+      "height": 104,
+      "width": 104,
+      "free": 7040,
+      "note": "Rooms connected by doors."
+    }
+  ],
+  "instances": [
+    {
+      "id": "Berlin_2_256-00",
+      "map": "Berlin_2_256.map",
+      "topology": "city",
+      "grid_optimal": 44.48528137,
+      "reference_cost": 49.55634918610404,
+      "queries": [
+        {
+          "start": [
+            167,
+            77,
+            1
+          ],
+          "goal": [
+            125,
+            71,
+            7
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            143,
+            77,
+            2
+          ],
+          "goal": [
+            125,
+            71,
+            7
+          ],
+          "blocks": [
+            [
+              142,
+              77
+            ]
+          ]
+        },
+        {
+          "start": [
+            134,
+            75,
+            3
+          ],
+          "goal": [
+            125,
+            71,
+            7
+          ],
+          "blocks": [
+            [
+              142,
+              77
+            ],
+            [
+              132,
+              73
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Berlin_2_256-01",
+      "map": "Berlin_2_256.map",
+      "topology": "city",
+      "grid_optimal": 59.3137085,
+      "reference_cost": 66.38477631085024,
+      "queries": [
+        {
+          "start": [
+            137,
+            194,
+            2
+          ],
+          "goal": [
+            143,
+            250,
+            4
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            146,
+            226,
+            0
+          ],
+          "goal": [
+            143,
+            250,
+            4
+          ],
+          "blocks": [
+            [
+              146,
+              227
+            ]
+          ]
+        },
+        {
+          "start": [
+            147,
+            238,
+            0
+          ],
+          "goal": [
+            143,
+            250,
+            4
+          ],
+          "blocks": [
+            [
+              146,
+              227
+            ],
+            [
+              147,
+              241
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Berlin_2_256-02",
+      "map": "Berlin_2_256.map",
+      "topology": "city",
+      "grid_optimal": 39.76955261,
+      "reference_cost": 48.012193308819754,
+      "queries": [
+        {
+          "start": [
+            51,
+            254,
+            0
+          ],
+          "goal": [
+            22,
+            228,
+            7
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            32,
+            238,
+            3
+          ],
+          "goal": [
+            22,
+            228,
+            7
+          ],
+          "blocks": [
+            [
+              31,
+              237
+            ]
+          ]
+        },
+        {
+          "start": [
+            24,
+            231,
+            3
+          ],
+          "goal": [
+            22,
+            228,
+            7
+          ],
+          "blocks": [
+            [
+              31,
+              237
+            ],
+            [
+              23,
+              231
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Berlin_2_256-03",
+      "map": "Berlin_2_256.map",
+      "topology": "city",
+      "grid_optimal": 40.3137085,
+      "reference_cost": 40.31370849898477,
+      "queries": [
+        {
+          "start": [
+            221,
+            97,
+            1
+          ],
+          "goal": [
+            229,
+            134,
+            0
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            221,
+            113,
+            0
+          ],
+          "goal": [
+            229,
+            134,
+            0
+          ],
+          "blocks": [
+            [
+              221,
+              117
+            ]
+          ]
+        },
+        {
+          "start": [
+            223,
+            122,
+            7
+          ],
+          "goal": [
+            229,
+            134,
+            0
+          ],
+          "blocks": [
+            [
+              221,
+              117
+            ],
+            [
+              225,
+              124
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Berlin_2_256-04",
+      "map": "Berlin_2_256.map",
+      "topology": "city",
+      "grid_optimal": 32.55634918,
+      "reference_cost": 35.14213562373095,
+      "queries": [
+        {
+          "start": [
+            166,
+            108,
+            3
+          ],
+          "goal": [
+            177,
+            80,
+            7
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            171,
+            92,
+            5
+          ],
+          "goal": [
+            177,
+            80,
+            7
+          ],
+          "blocks": [
+            [
+              172,
+              91
+            ]
+          ]
+        },
+        {
+          "start": [
+            173,
+            88,
+            4
+          ],
+          "goal": [
+            177,
+            80,
+            7
+          ],
+          "blocks": [
+            [
+              172,
+              91
+            ],
+            [
+              173,
+              84
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Berlin_2_256-05",
+      "map": "Berlin_2_256.map",
+      "topology": "city",
+      "grid_optimal": 45.55634918,
+      "reference_cost": 47.21320343559642,
+      "queries": [
+        {
+          "start": [
+            62,
+            1,
+            6
+          ],
+          "goal": [
+            61,
+            42,
+            1
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            56,
+            21,
+            0
+          ],
+          "goal": [
+            61,
+            42,
+            1
+          ],
+          "blocks": [
+            [
+              56,
+              23
+            ]
+          ]
+        },
+        {
+          "start": [
+            59,
+            31,
+            0
+          ],
+          "goal": [
+            61,
+            42,
+            1
+          ],
+          "blocks": [
+            [
+              56,
+              23
+            ],
+            [
+              60,
+              32
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Berlin_2_256-06",
+      "map": "Berlin_2_256.map",
+      "topology": "city",
+      "grid_optimal": 39.62741699,
+      "reference_cost": 44.698484809834994,
+      "queries": [
+        {
+          "start": [
+            36,
+            114,
+            5
+          ],
+          "goal": [
+            52,
+            81,
+            1
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            44,
+            98,
+            5
+          ],
+          "goal": [
+            52,
+            81,
+            1
+          ],
+          "blocks": [
+            [
+              46,
+              94
+            ]
+          ]
+        },
+        {
+          "start": [
+            48,
+            90,
+            5
+          ],
+          "goal": [
+            52,
+            81,
+            1
+          ],
+          "blocks": [
+            [
+              46,
+              94
+            ],
+            [
+              50,
+              88
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Berlin_2_256-07",
+      "map": "Berlin_2_256.map",
+      "topology": "city",
+      "grid_optimal": 34.79898987,
+      "reference_cost": 34.798989873223334,
+      "queries": [
+        {
+          "start": [
+            30,
+            112,
+            4
+          ],
+          "goal": [
+            44,
+            83,
+            4
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            36,
+            99,
+            4
+          ],
+          "goal": [
+            44,
+            83,
+            4
+          ],
+          "blocks": [
+            [
+              37,
+              96
+            ]
+          ]
+        },
+        {
+          "start": [
+            40,
+            92,
+            5
+          ],
+          "goal": [
+            44,
+            83,
+            4
+          ],
+          "blocks": [
+            [
+              37,
+              96
+            ],
+            [
+              40,
+              91
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AR0700SR-00",
+      "map": "AR0700SR.map",
+      "topology": "indoor",
+      "grid_optimal": 42.04163055,
+      "reference_cost": 51.698484809834994,
+      "queries": [
+        {
+          "start": [
+            194,
+            163,
+            1
+          ],
+          "goal": [
+            191,
+            128,
+            1
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            204,
+            148,
+            4
+          ],
+          "goal": [
+            191,
+            128,
+            1
+          ],
+          "blocks": [
+            [
+              204,
+              144
+            ]
+          ]
+        },
+        {
+          "start": [
+            203,
+            137,
+            3
+          ],
+          "goal": [
+            191,
+            128,
+            1
+          ],
+          "blocks": [
+            [
+              204,
+              144
+            ],
+            [
+              202,
+              136
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AR0700SR-01",
+      "map": "AR0700SR.map",
+      "topology": "indoor",
+      "grid_optimal": 68.22539673,
+      "reference_cost": 68.22539674441619,
+      "queries": [
+        {
+          "start": [
+            156,
+            95,
+            0
+          ],
+          "goal": [
+            112,
+            145,
+            1
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            136,
+            117,
+            1
+          ],
+          "goal": [
+            112,
+            145,
+            1
+          ],
+          "blocks": [
+            [
+              131,
+              122
+            ]
+          ]
+        },
+        {
+          "start": [
+            124,
+            130,
+            1
+          ],
+          "goal": [
+            112,
+            145,
+            1
+          ],
+          "blocks": [
+            [
+              131,
+              122
+            ],
+            [
+              122,
+              132
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AR0700SR-02",
+      "map": "AR0700SR.map",
+      "topology": "indoor",
+      "grid_optimal": 50.79898987,
+      "reference_cost": 69.04163056034261,
+      "queries": [
+        {
+          "start": [
+            317,
+            130,
+            4
+          ],
+          "goal": [
+            303,
+            175,
+            5
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            308,
+            145,
+            0
+          ],
+          "goal": [
+            303,
+            175,
+            5
+          ],
+          "blocks": [
+            [
+              308,
+              150
+            ]
+          ]
+        },
+        {
+          "start": [
+            300,
+            160,
+            0
+          ],
+          "goal": [
+            303,
+            175,
+            5
+          ],
+          "blocks": [
+            [
+              308,
+              150
+            ],
+            [
+              300,
+              163
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AR0700SR-03",
+      "map": "AR0700SR.map",
+      "topology": "indoor",
+      "grid_optimal": 53.87005768,
+      "reference_cost": 57.28427124746191,
+      "queries": [
+        {
+          "start": [
+            242,
+            263,
+            5
+          ],
+          "goal": [
+            196,
+            258,
+            3
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            221,
+            268,
+            2
+          ],
+          "goal": [
+            196,
+            258,
+            3
+          ],
+          "blocks": [
+            [
+              218,
+              267
+            ]
+          ]
+        },
+        {
+          "start": [
+            213,
+            264,
+            2
+          ],
+          "goal": [
+            196,
+            258,
+            3
+          ],
+          "blocks": [
+            [
+              218,
+              267
+            ],
+            [
+              208,
+              264
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AR0700SR-04",
+      "map": "AR0700SR.map",
+      "topology": "indoor",
+      "grid_optimal": 66.42640686,
+      "reference_cost": 69.25483399593904,
+      "queries": [
+        {
+          "start": [
+            79,
+            201,
+            0
+          ],
+          "goal": [
+            44,
+            206,
+            3
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            70,
+            187,
+            2
+          ],
+          "goal": [
+            44,
+            206,
+            3
+          ],
+          "blocks": [
+            [
+              69,
+              188
+            ]
+          ]
+        },
+        {
+          "start": [
+            60,
+            195,
+            2
+          ],
+          "goal": [
+            44,
+            206,
+            3
+          ],
+          "blocks": [
+            [
+              69,
+              188
+            ],
+            [
+              56,
+              197
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AR0700SR-05",
+      "map": "AR0700SR.map",
+      "topology": "indoor",
+      "grid_optimal": 29.79898987,
+      "reference_cost": 36.62741699796952,
+      "queries": [
+        {
+          "start": [
+            159,
+            132,
+            5
+          ],
+          "goal": [
+            140,
+            113,
+            7
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            148,
+            124,
+            3
+          ],
+          "goal": [
+            140,
+            113,
+            7
+          ],
+          "blocks": [
+            [
+              146,
+              120
+            ]
+          ]
+        },
+        {
+          "start": [
+            145,
+            119,
+            4
+          ],
+          "goal": [
+            140,
+            113,
+            7
+          ],
+          "blocks": [
+            [
+              146,
+              120
+            ],
+            [
+              143,
+              115
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AR0700SR-06",
+      "map": "AR0700SR.map",
+      "topology": "indoor",
+      "grid_optimal": 60.07106781,
+      "reference_cost": 60.071067811865476,
+      "queries": [
+        {
+          "start": [
+            201,
+            305,
+            3
+          ],
+          "goal": [
+            143,
+            310,
+            2
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            170,
+            309,
+            2
+          ],
+          "goal": [
+            143,
+            310,
+            2
+          ],
+          "blocks": [
+            [
+              169,
+              309
+            ]
+          ]
+        },
+        {
+          "start": [
+            158,
+            310,
+            2
+          ],
+          "goal": [
+            143,
+            310,
+            2
+          ],
+          "blocks": [
+            [
+              169,
+              309
+            ],
+            [
+              156,
+              310
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AR0700SR-07",
+      "map": "AR0700SR.map",
+      "topology": "indoor",
+      "grid_optimal": 44.89949493,
+      "reference_cost": 49.485281374238575,
+      "queries": [
+        {
+          "start": [
+            101,
+            155,
+            5
+          ],
+          "goal": [
+            102,
+            197,
+            7
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            98,
+            173,
+            0
+          ],
+          "goal": [
+            102,
+            197,
+            7
+          ],
+          "blocks": [
+            [
+              98,
+              176
+            ]
+          ]
+        },
+        {
+          "start": [
+            97,
+            183,
+            0
+          ],
+          "goal": [
+            102,
+            197,
+            7
+          ],
+          "blocks": [
+            [
+              98,
+              176
+            ],
+            [
+              97,
+              186
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maze-00",
+      "map": "maze.map",
+      "topology": "maze",
+      "grid_optimal": 26.570660511172846,
+      "reference_cost": 87.59797974644664,
+      "queries": [
+        {
+          "start": [
+            16,
+            68,
+            0
+          ],
+          "goal": [
+            7,
+            93,
+            2
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            19,
+            66,
+            0
+          ],
+          "goal": [
+            7,
+            93,
+            2
+          ],
+          "blocks": [
+            [
+              19,
+              70
+            ]
+          ]
+        },
+        {
+          "start": [
+            14,
+            82,
+            2
+          ],
+          "goal": [
+            7,
+            93,
+            2
+          ],
+          "blocks": [
+            [
+              19,
+              70
+            ],
+            [
+              11,
+              83
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maze-01",
+      "map": "maze.map",
+      "topology": "maze",
+      "grid_optimal": 31.89043743820395,
+      "reference_cost": 101.28427124746189,
+      "queries": [
+        {
+          "start": [
+            59,
+            34,
+            3
+          ],
+          "goal": [
+            38,
+            10,
+            3
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            67,
+            8,
+            4
+          ],
+          "goal": [
+            38,
+            10,
+            3
+          ],
+          "blocks": [
+            [
+              66,
+              5
+            ]
+          ]
+        },
+        {
+          "start": [
+            46,
+            4,
+            2
+          ],
+          "goal": [
+            38,
+            10,
+            3
+          ],
+          "blocks": [
+            [
+              66,
+              5
+            ],
+            [
+              45,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maze-02",
+      "map": "maze.map",
+      "topology": "maze",
+      "grid_optimal": 37.16180835212409,
+      "reference_cost": 270.5391052434011,
+      "queries": [
+        {
+          "start": [
+            44,
+            81,
+            3
+          ],
+          "goal": [
+            59,
+            47,
+            2
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            62,
+            16,
+            3
+          ],
+          "goal": [
+            59,
+            47,
+            2
+          ],
+          "blocks": [
+            [
+              60,
+              14
+            ]
+          ]
+        },
+        {
+          "start": [
+            73,
+            25,
+            5
+          ],
+          "goal": [
+            59,
+            47,
+            2
+          ],
+          "blocks": [
+            [
+              60,
+              14
+            ],
+            [
+              75,
+              23
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maze-03",
+      "map": "maze.map",
+      "topology": "maze",
+      "grid_optimal": 31.622776601683793,
+      "reference_cost": 38.14213562373095,
+      "queries": [
+        {
+          "start": [
+            41,
+            3,
+            3
+          ],
+          "goal": [
+            71,
+            13,
+            0
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            54,
+            5,
+            6
+          ],
+          "goal": [
+            71,
+            13,
+            0
+          ],
+          "blocks": [
+            [
+              59,
+              5
+            ]
+          ]
+        },
+        {
+          "start": [
+            63,
+            5,
+            6
+          ],
+          "goal": [
+            71,
+            13,
+            0
+          ],
+          "blocks": [
+            [
+              59,
+              5
+            ],
+            [
+              64,
+              5
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maze-04",
+      "map": "maze.map",
+      "topology": "maze",
+      "grid_optimal": 27.784887978899608,
+      "reference_cost": 117.8406204335659,
+      "queries": [
+        {
+          "start": [
+            18,
+            88,
+            7
+          ],
+          "goal": [
+            32,
+            64,
+            0
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            30,
+            81,
+            5
+          ],
+          "goal": [
+            32,
+            64,
+            0
+          ],
+          "blocks": [
+            [
+              32,
+              78
+            ]
+          ]
+        },
+        {
+          "start": [
+            43,
+            64,
+            4
+          ],
+          "goal": [
+            32,
+            64,
+            0
+          ],
+          "blocks": [
+            [
+              32,
+              78
+            ],
+            [
+              43,
+              62
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maze-05",
+      "map": "maze.map",
+      "topology": "maze",
+      "grid_optimal": 41.182520563948,
+      "reference_cost": 314.99494936611677,
+      "queries": [
+        {
+          "start": [
+            49,
+            91,
+            2
+          ],
+          "goal": [
+            69,
+            55,
+            6
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            62,
+            16,
+            3
+          ],
+          "goal": [
+            69,
+            55,
+            6
+          ],
+          "blocks": [
+            [
+              61,
+              15
+            ]
+          ]
+        },
+        {
+          "start": [
+            79,
+            18,
+            7
+          ],
+          "goal": [
+            69,
+            55,
+            6
+          ],
+          "blocks": [
+            [
+              61,
+              15
+            ],
+            [
+              79,
+              19
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maze-06",
+      "map": "maze.map",
+      "topology": "maze",
+      "grid_optimal": 34.20526275297414,
+      "reference_cost": 284.5096679918782,
+      "queries": [
+        {
+          "start": [
+            22,
+            31,
+            2
+          ],
+          "goal": [
+            43,
+            4,
+            1
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            43,
+            91,
+            6
+          ],
+          "goal": [
+            43,
+            4,
+            1
+          ],
+          "blocks": [
+            [
+              48,
+              91
+            ]
+          ]
+        },
+        {
+          "start": [
+            51,
+            45,
+            4
+          ],
+          "goal": [
+            43,
+            4,
+            1
+          ],
+          "blocks": [
+            [
+              48,
+              91
+            ],
+            [
+              50,
+              42
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maze-07",
+      "map": "maze.map",
+      "topology": "maze",
+      "grid_optimal": 22.67156809750927,
+      "reference_cost": 36.8700576850888,
+      "queries": [
+        {
+          "start": [
+            14,
+            23,
+            3
+          ],
+          "goal": [
+            31,
+            38,
+            2
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            18,
+            32,
+            7
+          ],
+          "goal": [
+            31,
+            38,
+            2
+          ],
+          "blocks": [
+            [
+              23,
+              37
+            ]
+          ]
+        },
+        {
+          "start": [
+            23,
+            36,
+            7
+          ],
+          "goal": [
+            31,
+            38,
+            2
+          ],
+          "blocks": [
+            [
+              23,
+              37
+            ],
+            [
+              27,
+              38
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rooms-00",
+      "map": "rooms.map",
+      "topology": "rooms",
+      "grid_optimal": 47.01063709417264,
+      "reference_cost": 57.89949493661166,
+      "queries": [
+        {
+          "start": [
+            5,
+            38,
+            6
+          ],
+          "goal": [
+            4,
+            85,
+            4
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            10,
+            61,
+            0
+          ],
+          "goal": [
+            4,
+            85,
+            4
+          ],
+          "blocks": [
+            [
+              10,
+              65
+            ]
+          ]
+        },
+        {
+          "start": [
+            10,
+            71,
+            0
+          ],
+          "goal": [
+            4,
+            85,
+            4
+          ],
+          "blocks": [
+            [
+              10,
+              65
+            ],
+            [
+              10,
+              76
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rooms-01",
+      "map": "rooms.map",
+      "topology": "rooms",
+      "grid_optimal": 49.24428900898052,
+      "reference_cost": 53.14213562373096,
+      "queries": [
+        {
+          "start": [
+            9,
+            88,
+            1
+          ],
+          "goal": [
+            57,
+            99,
+            6
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            31,
+            91,
+            6
+          ],
+          "goal": [
+            57,
+            99,
+            6
+          ],
+          "blocks": [
+            [
+              35,
+              91
+            ]
+          ]
+        },
+        {
+          "start": [
+            44,
+            92,
+            6
+          ],
+          "goal": [
+            57,
+            99,
+            6
+          ],
+          "blocks": [
+            [
+              35,
+              91
+            ],
+            [
+              45,
+              93
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rooms-02",
+      "map": "rooms.map",
+      "topology": "rooms",
+      "grid_optimal": 25.179356624028344,
+      "reference_cost": 31.313708498984766,
+      "queries": [
+        {
+          "start": [
+            92,
+            65,
+            2
+          ],
+          "goal": [
+            89,
+            90,
+            5
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            90,
+            77,
+            0
+          ],
+          "goal": [
+            89,
+            90,
+            5
+          ],
+          "blocks": [
+            [
+              90,
+              80
+            ]
+          ]
+        },
+        {
+          "start": [
+            90,
+            82,
+            0
+          ],
+          "goal": [
+            89,
+            90,
+            5
+          ],
+          "blocks": [
+            [
+              90,
+              80
+            ],
+            [
+              89,
+              85
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rooms-03",
+      "map": "rooms.map",
+      "topology": "rooms",
+      "grid_optimal": 32.2490309931942,
+      "reference_cost": 39.11269837220809,
+      "queries": [
+        {
+          "start": [
+            26,
+            47,
+            7
+          ],
+          "goal": [
+            10,
+            19,
+            2
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            24,
+            34,
+            3
+          ],
+          "goal": [
+            10,
+            19,
+            2
+          ],
+          "blocks": [
+            [
+              22,
+              32
+            ]
+          ]
+        },
+        {
+          "start": [
+            18,
+            29,
+            3
+          ],
+          "goal": [
+            10,
+            19,
+            2
+          ],
+          "blocks": [
+            [
+              22,
+              32
+            ],
+            [
+              15,
+              26
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rooms-04",
+      "map": "rooms.map",
+      "topology": "rooms",
+      "grid_optimal": 33.24154027718932,
+      "reference_cost": 35.242640687119284,
+      "queries": [
+        {
+          "start": [
+            51,
+            90,
+            3
+          ],
+          "goal": [
+            47,
+            57,
+            4
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            51,
+            73,
+            4
+          ],
+          "goal": [
+            47,
+            57,
+            4
+          ],
+          "blocks": [
+            [
+              51,
+              71
+            ]
+          ]
+        },
+        {
+          "start": [
+            50,
+            65,
+            4
+          ],
+          "goal": [
+            47,
+            57,
+            4
+          ],
+          "blocks": [
+            [
+              51,
+              71
+            ],
+            [
+              50,
+              64
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rooms-05",
+      "map": "rooms.map",
+      "topology": "rooms",
+      "grid_optimal": 46.2709412050371,
+      "reference_cost": 48.89949493661167,
+      "queries": [
+        {
+          "start": [
+            34,
+            91,
+            5
+          ],
+          "goal": [
+            39,
+            45,
+            4
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            33,
+            68,
+            4
+          ],
+          "goal": [
+            39,
+            45,
+            4
+          ],
+          "blocks": [
+            [
+              33,
+              66
+            ]
+          ]
+        },
+        {
+          "start": [
+            33,
+            57,
+            5
+          ],
+          "goal": [
+            39,
+            45,
+            4
+          ],
+          "blocks": [
+            [
+              33,
+              66
+            ],
+            [
+              34,
+              56
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rooms-06",
+      "map": "rooms.map",
+      "topology": "rooms",
+      "grid_optimal": 40.024992192379,
+      "reference_cost": 45.798989873223334,
+      "queries": [
+        {
+          "start": [
+            98,
+            50,
+            6
+          ],
+          "goal": [
+            89,
+            89,
+            6
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            91,
+            70,
+            0
+          ],
+          "goal": [
+            89,
+            89,
+            6
+          ],
+          "blocks": [
+            [
+              91,
+              72
+            ]
+          ]
+        },
+        {
+          "start": [
+            90,
+            78,
+            0
+          ],
+          "goal": [
+            89,
+            89,
+            6
+          ],
+          "blocks": [
+            [
+              91,
+              72
+            ],
+            [
+              90,
+              80
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rooms-07",
+      "map": "rooms.map",
+      "topology": "rooms",
+      "grid_optimal": 26.870057685088806,
+      "reference_cost": 35.21320343559643,
+      "queries": [
+        {
+          "start": [
+            75,
+            74,
+            1
+          ],
+          "goal": [
+            94,
+            93,
+            0
+          ],
+          "blocks": []
+        },
+        {
+          "start": [
+            88,
+            78,
+            7
+          ],
+          "goal": [
+            94,
+            93,
+            0
+          ],
+          "blocks": [
+            [
+              90,
+              80
+            ]
+          ]
+        },
+        {
+          "start": [
+            91,
+            83,
+            0
+          ],
+          "goal": [
+            94,
+            93,
+            0
+          ],
+          "blocks": [
+            [
+              90,
+              80
+            ],
+            [
+              91,
+              85
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}
