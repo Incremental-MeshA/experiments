@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "instances": 187,
+  "queries": 561,
+  "comparisons": 1122,
+  "path_validations": 1122,
+  "cost_tolerance": 1e-06,
+  "oracle": "Frozen upstream LBA* costs at weight 1; no historical times reused.",
+  "sha256": {
+    "mesha/adaptive.py": "0ecd6d26eebd9c8cfb70670e5f18e7e8db9e35425ba2a6b9d6614ce2511d220e",
+    "mesha/deferred.py": "9e4870bf67dca0d08241b606b654b58ab57afcf0f27e2f4b693220a49520811f",
+    "mesha/incremental.py": "717201e3c675446bd82384f4884a9327761dc1b2947e038070e64e756cac2657",
+    "mesha/mesh.py": "ecd37c9a897137d57d6a95de384f35dc25fe7d6d847917bbeb636745537d326b",
+    "mesha/primitives.py": "ea1d84ed317b10d66e726fc1678e9dc350b62e871d548b95b8305b4281532463"
+  }
+}

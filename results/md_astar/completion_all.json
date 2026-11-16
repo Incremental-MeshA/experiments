@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "runs": 1032,
+  "queries": 7656,
+  "cases": 40,
+  "cost_disagreements": 0,
+  "seconds": 1926.0621717580007
+}

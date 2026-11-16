@@ -74,7 +74,7 @@ def _as_bytes(grid) -> tuple[bytes, int, int]:
     return grid.astype("uint8").tobytes(), height, width
 
 
-def trace_of(start: State, prim_ids: list[int], control: ControlSet):
+def trace_of(start: State, prim_ids: list[int], control: ControlSet, include_trace: bool = True):
     """States and swept cells of a primitive sequence."""
     states = [start]
     trace: list[tuple[int, int]] = []
@@ -83,10 +83,11 @@ def trace_of(start: State, prim_ids: list[int], control: ControlSet):
         prim = control.get(prim_id)
         if prim.start_theta != theta:
             raise ValueError("primitive does not start at the current heading")
-        for di, dj in prim.cells:
-            cell = (i + di, j + dj)
-            if not trace or trace[-1] != cell:
-                trace.append(cell)
+        if include_trace:
+            for di, dj in prim.cells:
+                cell = (i + di, j + dj)
+                if not trace or trace[-1] != cell:
+                    trace.append(cell)
         i += prim.di
         j += prim.dj
         theta = prim.end_theta
@@ -308,12 +309,16 @@ def search(
     return_path: bool = False,
     parall_k: int = 100,
     lba_check_all: bool = False,
+    record_expanded: bool = True,
+    return_trace: bool = True,
 ) -> SearchResult:
     """Run `lba`, `lazy_lba`, `mesha`, `mesh_pruning` or `mesh_parall`.
 
     By default LBA* checks a primitive only when its successor would improve a
     g-value. ``lba_check_all=True`` checks every primitive of an expanded state
     first (the textbook order); costs and expansions are the same.
+    With return_path=True, record_expanded=False and return_trace=False retain
+    only states/primitive IDs, excluding visualization output in benchmarks.
     """
     clock = time.perf_counter()
     flat, height, width = _as_bytes(grid)
@@ -321,7 +326,7 @@ def search(
     goal = tuple(int(v) for v in goal)
     name = algorithm.lower()
     stats = _Stats()
-    record = [] if return_path else None
+    record = [] if return_path and record_expanded else None
 
     def result(success, cost=INF, capped=False, prim_ids=None, winner=None):
         res = SearchResult(
@@ -330,7 +335,7 @@ def search(
         )
         if return_path and prim_ids is not None:
             res.prim_ids = prim_ids
-            res.states, res.trace = trace_of(start, prim_ids, control)
+            res.states, res.trace = trace_of(start, prim_ids, control, include_trace=return_trace)
             res.expanded = record
         return res
 

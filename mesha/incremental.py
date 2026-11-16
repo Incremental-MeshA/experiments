@@ -144,6 +144,17 @@ class LatticeGraph:
                 sources.add((ui, uj, start_theta))
         return sources
 
+    def unblock(self, cells) -> set:
+        """Invalidate collision caches on decreases; include unseen sources."""
+        sources = set()
+        for ci, cj in cells:
+            for pid, theta, a, b in self.hit_offsets:
+                ui, uj = ci-a, cj-b
+                self.cache.pop((ui,uj,pid), None)
+                if 0 <= ui < self.height and 0 <= uj < self.width:
+                    sources.add((ui,uj,theta))
+        return sources
+
 
 class MeshGraph:
     name = "mesh"
@@ -211,6 +222,17 @@ class MeshGraph:
                     if self.cache.get((u, ci, cj)) is False:
                         self.cache[(u, ci, cj)] = True
                     sources.add(u)
+        return sources
+
+    def unblock(self, cells) -> set:
+        sources = set()
+        for ci, cj in cells:
+            for edges in self.pred_table:
+                for pcfg, di, dj, _cost in edges:
+                    u = (pcfg,ci-di,cj-dj)
+                    self.cache.pop((u,ci,cj), None)
+                    if 0 <= u[1] < self.height and 0 <= u[2] < self.width:
+                        sources.add(u)
         return sources
 
 
@@ -331,8 +353,18 @@ class DStarLite:
             capped=not ok,
         )
 
-    def replan(self, new_start, new_blocks) -> ReplanStats:
-        """Move the agent, add obstacles, and repair the plan."""
+    def replan(self, new_start, new_blocks, new_opens=()) -> ReplanStats:
+        """Move and repair increases/decreases; the old two-argument API stays valid.
+
+        Decreases must seed previously unseen sources too: filtering by g/rhs,
+        which is safe for insertions, would miss reconnection of components.
+        """
+        new_blocks, new_opens = tuple(map(tuple,new_blocks)), tuple(map(tuple,new_opens))
+        if set(new_blocks) & set(new_opens):
+            raise ValueError('contradictory cell changes')
+        for i,j in new_blocks+new_opens:
+            if not (0 <= i < self.graph.height and 0 <= j < self.graph.width):
+                raise ValueError('cell outside grid')
         clock = time.perf_counter()
         e0, c0 = self.expansions, self.graph.checked
         new_s = self.graph.vertex(new_start)
@@ -349,6 +381,12 @@ class DStarLite:
                 if u in self.g or u in self.rhs:
                     self._update(u)
                     updated += 1
+        if new_opens:
+            for ci,cj in new_opens:
+                self.graph.grid[ci,cj] = 0
+            for u in self.graph.unblock(new_opens):
+                self._update(u)
+                updated += 1
         ok = self.compute()
         cost = min(self.g.get(self.s_start, INF), self.rhs.get(self.s_start, INF)) if ok else INF
         return ReplanStats(
@@ -383,7 +421,16 @@ class DStarLite:
 
 
 def make_planner(kind: str, grid, control: ControlSet, mesh: Mesh, start, goal, max_expansions=2_000_000):
-    """kind: 'dstar_lattice' or 'dstar_mesh'. The planner owns a copy of the grid."""
+    """D* Lite, MPGAA*, or MD-A*; every public planner owns its input grid.
+
+    Supported kinds: dstar_lattice, dstar_mesh, mpgaa, md_astar, md64, md_scan.
+    """
+    if kind == 'mpgaa':
+        from mesha.adaptive import MPGAA
+        return MPGAA(grid,control,start,goal,max_expansions)
+    if kind in ('md_astar','md64','md_scan'):
+        from mesha.deferred import MeshDeferred
+        return MeshDeferred(grid,control,start,goal,max_expansions,variant=kind)
     work = grid.copy()
     if kind == "dstar_lattice":
         graph = LatticeGraph(work, control)

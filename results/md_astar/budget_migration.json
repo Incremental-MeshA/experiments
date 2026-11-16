@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "retained_complete_cases": 21,
+  "retained_runs": 534,
+  "archived_runs": 537,
+  "repeated_incomplete_cases": [
+    "mixed__maze__reverse__761116"
+  ],
+  "no_within_episode_phase_mixing": true,
+  "all_prior_guards_nonbinding": true
+}

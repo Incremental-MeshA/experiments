@@ -1,0 +1,15 @@
+car16: primitives=284 configs=412
+  car16: 284 primitives, 0 redundant
+  straight east: cost=36.000
+  turn: cost=42.210
+  already there: cost=0.000
+  gap detour: cost=33.345
+  random: 19/40 solvable, 46 incremental replans checked
+legacy8: primitives=64 configs=72
+  legacy8: 64 primitives, 40 redundant
+  straight east: cost=36.000
+  turn: cost=43.941
+  already there: cost=0.000
+  gap detour: cost=35.971
+  random: 34/40 solvable, 102 incremental replans checked
+selfcheck ok

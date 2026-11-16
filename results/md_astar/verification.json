@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "oracle_snapshots": 308,
+  "comparisons": 1458,
+  "algebra": {
+    "car16": {
+      "configurations": 412,
+      "primitives": 284,
+      "alpha": 0.9262096826685893,
+      "correction": -0.4382058194703708,
+      "coefficient_checks": 64,
+      "random_bound_checks": 128
+    },
+    "legacy8": {
+      "configurations": 72,
+      "primitives": 64,
+      "alpha": 0.9999999999999999,
+      "correction": -1.4071067811865477e-08,
+      "coefficient_checks": 64,
+      "random_bound_checks": 128
+    }
+  },
+  "checks": [
+    "independent Dijkstra",
+    "all primitive cells and headings",
+    "cuts and reopening unseen D* sources",
+    "MD-A* two-call reactivation counterexample",
+    "idempotent updates",
+    "blocked endpoints",
+    "moving/reversing start",
+    "lazy heap deletion over 160 updates",
+    "64 mesh coefficients versus flat enumeration"
+  ]
+}

@@ -1,0 +1,7 @@
+# Portable native benchmark environment; original pinned environment is requirements.txt.
+numpy>=2.3,<3
+matplotlib>=3.10,<4
+# Optional: rebuild/execute md_astar.ipynb
+nbformat>=5.10,<6
+nbclient>=0.10,<1
+ipykernel>=6.29,<8

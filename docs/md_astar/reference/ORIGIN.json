@@ -1,0 +1,9 @@
+{
+  "source_commit": "ec5c97e",
+  "source_branch": "research/certified-mesh-a-star",
+  "sha256": {
+    "mesh_deferred_cpp_artifact.zip": "fa674097ce88a5f5e5386e8021c82de58c9e27249aa9916d47e478dfa64f18ca",
+    "mesh_deferred_cpp_paper.pdf": "51791b8302b1be35299bc429fa18575900e22965ac7239ecc764ef30a32868f5"
+  },
+  "purpose": "Historical source/proof provenance only; no timings imported into native comparisons."
+}

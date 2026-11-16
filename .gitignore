@@ -24,3 +24,6 @@ env/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Generated delivery check includes the final bundle hash (avoid a commit/hash cycle).
+results/md_astar/artifact_validation.json
