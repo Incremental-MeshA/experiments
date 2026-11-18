@@ -1,0 +1,1 @@
+{"status":"passed","mode":"replay","runs":2970,"rows":27555,"capped_queries":54,"step_limited_missions":0,"repeats":3,"cap":1000000,"radius":8,"max_steps":160,"preparation_s":0.012511112,"certificate_s":7.1758e-05,"wall_s":2278.746876055,"memory_profile":false,"compiler":"14.2.0","flags":"-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"}

@@ -1,0 +1,485 @@
+{
+ "control": "car16",
+ "cases": [
+  {
+   "map": "arena",
+   "map_family": "DAO",
+   "shape": [
+    49,
+    49
+   ],
+   "truth_density": 0.1445231153685964,
+   "source": "cpp/experiments/maps/arena.map",
+   "source_sha256": "9887c3022fb76d8e2b49db4a54641e31df79607cf96c2a0ec362702808113d4d",
+   "original_shape": [
+    49,
+    49
+   ],
+   "crop": null,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    7,
+    2,
+    14
+   ],
+   "goal": [
+    38,
+    33,
+    14
+   ],
+   "truth_optimum": 43.840620433565924,
+   "family": "unknown_mission",
+   "params": {
+    "radius": 16,
+    "max_steps": 160
+   },
+   "panels": [
+    "closed_loop"
+   ],
+   "queries": [
+    {
+     "start": [
+      7,
+      2,
+      14
+     ],
+     "goal": [
+      38,
+      33,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 43.840620433565924,
+     "category": "mission",
+     "event": "truth_only"
+    }
+   ],
+   "id": "car16__arena__mission__s48101__r16"
+  },
+  {
+   "map": "arena",
+   "map_family": "DAO",
+   "shape": [
+    49,
+    49
+   ],
+   "truth_density": 0.1445231153685964,
+   "source": "cpp/experiments/maps/arena.map",
+   "source_sha256": "9887c3022fb76d8e2b49db4a54641e31df79607cf96c2a0ec362702808113d4d",
+   "original_shape": [
+    49,
+    49
+   ],
+   "crop": null,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    35,
+    13,
+    0
+   ],
+   "goal": [
+    33,
+    44,
+    0
+   ],
+   "truth_optimum": 31.38287824444261,
+   "family": "unknown_mission",
+   "params": {
+    "radius": 16,
+    "max_steps": 160
+   },
+   "panels": [
+    "closed_loop"
+   ],
+   "queries": [
+    {
+     "start": [
+      35,
+      13,
+      0
+     ],
+     "goal": [
+      33,
+      44,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 31.38287824444261,
+     "category": "mission",
+     "event": "truth_only"
+    }
+   ],
+   "id": "car16__arena__mission__s48102__r16"
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "truth_optimum": 77.23403677833821,
+   "family": "unknown_mission",
+   "params": {
+    "radius": 16,
+    "max_steps": 160
+   },
+   "panels": [
+    "closed_loop"
+   ],
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "mission",
+     "event": "truth_only"
+    }
+   ],
+   "id": "car16__MA_room96__mission__s48101__r16"
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "truth_optimum": 71.31943296277802,
+   "family": "unknown_mission",
+   "params": {
+    "radius": 16,
+    "max_steps": 160
+   },
+   "panels": [
+    "closed_loop"
+   ],
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "mission",
+     "event": "truth_only"
+    }
+   ],
+   "id": "car16__MA_room96__mission__s48102__r16"
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "truth_optimum": 48.29588342226765,
+   "family": "unknown_mission",
+   "params": {
+    "radius": 16,
+    "max_steps": 160
+   },
+   "panels": [
+    "closed_loop"
+   ],
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "mission",
+     "event": "truth_only"
+    }
+   ],
+   "id": "car16__MA_random96__mission__s48101__r16"
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "truth_optimum": 50.51415823356734,
+   "family": "unknown_mission",
+   "params": {
+    "radius": 16,
+    "max_steps": 160
+   },
+   "panels": [
+    "closed_loop"
+   ],
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "mission",
+     "event": "truth_only"
+    }
+   ],
+   "id": "car16__MA_random96__mission__s48102__r16"
+  },
+  {
+   "map": "MA_maze96",
+   "map_family": "maze",
+   "shape": [
+    96,
+    96
+   ],
+   "truth_density": 0.06770833333333333,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    73,
+    52,
+    3
+   ],
+   "goal": [
+    18,
+    79,
+    3
+   ],
+   "truth_optimum": 156.72162063901945,
+   "family": "unknown_mission",
+   "params": {
+    "radius": 16,
+    "max_steps": 160
+   },
+   "panels": [
+    "closed_loop"
+   ],
+   "queries": [
+    {
+     "start": [
+      73,
+      52,
+      3
+     ],
+     "goal": [
+      18,
+      79,
+      3
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 156.72162063901945,
+     "category": "mission",
+     "event": "truth_only"
+    }
+   ],
+   "id": "car16__MA_maze96__mission__s48101__r16"
+  },
+  {
+   "map": "MA_maze96",
+   "map_family": "maze",
+   "shape": [
+    96,
+    96
+   ],
+   "truth_density": 0.06770833333333333,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    64,
+    49,
+    2
+   ],
+   "goal": [
+    38,
+    74,
+    2
+   ],
+   "truth_optimum": 141.6611021807914,
+   "family": "unknown_mission",
+   "params": {
+    "radius": 16,
+    "max_steps": 160
+   },
+   "panels": [
+    "closed_loop"
+   ],
+   "queries": [
+    {
+     "start": [
+      64,
+      49,
+      2
+     ],
+     "goal": [
+      38,
+      74,
+      2
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 141.6611021807914,
+     "category": "mission",
+     "event": "truth_only"
+    }
+   ],
+   "id": "car16__MA_maze96__mission__s48102__r16"
+  }
+ ]
+}

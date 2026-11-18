@@ -1,0 +1,138 @@
+[
+  {
+    "map": "Berlin",
+    "seed": 48101,
+    "trial": 2,
+    "start": [
+      94,
+      181,
+      1
+    ],
+    "goal": [
+      76,
+      215,
+      1
+    ],
+    "reason": "unreachable or outside frozen length stratum",
+    "cost": 40.78808238850999
+  },
+  {
+    "map": "arena",
+    "seed": 48101,
+    "trial": 1,
+    "start": [
+      40,
+      18,
+      5
+    ],
+    "goal": [
+      6,
+      8,
+      5
+    ],
+    "reason": "unreachable or outside frozen length stratum",
+    "cost": 36.28473169427902
+  },
+  {
+    "map": "arena",
+    "seed": 48102,
+    "trial": 0,
+    "start": [
+      33,
+      46,
+      6
+    ],
+    "goal": [
+      10,
+      26,
+      6
+    ],
+    "reason": "unreachable or outside frozen length stratum",
+    "cost": 31.161840286402207
+  },
+  {
+    "map": "MA_random96",
+    "seed": 48102,
+    "trial": 1,
+    "start": [
+      66,
+      34,
+      8
+    ],
+    "goal": [
+      60,
+      4,
+      8
+    ],
+    "reason": "unreachable or outside frozen length stratum",
+    "cost": 31.10702132600728
+  },
+  {
+    "map": "MA_random96",
+    "seed": 48102,
+    "trial": 4,
+    "start": [
+      37,
+      50,
+      6
+    ],
+    "goal": [
+      15,
+      27,
+      6
+    ],
+    "reason": "unreachable or outside frozen length stratum",
+    "cost": 32.47368678544559
+  },
+  {
+    "map": "MA_random96",
+    "seed": 48102,
+    "trial": 5,
+    "start": [
+      69,
+      52,
+      3
+    ],
+    "goal": [
+      36,
+      63,
+      3
+    ],
+    "reason": "unreachable or outside frozen length stratum",
+    "cost": null
+  },
+  {
+    "map": "MA_random96",
+    "seed": 48102,
+    "trial": 6,
+    "start": [
+      65,
+      4,
+      0
+    ],
+    "goal": [
+      79,
+      67,
+      0
+    ],
+    "reason": "unreachable or outside frozen length stratum",
+    "cost": null
+  },
+  {
+    "map": "MA_maze96",
+    "seed": 48102,
+    "trial": 0,
+    "start": [
+      67,
+      82,
+      7
+    ],
+    "goal": [
+      52,
+      51,
+      7
+    ],
+    "reason": "unreachable or outside frozen length stratum",
+    "cost": null
+  }
+]

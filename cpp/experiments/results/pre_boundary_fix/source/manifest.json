@@ -1,0 +1,85 @@
+{
+  "status": "frozen",
+  "seeds": [
+    48101,
+    48102
+  ],
+  "records": [
+    {
+      "path": "cpp/experiments/frozen/car16_replay.txt",
+      "sha256": "da19361771205aef6db5e61e014083711110cf5e5424d66ccb093c4243320a20",
+      "cases": 90,
+      "snapshots": 835
+    },
+    {
+      "path": "cpp/experiments/frozen/car16_missions_r8.txt",
+      "sha256": "f700b282080472ffc44fa3482fb48f0f78b772bdf0062fbaebd0d4540bd94a8e",
+      "cases": 8,
+      "snapshots": 8
+    },
+    {
+      "path": "cpp/experiments/frozen/car16_missions_r16.txt",
+      "sha256": "43ad28eeba041cd3b60cc3370dd255760b0cd6f653d5f23f5414dfd7772d2ab6",
+      "cases": 8,
+      "snapshots": 8
+    },
+    {
+      "path": "cpp/experiments/frozen/grid8_replay.txt",
+      "sha256": "3b67ec59c569aaf05b6992ae15e6a3c674cefbf1432f9d959000cd8b2acba72b",
+      "cases": 96,
+      "snapshots": 2122
+    },
+    {
+      "path": "cpp/experiments/frozen/grid8_missions_r1.txt",
+      "sha256": "802e86db76795164cfd018cc00d82cdd847d1b226032e05d38efc34091c210cb",
+      "cases": 8,
+      "snapshots": 8
+    },
+    {
+      "path": "cpp/experiments/frozen/grid8_missions_r4.txt",
+      "sha256": "4206365cd52818123c499e98d80e4d2d65d81fd90a74c527f0fe3d0098543b46",
+      "cases": 8,
+      "snapshots": 8
+    },
+    {
+      "path": "cpp/experiments/frozen/grid8_missions_r8.txt",
+      "sha256": "cf98f8fbf1c125fbc1187537a29812ae9c0feb9ebca6b75d71ef70b14de8435b",
+      "cases": 8,
+      "snapshots": 8
+    }
+  ],
+  "root_selection": "Reference LBA*, geometric distance30..75, primitive path16..100, cost<180; candidates never timed during selection.",
+  "experiment_methods": [
+    "lba",
+    "lazy_lba",
+    "mesha",
+    "mesh_parall",
+    "dstar_lattice",
+    "dstar_mesh",
+    "mpgaa",
+    "md_astar",
+    "md64",
+    "md_scan",
+    "lba_reuse"
+  ],
+  "cap": 1000000,
+  "repeats": 3,
+  "memory_repeats": 1,
+  "source_sha256": {
+    "cpp/experiments/prepare.py": "f7b17339e93e0e17d657ed839a581eb6764abaae5cbfb471b029c8076cb6088c",
+    "cpp/experiments/bench.cpp": "02444e3efac647465bdc09a41204c2320e809ff03765f56d5bfaf49e79c422e4",
+    "cpp/experiments/memory.hpp": "16a8f7e99fc79b35c38086e1d632e8024a10e48e3b80eaf3547c83a2d2070b32",
+    "cpp/experiments/Makefile": "c4e335a6cbd70420dabd3b0c917d2511fad04a59ec6a0ea9241428d5dd9d2d53",
+    "mesha/primitives.py": "ea1d84ed317b10d66e726fc1678e9dc350b62e871d548b95b8305b4281532463",
+    "mesha/mesh.py": "ecd37c9a897137d57d6a95de384f35dc25fe7d6d847917bbeb636745537d326b",
+    "cpp/experiments/maps/SOURCES.json": "cca478dcbd6c4b227e63556c59ac93a1eb48cdb611f0fd25ded1f06bd1085698",
+    "cpp/include/ima/dstar.hpp": "c9e9b714fbf86da15bcea7078494b8dd0a0f4fbd43e38d6e8815748458dfca6a",
+    "cpp/include/ima/adaptive.hpp": "5c54db0b176953927291f2ca476b26e769192571754819e2f66c3feb698c83a3",
+    "cpp/include/ima/planners.hpp": "b874588434c7bbb5666b4dc6b33d498d2d8b18ac45198b545c3899731292fa0d",
+    "cpp/include/ima/deferred.hpp": "d4b47e481e323e1e202deeb2644b14b4d63fda6d8f974f641a77ca9d30e73530",
+    "cpp/include/ima/search.hpp": "cdc94b7a4a9897e4da868003998346acdf5af8f4011b4b566803cb79f36f78a2",
+    "cpp/include/ima/model.hpp": "ce03a8bbb71cb873bf546a8c51063e12b3102c9df05d96fc55902d7630c9bfbc"
+  },
+  "total_replay_cases": 186,
+  "total_missions": 40
+}

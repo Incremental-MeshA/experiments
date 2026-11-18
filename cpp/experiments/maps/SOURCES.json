@@ -1,0 +1,30 @@
+[
+  {
+    "name": "arena.map",
+    "url": "https://www.movingai.com/benchmarks/dao/arena.map.zip",
+    "archive_sha256": "20f4d7e23d08e015ab9e4078669a31e90b74c9ab22571aed836393dc59a917ba",
+    "map_sha256": "9887c3022fb76d8e2b49db4a54641e31df79607cf96c2a0ec362702808113d4d",
+    "license": "https://opendatacommons.org/licenses/by/1-0/"
+  },
+  {
+    "name": "16room_000.map",
+    "url": "https://www.movingai.com/benchmarks/room/16room_000.map.zip",
+    "archive_sha256": "62dc4e6d0842a6eb496334e32e2f8da575f8c74cdd5d775a6cdd01e11de1a9c3",
+    "map_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+    "license": "https://opendatacommons.org/licenses/by/1-0/"
+  },
+  {
+    "name": "random512-10-0.map",
+    "url": "https://www.movingai.com/benchmarks/random/random512-10-0.map.zip",
+    "archive_sha256": "44de163cf76f532f414124b9da5552f558e0c4a1b2ec1c753c24f5eff4392a64",
+    "map_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+    "license": "https://opendatacommons.org/licenses/by/1-0/"
+  },
+  {
+    "name": "maze512-16-0.map",
+    "url": "https://www.movingai.com/benchmarks/maze/maze512-16-0.map.zip",
+    "archive_sha256": "46250f484e63621e9ebceec5593e7ef35d96c330fbe9d9850b1b3f1ff16a349f",
+    "map_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+    "license": "https://opendatacommons.org/licenses/by/1-0/"
+  }
+]

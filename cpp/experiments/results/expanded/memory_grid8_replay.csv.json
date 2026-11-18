@@ -1,0 +1,1 @@
+{"status":"passed","mode":"replay","runs":1056,"rows":23342,"capped_queries":0,"step_limited_missions":0,"repeats":1,"cap":1000000,"radius":8,"max_steps":160,"preparation_s":0.0034096619999999999,"certificate_s":4.206e-06,"wall_s":2.9900234530000001,"memory_profile":true,"compiler":"14.2.0","flags":"-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC"}

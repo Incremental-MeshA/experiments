@@ -1,0 +1,163 @@
+{
+  "status": "running",
+  "utc": "2026-11-18T16:41:51.887553+00:00",
+  "cpu": "AMD EPYC 9V74 80-Core Processor",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "workers": 1,
+  "git_parent": "30f18579c8daddc9b9a83f41d685361df9ddb1b9",
+  "manifest_sha256": "9c4bb858a9393434116d3cb3a3ade2ce1f99e9b862c1b225035ca7956dc1ed59",
+  "source_sha256": {
+    "cpp/experiments/bench.cpp": "02444e3efac647465bdc09a41204c2320e809ff03765f56d5bfaf49e79c422e4",
+    "cpp/experiments/memory.hpp": "16a8f7e99fc79b35c38086e1d632e8024a10e48e3b80eaf3547c83a2d2070b32",
+    "cpp/experiments/Makefile": "c4e335a6cbd70420dabd3b0c917d2511fad04a59ec6a0ea9241428d5dd9d2d53",
+    "cpp/include/ima/adaptive.hpp": "5c54db0b176953927291f2ca476b26e769192571754819e2f66c3feb698c83a3",
+    "cpp/include/ima/deferred.hpp": "d4b47e481e323e1e202deeb2644b14b4d63fda6d8f974f641a77ca9d30e73530",
+    "cpp/include/ima/dstar.hpp": "c9e9b714fbf86da15bcea7078494b8dd0a0f4fbd43e38d6e8815748458dfca6a",
+    "cpp/include/ima/model.hpp": "ce03a8bbb71cb873bf546a8c51063e12b3102c9df05d96fc55902d7630c9bfbc",
+    "cpp/include/ima/planners.hpp": "b874588434c7bbb5666b4dc6b33d498d2d8b18ac45198b545c3899731292fa0d",
+    "cpp/include/ima/search.hpp": "cdc94b7a4a9897e4da868003998346acdf5af8f4011b4b566803cb79f36f78a2"
+  },
+  "plan": [
+    {
+      "name": "timing_car16_replay",
+      "input": "cpp/experiments/frozen/car16_replay.txt",
+      "mode": "replay",
+      "memory": false,
+      "repeats": 3
+    },
+    {
+      "name": "timing_car16_missions_r8",
+      "input": "cpp/experiments/frozen/car16_missions_r8.txt",
+      "mode": "mission",
+      "memory": false,
+      "repeats": 3,
+      "radius": 8,
+      "max_steps": 160
+    },
+    {
+      "name": "timing_car16_missions_r16",
+      "input": "cpp/experiments/frozen/car16_missions_r16.txt",
+      "mode": "mission",
+      "memory": false,
+      "repeats": 3,
+      "radius": 16,
+      "max_steps": 160
+    },
+    {
+      "name": "timing_grid8_replay",
+      "input": "cpp/experiments/frozen/grid8_replay.txt",
+      "mode": "replay",
+      "memory": false,
+      "repeats": 3
+    },
+    {
+      "name": "timing_grid8_missions_r1",
+      "input": "cpp/experiments/frozen/grid8_missions_r1.txt",
+      "mode": "mission",
+      "memory": false,
+      "repeats": 3,
+      "radius": 1,
+      "max_steps": 256
+    },
+    {
+      "name": "timing_grid8_missions_r4",
+      "input": "cpp/experiments/frozen/grid8_missions_r4.txt",
+      "mode": "mission",
+      "memory": false,
+      "repeats": 3,
+      "radius": 4,
+      "max_steps": 256
+    },
+    {
+      "name": "timing_grid8_missions_r8",
+      "input": "cpp/experiments/frozen/grid8_missions_r8.txt",
+      "mode": "mission",
+      "memory": false,
+      "repeats": 3,
+      "radius": 8,
+      "max_steps": 256
+    },
+    {
+      "name": "memory_car16_replay",
+      "input": "cpp/experiments/frozen/car16_replay.txt",
+      "mode": "replay",
+      "memory": true,
+      "repeats": 1
+    },
+    {
+      "name": "memory_grid8_replay",
+      "input": "cpp/experiments/frozen/grid8_replay.txt",
+      "mode": "replay",
+      "memory": true,
+      "repeats": 1
+    }
+  ],
+  "jobs": {
+    "timing_car16_replay": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/experiments/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/experiments/frozen/car16_replay.txt",
+        "--output",
+        "/workspace/introduction/cpp/experiments/results/expanded/timing_car16_replay.csv",
+        "--mode",
+        "replay",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--seed",
+        "48101"
+      ],
+      "binary_sha256": "7c0e4522285383d7482234d71a1ff9190874511a8bc8048d93f1c665cb387467",
+      "returncode": 0,
+      "csv_sha256": "29d1ed609d47c929dfb1084aa63b1e355e8d1f38864c5c44ceafaa7e9f20de8f",
+      "completion_sha256": "093740458ed519183c694d67ea312a05df4f580cbfa0f90abc9553f7b66247fd",
+      "completion": {
+        "status": "passed",
+        "mode": "replay",
+        "runs": 2970,
+        "rows": 27555,
+        "capped_queries": 54,
+        "step_limited_missions": 0,
+        "repeats": 3,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 160,
+        "preparation_s": 0.012511112,
+        "certificate_s": 7.1758e-05,
+        "wall_s": 2278.746876055,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"
+      }
+    },
+    "timing_car16_missions_r8": {
+      "status": "failed",
+      "command": [
+        "/workspace/introduction/cpp/experiments/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/experiments/frozen/car16_missions_r8.txt",
+        "--output",
+        "/workspace/introduction/cpp/experiments/results/expanded/timing_car16_missions_r8.csv",
+        "--mode",
+        "mission",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--seed",
+        "48101",
+        "--radius",
+        "8",
+        "--max-steps",
+        "160"
+      ],
+      "binary_sha256": "7c0e4522285383d7482234d71a1ff9190874511a8bc8048d93f1c665cb387467",
+      "returncode": 1
+    }
+  },
+  "protocol": "Serial native runs; three randomized timing repeats; one separate C++ heap allocation pass; truth/belief path validation and reference A* outside timers; capped and step-limited outcomes retained."
+}

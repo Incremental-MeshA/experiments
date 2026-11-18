@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "methods": 11,
+  "replay_rows": 88,
+  "mission_runs": 22,
+  "allocation_answers_identical": true,
+  "checks": [
+    "two-call reactivation",
+    "LBA suffix-reuse control",
+    "cap is not no-path",
+    "skipped queries retained",
+    "independent truth collision checks",
+    "unknown-map mission reaches goal",
+    "repeat trajectory identity",
+    "separate memory pass matches timed path/counters",
+    "D* Lite floating-key mesh-boundary regression: four real car16 missions reach goal"
+  ],
+  "sanitized": true
+}

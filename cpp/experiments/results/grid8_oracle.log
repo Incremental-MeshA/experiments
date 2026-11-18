@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "oracle": "Independent Python heap-Dijkstra, destination-only grid8, no shared graph/search classes",
+  "maps": 24,
+  "snapshots": 216,
+  "algorithm_queries": 2376,
+  "exact_methods": 10,
+  "approximate_method": "mesh_parall",
+  "memory_decision_parity": true
+}
