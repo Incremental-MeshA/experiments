@@ -1,0 +1,16 @@
+{
+  "format": 1,
+  "suite": "model",
+  "control": "legacy8",
+  "primitives": 64,
+  "mesh_configs": 72,
+  "episodes": 0,
+  "queries": 0,
+  "input_sha256": "7333457692314cd0d6754ef08d4bdcb6cb8d7645448dd13e8d583267522b1626",
+  "source_sha256": {
+    "mesha/primitives.py": "ea1d84ed317b10d66e726fc1678e9dc350b62e871d548b95b8305b4281532463",
+    "mesha/mesh.py": "ecd37c9a897137d57d6a95de384f35dc25fe7d6d847917bbeb636745537d326b",
+    "cpp/export_inputs.py": "cc3b5ee8edce4063c0b18088ae2ebf861e2bd4c88f025de4487b07b16f896c9a"
+  },
+  "costs": "Original IEEE-754 binary64; decimal export uses 17 significant digits; no rounding to microcosts."
+}

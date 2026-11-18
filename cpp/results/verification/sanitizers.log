@@ -1,0 +1,3 @@
+verified car16; 690 oracle comparisons
+verified legacy8; 1300 oracle comparisons
+passed: 296 independent Dijkstra snapshots, 2940 comparisons; 64 coefficients and 128 bound triples per model

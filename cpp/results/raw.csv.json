@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "language": "C++17",
+  "compiler": "14.2.0",
+  "ndebug": true,
+  "fast_math": false,
+  "build_flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+  "verify_only": false,
+  "input": "/workspace/introduction/cpp/data/car16_md.txt",
+  "episodes": 40,
+  "runs": 1200,
+  "queries": 8400,
+  "repeats": 3,
+  "seed": 761116,
+  "max_expansions_per_query": 3000000,
+  "preparation_s": 0.0081356640000000008,
+  "certificate_compile_s": 7.2999999999999999e-05,
+  "certificate_alpha": 0.92620968266858927,
+  "certificate_correction": -0.43820581947037079,
+  "wall_s": 1562.31427725,
+  "methods": ["lba","lazy_lba","mesha","mesh_parall","dstar_lattice","dstar_mesh","mpgaa","md_astar","md64","md_scan"]
+}

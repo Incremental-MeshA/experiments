@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "utc": "2026-11-18T15:14:57.620043+00:00",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "cpu": "AMD EPYC 9V74 80-Core Processor",
+  "python_driver": "3.12.14",
+  "workers": 1,
+  "git_parent": "cc434cad70b973ba9c7b28db2b7ad5841818d6a0",
+  "binary_sha256": "48cd37d3ba336b7afc77b3c6b8f9f4af06664b242bfd3315b73f6b9479c0af3f",
+  "input_sha256": "f58dbbd3b3a716cd4141f81a185d96c01104e453889cb965ab5c4f56a74b15fc",
+  "input_relative": "cpp/data/car16_md.txt",
+  "source_sha256": {
+    "cpp/CMakeLists.txt": "950234124cbd2d7d50e3bd91565a6d67f09f7aefd38ff85e684dd755dfbaf715",
+    "cpp/Makefile": "33efe3b0180a1499d9fbfa4f68c3e768bd0375374fcd44d3881d877bb50acbbf",
+    "cpp/include/ima/adaptive.hpp": "5c54db0b176953927291f2ca476b26e769192571754819e2f66c3feb698c83a3",
+    "cpp/include/ima/deferred.hpp": "d4b47e481e323e1e202deeb2644b14b4d63fda6d8f974f641a77ca9d30e73530",
+    "cpp/include/ima/dstar.hpp": "c9e9b714fbf86da15bcea7078494b8dd0a0f4fbd43e38d6e8815748458dfca6a",
+    "cpp/include/ima/model.hpp": "ce03a8bbb71cb873bf546a8c51063e12b3102c9df05d96fc55902d7630c9bfbc",
+    "cpp/include/ima/planners.hpp": "b874588434c7bbb5666b4dc6b33d498d2d8b18ac45198b545c3899731292fa0d",
+    "cpp/include/ima/search.hpp": "cdc94b7a4a9897e4da868003998346acdf5af8f4011b4b566803cb79f36f78a2",
+    "cpp/src/benchmark.cpp": "6013d42b7dc83224610fdb1bccb842c4dd3e067bb6f95eea3f20a8dccebbc6dd"
+  },
+  "command": [
+    "/workspace/introduction/cpp/build/mesh_bench",
+    "--input",
+    "/workspace/introduction/cpp/data/car16_md.txt",
+    "--output",
+    "/workspace/introduction/cpp/results/raw.csv",
+    "--repeats",
+    "3",
+    "--seed",
+    "761116",
+    "--max-expansions",
+    "3000000",
+    "--cohort",
+    "all"
+  ],
+  "protocol": "One serial native process; randomized method order; independent full path validation outside timers; constructors separate; no Python solver calls.",
+  "returncode": 0,
+  "csv_sha256": "4481f02f84bfcda444253e5fad89f09f289ba106fb2be27cd720a9e167342f3c",
+  "completion_sha256": "0f2d1896f3803ee88ad8933155a876449c8916e76853839077a705301b9d4ad4"
+}

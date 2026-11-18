@@ -27,3 +27,6 @@ Thumbs.db
 
 # Generated delivery check includes the final bundle hash (avoid a commit/hash cycle).
 results/md_astar/artifact_validation.json
+
+# Native C++ build variants (the default build/ is covered above).
+/cpp/build-*/

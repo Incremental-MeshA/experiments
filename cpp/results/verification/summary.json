@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "truncated_input",
+      "status": "passed",
+      "message": "error: invalid coverage length"
+    },
+    {
+      "name": "unknown_method",
+      "status": "passed",
+      "message": "error: unknown method: does_not_exist"
+    },
+    {
+      "name": "expansion_cap",
+      "status": "passed",
+      "message": "error: expansion cap: original__rooms-00b mpgaa query 0"
+    },
+    {
+      "name": "refuse_overwrite",
+      "status": "passed",
+      "message": "error: output exists; select a new file to avoid mixing measurements"
+    }
+  ],
+  "logs": {
+    "oracle.log": {
+      "status": "passed",
+      "snapshots": 296,
+      "comparisons": 2940,
+      "sha256": "0ee59b937b4ac147c23269c7694f9cc075ca8e04374decadd0c8a465fbeca6f3"
+    },
+    "sanitizers.log": {
+      "status": "passed",
+      "snapshots": 296,
+      "comparisons": 2940,
+      "sha256": "0ee59b937b4ac147c23269c7694f9cc075ca8e04374decadd0c8a465fbeca6f3"
+    }
+  },
+  "source_provenance": "passed",
+  "timed_calls": 8400,
+  "upstream_calls": 5610,
+  "release_test_binary_sha256": "a9050a475df2c95094f7e6ef071ad93d9a69d725723112b9739925787ff58f88",
+  "sanitizer_test_binary_sha256": "49e1d22d177d43a889e64e11e21b3bbb1f8384c3b4c54f803119d431b7e3cdbf"
+}

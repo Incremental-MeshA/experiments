@@ -1,0 +1,22 @@
+{
+  "format": 1,
+  "suite": "upstream",
+  "control": "car16",
+  "primitives": 284,
+  "mesh_configs": 412,
+  "episodes": 187,
+  "queries": 561,
+  "input_sha256": "f26330041a63ba91722bec2d334bfe02efeacd8c8c58da6f67f61e3ca005a4c6",
+  "source_sha256": {
+    "mesha/primitives.py": "ea1d84ed317b10d66e726fc1678e9dc350b62e871d548b95b8305b4281532463",
+    "mesha/mesh.py": "ecd37c9a897137d57d6a95de384f35dc25fe7d6d847917bbeb636745537d326b",
+    "cpp/export_inputs.py": "cc3b5ee8edce4063c0b18088ae2ebf861e2bd4c88f025de4487b07b16f896c9a",
+    "data/benchmarks/incremental_mesha.json": "90ee541cb6b3a7706fcef2acdd4024f3c38d89716f0bf533f4719d69cdf28113",
+    "results/runs.json": "ee90c99cf091d50e98851adc8dff4dd97210e3ab69cdf56432cdde2ddf3aea11",
+    "data/maps/AR0700SR.map": "9307077deefa5fd6155bdc627994636849d4a017ef91b94a7ac7ed41de08c1dc",
+    "data/maps/Berlin_2_256.map": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+    "data/maps/maze.map": "544f580c745bd7024ef0b39cf8f345e60c10cabe8be9accea7a11027da369eae",
+    "data/maps/rooms.map": "c65effe10582a91d55e0f94c2cbe3bb8e1ae297d2fff1df7061f79554524cd31"
+  },
+  "costs": "Original IEEE-754 binary64; decimal export uses 17 significant digits; no rounding to microcosts."
+}

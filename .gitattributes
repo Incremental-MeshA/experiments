@@ -1,0 +1,3 @@
+# Frozen native inputs contain empty zero-length update sections, including EOF.
+# Preserve their measured bytes and allow those intentional empty records.
+cpp/data/*.txt whitespace=-blank-at-eof
