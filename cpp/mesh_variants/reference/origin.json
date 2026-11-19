@@ -1,0 +1,25 @@
+{
+  "description": "Earlier local prototype definitions. Reference only: integer-cost timings and executables are not used in the new float-cost cohort.",
+  "files": [
+    {
+      "source": "/workspace/incremental_mesh_repair/prepare.py",
+      "copy": "cpp/mesh_variants/reference/prepare.py",
+      "sha256": "805a603dc4dcb557fd42889861cd642fca47366b18c1b1c925116272281ee8c3"
+    },
+    {
+      "source": "/workspace/incremental_mesh_repair/prepare_suffix.py",
+      "copy": "cpp/mesh_variants/reference/prepare_suffix.py",
+      "sha256": "497a987bbd1cc376252d0551a1199e1313f1570f6c18b5edce72793fd97ebb88"
+    },
+    {
+      "source": "/workspace/incremental_mesh_repair/src/ima.cpp",
+      "copy": "cpp/mesh_variants/reference/ima.cpp",
+      "sha256": "b4b5ac3da735c7389eaa03116a46928866e7fb24113fbdaf4d3c73c4ffc6170e"
+    },
+    {
+      "source": "/workspace/incremental_mesh_repair/README.md",
+      "copy": "cpp/mesh_variants/reference/prototype_README.md",
+      "sha256": "282410a4b179c14dc61882140c7fef5c0bc422ca407865619aeda39cda6af4f4"
+    }
+  ]
+}

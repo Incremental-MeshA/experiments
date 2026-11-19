@@ -1,0 +1,764 @@
+{
+  "status": "passed",
+  "utc": "2026-11-18T22:19:09.673549+00:00",
+  "cpu": "AMD EPYC 9V74 80-Core Processor",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "workers": 1,
+  "git_parent": "364c93896a39c4188e9862b085b69e6dd080bf9b",
+  "manifest_sha256": "d8b066f0c43ca27318a5be7696aed954a2800b8162a6ec36fcb6ea07544bc306",
+  "source_sha256": {
+    "cpp/include/ima/adaptive.hpp": "5c54db0b176953927291f2ca476b26e769192571754819e2f66c3feb698c83a3",
+    "cpp/include/ima/deferred.hpp": "d4b47e481e323e1e202deeb2644b14b4d63fda6d8f974f641a77ca9d30e73530",
+    "cpp/include/ima/dstar.hpp": "c9e9b714fbf86da15bcea7078494b8dd0a0f4fbd43e38d6e8815748458dfca6a",
+    "cpp/include/ima/model.hpp": "ce03a8bbb71cb873bf546a8c51063e12b3102c9df05d96fc55902d7630c9bfbc",
+    "cpp/include/ima/planners.hpp": "b874588434c7bbb5666b4dc6b33d498d2d8b18ac45198b545c3899731292fa0d",
+    "cpp/include/ima/search.hpp": "cdc94b7a4a9897e4da868003998346acdf5af8f4011b4b566803cb79f36f78a2",
+    "cpp/experiments/memory.hpp": "16a8f7e99fc79b35c38086e1d632e8024a10e48e3b80eaf3547c83a2d2070b32",
+    "cpp/experiments/dstar_boundary.hpp": "959a21c8684f7890a200cbbbc14ea641ac8a0e7719000842f929b2ebdea60990",
+    "cpp/mesh_variants/bench.cpp": "d1877f9db4ce5721d2a26dd958bd816eced695e1bce42e042453283bcb31e018",
+    "cpp/mesh_variants/variants.hpp": "163a3f17cabd4354c00edd38821aaf0fea8edd45d7345bf9501d161220d2b8d3",
+    "cpp/mesh_variants/Makefile": "7aadcad92c17b4e12e7c9a8d2b2badbc6a1863f498c42151bf23ac0eeeaad2b4",
+    "cpp/mesh_variants/run_all.py": "2da62af5b6e1c1ffbdd777fab6ab9cbaaa9ea46b166116242a5fda67c9121572",
+    "cpp/mesh_variants/freeze.py": "389424a9440fa8f250e992fa0701b475e2e90ecc79e67da4b4da4c16bdd03355",
+    "cpp/mesh_variants/test_models.cpp": "60dd435d2c168dd1cef5e1c5f70870c9bd73610686cadfca8d339035678510f2",
+    "cpp/mesh_variants/test_variants.py": "cf05b51f81652a8f175e700cdc9d501bf78dea9cca6c64701cf58292fc147421"
+  },
+  "plan": [
+    {
+      "name": "timing_car16_missions_r8",
+      "input": "cpp/experiments/frozen/car16_missions_r8.txt",
+      "mode": "mission",
+      "memory": false,
+      "repeats": 3,
+      "radius": 8,
+      "max_steps": 160
+    },
+    {
+      "name": "timing_car16_missions_r16",
+      "input": "cpp/experiments/frozen/car16_missions_r16.txt",
+      "mode": "mission",
+      "memory": false,
+      "repeats": 3,
+      "radius": 16,
+      "max_steps": 160
+    },
+    {
+      "name": "timing_grid8_missions_r1",
+      "input": "cpp/experiments/frozen/grid8_missions_r1.txt",
+      "mode": "mission",
+      "memory": false,
+      "repeats": 3,
+      "radius": 1,
+      "max_steps": 256
+    },
+    {
+      "name": "timing_grid8_missions_r4",
+      "input": "cpp/experiments/frozen/grid8_missions_r4.txt",
+      "mode": "mission",
+      "memory": false,
+      "repeats": 3,
+      "radius": 4,
+      "max_steps": 256
+    },
+    {
+      "name": "timing_grid8_missions_r8",
+      "input": "cpp/experiments/frozen/grid8_missions_r8.txt",
+      "mode": "mission",
+      "memory": false,
+      "repeats": 3,
+      "radius": 8,
+      "max_steps": 256
+    },
+    {
+      "name": "timing_car16_replay",
+      "input": "cpp/experiments/frozen/car16_replay.txt",
+      "mode": "replay",
+      "memory": false,
+      "repeats": 3
+    },
+    {
+      "name": "timing_grid8_replay",
+      "input": "cpp/experiments/frozen/grid8_replay.txt",
+      "mode": "replay",
+      "memory": false,
+      "repeats": 3
+    },
+    {
+      "name": "memory_car16_replay",
+      "input": "cpp/experiments/frozen/car16_replay.txt",
+      "mode": "replay",
+      "memory": true,
+      "repeats": 1
+    },
+    {
+      "name": "memory_grid8_replay",
+      "input": "cpp/experiments/frozen/grid8_replay.txt",
+      "mode": "replay",
+      "memory": true,
+      "repeats": 1
+    }
+  ],
+  "jobs": {
+    "timing_car16_missions_r8": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/mesh_variants/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/experiments/frozen/car16_missions_r8.txt",
+        "--output",
+        "/workspace/introduction/cpp/mesh_variants/results/full/timing_car16_missions_r8.csv",
+        "--mode",
+        "mission",
+        "--methods",
+        "lba,lazy_lba,mesha,mesh_parall,dstar_lattice,dstar_mesh,mpgaa,md_astar,md64,md_scan,lba_reuse,prefix_positive,cmesh_dstar,suffix_mesh,boundary_mesh",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--seed",
+        "48101",
+        "--radius",
+        "8",
+        "--max-steps",
+        "160"
+      ],
+      "binary_sha256": "1658def96233b4426ea10c3f703b488f22c2ae5854144b521c45c2b522f699e6",
+      "returncode": 0,
+      "csv_sha256": "2cf4e005f7127d001a5d2785198e55405ad99d7ed4a57015a1fc30339caf987e",
+      "completion_sha256": "5c0dbb58aa4f3a3305d213cf2bcbbcb1922cf7954f28a65d617533c25bef14bb",
+      "completion": {
+        "status": "passed",
+        "mode": "mission",
+        "runs": 360,
+        "rows": 22617,
+        "capped_queries": 0,
+        "step_limited_missions": 45,
+        "repeats": 3,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 160,
+        "preparation_s": 0.022078632,
+        "certificate_s": 0.003258736,
+        "wall_s": 781.630619308,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "variant_compile_s": 0.011364464,
+        "variant_model_heap_retained_bytes": 0,
+        "variant_model_heap_peak_bytes": 0,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 412,
+            "edges": 680,
+            "support_groups": 968,
+            "delta": 0.03125
+          },
+          "cmesh": {
+            "configurations": 188,
+            "edges": 456,
+            "support_groups": 728,
+            "delta": 0.03125
+          },
+          "suffix_mesh": {
+            "configurations": 428,
+            "edges": 696,
+            "support_groups": 860,
+            "delta": 0.03125
+          },
+          "boundary_mesh": {
+            "configurations": 16,
+            "edges": 284,
+            "support_groups": 424,
+            "delta": 0
+          }
+        }
+      }
+    },
+    "timing_car16_missions_r16": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/mesh_variants/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/experiments/frozen/car16_missions_r16.txt",
+        "--output",
+        "/workspace/introduction/cpp/mesh_variants/results/full/timing_car16_missions_r16.csv",
+        "--mode",
+        "mission",
+        "--methods",
+        "lba,lazy_lba,mesha,mesh_parall,dstar_lattice,dstar_mesh,mpgaa,md_astar,md64,md_scan,lba_reuse,prefix_positive,cmesh_dstar,suffix_mesh,boundary_mesh",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--seed",
+        "48101",
+        "--radius",
+        "16",
+        "--max-steps",
+        "160"
+      ],
+      "binary_sha256": "1658def96233b4426ea10c3f703b488f22c2ae5854144b521c45c2b522f699e6",
+      "returncode": 0,
+      "csv_sha256": "c0db4c08a5327305bb3c65919bec581d9e3b6601124495a5478f7a4277538b1a",
+      "completion_sha256": "545ac5658ef69c47e57084aa46892e24fa630441350aad0fefee9ea0b771315b",
+      "completion": {
+        "status": "passed",
+        "mode": "mission",
+        "runs": 360,
+        "rows": 18783,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 3,
+        "cap": 1000000,
+        "radius": 16,
+        "max_steps": 160,
+        "preparation_s": 0.004677054,
+        "certificate_s": 5.3565e-05,
+        "wall_s": 905.654144855,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "variant_compile_s": 0.001963303,
+        "variant_model_heap_retained_bytes": 0,
+        "variant_model_heap_peak_bytes": 0,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 412,
+            "edges": 680,
+            "support_groups": 968,
+            "delta": 0.03125
+          },
+          "cmesh": {
+            "configurations": 188,
+            "edges": 456,
+            "support_groups": 728,
+            "delta": 0.03125
+          },
+          "suffix_mesh": {
+            "configurations": 428,
+            "edges": 696,
+            "support_groups": 860,
+            "delta": 0.03125
+          },
+          "boundary_mesh": {
+            "configurations": 16,
+            "edges": 284,
+            "support_groups": 424,
+            "delta": 0
+          }
+        }
+      }
+    },
+    "timing_grid8_missions_r1": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/mesh_variants/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/experiments/frozen/grid8_missions_r1.txt",
+        "--output",
+        "/workspace/introduction/cpp/mesh_variants/results/full/timing_grid8_missions_r1.csv",
+        "--mode",
+        "mission",
+        "--methods",
+        "lba,lazy_lba,mesha,mesh_parall,dstar_lattice,dstar_mesh,mpgaa,md_astar,md64,md_scan,lba_reuse,prefix_positive,cmesh_dstar,suffix_mesh,boundary_mesh",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--seed",
+        "48101",
+        "--radius",
+        "1",
+        "--max-steps",
+        "256"
+      ],
+      "binary_sha256": "1658def96233b4426ea10c3f703b488f22c2ae5854144b521c45c2b522f699e6",
+      "returncode": 0,
+      "csv_sha256": "308c8fd5939bcd0d5793cd653d39a06e9e3dad81715c1646bcca5f0792e5528a",
+      "completion_sha256": "787f85ce79a63e34676adf58c92d34180f66474b3cb6b20a72dc00249662eafb",
+      "completion": {
+        "status": "passed",
+        "mode": "mission",
+        "runs": 360,
+        "rows": 18003,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 3,
+        "cap": 1000000,
+        "radius": 1,
+        "max_steps": 256,
+        "preparation_s": 0.000495745,
+        "certificate_s": 3.425e-06,
+        "wall_s": 2.178343569,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "variant_compile_s": 2.9164e-05,
+        "variant_model_heap_retained_bytes": 0,
+        "variant_model_heap_peak_bytes": 0,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "cmesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "suffix_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "boundary_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0
+          }
+        }
+      }
+    },
+    "timing_grid8_missions_r4": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/mesh_variants/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/experiments/frozen/grid8_missions_r4.txt",
+        "--output",
+        "/workspace/introduction/cpp/mesh_variants/results/full/timing_grid8_missions_r4.csv",
+        "--mode",
+        "mission",
+        "--methods",
+        "lba,lazy_lba,mesha,mesh_parall,dstar_lattice,dstar_mesh,mpgaa,md_astar,md64,md_scan,lba_reuse,prefix_positive,cmesh_dstar,suffix_mesh,boundary_mesh",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--seed",
+        "48101",
+        "--radius",
+        "4",
+        "--max-steps",
+        "256"
+      ],
+      "binary_sha256": "1658def96233b4426ea10c3f703b488f22c2ae5854144b521c45c2b522f699e6",
+      "returncode": 0,
+      "csv_sha256": "bf736955c09a06bd9e75b39b1a50f7be232a1de2919e3be09b83e740e89a4c7d",
+      "completion_sha256": "e06207cd054c8f954ddf924ce8f97c99f5be4d4154ad91b4718cf7fd8058152f",
+      "completion": {
+        "status": "passed",
+        "mode": "mission",
+        "runs": 360,
+        "rows": 16020,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 3,
+        "cap": 1000000,
+        "radius": 4,
+        "max_steps": 256,
+        "preparation_s": 0.000821247,
+        "certificate_s": 4.227e-06,
+        "wall_s": 2.281532288,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "variant_compile_s": 3.1307e-05,
+        "variant_model_heap_retained_bytes": 0,
+        "variant_model_heap_peak_bytes": 0,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "cmesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "suffix_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "boundary_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0
+          }
+        }
+      }
+    },
+    "timing_grid8_missions_r8": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/mesh_variants/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/experiments/frozen/grid8_missions_r8.txt",
+        "--output",
+        "/workspace/introduction/cpp/mesh_variants/results/full/timing_grid8_missions_r8.csv",
+        "--mode",
+        "mission",
+        "--methods",
+        "lba,lazy_lba,mesha,mesh_parall,dstar_lattice,dstar_mesh,mpgaa,md_astar,md64,md_scan,lba_reuse,prefix_positive,cmesh_dstar,suffix_mesh,boundary_mesh",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--seed",
+        "48101",
+        "--radius",
+        "8",
+        "--max-steps",
+        "256"
+      ],
+      "binary_sha256": "1658def96233b4426ea10c3f703b488f22c2ae5854144b521c45c2b522f699e6",
+      "returncode": 0,
+      "csv_sha256": "aeef3d8e95f5f4eeba0a4c9c92a0055771e83560adeac1da4d0d85193fb10994",
+      "completion_sha256": "16efa2921ab1d943de9a8d8226273ed48f09bf67a78876b115da40be3bfff872",
+      "completion": {
+        "status": "passed",
+        "mode": "mission",
+        "runs": 360,
+        "rows": 15720,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 3,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 256,
+        "preparation_s": 0.000593182,
+        "certificate_s": 3.896e-06,
+        "wall_s": 2.487337232,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "variant_compile_s": 3.3871e-05,
+        "variant_model_heap_retained_bytes": 0,
+        "variant_model_heap_peak_bytes": 0,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "cmesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "suffix_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "boundary_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0
+          }
+        }
+      }
+    },
+    "timing_car16_replay": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/mesh_variants/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/experiments/frozen/car16_replay.txt",
+        "--output",
+        "/workspace/introduction/cpp/mesh_variants/results/full/timing_car16_replay.csv",
+        "--mode",
+        "replay",
+        "--methods",
+        "lba,lazy_lba,mesha,mesh_parall,dstar_lattice,dstar_mesh,mpgaa,md_astar,md64,md_scan,lba_reuse,prefix_positive,cmesh_dstar,suffix_mesh,boundary_mesh",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--seed",
+        "48101"
+      ],
+      "binary_sha256": "1658def96233b4426ea10c3f703b488f22c2ae5854144b521c45c2b522f699e6",
+      "returncode": 0,
+      "csv_sha256": "7a583ec46c47a9361a4d9b0e7d7e47743c410be158424d2eed644d9345d05584",
+      "completion_sha256": "4c7f34d0df69f9eb3c372d0b8167a7cd96f276b750d3df4b4f3dbcde94afbd8b",
+      "completion": {
+        "status": "passed",
+        "mode": "replay",
+        "runs": 4050,
+        "rows": 37575,
+        "capped_queries": 135,
+        "step_limited_missions": 0,
+        "repeats": 3,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 160,
+        "preparation_s": 0.015006277,
+        "certificate_s": 5.4222e-05,
+        "wall_s": 3356.51308976,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "variant_compile_s": 0.002053721,
+        "variant_model_heap_retained_bytes": 0,
+        "variant_model_heap_peak_bytes": 0,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 412,
+            "edges": 680,
+            "support_groups": 968,
+            "delta": 0.03125
+          },
+          "cmesh": {
+            "configurations": 188,
+            "edges": 456,
+            "support_groups": 728,
+            "delta": 0.03125
+          },
+          "suffix_mesh": {
+            "configurations": 428,
+            "edges": 696,
+            "support_groups": 860,
+            "delta": 0.03125
+          },
+          "boundary_mesh": {
+            "configurations": 16,
+            "edges": 284,
+            "support_groups": 424,
+            "delta": 0
+          }
+        }
+      }
+    },
+    "timing_grid8_replay": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/mesh_variants/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/experiments/frozen/grid8_replay.txt",
+        "--output",
+        "/workspace/introduction/cpp/mesh_variants/results/full/timing_grid8_replay.csv",
+        "--mode",
+        "replay",
+        "--methods",
+        "lba,lazy_lba,mesha,mesh_parall,dstar_lattice,dstar_mesh,mpgaa,md_astar,md64,md_scan,lba_reuse,prefix_positive,cmesh_dstar,suffix_mesh,boundary_mesh",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--seed",
+        "48101"
+      ],
+      "binary_sha256": "1658def96233b4426ea10c3f703b488f22c2ae5854144b521c45c2b522f699e6",
+      "returncode": 0,
+      "csv_sha256": "10d6d92203b74eb8caf050fa7cd8220e29cbb3f96716303fbd18d75c99d78c18",
+      "completion_sha256": "a1501164de5b1672ad039664aee0c8f7d660615e612dcb2e590f9b21249f909f",
+      "completion": {
+        "status": "passed",
+        "mode": "replay",
+        "runs": 4320,
+        "rows": 95490,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 3,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 160,
+        "preparation_s": 0.003910476,
+        "certificate_s": 4.066e-06,
+        "wall_s": 12.352773984,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "variant_compile_s": 3.9049e-05,
+        "variant_model_heap_retained_bytes": 0,
+        "variant_model_heap_peak_bytes": 0,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "cmesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "suffix_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "boundary_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0
+          }
+        }
+      }
+    },
+    "memory_car16_replay": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/mesh_variants/build/experiment_memory",
+        "--input",
+        "/workspace/introduction/cpp/experiments/frozen/car16_replay.txt",
+        "--output",
+        "/workspace/introduction/cpp/mesh_variants/results/full/memory_car16_replay.csv",
+        "--mode",
+        "replay",
+        "--methods",
+        "lba,lazy_lba,mesha,mesh_parall,dstar_lattice,dstar_mesh,mpgaa,md_astar,md64,md_scan,lba_reuse,prefix_positive,cmesh_dstar,suffix_mesh,boundary_mesh",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--seed",
+        "48101"
+      ],
+      "binary_sha256": "fdec8979559898690bcdb57e6f1bf79c71e4d59d61c9a46ec0c8c172f059e43b",
+      "returncode": 0,
+      "csv_sha256": "0797b4315aa0d65b637f94eba5094e145fbe382d512aa3f067cd4f1117e3b000",
+      "completion_sha256": "15da108061131d76dd7ce5e765408bde81389e0f0e8c97e8ddb1699f4c5385db",
+      "completion": {
+        "status": "passed",
+        "mode": "replay",
+        "runs": 1350,
+        "rows": 12525,
+        "capped_queries": 45,
+        "step_limited_missions": 0,
+        "repeats": 1,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 160,
+        "preparation_s": 0.016607539,
+        "certificate_s": 7.1887e-05,
+        "wall_s": 1298.24910681,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "variant_compile_s": 0.002327901,
+        "variant_model_heap_retained_bytes": 771616,
+        "variant_model_heap_peak_bytes": 852896,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 412,
+            "edges": 680,
+            "support_groups": 968,
+            "delta": 0.03125
+          },
+          "cmesh": {
+            "configurations": 188,
+            "edges": 456,
+            "support_groups": 728,
+            "delta": 0.03125
+          },
+          "suffix_mesh": {
+            "configurations": 428,
+            "edges": 696,
+            "support_groups": 860,
+            "delta": 0.03125
+          },
+          "boundary_mesh": {
+            "configurations": 16,
+            "edges": 284,
+            "support_groups": 424,
+            "delta": 0
+          }
+        }
+      }
+    },
+    "memory_grid8_replay": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/mesh_variants/build/experiment_memory",
+        "--input",
+        "/workspace/introduction/cpp/experiments/frozen/grid8_replay.txt",
+        "--output",
+        "/workspace/introduction/cpp/mesh_variants/results/full/memory_grid8_replay.csv",
+        "--mode",
+        "replay",
+        "--methods",
+        "lba,lazy_lba,mesha,mesh_parall,dstar_lattice,dstar_mesh,mpgaa,md_astar,md64,md_scan,lba_reuse,prefix_positive,cmesh_dstar,suffix_mesh,boundary_mesh",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--seed",
+        "48101"
+      ],
+      "binary_sha256": "fdec8979559898690bcdb57e6f1bf79c71e4d59d61c9a46ec0c8c172f059e43b",
+      "returncode": 0,
+      "csv_sha256": "e420cba834cf71fce6b86c0387e5808ab84a86e45773a36194831c1b3fb94eae",
+      "completion_sha256": "8512cda244b70ab4979b81ff9589ac6149faf0e5d23e5ef6dca558f27143396b",
+      "completion": {
+        "status": "passed",
+        "mode": "replay",
+        "runs": 1440,
+        "rows": 31830,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 1,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 160,
+        "preparation_s": 0.003824215,
+        "certificate_s": 4.897e-06,
+        "wall_s": 4.47102479,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "variant_compile_s": 3.8718e-05,
+        "variant_model_heap_retained_bytes": 7536,
+        "variant_model_heap_peak_bytes": 8472,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "cmesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "suffix_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "boundary_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0
+          }
+        }
+      }
+    }
+  },
+  "protocol": "New contemporaneous 15-method cohort. Same immutable worlds, events, references and budgets as the previous 11-method cohort. No pooling of timing measurements across cohorts. Three randomized repeats per case; all caps and step limits retained. Models prepared once outside planner timers; model costs reported separately."
+}

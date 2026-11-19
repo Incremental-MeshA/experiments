@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "analysis_sha256": "2c25e8c8ff36cfa902e2157acf5e69f67df2f585121fadd3577f07d0cff02e16",
+  "source_sha256": "ac077f4a34d602d15fab15d045dd9f79b567b88a08a753aaf6dcc70c1a95a098",
+  "files": {
+    "docs/experiments/mesh_figures/all_methods.pdf": "f72ac40bdcb1fa290bf28cb76c5d216292fabea2577699259f5f17b666d4e8d8",
+    "docs/experiments/mesh_figures/all_methods.png": "244ded52b71c96d01481b1fcbc8053d2757db7bf1ae7978a9a16299370d6fc4f",
+    "docs/experiments/mesh_figures/change_scaling.pdf": "83ac2991680ae43fec47f8bc71c0ffaa22b551bc653b974649e6390f789b9c43",
+    "docs/experiments/mesh_figures/change_scaling.png": "3e5fd21686162d93ab914c859386c49b669b6eabb17c6347e5c38a2677010bf0",
+    "docs/experiments/mesh_figures/map_regimes.pdf": "0e2b2e765237899abb37cdc2367e829745ef9129bc4e2a3e9b997ec58efdbe70",
+    "docs/experiments/mesh_figures/map_regimes.png": "e3f85a8e9f2f32f34f9e088c1a9240a6c119c4daf8d8040cbf64aafd36dea4cf",
+    "docs/experiments/mesh_figures/parameters.pdf": "d0f2203bb2ac94e50ad4cdbe8e26c30af7034928500827b27d503ae6e4b81af4",
+    "docs/experiments/mesh_figures/parameters.png": "29ecc41b82a3e719b6fb70ba1ae70884d4606c566e9ce180f83cffb94a4eb31f",
+    "docs/experiments/mesh_figures/performance_profiles.pdf": "f84ede2221a5d2e2f3430198658b125f4a6ab7adb82dda7c114a8dcf2f674bfd",
+    "docs/experiments/mesh_figures/performance_profiles.png": "57239f2f1bc9c7bf727b5b3096af5e2a505ee873dd4fa1f50585a347eb49b802",
+    "docs/experiments/mesh_figures/topology_ablation.pdf": "4f3c44d61d763c441a80c1a939c8aa6bd024630e9079c5a94af518fe072d715b",
+    "docs/experiments/mesh_figures/topology_ablation.png": "71b00c214d5185aadf3f7993576ab5da2b049de1c088ed162b5387351c5a5c38",
+    "docs/experiments/mesh_figures/unknown_navigation.pdf": "ebc0cb287a60447625363e34f7e76ad6d3683db3508a97260056ffbef4044750",
+    "docs/experiments/mesh_figures/unknown_navigation.png": "c63b123bdf035a35777dd03b0046bcf3a334c26d160d35de232a8e66ab93e45c",
+    "docs/experiments/mesh_figures/work_memory_completion.pdf": "584b0586326512e68c7a02baa9efad4a4a6f40ab9278188c4af08fddae77fc70",
+    "docs/experiments/mesh_figures/work_memory_completion.png": "c7491bd815b3991eacd0a168b15fc6457862194794b9d4de5970023877dbfc92"
+  }
+}

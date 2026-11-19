@@ -1,0 +1,102 @@
+{
+  "status": "frozen",
+  "base_manifest": "cpp/experiments/frozen/manifest.json",
+  "base_manifest_sha256": "c1d4f4ef0ca243b5dc1ec2d4174b9c0207953342cf7372f3983d517e568538a6",
+  "records": [
+    {
+      "path": "cpp/experiments/frozen/car16_replay.txt",
+      "sha256": "da19361771205aef6db5e61e014083711110cf5e5424d66ccb093c4243320a20",
+      "cases": 90,
+      "snapshots": 835
+    },
+    {
+      "path": "cpp/experiments/frozen/car16_missions_r8.txt",
+      "sha256": "f700b282080472ffc44fa3482fb48f0f78b772bdf0062fbaebd0d4540bd94a8e",
+      "cases": 8,
+      "snapshots": 8
+    },
+    {
+      "path": "cpp/experiments/frozen/car16_missions_r16.txt",
+      "sha256": "43ad28eeba041cd3b60cc3370dd255760b0cd6f653d5f23f5414dfd7772d2ab6",
+      "cases": 8,
+      "snapshots": 8
+    },
+    {
+      "path": "cpp/experiments/frozen/grid8_replay.txt",
+      "sha256": "3b67ec59c569aaf05b6992ae15e6a3c674cefbf1432f9d959000cd8b2acba72b",
+      "cases": 96,
+      "snapshots": 2122
+    },
+    {
+      "path": "cpp/experiments/frozen/grid8_missions_r1.txt",
+      "sha256": "802e86db76795164cfd018cc00d82cdd847d1b226032e05d38efc34091c210cb",
+      "cases": 8,
+      "snapshots": 8
+    },
+    {
+      "path": "cpp/experiments/frozen/grid8_missions_r4.txt",
+      "sha256": "4206365cd52818123c499e98d80e4d2d65d81fd90a74c527f0fe3d0098543b46",
+      "cases": 8,
+      "snapshots": 8
+    },
+    {
+      "path": "cpp/experiments/frozen/grid8_missions_r8.txt",
+      "sha256": "cf98f8fbf1c125fbc1187537a29812ae9c0feb9ebca6b75d71ef70b14de8435b",
+      "cases": 8,
+      "snapshots": 8
+    }
+  ],
+  "seeds": [
+    48101,
+    48102
+  ],
+  "experiment_methods": [
+    "lba",
+    "lazy_lba",
+    "mesha",
+    "mesh_parall",
+    "dstar_lattice",
+    "dstar_mesh",
+    "mpgaa",
+    "md_astar",
+    "md64",
+    "md_scan",
+    "lba_reuse",
+    "prefix_positive",
+    "cmesh_dstar",
+    "suffix_mesh",
+    "boundary_mesh"
+  ],
+  "cap": 1000000,
+  "repeats": 3,
+  "memory_repeats": 1,
+  "total_replay_cases": 186,
+  "total_missions": 40,
+  "source_sha256": {
+    "cpp/include/ima/adaptive.hpp": "5c54db0b176953927291f2ca476b26e769192571754819e2f66c3feb698c83a3",
+    "cpp/include/ima/deferred.hpp": "d4b47e481e323e1e202deeb2644b14b4d63fda6d8f974f641a77ca9d30e73530",
+    "cpp/include/ima/dstar.hpp": "c9e9b714fbf86da15bcea7078494b8dd0a0f4fbd43e38d6e8815748458dfca6a",
+    "cpp/include/ima/model.hpp": "ce03a8bbb71cb873bf546a8c51063e12b3102c9df05d96fc55902d7630c9bfbc",
+    "cpp/include/ima/planners.hpp": "b874588434c7bbb5666b4dc6b33d498d2d8b18ac45198b545c3899731292fa0d",
+    "cpp/include/ima/search.hpp": "cdc94b7a4a9897e4da868003998346acdf5af8f4011b4b566803cb79f36f78a2",
+    "cpp/experiments/memory.hpp": "16a8f7e99fc79b35c38086e1d632e8024a10e48e3b80eaf3547c83a2d2070b32",
+    "cpp/experiments/dstar_boundary.hpp": "959a21c8684f7890a200cbbbc14ea641ac8a0e7719000842f929b2ebdea60990",
+    "cpp/mesh_variants/bench.cpp": "d1877f9db4ce5721d2a26dd958bd816eced695e1bce42e042453283bcb31e018",
+    "cpp/mesh_variants/variants.hpp": "163a3f17cabd4354c00edd38821aaf0fea8edd45d7345bf9501d161220d2b8d3",
+    "cpp/mesh_variants/Makefile": "7aadcad92c17b4e12e7c9a8d2b2badbc6a1863f498c42151bf23ac0eeeaad2b4",
+    "cpp/mesh_variants/run_all.py": "2da62af5b6e1c1ffbdd777fab6ab9cbaaa9ea46b166116242a5fda67c9121572",
+    "cpp/mesh_variants/freeze.py": "389424a9440fa8f250e992fa0701b475e2e90ecc79e67da4b4da4c16bdd03355",
+    "cpp/mesh_variants/test_models.cpp": "60dd435d2c168dd1cef5e1c5f70870c9bd73610686cadfca8d339035678510f2",
+    "cpp/mesh_variants/test_variants.py": "cf05b51f81652a8f175e700cdc9d501bf78dea9cca6c64701cf58292fc147421"
+  },
+  "contexts_sha256": {
+    "cpp/experiments/frozen/car16_replay.contexts.json": "058875dfe0c26e4b54b680ec7632d0dda438ce3119c24892b45243b023525dfe",
+    "cpp/experiments/frozen/car16_missions_r8.contexts.json": "90d5981d4078a8b0936047e584c8bf128802b720d7d3f7084abe7c6f1c70b2c6",
+    "cpp/experiments/frozen/car16_missions_r16.contexts.json": "2d6a6923100714c4b4206fa6ca84e0129c264478d266881a3b10eef11892f3e8",
+    "cpp/experiments/frozen/grid8_replay.contexts.json": "849bc7282d9aa4372f05d646e9f782a57e5fe5bfe3937b588f6c90e45389dcff",
+    "cpp/experiments/frozen/grid8_missions_r1.contexts.json": "7ea8b44d5ffb71faaad6838a13a13ca54b2c9cd03ae5e9d711a835aad8a6eb55",
+    "cpp/experiments/frozen/grid8_missions_r4.contexts.json": "1f3851a8f5d09e1ff77aba4c5b174beabd40648d0a41f044a98c220e99c5c55f",
+    "cpp/experiments/frozen/grid8_missions_r8.contexts.json": "2ebaa0361dd114e435d886d95a3da321ad2aabf182b523c4c6978796ff29a11f"
+  },
+  "protocol": "New contemporaneous 15-method cohort. Same immutable worlds, events, references and budgets as the previous 11-method cohort. No pooling of timing measurements across cohorts."
+}

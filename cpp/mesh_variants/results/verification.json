@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "independent_oracle": "Python heap-Dijkstra on original float-cost physical primitives",
+  "car16_headings": 16,
+  "dynamic_snapshots": 120,
+  "normal_query_checks": 1200,
+  "allocation_path_counter_parity": true,
+  "model_audits": [
+    {
+      "control": "car16",
+      "binary": "test_models",
+      "status": "passed",
+      "projection_checks": 1136,
+      "heuristic_checks": 6348,
+      "support_close_open_checks": 6348
+    },
+    {
+      "control": "car16",
+      "binary": "test_models_sanitize",
+      "status": "passed",
+      "projection_checks": 1136,
+      "heuristic_checks": 6348,
+      "support_close_open_checks": 6348
+    },
+    {
+      "control": "grid8",
+      "binary": "test_models",
+      "status": "passed",
+      "projection_checks": 32,
+      "heuristic_checks": 96,
+      "support_close_open_checks": 96
+    },
+    {
+      "control": "grid8",
+      "binary": "test_models_sanitize",
+      "status": "passed",
+      "projection_checks": 32,
+      "heuristic_checks": 96,
+      "support_close_open_checks": 96
+    }
+  ],
+  "unknown_car_missions": {
+    "suffix_mesh": "goal",
+    "cmesh_dstar": "goal",
+    "boundary_mesh": "goal",
+    "prefix_positive": "goal"
+  },
+  "sanitized": true
+}

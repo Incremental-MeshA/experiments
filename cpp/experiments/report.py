@@ -30,7 +30,7 @@ def figure(name,caption,width='100%'):
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def build(directory,pdf=True):
+def build(directory,pdf=True,mesh_directory=None):
     a=json.loads((directory/'analysis/analysis.json').read_text());assert a['status']=='passed'
     state=json.loads((directory/'experiment.json').read_text());assert state['status']=='passed'
     for name,sha in a['raw_sha256'].items():assert digest(directory/name)==sha,name
@@ -48,8 +48,8 @@ def build(directory,pdf=True):
     def add(text):out.append(text.strip()+'\n')
     add(r'''---
 title: "Инкрементальный поиск на mesh-графе: расширенные C++-эксперименты"
-subtitle: "MD-A*, десять контролей и границы преимущества ремонта"
-date: "18 ноября 2026"
+subtitle: "MD-A*, C-Mesh-D* Lite, Suffix-Mesh и Boundary-Mesh"
+date: "19 ноября 2026"
 lang: ru-RU
 fontsize: 10pt
 geometry: margin=18mm
@@ -59,6 +59,10 @@ colorlinks: true
 toc: true
 toc-depth: 2
 ---''')
+    extension_meta=None
+    supplement=ROOT/'docs/experiments/mesh_variants_body.md'
+    if supplement.exists():
+        add('Отчёт содержит две отдельные измерительные серии. Первые главы описывают исходное сравнение 11 методов; глава «Дополнение» — новый совместный запуск 15 методов на тех же входах, включая C-Mesh-D\\* Lite, Suffix-Mesh и Boundary-Mesh. Времена между сериями не смешиваются.')
     add('# Результат и исследовательский вопрос')
     add(rf'''Выполнены {integer(a['timed_episode_runs'])} измеряемых запусков эпизодов/миссий: 11 методов, три повтора, {a['replay_cases']} зафиксированных replay-эпизодов и {a['mission_cases']} параметризованных миссий с собственным движением. Записаны {integer(a['timed_rows'])} строк и {integer(a['actual_planner_calls'])} фактических вызовов планировщика. Повторы и параметры с общими концами не считаются независимыми задачами. Статья оценивает, в каких режимах сохранение результатов поиска и отсрочка освобождений полезны, а где их накладные расходы или распространение изменений мешают.
 
@@ -103,7 +107,7 @@ toc-depth: 2
 
 Время запроса включает получение правок, поиск/ремонт, извлечение результата и обслуживание сохранённого пути. Конструктор измеряется отдельно и включён в полный эпизод. Подготовка общей модели/сертификата, сенсор, контрольный поиск и внешний валидатор находятся вне таймера. Поэтому это время планировщика, а не всей робототехнической системы.
 
-Дополнительно измеряются раскрытия, обращения к клеткам при коллизиях, инструментированные уведомления MPGAA/MD, очередь снижения эвристики, вызовы ядра, доля сертификатов, отложенные/активированные клетки, пиковая запрошенная C++ heap-память, p50/p95/p99 задержек и стоимость движения. Для памяти используется отдельный бинарник; его времена не входят в сравнение. Пик — максимальные запрошенные байты внутри запроса с сохранённым состоянием и результатом, исключая общую модель/вход и проверку. Это не RSS и не включает стек или накладные расходы malloc.
+Дополнительно измеряются раскрытия, обращения к клеткам при коллизиях, инструментированные уведомления MPGAA/MD, очередь снижения эвристики, вызовы ядра, доля сертификатов, отложенные и активированные клетки, пиковая запрошенная C++ heap-память, p50/p95/p99 задержек и стоимость движения. Для памяти используется отдельный бинарник; его времена не входят в сравнение. Пик — максимальные запрошенные байты внутри запроса с сохранённым состоянием и результатом, исключая общую модель/вход и проверку. Это не RSS и не включает стек или накладные расходы malloc.
 
 Лимит — 1 000 000 раскрытий на запрос; у MD он общий для двух вызовов. У car16-миссий дополнительно 160 шагов, у grid8 — 256. Раскрытия разных графов имеют разную цену. В replay доказанное отсутствие пути — завершённый вычисленный ответ, превышение бюджета — нет; оставшиеся запросы после него сохранены как `skipped_after_cap`. В mission завершение означает именно достижение цели. Пределы не скрываются и не превращаются в дешёвые успехи.''')
     add('Однократная подготовка фиксированной модели/сертификата амортизируется между задачами и не включена в эпизодные отношения. Для одиночного запуска MD следует дополнительно учитывать стоимость сертификата; её фактическое измерение приведено отдельно:')
@@ -234,6 +238,13 @@ toc-depth: 2
     add(r'''Разнообразие сценариев значительно расширено, но внешняя валидность остаётся ограниченной: по два корня на карту; окна 96×96 и короткие проезды, а не полномасштабные 512×512/1000×1000 миссии из литературы; синтетическая сеточная серия вспомогательна; квадратный сенсор без окклюзии; реализации данного репозитория, а не официальные оптимизированные пакеты авторов. У MPGAA\* уведомления отсекаются грубым прямоугольником посещённой области, а не точным пространственным индексом; преимущество пропуска уведомлений частично зависит от этой реализации. Бюджет раскрытий зависит от представления, а внешняя проверка/сенсор не включены во время поиска. Память измеряется только для replay и как requested heap. Межкартный bootstrap при четырёх–шести картах — описательный, не сильная статистическая гарантия.
 
 Поэтому корректный итог работы — карта режимов применимости, а не заявление об универсальном превосходстве MD-A\*. Для гарантированно неповреждённого оптимального пути достаточно стандартного сохранения суффикса; для актуального сложного ремонта нужны результаты на конкретной геометрии и потоке правок. Новизну MD следует защищать сертификатом для освобождений и переносом очереди, а экспериментальную пользу — парными данными со смешанными изменениями и контролями.''')
+    if supplement.exists():
+        extension_directory=(mesh_directory or ROOT/'cpp/mesh_variants/results/full')/'analysis'
+        extension_meta=json.loads((extension_directory/'report_provenance.json').read_text())
+        assert extension_meta['status']=='passed' and digest(supplement)==extension_meta['body_sha256']
+        assert digest(extension_directory/'analysis.json')==extension_meta['analysis_sha256']
+        assert digest(ROOT/'cpp/mesh_variants/report.py')==extension_meta['source_sha256']
+        add(supplement.read_text())
     add('# Артефакт и воспроизведение')
     add(r'''Все новые исходники, полные замороженные входы, контексты, сырые CSV с неудачами, команды запуска, данные компилятора и машины, SHA-256, скрипты анализа и PNG/PDF-графики включены в ветку `research/md-astar`. Предыдущие статьи и результаты не перезаписаны. Основные команды из корня репозитория:
 
@@ -265,10 +276,12 @@ python cpp/experiments/report.py --directory cpp/experiments/results/reproductio
                            env={**os.environ,'XDG_CACHE_HOME':str(cache)})
     report_meta=dict(status='passed',analysis_sha256=digest(directory/'analysis/analysis.json'),source_sha256=digest(Path(__file__)),
                      markdown_sha256=digest(dest/'report.md'),pdf_sha256=digest(dest/'report.pdf') if pdf else None)
+    if extension_meta:report_meta['mesh_variants_supplement']=extension_meta
     (directory/'analysis/report_provenance.json').write_text(json.dumps(report_meta,indent=2)+'\n')
     print('Report:',dest/'report.md')
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--directory',type=Path,default=HERE/'results/expanded');p.add_argument('--no-pdf',action='store_true');args=p.parse_args()
-    build(args.directory,not args.no_pdf)
+    p=argparse.ArgumentParser();p.add_argument('--directory',type=Path,default=HERE/'results/expanded');p.add_argument('--no-pdf',action='store_true')
+    p.add_argument('--mesh-directory',type=Path,help='Mesh-variant cohort whose generated chapter is included')
+    args=p.parse_args();build(args.directory,not args.no_pdf,args.mesh_directory)

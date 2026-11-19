@@ -1,0 +1,9 @@
+45 runs; grid8__random50_p10__mission__s48101__r4; 0.216299 s
+90 runs; grid8__random50_p10__mission__s48102__r4; 0.372086 s
+135 runs; grid8__random50_p20__mission__s48101__r4; 0.465443 s
+180 runs; grid8__random50_p20__mission__s48102__r4; 0.613855 s
+225 runs; grid8__random50_p30__mission__s48101__r4; 1.00311 s
+270 runs; grid8__random50_p30__mission__s48102__r4; 1.49011 s
+315 runs; grid8__random50_p40__mission__s48101__r4; 1.80326 s
+360 runs; grid8__random50_p40__mission__s48102__r4; 2.28022 s
+passed 360 runs, 16020 rows, 0 capped queries

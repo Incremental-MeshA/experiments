@@ -2,6 +2,8 @@
 
 11 методов, одинаковые запросы и отдельная навигация по неизвестной карте. Результаты новой серии находятся в `results/expanded/`; времена из прежних Python/C++-серий сюда не подмешиваются. Подробная постановка: [протокол](../../docs/experiments/protocol.md). Итоги: [отчёт](../../docs/experiments/report.md), [PDF](../../docs/experiments/report.pdf), [графики](../../docs/experiments/figures).
 
+Дополнительные реализации **C-Mesh-D\* Lite, Suffix-Mesh, Boundary-Mesh** и контроль положительного prefix вынесены в [cpp/mesh_variants](../mesh_variants/README.md). Их совместный запуск с этими 11 методами хранится отдельно в `../mesh_variants/results/full`: это новая серия из 15 методов на тех же входах. Основной отчёт содержит обе серии с явным разграничением времён.
+
 ## Быстрый просмотр и воспроизведение
 
 Из корня репозитория, Python 3.12+, GCC с C++17, NumPy и Matplotlib из корневого `requirements.txt`:
