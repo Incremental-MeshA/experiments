@@ -1,0 +1,525 @@
+{
+ "control": "car16",
+ "cases": [
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 8,
+    "max_moves": 512
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 3,
+   "trace": true,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__MA_room96__unknown__s48101__r8"
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 16,
+    "max_moves": 512
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__MA_room96__unknown__s48101__r16"
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 32,
+    "max_moves": 512
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__MA_room96__unknown__s48101__r32"
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 64,
+    "max_moves": 512
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 3,
+   "trace": true,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__MA_room96__unknown__s48101__r64"
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 8,
+    "max_moves": 512
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__MA_room96__unknown__s48102__r8"
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 16,
+    "max_moves": 512
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__MA_room96__unknown__s48102__r16"
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 32,
+    "max_moves": 512
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__MA_room96__unknown__s48102__r32"
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 64,
+    "max_moves": 512
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__MA_room96__unknown__s48102__r64"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "protocol_tests": "passed",
+  "sanitize": true,
+  "checks": [
+    {
+      "control": "car16",
+      "case": "arena__unknown__s48101__r8",
+      "methods": 15,
+      "calls": 255,
+      "repeat_allocation_sanitizer_parity": true
+    },
+    {
+      "control": "car16",
+      "case": "arena__dynamic__s48101__k8__cr10__n8",
+      "methods": 15,
+      "calls": 75,
+      "repeat_allocation_sanitizer_parity": true
+    },
+    {
+      "control": "grid8",
+      "case": "random50_p20__dynamic__s68101__k2__cr5__n2",
+      "methods": 15,
+      "calls": 315,
+      "repeat_allocation_sanitizer_parity": true
+    }
+  ]
+}

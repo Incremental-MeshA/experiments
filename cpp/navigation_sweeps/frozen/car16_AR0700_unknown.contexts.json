@@ -1,0 +1,493 @@
+{
+ "control": "car16",
+ "cases": [
+  {
+   "map": "AR0700",
+   "map_family": "game",
+   "shape": [
+    320,
+    320
+   ],
+   "source": "data/maps/AR0700SR.map",
+   "source_sha256": "9307077deefa5fd6155bdc627994636849d4a017ef91b94a7ac7ed41de08c1dc",
+   "original_shape": [
+    320,
+    320
+   ],
+   "crop": null,
+   "truth_density": 0.49623046875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    279,
+    141,
+    8
+   ],
+   "goal": [
+    273,
+    76,
+    8
+   ],
+   "initial_optimum": 66.86020746088504,
+   "initial_moves": 38,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 8,
+    "max_moves": 512
+   },
+   "world_seed": 17869241884326338073,
+   "timing_repeats": 3,
+   "trace": true,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      279,
+      141,
+      8
+     ],
+     "goal": [
+      273,
+      76,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 66.86020746088504,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__AR0700__unknown__s48101__r8"
+  },
+  {
+   "map": "AR0700",
+   "map_family": "game",
+   "shape": [
+    320,
+    320
+   ],
+   "source": "data/maps/AR0700SR.map",
+   "source_sha256": "9307077deefa5fd6155bdc627994636849d4a017ef91b94a7ac7ed41de08c1dc",
+   "original_shape": [
+    320,
+    320
+   ],
+   "crop": null,
+   "truth_density": 0.49623046875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    279,
+    141,
+    8
+   ],
+   "goal": [
+    273,
+    76,
+    8
+   ],
+   "initial_optimum": 66.86020746088504,
+   "initial_moves": 38,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 16,
+    "max_moves": 512
+   },
+   "world_seed": 17869241884326338073,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      279,
+      141,
+      8
+     ],
+     "goal": [
+      273,
+      76,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 66.86020746088504,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__AR0700__unknown__s48101__r16"
+  },
+  {
+   "map": "AR0700",
+   "map_family": "game",
+   "shape": [
+    320,
+    320
+   ],
+   "source": "data/maps/AR0700SR.map",
+   "source_sha256": "9307077deefa5fd6155bdc627994636849d4a017ef91b94a7ac7ed41de08c1dc",
+   "original_shape": [
+    320,
+    320
+   ],
+   "crop": null,
+   "truth_density": 0.49623046875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    279,
+    141,
+    8
+   ],
+   "goal": [
+    273,
+    76,
+    8
+   ],
+   "initial_optimum": 66.86020746088504,
+   "initial_moves": 38,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 32,
+    "max_moves": 512
+   },
+   "world_seed": 17869241884326338073,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      279,
+      141,
+      8
+     ],
+     "goal": [
+      273,
+      76,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 66.86020746088504,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__AR0700__unknown__s48101__r32"
+  },
+  {
+   "map": "AR0700",
+   "map_family": "game",
+   "shape": [
+    320,
+    320
+   ],
+   "source": "data/maps/AR0700SR.map",
+   "source_sha256": "9307077deefa5fd6155bdc627994636849d4a017ef91b94a7ac7ed41de08c1dc",
+   "original_shape": [
+    320,
+    320
+   ],
+   "crop": null,
+   "truth_density": 0.49623046875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    279,
+    141,
+    8
+   ],
+   "goal": [
+    273,
+    76,
+    8
+   ],
+   "initial_optimum": 66.86020746088504,
+   "initial_moves": 38,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 64,
+    "max_moves": 512
+   },
+   "world_seed": 17869241884326338073,
+   "timing_repeats": 3,
+   "trace": true,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      279,
+      141,
+      8
+     ],
+     "goal": [
+      273,
+      76,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 66.86020746088504,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__AR0700__unknown__s48101__r64"
+  },
+  {
+   "map": "AR0700",
+   "map_family": "game",
+   "shape": [
+    320,
+    320
+   ],
+   "source": "data/maps/AR0700SR.map",
+   "source_sha256": "9307077deefa5fd6155bdc627994636849d4a017ef91b94a7ac7ed41de08c1dc",
+   "original_shape": [
+    320,
+    320
+   ],
+   "crop": null,
+   "truth_density": 0.49623046875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    116,
+    20,
+    3
+   ],
+   "goal": [
+    71,
+    44,
+    3
+   ],
+   "initial_optimum": 53.07010254157409,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 8,
+    "max_moves": 512
+   },
+   "world_seed": 2709862610464598608,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      116,
+      20,
+      3
+     ],
+     "goal": [
+      71,
+      44,
+      3
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 53.07010254157409,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__AR0700__unknown__s48102__r8"
+  },
+  {
+   "map": "AR0700",
+   "map_family": "game",
+   "shape": [
+    320,
+    320
+   ],
+   "source": "data/maps/AR0700SR.map",
+   "source_sha256": "9307077deefa5fd6155bdc627994636849d4a017ef91b94a7ac7ed41de08c1dc",
+   "original_shape": [
+    320,
+    320
+   ],
+   "crop": null,
+   "truth_density": 0.49623046875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    116,
+    20,
+    3
+   ],
+   "goal": [
+    71,
+    44,
+    3
+   ],
+   "initial_optimum": 53.07010254157409,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 16,
+    "max_moves": 512
+   },
+   "world_seed": 2709862610464598608,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      116,
+      20,
+      3
+     ],
+     "goal": [
+      71,
+      44,
+      3
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 53.07010254157409,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__AR0700__unknown__s48102__r16"
+  },
+  {
+   "map": "AR0700",
+   "map_family": "game",
+   "shape": [
+    320,
+    320
+   ],
+   "source": "data/maps/AR0700SR.map",
+   "source_sha256": "9307077deefa5fd6155bdc627994636849d4a017ef91b94a7ac7ed41de08c1dc",
+   "original_shape": [
+    320,
+    320
+   ],
+   "crop": null,
+   "truth_density": 0.49623046875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    116,
+    20,
+    3
+   ],
+   "goal": [
+    71,
+    44,
+    3
+   ],
+   "initial_optimum": 53.07010254157409,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 32,
+    "max_moves": 512
+   },
+   "world_seed": 2709862610464598608,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      116,
+      20,
+      3
+     ],
+     "goal": [
+      71,
+      44,
+      3
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 53.07010254157409,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__AR0700__unknown__s48102__r32"
+  },
+  {
+   "map": "AR0700",
+   "map_family": "game",
+   "shape": [
+    320,
+    320
+   ],
+   "source": "data/maps/AR0700SR.map",
+   "source_sha256": "9307077deefa5fd6155bdc627994636849d4a017ef91b94a7ac7ed41de08c1dc",
+   "original_shape": [
+    320,
+    320
+   ],
+   "crop": null,
+   "truth_density": 0.49623046875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    116,
+    20,
+    3
+   ],
+   "goal": [
+    71,
+    44,
+    3
+   ],
+   "initial_optimum": 53.07010254157409,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 64,
+    "max_moves": 512
+   },
+   "world_seed": 2709862610464598608,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      116,
+      20,
+      3
+     ],
+     "goal": [
+      71,
+      44,
+      3
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 53.07010254157409,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__AR0700__unknown__s48102__r64"
+  }
+ ]
+}

@@ -1,0 +1,4973 @@
+{
+ "control": "grid8",
+ "cases": [
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k2__cr1__n2",
+   "requested_half": 1311,
+   "actual_half": 1311,
+   "potential_actual_cr": 1.000213623046875,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k2__cr5__n2",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 5.00030517578125,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k2__cr10__n2",
+   "requested_half": 13107,
+   "actual_half": 13107,
+   "potential_actual_cr": 9.999847412109375,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k2__cr15__n2",
+   "requested_half": 19661,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k2__cr20__n2",
+   "requested_half": 26214,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k2__cr30__n2",
+   "requested_half": 39322,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k4__cr1__n4",
+   "requested_half": 1311,
+   "actual_half": 1311,
+   "potential_actual_cr": 1.000213623046875,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k4__cr5__n4",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 5.00030517578125,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k4__cr10__n4",
+   "requested_half": 13107,
+   "actual_half": 13107,
+   "potential_actual_cr": 9.999847412109375,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k4__cr15__n4",
+   "requested_half": 19661,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k4__cr20__n4",
+   "requested_half": 26214,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k4__cr30__n4",
+   "requested_half": 39322,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k8__cr1__n8",
+   "requested_half": 1311,
+   "actual_half": 1311,
+   "potential_actual_cr": 1.000213623046875,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k8__cr5__n8",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 5.00030517578125,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 3,
+   "trace": true,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k8__cr10__n8",
+   "requested_half": 13107,
+   "actual_half": 13107,
+   "potential_actual_cr": 9.999847412109375,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k8__cr15__n8",
+   "requested_half": 19661,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k8__cr20__n8",
+   "requested_half": 26214,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k8__cr30__n8",
+   "requested_half": 39322,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k16__cr1__n16",
+   "requested_half": 1311,
+   "actual_half": 1311,
+   "potential_actual_cr": 1.000213623046875,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k16__cr5__n16",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 5.00030517578125,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k16__cr10__n16",
+   "requested_half": 13107,
+   "actual_half": 13107,
+   "potential_actual_cr": 9.999847412109375,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k16__cr15__n16",
+   "requested_half": 19661,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k16__cr20__n16",
+   "requested_half": 26214,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k16__cr30__n16",
+   "requested_half": 39322,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k32__cr1__n32",
+   "requested_half": 1311,
+   "actual_half": 1311,
+   "potential_actual_cr": 1.000213623046875,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k32__cr5__n32",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 5.00030517578125,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k32__cr10__n32",
+   "requested_half": 13107,
+   "actual_half": 13107,
+   "potential_actual_cr": 9.999847412109375,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k32__cr15__n32",
+   "requested_half": 19661,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k32__cr20__n32",
+   "requested_half": 26214,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k32__cr30__n32",
+   "requested_half": 39322,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k64__cr1__n64",
+   "requested_half": 1311,
+   "actual_half": 1311,
+   "potential_actual_cr": 1.000213623046875,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k64__cr5__n64",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 5.00030517578125,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k64__cr10__n64",
+   "requested_half": 13107,
+   "actual_half": 13107,
+   "potential_actual_cr": 9.999847412109375,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k64__cr15__n64",
+   "requested_half": 19661,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k64__cr20__n64",
+   "requested_half": 26214,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    242,
+    352,
+    0
+   ],
+   "goal": [
+    325,
+    140,
+    0
+   ],
+   "initial_optimum": 433.2497833620557,
+   "initial_moves": 391,
+   "guaranteed_minimum_moves": 212,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 523642093695346757,
+   "timing_repeats": 3,
+   "trace": true,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      242,
+      352,
+      0
+     ],
+     "goal": [
+      325,
+      140,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 433.2497833620557,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68101__k64__cr30__n64",
+   "requested_half": 39322,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 8,
+    "geometric_chebyshev": 212,
+    "initial_moves": 391,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 212
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k2__cr1__n2",
+   "requested_half": 1311,
+   "actual_half": 1311,
+   "potential_actual_cr": 1.000213623046875,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k2__cr5__n2",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 5.00030517578125,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k2__cr10__n2",
+   "requested_half": 13107,
+   "actual_half": 13107,
+   "potential_actual_cr": 9.999847412109375,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k2__cr15__n2",
+   "requested_half": 19661,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k2__cr20__n2",
+   "requested_half": 26214,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k2__cr30__n2",
+   "requested_half": 39322,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k4__cr1__n4",
+   "requested_half": 1311,
+   "actual_half": 1311,
+   "potential_actual_cr": 1.000213623046875,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k4__cr5__n4",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 5.00030517578125,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k4__cr10__n4",
+   "requested_half": 13107,
+   "actual_half": 13107,
+   "potential_actual_cr": 9.999847412109375,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k4__cr15__n4",
+   "requested_half": 19661,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k4__cr20__n4",
+   "requested_half": 26214,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k4__cr30__n4",
+   "requested_half": 39322,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k8__cr1__n8",
+   "requested_half": 1311,
+   "actual_half": 1311,
+   "potential_actual_cr": 1.000213623046875,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k8__cr5__n8",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 5.00030517578125,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k8__cr10__n8",
+   "requested_half": 13107,
+   "actual_half": 13107,
+   "potential_actual_cr": 9.999847412109375,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k8__cr15__n8",
+   "requested_half": 19661,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k8__cr20__n8",
+   "requested_half": 26214,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k8__cr30__n8",
+   "requested_half": 39322,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k16__cr1__n16",
+   "requested_half": 1311,
+   "actual_half": 1311,
+   "potential_actual_cr": 1.000213623046875,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k16__cr5__n16",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 5.00030517578125,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k16__cr10__n16",
+   "requested_half": 13107,
+   "actual_half": 13107,
+   "potential_actual_cr": 9.999847412109375,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k16__cr15__n16",
+   "requested_half": 19661,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k16__cr20__n16",
+   "requested_half": 26214,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k16__cr30__n16",
+   "requested_half": 39322,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k32__cr1__n32",
+   "requested_half": 1311,
+   "actual_half": 1311,
+   "potential_actual_cr": 1.000213623046875,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k32__cr5__n32",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 5.00030517578125,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k32__cr10__n32",
+   "requested_half": 13107,
+   "actual_half": 13107,
+   "potential_actual_cr": 9.999847412109375,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k32__cr15__n32",
+   "requested_half": 19661,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k32__cr20__n32",
+   "requested_half": 26214,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k32__cr30__n32",
+   "requested_half": 39322,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k64__cr1__n64",
+   "requested_half": 1311,
+   "actual_half": 1311,
+   "potential_actual_cr": 1.000213623046875,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k64__cr5__n64",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 5.00030517578125,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k64__cr10__n64",
+   "requested_half": 13107,
+   "actual_half": 13107,
+   "potential_actual_cr": 9.999847412109375,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k64__cr15__n64",
+   "requested_half": 19661,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k64__cr20__n64",
+   "requested_half": 26214,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  },
+  {
+   "map": "MA_maze512",
+   "shape": [
+    512,
+    512
+   ],
+   "truth_density": 0.0615234375,
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "map_family": "published_full",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    27,
+    446,
+    0
+   ],
+   "goal": [
+    27,
+    279,
+    0
+   ],
+   "initial_optimum": 458.78888860545663,
+   "initial_moves": 395,
+   "guaranteed_minimum_moves": 167,
+   "long_route_stratum": true,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 14145640255456112986,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      27,
+      446,
+      0
+     ],
+     "goal": [
+      27,
+      279,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 458.78888860545663,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__MA_maze512__dynamic__s68102__k64__cr30__n64",
+   "requested_half": 39322,
+   "actual_half": 16128,
+   "potential_actual_cr": 12.3046875,
+   "budget_clamped": true,
+   "root_selection": {
+    "selection_trial": 13,
+    "geometric_chebyshev": 167,
+    "initial_moves": 395,
+    "long_route_stratum": true,
+    "guaranteed_minimum_moves": 167
+   }
+  }
+ ]
+}

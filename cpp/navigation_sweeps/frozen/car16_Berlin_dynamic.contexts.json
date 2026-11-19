@@ -1,0 +1,4829 @@
+{
+ "control": "car16",
+ "cases": [
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k2__cr1__n2",
+   "requested_half": 328,
+   "actual_half": 328,
+   "potential_actual_cr": 1.0009765625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k2__cr5__n2",
+   "requested_half": 1638,
+   "actual_half": 1638,
+   "potential_actual_cr": 4.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k2__cr10__n2",
+   "requested_half": 3277,
+   "actual_half": 3277,
+   "potential_actual_cr": 10.0006103515625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k2__cr15__n2",
+   "requested_half": 4915,
+   "actual_half": 4915,
+   "potential_actual_cr": 14.9993896484375,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k2__cr20__n2",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 20.001220703125,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k2__cr30__n2",
+   "requested_half": 9830,
+   "actual_half": 9830,
+   "potential_actual_cr": 29.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k4__cr1__n4",
+   "requested_half": 328,
+   "actual_half": 328,
+   "potential_actual_cr": 1.0009765625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k4__cr5__n4",
+   "requested_half": 1638,
+   "actual_half": 1638,
+   "potential_actual_cr": 4.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k4__cr10__n4",
+   "requested_half": 3277,
+   "actual_half": 3277,
+   "potential_actual_cr": 10.0006103515625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k4__cr15__n4",
+   "requested_half": 4915,
+   "actual_half": 4915,
+   "potential_actual_cr": 14.9993896484375,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k4__cr20__n4",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 20.001220703125,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k4__cr30__n4",
+   "requested_half": 9830,
+   "actual_half": 9830,
+   "potential_actual_cr": 29.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k8__cr1__n8",
+   "requested_half": 328,
+   "actual_half": 328,
+   "potential_actual_cr": 1.0009765625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k8__cr5__n8",
+   "requested_half": 1638,
+   "actual_half": 1638,
+   "potential_actual_cr": 4.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 3,
+   "trace": true,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k8__cr10__n8",
+   "requested_half": 3277,
+   "actual_half": 3277,
+   "potential_actual_cr": 10.0006103515625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k8__cr15__n8",
+   "requested_half": 4915,
+   "actual_half": 4915,
+   "potential_actual_cr": 14.9993896484375,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k8__cr20__n8",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 20.001220703125,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k8__cr30__n8",
+   "requested_half": 9830,
+   "actual_half": 9830,
+   "potential_actual_cr": 29.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k16__cr1__n16",
+   "requested_half": 328,
+   "actual_half": 328,
+   "potential_actual_cr": 1.0009765625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k16__cr5__n16",
+   "requested_half": 1638,
+   "actual_half": 1638,
+   "potential_actual_cr": 4.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k16__cr10__n16",
+   "requested_half": 3277,
+   "actual_half": 3277,
+   "potential_actual_cr": 10.0006103515625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k16__cr15__n16",
+   "requested_half": 4915,
+   "actual_half": 4915,
+   "potential_actual_cr": 14.9993896484375,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k16__cr20__n16",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 20.001220703125,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k16__cr30__n16",
+   "requested_half": 9830,
+   "actual_half": 9830,
+   "potential_actual_cr": 29.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k32__cr1__n32",
+   "requested_half": 328,
+   "actual_half": 328,
+   "potential_actual_cr": 1.0009765625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k32__cr5__n32",
+   "requested_half": 1638,
+   "actual_half": 1638,
+   "potential_actual_cr": 4.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k32__cr10__n32",
+   "requested_half": 3277,
+   "actual_half": 3277,
+   "potential_actual_cr": 10.0006103515625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k32__cr15__n32",
+   "requested_half": 4915,
+   "actual_half": 4915,
+   "potential_actual_cr": 14.9993896484375,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k32__cr20__n32",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 20.001220703125,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k32__cr30__n32",
+   "requested_half": 9830,
+   "actual_half": 9830,
+   "potential_actual_cr": 29.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k64__cr1__n64",
+   "requested_half": 328,
+   "actual_half": 328,
+   "potential_actual_cr": 1.0009765625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k64__cr5__n64",
+   "requested_half": 1638,
+   "actual_half": 1638,
+   "potential_actual_cr": 4.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k64__cr10__n64",
+   "requested_half": 3277,
+   "actual_half": 3277,
+   "potential_actual_cr": 10.0006103515625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k64__cr15__n64",
+   "requested_half": 4915,
+   "actual_half": 4915,
+   "potential_actual_cr": 14.9993896484375,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k64__cr20__n64",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 20.001220703125,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    163,
+    98,
+    8
+   ],
+   "goal": [
+    152,
+    26,
+    8
+   ],
+   "initial_optimum": 73.92796763454265,
+   "initial_moves": 46,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 4123573556207021417,
+   "timing_repeats": 3,
+   "trace": true,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      163,
+      98,
+      8
+     ],
+     "goal": [
+      152,
+      26,
+      8
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 73.92796763454265,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48101__k64__cr30__n64",
+   "requested_half": 9830,
+   "actual_half": 9830,
+   "potential_actual_cr": 29.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k2__cr1__n2",
+   "requested_half": 328,
+   "actual_half": 328,
+   "potential_actual_cr": 1.0009765625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k2__cr5__n2",
+   "requested_half": 1638,
+   "actual_half": 1638,
+   "potential_actual_cr": 4.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k2__cr10__n2",
+   "requested_half": 3277,
+   "actual_half": 3277,
+   "potential_actual_cr": 10.0006103515625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k2__cr15__n2",
+   "requested_half": 4915,
+   "actual_half": 4915,
+   "potential_actual_cr": 14.9993896484375,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k2__cr20__n2",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 20.001220703125,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k2__cr30__n2",
+   "requested_half": 9830,
+   "actual_half": 9830,
+   "potential_actual_cr": 29.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k4__cr1__n4",
+   "requested_half": 328,
+   "actual_half": 328,
+   "potential_actual_cr": 1.0009765625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k4__cr5__n4",
+   "requested_half": 1638,
+   "actual_half": 1638,
+   "potential_actual_cr": 4.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k4__cr10__n4",
+   "requested_half": 3277,
+   "actual_half": 3277,
+   "potential_actual_cr": 10.0006103515625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k4__cr15__n4",
+   "requested_half": 4915,
+   "actual_half": 4915,
+   "potential_actual_cr": 14.9993896484375,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k4__cr20__n4",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 20.001220703125,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k4__cr30__n4",
+   "requested_half": 9830,
+   "actual_half": 9830,
+   "potential_actual_cr": 29.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k8__cr1__n8",
+   "requested_half": 328,
+   "actual_half": 328,
+   "potential_actual_cr": 1.0009765625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k8__cr5__n8",
+   "requested_half": 1638,
+   "actual_half": 1638,
+   "potential_actual_cr": 4.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k8__cr10__n8",
+   "requested_half": 3277,
+   "actual_half": 3277,
+   "potential_actual_cr": 10.0006103515625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k8__cr15__n8",
+   "requested_half": 4915,
+   "actual_half": 4915,
+   "potential_actual_cr": 14.9993896484375,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k8__cr20__n8",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 20.001220703125,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k8__cr30__n8",
+   "requested_half": 9830,
+   "actual_half": 9830,
+   "potential_actual_cr": 29.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k16__cr1__n16",
+   "requested_half": 328,
+   "actual_half": 328,
+   "potential_actual_cr": 1.0009765625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k16__cr5__n16",
+   "requested_half": 1638,
+   "actual_half": 1638,
+   "potential_actual_cr": 4.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k16__cr10__n16",
+   "requested_half": 3277,
+   "actual_half": 3277,
+   "potential_actual_cr": 10.0006103515625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k16__cr15__n16",
+   "requested_half": 4915,
+   "actual_half": 4915,
+   "potential_actual_cr": 14.9993896484375,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k16__cr20__n16",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 20.001220703125,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k16__cr30__n16",
+   "requested_half": 9830,
+   "actual_half": 9830,
+   "potential_actual_cr": 29.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k32__cr1__n32",
+   "requested_half": 328,
+   "actual_half": 328,
+   "potential_actual_cr": 1.0009765625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k32__cr5__n32",
+   "requested_half": 1638,
+   "actual_half": 1638,
+   "potential_actual_cr": 4.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k32__cr10__n32",
+   "requested_half": 3277,
+   "actual_half": 3277,
+   "potential_actual_cr": 10.0006103515625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k32__cr15__n32",
+   "requested_half": 4915,
+   "actual_half": 4915,
+   "potential_actual_cr": 14.9993896484375,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k32__cr20__n32",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 20.001220703125,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k32__cr30__n32",
+   "requested_half": 9830,
+   "actual_half": 9830,
+   "potential_actual_cr": 29.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k64__cr1__n64",
+   "requested_half": 328,
+   "actual_half": 328,
+   "potential_actual_cr": 1.0009765625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k64__cr5__n64",
+   "requested_half": 1638,
+   "actual_half": 1638,
+   "potential_actual_cr": 4.998779296875,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k64__cr10__n64",
+   "requested_half": 3277,
+   "actual_half": 3277,
+   "potential_actual_cr": 10.0006103515625,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k64__cr15__n64",
+   "requested_half": 4915,
+   "actual_half": 4915,
+   "potential_actual_cr": 14.9993896484375,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k64__cr20__n64",
+   "requested_half": 6554,
+   "actual_half": 6554,
+   "potential_actual_cr": 20.001220703125,
+   "budget_clamped": false
+  },
+  {
+   "map": "Berlin",
+   "map_family": "city",
+   "shape": [
+    256,
+    256
+   ],
+   "source": "data/maps/Berlin_2_256.map",
+   "source_sha256": "408bc5dfa5195b4bd6ddb50f2605fc60a2211607453a52ac6e1c4df0317faabc",
+   "original_shape": [
+    256,
+    256
+   ],
+   "crop": null,
+   "truth_density": 0.268524169921875,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    129,
+    145,
+    14
+   ],
+   "goal": [
+    165,
+    187,
+    14
+   ],
+   "initial_optimum": 61.49050997340721,
+   "initial_moves": 20,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 1553848485788004294,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      129,
+      145,
+      14
+     ],
+     "goal": [
+      165,
+      187,
+      14
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 61.49050997340721,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__Berlin__dynamic__s48102__k64__cr30__n64",
+   "requested_half": 9830,
+   "actual_half": 9830,
+   "potential_actual_cr": 29.998779296875,
+   "budget_clamped": false
+  }
+ ]
+}

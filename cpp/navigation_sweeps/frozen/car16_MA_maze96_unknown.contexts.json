@@ -1,0 +1,525 @@
+{
+ "control": "car16",
+ "cases": [
+  {
+   "map": "MA_maze96",
+   "map_family": "maze",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.06770833333333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    73,
+    52,
+    3
+   ],
+   "goal": [
+    18,
+    79,
+    3
+   ],
+   "initial_optimum": 156.72162063901945,
+   "initial_moves": 81,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 8,
+    "max_moves": 512
+   },
+   "world_seed": 7389365774532235145,
+   "timing_repeats": 3,
+   "trace": true,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      73,
+      52,
+      3
+     ],
+     "goal": [
+      18,
+      79,
+      3
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 156.72162063901945,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__MA_maze96__unknown__s48101__r8"
+  },
+  {
+   "map": "MA_maze96",
+   "map_family": "maze",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.06770833333333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    73,
+    52,
+    3
+   ],
+   "goal": [
+    18,
+    79,
+    3
+   ],
+   "initial_optimum": 156.72162063901945,
+   "initial_moves": 81,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 16,
+    "max_moves": 512
+   },
+   "world_seed": 7389365774532235145,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      73,
+      52,
+      3
+     ],
+     "goal": [
+      18,
+      79,
+      3
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 156.72162063901945,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__MA_maze96__unknown__s48101__r16"
+  },
+  {
+   "map": "MA_maze96",
+   "map_family": "maze",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.06770833333333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    73,
+    52,
+    3
+   ],
+   "goal": [
+    18,
+    79,
+    3
+   ],
+   "initial_optimum": 156.72162063901945,
+   "initial_moves": 81,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 32,
+    "max_moves": 512
+   },
+   "world_seed": 7389365774532235145,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      73,
+      52,
+      3
+     ],
+     "goal": [
+      18,
+      79,
+      3
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 156.72162063901945,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__MA_maze96__unknown__s48101__r32"
+  },
+  {
+   "map": "MA_maze96",
+   "map_family": "maze",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.06770833333333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    73,
+    52,
+    3
+   ],
+   "goal": [
+    18,
+    79,
+    3
+   ],
+   "initial_optimum": 156.72162063901945,
+   "initial_moves": 81,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 64,
+    "max_moves": 512
+   },
+   "world_seed": 7389365774532235145,
+   "timing_repeats": 3,
+   "trace": true,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      73,
+      52,
+      3
+     ],
+     "goal": [
+      18,
+      79,
+      3
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 156.72162063901945,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__MA_maze96__unknown__s48101__r64"
+  },
+  {
+   "map": "MA_maze96",
+   "map_family": "maze",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.06770833333333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    64,
+    49,
+    2
+   ],
+   "goal": [
+    38,
+    74,
+    2
+   ],
+   "initial_optimum": 141.6611021807914,
+   "initial_moves": 79,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 8,
+    "max_moves": 512
+   },
+   "world_seed": 15834541667152222905,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      64,
+      49,
+      2
+     ],
+     "goal": [
+      38,
+      74,
+      2
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 141.6611021807914,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__MA_maze96__unknown__s48102__r8"
+  },
+  {
+   "map": "MA_maze96",
+   "map_family": "maze",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.06770833333333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    64,
+    49,
+    2
+   ],
+   "goal": [
+    38,
+    74,
+    2
+   ],
+   "initial_optimum": 141.6611021807914,
+   "initial_moves": 79,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 16,
+    "max_moves": 512
+   },
+   "world_seed": 15834541667152222905,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      64,
+      49,
+      2
+     ],
+     "goal": [
+      38,
+      74,
+      2
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 141.6611021807914,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__MA_maze96__unknown__s48102__r16"
+  },
+  {
+   "map": "MA_maze96",
+   "map_family": "maze",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.06770833333333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    64,
+    49,
+    2
+   ],
+   "goal": [
+    38,
+    74,
+    2
+   ],
+   "initial_optimum": 141.6611021807914,
+   "initial_moves": 79,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 32,
+    "max_moves": 512
+   },
+   "world_seed": 15834541667152222905,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      64,
+      49,
+      2
+     ],
+     "goal": [
+      38,
+      74,
+      2
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 141.6611021807914,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__MA_maze96__unknown__s48102__r32"
+  },
+  {
+   "map": "MA_maze96",
+   "map_family": "maze",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/maze512-16-0.map",
+   "source_sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.06770833333333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    64,
+    49,
+    2
+   ],
+   "goal": [
+    38,
+    74,
+    2
+   ],
+   "initial_optimum": 141.6611021807914,
+   "initial_moves": 79,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "unknown",
+   "params": {
+    "radius": 64,
+    "max_moves": 512
+   },
+   "world_seed": 15834541667152222905,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_unknown",
+   "queries": [
+    {
+     "start": [
+      64,
+      49,
+      2
+     ],
+     "goal": [
+      38,
+      74,
+      2
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 141.6611021807914,
+     "category": "truth_only",
+     "event": "unknown"
+    }
+   ],
+   "id": "car16__MA_maze96__unknown__s48102__r64"
+  }
+ ]
+}
