@@ -5,12 +5,12 @@ All 15 existing C++ search implementations are used unchanged. This directory ad
 ## Frozen design
 
 - Static unknown car16: all six previous maps, two previous roots, square sensing radii 8, 16, 32, 64; fixed state goal; at most 512 primitive moves. Initially optimistic, sense before every move.
-- Dynamic car16: the same six maps and roots; full initial knowledge; at most 384 primitive moves.
+- Dynamic car16 adaptation: the same six maps and roots, at the four prespecified anchor pairs (2,5), (8,10), (32,20), (64,30); full initial knowledge; at most 384 primitive moves. The full 36-pair sweep belongs to the literal grid8 protocol.
 - Dynamic grid8: six full published maps (Berlin, AR0700, arena, room512, random512-10, maze512-16), four existing random50 maps at nominal 10/20/30/40% density; two frozen new roots each; at most 512 moves.
 - Every k completed moves, globally change the map; k = 2, 4, 8, 16, 32, 64 and **n = k**. Requested cr = 1, 5, 10, 15, 20, 30 percent of all cells. Round each half to nearest integer, then clamp **equally** to both available pre-phase pools. Protect the current and goal cells. Density is preserved; actual cr is reported. Both pools are selected before any write.
 - Grid8 visibility is a Chebyshev n-ball, without occlusion. Car16 visibility is the union of collision footprints of arcs with tails reachable in fewer than n primitive moves on an obstacle-free infinite lattice, clipped to the finite map. Its quarter-turn symmetry is checked geometrically, and the optimized compiler is checked against independent direct BFS for depths 1, 2, 4 and every heading. This is an explicit car adaptation of the grid protocol.
 - Common per-phase random cell priorities use deterministic SplitMix64 and rejection-based bounded sampling, independently of algorithm and parameters. Protecting the current cell makes the resulting worlds policy-coupled when trajectories differ. This is not a same-query replay experiment.
-- All static cases have 3 timing repeats. Dynamic cases have 1 broad timing repeat, with **prespecified** anchors (k, cr) = (2,5), (8,10), (32,20), (64,30) having 3 repeats. One separate allocation repeat covers the three-repeat subset. Total: 1,200 configurations, 23,280 timed runs, 2,640 allocation runs, 15 methods. Two roots are not a broad population sample; repeated timing is not an additional independent navigation task.
+- All static cases have 3 timing repeats. Dynamic cases have 1 broad timing repeat, with **prespecified** anchors (k, cr) = (2,5), (8,10), (32,20), (64,30) having 3 repeats. One separate allocation repeat covers the three-repeat subset. The executed selection contains 816 configurations, 17,520 timed runs, 2,640 allocation runs, 15 methods. The full prepared manifest contains 1,200 configurations; the 384 non-anchor dynamic car cases are prepared but are not counted as measured. Two roots are not a broad population sample; repeated timing is not an additional independent navigation task.
 - Constructor + all planner calls define episode search time. Online excludes the initial plan and constructor. Sensor, world changes, common preparation, independent LBA* reference and path validation are outside planner timers. The reference can warm caches; all algorithms use the same checking policy. Execution is serial, with deterministic randomized method order per repetition.
 - Replan initially and when belief costs change. Otherwise follow a certified cached path suffix. Stop at goal, proven belief no-path, expansion cap (1M per query), or move budget. At belief no-path, additionally solve the true map outside the timer to distinguish a stale-belief dead end. No further exogenous phase occurs without motion.
 
@@ -24,13 +24,13 @@ Analysis dependencies are in `requirements.txt`; PDF generation also needs Pando
 make -C cpp/navigation_sweeps -j2 all test
 make -C cpp/navigation_sweeps sanitize
 python cpp/navigation_sweeps/verify.py --sanitize
-python cpp/navigation_sweeps/run_all.py --output cpp/navigation_sweeps/results/reproduction
+python cpp/navigation_sweeps/run_requested.py --output cpp/navigation_sweeps/results/reproduction
 python cpp/navigation_sweeps/analyze.py --directory cpp/navigation_sweeps/results/reproduction
 python cpp/navigation_sweeps/report.py --directory cpp/navigation_sweeps/results/reproduction
 python cpp/navigation_sweeps/validate_artifact.py
 ```
 
-`run_all.py` validates frozen SHA-256 values and runs all normal jobs before all allocation jobs. A complete job can be reused on the same machine, inputs and source hashes; an interrupted job is never silently overwritten. `--only timing` and `--only memory` select the two passes without changing their definitions. `--anchors-only` is a native selection flag used only by the allocation pass; the broad normal pass always includes every k/cr pair.
+`run_requested.py` validates frozen SHA-256 values and runs all normal jobs before all allocation jobs. A complete job can be reused on the same machine, inputs and source hashes; an interrupted job is never silently overwritten. `frozen/requested.json` selects the executed study from the full prepared manifest. Native `--anchors-only` selects the car adaptation timing slice and every allocation pass; the broad grid8 timing pass includes every k/cr pair. The original `run_all.py` remains as provenance of the full prepared scheduler. The current analysis targets the requested selection.
 
 `prepare.py` documents root selection and freezes sources, suites, contexts, scenario specifications and geometric stencils. It refuses to replace an existing manifest. The empty-model files contain no queries and are used only for geometry preparation. Runtime method-specific world/belief/path hashes and deterministic fingerprints permit audits without including clocks in the decisions.
 
@@ -56,3 +56,5 @@ Each uncapped call is compared to fresh C++ LBA* on the same belief; returned tr
 The interrupted pre-fix preliminary run is retained in `results/pre_endpoint_guard_fix` with its exact sources, inputs and incomplete raw files, and is excluded from every analysis. Its simulator incorrectly required distinct current and goal **cells**, which can coincide at different car headings. The replacement cohort counts coincident protected cells once. No search kernel changed.
 
 Interpretation is limited by two roots per map, one broad timing pass away from anchors, policy-dependent worlds, capped search, differing visibility geometry, and simultaneous changes of k and n. High global cr destroys map structure and is not equivalent to a few local obstacles. There is no claim of universal superiority or exact replication of a published runtime table.
+
+The complete static timing cohort was imported byte-for-byte from `results/pre_car_full_sweep/raw`, with identical binary/input/source hashes, commands, CPU and serial execution. Its provenance is recorded in `experiment.json`. The partial non-anchor car dynamic sweep is retained there and excluded from analysis. This changes the scope of an optional car adaptation, without dropping any combination of the requested literal grid protocol.

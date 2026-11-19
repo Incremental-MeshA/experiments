@@ -1,0 +1,10 @@
+{
+  "full_manifest_sha256": "2bdaaabfe163a61d3d0acdc08cfbfd57d0492ef74997b4481cca798ea55d596d",
+  "car_dynamic": "prespecified_anchors",
+  "grid_dynamic": "full_36_parameter_grid",
+  "static": "all_six_car_maps_all_four_radii",
+  "note": "The literal grid protocol is complete; the optional car arc-depth adaptation uses the four anchors frozen before timings.",
+  "expected_cases": 816,
+  "expected_timed_runs": 17520,
+  "expected_memory_runs": 2640
+}
