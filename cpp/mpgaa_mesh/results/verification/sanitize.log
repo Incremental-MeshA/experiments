@@ -1,0 +1,5 @@
+make: Entering directory '/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh'
+g++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O1 -g -std=c++17 -fsanitize=address,undefined -fno-omit-frame-pointer test.cpp -o build/test_sanitize
+make: Leaving directory '/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh'
+{"status":"passed","model":"grid8","queries":540,"comparisons":3244,"pruned_branches":4771,"validity_flips":12224,"alternate_uses":71}
+{"status":"passed","model":"car16","queries":540,"comparisons":3244,"pruned_branches":16982,"validity_flips":280648,"alternate_uses":14}

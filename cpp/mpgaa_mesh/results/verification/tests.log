@@ -1,0 +1,6 @@
+make: Entering directory '/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh'
+build/test ../experiments/frozen/grid8_model.txt
+{"status":"passed","model":"grid8","queries":540,"comparisons":3244,"pruned_branches":4771,"validity_flips":12224,"alternate_uses":71}
+build/test ../experiments/frozen/car16_model.txt
+{"status":"passed","model":"car16","queries":540,"comparisons":3244,"pruned_branches":16982,"validity_flips":280648,"alternate_uses":14}
+make: Leaving directory '/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh'

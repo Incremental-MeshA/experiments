@@ -1,0 +1,5 @@
+NAV_SPEC 1 4
+"car16__MA_room96__unknown__s48101__r16" unknown 16 0 0 0 512 3 6278399812570201804 0
+"car16__MA_room96__unknown__s48101__r64" unknown 64 0 0 0 512 3 6278399812570201804 1
+"car16__MA_room96__unknown__s48102__r16" unknown 16 0 0 0 512 3 10240193603243629319 0
+"car16__MA_room96__unknown__s48102__r64" unknown 64 0 0 0 512 3 10240193603243629319 0

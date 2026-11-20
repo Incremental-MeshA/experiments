@@ -1,0 +1,9 @@
+NAV_SPEC 1 8
+"car16__arena__dynamic__s48101__k2__cr5__n2" dynamic 0 2 5 2 384 3 15981854635993558756 0
+"car16__arena__dynamic__s48101__k8__cr10__n8" dynamic 0 8 10 8 384 3 15981854635993558756 1
+"car16__arena__dynamic__s48101__k32__cr20__n32" dynamic 0 32 20 32 384 3 15981854635993558756 0
+"car16__arena__dynamic__s48101__k64__cr30__n64" dynamic 0 64 30 64 384 3 15981854635993558756 1
+"car16__arena__dynamic__s48102__k2__cr5__n2" dynamic 0 2 5 2 384 3 3656861640530662556 0
+"car16__arena__dynamic__s48102__k8__cr10__n8" dynamic 0 8 10 8 384 3 3656861640530662556 0
+"car16__arena__dynamic__s48102__k32__cr20__n32" dynamic 0 32 20 32 384 3 3656861640530662556 0
+"car16__arena__dynamic__s48102__k64__cr30__n64" dynamic 0 64 30 64 384 3 3656861640530662556 0
