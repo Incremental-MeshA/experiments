@@ -2,6 +2,8 @@
 
 All 15 existing C++ search implementations are used unchanged. This directory adds the environment, sensor, controller, frozen roots and measurement harness for the requested experiments. The main report is [navigation.pdf](../../docs/experiments/navigation.pdf); the per-map atlas is [navigation_by_map.pdf](../../docs/experiments/navigation_by_map.pdf). Both new and prior results are separated by map.
 
+An additional [stronger-grid control](../navigation_controls/README.md) reruns LBA* reuse, MPGAA* and MD-A* alongside octile A* and octile A* reuse on the four prespecified dynamic anchors of all ten grid maps. Its 1,200 timing and 400 allocation episodes are a separate matched cohort; the primary counts below remain unchanged. `finish.py` runs and audits this control before building the reports. It supports `--controls-directory` to select its results directory; by default it uses the same final directory name as the primary results under `navigation_controls/results/`.
+
 ## Frozen design
 
 - Static unknown car16: all six previous maps, two previous roots, square sensing radii 8, 16, 32, 64; fixed state goal; at most 512 primitive moves. Initially optimistic, sense before every move.

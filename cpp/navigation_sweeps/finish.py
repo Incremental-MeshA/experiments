@@ -10,7 +10,7 @@ import time
 
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[1]
 
-def main(wait,directory=HERE/'results/full'):
+def main(wait,directory=HERE/'results/full',controls_directory=None):
     directory=directory.resolve();state_path=directory/'experiment.json';last=None
     while True:
         try:state=json.loads(state_path.read_text())
@@ -24,10 +24,14 @@ def main(wait,directory=HERE/'results/full'):
         if state['status']=='passed':break
         if not wait:raise RuntimeError('Native jobs are incomplete')
         time.sleep(30)
+    controls=ROOT/'cpp/navigation_controls'
+    controls_directory=(controls_directory or controls/'results'/directory.name).resolve()
     commands=[
+        [sys.executable,str(controls/'run_all.py'),'--output',str(controls_directory)],
+        [sys.executable,str(controls/'analyze.py'),'--directory',str(controls_directory),'--primary-directory',str(directory)],
         [sys.executable,str(HERE/'storage.py'),'--pack','--directory',str(directory)],
         [sys.executable,str(HERE/'analyze.py'),'--directory',str(directory)],
-        [sys.executable,str(HERE/'report.py'),'--directory',str(directory)],
+        [sys.executable,str(HERE/'report.py'),'--directory',str(directory),'--controls-directory',str(controls_directory)],
         [os.environ.get('NAV_NOTEBOOK_PYTHON',sys.executable),str(HERE/'notebook.py'),'--directory',str(directory)],
         [sys.executable,str(ROOT/'cpp/experiments/report.py'),'--navigation-directory',str(directory)],
         [sys.executable,str(HERE/'validate_artifact.py'),'--directory',str(directory),'--smoke','--output',str(directory/'validation.json')],
@@ -38,4 +42,4 @@ def main(wait,directory=HERE/'results/full'):
     print('Postprocessing and audits passed',flush=True)
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--wait',action='store_true');parser.add_argument('--directory',type=Path,default=HERE/'results/full');args=parser.parse_args();main(args.wait,args.directory)
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--wait',action='store_true');parser.add_argument('--directory',type=Path,default=HERE/'results/full');parser.add_argument('--controls-directory',type=Path);args=parser.parse_args();main(args.wait,args.directory,args.controls_directory)

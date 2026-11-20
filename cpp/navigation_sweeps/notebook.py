@@ -46,7 +46,7 @@ display(prior[prior.cohort.eq('contemporary15') & prior.control.eq('car16') & pr
 '''display(episodes[episodes.repeats.eq(3)].groupby(['control','kind']).agg(configurations=('case','size'),median_relative_mad=('repeat_relative_mad','median')))
 display({k:audit[k] for k in ['repeat_decision_parity','grid_mesh_projection_parity','manifest_sha256','selection_sha256','verification_sha256']})''']
     cells.extend(nbf.v4.new_code_cell(c.replace('@@STUDY@@',repr(relative))) for c in code)
-    cells.append(nbf.v4.new_markdown_cell('''Полные остановки, сырые времена, хеши и воспроизводимые команды сохранены в артефакте. Один широкий временной повтор вне четырёх опорных точек и два корня на карту ограничивают статистические выводы. Отношение длины динамического пути к начальному оптимуму не является competitive ratio.'''))
+    cells.append(nbf.v4.new_markdown_cell('''Полные остановки, сырые времена, хеши и воспроизводимые команды сохранены в артефакте. Отдельный контроль с октильным A* и Octile A* reuse, где вместе повторно измерены LBA* reuse, MPGAA* и MD-A*, приведён в `navigation.pdf` и `cpp/navigation_controls/results/full/analysis/`. Его времена сравниваются внутри собственной серии. Один широкий временной повтор вне четырёх опорных точек и два корня на карту ограничивают статистические выводы. Отношение длины динамического пути к начальному оптимуму не является competitive ratio.'''))
     notebook.cells=cells
     NotebookClient(notebook,timeout=300,kernel_name='python3',resources={'metadata':{'path':str(ROOT)}}).execute()
     target=ROOT/'docs/experiments/navigation_analysis.ipynb';nbf.write(notebook,target);print('Executed',len(code),'code cells:',target)

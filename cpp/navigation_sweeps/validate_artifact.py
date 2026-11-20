@@ -19,11 +19,16 @@ def validate(smoke=False,directory=None):
     assert digest(HERE/'results/verification.json')==a['verification_sha256']
     for p,sha in a['prior_metrics_sha256'].items():assert digest(ROOT/p)==sha,p
     figs=json.loads((ad/'figures.json').read_text());assert figs['analysis_sha256']==digest(ad/'analysis.json') and figs['source_sha256']==digest(HERE/'figures.py')
-    assert len(figs['files'])==60
+    assert len(figs['files'])==62
     for p,sha in figs['files'].items():assert digest(ROOT/p)==sha,p
     report=json.loads((ad/'report_provenance.json').read_text());dest=ROOT/'docs/experiments'
     assert report['source_sha256']==digest(HERE/'report.py') and report['analysis_sha256']==digest(ad/'analysis.json')
     assert report['figures_manifest_sha256']==digest(ad/'figures.json')
+    assert report['layout_sha256']==digest(dest/'layout.tex')
+    controls=ROOT/report['controls_directory'];assert report['controls_analysis_sha256']==digest(controls/'analysis/analysis.json')
+    import importlib.util
+    spec=importlib.util.spec_from_file_location('controls_validator',ROOT/'cpp/navigation_controls/validate_artifact.py');validator=importlib.util.module_from_spec(spec);spec.loader.exec_module(validator)
+    control_audit=validator.validate(controls,directory,smoke)
     for key,name in [('body_sha256','navigation_body.md'),('markdown_sha256','navigation.md'),('atlas_markdown_sha256','navigation_by_map.md'),('pdf_sha256','navigation.pdf'),('atlas_pdf_sha256','navigation_by_map.pdf')]:assert digest(dest/name)==report[key],name
     combined=json.loads((ROOT/'cpp/experiments/results/expanded/analysis/report_provenance.json').read_text())
     assert combined['navigation_supplement']==report and combined['source_sha256']==digest(ROOT/'cpp/experiments/report.py')
@@ -66,7 +71,7 @@ def validate(smoke=False,directory=None):
                 frame=pd.read_csv(str(prefix)+'_runs.csv');data.append(frame.set_index('method').fingerprint.sort_index())
             pd.testing.assert_series_equal(*data)
     result=dict(status='passed',cases=len(meta),timed_runs=len(runs),memory_runs=len(memory),planner_calls=len(calls),
-                figure_files=len(figs['files']),executed_notebook_cells=len(code),frozen_source_files=len(m['source_sha256']),pdf_audits=pdf_audits,smoke=smoke)
+                figure_files=len(figs['files']),controls=control_audit,executed_notebook_cells=len(code),frozen_source_files=len(m['source_sha256']),pdf_audits=pdf_audits,smoke=smoke)
     print(json.dumps(result,indent=2));return result
 
 if __name__=='__main__':

@@ -21,7 +21,7 @@ author: "Incremental MeshA* — воспроизводимый эксперим�
 date: "Ноябрь 2026"
 lang: ru-RU
 documentclass: article
-fontsize: 9pt
+fontsize: 10pt
 geometry: margin=18mm
 mainfont: DejaVu Serif
 sansfont: DejaVu Sans
@@ -36,7 +36,7 @@ def pdf(markdown,target):
         tmp.write(markdown.replace('.png){width=','.pdf){width='));tmp.flush()
         subprocess.run(['pandoc',tmp.name,'--resource-path='+str(DEST),'--pdf-engine=xelatex','--include-in-header=layout.tex','-o',target],cwd=DEST,check=True,env={**os.environ,'XDG_CACHE_HOME':str(cache)})
 
-def build(directory,make_pdf=True):
+def build(directory,make_pdf=True,controls_directory=None):
     ad=directory/'analysis';a=json.loads((ad/'analysis.json').read_text());assert a['status']=='passed' and a['source_sha256']==digest(HERE/'analyze.py')
     figs=json.loads((ad/'figures.json').read_text());assert figs['analysis_sha256']==digest(ad/'analysis.json') and figs['source_sha256']==digest(HERE/'figures.py')
     for p,sha in figs['files'].items():assert digest(ROOT/p)==sha
@@ -76,6 +76,7 @@ def build(directory,make_pdf=True):
 
 После каждого планирования вне таймера выполняется LBA* по текущей карте убеждений, проверяется достижимость, стоимость и геометрическая допустимость ответа. Точные методы должны совпасть по стоимости с допуском $10^{-6}$; Mesh/ParallA* допускает удлинение пути. Если в убеждениях пути нет, отдельно проверяется истинная карта. Такая остановка не считается ошибкой поиска: изменения происходят только после движений, и неподвижный агент не получит следующей фазы. В таблицах она различается с истинной недостижимостью.''')
     add(f'''Машина: **{a['cpu']}**, `{a['platform']}`. Компилятор: **g++ {a['compiler']}**, флаги `{a['compiler_flags']}`. Внутри каждого измерительного прохода проверено единство хеша бинарника и флагов. Параметры модели и поисковые ядра совпадают с предыдущей серией 15 методов. При проверке симулятора устранён пограничный запрет совпадающих клеток текущего состояния и цели при разных курсах. Прерванный предварительный проход сохранён в `results/pre_endpoint_guard_fix` и исключён из анализа; все приведённые времена получены после исправления.''')
+    add('Связь с первоисточником проверена по [Hernández, Asín, Baier, «Reusing Previously Found A* Paths for Fast Goal-Directed Navigation in Dynamic Terrain», AAAI 2015, раздел Experimental Results](https://classpages.cselabs.umn.edu/Fall-2021/csci4511-001/misc/HernandezAB15.pdf). Оттуда взяты наборы k/cr и n = k; в статье использованы октильная эвристика, оптимизированный авторский D* Lite и существенно больше начальных задач, включая случайные карты 1000×1000. Здесь геометрическая основа эвристик прежних ядер евклидова, а исходные реализации и карты сохранены для сопоставимости с прежними сериями. Добавленный далее октильный контроль усиливает обычный A*, но не переводит все инкрементальные ядра на октильную эвристику. Это ещё одна причина не трактовать новые времена как репликацию сравнительного рейтинга статьи.')
     add('## Фактическая интенсивность изменений')
     rows=[]
     for (control,name),group in e[e.kind.eq('dynamic')].groupby(['control','map'],sort=True):
@@ -172,6 +173,13 @@ def build(directory,make_pdf=True):
         memory_rows.append([LABELS[method],*values])
     add(table(['Метод','car16 static, МиБ','car16 dynamic, МиБ','grid8 dynamic, МиБ'],memory_rows))
     add('В `work_by_observed_changes.csv` работа поиска и p95 задержки сгруппированы по фактическому размеру полученного пакета: 0, 1, 2–4, 5–16, 17–64, 65–256, 257–1024 и больше 1024 клеток, отдельно по карте и методу. Это позволяет отличить увеличение глобального cr от увеличения нагрузки уведомлений. В `episode_metrics.csv` также сохранены раскрытия, чтения клеток, проверки уведомлений, работа эвристики, число вызовов, сертификации, фактические фазы, доставленные и наблюдённые изменения и длина проезда. `known_fraction` означает долю когда-либо известных клеток, а не свежесть их стоимости; в динамике она равна единице из-за полного начального знания. Поэтому отдельно записана `belief_accuracy = 1 - belief_mismatches / cells`, вычисленная по истинной карте вне планировщика. Группы описывают собственные траектории методов и не являются парными снимками мира.')
+    add(figure('work_by_observed_changes','Размер реально полученного пакета и нагрузка: медиана online-запроса по трём картам разных размеров и моделей. Для читаемости показаны шесть методов; таблица содержит все 15. Ось y симметрично-логарифмическая, нулевая работа сохранена. Объединены параметры k/cr и первый повтор, включая запросы без пути и остановки по лимиту. Это условные описательные группы, а не одинаковые запросы или изолированный причинный эффект размера пакета; пропуски не означают ноль.'))
+    controls_directory=(controls_directory or ROOT/'cpp/navigation_controls/results/full').resolve()
+    control_analysis=controls_directory/'analysis/analysis.json';control=json.loads(control_analysis.read_text())
+    assert control['status']=='passed' and control['source_sha256']==digest(ROOT/'cpp/navigation_controls/analyze.py')
+    control_body=DEST/'navigation_controls_body.md';assert digest(control_body)==control['body_sha256']
+    for p,sha in control['figures_sha256'].items():assert digest(ROOT/p)==sha,p
+    add(control_body.read_text())
     add('## Качество, остановки и ограничения')
     add(f'''По {a['episodes']:,} парам «конфигурация × метод» после объединения повторов получены: **{a['terminal_counts']}**. Остановок из-за устаревшей карты убеждений при существующем истинном пути: **{a['stale_dead_ends']}**. Успешных динамических проездов без фаз: **{a['dynamic_zero_phase_goals']}**; они не входят в сравнение ремонта.
 
@@ -226,12 +234,14 @@ python cpp/navigation_sweeps/finish.py --directory cpp/navigation_sweeps/results
             atlas.append(f'## {cohort} / {control} / {name} / {mode}')
             atlas.append(table(['Метод',*[f.replace('unknown_replay','unknown') for f in families]],rows))
     atlas_md=header('Incremental MeshA*: атлас новых и предыдущих результатов по картам')+'\n\n'.join(atlas)+'\n'
+    atlas_md+='\n\n# Нагрузка наблюдённых изменений\n\n'+figure('work_by_observed_changes','Медианы задержки, раскрытий и чтений по фактическому пакету. Полные группы всех карт и 15 методов — work_by_observed_changes.csv; группы включают остановки, зависят от собственных траекторий и не являются парным контролем.')+'\n\n'+control_body.read_text()
     (DEST/'navigation_by_map.md').write_text(atlas_md)
     if make_pdf:pdf(main,'navigation.pdf');pdf(atlas_md,'navigation_by_map.pdf')
     provenance=dict(status='passed',source_sha256=digest(Path(__file__)),analysis_sha256=digest(ad/'analysis.json'),figures_manifest_sha256=digest(ad/'figures.json'),
-                    body_sha256=digest(DEST/'navigation_body.md'),markdown_sha256=digest(DEST/'navigation.md'),atlas_markdown_sha256=digest(DEST/'navigation_by_map.md'))
+                    body_sha256=digest(DEST/'navigation_body.md'),markdown_sha256=digest(DEST/'navigation.md'),atlas_markdown_sha256=digest(DEST/'navigation_by_map.md'),
+                    layout_sha256=digest(DEST/'layout.tex'),controls_directory=str(controls_directory.relative_to(ROOT)),controls_analysis_sha256=digest(control_analysis))
     if make_pdf:provenance.update(pdf_sha256=digest(DEST/'navigation.pdf'),atlas_pdf_sha256=digest(DEST/'navigation_by_map.pdf'))
     (ad/'report_provenance.json').write_text(json.dumps(provenance,indent=2)+'\n');print('Reports written:',DEST/'navigation.md',DEST/'navigation_by_map.md')
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--directory',type=Path,default=HERE/'results/full');p.add_argument('--no-pdf',action='store_true');a=p.parse_args();build(a.directory,not a.no_pdf)
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--directory',type=Path,default=HERE/'results/full');p.add_argument('--no-pdf',action='store_true');p.add_argument('--controls-directory',type=Path);a=p.parse_args();build(a.directory,not a.no_pdf,a.controls_directory)

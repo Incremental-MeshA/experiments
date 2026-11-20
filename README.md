@@ -7,6 +7,14 @@
 
 ## Дополнение: MD-A\*
 
+**Движение к фиксированной цели, n = k:** все 15 C++ методов проверены на раскрытии
+неизвестной карты с радиусами 8/16/32/64 и динамике с полным перебором 6×6 k/cr
+на десяти grid8-картах. Равные обмены ограничиваются доступными пулами;
+фактический cr сохранён. Отдельный контроль добавляет Octile A* и Octile A* reuse.
+[Новая глава](docs/experiments/navigation.md) · [PDF](docs/experiments/navigation.pdf) ·
+[Атлас новых и прежних результатов по картам](docs/experiments/navigation_by_map.pdf) ·
+[Протокол, C++ и данные](cpp/navigation_sweeps/README.md).
+
 **C-Mesh-D\* Lite, Suffix-Mesh и Boundary-Mesh:** добавлены [C++-реализации](cpp/mesh_variants/README.md)
 с исходными float-стоимостями и общий запуск 15 методов на прежних замороженных входах.
 [Дополнение к отчёту](docs/experiments/mesh_variants.md) · [PDF](docs/experiments/mesh_variants.pdf).

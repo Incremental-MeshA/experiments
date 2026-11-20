@@ -109,6 +109,26 @@ def generate(directory,e,tables):
         scope='Full k/cr grid' if control=='grid8' else 'Four prespecified anchor pairs'
         fig.suptitle(f'Dynamic fixed-goal navigation — {control} / {name}\n{scope}; · unmeasured, — no eligible pair',fontsize=12)
         save(fig,'dynamic_'+control+'_'+name)
+    # Received batch size is distinct from the nominal global change rate.
+    work=pd.read_csv(directory/'analysis/work_by_observed_changes.csv')
+    bins=['0','1','2–4','5–16','17–64','65–256','257–1024','>1024']
+    selected=['lba_reuse','dstar_lattice','mpgaa','md_astar','cmesh_dstar','boundary_mesh']
+    styles=['-','--','-.',':','-','--'];colors=plt.get_cmap('tab10').colors
+    strata=[('car16','MA_room96'),('grid8','MA_room512'),('grid8','random50_p30')]
+    fig,axes=plt.subplots(3,3,figsize=(12,9),constrained_layout=True)
+    for i,(control,name) in enumerate(strata):
+        own=work[work.control.eq(control)&work['map'].eq(name)]
+        for j,(field,title) in enumerate([('median_ms','Median query latency (ms)'),('expansions','Median expanded states'),('checked_cells','Median collision cell reads')]):
+            ax=axes[i,j]
+            for k,method in enumerate(selected):
+                values=own[own.method.eq(method)].set_index('change_bin')[field].reindex(bins)
+                ax.plot(range(len(bins)),values,styles[k],marker='o',markersize=3,linewidth=1.2,color=colors[k],label=LABELS[method])
+            ax.set_yscale('symlog',linthresh=.01 if field=='median_ms' else 1);ax.grid(alpha=.25)
+            ax.set_xticks(range(len(bins)),bins,rotation=45,ha='right',fontsize=8)
+            ax.set_title(control+' / '+name+'\n'+title,fontsize=10)
+            if i==2:ax.set_xlabel('Observed blocked + opened cells per online query',fontsize=9)
+    handles,labels=axes[0,0].get_legend_handles_labels();fig.legend(handles,labels,loc='outside upper center',ncol=6,fontsize=9)
+    save(fig,'work_by_observed_changes')
     # Prior data retain their original timing cohorts and coverage.
     prior=tables['prior_by_map']
     for cohort in ['previous11','contemporary15']:
@@ -123,7 +143,7 @@ def generate(directory,e,tables):
         fig,axes=plt.subplots(2,1,figsize=(10,11),constrained_layout=True)
         split=(len(cols)+1)//2
         for ax,indices in zip(axes,[list(range(split)),list(range(split,len(cols)))]):
-            im=heat(ax,data[:,indices],[cols[j][0]+'\n'+cols[j][1].replace('unknown_replay','unknown').replace('off_path','off').replace('on_path','on') for j in indices],[LABELS[m] for m in methods],
+            im=heat(ax,data[:,indices],[cols[j][0].replace('MA_','')+'\n'+cols[j][1].replace('unknown_replay','unknown').replace('off_path','off').replace('on_path','on') for j in indices],[LABELS[m] for m in methods],
                        'Previous car16 replay: completion and online speedup',text=[[row[j] for j in indices] for row in text])
             ax.tick_params(axis='x',labelsize=8);fig.colorbar(im,ax=ax,fraction=.015,pad=.01,label='log₂ speedup',extend='both')
         save(fig,'prior_'+cohort)
