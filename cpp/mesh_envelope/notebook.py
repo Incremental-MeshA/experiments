@@ -1,17 +1,20 @@
 #!/usr/bin/env python3
 """Build and execute the compact, source-data-linked research notebook."""
 from pathlib import Path
+import os, hashlib
 import nbformat
 from nbclient import NotebookClient
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[1];DEST=ROOT/'docs/mesh_envelope'
 def main():
+ for name,path in [('JUPYTER_RUNTIME_DIR','/tmp/mesh-envelope-jupyter'),('IPYTHONDIR','/tmp/mesh-envelope-ipython')]:
+  os.environ.setdefault(name,path);Path(os.environ[name]).mkdir(parents=True,exist_ok=True)
  cells=[nbformat.v4.new_markdown_cell('# Mesh frontier repair: reproducible analysis\n\nAll tables use the frozen new timing cohort. Ratios above one favor the candidate. Correct no-path replay answers count as complete; navigation requires reaching the goal. Allocation data come from a separate pass.'),
  nbformat.v4.new_code_cell("from pathlib import Path\nimport json, hashlib\nimport pandas as pd\nfrom IPython.display import display, Image\nroot = Path.cwd()\nad = root / 'cpp/mesh_envelope/results/full/analysis'\nmeta = json.loads((ad/'analysis.json').read_text())\nassert meta['status'] == 'passed'\nfor name, sha in meta['tables_sha256'].items():\n    assert hashlib.sha256((ad/name).read_bytes()).hexdigest() == sha\n{k: meta[k] for k in ['scenarios','timed_runs','memory_runs','timed_calls','exact_cost_disagreements','capped_calls','allocation_matched_rows']}"),
  nbformat.v4.new_code_cell("summary = pd.read_csv(ad/'summary.csv')\nnew = ['envelope_mesh','dual_mesh','circuit_mesh']\ndisplay(summary[summary.method.isin(new) & summary.baseline.eq('best_control')][['cohort','control','method','pairs','full_speedup','repair_speedup','memory_multiplier','wins_10pct']])\nmap_pairs = pd.read_csv(ad/'map_pairs.csv')\ndisplay(map_pairs[map_pairs.method.eq('dual_mesh') & map_pairs.baseline.eq('best_control')][['cohort','control','map','pairs','full_speedup','repair_speedup']])"),
  nbformat.v4.new_code_cell("family = pd.read_csv(ad/'family_pairs.csv')\ndisplay(family[family.cohort.eq('separator') & family.method.isin(new) & family.baseline.isin(['lattice_envelope','mesh_reuse','dstar_lattice'])][['control','family','method','baseline','full_speedup','repair_speedup']])\ndisplay(Image(filename=str(root/'docs/mesh_envelope/figures/amortization.png')))"),
  nbformat.v4.new_code_cell("display(pd.read_csv(ad/'completion.csv'))\nchanges = pd.read_csv(ad/'actual_changes.csv')\ndisplay(changes.groupby(['control','map'])[['actual_cr_pct','clamped_phases']].agg(['min','max']))\ndisplay(Image(filename=str(root/'docs/mesh_envelope/figures/discovery_radius.png')))"),
  nbformat.v4.new_markdown_cell('The limited literature review identifies MeshA*, D* Lite/LPA*, MPGAA*, Lifelong-GLS/Generalized D*, and IPC/IDPC as related work. Their results do not establish priority or universal superiority for this artifact. See report.md and related_work.md for the exact mesh-specific claim, per-map losses, construction overhead, caps, memory maxima, and omitted external implementations.')]
- nb=nbformat.v4.new_notebook(cells=cells,metadata=dict(kernelspec=dict(name='python3',display_name='Python 3',language='python')))
+ nb=nbformat.v4.new_notebook(cells=cells,metadata=dict(kernelspec=dict(name='python3',display_name='Python 3',language='python'),mesh_envelope_artifact=dict(source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),analysis_sha256=hashlib.sha256((HERE/'results/full/analysis/analysis.json').read_bytes()).hexdigest())))
  NotebookClient(nb,timeout=180,kernel_name='python3',resources={'metadata':{'path':str(ROOT)}}).execute()
  p=DEST/'analysis.ipynb';nbformat.write(nb,p);print(p)
 if __name__=='__main__':main()

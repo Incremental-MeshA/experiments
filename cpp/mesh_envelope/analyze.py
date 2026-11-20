@@ -74,6 +74,8 @@ def main(directory):
   for _,r in d[d.method.isin(NEW+ABLATION)].iterrows():
    for baseline in [*controls,*ABLATION,'best_control']:
     base=(best if baseline=='best_control' else (d[d.method.eq(baseline)].iloc[0] if d.method.eq(baseline).any() else None))
+    if base is None and baseline=='best_control':
+     base=r.copy();base['method']='none';base['complete']=False
     if base is None or base['method']==r['method']:continue
     eligible=bool(r.complete and base.complete)
     pairs.append(dict(case=case,method=r.method,baseline=baseline,selected_control=base.method,cohort=r.cohort,control=r.control,map=r['map'],family=r.family,complete=eligible,
