@@ -57,6 +57,33 @@ start is outside R, use exact A* and replace R on failure. Blocks can make R an
 overestimate, so reaching the goal in the supergraph may cause a conservative
 fallback even when the true start component still cannot reach the goal.
 
+## Compact pseudocode
+
+```text
+REPLAN(s, batch):
+    apply the entire batch to the belief grid
+    invalidate the positive suffix if any cell was opened
+    if a negative envelope exists:
+        for each opened explicit witness:
+            recheck its full prefix, then traverse the exposed mesh subtree
+        for each opened cell and incoming primitive with tail in R:
+            test its prefix; seed a new endpoint or install a blocker witness
+        flood all newly seeded boundary states through the prefix mesh
+        if goal entered R: discard the negative envelope
+    if start or goal is blocked: return NO_PATH
+    if a valid deletion-only optimal suffix exists: return that suffix
+    if start is in the closed envelope: return NO_PATH
+    result, exhausted_component = exact weighted mesh boundary A*
+    if result is a complete failure:
+        replace R with exhausted_component and build its mesh cut
+    return result
+```
+
+In the exact implementation, reaching the goal during the flood stops it early:
+the certificate is already unusable, so further reachability work would be wasted.
+A blocked endpoint return does not construct a new envelope or preserve an old
+positive path. A capped weighted search never constructs a negative certificate.
+
 ## Completeness of event delivery
 
 Take an arc leaving the final R which has become valid since the last certified

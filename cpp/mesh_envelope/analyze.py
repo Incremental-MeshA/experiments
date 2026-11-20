@@ -92,7 +92,7 @@ def main(directory):
  qkeys=['case','method','query'];qmedian=calls.groupby(qkeys,as_index=False).agg(time_s=('time_s','median'),cost=('cost','first'),expected=('expected','first'),blocks=('blocks','first'),opens=('opens','first'),status=('status','first'),**{c:(c,'first') for c in COUNTERS})
  qmedian=qmedian.merge(meta,on='case',validate='many_to_one');save(qmedian,out/'queries.csv')
  qp=[]
- for base in ['lba_reuse','mesh_reuse','cut_mesh','lattice_envelope','dstar_lattice','batch_mpgaa']:
+ for base in ['lba_reuse','mesh_cold','mesh_reuse','cut_mesh','lattice_envelope','dstar_lattice','batch_mpgaa']:
   b=qmedian[qmedian.method.eq(base)].set_index(['case','query'])
   for c in NEW:
    a=qmedian[qmedian.method.eq(c)].set_index(['case','query']);ix=a.index.intersection(b.index);aa,bb=a.loc[ix],b.loc[ix]
@@ -128,6 +128,24 @@ def main(directory):
   med=d.full_s.median();dispersion.append(dict(case=key[0],method=key[1],relative_mad=float((d.full_s-med).abs().median()/med) if med else 0))
  dispersion=pd.DataFrame(dispersion);save(dispersion,out/'repeat_dispersion.csv')
  figmanifest={};plt.rcParams.update({'font.size':9,'axes.spines.top':False,'axes.spines.right':False,'pdf.fonttype':42})
+ fig,axes=plt.subplots(1,2,figsize=(11,3.6))
+ ax=axes[0];coords={'u':(0,.5),'free':(1,.5),'w':(2,.7),'v1':(3,1),'v2':(3,.5),'v3':(2,0)}
+ edges=[('u','free'),('free','w'),('w','v1'),('w','v2'),('free','v3')]
+ for a,b in edges:
+  x,y=coords[a];xx,yy=coords[b];ax.annotate('',(xx,yy),(x,y),arrowprops=dict(arrowstyle='->',color='.45',linestyle='--' if a=='w' else '-'))
+ for name,(x,y) in coords.items():
+  color='#d55e00' if name in ['w','v3'] else ('#0072b2' if name=='u' else '#eeeeee')
+  ax.scatter([x],[y],s=580,c=color,edgecolors='black',zorder=3);ax.text(x,y,{'u':'u in R','free':'cell','w':'block','v1':'v1','v2':'v2','v3':'v3'}[name],ha='center',va='center',fontsize=8,color='white' if name in ['w','v3','u'] else 'black',zorder=4)
+ ax.text(1.8,1.18,'One explicit witness covers v1 and v2',ha='center',fontsize=9);ax.text(1.9,-.26,'Blocked endpoint v3 is implicit',ha='center',fontsize=9);ax.set(xlim=(-.4,3.4),ylim=(-.4,1.4),title='Mesh-compressed invalid frontier');ax.axis('off')
+ ax=axes[1]
+ from matplotlib.patches import Rectangle
+ ax.add_patch(Rectangle((-.35,-.35),2.7,.7,facecolor='#d9edf7',edgecolor='#0072b2',alpha=.7))
+ for i,name in enumerate(['s','a','b','c','goal']):
+  ax.scatter([i],[0],s=420,c='#0072b2' if i<3 else '#eeeeee',edgecolors='black',zorder=3);ax.text(i,0,name,ha='center',va='center',fontsize=8,color='white' if i<3 else 'black',zorder=4)
+ for i in range(4):ax.annotate('',(i+1,0),(i,0),arrowprops=dict(arrowstyle='->',color='#d55e00' if i in [0,2] else '.4',linestyle='--' if i in [0,2] else '-'))
+ ax.text(.5,.21,'new block',ha='center',fontsize=8);ax.text(2.5,.21,'old cut',ha='center',fontsize=8);ax.text(1,-.62,'Keep R = {s,a,b}; exact reachability shrinks to {s}',ha='center',fontsize=9);ax.set(xlim=(-.5,4.5),ylim=(-.9,.9),title='Deletion preserves a closed superset');ax.axis('off')
+ figure(fig,'certificate_idea',figmanifest)
+
  fig,axes=plt.subplots(1,2,figsize=(11,4))
  for ax,control in zip(axes,['car16','grid8']):
   d=pairs[pairs.control.eq(control)&pairs.baseline.eq('best_control')&pairs.method.isin(NEW)]
