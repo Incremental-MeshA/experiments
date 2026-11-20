@@ -81,7 +81,12 @@ public:
         for(const auto* edits:{&b,&o})for(Cell q:*edits)for(const auto& group:m.groups) {
             ++stats.notify_probes;State u{q.i-group.di,q.j-group.dj,group.theta};
             if(!grid.inside(u.cell()))continue;
-            auto& ids=affected[u];ids.insert(ids.end(),group.ids.begin(),group.ids.end());
+            for(int pid:group.ids) {
+                // Invalidate even an inactive arc: its head may become finite
+                // later. With current g(head)=infinity it cannot change rhs now.
+                valid_cache.erase({u,pid});
+                if(std::isfinite(value(g,m.head(u,pid))))affected[u].push_back(pid);
+            }
         }
         for(Cell q:b)grid.set(q,true);
         for(Cell q:o)grid.set(q,false);

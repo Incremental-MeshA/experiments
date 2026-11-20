@@ -5,7 +5,9 @@ The original repository baseline conditionally propagates g changes, but maps
 occupancy notifications to full backups. This control also gates map-edge events:
 newly enabled arcs can only decrease rhs via c+g(head); disabled arcs trigger a
 backup only if their value can support rhs. Whole batches invalidate the edge
-cache before backups. Identical active queue keys are not pushed again. Primitive
+cache before backups; edges with infinite current g(head) do not materialize an
+affected-state entry. They are reconsidered by normal g propagation if their
+head becomes finite later. Identical active queue keys are not pushed again. Primitive
 costs, collision traces, Euclidean heuristic, tolerance and expansion budget match
 the new boundary algorithms. A blocked source's outgoing arcs may remain in the
 auxiliary graph; free-source paths cannot enter a blocked endpoint, preserving

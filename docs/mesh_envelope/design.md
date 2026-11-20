@@ -6,6 +6,18 @@ compressed outgoing boundary of a closed state set, with blocked endpoints
 represented implicitly. Incremental reachability and graph cuts themselves are
 established concepts. A literature search does not establish priority.
 
+## Structured updates, rather than an explicit changed-edge list
+
+The input is a batch of occupancy cells, not a list of all changed motion-primitive
+arcs. One cell can occur in many translated swept traces. A generic dynamic-graph
+algorithm still needs those arc changes generated before repairing labels or
+reachability. The proposed mesh cut instead subscribes to the blocked witnesses
+which justify the current negative answer. Internal/outside-region cell changes
+need not materialize all affected primitive arcs. The implicit-endpoint join is
+bounded by the template library per opened cell; explicit guards cover only the
+remaining free-endpoint frontier. This cell-to-family repair representation is
+the specific novelty hypothesis, beyond the elementary closed-set theorem.
+
 ## Intended consumer of negative certificates
 
 The consumer must keep issuing planning queries after a temporary disconnection,
