@@ -1,0 +1,5 @@
+NAV_SPEC 1 4
+"car16__Berlin__dynamic__s48101__k2__cr5__n2" dynamic 0 2 5 2 384 3 4123573556207021417 0
+"car16__Berlin__dynamic__s48101__k32__cr20__n32" dynamic 0 32 20 32 384 3 4123573556207021417 0
+"car16__Berlin__dynamic__s48102__k2__cr5__n2" dynamic 0 2 5 2 384 3 1553848485788004294 0
+"car16__Berlin__dynamic__s48102__k32__cr20__n32" dynamic 0 32 20 32 384 3 1553848485788004294 0

@@ -1,0 +1,2 @@
+{"status":"passed","model":"grid8","queries":648,"comparisons":3891,"scan_batches":332,"edit_batches":1660,"cut_reuses":16356}
+{"status":"passed","model":"car16","queries":648,"comparisons":3891,"scan_batches":352,"edit_batches":1202,"cut_reuses":899712}

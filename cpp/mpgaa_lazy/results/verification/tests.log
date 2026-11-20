@@ -1,0 +1,6 @@
+make: Entering directory '/workspace/introduction-mpgaa-mesh/cpp/mpgaa_lazy'
+build/test ../experiments/frozen/grid8_model.txt
+{"status":"passed","model":"grid8","queries":648,"comparisons":3891,"scan_batches":332,"edit_batches":1660,"cut_reuses":16356}
+build/test ../experiments/frozen/car16_model.txt
+{"status":"passed","model":"car16","queries":648,"comparisons":3891,"scan_batches":352,"edit_batches":1202,"cut_reuses":899712}
+make: Leaving directory '/workspace/introduction-mpgaa-mesh/cpp/mpgaa_lazy'
