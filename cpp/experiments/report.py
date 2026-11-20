@@ -30,7 +30,7 @@ def figure(name,caption,width='100%'):
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def build(directory,pdf=True,mesh_directory=None):
+def build(directory,pdf=True,mesh_directory=None,navigation_directory=None):
     a=json.loads((directory/'analysis/analysis.json').read_text());assert a['status']=='passed'
     state=json.loads((directory/'experiment.json').read_text());assert state['status']=='passed'
     for name,sha in a['raw_sha256'].items():assert digest(directory/name)==sha,name
@@ -48,8 +48,8 @@ def build(directory,pdf=True,mesh_directory=None):
     def add(text):out.append(text.strip()+'\n')
     add(r'''---
 title: "Инкрементальный поиск на mesh-графе: расширенные C++-эксперименты"
-subtitle: "MD-A*, C-Mesh-D* Lite, Suffix-Mesh и Boundary-Mesh"
-date: "19 ноября 2026"
+subtitle: "MD-A*, mesh-варианты, раскрытие карты и динамика при n=k"
+date: "20 ноября 2026"
 lang: ru-RU
 fontsize: 10pt
 geometry: margin=18mm
@@ -59,10 +59,13 @@ colorlinks: true
 toc: true
 toc-depth: 2
 ---''')
-    extension_meta=None
+    extension_meta=None;navigation_meta=None
     supplement=ROOT/'docs/experiments/mesh_variants_body.md'
     if supplement.exists():
         add('Отчёт содержит две отдельные измерительные серии. Первые главы описывают исходное сравнение 11 методов; глава «Дополнение» — новый совместный запуск 15 методов на тех же входах, включая C-Mesh-D\\* Lite, Suffix-Mesh и Boundary-Mesh. Времена между сериями не смешиваются.')
+    navigation_body=ROOT/'docs/experiments/navigation_body.md'
+    if navigation_body.exists():
+        add('Глава «Раскрытие карты и глобальная динамика» добавляет новую замкнутую серию всех 15 методов: четыре статических радиуса, полный grid8-набор k/cr при n=k, четыре опорные точки car16-динамики, строго равные ограниченные обмены и отдельное разбиение новых и прежних результатов по картам. Полный атлас вынесен в `navigation_by_map.pdf`.')
     add('# Результат и исследовательский вопрос')
     add(rf'''Выполнены {integer(a['timed_episode_runs'])} измеряемых запусков эпизодов/миссий: 11 методов, три повтора, {a['replay_cases']} зафиксированных replay-эпизодов и {a['mission_cases']} параметризованных миссий с собственным движением. Записаны {integer(a['timed_rows'])} строк и {integer(a['actual_planner_calls'])} фактических вызовов планировщика. Повторы и параметры с общими концами не считаются независимыми задачами. Статья оценивает, в каких режимах сохранение результатов поиска и отсрочка освобождений полезны, а где их накладные расходы или распространение изменений мешают.
 
@@ -245,6 +248,13 @@ toc-depth: 2
         assert digest(extension_directory/'analysis.json')==extension_meta['analysis_sha256']
         assert digest(ROOT/'cpp/mesh_variants/report.py')==extension_meta['source_sha256']
         add(supplement.read_text())
+    if navigation_body.exists():
+        navigation_analysis=(navigation_directory or ROOT/'cpp/navigation_sweeps/results/full')/'analysis'
+        navigation_meta=json.loads((navigation_analysis/'report_provenance.json').read_text())
+        assert navigation_meta['status']=='passed' and digest(navigation_body)==navigation_meta['body_sha256']
+        assert digest(navigation_analysis/'analysis.json')==navigation_meta['analysis_sha256']
+        assert digest(ROOT/'cpp/navigation_sweeps/report.py')==navigation_meta['source_sha256']
+        add(navigation_body.read_text())
     add('# Артефакт и воспроизведение')
     add(r'''Все новые исходники, полные замороженные входы, контексты, сырые CSV с неудачами, команды запуска, данные компилятора и машины, SHA-256, скрипты анализа и PNG/PDF-графики включены в ветку `research/md-astar`. Предыдущие статьи и результаты не перезаписаны. Основные команды из корня репозитория:
 
@@ -277,6 +287,7 @@ python cpp/experiments/report.py --directory cpp/experiments/results/reproductio
     report_meta=dict(status='passed',analysis_sha256=digest(directory/'analysis/analysis.json'),source_sha256=digest(Path(__file__)),
                      markdown_sha256=digest(dest/'report.md'),pdf_sha256=digest(dest/'report.pdf') if pdf else None)
     if extension_meta:report_meta['mesh_variants_supplement']=extension_meta
+    if navigation_meta:report_meta['navigation_supplement']=navigation_meta
     (directory/'analysis/report_provenance.json').write_text(json.dumps(report_meta,indent=2)+'\n')
     print('Report:',dest/'report.md')
 
@@ -284,4 +295,5 @@ python cpp/experiments/report.py --directory cpp/experiments/results/reproductio
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--directory',type=Path,default=HERE/'results/expanded');p.add_argument('--no-pdf',action='store_true')
     p.add_argument('--mesh-directory',type=Path,help='Mesh-variant cohort whose generated chapter is included')
-    args=p.parse_args();build(args.directory,not args.no_pdf,args.mesh_directory)
+    p.add_argument('--navigation-directory',type=Path,help='Navigation cohort whose generated chapter is included')
+    args=p.parse_args();build(args.directory,not args.no_pdf,args.mesh_directory,args.navigation_directory)

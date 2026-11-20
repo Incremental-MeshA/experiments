@@ -25,9 +25,7 @@ make -C cpp/navigation_sweeps -j2 all test
 make -C cpp/navigation_sweeps sanitize
 python cpp/navigation_sweeps/verify.py --sanitize
 python cpp/navigation_sweeps/run_requested.py --output cpp/navigation_sweeps/results/reproduction
-python cpp/navigation_sweeps/analyze.py --directory cpp/navigation_sweeps/results/reproduction
-python cpp/navigation_sweeps/report.py --directory cpp/navigation_sweeps/results/reproduction
-python cpp/navigation_sweeps/validate_artifact.py
+python cpp/navigation_sweeps/finish.py --directory cpp/navigation_sweeps/results/reproduction
 ```
 
 `run_requested.py` validates frozen SHA-256 values and runs all normal jobs before all allocation jobs. A complete job can be reused on the same machine, inputs and source hashes; an interrupted job is never silently overwritten. `frozen/requested.json` selects the executed study from the full prepared manifest. Native `--anchors-only` selects the car adaptation timing slice and every allocation pass; the broad grid8 timing pass includes every k/cr pair. The original `run_all.py` remains as provenance of the full prepared scheduler. The current analysis targets the requested selection.
@@ -45,6 +43,10 @@ Each native job writes four artifacts:
 
 `episode_metrics.csv` takes the median of timing repeats at each case/method and uses the separately measured heap only where available. Missing heap is **not zero**. Full goal comparisons require both methods to reach the fixed goal; dynamic online comparisons additionally require at least one actual phase in both episodes. Pair counts and total coverage accompany every speedup. The nominal cr axes are accompanied by actual cr and clamp flags.
 
+`known_fraction` counts cells whose value has been observed at least once; it is always 1 in the initially known dynamic worlds and does not measure current visibility or freshness. `belief_accuracy = 1 - belief_mismatches / cells` is an offline comparison to the true occupancy, also provided in the episode metrics. The planner is not given this true-map diagnostic. The constructor precedes the first sensor observation, so initial static planning includes the first blocking batch; online timings exclude that initialization.
+
+`aligned_query_cases.csv` and `aligned_query_maps.csv` compare the common part of actual inputs to D* lattice, with equal case/step/start, world and pre/post-belief hashes and update cardinalities. `status=ok` path answers and `status=no_path` certified belief-unreachability answers are separated. Caps are excluded. Internal histories can differ, and this subset control does not replace a same-history replay experiment.
+
 The expansion counter counts popped search states, cell reads count collision probes, notification probes measure update work, and heuristic pops measure internal heuristic search. State representations differ, so raw expansion counts are not identical work units. Requested heap excludes shared immutable models and the common environment; it includes the planner and current returned path. It is neither RSS nor whole-process memory. Dynamic travel divided by the initial static optimum may be below 1 due to openings; it is not a competitive ratio.
 
 `work_by_observed_changes.csv` bins received cell edits (not requested cr) and reports query latency/work per map and method. `prior_by_map.csv` keeps the older 11-method and 15-method timing cohorts separate and includes their completion rates. The old car replay main panels are selected before comparing maps; sensitivity panels remain in the original artifacts.
@@ -58,3 +60,5 @@ The interrupted pre-fix preliminary run is retained in `results/pre_endpoint_gua
 Interpretation is limited by two roots per map, one broad timing pass away from anchors, policy-dependent worlds, capped search, differing visibility geometry, and simultaneous changes of k and n. High global cr destroys map structure and is not equivalent to a few local obstacles. There is no claim of universal superiority or exact replication of a published runtime table.
 
 The complete static timing cohort was imported byte-for-byte from `results/pre_car_full_sweep/raw`, with identical binary/input/source hashes, commands, CPU and serial execution. Its provenance is recorded in `experiment.json`. The partial non-anchor car dynamic sweep is retained there and excluded from analysis. This changes the scope of an optional car adaptation, without dropping any combination of the requested literal grid protocol.
+
+For a fast audit of the published results, use `python cpp/navigation_sweeps/validate_artifact.py --smoke`; no long benchmark rerun is needed. `finish.py` consistently regenerates the analysis, figures, chapter, atlas, notebook and combined report, then audits the chosen directory. Regeneration updates files under `docs/experiments`. Large raw CSVs are committed as lossless gzip files, with canonical uncompressed SHA-256 values retained. The analysis/audit restores missing raw caches automatically. Before resuming a cached native run directly after cloning, run `python cpp/navigation_sweeps/storage.py` if its raw caches are absent. Compressed and uncompressed hashes are independently checked.
