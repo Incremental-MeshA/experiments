@@ -47,7 +47,7 @@ def main(directory):
    ax.bar(x+(j-1.5)*width,np.asarray(vals)+1,width,label='Conditional D* Lite' if m=='conditional_dstar' else base.LABEL[m],color='#332288' if m=='conditional_dstar' else base.COLORS[m])
   ax.set_xticks(x,families);ax.set(yscale='log',ylabel='All replanning Grid.free calls + 1',title=control);ax.legend(fontsize=7)
  base.figure(fig,'all_collision_probes',figures)
- result=dict(status='passed',counted_runs=sum(j['runs'] for j in state['jobs'].values()),logical_matched_rows=matched,definition=state['definition'],source_sha256=base.sha(Path(__file__)),experiment_sha256=base.sha(path),tables_sha256={p.name:base.sha(p) for p in out.glob('*.csv')},figures_sha256=figures)
+ result=dict(status='passed',counted_runs=sum(j['runs'] for j in state['jobs'].values()),logical_matched_rows=matched,definition=state['definition'],source_sha256=base.sha(Path(__file__)),experiment_sha256=base.sha(path),tables_sha256={p.name:base.sha(p) for p in sorted(out.glob('*.csv'))},figures_sha256=figures)
  (out/'analysis.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps({k:v for k,v in result.items() if not k.endswith('sha256')}))
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--directory',type=Path,default=HERE/'results');main(p.parse_args().directory)

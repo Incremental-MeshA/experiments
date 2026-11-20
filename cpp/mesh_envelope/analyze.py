@@ -247,14 +247,14 @@ def main(directory):
   for j,m in enumerate(methods):
    v=[mech.loc[mech.control.eq(control)&mech.family.eq(f)&mech.method.eq(m),'checked_cells'].sum() for f in families]
    ax.bar(x+(j-1.5)*width,np.asarray(v)+1,width,label=LABEL[m],color=COLORS[m])
-  ax.set_xticks(x,families);ax.set(yscale='log',title=control,ylabel='Online occupancy checks + 1');ax.legend(fontsize=8)
+  ax.set_xticks(x,families);ax.set(yscale='log',title=control,ylabel='Legacy trace/node checks + 1');ax.legend(fontsize=8)
  figure(fig,'frontier_work',figmanifest)
  failures=calls[calls.repeat.eq(0)&calls.cohort.str.startswith('navigation')&calls.status.eq('no_path')].copy()
  failures['truth_reachable']=failures.truth_cost.notna()
  assert not failures.loc[failures.cohort.eq('navigation_unknown'),'truth_reachable'].any()
  save(failures[['case','method','cohort','control','map','step','query','truth_reachable','truth_cost','belief_mismatches']],out/'failure_diagnostics.csv')
  completion=metrics.groupby(['cohort','control','method'],as_index=False).agg(configurations=('complete','size'),complete=('complete','sum'));save(completion,out/'completion.csv')
- tables={p.name:sha(p) for p in out.glob('*.csv')};(out/'figures.json').write_text(json.dumps(figmanifest,indent=2)+'\n')
+ tables={p.name:sha(p) for p in sorted(out.glob('*.csv'))};(out/'figures.json').write_text(json.dumps(figmanifest,indent=2)+'\n')
  result=dict(status='passed',scenarios=manifest['scenarios'],timed_runs=len(allruns),memory_runs=len(memories),timed_calls=len(calls),allocation_matched_rows=matched,exact_cost_disagreements=int(badcost+len(disagreement)),capped_calls=int(calls.status.eq('capped').sum()),repeat_relative_mad_median=dispersion.relative_mad.median(),repeat_relative_mad_p95=dispersion.relative_mad.quantile(.95),analysis_versions=dict(numpy=np.__version__,pandas=pd.__version__,matplotlib=matplotlib.__version__),analysis_source_sha256=sha(Path(__file__)),tables_sha256=tables,figures=len(figmanifest),manifest_sha256=sha(HERE/'frozen/manifest.json'))
  assert result['timed_runs']==manifest['timed_runs'] and result['memory_runs']==manifest['memory_runs']
  (out/'analysis.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps({k:v for k,v in result.items() if not k.endswith('sha256')}))

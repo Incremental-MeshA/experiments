@@ -43,7 +43,7 @@ def main(directory):
    v=np.sort(pairs[pairs.control.eq(control)&pairs.method.eq(m)].full_speedup.dropna());ax.step(v,np.arange(1,len(v)+1)/len(v),where='post',label=LABEL[m],color=base.COLORS[m])
   ax.axvline(1,color='.5',ls=':');ax.set(xscale='log',title=control,xlabel='Episode speedup vs conditional D* Lite',ylabel='Fraction of completed replay cases');ax.legend(fontsize=8)
  base.figure(fig,'conditional_control',figures)
- result=dict(status='passed',scenarios=manifest['scenarios'],timed_runs=len(r),memory_runs=len(metrics),allocation_matched_rows=matched,capped_calls=int(d.status.eq('capped').sum()),exact_cost_disagreements=bad,protocol=manifest['protocol'],manifest_sha256=base.sha(HERE/'frozen/manifest.json'),tables_sha256={p.name:base.sha(p) for p in out.glob('*.csv')},figures_sha256=figures,source_sha256=base.sha(Path(__file__)))
+ result=dict(status='passed',scenarios=manifest['scenarios'],timed_runs=len(r),memory_runs=len(metrics),allocation_matched_rows=matched,capped_calls=int(d.status.eq('capped').sum()),exact_cost_disagreements=bad,protocol=manifest['protocol'],manifest_sha256=base.sha(HERE/'frozen/manifest.json'),tables_sha256={p.name:base.sha(p) for p in sorted(out.glob('*.csv'))},figures_sha256=figures,source_sha256=base.sha(Path(__file__)))
  assert len(r)==manifest['timed_runs'] and len(metrics)==manifest['memory_runs'];(out/'analysis.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps({k:v for k,v in result.items() if not k.endswith('sha256')}))
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--directory',type=Path,default=HERE/'results/full');main(p.parse_args().directory)
