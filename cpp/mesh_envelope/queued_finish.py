@@ -10,6 +10,7 @@ while True:
   if s['status']=='passed':break
   if any(j.get('status')=='failed' for j in s.get('jobs',{}).values()):raise RuntimeError('Primary failed; retain partial data')
  time.sleep(15)
+while not (ROOT/'cpp/mesh_symmetric/validation/build_ready.json').exists():time.sleep(15)
 for name in ['prepare_frontier.py','run_frontier.py']:
  print('starting',name,flush=True);subprocess.run([sys.executable,str(HERE/name)],cwd=ROOT,check=True)
 print('PRIMARY_AND_FRONTIER_PASSED',flush=True)

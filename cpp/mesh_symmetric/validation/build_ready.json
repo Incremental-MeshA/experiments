@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "sources": {
+    "algorithms.hpp": "c7148d8b385ccf90ebab7245ee09a227537827f9dfe8b98d90ba85e4ccc18081",
+    "factory.hpp": "86d6d70a2487e229ed8cfdf99317ff0e281c7ebcaf1ff2abf7e3cf386bd5da3b"
+  },
+  "binaries": {
+    "replay": "dc1e05ee75b0e9f08211c6cc6fa3ab0fce3a2ee17f38cf84f82366f076034032",
+    "navigation_memory": "87e4c01cdc59e978f0735012444a3b8eea21171d09a9abc57448f8a3ffe3a463",
+    "replay_memory": "4dba873e8780b676d8c25ac4263ed72b521c60efd0d4b26116d4d5e9c756f352",
+    "navigation": "1be06a7f0109b17e1dc057ff378d4e13ea4261a6db8859abbb8fd37e5355de03"
+  }
+}

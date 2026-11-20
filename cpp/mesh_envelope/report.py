@@ -125,12 +125,13 @@ def main(directory,frontier_directory,conditional_directory):
  add(f"Старое поле checked_cells считает явные проверки трасс/узлов, но пропускает предварительные проверки конечных клеток в candidate и часть проверок условий входа. Его нельзя трактовать как полное число collision queries. Поэтому выполнен отдельный count-only проход на всех 184 replay-входах: {pmeta['counted_runs']} эпизодов с пятью методами, все вызовы Grid.free перехвачены в сгенерированной копии заголовков, измеряемые исходники не изменялись. {pmeta['logical_matched_rows']} строк совпали по всем прежним логическим полям с обычными траекториями. Инструментированный бинарник не используется для сравнения времени. Считаются логические вызовы API, включая проверки вне карты; прямые Grid.blocked в общей нормализации входа и эталонные/проверочные поиски исключены. Это не число физических CPU-чтений памяти.")
  pw=pd.read_csv(probe_path.parent/'probe_work.csv');pp=pd.read_csv(probe_path.parent/'probe_pairs.csv');rr=[]
  for (control,m),d in pw.groupby(['control','method']):
-  n=d.all_free_calls.sum();old=d.legacy_checks.sum();rr.append([control,'Conditional D* Lite' if m=='conditional_dstar' else LABEL[m],num(n/1e6),num(old/1e6),num(100*(n-old)/n)])
- add(table(['Модель','Метод','Все Grid.free, млн','Legacy, млн','Пропущено legacy, %'],rr))
+  n=d.all_free_calls.sum();old=d.legacy_checks.sum();rr.append([control,'Conditional D* Lite' if m=='conditional_dstar' else LABEL[m],num(n/1e6),num(old/1e6),num(d.endpoint_gate_calls.sum()/1e6),num(100*(n-old)/n)])
+ add(table(['Модель','Метод','Все Grid.free, млн','Legacy, млн','Концы, млн','Пропущено, %'],rr))
  rr=[]
  for (control,cohort,m,b),d in pp.groupby(['control','cohort','method','baseline']):
   a=d[~d.online];o=d[d.online];rr.append([control,cohort,LABEL[m],'Conditional D* Lite' if b=='conditional_dstar' else LABEL[b],num(gm(a.ratio)),num(gm(o.ratio)),f'{int(a.complete.sum())}/{len(a)}'])
  add(table(['Модель','Набор','Метод','Контроль','Probes F ×','Probes R ×','Пары'],rr))
+ add('Столбец «Концы» отдельно учитывает проверки в candidate. Реализации mesh/lattice различаются также порядком обхода и ранним выходом из входящего соединения; небольшие различия нельзя приписывать только числу общих префиксов. Полный счётчик включает и эти накладные обращения.')
  add('Значения больше 1 означают меньше вызовов проверки занятости у кандидата. Если время улучшается без уменьшения этих вызовов, причина в других операциях; если число обращений меньше, но время хуже, может сказываться обслуживание индексов, очередей и множеств; аппаратный профиль здесь не измерялся. Полный legacy-счётчик сохранён для сопоставления с прежними отчётами, но вывод о суммарной геометрической работе опирается на этот отдельный проход.')
  add('# Число изменений, радиус, задержки и память')
  add(fig('edit_scaling','Ремонт по числу наблюдаемых правок в replay; контроль LBA* reuse. Корзины и число пар доступны в query_pairs.csv.'))

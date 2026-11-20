@@ -25,11 +25,11 @@ def main(directory):
   lattice=base.read(oldroot/('timing_'+name+'.csv'));lattice=lattice[lattice.repeat.eq(0)&lattice.method.eq('lattice_envelope')]
   reference=pd.concat([normal,lattice],ignore_index=True).set_index(['case','method','query']).sort_index();actual=d.set_index(['case','method','query']).sort_index()
   fields=[c for c in reference if c in actual and not c.endswith('_s') and c not in ['repeat','peak_heap_bytes','retained_heap_bytes']]
-  assert_frame_equal(reference[fields],actual[fields],check_dtype=False,check_exact=True);assert d.all_free_calls.ge(d.checked_cells).all();matched+=len(d);frames.append(d)
+  assert_frame_equal(reference[fields],actual[fields],check_dtype=False,check_exact=True);assert d.all_free_calls.ge(d.checked_cells).all();assert d.endpoint_gate_calls.le(d.all_free_calls-d.checked_cells).all();matched+=len(d);frames.append(d)
  allcalls=pd.concat(frames,ignore_index=True);ctx=json.loads((ROOT/'cpp/mesh_conditional/frozen/contexts.json').read_text());meta=pd.DataFrame([dict(case=k,control=v['control'],cohort=v['cohort'],map=v['map'],family=v['family']) for k,v in ctx.items()])
  allcalls=allcalls.drop(columns=['family']).merge(meta,on='case');rows=[]
  for key,g in allcalls.groupby(['control','cohort','map','family','method']):
-  online=g[g['query'].gt(0)];rows.append(dict(zip(['control','cohort','map','family','method'],key))|dict(calls=len(g),all_free_calls=int(g.all_free_calls.sum()),legacy_checks=int(g.checked_cells.sum()),online_all_free_calls=int(online.all_free_calls.sum()),online_legacy_checks=int(online.checked_cells.sum()),missing_from_legacy=int((g.all_free_calls-g.checked_cells).sum())))
+  online=g[g['query'].gt(0)];rows.append(dict(zip(['control','cohort','map','family','method'],key))|dict(calls=len(g),all_free_calls=int(g.all_free_calls.sum()),legacy_checks=int(g.checked_cells.sum()),endpoint_gate_calls=int(g.endpoint_gate_calls.sum()),online_endpoint_gate_calls=int(online.endpoint_gate_calls.sum()),online_all_free_calls=int(online.all_free_calls.sum()),online_legacy_checks=int(online.checked_cells.sum()),missing_from_legacy=int((g.all_free_calls-g.checked_cells).sum())))
  out=directory/'analysis';out.mkdir(exist_ok=True);work=pd.DataFrame(rows);base.save(work,out/'probe_work.csv')
  pairs=[]
  for case,g in allcalls.groupby('case'):
