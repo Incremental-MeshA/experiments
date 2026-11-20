@@ -26,8 +26,8 @@ we do not claim to have audited every full text or established priority.
   repository's existing directed MPGAA* implementation and its original
   benchmark protocol reference,
   [AAAI 2015 DOI 10.1609/aaai.v29i1.9355](https://doi.org/10.1609/aaai.v29i1.9355).
-  Crossref title: *Reusing Previously Found A* Paths for Fast Goal-Directed
-  Navigation in Dynamic Terrain*. The new separator experiment is distinct from
+  Crossref title: _Reusing Previously Found A* Paths for Fast Goal-Directed
+  Navigation in Dynamic Terrain_. The new separator experiment is distinct from
   that published benchmark.
 * **Mandalika et al., Generalized Lazy Search for Robot Motion Planning:
   Interleaving Search and Edge Evaluation via Event-Based Toggles**, ICAPS 2019,

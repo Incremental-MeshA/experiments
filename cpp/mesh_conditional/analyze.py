@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Fresh joint replay validation against the optimized non-mesh D* control."""
-import sys,json
+import sys,json,argparse
 from pathlib import Path
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[1]
 sys.path.insert(0,str(ROOT/'cpp/mesh_envelope'))
@@ -10,8 +10,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pandas.testing import assert_frame_equal
 NEW=base.NEW;LABEL={**base.LABEL,'conditional_dstar':'Conditional D* Lite'}
-def main():
- directory=HERE/'results/full';manifest=json.loads((HERE/'frozen/manifest.json').read_text());state=json.loads((directory/'experiment.json').read_text());assert state['status']=='passed'
+def main(directory):
+ manifest=json.loads((HERE/'frozen/manifest.json').read_text());state=json.loads((directory/'experiment.json').read_text());assert state['status']=='passed'
  assert state['manifest_sha256']==base.sha(HERE/'frozen/manifest.json')
  for p,h in {**manifest['sources'],**manifest['files']}.items():assert base.sha(ROOT/p)==h,p
  for j in state['jobs'].values():
@@ -45,4 +45,5 @@ def main():
  base.figure(fig,'conditional_control',figures)
  result=dict(status='passed',scenarios=manifest['scenarios'],timed_runs=len(r),memory_runs=len(metrics),allocation_matched_rows=matched,capped_calls=int(d.status.eq('capped').sum()),exact_cost_disagreements=bad,protocol=manifest['protocol'],manifest_sha256=base.sha(HERE/'frozen/manifest.json'),tables_sha256={p.name:base.sha(p) for p in out.glob('*.csv')},figures_sha256=figures,source_sha256=base.sha(Path(__file__)))
  assert len(r)==manifest['timed_runs'] and len(metrics)==manifest['memory_runs'];(out/'analysis.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps({k:v for k,v in result.items() if not k.endswith('sha256')}))
-if __name__=='__main__':main()
+if __name__=='__main__':
+ p=argparse.ArgumentParser();p.add_argument('--directory',type=Path,default=HERE/'results/full');main(p.parse_args().directory)

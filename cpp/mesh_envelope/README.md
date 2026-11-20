@@ -62,3 +62,12 @@ The measured kernels are frozen in commit `3fb2ce4`; analysis and prose are
 maintained independently. Source hashes and binary hashes are checked before
 measurement and on validation. Reports expose caps, completion failures,
 construction overhead, standard-map losses and the lattice frontier ablation.
+
+An additional strong-control cohort is [Conditional D* Lite](../mesh_conditional/README.md).
+It jointly remeasures all three new candidates on the184 replay inputs (not184
+new independent cases), with conditional map-edge updates, fresh randomized
+order and independent allocation. Its times are kept separate from the primary
+cohort. Build/test it with `make -C cpp/mesh_conditional all test` and run
+`python cpp/mesh_conditional/run_all.py --output cpp/mesh_conditional/results/reproduction`.
+The supplementary analyzers support `--directory`; report.py also accepts
+`--frontier-directory` and `--conditional-directory` for newly collected data.

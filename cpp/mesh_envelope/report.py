@@ -36,7 +36,7 @@ toc-depth: 2
  if result.stderr:print(result.stderr)
  return dict(markdown_sha256=sha(path),pdf_sha256=sha(path.with_suffix('.pdf')),command=command)
 
-def main(directory):
+def main(directory,frontier_directory,conditional_directory):
  ad=directory/'analysis';a=json.loads((ad/'analysis.json').read_text());assert a['status']=='passed' and a['analysis_source_sha256']==sha(HERE/'analyze.py')
  for p,h in a['tables_sha256'].items():assert sha(ad/p)==h
  for p,h in json.loads((ad/'figures.json').read_text()).items():assert sha(ROOT/p)==h
@@ -138,7 +138,7 @@ def main(directory):
  rr=[]
  for _,r in completion[completion.cohort.str.startswith('navigation')].iterrows():rr.append([r.cohort,r.control,LABEL.get(r.method,r.method),f'{int(r.complete)}/{int(r.configurations)}'])
  add(table(['Сценарий','Модель','Метод','Цель / конфигурации'],rr))
- frontier_path=HERE/'results/frontier/analysis/analysis.json'
+ frontier_path=frontier_directory/'analysis/analysis.json'
  fmeta=json.loads(frontier_path.read_text());assert fmeta['status']=='passed'
  for p,h in fmeta['tables_sha256'].items():assert sha(frontier_path.parent/p)==h
  for p,h in fmeta['figures_sha256'].items():assert sha(ROOT/p)==h
@@ -157,7 +157,7 @@ def main(directory):
  for (control,width,m),d in fm[fm.method.isin(NEW+['lattice_envelope'])].groupby(['control','width','method']):
   rr.append([control,int(width),LABEL[m],int(d.online_envelope_builds.sum()),int(d.online_envelope_hits.sum()),int(d.online_guard_events.sum()),int(d.online_checked_cells.sum())])
  add(table(['Модель','Ширина','Метод','Перестроения','Cert hits','События cut','Occupancy'],rr))
- conditional_path=ROOT/'cpp/mesh_conditional/results/full/analysis/analysis.json'
+ conditional_path=conditional_directory/'analysis/analysis.json'
  cmeta=json.loads(conditional_path.read_text());assert cmeta['status']=='passed'
  for p,h in cmeta['tables_sha256'].items():assert sha(conditional_path.parent/p)==h
  for p,h in cmeta['figures_sha256'].items():assert sha(ROOT/p)==h
@@ -249,4 +249,4 @@ def main(directory):
  provenance=dict(status='passed',analysis_sha256=sha(ad/'analysis.json'),frontier_analysis_sha256=sha(frontier_path),conditional_analysis_sha256=sha(conditional_path),narrative_sha256={p.name:sha(p) for p in [DEST/'design.md',DEST/'related_work.md']},report=report,paper=paper,source_sha256=sha(Path(__file__)))
  (ad/'report_provenance.json').write_text(json.dumps(provenance,indent=2)+'\n');print(json.dumps(provenance))
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('--directory',type=Path,default=HERE/'results/full');main(p.parse_args().directory)
+ p=argparse.ArgumentParser();p.add_argument('--directory',type=Path,default=HERE/'results/full');p.add_argument('--frontier-directory',type=Path,default=HERE/'results/frontier');p.add_argument('--conditional-directory',type=Path,default=ROOT/'cpp/mesh_conditional/results/full');args=p.parse_args();main(args.directory,args.frontier_directory,args.conditional_directory)

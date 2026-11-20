@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Analyze the prespecified structural complement separately from the primary."""
-import json
+import json,argparse
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 from pandas.testing import assert_frame_equal
 from analyze import HERE,ROOT,DEST,NEW,COUNTERS,LABEL,COLORS,gm,sha,read,save,figure
 
-def main():
- directory=HERE/'results/frontier';manifest=json.loads((HERE/'frozen/frontier/manifest.json').read_text());state=json.loads((directory/'experiment.json').read_text());assert state['status']=='passed'
+def main(directory):
+ manifest=json.loads((HERE/'frozen/frontier/manifest.json').read_text());state=json.loads((directory/'experiment.json').read_text());assert state['status']=='passed'
  assert state['manifest_sha256']==sha(HERE/'frozen/frontier/manifest.json')
  for p,h in {**manifest['sources'],**manifest['files']}.items():assert sha(ROOT/p)==h,p
  for j in state['jobs'].values():
@@ -50,4 +50,5 @@ def main():
  result=dict(status='passed',scenarios=manifest['scenarios'],timed_runs=len(runs),memory_runs=matched//17,allocation_matched_rows=matched,exact_cost_disagreements=0,capped_calls=0,protocol=manifest['protocol'],manifest_sha256=sha(HERE/'frozen/frontier/manifest.json'),tables_sha256={p.name:sha(p) for p in out.glob('*.csv')},figures_sha256=figures,source_sha256=sha(Path(__file__)))
  assert result['timed_runs']==manifest['timed_runs'] and result['memory_runs']==manifest['memory_runs']
  (out/'analysis.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps({k:v for k,v in result.items() if not k.endswith('sha256')}))
-if __name__=='__main__':main()
+if __name__=='__main__':
+ p=argparse.ArgumentParser();p.add_argument('--directory',type=Path,default=HERE/'results/frontier');main(p.parse_args().directory)
