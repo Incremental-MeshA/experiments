@@ -28,10 +28,10 @@ def prepare():
  subprocess.run(command,cwd=ROOT,check=True)
  state=dict(status='built',original_sources=files,original_replay_sha256=sha(source),patcher_sha256=sha(Path(__file__)),patched_model_sha256=sha(model),patched_replay_sha256=sha(target),binary_sha256=sha(HERE/'build/replay_count'),command=command,methods=['envelope_mesh','dual_mesh','lattice_envelope','circuit_mesh','conditional_dstar'],definition='Number of Grid.free calls during replan, including endpoint gates and outside-grid probes; excludes direct Grid.blocked calls in common input normalization and all verification/reference calls. Count-only binary; timings discarded.')
  (HERE/'build/manifest.json').write_text(json.dumps(state,indent=2)+'\n');print('COUNT_BINARY_BUILT',flush=True)
-def run():
+def run(out):
  manifest=json.loads((HERE/'build/manifest.json').read_text());assert manifest['binary_sha256']==sha(HERE/'build/replay_count') and manifest['patcher_sha256']==sha(Path(__file__))
  for p,h in manifest['original_sources'].items():assert sha(ROOT/p)==h,p
- m=json.loads((ROOT/'cpp/mesh_conditional/frozen/manifest.json').read_text());out=HERE/'results';out.mkdir(exist_ok=True);jobs={}
+ m=json.loads((ROOT/'cpp/mesh_conditional/frozen/manifest.json').read_text());out=out.resolve();out.mkdir(parents=True,exist_ok=True);jobs={}
  for job in m['plan']:
   target=out/(job['name']+'.csv');assert not target.exists()
   args=[str(HERE/'build/replay_count'),'--input',str(ROOT/job['input']),'--output',str(target),'--methods',','.join(manifest['methods']),'--repeats','1','--seed','831019','--cap',str(m['cap'])]
@@ -41,4 +41,4 @@ def run():
   jobs[job['name']]=dict(command=args,runs=meta['runs'],rows=meta['rows'],csv_sha256=sha(target),json_sha256=sha(Path(str(target)+'.json')))
  state=dict(manifest,status='passed',jobs=jobs);(out/'experiment.json').write_text(json.dumps(state,indent=2)+'\n');print('COUNTS_PASSED',flush=True)
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('--build',action='store_true');a=p.parse_args();prepare() if a.build else run()
+ p=argparse.ArgumentParser();p.add_argument('--build',action='store_true');p.add_argument('--output',type=Path,default=HERE/'results');a=p.parse_args();prepare() if a.build else run(a.output)

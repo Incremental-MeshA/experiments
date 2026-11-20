@@ -20,6 +20,6 @@ command are recorded under results/experiment.json.
 
 ```sh
 python cpp/mesh_probe_count/run.py --build
-python cpp/mesh_probe_count/run.py
-python cpp/mesh_probe_count/analyze.py
+python cpp/mesh_probe_count/run.py --output cpp/mesh_probe_count/reproduction
+python cpp/mesh_probe_count/analyze.py --directory cpp/mesh_probe_count/reproduction
 ```

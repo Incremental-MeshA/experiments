@@ -71,3 +71,10 @@ cohort. Build/test it with `make -C cpp/mesh_conditional all test` and run
 `python cpp/mesh_conditional/run_all.py --output cpp/mesh_conditional/results/reproduction`.
 The supplementary analyzers support `--directory`; report.py also accepts
 `--frontier-directory` and `--conditional-directory` for newly collected data.
+
+`checked_cells` is the historical explicit trace/node counter and omits endpoint
+eligibility gates. [The independent probe pass](../mesh_probe_count/README.md)
+counts every `Grid.free` call around replan on the184 replay inputs, validates
+old logical fields against unmodified trajectories, and discards instrumented
+binary times. All probe claims in the report use this complete collision-API
+counter; direct `Grid.blocked` input normalization is outside its definition.

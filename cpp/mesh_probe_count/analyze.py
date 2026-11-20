@@ -10,15 +10,15 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pandas.testing import assert_frame_equal
 
-def main():
- path=HERE/'results/experiment.json'
+def main(directory):
+ path=directory/'experiment.json'
  while not path.exists():time.sleep(15)
  state=json.loads(path.read_text());assert state['status']=='passed'
  assert state['patcher_sha256']==base.sha(HERE/'run.py')
  for p,h in state['original_sources'].items():assert base.sha(ROOT/p)==h,p
  frames=[];matched=0
  for name,job in state['jobs'].items():
-  p=HERE/'results'/(name+'.csv');assert base.sha(p)==job['csv_sha256'] and base.sha(Path(str(p)+'.json'))==job['json_sha256']
+  p=directory/(name+'.csv');assert base.sha(p)==job['csv_sha256'] and base.sha(Path(str(p)+'.json'))==job['json_sha256']
   d=base.read(p)
   normal=base.read(ROOT/'cpp/mesh_conditional/results/full'/('timing_'+name+'.csv'));normal=normal[normal.repeat.eq(0)]
   oldroot=ROOT/('cpp/mesh_envelope/results/frontier' if name.startswith('frontier_') else 'cpp/mesh_envelope/results/full')
@@ -30,7 +30,7 @@ def main():
  allcalls=allcalls.drop(columns=['family']).merge(meta,on='case');rows=[]
  for key,g in allcalls.groupby(['control','cohort','map','family','method']):
   online=g[g['query'].gt(0)];rows.append(dict(zip(['control','cohort','map','family','method'],key))|dict(calls=len(g),all_free_calls=int(g.all_free_calls.sum()),legacy_checks=int(g.checked_cells.sum()),online_all_free_calls=int(online.all_free_calls.sum()),online_legacy_checks=int(online.checked_cells.sum()),missing_from_legacy=int((g.all_free_calls-g.checked_cells).sum())))
- out=HERE/'results/analysis';out.mkdir(exist_ok=True);work=pd.DataFrame(rows);base.save(work,out/'probe_work.csv')
+ out=directory/'analysis';out.mkdir(exist_ok=True);work=pd.DataFrame(rows);base.save(work,out/'probe_work.csv')
  pairs=[]
  for case,g in allcalls.groupby('case'):
   for candidate,baseline in [('envelope_mesh','lattice_envelope'),('circuit_mesh','conditional_dstar')]:
@@ -49,4 +49,5 @@ def main():
  base.figure(fig,'all_collision_probes',figures)
  result=dict(status='passed',counted_runs=sum(j['runs'] for j in state['jobs'].values()),logical_matched_rows=matched,definition=state['definition'],source_sha256=base.sha(Path(__file__)),experiment_sha256=base.sha(path),tables_sha256={p.name:base.sha(p) for p in out.glob('*.csv')},figures_sha256=figures)
  (out/'analysis.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps({k:v for k,v in result.items() if not k.endswith('sha256')}))
-if __name__=='__main__':main()
+if __name__=='__main__':
+ p=argparse.ArgumentParser();p.add_argument('--directory',type=Path,default=HERE/'results');main(p.parse_args().directory)
