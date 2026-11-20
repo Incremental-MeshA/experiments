@@ -1,0 +1,7302 @@
+[
+ {
+  "query": "MeshA Efficient Path Planning with Motion Primitives",
+  "results": [
+   {
+    "title": "MeshA*: Efficient Path Planning with Motion Primitives",
+    "year": 2026,
+    "doi": "https://doi.org/10.1609/aaai.v40i43.41004",
+    "url": "https://doi.org/10.1609/aaai.v40i43.41004",
+    "abstract": {
+     "We": [
+      0
+     ],
+     "study": [
+      1
+     ],
+     "a": [
+      2,
+      14,
+      34,
+      45,
+      52,
+      72,
+      93
+     ],
+     "path": [
+      3
+     ],
+     "planning": [
+      4,
+      146
+     ],
+     "problem": [
+      5
+     ],
+     "where": [
+      6
+     ],
+     "the": [
+      7,
+      22,
+      26,
+      48,
+      62,
+      77,
+      98,
+      103,
+      112,
+      116,
+      128,
+      135,
+      150,
+      153
+     ],
+     "possible": [
+      8,
+      113
+     ],
+     "move": [
+      9
+     ],
+     "actions": [
+      10
+     ],
+     "are": [
+      11
+     ],
+     "represented": [
+      12,
+      43
+     ],
+     "as": [
+      13,
+      44
+     ],
+     "finite": [
+      15
+     ],
+     "set": [
+      16
+     ],
+     "of": [
+      17,
+      25,
+      38,
+      47,
+      51,
+      100,
+      115
+     ],
+     "motion": [
+      18,
+      37,
+      117
+     ],
+     "primitives": [
+      19,
+      67,
+      118
+     ],
+     "aligned": [
+      20
+     ],
+     "with": [
+      21
+     ],
+     "grid": [
+      23,
+      104
+     ],
+     "representation": [
+      24
+     ],
+     "environment.": [
+      27
+     ],
+     "That": [
+      28
+     ],
+     "is,": [
+      29
+     ],
+     "each": [
+      30
+     ],
+     "primitive": [
+      31
+     ],
+     "corresponds": [
+      32
+     ],
+     "to": [
+      33,
+      70,
+      76,
+      141
+     ],
+     "short": [
+      35
+     ],
+     "kinodynamically-feasible": [
+      36
+     ],
+     "an": [
+      39
+     ],
+     "agent": [
+      40
+     ],
+     "and": [
+      41,
+      132,
+      138
+     ],
+     "is": [
+      42,
+      59,
+      139
+     ],
+     "sequence": [
+      46
+     ],
+     "swept": [
+      49
+     ],
+     "cells": [
+      50,
+      105
+     ],
+     "grid.": [
+      53
+     ],
+     "Typically,": [
+      54
+     ],
+     "heuristic": [
+      55
+     ],
+     "search,": [
+      56
+     ],
+     "i.e.": [
+      57
+     ],
+     "A*,": [
+      58
+     ],
+     "conducted": [
+      60
+     ],
+     "over": [
+      61,
+      102
+     ],
+     "lattice": [
+      63
+     ],
+     "induced": [
+      64
+     ],
+     "by": [
+      65
+     ],
+     "these": [
+      66,
+      120
+     ],
+     "(lattice-based": [
+      68
+     ],
+     "planning)": [
+      69
+     ],
+     "find": [
+      71
+     ],
+     "path.": [
+      73
+     ],
+     "However,": [
+      74
+     ],
+     "due": [
+      75
+     ],
+     "large": [
+      78
+     ],
+     "branching": [
+      79
+     ],
+     "factor,": [
+      80
+     ],
+     "such": [
+      81
+     ],
+     "search": [
+      82
+     ],
+     "may": [
+      83
+     ],
+     "be": [
+      84
+     ],
+     "inefficient": [
+      85
+     ],
+     "in": [
+      86,
+      97,
+      107,
+      149
+     ],
+     "practice.": [
+      87
+     ],
+     "To": [
+      88
+     ],
+     "this": [
+      89
+     ],
+     "end,": [
+      90
+     ],
+     "we": [
+      91
+     ],
+     "suggest": [
+      92
+     ],
+     "novel": [
+      94
+     ],
+     "technique": [
+      95
+     ],
+     "rooted": [
+      96
+     ],
+     "idea": [
+      99
+     ],
+     "searching": [
+      101
+     ],
+     "(as": [
+      106
+     ],
+     "vanilla": [
+      108
+     ],
+     "A*)": [
+      109
+     ],
+     "simultaneously": [
+      110
+     ],
+     "fitting": [
+      111
+     ],
+     "sequences": [
+      114
+     ],
+     "into": [
+      119
+     ],
+     "cells.": [
+      121
+     ],
+     "The": [
+      122
+     ],
+     "resultant": [
+      123
+     ],
+     "algorithm,": [
+      124
+     ],
+     "MeshA*,": [
+      125
+     ],
+     "provably": [
+      126
+     ],
+     "preserves": [
+      127
+     ],
+     "guarantees": [
+      129
+     ],
+     "on": [
+      130,
+      134,
+      152
+     ],
+     "completeness": [
+      131
+     ],
+     "optimality,": [
+      133
+     ],
+     "one": [
+      136
+     ],
+     "hand,": [
+      137
+     ],
+     "shown": [
+      140
+     ],
+     "notably": [
+      142
+     ],
+     "outperform": [
+      143
+     ],
+     "conventional": [
+      144
+     ],
+     "lattice-based": [
+      145
+     ],
+     "(x1.5-x2": [
+      147
+     ],
+     "decrease": [
+      148
+     ],
+     "runtime),": [
+      151
+     ],
+     "other": [
+      154
+     ],
+     "hand.": [
+      155
+     ]
+    }
+   },
+   {
+    "title": "MeshA*: Efficient Path Planning with Motion Primitives",
+    "year": 2026,
+    "doi": "https://doi.org/10.48448/grrg-rk82",
+    "url": "https://doi.org/10.48448/grrg-rk82",
+    "abstract": {
+     "We": [
+      0
+     ],
+     "study": [
+      1
+     ],
+     "a": [
+      2,
+      14,
+      34,
+      45,
+      52,
+      72,
+      93
+     ],
+     "path": [
+      3
+     ],
+     "planning": [
+      4,
+      146
+     ],
+     "problem": [
+      5
+     ],
+     "where": [
+      6
+     ],
+     "the": [
+      7,
+      22,
+      26,
+      48,
+      62,
+      77,
+      98,
+      103,
+      112,
+      116,
+      128,
+      135,
+      150,
+      153
+     ],
+     "possible": [
+      8,
+      113
+     ],
+     "move": [
+      9
+     ],
+     "actions": [
+      10
+     ],
+     "are": [
+      11
+     ],
+     "represented": [
+      12,
+      43
+     ],
+     "as": [
+      13,
+      44
+     ],
+     "finite": [
+      15
+     ],
+     "set": [
+      16
+     ],
+     "of": [
+      17,
+      25,
+      38,
+      47,
+      51,
+      100,
+      115
+     ],
+     "motion": [
+      18,
+      37,
+      117
+     ],
+     "primitives": [
+      19,
+      67,
+      118
+     ],
+     "aligned": [
+      20
+     ],
+     "with": [
+      21
+     ],
+     "grid": [
+      23,
+      104
+     ],
+     "representation": [
+      24
+     ],
+     "environment.": [
+      27
+     ],
+     "That": [
+      28
+     ],
+     "is,": [
+      29
+     ],
+     "each": [
+      30
+     ],
+     "primitive": [
+      31
+     ],
+     "corresponds": [
+      32
+     ],
+     "to": [
+      33,
+      70,
+      76,
+      141
+     ],
+     "short": [
+      35
+     ],
+     "kinodynamically-feasible": [
+      36
+     ],
+     "an": [
+      39
+     ],
+     "agent": [
+      40
+     ],
+     "and": [
+      41,
+      132,
+      138
+     ],
+     "is": [
+      42,
+      59,
+      139
+     ],
+     "sequence": [
+      46
+     ],
+     "swept": [
+      49
+     ],
+     "cells": [
+      50,
+      105
+     ],
+     "grid.": [
+      53
+     ],
+     "Typically,": [
+      54
+     ],
+     "heuristic": [
+      55
+     ],
+     "search,": [
+      56
+     ],
+     "i.e.": [
+      57
+     ],
+     "A,": [
+      58
+     ],
+     "conducted": [
+      60
+     ],
+     "over": [
+      61,
+      102
+     ],
+     "lattice": [
+      63
+     ],
+     "induced": [
+      64
+     ],
+     "by": [
+      65
+     ],
+     "these": [
+      66,
+      120
+     ],
+     "(lattice-based": [
+      68
+     ],
+     "planning)": [
+      69
+     ],
+     "find": [
+      71
+     ],
+     "path.": [
+      73
+     ],
+     "However,": [
+      74
+     ],
+     "due": [
+      75
+     ],
+     "large": [
+      78
+     ],
+     "branching": [
+      79
+     ],
+     "factor,": [
+      80
+     ],
+     "such": [
+      81
+     ],
+     "search": [
+      82
+     ],
+     "may": [
+      83
+     ],
+     "be": [
+      84
+     ],
+     "inefficient": [
+      85
+     ],
+     "in": [
+      86,
+      97,
+      107,
+      149
+     ],
+     "practice.": [
+      87
+     ],
+     "To": [
+      88
+     ],
+     "this": [
+      89
+     ],
+     "end,": [
+      90
+     ],
+     "we": [
+      91
+     ],
+     "suggest": [
+      92
+     ],
+     "novel": [
+      94
+     ],
+     "technique": [
+      95
+     ],
+     "rooted": [
+      96
+     ],
+     "idea": [
+      99
+     ],
+     "searching": [
+      101
+     ],
+     "(as": [
+      106
+     ],
+     "vanilla": [
+      108
+     ],
+     "A)": [
+      109
+     ],
+     "simultaneously": [
+      110
+     ],
+     "fitting": [
+      111
+     ],
+     "sequences": [
+      114
+     ],
+     "into": [
+      119
+     ],
+     "cells.": [
+      121
+     ],
+     "The": [
+      122
+     ],
+     "resultant": [
+      123
+     ],
+     "algorithm,": [
+      124
+     ],
+     "MeshA*,": [
+      125
+     ],
+     "provably": [
+      126
+     ],
+     "preserves": [
+      127
+     ],
+     "guarantees": [
+      129
+     ],
+     "on": [
+      130,
+      134,
+      152
+     ],
+     "completeness": [
+      131
+     ],
+     "optimality,": [
+      133
+     ],
+     "one": [
+      136
+     ],
+     "hand,": [
+      137
+     ],
+     "shown": [
+      140
+     ],
+     "notably": [
+      142
+     ],
+     "outperform": [
+      143
+     ],
+     "conventional": [
+      144
+     ],
+     "lattice-based": [
+      145
+     ],
+     "(x1.5-x2": [
+      147
+     ],
+     "decrease": [
+      148
+     ],
+     "runtime),": [
+      151
+     ],
+     "other": [
+      154
+     ],
+     "hand.": [
+      155
+     ]
+    }
+   },
+   {
+    "title": "968 - MeshA*: Efficient Path Planning with Motion Primitives",
+    "year": 2026,
+    "doi": "https://doi.org/10.48448/hmbp-3z78",
+    "url": "https://doi.org/10.48448/hmbp-3z78",
+    "abstract": {
+     "We": [
+      0
+     ],
+     "study": [
+      1
+     ],
+     "a": [
+      2,
+      14,
+      34,
+      45,
+      52,
+      72,
+      93
+     ],
+     "path": [
+      3
+     ],
+     "planning": [
+      4,
+      146
+     ],
+     "problem": [
+      5
+     ],
+     "where": [
+      6
+     ],
+     "the": [
+      7,
+      22,
+      26,
+      48,
+      62,
+      77,
+      98,
+      103,
+      112,
+      116,
+      128,
+      135,
+      150,
+      153
+     ],
+     "possible": [
+      8,
+      113
+     ],
+     "move": [
+      9
+     ],
+     "actions": [
+      10
+     ],
+     "are": [
+      11
+     ],
+     "represented": [
+      12,
+      43
+     ],
+     "as": [
+      13,
+      44
+     ],
+     "finite": [
+      15
+     ],
+     "set": [
+      16
+     ],
+     "of": [
+      17,
+      25,
+      38,
+      47,
+      51,
+      100,
+      115
+     ],
+     "motion": [
+      18,
+      37,
+      117
+     ],
+     "primitives": [
+      19,
+      67,
+      118
+     ],
+     "aligned": [
+      20
+     ],
+     "with": [
+      21
+     ],
+     "grid": [
+      23,
+      104
+     ],
+     "representation": [
+      24
+     ],
+     "environment.": [
+      27
+     ],
+     "That": [
+      28
+     ],
+     "is,": [
+      29
+     ],
+     "each": [
+      30
+     ],
+     "primitive": [
+      31
+     ],
+     "corresponds": [
+      32
+     ],
+     "to": [
+      33,
+      70,
+      76,
+      141
+     ],
+     "short": [
+      35
+     ],
+     "kinodynamically-feasible": [
+      36
+     ],
+     "an": [
+      39
+     ],
+     "agent": [
+      40
+     ],
+     "and": [
+      41,
+      132,
+      138
+     ],
+     "is": [
+      42,
+      59,
+      139
+     ],
+     "sequence": [
+      46
+     ],
+     "swept": [
+      49
+     ],
+     "cells": [
+      50,
+      105
+     ],
+     "grid.": [
+      53
+     ],
+     "Typically,": [
+      54
+     ],
+     "heuristic": [
+      55
+     ],
+     "search,": [
+      56
+     ],
+     "i.e.": [
+      57
+     ],
+     "A,": [
+      58
+     ],
+     "conducted": [
+      60
+     ],
+     "over": [
+      61,
+      102
+     ],
+     "lattice": [
+      63
+     ],
+     "induced": [
+      64
+     ],
+     "by": [
+      65
+     ],
+     "these": [
+      66,
+      120
+     ],
+     "(lattice-based": [
+      68
+     ],
+     "planning)": [
+      69
+     ],
+     "find": [
+      71
+     ],
+     "path.": [
+      73
+     ],
+     "However,": [
+      74
+     ],
+     "due": [
+      75
+     ],
+     "large": [
+      78
+     ],
+     "branching": [
+      79
+     ],
+     "factor,": [
+      80
+     ],
+     "such": [
+      81
+     ],
+     "search": [
+      82
+     ],
+     "may": [
+      83
+     ],
+     "be": [
+      84
+     ],
+     "inefficient": [
+      85
+     ],
+     "in": [
+      86,
+      97,
+      107,
+      149
+     ],
+     "practice.": [
+      87
+     ],
+     "To": [
+      88
+     ],
+     "this": [
+      89
+     ],
+     "end,": [
+      90
+     ],
+     "we": [
+      91
+     ],
+     "suggest": [
+      92
+     ],
+     "novel": [
+      94
+     ],
+     "technique": [
+      95
+     ],
+     "rooted": [
+      96
+     ],
+     "idea": [
+      99
+     ],
+     "searching": [
+      101
+     ],
+     "(as": [
+      106
+     ],
+     "vanilla": [
+      108
+     ],
+     "A)": [
+      109
+     ],
+     "simultaneously": [
+      110
+     ],
+     "fitting": [
+      111
+     ],
+     "sequences": [
+      114
+     ],
+     "into": [
+      119
+     ],
+     "cells.": [
+      121
+     ],
+     "The": [
+      122
+     ],
+     "resultant": [
+      123
+     ],
+     "algorithm,": [
+      124
+     ],
+     "MeshA*,": [
+      125
+     ],
+     "provably": [
+      126
+     ],
+     "preserves": [
+      127
+     ],
+     "guarantees": [
+      129
+     ],
+     "on": [
+      130,
+      134,
+      152
+     ],
+     "completeness": [
+      131
+     ],
+     "optimality,": [
+      133
+     ],
+     "one": [
+      136
+     ],
+     "hand,": [
+      137
+     ],
+     "shown": [
+      140
+     ],
+     "notably": [
+      142
+     ],
+     "outperform": [
+      143
+     ],
+     "conventional": [
+      144
+     ],
+     "lattice-based": [
+      145
+     ],
+     "(x1.5-x2": [
+      147
+     ],
+     "decrease": [
+      148
+     ],
+     "runtime),": [
+      151
+     ],
+     "other": [
+      154
+     ],
+     "hand.": [
+      155
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "query": "D Star Lite Koenig Likhachev",
+  "results": [
+   {
+    "title": "Optimizing Route Planning for Autonomous Electric Vehicles Using the D-Star Lite Algorithm",
+    "year": 2025,
+    "doi": "https://doi.org/10.14569/ijacsa.2025.01601103",
+    "url": "https://doi.org/10.14569/ijacsa.2025.01601103",
+    "abstract": {
+     "Every": [
+      0
+     ],
+     "vehicle,": [
+      1
+     ],
+     "including": [
+      2
+     ],
+     "autonomous": [
+      3,
+      19,
+      149
+     ],
+     "vehicles,": [
+      4
+     ],
+     "requires": [
+      5
+     ],
+     "a": [
+      6,
+      15,
+      42,
+      91,
+      101
+     ],
+     "route": [
+      7,
+      38,
+      92,
+      111,
+      120,
+      147,
+      156
+     ],
+     "to": [
+      8,
+      32,
+      52,
+      96,
+      128
+     ],
+     "navigate": [
+      9
+     ],
+     "its": [
+      10
+     ],
+     "journey.": [
+      11
+     ],
+     "Route": [
+      12
+     ],
+     "planning": [
+      13
+     ],
+     "is": [
+      14,
+      39,
+      41
+     ],
+     "critical": [
+      16
+     ],
+     "aspect": [
+      17
+     ],
+     "of": [
+      18,
+      84,
+      104
+     ],
+     "vehicle": [
+      20
+     ],
+     "operations,": [
+      21
+     ],
+     "as": [
+      22
+     ],
+     "these": [
+      23
+     ],
+     "vehicles": [
+      24,
+      151
+     ],
+     "rely": [
+      25
+     ],
+     "on": [
+      26,
+      110,
+      134
+     ],
+     "guided": [
+      27
+     ],
+     "paths": [
+      28
+     ],
+     "or": [
+      29
+     ],
+     "sequential": [
+      30
+     ],
+     "steps": [
+      31
+     ],
+     "move": [
+      33
+     ],
+     "effectively.": [
+      34
+     ],
+     "Ensuring": [
+      35
+     ],
+     "that": [
+      36,
+      74
+     ],
+     "the": [
+      37,
+      48,
+      54,
+      61,
+      68,
+      118,
+      135,
+      137,
+      145
+     ],
+     "optimal": [
+      40
+     ],
+     "key": [
+      43
+     ],
+     "consideration.": [
+      44
+     ],
+     "This": [
+      45
+     ],
+     "study": [
+      46
+     ],
+     "tests": [
+      47,
+      108
+     ],
+     "D-Star": [
+      49,
+      62,
+      75,
+      138
+     ],
+     "Lite": [
+      50,
+      63,
+      76,
+      139
+     ],
+     "algorithm": [
+      51,
+      64,
+      140
+     ],
+     "determine": [
+      53
+     ],
+     "most": [
+      55
+     ],
+     "efficient": [
+      56
+     ],
+     "route.": [
+      57
+     ],
+     "In": [
+      58
+     ],
+     "simulation": [
+      59
+     ],
+     "tests,": [
+      60
+     ],
+     "was": [
+      65,
+      126
+     ],
+     "compared": [
+      66
+     ],
+     "with": [
+      67
+     ],
+     "A-Star": [
+      69
+     ],
+     "algorithm.": [
+      70
+     ],
+     "The": [
+      71
+     ],
+     "results": [
+      72
+     ],
+     "showed": [
+      73
+     ],
+     "outperformed": [
+      77
+     ],
+     "A-Star,": [
+      78
+     ],
+     "achieving": [
+      79
+     ],
+     "an": [
+      80,
+      129
+     ],
+     "average": [
+      81
+     ],
+     "distance": [
+      82,
+      103
+     ],
+     "reduction": [
+      83
+     ],
+     "124": [
+      85
+     ],
+     "meters.": [
+      86,
+      106
+     ],
+     "Real-time": [
+      87
+     ],
+     "testing": [
+      88
+     ],
+     "involved": [
+      89
+     ],
+     "finding": [
+      90
+     ],
+     "from": [
+      93
+     ],
+     "node": [
+      94,
+      97
+     ],
+     "36": [
+      95,
+      124
+     ],
+     "0,": [
+      98
+     ],
+     "resulting": [
+      99
+     ],
+     "in": [
+      100,
+      113,
+      143
+     ],
+     "total": [
+      102
+     ],
+     "803": [
+      105
+     ],
+     "Additional": [
+      107
+     ],
+     "focused": [
+      109
+     ],
+     "replanning": [
+      112
+     ],
+     "real-time": [
+      114,
+      155
+     ],
+     "scenarios.": [
+      115
+     ],
+     "For": [
+      116
+     ],
+     "instance,": [
+      117
+     ],
+     "initial": [
+      119
+     ],
+     "passing": [
+      121
+     ],
+     "through": [
+      122
+     ],
+     "nodes": [
+      123
+     ],
+     "→37→38→39→40→41→42→43→44→45→0": [
+      125
+     ],
+     "adjusted": [
+      127
+     ],
+     "alternative": [
+      130
+     ],
+     "route:": [
+      131
+     ],
+     "36→37→38→46→26→11→2→4→1→0.": [
+      132
+     ],
+     "Based": [
+      133
+     ],
+     "results,": [
+      136
+     ],
+     "proves": [
+      141
+     ],
+     "effective": [
+      142
+     ],
+     "identifying": [
+      144
+     ],
+     "best": [
+      146
+     ],
+     "for": [
+      148
+     ],
+     "electric": [
+      150
+     ],
+     "while": [
+      152
+     ],
+     "also": [
+      153
+     ],
+     "enabling": [
+      154
+     ],
+     "replanning.": [
+      157
+     ]
+    }
+   },
+   {
+    "title": "Research and Optimization of D-Start Lite Algorithm in Track Planning",
+    "year": 2020,
+    "doi": "https://doi.org/10.1109/access.2020.3021073",
+    "url": "https://doi.org/10.1109/access.2020.3021073",
+    "abstract": {
+     "With": [
+      0
+     ],
+     "the": [
+      1,
+      5,
+      10,
+      15,
+      27,
+      36,
+      40,
+      44,
+      52,
+      57,
+      66,
+      77,
+      86,
+      89,
+      97,
+      106,
+      119,
+      125,
+      131,
+      136,
+      140,
+      154,
+      158,
+      162,
+      165,
+      174,
+      177,
+      182,
+      185,
+      190,
+      193,
+      203,
+      210,
+      213,
+      219,
+      227,
+      231,
+      236,
+      240,
+      247,
+      253,
+      258,
+      263
+     ],
+     "widespread": [
+      2,
+      21
+     ],
+     "application": [
+      3
+     ],
+     "of": [
+      4,
+      14,
+      43,
+      80,
+      88,
+      108,
+      130,
+      164,
+      184,
+      187,
+      196,
+      215,
+      221,
+      230,
+      242,
+      249,
+      257
+     ],
+     "aircraft,": [
+      6
+     ],
+     "how": [
+      7
+     ],
+     "to": [
+      8,
+      35,
+      39,
+      76,
+      84,
+      143
+     ],
+     "achieve": [
+      9
+     ],
+     "safety": [
+      11,
+      78,
+      163,
+      248
+     ],
+     "and": [
+      12,
+      157,
+      176,
+      192,
+      201,
+      206,
+      218,
+      226,
+      255
+     ],
+     "efficiency": [
+      13,
+      87,
+      195,
+      229,
+      241
+     ],
+     "aircraft": [
+      16,
+      45,
+      53
+     ],
+     "during": [
+      17
+     ],
+     "flight": [
+      18
+     ],
+     "has": [
+      19
+     ],
+     "attracted": [
+      20
+     ],
+     "attention.": [
+      22
+     ],
+     "The": [
+      23,
+      115,
+      128
+     ],
+     "track": [
+      24,
+      175
+     ],
+     "planned": [
+      25,
+      155
+     ],
+     "by": [
+      26,
+      112,
+      262
+     ],
+     "traditional": [
+      28
+     ],
+     "D-Start": [
+      29,
+      68,
+      99
+     ],
+     "Lite": [
+      30,
+      69,
+      100
+     ],
+     "algorithm": [
+      31,
+      70,
+      232,
+      238,
+      259
+     ],
+     "is": [
+      32,
+      48,
+      71,
+      151,
+      171,
+      233
+     ],
+     "very": [
+      33,
+      49
+     ],
+     "close": [
+      34
+     ],
+     "obstacle.": [
+      37
+     ],
+     "Due": [
+      38
+     ],
+     "large": [
+      41
+     ],
+     "size": [
+      42
+     ],
+     "itself,": [
+      46
+     ],
+     "it": [
+      47
+     ],
+     "likely": [
+      50
+     ],
+     "that": [
+      51,
+      147
+     ],
+     "will": [
+      54
+     ],
+     "collide": [
+      55
+     ],
+     "with": [
+      56
+     ],
+     "obstacle": [
+      58
+     ],
+     "when": [
+      59
+     ],
+     "operating": [
+      60
+     ],
+     "in": [
+      61,
+      118,
+      181,
+      189,
+      209
+     ],
+     "a": [
+      62,
+      73,
+      148,
+      168
+     ],
+     "real": [
+      63
+     ],
+     "environment.": [
+      64
+     ],
+     "However,": [
+      65,
+      167
+     ],
+     "existing": [
+      67,
+      98
+     ],
+     "only": [
+      72
+     ],
+     "single": [
+      74
+     ],
+     "solution": [
+      75
+     ],
+     "problem": [
+      79
+     ],
+     "trajectory": [
+      81,
+      91,
+      243,
+      250
+     ],
+     "planning": [
+      82
+     ],
+     "or": [
+      83
+     ],
+     "improve": [
+      85
+     ],
+     "algorithm’s": [
+      90
+     ],
+     "search.": [
+      92,
+      197
+     ],
+     "Therefore,": [
+      93,
+      212,
+      235
+     ],
+     "this": [
+      94,
+      103
+     ],
+     "article": [
+      95,
+      104,
+      199
+     ],
+     "optimizes": [
+      96,
+      202
+     ],
+     "algorithm.": [
+      101,
+      211
+     ],
+     "First,": [
+      102
+     ],
+     "adopts": [
+      105
+     ],
+     "strategy": [
+      107
+     ],
+     "selecting": [
+      109
+     ],
+     "priority": [
+      110
+     ],
+     "level": [
+      111
+     ],
+     "child": [
+      113,
+      116
+     ],
+     "nodes.": [
+      114,
+      127
+     ],
+     "nodes": [
+      117,
+      188,
+      217
+     ],
+     "vertical": [
+      120
+     ],
+     "direction": [
+      121
+     ],
+     "are": [
+      122,
+      224,
+      260
+     ],
+     "selected": [
+      123
+     ],
+     "as": [
+      124
+     ],
+     "first-level": [
+      126,
+      132
+     ],
+     "state": [
+      129
+     ],
+     "node": [
+      133,
+      138
+     ],
+     "determines": [
+      134
+     ],
+     "whether": [
+      135
+     ],
+     "second-level": [
+      137
+     ],
+     "on": [
+      139
+     ],
+     "diagonal": [
+      141
+     ],
+     "needs": [
+      142
+     ],
+     "be": [
+      144
+     ],
+     "expanded,": [
+      145
+     ],
+     "so": [
+      146
+     ],
+     "safe": [
+      149
+     ],
+     "distance": [
+      150
+     ],
+     "generated": [
+      152
+     ],
+     "between": [
+      153,
+      173
+     ],
+     "path": [
+      156,
+      191
+     ],
+     "obstacle,": [
+      159,
+      178
+     ],
+     "thus": [
+      160
+     ],
+     "improving": [
+      161
+     ],
+     "path.": [
+      166
+     ],
+     "certain": [
+      169
+     ],
+     "space": [
+      170
+     ],
+     "reserved": [
+      172
+     ],
+     "which": [
+      179
+     ],
+     "results": [
+      180
+     ],
+     "increase": [
+      183
+     ],
+     "number": [
+      186,
+      214,
+      220
+     ],
+     "low": [
+      194
+     ],
+     "This": [
+      198
+     ],
+     "improves": [
+      200,
+      239
+     ],
+     "valuation": [
+      204
+     ],
+     "function": [
+      205,
+      208
+     ],
+     "heuristic": [
+      207
+     ],
+     "expansion": [
+      216
+     ],
+     "inflection": [
+      222
+     ],
+     "points": [
+      223
+     ],
+     "reduced,": [
+      225
+     ],
+     "search": [
+      228,
+      244
+     ],
+     "improved.": [
+      234
+     ],
+     "improved": [
+      237
+     ],
+     "while": [
+      245
+     ],
+     "ensuring": [
+      246
+     ],
+     "planning.": [
+      251
+     ],
+     "And": [
+      252
+     ],
+     "effectiveness": [
+      254
+     ],
+     "feasibility": [
+      256
+     ],
+     "proved": [
+      261
+     ],
+     "MATLAB": [
+      264
+     ],
+     "platform.": [
+      265
+     ]
+    }
+   },
+   {
+    "title": "D* Extra Lite: A Dynamic A* With Search–Tree Cutting and Frontier–Gap Repairing",
+    "year": 2017,
+    "doi": "https://doi.org/10.1515/amcs-2017-0020",
+    "url": "https://doi.org/10.1515/amcs-2017-0020",
+    "abstract": {
+     "Searching": [
+      0
+     ],
+     "for": [
+      1,
+      172
+     ],
+     "the": [
+      2,
+      56,
+      65,
+      74,
+      78,
+      101,
+      126,
+      157,
+      177,
+      193,
+      198
+     ],
+     "shortest-path": [
+      3
+     ],
+     "in": [
+      4,
+      14,
+      19,
+      30,
+      55,
+      132
+     ],
+     "an": [
+      5
+     ],
+     "unknown": [
+      6
+     ],
+     "or": [
+      7
+     ],
+     "changeable": [
+      8
+     ],
+     "environment": [
+      9
+     ],
+     "is": [
+      10,
+      38,
+      92,
+      123,
+      195
+     ],
+     "a": [
+      11,
+      39,
+      85,
+      95,
+      139
+     ],
+     "common": [
+      12
+     ],
+     "problem": [
+      13
+     ],
+     "robotics": [
+      15
+     ],
+     "and": [
+      16,
+      26,
+      73
+     ],
+     "video": [
+      17
+     ],
+     "games,": [
+      18
+     ],
+     "which": [
+      20
+     ],
+     "agents": [
+      21
+     ],
+     "need": [
+      22
+     ],
+     "to": [
+      23,
+      27,
+      32,
+      70,
+      94,
+      129,
+      152
+     ],
+     "update": [
+      24
+     ],
+     "maps": [
+      25
+     ],
+     "perform": [
+      28
+     ],
+     "re-planning": [
+      29
+     ],
+     "order": [
+      31
+     ],
+     "complete": [
+      33
+     ],
+     "their": [
+      34
+     ],
+     "missions.": [
+      35
+     ],
+     "D*": [
+      36,
+      87,
+      117,
+      133,
+      147,
+      161,
+      180
+     ],
+     "Lite": [
+      37,
+      89,
+      149
+     ],
+     "popular": [
+      40
+     ],
+     "incremental": [
+      41
+     ],
+     "heuristic": [
+      42
+     ],
+     "search": [
+      43
+     ],
+     "algorithm": [
+      44,
+      90,
+      194
+     ],
+     "(i.e.,": [
+      45
+     ],
+     "it": [
+      46,
+      59,
+      167
+     ],
+     "utilizes": [
+      47
+     ],
+     "knowledge": [
+      48
+     ],
+     "from": [
+      49
+     ],
+     "previous": [
+      50
+     ],
+     "searches).": [
+      51
+     ],
+     "Its": [
+      52
+     ],
+     "efficiency": [
+      53
+     ],
+     "lies": [
+      54
+     ],
+     "fact": [
+      57
+     ],
+     "that": [
+      58,
+      67,
+      91,
+      116,
+      166,
+      186
+     ],
+     "re-expands": [
+      60
+     ],
+     "only": [
+      61
+     ],
+     "those": [
+      62
+     ],
+     "parts": [
+      63
+     ],
+     "of": [
+      64,
+      77,
+      100,
+      121,
+      142,
+      160,
+      187,
+      192
+     ],
+     "search-space": [
+      66,
+      103
+     ],
+     "are": [
+      68
+     ],
+     "relevant": [
+      69
+     ],
+     "registered": [
+      71
+     ],
+     "changes": [
+      72
+     ],
+     "current": [
+      75
+     ],
+     "state": [
+      76
+     ],
+     "agent.": [
+      79
+     ],
+     "In": [
+      80,
+      135
+     ],
+     "this": [
+      81
+     ],
+     "paper,": [
+      82
+     ],
+     "we": [
+      83
+     ],
+     "propose": [
+      84
+     ],
+     "new": [
+      86
+     ],
+     "Extra": [
+      88,
+      118,
+      148,
+      181
+     ],
+     "close": [
+      93
+     ],
+     "regular": [
+      96
+     ],
+     "A*,": [
+      97
+     ],
+     "with": [
+      98
+     ],
+     "reinitialization": [
+      99,
+      122,
+      130
+     ],
+     "affected": [
+      102
+     ],
+     "achieved": [
+      104
+     ],
+     "by": [
+      105
+     ],
+     "search-tree": [
+      106
+     ],
+     "branch": [
+      107
+     ],
+     "cutting.": [
+      108
+     ],
+     "The": [
+      109,
+      189
+     ],
+     "provided": [
+      110
+     ],
+     "worst-case": [
+      111
+     ],
+     "complexity": [
+      112
+     ],
+     "analysis": [
+      113
+     ],
+     "strongly": [
+      114
+     ],
+     "suggests": [
+      115
+     ],
+     "Lite’s": [
+      119,
+      182
+     ],
+     "method": [
+      120
+     ],
+     "faster": [
+      124,
+      155
+     ],
+     "than": [
+      125,
+      156
+     ],
+     "focused": [
+      127
+     ],
+     "approach": [
+      128
+     ],
+     "used": [
+      131
+     ],
+     "Lite.": [
+      134,
+      162
+     ],
+     "comprehensive": [
+      136
+     ],
+     "tests": [
+      137
+     ],
+     "on": [
+      138,
+      197
+     ],
+     "large": [
+      140
+     ],
+     "number": [
+      141
+     ],
+     "typical": [
+      143
+     ],
+     "two-dimensional": [
+      144
+     ],
+     "path-planning": [
+      145
+     ],
+     "problems,": [
+      146,
+      175
+     ],
+     "was": [
+      150
+     ],
+     "1.08": [
+      151
+     ],
+     "1.94": [
+      153
+     ],
+     "times": [
+      154
+     ],
+     "optimized": [
+      158
+     ],
+     "version": [
+      159
+     ],
+     "Moreover,": [
+      163
+     ],
+     "while": [
+      164
+     ],
+     "demonstrating": [
+      165
+     ],
+     "can": [
+      168
+     ],
+     "be": [
+      169
+     ],
+     "particularly": [
+      170
+     ],
+     "suitable": [
+      171
+     ],
+     "difficult,": [
+      173
+     ],
+     "dynamic": [
+      174
+     ],
+     "as": [
+      176
+     ],
+     "problem-complexity": [
+      178
+     ],
+     "increased,": [
+      179
+     ],
+     "performance": [
+      183
+     ],
+     "further": [
+      184
+     ],
+     "surpassed": [
+      185
+     ],
+     "D*Lite.": [
+      188
+     ],
+     "source": [
+      190
+     ],
+     "code": [
+      191
+     ],
+     "available": [
+      196
+     ],
+     "open-source": [
+      199
+     ],
+     "basis.": [
+      200
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "query": "Lifelong Planning A Star",
+  "results": [
+   {
+    "title": "Improving the Lifelong Planning A-star algorithm to satisfy path planning for space truss cellular robots with dynamic obstacles",
+    "year": 2025,
+    "doi": "https://doi.org/10.1017/s0263574725000256",
+    "url": "https://doi.org/10.1017/s0263574725000256",
+    "abstract": {
+     "In": [
+      0,
+      66
+     ],
+     "this": [
+      1,
+      95,
+      165
+     ],
+     "paper,": [
+      2,
+      166
+     ],
+     "a": [
+      3,
+      57,
+      115,
+      122
+     ],
+     "cellular": [
+      4
+     ],
+     "robot": [
+      5,
+      63
+     ],
+     "for": [
+      6,
+      61,
+      135
+     ],
+     "space": [
+      7,
+      35
+     ],
+     "trusses": [
+      8
+     ],
+     "is": [
+      9,
+      64,
+      120,
+      126,
+      133,
+      176,
+      186,
+      202
+     ],
+     "structured": [
+      10
+     ],
+     "so": [
+      11,
+      56,
+      94,
+      103
+     ],
+     "that": [
+      12,
+      37,
+      49,
+      104,
+      158
+     ],
+     "it": [
+      13,
+      83
+     ],
+     "can": [
+      14,
+      216
+     ],
+     "perform": [
+      15
+     ],
+     "tasks": [
+      16
+     ],
+     "such": [
+      17
+     ],
+     "as": [
+      18
+     ],
+     "moving": [
+      19,
+      220
+     ],
+     "the": [
+      20,
+      24,
+      34,
+      41,
+      62,
+      72,
+      87,
+      105,
+      109,
+      129,
+      139,
+      144,
+      160,
+      167,
+      172,
+      182,
+      193,
+      198,
+      206,
+      212,
+      218
+     ],
+     "truss": [
+      21,
+      36,
+      117
+     ],
+     "and": [
+      22,
+      78,
+      138,
+      143,
+      181,
+      222
+     ],
+     "assembling": [
+      23
+     ],
+     "truss.": [
+      25
+     ],
+     "There": [
+      26
+     ],
+     "may": [
+      27
+     ],
+     "be": [
+      28
+     ],
+     "some": [
+      29
+     ],
+     "spatial": [
+      30
+     ],
+     "operating": [
+      31
+     ],
+     "mechanisms": [
+      32
+     ],
+     "on": [
+      33
+     ],
+     "cause": [
+      38
+     ],
+     "obstacles": [
+      39
+     ],
+     "to": [
+      40,
+      150,
+      204
+     ],
+     "robot’s": [
+      42,
+      219
+     ],
+     "movement,": [
+      43
+     ],
+     "especially": [
+      44
+     ],
+     "other": [
+      45
+     ],
+     "mobile": [
+      46
+     ],
+     "mechanical": [
+      47
+     ],
+     "devices": [
+      48
+     ],
+     "are": [
+      50,
+      53,
+      148
+     ],
+     "working,": [
+      51
+     ],
+     "which": [
+      52
+     ],
+     "dynamic": [
+      54,
+      92,
+      110,
+      123,
+      207
+     ],
+     "obstacles,": [
+      55,
+      93
+     ],
+     "suitable": [
+      58
+     ],
+     "path": [
+      59,
+      67,
+      88,
+      111,
+      136,
+      169,
+      208
+     ],
+     "planning": [
+      60,
+      89,
+      112,
+      209
+     ],
+     "needed.": [
+      65
+     ],
+     "planning,": [
+      68,
+      137
+     ],
+     "A-star": [
+      69,
+      100,
+      146,
+      195
+     ],
+     "algorithm": [
+      70,
+      102,
+      107,
+      132,
+      142,
+      147,
+      175,
+      183,
+      201,
+      215
+     ],
+     "has": [
+      71
+     ],
+     "advantages": [
+      73
+     ],
+     "of": [
+      74,
+      171
+     ],
+     "efficient": [
+      75
+     ],
+     "searching": [
+      76
+     ],
+     "speed": [
+      77
+     ],
+     "good": [
+      79
+     ],
+     "optimization": [
+      80
+     ],
+     "effect,": [
+      81
+     ],
+     "but": [
+      82
+     ],
+     "can’t": [
+      84
+     ],
+     "deal": [
+      85
+     ],
+     "with": [
+      86,
+      91,
+      152,
+      192
+     ],
+     "problem": [
+      90
+     ],
+     "paper": [
+      96
+     ],
+     "improves": [
+      97
+     ],
+     "Lifelong": [
+      98
+     ],
+     "Planning": [
+      99
+     ],
+     "(LPA-star)": [
+      101
+     ],
+     "improved": [
+      106,
+      130,
+      145,
+      173,
+      194,
+      213
+     ],
+     "satisfies": [
+      108
+     ],
+     "task.": [
+      113,
+      210
+     ],
+     "Then": [
+      114
+     ],
+     "three-dimensional": [
+      116
+     ],
+     "mathematical": [
+      118
+     ],
+     "model": [
+      119
+     ],
+     "established,": [
+      121
+     ],
+     "obstacle": [
+      124
+     ],
+     "environment": [
+      125,
+      161
+     ],
+     "set": [
+      127,
+      162
+     ],
+     "up,": [
+      128
+     ],
+     "LPA-star": [
+      131,
+      141,
+      174,
+      200,
+      214
+     ],
+     "used": [
+      134,
+      149
+     ],
+     "unimproved": [
+      140,
+      199
+     ],
+     "compare": [
+      151
+     ],
+     "it.": [
+      153
+     ],
+     "The": [
+      154
+     ],
+     "simulation": [
+      155
+     ],
+     "results": [
+      156
+     ],
+     "show": [
+      157
+     ],
+     "in": [
+      159,
+      164
+     ],
+     "up": [
+      163
+     ],
+     "optimal": [
+      168
+     ],
+     "length": [
+      170
+     ],
+     "shortened": [
+      177,
+      187
+     ],
+     "by": [
+      178,
+      188
+     ],
+     "about": [
+      179,
+      189
+     ],
+     "25%": [
+      180
+     ],
+     "search": [
+      184
+     ],
+     "time": [
+      185,
+      223
+     ],
+     "55%": [
+      190
+     ],
+     "compared": [
+      191
+     ],
+     "algorithm;": [
+      196
+     ],
+     "while": [
+      197
+     ],
+     "unable": [
+      203
+     ],
+     "accomplish": [
+      205
+     ],
+     "Therefore,": [
+      211
+     ],
+     "reduce": [
+      217
+     ],
+     "distance": [
+      221
+     ],
+     "consumption.": [
+      224
+     ]
+    }
+   },
+   {
+    "title": "Prolonging the Lifetime of Wireless Sensor Networks using LPA-star Search Algorithm",
+    "year": 2016,
+    "doi": "https://doi.org/10.11591/ijeecs.v1.i2.pp390-398",
+    "url": "https://doi.org/10.11591/ijeecs.v1.i2.pp390-398",
+    "abstract": {
+     "Since": [
+      0
+     ],
+     "sensors": [
+      1
+     ],
+     "have": [
+      2
+     ],
+     "limited": [
+      3
+     ],
+     "power": [
+      4,
+      39
+     ],
+     "resources,": [
+      5
+     ],
+     "energy": [
+      6,
+      33,
+      55
+     ],
+     "consumption": [
+      7,
+      56
+     ],
+     "has": [
+      8
+     ],
+     "become": [
+      9
+     ],
+     "a": [
+      10,
+      69
+     ],
+     "critical": [
+      11
+     ],
+     "challenge": [
+      12
+     ],
+     "to": [
+      13,
+      24,
+      36,
+      44,
+      46,
+      53,
+      85,
+      113
+     ],
+     "Wireless": [
+      14
+     ],
+     "Sensor": [
+      15
+     ],
+     "Networks": [
+      16
+     ],
+     "(WSNs).": [
+      17
+     ],
+     "Most": [
+      18
+     ],
+     "of": [
+      19,
+      130
+     ],
+     "the": [
+      20,
+      74,
+      92,
+      96,
+      110,
+      114,
+      124,
+      128,
+      131,
+      135
+     ],
+     "routing": [
+      21,
+      137
+     ],
+     "protocols": [
+      22
+     ],
+     "proposed": [
+      23,
+      125
+     ],
+     "transmit": [
+      25
+     ],
+     "data": [
+      26
+     ],
+     "packets": [
+      27
+     ],
+     "through": [
+      28
+     ],
+     "paths": [
+      29
+     ],
+     "which": [
+      30
+     ],
+     "consume": [
+      31
+     ],
+     "low": [
+      32
+     ],
+     "aim": [
+      34
+     ],
+     "simply": [
+      35
+     ],
+     "reduce": [
+      37,
+      50
+     ],
+     "battery": [
+      38
+     ],
+     "consumption.": [
+      40
+     ],
+     "This": [
+      41,
+      81
+     ],
+     "can": [
+      42,
+      101
+     ],
+     "lead": [
+      43,
+      45
+     ],
+     "network": [
+      47,
+      51,
+      59,
+      132
+     ],
+     "partition": [
+      48
+     ],
+     "and": [
+      49,
+      57,
+      95,
+      116
+     ],
+     "lifetime.Therefore,": [
+      52
+     ],
+     "balance": [
+      54
+     ],
+     "extend": [
+      58
+     ],
+     "lifetime": [
+      60,
+      129
+     ],
+     "while": [
+      61
+     ],
+     "minimizing": [
+      62
+     ],
+     "packet": [
+      63
+     ],
+     "delivery": [
+      64
+     ],
+     "delay;": [
+      65
+     ],
+     "this": [
+      66
+     ],
+     "paper": [
+      67
+     ],
+     "proposes": [
+      68
+     ],
+     "new": [
+      70
+     ],
+     "energy-routing": [
+      71
+     ],
+     "protocol": [
+      72,
+      126
+     ],
+     "using": [
+      73
+     ],
+     "lifelong": [
+      75
+     ],
+     "planning": [
+      76
+     ],
+     "A-star": [
+      77,
+      136
+     ],
+     "(LPA-star)": [
+      78
+     ],
+     "search": [
+      79
+     ],
+     "algorithm.": [
+      80
+     ],
+     "algorithm": [
+      82
+     ],
+     "is": [
+      83
+     ],
+     "used": [
+      84
+     ],
+     "find": [
+      86
+     ],
+     "an": [
+      87
+     ],
+     "optimum": [
+      88,
+      99
+     ],
+     "forwarding": [
+      89
+     ],
+     "path": [
+      90,
+      100
+     ],
+     "between": [
+      91
+     ],
+     "source": [
+      93
+     ],
+     "node": [
+      94
+     ],
+     "sink.": [
+      97
+     ],
+     "The": [
+      98
+     ],
+     "be": [
+      102
+     ],
+     "selected": [
+      103
+     ],
+     "depending": [
+      104
+     ],
+     "on": [
+      105
+     ],
+     "highest": [
+      106
+     ],
+     "residual": [
+      107
+     ],
+     "sensor": [
+      108
+     ],
+     "energy,": [
+      109
+     ],
+     "shortest": [
+      111
+     ],
+     "distance": [
+      112
+     ],
+     "sink": [
+      115
+     ],
+     "lowest": [
+      117
+     ],
+     "traffic": [
+      118
+     ],
+     "load.": [
+      119
+     ],
+     "Simulation": [
+      120
+     ],
+     "results": [
+      121
+     ],
+     "indicate": [
+      122
+     ],
+     "that": [
+      123
+     ],
+     "increased": [
+      127
+     ],
+     "compared": [
+      133
+     ],
+     "with": [
+      134
+     ],
+     "(EERP)": [
+      138
+     ],
+     "protocol.": [
+      139
+     ]
+    }
+   },
+   {
+    "title": "Gender and Lifelong Learning",
+    "year": 2006,
+    "doi": "https://doi.org/10.4324/9780203969533",
+    "url": "https://doi.org/10.4324/9780203969533",
+    "abstract": {
+     "This": [
+      0
+     ],
+     "insightful": [
+      1
+     ],
+     "book": [
+      2
+     ],
+     "is": [
+      3
+     ],
+     "ideal": [
+      4
+     ],
+     "for": [
+      5,
+      117
+     ],
+     "students,": [
+      6
+     ],
+     "researchers": [
+      7
+     ],
+     "and": [
+      8,
+      53,
+      71
+     ],
+     "policy": [
+      9,
+      69
+     ],
+     "makers": [
+      10
+     ],
+     "wanting": [
+      11
+     ],
+     "a": [
+      12,
+      37,
+      44,
+      48
+     ],
+     "sound": [
+      13
+     ],
+     "overview": [
+      14
+     ],
+     "of": [
+      15,
+      19,
+      40,
+      74,
+      88
+     ],
+     "the": [
+      16,
+      32,
+      35,
+      51,
+      68,
+      85,
+      115
+     ],
+     "critical": [
+      17
+     ],
+     "issues": [
+      18
+     ],
+     "gender": [
+      20,
+      86,
+      111
+     ],
+     "in": [
+      21,
+      50
+     ],
+     "lifelong": [
+      22,
+      41,
+      75,
+      89,
+      100,
+      103
+     ],
+     "learning.": [
+      23
+     ],
+     "Asking": [
+      24
+     ],
+     "pertinent": [
+      25
+     ],
+     "questions": [
+      26
+     ],
+     "relating": [
+      27
+     ],
+     "to": [
+      28,
+      107
+     ],
+     "discourses": [
+      29,
+      70
+     ],
+     "on": [
+      30,
+      57
+     ],
+     "policy,": [
+      31
+     ],
+     "authors": [
+      33
+     ],
+     "offer": [
+      34
+     ],
+     "reader": [
+      36
+     ],
+     "rare": [
+      38
+     ],
+     "view": [
+      39
+     ],
+     "learning": [
+      42,
+      76,
+      90,
+      104
+     ],
+     "from": [
+      43
+     ],
+     "gender-focused": [
+      45
+     ],
+     "perspective,": [
+      46
+     ],
+     "filling": [
+      47
+     ],
+     "gap": [
+      49
+     ],
+     "literature": [
+      52
+     ],
+     "moving": [
+      54
+     ],
+     "current": [
+      55
+     ],
+     "debate": [
+      56
+     ],
+     "into": [
+      58
+     ],
+     "new": [
+      59
+     ],
+     "areas.": [
+      60
+     ],
+     "Questions": [
+      61
+     ],
+     "addressed": [
+      62
+     ],
+     "include:": [
+      63
+     ],
+     "To": [
+      64
+     ],
+     "what": [
+      65,
+      93
+     ],
+     "extent": [
+      66
+     ],
+     "can": [
+      67
+     ],
+     "institutional": [
+      72
+     ],
+     "contexts": [
+      73
+     ],
+     "be": [
+      77
+     ],
+     "seen": [
+      78
+     ],
+     "as": [
+      79
+     ],
+     "masculinised": [
+      80
+     ],
+     "and/or": [
+      81
+     ],
+     "feminised?": [
+      82
+     ],
+     "What": [
+      83,
+      113
+     ],
+     "are": [
+      84,
+      95,
+      114
+     ],
+     "implications": [
+      87,
+      116
+     ],
+     "policy?": [
+      91
+     ],
+     "In": [
+      92
+     ],
+     "ways": [
+      94
+     ],
+     "learners'": [
+      96
+     ],
+     "identities": [
+      97
+     ],
+     "constructed": [
+      98
+     ],
+     "through": [
+      99
+     ],
+     "learning?": [
+      101
+     ],
+     "Does": [
+      102
+     ],
+     "provide": [
+      105
+     ],
+     "opportunities": [
+      106
+     ],
+     "challenge": [
+      108
+     ],
+     "or": [
+      109
+     ],
+     "transgress": [
+      110
+     ],
+     "binaries?": [
+      112
+     ],
+     "practice?": [
+      118
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "query": "Lifelong Global Lazy Search dynamic environments",
+  "results": [
+   {
+    "title": "Lazy Lifelong Planning for Efficient Replanning in Graphs with Expensive Edge Evaluation",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/iros47612.2022.9981389",
+    "url": "https://doi.org/10.1109/iros47612.2022.9981389",
+    "abstract": {
+     "We": [
+      0,
+      38,
+      102
+     ],
+     "present": [
+      1
+     ],
+     "an": [
+      2
+     ],
+     "incremental": [
+      3
+     ],
+     "search": [
+      4,
+      56,
+      62,
+      122
+     ],
+     "algorithm,": [
+      5
+     ],
+     "called": [
+      6
+     ],
+     "Lifelong-GLS,": [
+      7
+     ],
+     "which": [
+      8
+     ],
+     "combines": [
+      9
+     ],
+     "the": [
+      10,
+      19,
+      46,
+      50,
+      54,
+      60,
+      68,
+      74,
+      80,
+      92,
+      96,
+      105,
+      108,
+      113,
+      117
+     ],
+     "vertex": [
+      11
+     ],
+     "efficiency": [
+      12,
+      21,
+      106
+     ],
+     "of": [
+      13,
+      22,
+      49,
+      53,
+      107
+     ],
+     "Lifelong": [
+      14
+     ],
+     "Planning": [
+      15
+     ],
+     "A*": [
+      16
+     ],
+     "(LPA*)": [
+      17
+     ],
+     "and": [
+      18,
+      64,
+      88,
+      116
+     ],
+     "edge": [
+      20,
+      34,
+      70
+     ],
+     "Generalized": [
+      23
+     ],
+     "Lazy": [
+      24
+     ],
+     "Search": [
+      25
+     ],
+     "(GLS)": [
+      26
+     ],
+     "for": [
+      27
+     ],
+     "efficient": [
+      28
+     ],
+     "replanning": [
+      29
+     ],
+     "on": [
+      30,
+      59
+     ],
+     "dynamic": [
+      31,
+      126
+     ],
+     "graphs": [
+      32
+     ],
+     "where": [
+      33
+     ],
+     "evaluation": [
+      35
+     ],
+     "is": [
+      36,
+      86
+     ],
+     "expensive.": [
+      37
+     ],
+     "use": [
+      39
+     ],
+     "a": [
+      40,
+      125
+     ],
+     "lazily": [
+      41
+     ],
+     "evaluated": [
+      42
+     ],
+     "LPA*": [
+      43,
+      115
+     ],
+     "to": [
+      44,
+      73,
+      112
+     ],
+     "repair": [
+      45
+     ],
+     "cost-to-come": [
+      47
+     ],
+     "inconsistencies": [
+      48
+     ],
+     "relevant": [
+      51
+     ],
+     "region": [
+      52
+     ],
+     "current": [
+      55,
+      75,
+      97
+     ],
+     "tree": [
+      57
+     ],
+     "based": [
+      58
+     ],
+     "previous": [
+      61
+     ],
+     "results,": [
+      63
+     ],
+     "then": [
+      65
+     ],
+     "we": [
+      66
+     ],
+     "restrict": [
+      67
+     ],
+     "expensive": [
+      69
+     ],
+     "evaluations": [
+      71
+     ],
+     "only": [
+      72
+     ],
+     "shortest": [
+      76
+     ],
+     "subpath": [
+      77
+     ],
+     "as": [
+      78
+     ],
+     "in": [
+      79,
+      90,
+      95,
+      124
+     ],
+     "GLS": [
+      81,
+      118
+     ],
+     "framework.": [
+      82
+     ],
+     "The": [
+      83
+     ],
+     "proposed": [
+      84,
+      109
+     ],
+     "algorithm": [
+      85,
+      110
+     ],
+     "complete": [
+      87
+     ],
+     "correct": [
+      89
+     ],
+     "finding": [
+      91
+     ],
+     "optimal": [
+      93
+     ],
+     "solution": [
+      94
+     ],
+     "graph,": [
+      98
+     ],
+     "if": [
+      99
+     ],
+     "one": [
+      100
+     ],
+     "exists.": [
+      101
+     ],
+     "also": [
+      103
+     ],
+     "show": [
+      104
+     ],
+     "compared": [
+      111
+     ],
+     "standard": [
+      114
+     ],
+     "algorithms": [
+      119
+     ],
+     "over": [
+      120
+     ],
+     "consecutive": [
+      121
+     ],
+     "episodes": [
+      123
+     ],
+     "environment.": [
+      127
+     ]
+    }
+   },
+   {
+    "title": "FMT$^{\\mathrm{X}}$: Lazy Wavefront Search for Dynamic Replanning",
+    "year": 2025,
+    "doi": "https://doi.org/10.48550/arxiv.2509.08521",
+    "url": "https://arxiv.org/abs/2509.08521",
+    "abstract": {
+     "FMT$^{*}$": [
+      0,
+      149
+     ],
+     "plans": [
+      1
+     ],
+     "efficiently": [
+      2
+     ],
+     "in": [
+      3,
+      166
+     ],
+     "static": [
+      4
+     ],
+     "worlds": [
+      5
+     ],
+     "by": [
+      6,
+      138
+     ],
+     "expanding": [
+      7
+     ],
+     "a": [
+      8,
+      47,
+      56,
+      92,
+      134,
+      144
+     ],
+     "cost-ordered": [
+      9,
+      89
+     ],
+     "wavefront": [
+      10,
+      35,
+      68
+     ],
+     "and": [
+      11,
+      108,
+      158,
+      163,
+      168,
+      189,
+      198,
+      216
+     ],
+     "collision-checking": [
+      12,
+      208
+     ],
+     "lazily,": [
+      13
+     ],
+     "but": [
+      14,
+      81
+     ],
+     "its": [
+      15,
+      83,
+      120
+     ],
+     "single-pass": [
+      16
+     ],
+     "unvisited": [
+      17,
+      44
+     ],
+     "rule": [
+      18
+     ],
+     "cannot": [
+      19
+     ],
+     "revise": [
+      20
+     ],
+     "paths": [
+      21
+     ],
+     "when": [
+      22,
+      97
+     ],
+     "obstacles": [
+      23
+     ],
+     "change.": [
+      24
+     ],
+     "We": [
+      25,
+      142
+     ],
+     "present": [
+      26
+     ],
+     "FMT$^{\\mathrm{X}}$,": [
+      27
+     ],
+     "an": [
+      28
+     ],
+     "anytime,": [
+      29
+     ],
+     "asymptotically": [
+      30
+     ],
+     "optimal": [
+      31
+     ],
+     "generalization": [
+      32
+     ],
+     "of": [
+      33,
+      79,
+      201
+     ],
+     "that": [
+      34,
+      207
+     ],
+     "for": [
+      36,
+      52
+     ],
+     "dynamic": [
+      37
+     ],
+     "replanning.": [
+      38
+     ],
+     "A": [
+      39,
+      112
+     ],
+     "cost-improvement": [
+      40
+     ],
+     "test": [
+      41
+     ],
+     "replaces": [
+      42
+     ],
+     "the": [
+      43,
+      67,
+      76,
+      88,
+      98,
+      105,
+      110,
+      196
+     ],
+     "set,": [
+      45
+     ],
+     "allowing": [
+      46
+     ],
+     "node": [
+      48,
+      93
+     ],
+     "to": [
+      49,
+      87,
+      119
+     ],
+     "be": [
+      50
+     ],
+     "revisited": [
+      51,
+      95
+     ],
+     "best-parent": [
+      53
+     ],
+     "selection": [
+      54
+     ],
+     "whenever": [
+      55
+     ],
+     "lower-cost": [
+      57
+     ],
+     "potential": [
+      58
+     ],
+     "connection": [
+      59
+     ],
+     "is": [
+      60,
+      94
+     ],
+     "found.": [
+      61
+     ],
+     "This": [
+      62
+     ],
+     "induces": [
+      63
+     ],
+     "implicit": [
+      64,
+      139
+     ],
+     "rewiring": [
+      65,
+      86,
+      140
+     ],
+     "within": [
+      66
+     ],
+     "while": [
+      69,
+      194
+     ],
+     "preserving": [
+      70,
+      130
+     ],
+     "lazy": [
+      71
+     ],
+     "collision": [
+      72,
+      183
+     ],
+     "checking.": [
+      73
+     ],
+     "FMT$^{\\mathrm{X}}$": [
+      74,
+      159,
+      185
+     ],
+     "retains": [
+      75
+     ],
+     "online": [
+      77
+     ],
+     "densification": [
+      78
+     ],
+     "RRT$^{*}$": [
+      80
+     ],
+     "defers": [
+      82
+     ],
+     "eager": [
+      84,
+      161,
+      202
+     ],
+     "neighborhood": [
+      85
+     ],
+     "wavefront,": [
+      90
+     ],
+     "so": [
+      91
+     ],
+     "only": [
+      96
+     ],
+     "expansion": [
+      99
+     ],
+     "reaches": [
+      100
+     ],
+     "it.": [
+      101
+     ],
+     "Obstacle": [
+      102
+     ],
+     "updates": [
+      103
+     ],
+     "orphan": [
+      104
+     ],
+     "affected": [
+      106
+     ],
+     "subtree": [
+      107
+     ],
+     "reseed": [
+      109
+     ],
+     "wavefront.": [
+      111
+     ],
+     "direct": [
+      113
+     ],
+     "cost": [
+      114,
+      123,
+      132
+     ],
+     "push": [
+      115
+     ],
+     "from": [
+      116
+     ],
+     "each": [
+      117
+     ],
+     "parent": [
+      118
+     ],
+     "children": [
+      121
+     ],
+     "propagates": [
+      122
+     ],
+     "improvements": [
+      124
+     ],
+     "through": [
+      125
+     ],
+     "validated": [
+      126
+     ],
+     "tree": [
+      127
+     ],
+     "edges,": [
+      128
+     ],
+     "thereby": [
+      129
+     ],
+     "descendant": [
+      131
+     ],
+     "consistency,": [
+      133
+     ],
+     "property": [
+      135
+     ],
+     "not": [
+      136
+     ],
+     "guaranteed": [
+      137
+     ],
+     "alone.": [
+      141
+     ],
+     "compare": [
+      143
+     ],
+     "fixed-graph": [
+      145
+     ],
+     "batch": [
+      146
+     ],
+     "variant,": [
+      147
+     ],
+     "Dynamic": [
+      148
+     ],
+     "(D-FMT$^{*}$),": [
+      150
+     ],
+     "with": [
+      151,
+      160
+     ],
+     "D$^{*}$": [
+      152
+     ],
+     "Lite": [
+      153
+     ],
+     "on": [
+      154,
+      177,
+      191
+     ],
+     "identical": [
+      155
+     ],
+     "PRM$^{*}$": [
+      156
+     ],
+     "graphs,": [
+      157
+     ],
+     "RRT$^{\\mathrm{X}}$": [
+      162,
+      190
+     ],
+     "path-centric": [
+      164
+     ],
+     "LLPT$^{*}$": [
+      165,
+      188
+     ],
+     "geometric": [
+      167
+     ],
+     "kinodynamic": [
+      169
+     ],
+     "scenes,": [
+      170
+     ],
+     "including": [
+      171
+     ],
+     "partial": [
+      172
+     ],
+     "observability.": [
+      173
+     ],
+     "D-FMT$^{*}$": [
+      174
+     ],
+     "stays": [
+      175
+     ],
+     "close": [
+      176
+     ],
+     "path": [
+      178
+     ],
+     "quality": [
+      179,
+      200
+     ],
+     "at": [
+      180
+     ],
+     "far": [
+      181
+     ],
+     "fewer": [
+      182
+     ],
+     "checks.": [
+      184
+     ],
+     "lies": [
+      186
+     ],
+     "between": [
+      187
+     ],
+     "repair": [
+      192,
+      212
+     ],
+     "effort": [
+      193
+     ],
+     "tracking": [
+      195
+     ],
+     "reliability": [
+      197
+     ],
+     "trajectory": [
+      199,
+      218
+     ],
+     "RRT$^{\\mathrm{X}}$.": [
+      203
+     ],
+     "The": [
+      204
+     ],
+     "study": [
+      205
+     ],
+     "shows": [
+      206
+     ],
+     "policy": [
+      209
+     ],
+     "affects": [
+      210
+     ],
+     "median": [
+      211
+     ],
+     "latency,": [
+      213
+     ],
+     "repair-time": [
+      214
+     ],
+     "tails,": [
+      215
+     ],
+     "executed": [
+      217
+     ],
+     "quality.": [
+      219
+     ]
+    }
+   },
+   {
+    "title": "Lazy incremental search for efficient replanning with bounded suboptimality guarantees",
+    "year": 2024,
+    "doi": "https://doi.org/10.1177/02783649241227869",
+    "url": "https://doi.org/10.1177/02783649241227869",
+    "abstract": {
+     "We": [
+      0,
+      94,
+      128
+     ],
+     "present": [
+      1,
+      96
+     ],
+     "a": [
+      2,
+      140,
+      153
+     ],
+     "lazy": [
+      3,
+      32,
+      172,
+      187
+     ],
+     "incremental": [
+      4,
+      24,
+      170,
+      184
+     ],
+     "search": [
+      5,
+      21,
+      25,
+      33,
+      173,
+      188
+     ],
+     "algorithm,": [
+      6
+     ],
+     "Lifelong-GLS": [
+      7
+     ],
+     "(L-GLS),": [
+      8
+     ],
+     "along": [
+      9
+     ],
+     "with": [
+      10,
+      27,
+      118
+     ],
+     "its": [
+      11,
+      59
+     ],
+     "bounded": [
+      12,
+      60
+     ],
+     "suboptimal": [
+      13,
+      61
+     ],
+     "version,": [
+      14,
+      62
+     ],
+     "Bounded": [
+      15,
+      110
+     ],
+     "L-GLS": [
+      16,
+      101
+     ],
+     "(B-LGLS)": [
+      17
+     ],
+     "that": [
+      18,
+      130,
+      142,
+      164
+     ],
+     "combine": [
+      19
+     ],
+     "the": [
+      20,
+      28,
+      67,
+      82,
+      87,
+      100,
+      131,
+      148,
+      162,
+      165,
+      169,
+      182,
+      191
+     ],
+     "efficiency": [
+      22,
+      30
+     ],
+     "of": [
+      23,
+      31,
+      99,
+      125,
+      168
+     ],
+     "algorithms": [
+      26,
+      34,
+      52,
+      133,
+      189
+     ],
+     "evaluation": [
+      29
+     ],
+     "for": [
+      35,
+      115,
+      123
+     ],
+     "fast": [
+      36
+     ],
+     "replanning": [
+      37,
+      117
+     ],
+     "in": [
+      38,
+      138
+     ],
+     "problem": [
+      39
+     ],
+     "domains": [
+      40
+     ],
+     "where": [
+      41
+     ],
+     "edge": [
+      42,
+      78
+     ],
+     "evaluations": [
+      43,
+      79
+     ],
+     "are": [
+      44,
+      90,
+      134
+     ],
+     "more": [
+      45
+     ],
+     "expensive": [
+      46,
+      77
+     ],
+     "than": [
+      47
+     ],
+     "vertex": [
+      48
+     ],
+     "expansions.": [
+      49
+     ],
+     "The": [
+      50
+     ],
+     "proposed": [
+      51,
+      132,
+      166
+     ],
+     "generalize": [
+      53
+     ],
+     "Lifelong": [
+      54
+     ],
+     "Planning": [
+      55
+     ],
+     "A*": [
+      56
+     ],
+     "(LPA*)": [
+      57
+     ],
+     "and": [
+      58,
+      102,
+      109,
+      136,
+      158,
+      171
+     ],
+     "Truncated": [
+      63
+     ],
+     "LPA*": [
+      64
+     ],
+     "(TLPA*),": [
+      65
+     ],
+     "within": [
+      66
+     ],
+     "Generalized": [
+      68,
+      106,
+      111
+     ],
+     "Lazy": [
+      69
+     ],
+     "Search": [
+      70
+     ],
+     "(GLS)": [
+      71
+     ],
+     "framework,": [
+      72
+     ],
+     "so": [
+      73
+     ],
+     "as": [
+      74
+     ],
+     "to": [
+      75,
+      81,
+      146,
+      181
+     ],
+     "restrict": [
+      76
+     ],
+     "only": [
+      80
+     ],
+     "current": [
+      83
+     ],
+     "shortest": [
+      84
+     ],
+     "subpath": [
+      85
+     ],
+     "when": [
+      86,
+      190
+     ],
+     "cost-to-come": [
+      88
+     ],
+     "inconsistencies": [
+      89
+     ],
+     "propagated": [
+      91
+     ],
+     "during": [
+      92
+     ],
+     "repair.": [
+      93
+     ],
+     "also": [
+      95
+     ],
+     "dynamic": [
+      97
+     ],
+     "versions": [
+      98
+     ],
+     "B-LGLS": [
+      103
+     ],
+     "algorithms,": [
+      104
+     ],
+     "called": [
+      105
+     ],
+     "D*": [
+      107,
+      112
+     ],
+     "(GD*)": [
+      108
+     ],
+     "(B-GD*),": [
+      113
+     ],
+     "respectively,": [
+      114
+     ],
+     "efficient": [
+      116
+     ],
+     "non-stationary": [
+      119
+     ],
+     "queries,": [
+      120
+     ],
+     "designed": [
+      121
+     ],
+     "specifically": [
+      122
+     ],
+     "navigation": [
+      124
+     ],
+     "mobile": [
+      126
+     ],
+     "robots.": [
+      127
+     ],
+     "prove": [
+      129
+     ],
+     "complete": [
+      135
+     ],
+     "correct": [
+      137
+     ],
+     "finding": [
+      139
+     ],
+     "solution": [
+      141,
+      150
+     ],
+     "is": [
+      143
+     ],
+     "guaranteed": [
+      144
+     ],
+     "not": [
+      145
+     ],
+     "exceed": [
+      147
+     ],
+     "optimal": [
+      149
+     ],
+     "cost": [
+      151
+     ],
+     "by": [
+      152
+     ],
+     "user-chosen": [
+      154
+     ],
+     "factor.": [
+      155
+     ],
+     "Our": [
+      156
+     ],
+     "numerical": [
+      157
+     ],
+     "experimental": [
+      159
+     ],
+     "results": [
+      160
+     ],
+     "support": [
+      161
+     ],
+     "claim": [
+      163
+     ],
+     "integration": [
+      167
+     ],
+     "frameworks": [
+      174
+     ],
+     "can": [
+      175
+     ],
+     "help": [
+      176
+     ],
+     "find": [
+      177
+     ],
+     "solutions": [
+      178
+     ],
+     "faster": [
+      179
+     ],
+     "compared": [
+      180
+     ],
+     "regular": [
+      183,
+      186
+     ],
+     "or": [
+      185
+     ],
+     "underlying": [
+      192
+     ],
+     "graph": [
+      193
+     ],
+     "representation": [
+      194
+     ],
+     "changes": [
+      195
+     ],
+     "often.": [
+      196
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "query": "generalized lazy search lifelong motion planning",
+  "results": [
+   {
+    "title": "Generalized Lazy Search for Robot Motion Planning:Interleaving Search and Edge Evaluation via Event-Based Toggles",
+    "year": 2019,
+    "doi": "https://doi.org/10.1609/icaps.v29i1.3543",
+    "url": "https://doi.org/10.1609/icaps.v29i1.3543",
+    "abstract": {
+     "Lazy": [
+      0,
+      107
+     ],
+     "search": [
+      1,
+      46,
+      53,
+      89,
+      114
+     ],
+     "algorithms": [
+      2
+     ],
+     "can": [
+      3
+     ],
+     "efficiently": [
+      4
+     ],
+     "solve": [
+      5
+     ],
+     "problems": [
+      6
+     ],
+     "where": [
+      7
+     ],
+     "edge": [
+      8,
+      32,
+      58,
+      86,
+      142
+     ],
+     "evaluation": [
+      9,
+      33,
+      87,
+      116
+     ],
+     "is": [
+      10,
+      16,
+      59,
+      80,
+      99,
+      130
+     ],
+     "the": [
+      11,
+      17,
+      36,
+      43,
+      52,
+      81,
+      93
+     ],
+     "bottleneck": [
+      12
+     ],
+     "in": [
+      13,
+      26,
+      169
+     ],
+     "computation,": [
+      14
+     ],
+     "as": [
+      15
+     ],
+     "case": [
+      18
+     ],
+     "for": [
+      19,
+      124,
+      165
+     ],
+     "robotic": [
+      20
+     ],
+     "motion": [
+      21
+     ],
+     "planning.": [
+      22
+     ],
+     "The": [
+      23
+     ],
+     "optimal": [
+      24
+     ],
+     "algorithm": [
+      25
+     ],
+     "this": [
+      27
+     ],
+     "class,": [
+      28
+     ],
+     "LazySP,": [
+      29
+     ],
+     "lazily": [
+      30
+     ],
+     "restricts": [
+      31
+     ],
+     "to": [
+      34,
+      61,
+      83,
+      91,
+      117,
+      144
+     ],
+     "only": [
+      35
+     ],
+     "shortest": [
+      37
+     ],
+     "path.": [
+      38
+     ],
+     "Doing": [
+      39
+     ],
+     "so": [
+      40
+     ],
+     "comes": [
+      41
+     ],
+     "at": [
+      42
+     ],
+     "expense": [
+      44
+     ],
+     "of": [
+      45,
+      127,
+      141
+     ],
+     "effort,": [
+      47
+     ],
+     "i.e.,": [
+      48
+     ],
+     "LazySP": [
+      49
+     ],
+     "must": [
+      50
+     ],
+     "recompute": [
+      51
+     ],
+     "tree": [
+      54
+     ],
+     "every": [
+      55
+     ],
+     "time": [
+      56
+     ],
+     "an": [
+      57
+     ],
+     "found": [
+      60
+     ],
+     "be": [
+      62
+     ],
+     "invalid.": [
+      63
+     ],
+     "This": [
+      64
+     ],
+     "becomes": [
+      65
+     ],
+     "prohibitively": [
+      66
+     ],
+     "expensive": [
+      67
+     ],
+     "when": [
+      68
+     ],
+     "dealing": [
+      69
+     ],
+     "with": [
+      70,
+      158
+     ],
+     "large": [
+      71
+     ],
+     "graphs": [
+      72
+     ],
+     "or": [
+      73
+     ],
+     "highly": [
+      74
+     ],
+     "cluttered": [
+      75
+     ],
+     "environments.": [
+      76
+     ],
+     "Our": [
+      77,
+      97
+     ],
+     "key": [
+      78
+     ],
+     "insight": [
+      79
+     ],
+     "need": [
+      82
+     ],
+     "balance": [
+      84
+     ],
+     "both": [
+      85
+     ],
+     "and": [
+      88,
+      115,
+      171
+     ],
+     "effort": [
+      90
+     ],
+     "minimize": [
+      92,
+      149
+     ],
+     "total": [
+      94
+     ],
+     "planning": [
+      95,
+      151
+     ],
+     "time.": [
+      96,
+      152
+     ],
+     "contribution": [
+      98
+     ],
+     "two-fold.": [
+      100
+     ],
+     "First,": [
+      101
+     ],
+     "we": [
+      102,
+      137
+     ],
+     "propose": [
+      103
+     ],
+     "a": [
+      104,
+      125
+     ],
+     "framework,": [
+      105
+     ],
+     "Generalized": [
+      106
+     ],
+     "Search": [
+      108
+     ],
+     "(GLS),": [
+      109
+     ],
+     "that": [
+      110,
+      123,
+      148,
+      155
+     ],
+     "seamlessly": [
+      111
+     ],
+     "toggles": [
+      112
+     ],
+     "between": [
+      113
+     ],
+     "prevent": [
+      118
+     ],
+     "wasted": [
+      119
+     ],
+     "efforts.": [
+      120
+     ],
+     "We": [
+      121,
+      153
+     ],
+     "show": [
+      122,
+      154
+     ],
+     "choice": [
+      126
+     ],
+     "toggle,": [
+      128
+     ],
+     "GLS": [
+      129,
+      146,
+      156
+     ],
+     "provably": [
+      131
+     ],
+     "more": [
+      132
+     ],
+     "efficient": [
+      133
+     ],
+     "than": [
+      134
+     ],
+     "LazySP.": [
+      135
+     ],
+     "Second,": [
+      136
+     ],
+     "leverage": [
+      138
+     ],
+     "prior": [
+      139
+     ],
+     "experience": [
+      140
+     ],
+     "probabilities": [
+      143
+     ],
+     "derive": [
+      145
+     ],
+     "policies": [
+      147
+     ],
+     "expected": [
+      150
+     ],
+     "equipped": [
+      157
+     ],
+     "such": [
+      159
+     ],
+     "priors": [
+      160
+     ],
+     "significantly": [
+      161
+     ],
+     "outperforms": [
+      162
+     ],
+     "competitive": [
+      163
+     ],
+     "baselines": [
+      164
+     ],
+     "many": [
+      166
+     ],
+     "simulated": [
+      167
+     ],
+     "environments": [
+      168
+     ],
+     "R2,SE(2)": [
+      170
+     ],
+     "7-DoF": [
+      172
+     ],
+     "manipulation.": [
+      173
+     ]
+    }
+   },
+   {
+    "title": "Lazy Lifelong Planning for Efficient Replanning in Graphs with Expensive Edge Evaluation",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/iros47612.2022.9981389",
+    "url": "https://doi.org/10.1109/iros47612.2022.9981389",
+    "abstract": {
+     "We": [
+      0,
+      38,
+      102
+     ],
+     "present": [
+      1
+     ],
+     "an": [
+      2
+     ],
+     "incremental": [
+      3
+     ],
+     "search": [
+      4,
+      56,
+      62,
+      122
+     ],
+     "algorithm,": [
+      5
+     ],
+     "called": [
+      6
+     ],
+     "Lifelong-GLS,": [
+      7
+     ],
+     "which": [
+      8
+     ],
+     "combines": [
+      9
+     ],
+     "the": [
+      10,
+      19,
+      46,
+      50,
+      54,
+      60,
+      68,
+      74,
+      80,
+      92,
+      96,
+      105,
+      108,
+      113,
+      117
+     ],
+     "vertex": [
+      11
+     ],
+     "efficiency": [
+      12,
+      21,
+      106
+     ],
+     "of": [
+      13,
+      22,
+      49,
+      53,
+      107
+     ],
+     "Lifelong": [
+      14
+     ],
+     "Planning": [
+      15
+     ],
+     "A*": [
+      16
+     ],
+     "(LPA*)": [
+      17
+     ],
+     "and": [
+      18,
+      64,
+      88,
+      116
+     ],
+     "edge": [
+      20,
+      34,
+      70
+     ],
+     "Generalized": [
+      23
+     ],
+     "Lazy": [
+      24
+     ],
+     "Search": [
+      25
+     ],
+     "(GLS)": [
+      26
+     ],
+     "for": [
+      27
+     ],
+     "efficient": [
+      28
+     ],
+     "replanning": [
+      29
+     ],
+     "on": [
+      30,
+      59
+     ],
+     "dynamic": [
+      31,
+      126
+     ],
+     "graphs": [
+      32
+     ],
+     "where": [
+      33
+     ],
+     "evaluation": [
+      35
+     ],
+     "is": [
+      36,
+      86
+     ],
+     "expensive.": [
+      37
+     ],
+     "use": [
+      39
+     ],
+     "a": [
+      40,
+      125
+     ],
+     "lazily": [
+      41
+     ],
+     "evaluated": [
+      42
+     ],
+     "LPA*": [
+      43,
+      115
+     ],
+     "to": [
+      44,
+      73,
+      112
+     ],
+     "repair": [
+      45
+     ],
+     "cost-to-come": [
+      47
+     ],
+     "inconsistencies": [
+      48
+     ],
+     "relevant": [
+      51
+     ],
+     "region": [
+      52
+     ],
+     "current": [
+      55,
+      75,
+      97
+     ],
+     "tree": [
+      57
+     ],
+     "based": [
+      58
+     ],
+     "previous": [
+      61
+     ],
+     "results,": [
+      63
+     ],
+     "then": [
+      65
+     ],
+     "we": [
+      66
+     ],
+     "restrict": [
+      67
+     ],
+     "expensive": [
+      69
+     ],
+     "evaluations": [
+      71
+     ],
+     "only": [
+      72
+     ],
+     "shortest": [
+      76
+     ],
+     "subpath": [
+      77
+     ],
+     "as": [
+      78
+     ],
+     "in": [
+      79,
+      90,
+      95,
+      124
+     ],
+     "GLS": [
+      81,
+      118
+     ],
+     "framework.": [
+      82
+     ],
+     "The": [
+      83
+     ],
+     "proposed": [
+      84,
+      109
+     ],
+     "algorithm": [
+      85,
+      110
+     ],
+     "complete": [
+      87
+     ],
+     "correct": [
+      89
+     ],
+     "finding": [
+      91
+     ],
+     "optimal": [
+      93
+     ],
+     "solution": [
+      94
+     ],
+     "graph,": [
+      98
+     ],
+     "if": [
+      99
+     ],
+     "one": [
+      100
+     ],
+     "exists.": [
+      101
+     ],
+     "also": [
+      103
+     ],
+     "show": [
+      104
+     ],
+     "compared": [
+      111
+     ],
+     "standard": [
+      114
+     ],
+     "algorithms": [
+      119
+     ],
+     "over": [
+      120
+     ],
+     "consecutive": [
+      121
+     ],
+     "episodes": [
+      123
+     ],
+     "environment.": [
+      127
+     ]
+    }
+   },
+   {
+    "title": "MPLP: Massively Parallelized Lazy Planning",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/lra.2022.3157544",
+    "url": "https://doi.org/10.1109/lra.2022.3157544",
+    "abstract": {
+     "Lazy": [
+      0
+     ],
+     "search": [
+      1,
+      72,
+      139,
+      144
+     ],
+     "algorithms": [
+      2,
+      27
+     ],
+     "have": [
+      3
+     ],
+     "been": [
+      4
+     ],
+     "developed": [
+      5
+     ],
+     "to": [
+      6,
+      45,
+      96
+     ],
+     "efficiently": [
+      7
+     ],
+     "solve": [
+      8
+     ],
+     "planning": [
+      9,
+      101,
+      111,
+      115,
+      125
+     ],
+     "problems": [
+      10
+     ],
+     "in": [
+      11,
+      93,
+      100,
+      108
+     ],
+     "domains": [
+      12
+     ],
+     "where": [
+      13
+     ],
+     "the": [
+      14,
+      20,
+      36,
+      55,
+      84,
+      105,
+      136
+     ],
+     "computational": [
+      15,
+      32
+     ],
+     "effort": [
+      16,
+      33
+     ],
+     "is": [
+      17
+     ],
+     "dominated": [
+      18
+     ],
+     "by": [
+      19,
+      29
+     ],
+     "cost": [
+      21
+     ],
+     "of": [
+      22,
+      58,
+      83
+     ],
+     "edge": [
+      23,
+      87
+     ],
+     "evaluation.": [
+      24
+     ],
+     "The": [
+      25
+     ],
+     "existing": [
+      26
+     ],
+     "operate": [
+      28
+     ],
+     "intelligently": [
+      30
+     ],
+     "balancing": [
+      31
+     ],
+     "between": [
+      34
+     ],
+     "searching": [
+      35,
+      82
+     ],
+     "graph": [
+      37,
+      85
+     ],
+     "and": [
+      38,
+      51,
+      86,
+      120,
+      123
+     ],
+     "evaluating": [
+      39
+     ],
+     "edges.": [
+      40
+     ],
+     "However,": [
+      41
+     ],
+     "they": [
+      42
+     ],
+     "are": [
+      43,
+      89
+     ],
+     "designed": [
+      44
+     ],
+     "run": [
+      46
+     ],
+     "as": [
+      47,
+      140,
+      142
+     ],
+     "a": [
+      48,
+      66,
+      97,
+      127
+     ],
+     "single": [
+      49
+     ],
+     "process": [
+      50
+     ],
+     "do": [
+      52
+     ],
+     "not": [
+      53
+     ],
+     "leverage": [
+      54
+     ],
+     "multithreading": [
+      56
+     ],
+     "capability": [
+      57
+     ],
+     "modern": [
+      59,
+      77
+     ],
+     "processors.": [
+      60,
+      79
+     ],
+     "In": [
+      61,
+      80
+     ],
+     "this": [
+      62
+     ],
+     "work,": [
+      63
+     ],
+     "we": [
+      64
+     ],
+     "propose": [
+      65
+     ],
+     "massively": [
+      67
+     ],
+     "parallelized,": [
+      68
+     ],
+     "bounded": [
+      69
+     ],
+     "suboptimal,": [
+      70
+     ],
+     "lazy": [
+      71,
+      138
+     ],
+     "algorithm": [
+      73,
+      107
+     ],
+     "(MPLP)": [
+      74
+     ],
+     "that": [
+      75,
+      133
+     ],
+     "harnesses": [
+      76
+     ],
+     "multi-core": [
+      78
+     ],
+     "MPLP,": [
+      81
+     ],
+     "evaluations": [
+      88
+     ],
+     "performed": [
+      90
+     ],
+     "completely": [
+      91
+     ],
+     "asynchronously": [
+      92
+     ],
+     "parallel,": [
+      94
+     ],
+     "leading": [
+      95
+     ],
+     "drastic": [
+      98
+     ],
+     "improvement": [
+      99
+     ],
+     "time.": [
+      102
+     ],
+     "We": [
+      103,
+      131
+     ],
+     "validate": [
+      104
+     ],
+     "proposed": [
+      106
+     ],
+     "two": [
+      109
+     ],
+     "different": [
+      110
+     ],
+     "domains:": [
+      112
+     ],
+     "1)": [
+      113
+     ],
+     "motion": [
+      114,
+      124
+     ],
+     "for": [
+      116,
+      126
+     ],
+     "3D": [
+      117
+     ],
+     "humanoid": [
+      118
+     ],
+     "navigation": [
+      119
+     ],
+     "2)": [
+      121
+     ],
+     "task": [
+      122
+     ],
+     "robotic": [
+      128
+     ],
+     "assembly": [
+      129
+     ],
+     "task.": [
+      130
+     ],
+     "show": [
+      132
+     ],
+     "MPLP": [
+      134
+     ],
+     "outperforms": [
+      135
+     ],
+     "state-of-the-art": [
+      137
+     ],
+     "well": [
+      141
+     ],
+     "parallel": [
+      143
+     ],
+     "algorithms.": [
+      145
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "query": "motion planning failure certificate infeasibility graph reachability",
+  "results": [
+   {
+    "title": "Optimal Probabilistic Motion Planning With Potential Infeasible LTL Constraints",
+    "year": 2021,
+    "doi": "https://doi.org/10.1109/tac.2021.3138704",
+    "url": "https://doi.org/10.1109/tac.2021.3138704",
+    "abstract": {
+     "This": [
+      0,
+      200
+     ],
+     "paper": [
+      1
+     ],
+     "studies": [
+      2
+     ],
+     "optimal": [
+      3,
+      216
+     ],
+     "motion": [
+      4,
+      8,
+      142
+     ],
+     "planning": [
+      5,
+      208
+     ],
+     "subject": [
+      6
+     ],
+     "to": [
+      7,
+      28,
+      89,
+      139,
+      166,
+      178,
+      237
+     ],
+     "and": [
+      9,
+      66,
+      75,
+      99,
+      121,
+      130,
+      151,
+      182,
+      215,
+      223
+     ],
+     "environment": [
+      10
+     ],
+     "uncertainties.": [
+      11
+     ],
+     "By": [
+      12
+     ],
+     "modeling": [
+      13
+     ],
+     "the": [
+      14,
+      24,
+      35,
+      53,
+      57,
+      67,
+      71,
+      77,
+      112,
+      137,
+      145,
+      153,
+      169,
+      174,
+      183,
+      187,
+      204,
+      227,
+      230,
+      239,
+      242
+     ],
+     "system": [
+      15
+     ],
+     "as": [
+      16,
+      42
+     ],
+     "a": [
+      17,
+      30,
+      95,
+      100,
+      123
+     ],
+     "probabilistic": [
+      18,
+      207
+     ],
+     "labeled": [
+      19
+     ],
+     "Markov": [
+      20
+     ],
+     "decision": [
+      21
+     ],
+     "process": [
+      22
+     ],
+     "(PL-MDP),": [
+      23
+     ],
+     "control": [
+      25,
+      217
+     ],
+     "objective": [
+      26,
+      160
+     ],
+     "is": [
+      27,
+      64,
+      82,
+      147,
+      163
+     ],
+     "synthesize": [
+      29
+     ],
+     "finite-memory": [
+      31
+     ],
+     "policy,": [
+      32
+     ],
+     "under": [
+      33
+     ],
+     "which": [
+      34
+     ],
+     "agent": [
+      36,
+      138
+     ],
+     "satisfies": [
+      37,
+      60
+     ],
+     "complex": [
+      38
+     ],
+     "high-level": [
+      39
+     ],
+     "tasks": [
+      40,
+      63
+     ],
+     "expressed": [
+      41
+     ],
+     "linear": [
+      43,
+      198
+     ],
+     "temporal": [
+      44
+     ],
+     "logic": [
+      45
+     ],
+     "(LTL)": [
+      46
+     ],
+     "with": [
+      47,
+      94,
+      176
+     ],
+     "desired": [
+      48
+     ],
+     "satisfaction": [
+      49,
+      81
+     ],
+     "probability.": [
+      50
+     ],
+     "In": [
+      51
+     ],
+     "particular,": [
+      52
+     ],
+     "cost": [
+      54,
+      74,
+      185
+     ],
+     "optimization": [
+      55,
+      161
+     ],
+     "of": [
+      56,
+      79,
+      106,
+      171,
+      186,
+      210,
+      219,
+      226,
+      241
+     ],
+     "trajectory": [
+      58,
+      228
+     ],
+     "that": [
+      59
+     ],
+     "infinite": [
+      61,
+      231
+     ],
+     "horizon": [
+      62
+     ],
+     "considered,": [
+      65
+     ],
+     "trade-off": [
+      68
+     ],
+     "between": [
+      69,
+      127,
+      206
+     ],
+     "reducing": [
+      70
+     ],
+     "expected": [
+      72
+     ],
+     "mean": [
+      73
+     ],
+     "maximizing": [
+      76
+     ],
+     "probability": [
+      78,
+      170
+     ],
+     "task": [
+      80,
+      146,
+      172,
+      180
+     ],
+     "analyzed.": [
+      83
+     ],
+     "The": [
+      84,
+      104,
+      132,
+      190
+     ],
+     "LTL": [
+      85,
+      115,
+      213
+     ],
+     "formulas": [
+      86
+     ],
+     "are": [
+      87,
+      235
+     ],
+     "converted": [
+      88
+     ],
+     "limit-deterministic": [
+      90
+     ],
+     "Büchi": [
+      91
+     ],
+     "automata": [
+      92
+     ],
+     "(LDBA)": [
+      93
+     ],
+     "reachability": [
+      96
+     ],
+     "acceptance": [
+      97
+     ],
+     "condition": [
+      98
+     ],
+     "compact": [
+      101
+     ],
+     "graph": [
+      102
+     ],
+     "structure.": [
+      103
+     ],
+     "novelty": [
+      105
+     ],
+     "this": [
+      107
+     ],
+     "work": [
+      108,
+      201
+     ],
+     "lies": [
+      109
+     ],
+     "in": [
+      110
+     ],
+     "considering": [
+      111
+     ],
+     "cases": [
+      113
+     ],
+     "where": [
+      114
+     ],
+     "specifications": [
+      116,
+      214
+     ],
+     "can": [
+      117,
+      193
+     ],
+     "be": [
+      118,
+      194
+     ],
+     "potentially": [
+      119
+     ],
+     "infeasible": [
+      120,
+      212
+     ],
+     "developing": [
+      122
+     ],
+     "relaxed": [
+      124,
+      133
+     ],
+     "product": [
+      125,
+      134
+     ],
+     "MDP": [
+      126,
+      129,
+      135
+     ],
+     "PL-": [
+      128
+     ],
+     "LDBA.": [
+      131
+     ],
+     "allows": [
+      136
+     ],
+     "revise": [
+      140
+     ],
+     "its": [
+      141
+     ],
+     "plan": [
+      143,
+      221,
+      224
+     ],
+     "whenever": [
+      144
+     ],
+     "not": [
+      148
+     ],
+     "fully": [
+      149
+     ],
+     "feasible": [
+      150
+     ],
+     "quantify": [
+      152
+     ],
+     "revised": [
+      154
+     ],
+     "plan’s": [
+      155
+     ],
+     "violation": [
+      156,
+      175
+     ],
+     "measurement.": [
+      157
+     ],
+     "A": [
+      158
+     ],
+     "multi-": [
+      159
+     ],
+     "problem": [
+      162,
+      192
+     ],
+     "then": [
+      164
+     ],
+     "formulated": [
+      165,
+      191
+     ],
+     "jointly": [
+      167
+     ],
+     "consider": [
+      168
+     ],
+     "satisfaction,": [
+      173
+     ],
+     "respect": [
+      177
+     ],
+     "original": [
+      179
+     ],
+     "constraints,": [
+      181
+     ],
+     "implementation": [
+      184
+     ],
+     "policy": [
+      188
+     ],
+     "execution.": [
+      189
+     ],
+     "solved": [
+      195
+     ],
+     "via": [
+      196
+     ],
+     "coupled": [
+      197
+     ],
+     "programs.": [
+      199
+     ],
+     "first": [
+      202
+     ],
+     "bridges": [
+      203
+     ],
+     "gap": [
+      205
+     ],
+     "revision": [
+      209
+     ],
+     "potential": [
+      211
+     ],
+     "synthesis": [
+      218
+     ],
+     "both": [
+      220
+     ],
+     "prefix": [
+      222
+     ],
+     "suffix": [
+      225
+     ],
+     "over": [
+      229
+     ],
+     "horizons.": [
+      232
+     ],
+     "Experimental": [
+      233
+     ],
+     "results": [
+      234
+     ],
+     "provided": [
+      236
+     ],
+     "demonstrate": [
+      238
+     ],
+     "effectiveness": [
+      240
+     ],
+     "proposed": [
+      243
+     ],
+     "framework.": [
+      244
+     ]
+    }
+   },
+   {
+    "title": "Toward Kinematic Actionable Infeasibility Detection in Motion Planning",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/lra.2026.3746038",
+    "url": "https://doi.org/10.1109/lra.2026.3746038",
+    "abstract": {
+     "Motion": [
+      0
+     ],
+     "planning": [
+      1
+     ],
+     "in": [
+      2,
+      42,
+      81,
+      114
+     ],
+     "robotics": [
+      3
+     ],
+     "requires": [
+      4
+     ],
+     "not": [
+      5
+     ],
+     "only": [
+      6
+     ],
+     "computing": [
+      7
+     ],
+     "collision-free": [
+      8
+     ],
+     "paths": [
+      9
+     ],
+     "but": [
+      10,
+      31
+     ],
+     "also": [
+      11
+     ],
+     "certifying": [
+      12,
+      54,
+      127
+     ],
+     "infeasibility": [
+      13,
+      35,
+      55,
+      88,
+      128
+     ],
+     "when": [
+      14
+     ],
+     "no": [
+      15
+     ],
+     "such": [
+      16
+     ],
+     "path": [
+      17
+     ],
+     "exists.": [
+      18
+     ],
+     "Complete": [
+      19
+     ],
+     "methods": [
+      20
+     ],
+     "are": [
+      21
+     ],
+     "limited": [
+      22
+     ],
+     "to": [
+      23,
+      148
+     ],
+     "low-dimensional": [
+      24
+     ],
+     "spaces,": [
+      25
+     ],
+     "while": [
+      26
+     ],
+     "sampling-based": [
+      27
+     ],
+     "planners": [
+      28
+     ],
+     "scale": [
+      29
+     ],
+     "efficiently": [
+      30
+     ],
+     "cannot": [
+      32
+     ],
+     "provide": [
+      33
+     ],
+     "finite-time": [
+      34
+     ],
+     "certificates,": [
+      36
+     ],
+     "leaving": [
+      37
+     ],
+     "this": [
+      38,
+      46
+     ],
+     "problem": [
+      39
+     ],
+     "largely": [
+      40
+     ],
+     "unresolved": [
+      41
+     ],
+     "high-dimensional": [
+      43,
+      115
+     ],
+     "spaces.": [
+      44,
+      116,
+      150
+     ],
+     "In": [
+      45
+     ],
+     "letter,": [
+      47
+     ],
+     "we": [
+      48,
+      100
+     ],
+     "present": [
+      49
+     ],
+     "a": [
+      50,
+      102
+     ],
+     "geometry-driven": [
+      51
+     ],
+     "framework": [
+      52
+     ],
+     "for": [
+      53,
+      110,
+      131,
+      138,
+      145
+     ],
+     "through": [
+      56
+     ],
+     "an": [
+      57
+     ],
+     "explicit": [
+      58
+     ],
+     "resolution-dependent": [
+      59
+     ],
+     "analysis": [
+      60
+     ],
+     "of": [
+      61,
+      87,
+      91
+     ],
+     "configuration": [
+      62,
+      82
+     ],
+     "space": [
+      63
+     ],
+     "topology.": [
+      64
+     ],
+     "Leveraging": [
+      65
+     ],
+     "signed": [
+      66
+     ],
+     "distance": [
+      67
+     ],
+     "field": [
+      68
+     ],
+     "representations,": [
+      69
+     ],
+     "the": [
+      70,
+      92,
+      119
+     ],
+     "proposed": [
+      71
+     ],
+     "method": [
+      72
+     ],
+     "traces": [
+      73
+     ],
+     "separating": [
+      74
+     ],
+     "manifolds": [
+      75
+     ],
+     "induced": [
+      76
+     ],
+     "by": [
+      77
+     ],
+     "obstacle": [
+      78
+     ],
+     "boundaries": [
+      79
+     ],
+     "directly": [
+      80
+     ],
+     "space,": [
+      83
+     ],
+     "enabling": [
+      84
+     ],
+     "both": [
+      85
+     ],
+     "detection": [
+      86
+     ],
+     "and": [
+      89,
+      123,
+      134
+     ],
+     "identification": [
+      90
+     ],
+     "specific": [
+      93
+     ],
+     "geometric": [
+      94
+     ],
+     "cause.": [
+      95
+     ],
+     "To": [
+      96
+     ],
+     "address": [
+      97
+     ],
+     "computational": [
+      98
+     ],
+     "challenges,": [
+      99
+     ],
+     "develop": [
+      101
+     ],
+     "parallel": [
+      103
+     ],
+     "frontier-expansion": [
+      104
+     ],
+     "algorithm": [
+      105
+     ],
+     "that": [
+      106
+     ],
+     "exploits": [
+      107
+     ],
+     "GPU": [
+      108
+     ],
+     "acceleration": [
+      109
+     ],
+     "efficient": [
+      111
+     ],
+     "simplicial": [
+      112
+     ],
+     "reconstruction": [
+      113
+     ],
+     "We": [
+      117,
+      141
+     ],
+     "validate": [
+      118
+     ],
+     "approach": [
+      120
+     ],
+     "on": [
+      121
+     ],
+     "4-DOF": [
+      122,
+      132
+     ],
+     "5-DOF": [
+      124,
+      139
+     ],
+     "robot": [
+      125
+     ],
+     "scenarios,": [
+      126
+     ],
+     "within": [
+      129
+     ],
+     "seconds": [
+      130
+     ],
+     "cases": [
+      133
+     ],
+     "under": [
+      135
+     ],
+     "four": [
+      136
+     ],
+     "minutes": [
+      137
+     ],
+     "cases.": [
+      140
+     ],
+     "further": [
+      142
+     ],
+     "discuss": [
+      143
+     ],
+     "avenues": [
+      144
+     ],
+     "improving": [
+      146
+     ],
+     "scalability": [
+      147
+     ],
+     "higher-dimensional": [
+      149
+     ]
+    }
+   },
+   {
+    "title": "Robust Trajectory Generation and Control for Quadrotor Motion Planning With Field-of-View Control Barrier Certification",
+    "year": 2025,
+    "doi": "https://doi.org/10.1109/lra.2025.3630888",
+    "url": "https://doi.org/10.1109/lra.2025.3630888",
+    "abstract": {
+     "Many": [
+      0
+     ],
+     "approaches": [
+      1
+     ],
+     "to": [
+      2,
+      7,
+      10,
+      38,
+      54,
+      62,
+      101,
+      124
+     ],
+     "multi-robot": [
+      3,
+      92
+     ],
+     "coordination": [
+      4
+     ],
+     "are": [
+      5,
+      76
+     ],
+     "susceptible": [
+      6
+     ],
+     "failure": [
+      8
+     ],
+     "due": [
+      9
+     ],
+     "communication": [
+      11
+     ],
+     "loss": [
+      12,
+      57
+     ],
+     "and": [
+      13,
+      32,
+      58,
+      82,
+      94,
+      119
+     ],
+     "uncertainty": [
+      14
+     ],
+     "in": [
+      15,
+      41
+     ],
+     "estimation.": [
+      16,
+      49
+     ],
+     "We": [
+      17
+     ],
+     "present": [
+      18
+     ],
+     "a": [
+      19,
+      77,
+      95,
+      110
+     ],
+     "real-time": [
+      20
+     ],
+     "communication-free": [
+      21
+     ],
+     "distributed": [
+      22,
+      91
+     ],
+     "navigation": [
+      23
+     ],
+     "algorithm": [
+      24
+     ],
+     "certified": [
+      25,
+      85,
+      104
+     ],
+     "by": [
+      26,
+      86
+     ],
+     "control": [
+      27,
+      61,
+      67,
+      83,
+      87,
+      115
+     ],
+     "barrier": [
+      28,
+      88,
+      116
+     ],
+     "functions,": [
+      29
+     ],
+     "that": [
+      30
+     ],
+     "models": [
+      31
+     ],
+     "controls": [
+      33
+     ],
+     "the": [
+      34,
+      42,
+      103
+     ],
+     "onboard": [
+      35
+     ],
+     "sensing": [
+      36
+     ],
+     "behavior": [
+      37
+     ],
+     "keep": [
+      39
+     ],
+     "neighbors": [
+      40
+     ],
+     "limited": [
+      43
+     ],
+     "field": [
+      44
+     ],
+     "of": [
+      45,
+      73,
+      113
+     ],
+     "view": [
+      46
+     ],
+     "for": [
+      47,
+      90
+     ],
+     "position": [
+      48
+     ],
+     "The": [
+      50,
+      70
+     ],
+     "approach": [
+      51
+     ],
+     "is": [
+      52
+     ],
+     "robust": [
+      53,
+      79
+     ],
+     "temporary": [
+      55
+     ],
+     "tracking": [
+      56
+     ],
+     "directly": [
+      59
+     ],
+     "synthesizes": [
+      60
+     ],
+     "stabilize": [
+      63
+     ],
+     "visual": [
+      64
+     ],
+     "contact": [
+      65
+     ],
+     "through": [
+      66
+     ],
+     "Lyapunov-barrier": [
+      68
+     ],
+     "functions.": [
+      69
+     ],
+     "main": [
+      71
+     ],
+     "contributions": [
+      72
+     ],
+     "this": [
+      74
+     ],
+     "paper": [
+      75
+     ],
+     "continuous-time": [
+      78
+     ],
+     "trajectory": [
+      80
+     ],
+     "generation": [
+      81
+     ],
+     "method": [
+      84
+     ],
+     "functions": [
+      89
+     ],
+     "systems": [
+      93
+     ],
+     "discrete": [
+      96
+     ],
+     "optimization": [
+      97
+     ],
+     "procedure,": [
+      98
+     ],
+     "namely,": [
+      99
+     ],
+     "MPC-CBF,": [
+      100
+     ],
+     "approximate": [
+      102
+     ],
+     "controller.": [
+      105
+     ],
+     "In": [
+      106
+     ],
+     "addition,": [
+      107
+     ],
+     "we": [
+      108
+     ],
+     "propose": [
+      109
+     ],
+     "linear": [
+      111
+     ],
+     "surrogate": [
+      112
+     ],
+     "high-order": [
+      114
+     ],
+     "function": [
+      117
+     ],
+     "constraints": [
+      118
+     ],
+     "use": [
+      120
+     ],
+     "sequential": [
+      121
+     ],
+     "quadratic": [
+      122
+     ],
+     "programming": [
+      123
+     ],
+     "solve": [
+      125
+     ],
+     "MPC-CBF": [
+      126
+     ],
+     "efficiently.": [
+      127
+     ]
+    }
+   }
+  ]
+ }
+]

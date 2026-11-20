@@ -1,0 +1,5 @@
+NAV_SPEC 1 4
+"car16__MA_maze96__unknown__s48101__r8" unknown 8 0 0 0 512 3 7389365774532235145 1
+"car16__MA_maze96__unknown__s48101__r16" unknown 16 0 0 0 512 3 7389365774532235145 0
+"car16__MA_maze96__unknown__s48101__r32" unknown 32 0 0 0 512 3 7389365774532235145 0
+"car16__MA_maze96__unknown__s48101__r64" unknown 64 0 0 0 512 3 7389365774532235145 1

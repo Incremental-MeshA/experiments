@@ -1,0 +1,5 @@
+NAV_SPEC 1 4
+"car16__Berlin__unknown__s48101__r8" unknown 8 0 0 0 512 3 4123573556207021417 1
+"car16__Berlin__unknown__s48101__r16" unknown 16 0 0 0 512 3 4123573556207021417 0
+"car16__Berlin__unknown__s48101__r32" unknown 32 0 0 0 512 3 4123573556207021417 0
+"car16__Berlin__unknown__s48101__r64" unknown 64 0 0 0 512 3 4123573556207021417 1
