@@ -47,7 +47,7 @@ def main(directory):
  pairs=[]
  for case,g in metrics.groupby('case'):
   a=g[g.method.eq(NEW)].iloc[0];old=g[g.method.isin(manifest['controls'])&g.complete];best=old.sort_values('full_s').iloc[0] if len(old) else None
-  for method in [*manifest['controls'],*manifest['ablations'],'best_control']:
+  for method in dict.fromkeys([*manifest['controls'],*manifest['ablations'],'best_control']):
    b=best if method=='best_control' else (g[g.method.eq(method)].iloc[0] if g.method.eq(method).any() else None)
    if b is None and method!='best_control':continue
    ok=bool(a.complete and b is not None and b.complete)
