@@ -1,0 +1,5 @@
+{
+  "status": "excluded",
+  "reason": "Initial Witness cut only replaces the already-stopping occupancy read; it does not skip a free prefix. Replace with primitive-cover certificate and rerun every timing and memory job with all controls. No prior seconds imported.",
+  "source_commit": "9040291"
+}

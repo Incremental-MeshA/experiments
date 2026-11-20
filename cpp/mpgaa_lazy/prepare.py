@@ -48,8 +48,9 @@ def main():
     sources.extend(ROOT/p for p in ['cpp/experiments/memory.hpp','cpp/experiments/dstar_boundary.hpp',
         'cpp/mpgaa_lazy/replay.cpp','cpp/mpgaa_lazy/navigation.cpp','cpp/mpgaa_lazy/Makefile','cpp/mpgaa_lazy/test.cpp',
         'cpp/mpgaa_lazy/prepare.py','cpp/mpgaa_lazy/run_all.py'])
-    manifest=dict(version=1,base_commit='3b63d6bd55c7f563d784e2290047e514cbbb2584',repeats=3,cap=1000000,seed=48101,
+    manifest=dict(version=2,base_commit='3b63d6bd55c7f563d784e2290047e514cbbb2584',repeats=3,cap=1000000,seed=48101,
         primary_methods=NEW,controls=CONTROL+['octile_reuse'],ablations=ABLATIONS,anchors=sorted(ANCHORS),tile_side=8,
+        witness='surviving blockers jointly cover all member primitives before checking a branch prefix',
         plan=plan,files=files,sources={str(p.relative_to(ROOT)):digest(p) for p in sorted(set(sources))},
         protocol='All 186 frozen replay cases. Dynamic closed-loop: all 16 maps, two roots, two prespecified anchors (2,5),(32,20), n=k. Unknown car16: all six maps, two roots, radii 8,16,32,64. Three serial randomized timing repeats and one independent allocation repeat per configuration. Two replay ablations. All comparator times collected anew. No parameter tuning on timings.')
     manifest['scenarios']=sum(j['cases'] for j in plan)

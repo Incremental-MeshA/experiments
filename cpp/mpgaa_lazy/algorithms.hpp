@@ -8,22 +8,36 @@ enum class Mode { Stamp, Batch, Witness };
 struct Work:mpgaa_mesh::Work {
     std::uint64_t stamp_writes=0,tile_reads=0,mask_refreshes=0,mask_hits=0;
     std::uint64_t cut_checks=0,cut_reuses=0,cut_primitives=0;
-    std::uint64_t edit_batches=0,scan_batches=0,seed_tests=0,arrow_checks=0;
+    std::uint64_t edit_batches=0,scan_batches=0,seed_tests=0,arrow_checks=0,cover_tests=0;
     void add(const Work& b) {
         mpgaa_mesh::Work::add(b);
         stamp_writes+=b.stamp_writes;tile_reads+=b.tile_reads;mask_refreshes+=b.mask_refreshes;mask_hits+=b.mask_hits;
         cut_checks+=b.cut_checks;cut_reuses+=b.cut_reuses;cut_primitives+=b.cut_primitives;
         edit_batches+=b.edit_batches;scan_batches+=b.scan_batches;seed_tests+=b.seed_tests;arrow_checks+=b.arrow_checks;
+        cover_tests+=b.cover_tests;
     }
 };
 struct MeshIndex:mpgaa_mesh::MeshIndex {
     // Exact bounding rectangle of the original trace offsets, per heading.
     std::vector<std::array<int,4>> boxes;
-    explicit MeshIndex(const Model& m):mpgaa_mesh::MeshIndex(m),boxes(m.headings) {
+    std::vector<std::vector<int>> enter,leave;
+    explicit MeshIndex(const Model& m):mpgaa_mesh::MeshIndex(m) {
         auto clock=Clock::now();
+        boxes.resize(m.headings);enter.resize(m.headings);leave.resize(m.headings);
         for(int k=0;k<m.headings;++k)for(std::size_t n=1;n<forest[k].size();++n) {
             Cell q=forest[k][n].offset;auto& b=boxes[k];
             b[0]=std::min(b[0],q.i);b[1]=std::max(b[1],q.i);b[2]=std::min(b[2],q.j);b[3]=std::max(b[3],q.j);
+        }
+        for(int k=0;k<m.headings;++k) {
+            enter[k].resize(forest[k].size());leave[k].resize(forest[k].size());int rank=0;
+            std::vector<std::pair<int,bool>> stack={{0,false}};
+            while(!stack.empty()) {
+                auto [node,done]=stack.back();stack.pop_back();
+                if(done){leave[k][node]=rank;continue;}
+                enter[k][node]=rank++;stack.push_back({node,true});
+                const auto& children=forest[k][node].children;
+                for(auto it=children.rbegin();it!=children.rend();++it)stack.push_back({*it,false});
+            }
         }
         compile_s+=seconds(clock);
     }
@@ -32,7 +46,8 @@ struct MeshIndex:mpgaa_mesh::MeshIndex {
 class LazyMPGAA:public Planner {
     struct Mask {
         std::vector<std::int8_t> flags;
-        // A prefix-free cut: first blocked node on each blocked branch.
+        // Prefix-free blocked witnesses may jointly certify an ancestor branch
+        // without revisiting its free prefix.
         std::vector<int> cut;
         std::uint64_t born=0,verified=0;
     };
@@ -64,11 +79,17 @@ class LazyMPGAA:public Planner {
     void flag_subtree(State u,Mask& mask,int node,std::int8_t flag) {
         for(int pid:index.forest[u.k][node].members)mask.flags[index.slot[pid]]=flag;
     }
-    void evaluate(State u,Mask& mask,int node,const std::vector<int>& retained) {
+    void evaluate(State u,Mask& mask,int node,const std::vector<std::uint8_t>& covered) {
         const auto& n=index.forest[u.k][node];
-        if(mode==Mode::Witness && std::binary_search(retained.begin(),retained.end(),node)) {
-            ++work.cut_reuses;work.cut_primitives+=n.members.size();
-            flag_subtree(u,mask,node,0);mask.cut.push_back(node);return;
+        if(!covered.empty()) {
+            bool all=true;
+            for(int pid:n.members){++work.cover_tests;if(!covered[index.slot[pid]]){all=false;break;}}
+            // A union of surviving blockers can skip a free ancestor prefix.
+            // Skipping only the blocker itself would save no occupancy reads.
+            if(all) {
+                ++work.cut_reuses;work.cut_primitives+=n.members.size();
+                flag_subtree(u,mask,node,0);return;
+            }
         }
         ++work.mesh_nodes;++stats.checked_cells;
         if(!grid.free({u.i+n.offset.i,u.j+n.offset.j})) {
@@ -77,7 +98,7 @@ class LazyMPGAA:public Planner {
             return;
         }
         for(int pid:n.terminals)mask.flags[index.slot[pid]]=1;
-        for(int child:n.children)evaluate(u,mask,child,retained);
+        for(int child:n.children)evaluate(u,mask,child,covered);
     }
     Mask& current_mask(State u) {
         auto [it,inserted]=masks.try_emplace(u);auto& mask=it->second;
@@ -85,18 +106,29 @@ class LazyMPGAA:public Planner {
             mask.verified=epoch;++work.mask_hits;return mask;
         }
         ++work.mask_refreshes;
-        std::vector<int> retained;
+        std::vector<std::uint8_t> covered;
         if(mode==Mode::Witness) {
-            retained.reserve(mask.cut.size());
+            std::size_t kept=0;
             for(int node:mask.cut) {
                 ++work.cut_checks;++stats.checked_cells;Cell off=index.forest[u.k][node].offset;
-                if(!grid.free({u.i+off.i,u.j+off.j}))retained.push_back(node);
+                if(!grid.free({u.i+off.i,u.j+off.j}))mask.cut[kept++]=node;
             }
-            mask.cut.clear();
+            mask.cut.resize(kept);
+            if(kept) {
+                covered.assign(m.by_start[u.k].size(),0);
+                for(int node:mask.cut)for(int pid:index.forest[u.k][node].members)covered[index.slot[pid]]=1;
+            }
         }
         mask.flags.assign(m.by_start[u.k].size(),-1);
-        for(int child:index.forest[u.k][0].children)evaluate(u,mask,child,retained);
-        if(mode==Mode::Witness)std::sort(mask.cut.begin(),mask.cut.end());
+        for(int child:index.forest[u.k][0].children)evaluate(u,mask,child,covered);
+        if(mode==Mode::Witness) {
+            // New blockers may subsume old witnesses. DFS intervals compact
+            // their union without a dense per-state activity tree.
+            std::sort(mask.cut.begin(),mask.cut.end(),[&](int a,int b){return index.enter[u.k][a]<index.enter[u.k][b];});
+            std::size_t kept=0;int end=-1;
+            for(int node:mask.cut)if(index.enter[u.k][node]>=end){mask.cut[kept++]=node;end=index.leave[u.k][node];}
+            mask.cut.resize(kept);
+        }
         mask.born=mask.verified=epoch;return mask;
     }
     bool valid(State u,int pid) {return current_mask(u).flags[index.slot[pid]]>0;}

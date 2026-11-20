@@ -21,7 +21,7 @@ inline Work counters(const Planner& planner) {
 inline void write_work(std::ostream& out,const Work& w) {
     mpgaa_mesh::write_work(out,w);
     out<<','<<w.stamp_writes<<','<<w.tile_reads<<','<<w.mask_refreshes<<','<<w.mask_hits<<','<<w.cut_checks<<','<<w.cut_reuses
-       <<','<<w.cut_primitives<<','<<w.edit_batches<<','<<w.scan_batches<<','<<w.seed_tests<<','<<w.arrow_checks;
+       <<','<<w.cut_primitives<<','<<w.edit_batches<<','<<w.scan_batches<<','<<w.seed_tests<<','<<w.arrow_checks<<','<<w.cover_tests;
 }
-inline const std::string work_columns=std::string(mpgaa_mesh::work_columns)+",stamp_writes,tile_reads,mask_refreshes,mask_hits,cut_checks,cut_reuses,cut_primitives,edit_batches,scan_batches,seed_tests,arrow_checks";
+inline const std::string work_columns=std::string(mpgaa_mesh::work_columns)+",stamp_writes,tile_reads,mask_refreshes,mask_hits,cut_checks,cut_reuses,cut_primitives,edit_batches,scan_batches,seed_tests,arrow_checks,cover_tests";
 } // namespace ima::mpgaa_lazy

@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "base_commit": "3b63d6bd55c7f563d784e2290047e514cbbb2584",
   "repeats": 3,
   "cap": 1000000,
@@ -34,6 +34,7 @@
     ]
   ],
   "tile_side": 8,
+  "witness": "surviving blockers jointly cover all member primitives before checking a branch prefix",
   "plan": [
     {
       "name": "replay_car16",
@@ -629,13 +630,13 @@
     "cpp/include/ima/search.hpp": "cdc94b7a4a9897e4da868003998346acdf5af8f4011b4b566803cb79f36f78a2",
     "cpp/mesh_variants/variants.hpp": "163a3f17cabd4354c00edd38821aaf0fea8edd45d7345bf9501d161220d2b8d3",
     "cpp/mpgaa_lazy/Makefile": "16a40fa2eb8589955c88abfb87966f44050411638f8d143a83b177b1763ddce4",
-    "cpp/mpgaa_lazy/algorithms.hpp": "662cbb2eb64ac4f61256dd9c710318133340d11cd7cc20d0ff19cf46ab0a9c28",
-    "cpp/mpgaa_lazy/factory.hpp": "5516a4694d4437210f1e0301c65ac35f6e6007979a2a2f7c3928b450542ee447",
+    "cpp/mpgaa_lazy/algorithms.hpp": "15ab0439a9613784883a2eeae108378145d143a609e309129769a4df3c979660",
+    "cpp/mpgaa_lazy/factory.hpp": "c483cceda171b215a8b7e19c5dc2342ee8dd106ff427937d0ca6e9757c47f1e8",
     "cpp/mpgaa_lazy/navigation.cpp": "d30d500287410a41a19a341de5257259d8b0eeacecdb9a96a5da2c8d1b2c40ab",
-    "cpp/mpgaa_lazy/prepare.py": "4b851f803a0417149f7cfaf7145424dcad481ed8ffdedb2fe83a96b73ce36829",
+    "cpp/mpgaa_lazy/prepare.py": "b7ed039bacce69612f78a97be5bb379dc15163f628d31ef8a3f4db33d1b1dc53",
     "cpp/mpgaa_lazy/replay.cpp": "dd7008a9d6a2760b915e61facd9ece9a351d39d99d6d6890b6cc736286aa448f",
     "cpp/mpgaa_lazy/run_all.py": "5bf5cbf3d5b3ff38a541a8b6b515fecca881e97f7493e142c767cb440e6f920a",
-    "cpp/mpgaa_lazy/test.cpp": "e7e6b5f5e64d6bdca14a7d7c9c919074545cc026860823fc5c0507c3f1582801",
+    "cpp/mpgaa_lazy/test.cpp": "257af3921b2e3dbf6b44726e41eee891b309cede2e1e7ab7322ce83778a14f24",
     "cpp/mpgaa_mesh/algorithms.hpp": "ad7e2cf1f7e2421738cfe05e698d42571832003d12514c57fdc15bc03ac05e03",
     "cpp/mpgaa_mesh/factory.hpp": "11eca6dacf4cc488ac37031d56011e6ec447db0ec7231a7fd17f87037adeebf1",
     "cpp/navigation_controls/factory.hpp": "a02086a4ebe4901848b41a5d8d4c71b253b0ea5da72eb2a2efe28e862eb83681",

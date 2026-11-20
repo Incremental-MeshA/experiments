@@ -1,0 +1,14 @@
+{
+  "comparisons": 144,
+  "decisions_sha256": {
+    "car16": "3cb768d88de5830edd051990b84801e10d1aa21ad24a07ddd57f69ca39734832",
+    "grid8": "75d4f8dedf85266ddfee464cda933a128e35cee020140f91cfeed1d1b143da8e"
+  },
+  "independent_snapshots": 24,
+  "inputs_sha256": {
+    "car16": "e1eb6992b8205346d4100ed6560a290f428bf2792616321d240647e6566c63f4",
+    "grid8": "f0cf7f4e29da30b32792748530d16a8e4dcc0cd951364a317e5bd7c71a8b1ef5"
+  },
+  "profiled_rows": 144,
+  "status": "passed"
+}

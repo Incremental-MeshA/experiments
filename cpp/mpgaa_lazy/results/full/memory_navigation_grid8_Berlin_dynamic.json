@@ -1,0 +1,1 @@
+{"status":"passed","runs":44,"calls":7791,"caps":0,"wall_s":15.810194424000001,"preparation_s":0.002735487,"cap":1000000,"memory_profile":true,"compiler":"14.2.0","flags":"-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC","mesh_index_compile_s":3.495e-06,"mesh_index_nodes":9,"mesh_index_heap_retained_bytes":1952,"mesh_index_heap_peak_bytes":2508}

@@ -1,0 +1,6 @@
+cohort,control,rows,witness_checks,batch_checks,refreshes,covered_branches
+navigation_dynamic,car16,202,26648862,26524544,1044493,106229
+navigation_dynamic,grid8,4240,9089064,8941496,1117687,513516
+navigation_unknown,car16,1522,22172006,22325490,747664,216433
+replay,car16,835,88045209,88179101,3174844,185304
+replay,grid8,2122,865079,840736,105092,130597

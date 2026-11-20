@@ -7,6 +7,12 @@
 
 ## Дополнение: MD-A\*
 
+**Stamp, Batch и Witness:** [три новых C++17-варианта mesh-MPGAA\*](cpp/mpgaa_lazy/README.md)
+с ленивыми версиями карты, выбором направления ремонта и компактным сечением препятствий.
+Ветка: `research/mpgaa-mesh-lazy`.
+[Отчет по картам и абляции](docs/mpgaa_lazy/report.md) · [PDF](docs/mpgaa_lazy/report.pdf) ·
+[Выполненный notebook](docs/mpgaa_lazy/analysis.ipynb).
+
 **Четыре варианта MPGAA\* с mesh:** [Boundary, Selective, Delta и Policy на C++17](cpp/mpgaa_mesh/README.md),
 независимые проверки, абляции и новая совместная серия с сильными контролями.
 Ветка: `research/mpgaa-mesh-four`.

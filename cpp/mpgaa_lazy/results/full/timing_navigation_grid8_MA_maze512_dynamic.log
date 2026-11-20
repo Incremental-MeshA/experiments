@@ -1,0 +1,5 @@
+33 runs; grid8__MA_maze512__dynamic__s68101__k2__cr5__n2; 170.947 s
+66 runs; grid8__MA_maze512__dynamic__s68101__k32__cr20__n32; 393.07 s
+99 runs; grid8__MA_maze512__dynamic__s68102__k2__cr5__n2; 521.646 s
+132 runs; grid8__MA_maze512__dynamic__s68102__k32__cr20__n32; 611.765 s
+passed 132 navigation runs; 0 query caps

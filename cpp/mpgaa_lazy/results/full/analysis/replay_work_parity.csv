@@ -1,0 +1,7 @@
+method,control,rows,same_cost,same_expansions,same_path_hash
+stamp_mpgaa,car16,745,745,745,745
+stamp_mpgaa,grid8,2026,2026,2024,2025
+batch_mpgaa,car16,745,745,745,745
+batch_mpgaa,grid8,2026,2026,2024,2025
+witness_mpgaa,car16,745,745,745,745
+witness_mpgaa,grid8,2026,2026,2024,2025

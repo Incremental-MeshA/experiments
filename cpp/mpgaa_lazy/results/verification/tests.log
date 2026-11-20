@@ -1,6 +1,7 @@
 make: Entering directory '/workspace/introduction-mpgaa-mesh/cpp/mpgaa_lazy'
+g++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic test.cpp -o build/test
 build/test ../experiments/frozen/grid8_model.txt
-{"status":"passed","model":"grid8","queries":648,"comparisons":3891,"scan_batches":332,"edit_batches":1660,"cut_reuses":16356}
+{"status":"passed","model":"grid8","queries":650,"comparisons":3895,"scan_batches":332,"edit_batches":1660,"cut_reuses":16356,"cover_probe_reduction":8}
 build/test ../experiments/frozen/car16_model.txt
-{"status":"passed","model":"car16","queries":648,"comparisons":3891,"scan_batches":352,"edit_batches":1202,"cut_reuses":899712}
+{"status":"passed","model":"car16","queries":650,"comparisons":3895,"scan_batches":352,"edit_batches":1202,"cut_reuses":848302,"cover_probe_reduction":8}
 make: Leaving directory '/workspace/introduction-mpgaa-mesh/cpp/mpgaa_lazy'

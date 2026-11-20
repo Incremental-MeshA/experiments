@@ -1,0 +1,5 @@
+30 runs; car16__arena__dynamic__s48101__k2__cr5__n2; 0.169199 s
+60 runs; car16__arena__dynamic__s48101__k32__cr20__n32; 0.180537 s
+90 runs; car16__arena__dynamic__s48102__k2__cr5__n2; 1.22342 s
+120 runs; car16__arena__dynamic__s48102__k32__cr20__n32; 1.24907 s
+passed 120 navigation runs; 0 query caps

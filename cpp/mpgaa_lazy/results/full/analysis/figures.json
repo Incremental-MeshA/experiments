@@ -1,0 +1,18 @@
+{
+  "docs/mpgaa_lazy/figures/ablations.pdf": "f60411d71af9032f109bcfabcb3f59be6b5794cfe8dbd2db84edcb142ff153b5",
+  "docs/mpgaa_lazy/figures/ablations.png": "79bb08f32b4876c1afda2554a78ad2c649cdf70aa441db5cc3fd1b441aef0a4f",
+  "docs/mpgaa_lazy/figures/batch_choice.pdf": "2fd3dd767aeb179b76d7bcabf47b645d3baef2c769d564d8361cf9890d1d4bb5",
+  "docs/mpgaa_lazy/figures/batch_choice.png": "7cc378fc8eda683021cf9f1a637497a6e4b0b1625f163643ef0cd5b913772a94",
+  "docs/mpgaa_lazy/figures/change_count_latency.pdf": "0b4d9a8d2b24e41061435d600300b1e07b1b56216f47e2d85782cbf39f652687",
+  "docs/mpgaa_lazy/figures/change_count_latency.png": "a9d557c785ce8ebd331f63e5bbad93094c40c12df195edbbfe575e928ee7b33c",
+  "docs/mpgaa_lazy/figures/episode_speedup.pdf": "c54d0837d093326c55bd4ee938dfa1b3b93a7f6ff54db353809f0273be51243f",
+  "docs/mpgaa_lazy/figures/episode_speedup.png": "897720b44f4d26c132eae8564a99728ea20aa1efaf2c41b6475c4e28e1aff2eb",
+  "docs/mpgaa_lazy/figures/map_speedup.pdf": "d43c708b75a0a645b3503f82f81138288f72739c93a467002d717aaafb671c6e",
+  "docs/mpgaa_lazy/figures/map_speedup.png": "675b9c35fc041fc0e4194a2a65b6f85d282a3300e4db69ac12f3976345e2a4cb",
+  "docs/mpgaa_lazy/figures/memory_online.pdf": "f0e600a3d32c7da261863c86867004afea4c2e07f1ede5f5f6208abee7a501b4",
+  "docs/mpgaa_lazy/figures/memory_online.png": "8b3b9274a5190b1e3f8044cd9e13ad4abb9f5d21ea9fd9afbf21f9d1b0039659",
+  "docs/mpgaa_lazy/figures/paired_distribution.pdf": "0dc84e1de2c23a356444aa8d4332a14f1240dfe9b3519c14f029b4bcfeca5f93",
+  "docs/mpgaa_lazy/figures/paired_distribution.png": "f3b1688b009c9db08f0de27765b7a11e6785262f8a066532de2988c63ab901d1",
+  "docs/mpgaa_lazy/figures/unknown_radius.pdf": "56fd71b5049f8dc03e5152a773841c475b431aa55e9bba525872c514a1b21eaf",
+  "docs/mpgaa_lazy/figures/unknown_radius.png": "8a8b8d20d33515b443f206c499205e6bed201241348b3586c1b8a4305d7d5cb0"
+}

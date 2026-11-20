@@ -67,6 +67,29 @@ int main(int argc,char** argv)try {
             }
         }
     }
+    // Two deep blockers jointly certify an entire long shared free prefix.
+    Model fork;fork.name="prefix_cover";fork.headings=1;fork.initial={0};
+    Config config;config.theta=0;config.origin={0,0};config.signature=0;fork.configs.push_back(config);
+    for(int di:{1,-1}) {
+        Primitive p;p.start=p.end=0;p.di=di;p.dj=9;p.cost=10;
+        for(int j=0;j<=8;++j)p.cells.push_back({0,j});
+        p.cells.push_back({di,9});fork.primitives.push_back(p);
+    }
+    fork.prepare();MeshIndex fork_index(fork);Grid shadow(15,20);State root{7,2,0},unreachable{12,17,0};
+    Cell unrelated{7,11};for(Cell q:std::vector<Cell>{{8,11},{6,11},unrelated})shadow.set(q,true);
+    LazyMPGAA batch(fork_index,shadow,unreachable,Mode::Batch,1000),witness(fork_index,shadow,unreachable,Mode::Witness,1000);
+    std::uint64_t cover_probe_reduction=0;
+    for(int q=0;q<2;++q) {
+        std::vector<Cell> opens;if(q){shadow.set(unrelated,false);opens.push_back(unrelated);}
+        double expected=oracle(shadow,fork,root,unreachable);require(!std::isfinite(expected),"synthetic oracle should be unreachable");++queries;
+        auto a=batch.replan(root,{},opens),b=witness.replan(root,{},opens);
+        require(!a.success() && !b.success() && !a.stats.capped && !b.stats.capped,"cover certificate reachability");comparisons+=2;
+        batch.audit();witness.audit();
+        if(q) {
+            require(b.stats.checked_cells<a.stats.checked_cells && witness.counters().cut_reuses>0,"witness did not skip the shared free prefix");
+            cover_probe_reduction=a.stats.checked_cells-b.stats.checked_cells;
+        }
+    }
     Grid open(24,25);State s{2,2,0},t{20,21,0};
     for(Mode mode:{Mode::Stamp,Mode::Batch,Mode::Witness}) {
         LazyMPGAA planner(mesh,open,t,mode,0);auto p=planner.replan(s);require(p.stats.capped,"zero cap not reported");
@@ -79,6 +102,7 @@ int main(int argc,char** argv)try {
     require(rejected,"invalid tile accepted");
     require(total.scan_batches && total.edit_batches && total.cut_reuses,"mechanism not exercised");
     std::cout<<"{\"status\":\"passed\",\"model\":\""<<m.name<<"\",\"queries\":"<<queries<<",\"comparisons\":"<<comparisons
-             <<",\"scan_batches\":"<<total.scan_batches<<",\"edit_batches\":"<<total.edit_batches<<",\"cut_reuses\":"<<total.cut_reuses<<"}\n";
+             <<",\"scan_batches\":"<<total.scan_batches<<",\"edit_batches\":"<<total.edit_batches<<",\"cut_reuses\":"<<total.cut_reuses
+             <<",\"cover_probe_reduction\":"<<cover_probe_reduction<<"}\n";
     return 0;
 }catch(const std::exception& e){std::cerr<<"error: "<<e.what()<<'\n';return 1;}

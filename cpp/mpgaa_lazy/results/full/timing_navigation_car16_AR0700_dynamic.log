@@ -1,0 +1,5 @@
+30 runs; car16__AR0700__dynamic__s48101__k2__cr5__n2; 0.111462 s
+60 runs; car16__AR0700__dynamic__s48101__k32__cr20__n32; 360.1 s
+90 runs; car16__AR0700__dynamic__s48102__k2__cr5__n2; 360.847 s
+120 runs; car16__AR0700__dynamic__s48102__k32__cr20__n32; 361.2 s
+passed 120 navigation runs; 3 query caps

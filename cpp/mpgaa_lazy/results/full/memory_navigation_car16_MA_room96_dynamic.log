@@ -1,0 +1,5 @@
+10 runs; car16__MA_room96__dynamic__s48101__k2__cr5__n2; 1.53027 s
+20 runs; car16__MA_room96__dynamic__s48101__k32__cr20__n32; 2.96445 s
+30 runs; car16__MA_room96__dynamic__s48102__k2__cr5__n2; 5.04025 s
+40 runs; car16__MA_room96__dynamic__s48102__k32__cr20__n32; 5.48444 s
+passed 40 navigation runs; 0 query caps

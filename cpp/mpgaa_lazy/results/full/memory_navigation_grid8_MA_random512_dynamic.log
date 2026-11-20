@@ -1,0 +1,5 @@
+11 runs; grid8__MA_random512__dynamic__s68101__k2__cr5__n2; 4.13456 s
+22 runs; grid8__MA_random512__dynamic__s68101__k32__cr20__n32; 8.01068 s
+33 runs; grid8__MA_random512__dynamic__s68102__k2__cr5__n2; 27.274 s
+44 runs; grid8__MA_random512__dynamic__s68102__k32__cr20__n32; 47.2191 s
+passed 44 navigation runs; 0 query caps

@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "analysis_sha256": "fed4009380d5407040047c74b12acb6ac76c15ebd17598be96d4a079d9233366",
+  "markdown_sha256": "596b9ab8a94dddb636e124d53956619680b3866c03d0993872c65bc1aa44039c",
+  "pdf_sha256": "405e5d4e9ba5ed0091cca369f4d74f3ec6b111add9436e517d24b22d2787d429",
+  "command": [
+    "pandoc",
+    "/workspace/introduction-mpgaa-mesh/docs/mpgaa_lazy/report.md",
+    "-o",
+    "/workspace/introduction-mpgaa-mesh/docs/mpgaa_lazy/report.pdf",
+    "--pdf-engine=xelatex",
+    "--resource-path=/workspace/introduction-mpgaa-mesh/docs/mpgaa_lazy",
+    "--include-in-header=/workspace/introduction-mpgaa-mesh/docs/experiments/layout.tex",
+    "--lua-filter=/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/vector_images.lua"
+  ],
+  "source_sha256": "7845cd8ec0e285f41be59f72b3a4d1b83005967088daa74ba30538f97553621d",
+  "figures_manifest_sha256": "28d73f31a75231a7acd27495ad214373de7e63c6001b655d6f03c00a740ac1f6",
+  "layout_sha256": "69a358f6e2ee0f5072b0531fbd836f749f2603007a1f19fa0202ce6e61db80be",
+  "vector_filter_sha256": "d45181867acba3241986b7061e23ce80e9fc3a919756c4144de16a6fbc9b244e"
+}

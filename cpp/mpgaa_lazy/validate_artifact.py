@@ -4,6 +4,7 @@ import argparse
 import json
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 from run_all import digest
 HERE=Path(__file__).resolve().parent
@@ -25,6 +26,10 @@ def main(output):
     ad=HERE/'results/full/analysis';analysis=json.loads((ad/'analysis.json').read_text());before=analysis['tables_sha256']
     assert analysis['analysis_source_sha256']==digest(HERE/'analyze.py')
     assert analysis['reused_analysis_sha256']==digest(ROOT/'cpp/mpgaa_mesh/analyze.py')
+    assert analysis['regression_source_sha256']==digest(HERE/'regression.py')
+    with tempfile.TemporaryDirectory(prefix='mpgaa-lazy-regression-') as temporary:
+        subprocess.run([sys.executable,str(HERE/'regression.py'),'--output',temporary],cwd=ROOT,check=True)
+        assert json.loads((Path(temporary)/'validation.json').read_text())==analysis['targeted_regressions']
     for name,sha in before.items():assert digest(ad/name)==sha,name
     original_analysis=digest(ad/'analysis.json');original_figures=digest(ad/'figures.json')
     provenance=json.loads((ad/'report_provenance.json').read_text());dest=ROOT/'docs/mpgaa_lazy'
