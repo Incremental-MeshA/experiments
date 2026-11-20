@@ -1,0 +1,7674 @@
+[
+ {
+  "query": "motion planning infeasibility certificates non existence path",
+  "results": [
+   {
+    "title": "Optimal Probabilistic Motion Planning With Potential Infeasible LTL Constraints",
+    "year": 2021,
+    "doi": "https://doi.org/10.1109/tac.2021.3138704",
+    "abstract": {
+     "This": [
+      0,
+      200
+     ],
+     "paper": [
+      1
+     ],
+     "studies": [
+      2
+     ],
+     "optimal": [
+      3,
+      216
+     ],
+     "motion": [
+      4,
+      8,
+      142
+     ],
+     "planning": [
+      5,
+      208
+     ],
+     "subject": [
+      6
+     ],
+     "to": [
+      7,
+      28,
+      89,
+      139,
+      166,
+      178,
+      237
+     ],
+     "and": [
+      9,
+      66,
+      75,
+      99,
+      121,
+      130,
+      151,
+      182,
+      215,
+      223
+     ],
+     "environment": [
+      10
+     ],
+     "uncertainties.": [
+      11
+     ],
+     "By": [
+      12
+     ],
+     "modeling": [
+      13
+     ],
+     "the": [
+      14,
+      24,
+      35,
+      53,
+      57,
+      67,
+      71,
+      77,
+      112,
+      137,
+      145,
+      153,
+      169,
+      174,
+      183,
+      187,
+      204,
+      227,
+      230,
+      239,
+      242
+     ],
+     "system": [
+      15
+     ],
+     "as": [
+      16,
+      42
+     ],
+     "a": [
+      17,
+      30,
+      95,
+      100,
+      123
+     ],
+     "probabilistic": [
+      18,
+      207
+     ],
+     "labeled": [
+      19
+     ],
+     "Markov": [
+      20
+     ],
+     "decision": [
+      21
+     ],
+     "process": [
+      22
+     ],
+     "(PL-MDP),": [
+      23
+     ],
+     "control": [
+      25,
+      217
+     ],
+     "objective": [
+      26,
+      160
+     ],
+     "is": [
+      27,
+      64,
+      82,
+      147,
+      163
+     ],
+     "synthesize": [
+      29
+     ],
+     "finite-memory": [
+      31
+     ],
+     "policy,": [
+      32
+     ],
+     "under": [
+      33
+     ],
+     "which": [
+      34
+     ],
+     "agent": [
+      36,
+      138
+     ],
+     "satisfies": [
+      37,
+      60
+     ],
+     "complex": [
+      38
+     ],
+     "high-level": [
+      39
+     ],
+     "tasks": [
+      40,
+      63
+     ],
+     "expressed": [
+      41
+     ],
+     "linear": [
+      43,
+      198
+     ],
+     "temporal": [
+      44
+     ],
+     "logic": [
+      45
+     ],
+     "(LTL)": [
+      46
+     ],
+     "with": [
+      47,
+      94,
+      176
+     ],
+     "desired": [
+      48
+     ],
+     "satisfaction": [
+      49,
+      81
+     ],
+     "probability.": [
+      50
+     ],
+     "In": [
+      51
+     ],
+     "particular,": [
+      52
+     ],
+     "cost": [
+      54,
+      74,
+      185
+     ],
+     "optimization": [
+      55,
+      161
+     ],
+     "of": [
+      56,
+      79,
+      106,
+      171,
+      186,
+      210,
+      219,
+      226,
+      241
+     ],
+     "trajectory": [
+      58,
+      228
+     ],
+     "that": [
+      59
+     ],
+     "infinite": [
+      61,
+      231
+     ],
+     "horizon": [
+      62
+     ],
+     "considered,": [
+      65
+     ],
+     "trade-off": [
+      68
+     ],
+     "between": [
+      69,
+      127,
+      206
+     ],
+     "reducing": [
+      70
+     ],
+     "expected": [
+      72
+     ],
+     "mean": [
+      73
+     ],
+     "maximizing": [
+      76
+     ],
+     "probability": [
+      78,
+      170
+     ],
+     "task": [
+      80,
+      146,
+      172,
+      180
+     ],
+     "analyzed.": [
+      83
+     ],
+     "The": [
+      84,
+      104,
+      132,
+      190
+     ],
+     "LTL": [
+      85,
+      115,
+      213
+     ],
+     "formulas": [
+      86
+     ],
+     "are": [
+      87,
+      235
+     ],
+     "converted": [
+      88
+     ],
+     "limit-deterministic": [
+      90
+     ],
+     "Büchi": [
+      91
+     ],
+     "automata": [
+      92
+     ],
+     "(LDBA)": [
+      93
+     ],
+     "reachability": [
+      96
+     ],
+     "acceptance": [
+      97
+     ],
+     "condition": [
+      98
+     ],
+     "compact": [
+      101
+     ],
+     "graph": [
+      102
+     ],
+     "structure.": [
+      103
+     ],
+     "novelty": [
+      105
+     ],
+     "this": [
+      107
+     ],
+     "work": [
+      108,
+      201
+     ],
+     "lies": [
+      109
+     ],
+     "in": [
+      110
+     ],
+     "considering": [
+      111
+     ],
+     "cases": [
+      113
+     ],
+     "where": [
+      114
+     ],
+     "specifications": [
+      116,
+      214
+     ],
+     "can": [
+      117,
+      193
+     ],
+     "be": [
+      118,
+      194
+     ],
+     "potentially": [
+      119
+     ],
+     "infeasible": [
+      120,
+      212
+     ],
+     "developing": [
+      122
+     ],
+     "relaxed": [
+      124,
+      133
+     ],
+     "product": [
+      125,
+      134
+     ],
+     "MDP": [
+      126,
+      129,
+      135
+     ],
+     "PL-": [
+      128
+     ],
+     "LDBA.": [
+      131
+     ],
+     "allows": [
+      136
+     ],
+     "revise": [
+      140
+     ],
+     "its": [
+      141
+     ],
+     "plan": [
+      143,
+      221,
+      224
+     ],
+     "whenever": [
+      144
+     ],
+     "not": [
+      148
+     ],
+     "fully": [
+      149
+     ],
+     "feasible": [
+      150
+     ],
+     "quantify": [
+      152
+     ],
+     "revised": [
+      154
+     ],
+     "plan’s": [
+      155
+     ],
+     "violation": [
+      156,
+      175
+     ],
+     "measurement.": [
+      157
+     ],
+     "A": [
+      158
+     ],
+     "multi-": [
+      159
+     ],
+     "problem": [
+      162,
+      192
+     ],
+     "then": [
+      164
+     ],
+     "formulated": [
+      165,
+      191
+     ],
+     "jointly": [
+      167
+     ],
+     "consider": [
+      168
+     ],
+     "satisfaction,": [
+      173
+     ],
+     "respect": [
+      177
+     ],
+     "original": [
+      179
+     ],
+     "constraints,": [
+      181
+     ],
+     "implementation": [
+      184
+     ],
+     "policy": [
+      188
+     ],
+     "execution.": [
+      189
+     ],
+     "solved": [
+      195
+     ],
+     "via": [
+      196
+     ],
+     "coupled": [
+      197
+     ],
+     "programs.": [
+      199
+     ],
+     "first": [
+      202
+     ],
+     "bridges": [
+      203
+     ],
+     "gap": [
+      205
+     ],
+     "revision": [
+      209
+     ],
+     "potential": [
+      211
+     ],
+     "synthesis": [
+      218
+     ],
+     "both": [
+      220
+     ],
+     "prefix": [
+      222
+     ],
+     "suffix": [
+      225
+     ],
+     "over": [
+      229
+     ],
+     "horizons.": [
+      232
+     ],
+     "Experimental": [
+      233
+     ],
+     "results": [
+      234
+     ],
+     "provided": [
+      236
+     ],
+     "demonstrate": [
+      238
+     ],
+     "effectiveness": [
+      240
+     ],
+     "proposed": [
+      243
+     ],
+     "framework.": [
+      244
+     ]
+    }
+   },
+   {
+    "title": "Toward Kinematic Actionable Infeasibility Detection in Motion Planning",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/lra.2026.3746038",
+    "abstract": {
+     "Motion": [
+      0
+     ],
+     "planning": [
+      1
+     ],
+     "in": [
+      2,
+      42,
+      81,
+      114
+     ],
+     "robotics": [
+      3
+     ],
+     "requires": [
+      4
+     ],
+     "not": [
+      5
+     ],
+     "only": [
+      6
+     ],
+     "computing": [
+      7
+     ],
+     "collision-free": [
+      8
+     ],
+     "paths": [
+      9
+     ],
+     "but": [
+      10,
+      31
+     ],
+     "also": [
+      11
+     ],
+     "certifying": [
+      12,
+      54,
+      127
+     ],
+     "infeasibility": [
+      13,
+      35,
+      55,
+      88,
+      128
+     ],
+     "when": [
+      14
+     ],
+     "no": [
+      15
+     ],
+     "such": [
+      16
+     ],
+     "path": [
+      17
+     ],
+     "exists.": [
+      18
+     ],
+     "Complete": [
+      19
+     ],
+     "methods": [
+      20
+     ],
+     "are": [
+      21
+     ],
+     "limited": [
+      22
+     ],
+     "to": [
+      23,
+      148
+     ],
+     "low-dimensional": [
+      24
+     ],
+     "spaces,": [
+      25
+     ],
+     "while": [
+      26
+     ],
+     "sampling-based": [
+      27
+     ],
+     "planners": [
+      28
+     ],
+     "scale": [
+      29
+     ],
+     "efficiently": [
+      30
+     ],
+     "cannot": [
+      32
+     ],
+     "provide": [
+      33
+     ],
+     "finite-time": [
+      34
+     ],
+     "certificates,": [
+      36
+     ],
+     "leaving": [
+      37
+     ],
+     "this": [
+      38,
+      46
+     ],
+     "problem": [
+      39
+     ],
+     "largely": [
+      40
+     ],
+     "unresolved": [
+      41
+     ],
+     "high-dimensional": [
+      43,
+      115
+     ],
+     "spaces.": [
+      44,
+      116,
+      150
+     ],
+     "In": [
+      45
+     ],
+     "letter,": [
+      47
+     ],
+     "we": [
+      48,
+      100
+     ],
+     "present": [
+      49
+     ],
+     "a": [
+      50,
+      102
+     ],
+     "geometry-driven": [
+      51
+     ],
+     "framework": [
+      52
+     ],
+     "for": [
+      53,
+      110,
+      131,
+      138,
+      145
+     ],
+     "through": [
+      56
+     ],
+     "an": [
+      57
+     ],
+     "explicit": [
+      58
+     ],
+     "resolution-dependent": [
+      59
+     ],
+     "analysis": [
+      60
+     ],
+     "of": [
+      61,
+      87,
+      91
+     ],
+     "configuration": [
+      62,
+      82
+     ],
+     "space": [
+      63
+     ],
+     "topology.": [
+      64
+     ],
+     "Leveraging": [
+      65
+     ],
+     "signed": [
+      66
+     ],
+     "distance": [
+      67
+     ],
+     "field": [
+      68
+     ],
+     "representations,": [
+      69
+     ],
+     "the": [
+      70,
+      92,
+      119
+     ],
+     "proposed": [
+      71
+     ],
+     "method": [
+      72
+     ],
+     "traces": [
+      73
+     ],
+     "separating": [
+      74
+     ],
+     "manifolds": [
+      75
+     ],
+     "induced": [
+      76
+     ],
+     "by": [
+      77
+     ],
+     "obstacle": [
+      78
+     ],
+     "boundaries": [
+      79
+     ],
+     "directly": [
+      80
+     ],
+     "space,": [
+      83
+     ],
+     "enabling": [
+      84
+     ],
+     "both": [
+      85
+     ],
+     "detection": [
+      86
+     ],
+     "and": [
+      89,
+      123,
+      134
+     ],
+     "identification": [
+      90
+     ],
+     "specific": [
+      93
+     ],
+     "geometric": [
+      94
+     ],
+     "cause.": [
+      95
+     ],
+     "To": [
+      96
+     ],
+     "address": [
+      97
+     ],
+     "computational": [
+      98
+     ],
+     "challenges,": [
+      99
+     ],
+     "develop": [
+      101
+     ],
+     "parallel": [
+      103
+     ],
+     "frontier-expansion": [
+      104
+     ],
+     "algorithm": [
+      105
+     ],
+     "that": [
+      106
+     ],
+     "exploits": [
+      107
+     ],
+     "GPU": [
+      108
+     ],
+     "acceleration": [
+      109
+     ],
+     "efficient": [
+      111
+     ],
+     "simplicial": [
+      112
+     ],
+     "reconstruction": [
+      113
+     ],
+     "We": [
+      117,
+      141
+     ],
+     "validate": [
+      118
+     ],
+     "approach": [
+      120
+     ],
+     "on": [
+      121
+     ],
+     "4-DOF": [
+      122,
+      132
+     ],
+     "5-DOF": [
+      124,
+      139
+     ],
+     "robot": [
+      125
+     ],
+     "scenarios,": [
+      126
+     ],
+     "within": [
+      129
+     ],
+     "seconds": [
+      130
+     ],
+     "cases": [
+      133
+     ],
+     "under": [
+      135
+     ],
+     "four": [
+      136
+     ],
+     "minutes": [
+      137
+     ],
+     "cases.": [
+      140
+     ],
+     "further": [
+      142
+     ],
+     "discuss": [
+      143
+     ],
+     "avenues": [
+      144
+     ],
+     "improving": [
+      146
+     ],
+     "scalability": [
+      147
+     ],
+     "higher-dimensional": [
+      149
+     ]
+    }
+   },
+   {
+    "title": "Motion Planning (In)feasibility Detection using a Prior Roadmap via Path and Cut Search",
+    "year": 2023,
+    "doi": "https://doi.org/10.15607/rss.2023.xix.060",
+    "abstract": {
+     "Motion": [
+      0
+     ],
+     "planning": [
+      1
+     ],
+     "seeks": [
+      2
+     ],
+     "a": [
+      3,
+      7,
+      24,
+      28,
+      34,
+      38,
+      40,
+      44,
+      70,
+      123,
+      140,
+      164,
+      167,
+      170,
+      193
+     ],
+     "collision-free": [
+      4,
+      52,
+      87,
+      141
+     ],
+     "path": [
+      5,
+      88,
+      155,
+      165,
+      199
+     ],
+     "in": [
+      6,
+      16,
+      54,
+      74,
+      82,
+      89,
+      120,
+      169,
+      235,
+      246
+     ],
+     "configuration": [
+      8
+     ],
+     "space": [
+      9
+     ],
+     "(C-space),": [
+      10
+     ],
+     "representing": [
+      11
+     ],
+     "all": [
+      12
+     ],
+     "possible": [
+      13
+     ],
+     "robot": [
+      14
+     ],
+     "configurations": [
+      15
+     ],
+     "the": [
+      17,
+      55,
+      64,
+      90,
+      93,
+      96,
+      102,
+      130,
+      133,
+      136,
+      187,
+      206,
+      212,
+      218,
+      241
+     ],
+     "environment.As": [
+      18
+     ],
+     "it": [
+      19
+     ],
+     "is": [
+      20,
+      85,
+      126
+     ],
+     "challenging": [
+      21
+     ],
+     "to": [
+      22,
+      48,
+      173
+     ],
+     "construct": [
+      23
+     ],
+     "C-space": [
+      25
+     ],
+     "explicitly": [
+      26
+     ],
+     "for": [
+      27,
+      163
+     ],
+     "high-dimensional": [
+      29
+     ],
+     "robot,": [
+      30
+     ],
+     "we": [
+      31,
+      76,
+      116,
+      149
+     ],
+     "generally": [
+      32
+     ],
+     "build": [
+      33
+     ],
+     "graph": [
+      35
+     ],
+     "structure": [
+      36
+     ],
+     "called": [
+      37,
+      153
+     ],
+     "roadmap,": [
+      39
+     ],
+     "discrete": [
+      41
+     ],
+     "approximation": [
+      42
+     ],
+     "of": [
+      43,
+      66,
+      104,
+      132,
+      138,
+      189,
+      221,
+      237,
+      243
+     ],
+     "complex": [
+      45
+     ],
+     "continuous": [
+      46
+     ],
+     "C-space,": [
+      47
+     ],
+     "reason": [
+      49
+     ],
+     "about": [
+      50
+     ],
+     "connectivity.Checking": [
+      51
+     ],
+     "connectivity": [
+      53
+     ],
+     "roadmap": [
+      56,
+      91,
+      125,
+      134,
+      172,
+      213
+     ],
+     "requires": [
+      57
+     ],
+     "expensive": [
+      58,
+      178
+     ],
+     "edge-evaluation": [
+      59
+     ],
+     "computations,": [
+      60
+     ],
+     "and": [
+      61,
+      95,
+      156,
+      166,
+      198,
+      200,
+      223,
+      228,
+      231,
+      240
+     ],
+     "thus,": [
+      62
+     ],
+     "reducing": [
+      63,
+      177
+     ],
+     "number": [
+      65,
+      242
+     ],
+     "evaluations": [
+      67,
+      180,
+      245
+     ],
+     "has": [
+      68
+     ],
+     "become": [
+      69
+     ],
+     "significant": [
+      71
+     ],
+     "research": [
+      72
+     ],
+     "objective.However,": [
+      73
+     ],
+     "practice,": [
+      75
+     ],
+     "often": [
+      77,
+      100
+     ],
+     "face": [
+      78
+     ],
+     "infeasible": [
+      79
+     ],
+     "problems:": [
+      80
+     ],
+     "those": [
+      81
+     ],
+     "which": [
+      83
+     ],
+     "there": [
+      84
+     ],
+     "no": [
+      86
+     ],
+     "between": [
+      92
+     ],
+     "start": [
+      94
+     ],
+     "goal": [
+      97
+     ],
+     "locations.Existing": [
+      98
+     ],
+     "studies": [
+      99
+     ],
+     "overlook": [
+      101
+     ],
+     "possibility": [
+      103
+     ],
+     "infeasibility,": [
+      105
+     ],
+     "becoming": [
+      106
+     ],
+     "highly": [
+      107
+     ],
+     "inefficient": [
+      108
+     ],
+     "by": [
+      109,
+      191
+     ],
+     "performing": [
+      110
+     ],
+     "many": [
+      111
+     ],
+     "edge": [
+      112,
+      142,
+      179,
+      244
+     ],
+     "evaluations.In": [
+      113
+     ],
+     "this": [
+      114,
+      118,
+      147
+     ],
+     "work,": [
+      115
+     ],
+     "address": [
+      117
+     ],
+     "oversight": [
+      119
+     ],
+     "scenarios": [
+      121
+     ],
+     "where": [
+      122
+     ],
+     "prior": [
+      124,
+      171
+     ],
+     "available;": [
+      127
+     ],
+     "that": [
+      128,
+      160,
+      204,
+      208
+     ],
+     "is,": [
+      129
+     ],
+     "edges": [
+      131
+     ],
+     "contain": [
+      135
+     ],
+     "probability": [
+      137
+     ],
+     "being": [
+      139
+     ],
+     "learned": [
+      143
+     ],
+     "from": [
+      144
+     ],
+     "past": [
+      145
+     ],
+     "experience.To": [
+      146
+     ],
+     "end,": [
+      148
+     ],
+     "propose": [
+      150
+     ],
+     "an": [
+      151
+     ],
+     "algorithm": [
+      152
+     ],
+     "iterative": [
+      154,
+      196
+     ],
+     "cut": [
+      157,
+      168,
+      201
+     ],
+     "finding": [
+      158,
+      202
+     ],
+     "(IPC)": [
+      159
+     ],
+     "iteratively": [
+      161
+     ],
+     "searches": [
+      162
+     ],
+     "detect": [
+      174
+     ],
+     "infeasibility": [
+      175
+     ],
+     "while": [
+      176
+     ],
+     "as": [
+      181,
+      183,
+      226
+     ],
+     "much": [
+      182
+     ],
+     "possible.We": [
+      184
+     ],
+     "further": [
+      185
+     ],
+     "improve": [
+      186
+     ],
+     "efficiency": [
+      188
+     ],
+     "IPC": [
+      190,
+      222
+     ],
+     "introducing": [
+      192
+     ],
+     "second": [
+      194
+     ],
+     "algorithm,": [
+      195
+     ],
+     "decomposition": [
+      197
+     ],
+     "(IDPC),": [
+      203
+     ],
+     "leverages": [
+      205
+     ],
+     "fact": [
+      207
+     ],
+     "cut-finding": [
+      209
+     ],
+     "algorithms": [
+      210
+     ],
+     "partition": [
+      211
+     ],
+     "into": [
+      214
+     ],
+     "smaller": [
+      215
+     ],
+     "subgraphs.We": [
+      216
+     ],
+     "analyze": [
+      217
+     ],
+     "theoretical": [
+      219
+     ],
+     "properties": [
+      220
+     ],
+     "IDPC,": [
+      224
+     ],
+     "such": [
+      225
+     ],
+     "completeness": [
+      227
+     ],
+     "computational": [
+      229
+     ],
+     "complexity,": [
+      230
+     ],
+     "evaluate": [
+      232
+     ],
+     "their": [
+      233
+     ],
+     "performance": [
+      234
+     ],
+     "terms": [
+      236
+     ],
+     "completion": [
+      238
+     ],
+     "time": [
+      239
+     ],
+     "large-scale": [
+      247
+     ],
+     "simulations.": [
+      248
+     ]
+    }
+   },
+   {
+    "title": "Sampling-Based Motion Planning: A Comparative Review",
+    "year": 2023,
+    "doi": "https://doi.org/10.1146/annurev-control-061623-094742",
+    "abstract": {
+     "Sampling-based": [
+      0
+     ],
+     "motion": [
+      1,
+      34,
+      42,
+      70,
+      78,
+      88,
+      97,
+      104
+     ],
+     "planning": [
+      2,
+      35,
+      71,
+      79,
+      111
+     ],
+     "is": [
+      3
+     ],
+     "one": [
+      4
+     ],
+     "of": [
+      5,
+      16,
+      32,
+      41,
+      46,
+      54,
+      69,
+      86,
+      102
+     ],
+     "the": [
+      6,
+      30,
+      47,
+      147
+     ],
+     "fundamental": [
+      7
+     ],
+     "paradigms": [
+      8
+     ],
+     "to": [
+      9,
+      115,
+      155
+     ],
+     "generate": [
+      10
+     ],
+     "robot": [
+      11
+     ],
+     "motions,": [
+      12
+     ],
+     "and": [
+      13,
+      26,
+      51,
+      66,
+      126
+     ],
+     "a": [
+      14,
+      39,
+      52,
+      81,
+      84,
+      100,
+      140,
+      151
+     ],
+     "cornerstone": [
+      15
+     ],
+     "robotics": [
+      17
+     ],
+     "research.": [
+      18
+     ],
+     "This": [
+      19,
+      133
+     ],
+     "comparative": [
+      20,
+      134
+     ],
+     "review": [
+      21,
+      135
+     ],
+     "provides": [
+      22,
+      137
+     ],
+     "an": [
+      23,
+      44
+     ],
+     "up-to-date": [
+      24
+     ],
+     "guide": [
+      25,
+      152
+     ],
+     "reference": [
+      27,
+      142
+     ],
+     "manual": [
+      28,
+      143
+     ],
+     "for": [
+      29,
+      144,
+      153
+     ],
+     "use": [
+      31
+     ],
+     "sampling-based": [
+      33,
+      77,
+      96,
+      103
+     ],
+     "algorithms.": [
+      36
+     ],
+     "It": [
+      37,
+      57
+     ],
+     "includes": [
+      38
+     ],
+     "history": [
+      40
+     ],
+     "planning,": [
+      43
+     ],
+     "overview": [
+      45
+     ],
+     "most": [
+      48
+     ],
+     "successful": [
+      49
+     ],
+     "planners,": [
+      50
+     ],
+     "discussion": [
+      53,
+      85
+     ],
+     "their": [
+      55,
+      92
+     ],
+     "properties.": [
+      56
+     ],
+     "also": [
+      58,
+      150
+     ],
+     "shows": [
+      59
+     ],
+     "how": [
+      60,
+      67
+     ],
+     "planners": [
+      61,
+      105,
+      120
+     ],
+     "can": [
+      62,
+      72
+     ],
+     "handle": [
+      63
+     ],
+     "special": [
+      64
+     ],
+     "cases": [
+      65
+     ],
+     "extensions": [
+      68
+     ],
+     "be": [
+      73,
+      131
+     ],
+     "accommodated.": [
+      74
+     ],
+     "To": [
+      75
+     ],
+     "put": [
+      76
+     ],
+     "into": [
+      80,
+      118
+     ],
+     "larger": [
+      82
+     ],
+     "context,": [
+      83
+     ],
+     "alternative": [
+      87
+     ],
+     "generation": [
+      89
+     ],
+     "frameworks": [
+      90
+     ],
+     "highlights": [
+      91
+     ],
+     "respective": [
+      93
+     ],
+     "differences": [
+      94
+     ],
+     "from": [
+      95
+     ],
+     "planning.": [
+      98
+     ],
+     "Finally,": [
+      99
+     ],
+     "set": [
+      101
+     ],
+     "are": [
+      106
+     ],
+     "compared": [
+      107
+     ],
+     "on": [
+      108
+     ],
+     "24": [
+      109
+     ],
+     "challenging": [
+      110
+     ],
+     "problems": [
+      112
+     ],
+     "in": [
+      113,
+      123,
+      146
+     ],
+     "order": [
+      114
+     ],
+     "provide": [
+      116
+     ],
+     "insights": [
+      117
+     ],
+     "which": [
+      119,
+      124
+     ],
+     "perform": [
+      121
+     ],
+     "well": [
+      122
+     ],
+     "situations": [
+      125
+     ],
+     "where": [
+      127
+     ],
+     "future": [
+      128
+     ],
+     "research": [
+      129
+     ],
+     "would": [
+      130
+     ],
+     "required.": [
+      132
+     ],
+     "thereby": [
+      136
+     ],
+     "not": [
+      138
+     ],
+     "only": [
+      139
+     ],
+     "useful": [
+      141
+     ],
+     "researchers": [
+      145
+     ],
+     "field": [
+      148
+     ],
+     "but": [
+      149
+     ],
+     "practitioners": [
+      154
+     ],
+     "make": [
+      156
+     ],
+     "informed": [
+      157
+     ],
+     "algorithmic": [
+      158
+     ],
+     "decisions.": [
+      159
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "query": "incremental reachability closed superset edge deletions",
+  "results": [
+   {
+    "title": "Generating All Minimal Edge Dominating Sets with Incremental-Polynomial Delay",
+    "year": 2012,
+    "doi": "https://doi.org/10.48550/arxiv.1208.5345",
+    "abstract": {
+     "For": [
+      0,
+      32
+     ],
+     "an": [
+      1,
+      12
+     ],
+     "arbitrary": [
+      2
+     ],
+     "undirected": [
+      3
+     ],
+     "simple": [
+      4
+     ],
+     "graph": [
+      5
+     ],
+     "G": [
+      6
+     ],
+     "with": [
+      7,
+      14,
+      70,
+      116
+     ],
+     "m": [
+      8
+     ],
+     "edges,": [
+      9
+     ],
+     "we": [
+      10,
+      35,
+      40
+     ],
+     "give": [
+      11
+     ],
+     "algorithm": [
+      13
+     ],
+     "running": [
+      15
+     ],
+     "time": [
+      16,
+      52,
+      160
+     ],
+     "O(m^4": [
+      17,
+      53,
+      76
+     ],
+     "|L|^2)": [
+      18
+     ],
+     "to": [
+      19,
+      136,
+      139
+     ],
+     "generate": [
+      20,
+      63
+     ],
+     "the": [
+      21,
+      64,
+      82,
+      98,
+      149,
+      183
+     ],
+     "set": [
+      22,
+      69,
+      83
+     ],
+     "L": [
+      23,
+      80
+     ],
+     "of": [
+      24,
+      30,
+      84,
+      101,
+      107,
+      113,
+      125,
+      141,
+      152
+     ],
+     "all": [
+      25
+     ],
+     "minimal": [
+      26,
+      44,
+      66,
+      87,
+      103,
+      126,
+      142,
+      150
+     ],
+     "edge": [
+      27,
+      45,
+      67,
+      88
+     ],
+     "dominating": [
+      28,
+      46,
+      68,
+      89,
+      105,
+      127
+     ],
+     "sets": [
+      29,
+      47,
+      106,
+      128
+     ],
+     "G.": [
+      31
+     ],
+     "bipartite": [
+      33,
+      114
+     ],
+     "graphs": [
+      34,
+      109,
+      112,
+      130
+     ],
+     "obtain": [
+      36
+     ],
+     "a": [
+      37,
+      153,
+      162
+     ],
+     "better": [
+      38
+     ],
+     "result;": [
+      39
+     ],
+     "show": [
+      41
+     ],
+     "that": [
+      42
+     ],
+     "their": [
+      43
+     ],
+     "can": [
+      48,
+      155
+     ],
+     "be": [
+      49,
+      137,
+      156
+     ],
+     "enumerated": [
+      50,
+      157
+     ],
+     "in": [
+      51,
+      121,
+      129,
+      144,
+      158,
+      167,
+      182
+     ],
+     "|L|).": [
+      54
+     ],
+     "In": [
+      55
+     ],
+     "fact": [
+      56
+     ],
+     "our": [
+      57
+     ],
+     "results": [
+      58
+     ],
+     "are": [
+      59,
+      93
+     ],
+     "stronger;": [
+      60
+     ],
+     "both": [
+      61
+     ],
+     "algorithms": [
+      62,
+      92
+     ],
+     "next": [
+      65
+     ],
+     "incremental-polynomial": [
+      71,
+      117
+     ],
+     "delay": [
+      72
+     ],
+     "O(m^5": [
+      73
+     ],
+     "|L|)": [
+      74,
+      77
+     ],
+     "and": [
+      75,
+      96,
+      110,
+      119,
+      164,
+      177
+     ],
+     "respectively,": [
+      78
+     ],
+     "when": [
+      79
+     ],
+     "is": [
+      81,
+      161
+     ],
+     "already": [
+      85
+     ],
+     "generated": [
+      86
+     ],
+     "sets.": [
+      90
+     ],
+     "Our": [
+      91
+     ],
+     "tailored": [
+      94
+     ],
+     "for": [
+      95,
+      174
+     ],
+     "solve": [
+      97
+     ],
+     "equivalent": [
+      99,
+      138
+     ],
+     "problems": [
+      100
+     ],
+     "enumerating": [
+      102
+     ],
+     "(vertex)": [
+      104
+     ],
+     "line": [
+      108,
+      111
+     ],
+     "graphs,": [
+      115
+     ],
+     "delay,": [
+      118
+     ],
+     "consequently": [
+      120
+     ],
+     "output-polynomial": [
+      122,
+      159
+     ],
+     "time.": [
+      123
+     ],
+     "Enumeration": [
+      124
+     ],
+     "has": [
+      131,
+      171,
+      178
+     ],
+     "very": [
+      132
+     ],
+     "recently": [
+      133
+     ],
+     "been": [
+      134,
+      172
+     ],
+     "shown": [
+      135
+     ],
+     "enumeration": [
+      140
+     ],
+     "transversals": [
+      143,
+      151
+     ],
+     "hypergraphs.": [
+      145
+     ],
+     "The": [
+      146
+     ],
+     "question": [
+      147,
+      166
+     ],
+     "whether": [
+      148
+     ],
+     "hypergraph": [
+      154
+     ],
+     "fundamental": [
+      163
+     ],
+     "challenging": [
+      165
+     ],
+     "Output-Sensitive": [
+      168
+     ],
+     "Enumeration;": [
+      169
+     ],
+     "it": [
+      170
+     ],
+     "open": [
+      173
+     ],
+     "several": [
+      175
+     ],
+     "decades": [
+      176
+     ],
+     "triggered": [
+      179
+     ],
+     "extensive": [
+      180
+     ],
+     "research": [
+      181
+     ],
+     "field.": [
+      184
+     ]
+    }
+   },
+   {
+    "title": "Incremental relational lenses",
+    "year": 2018,
+    "doi": "https://doi.org/10.1145/3236769",
+    "abstract": {
+     "Lenses": [
+      0
+     ],
+     "are": [
+      1
+     ],
+     "a": [
+      2,
+      8,
+      29,
+      33,
+      113,
+      120
+     ],
+     "popular": [
+      3
+     ],
+     "approach": [
+      4,
+      57
+     ],
+     "to": [
+      5,
+      21,
+      24,
+      27,
+      45,
+      58,
+      66,
+      80,
+      99,
+      102,
+      106,
+      142
+     ],
+     "bidirectional": [
+      6
+     ],
+     "transformations,": [
+      7
+     ],
+     "generalisation": [
+      9
+     ],
+     "of": [
+      10,
+      69,
+      116,
+      126
+     ],
+     "the": [
+      11,
+      67,
+      100,
+      107,
+      130,
+      150,
+      160
+     ],
+     "view": [
+      12,
+      34,
+      101,
+      147,
+      157
+     ],
+     "update": [
+      13
+     ],
+     "problem": [
+      14
+     ],
+     "in": [
+      15,
+      17,
+      49
+     ],
+     "databases,": [
+      16
+     ],
+     "which": [
+      18
+     ],
+     "we": [
+      19
+     ],
+     "wish": [
+      20
+     ],
+     "make": [
+      22
+     ],
+     "changes": [
+      23,
+      98,
+      105
+     ],
+     "source": [
+      25,
+      108
+     ],
+     "tables": [
+      26
+     ],
+     "effect": [
+      28
+     ],
+     "desired": [
+      30
+     ],
+     "change": [
+      31
+     ],
+     "on": [
+      32,
+      155
+     ],
+     ".": [
+      35
+     ],
+     "However,": [
+      36
+     ],
+     "perhaps": [
+      37
+     ],
+     "surprisingly,": [
+      38
+     ],
+     "lenses": [
+      39,
+      63,
+      86,
+      91,
+      118,
+      138
+     ],
+     "have": [
+      40
+     ],
+     "seldom": [
+      41
+     ],
+     "actually": [
+      42
+     ],
+     "been": [
+      43,
+      76
+     ],
+     "used": [
+      44,
+      141
+     ],
+     "implement": [
+      46
+     ],
+     "updatable": [
+      47,
+      59,
+      156
+     ],
+     "views": [
+      48,
+      60
+     ],
+     "databases.": [
+      50
+     ],
+     "Bohannon,": [
+      51
+     ],
+     "Pierce": [
+      52
+     ],
+     "and": [
+      53,
+      119,
+      145
+     ],
+     "Vaughan": [
+      54
+     ],
+     "proposed": [
+      55
+     ],
+     "an": [
+      56
+     ],
+     "called": [
+      61
+     ],
+     "relational": [
+      62,
+      85,
+      90,
+      117,
+      137
+     ],
+     ",": [
+      64,
+      87
+     ],
+     "but": [
+      65
+     ],
+     "best": [
+      68
+     ],
+     "our": [
+      70
+     ],
+     "knowledge": [
+      71
+     ],
+     "this": [
+      72
+     ],
+     "proposal": [
+      73
+     ],
+     "has": [
+      74
+     ],
+     "not": [
+      75
+     ],
+     "implemented": [
+      77
+     ],
+     "or": [
+      78
+     ],
+     "evaluated": [
+      79
+     ],
+     "date.": [
+      81
+     ],
+     "We": [
+      82,
+      110
+     ],
+     "propose": [
+      83
+     ],
+     "incremental": [
+      84
+     ],
+     "that": [
+      88,
+      95,
+      136
+     ],
+     "equip": [
+      89
+     ],
+     "with": [
+      92
+     ],
+     "change-propagating": [
+      93
+     ],
+     "semantics": [
+      94
+     ],
+     "map": [
+      96
+     ],
+     "small": [
+      97,
+      104
+     ],
+     "(potentially)": [
+      103
+     ],
+     "tables.": [
+      109
+     ],
+     "also": [
+      111
+     ],
+     "present": [
+      112
+     ],
+     "language-integrated": [
+      114
+     ],
+     "implementation": [
+      115
+     ],
+     "detailed": [
+      121
+     ],
+     "experimental": [
+      122
+     ],
+     "evaluation,": [
+      123
+     ],
+     "showing": [
+      124
+     ],
+     "orders": [
+      125
+     ],
+     "magnitude": [
+      127
+     ],
+     "improvement": [
+      128
+     ],
+     "over": [
+      129
+     ],
+     "non-incremental": [
+      131
+     ],
+     "approach.": [
+      132
+     ],
+     "Our": [
+      133
+     ],
+     "work": [
+      134
+     ],
+     "shows": [
+      135
+     ],
+     "can": [
+      139
+     ],
+     "be": [
+      140
+     ],
+     "support": [
+      143,
+      158
+     ],
+     "expressive": [
+      144
+     ],
+     "efficient": [
+      146
+     ],
+     "updates": [
+      148
+     ],
+     "at": [
+      149
+     ],
+     "language": [
+      151
+     ],
+     "level,": [
+      152
+     ],
+     "without": [
+      153
+     ],
+     "relying": [
+      154
+     ],
+     "from": [
+      159
+     ],
+     "underlying": [
+      161
+     ],
+     "database.": [
+      162
+     ]
+    }
+   },
+   {
+    "title": "A Framework for Fast Incremental Interpretation during Speech Decoding",
+    "year": 2009,
+    "doi": "https://doi.org/10.1162/coli.08-011-r2-07-021",
+    "abstract": {
+     "This": [
+      0
+     ],
+     "article": [
+      1
+     ],
+     "describes": [
+      2
+     ],
+     "a": [
+      3,
+      11,
+      18,
+      66,
+      96
+     ],
+     "framework": [
+      4
+     ],
+     "for": [
+      5
+     ],
+     "incorporating": [
+      6
+     ],
+     "referential": [
+      7,
+      72,
+      99
+     ],
+     "semantic": [
+      8,
+      73,
+      100
+     ],
+     "information": [
+      9
+     ],
+     "from": [
+      10
+     ],
+     "world": [
+      12,
+      51
+     ],
+     "model": [
+      13,
+      21,
+      52,
+      102
+     ],
+     "or": [
+      14
+     ],
+     "ontology": [
+      15
+     ],
+     "directly": [
+      16
+     ],
+     "into": [
+      17,
+      54
+     ],
+     "probabilistic": [
+      19
+     ],
+     "language": [
+      20,
+      74
+     ],
+     "of": [
+      22,
+      46,
+      107,
+      127
+     ],
+     "the": [
+      23,
+      47,
+      55,
+      60,
+      76,
+      125
+     ],
+     "sort": [
+      24
+     ],
+     "commonly": [
+      25
+     ],
+     "used": [
+      26
+     ],
+     "in": [
+      27,
+      111,
+      118,
+      124
+     ],
+     "speech": [
+      28,
+      112
+     ],
+     "recognition,": [
+      29
+     ],
+     "where": [
+      30
+     ],
+     "it": [
+      31
+     ],
+     "can": [
+      32
+     ],
+     "be": [
+      33
+     ],
+     "probabilistically": [
+      34
+     ],
+     "weighted": [
+      35
+     ],
+     "together": [
+      36
+     ],
+     "with": [
+      37,
+      89
+     ],
+     "phonological": [
+      38
+     ],
+     "and": [
+      39,
+      71,
+      114
+     ],
+     "syntactic": [
+      40
+     ],
+     "factors": [
+      41
+     ],
+     "as": [
+      42
+     ],
+     "an": [
+      43
+     ],
+     "integral": [
+      44
+     ],
+     "part": [
+      45
+     ],
+     "decoding": [
+      48,
+      56
+     ],
+     "process.": [
+      49
+     ],
+     "Introducing": [
+      50
+     ],
+     "referents": [
+      53
+     ],
+     "search": [
+      57,
+      61,
+      84
+     ],
+     "greatly": [
+      58
+     ],
+     "increases": [
+      59
+     ],
+     "space,": [
+      62
+     ],
+     "but": [
+      63
+     ],
+     "by": [
+      64
+     ],
+     "using": [
+      65
+     ],
+     "single": [
+      67,
+      97
+     ],
+     "integrated": [
+      68
+     ],
+     "phonological,": [
+      69
+     ],
+     "syntactic,": [
+      70
+     ],
+     "model,": [
+      75
+     ],
+     "decoder": [
+      77
+     ],
+     "is": [
+      78,
+      95
+     ],
+     "able": [
+      79
+     ],
+     "to": [
+      80,
+      109
+     ],
+     "incrementally": [
+      81
+     ],
+     "prune": [
+      82
+     ],
+     "this": [
+      83
+     ],
+     "based": [
+      85
+     ],
+     "on": [
+      86,
+      121
+     ],
+     "probabilities": [
+      87
+     ],
+     "associated": [
+      88
+     ],
+     "these": [
+      90
+     ],
+     "combined": [
+      91
+     ],
+     "contexts.": [
+      92
+     ],
+     "The": [
+      93
+     ],
+     "result": [
+      94
+     ],
+     "unified": [
+      98
+     ],
+     "probability": [
+      101
+     ],
+     "which": [
+      103
+     ],
+     "brings": [
+      104
+     ],
+     "several": [
+      105
+     ],
+     "kinds": [
+      106
+     ],
+     "context": [
+      108
+     ],
+     "bear": [
+      110
+     ],
+     "decoding,": [
+      113
+     ],
+     "performs": [
+      115
+     ],
+     "accurate": [
+      116
+     ],
+     "recognition": [
+      117
+     ],
+     "real": [
+      119
+     ],
+     "time": [
+      120
+     ],
+     "large": [
+      122
+     ],
+     "domains": [
+      123
+     ],
+     "absence": [
+      126
+     ],
+     "example": [
+      128
+     ],
+     "in-domain": [
+      129
+     ],
+     "training": [
+      130
+     ],
+     "sentences.": [
+      131
+     ]
+    }
+   },
+   {
+    "title": "Efficient Incremental Data Analysis",
+    "year": 2016,
+    "doi": "https://doi.org/10.5075/epfl-thesis-7183",
+    "abstract": {
+     "Many": [
+      0
+     ],
+     "data-intensive": [
+      1
+     ],
+     "applications": [
+      2,
+      35,
+      48
+     ],
+     "require": [
+      3
+     ],
+     "real-time": [
+      4
+     ],
+     "analytics": [
+      5,
+      51,
+      74,
+      362
+     ],
+     "over": [
+      6,
+      317
+     ],
+     "streaming": [
+      7
+     ],
+     "data.": [
+      8
+     ],
+     "In": [
+      9,
+      82
+     ],
+     "a": [
+      10,
+      32,
+      126,
+      157,
+      164,
+      173,
+      195,
+      220,
+      261,
+      391,
+      413
+     ],
+     "growing": [
+      11
+     ],
+     "number": [
+      12
+     ],
+     "of": [
+      13,
+      60,
+      65,
+      92,
+      116,
+      153,
+      166,
+      213,
+      223,
+      234,
+      268,
+      300,
+      330,
+      337,
+      355,
+      371,
+      394,
+      407,
+      435
+     ],
+     "domains": [
+      14
+     ],
+     "--": [
+      15,
+      34
+     ],
+     "sensor": [
+      16
+     ],
+     "network": [
+      17
+     ],
+     "monitoring,": [
+      18
+     ],
+     "social": [
+      19
+     ],
+     "web": [
+      20
+     ],
+     "applications,": [
+      21
+     ],
+     "clickstream": [
+      22
+     ],
+     "analysis,": [
+      23
+     ],
+     "high-frequency": [
+      24
+     ],
+     "algorithmic": [
+      25
+     ],
+     "trading,": [
+      26
+     ],
+     "and": [
+      27,
+      58,
+      67,
+      105,
+      185,
+      192,
+      225,
+      229,
+      255,
+      272,
+      297,
+      304,
+      332,
+      341,
+      351,
+      375,
+      386,
+      398,
+      409
+     ],
+     "fraud": [
+      28
+     ],
+     "detections": [
+      29
+     ],
+     "to": [
+      30,
+      40,
+      43,
+      101,
+      171,
+      281,
+      291,
+      312,
+      326,
+      360,
+      378,
+      419
+     ],
+     "name": [
+      31
+     ],
+     "few": [
+      33
+     ],
+     "continuously": [
+      36
+     ],
+     "monitor": [
+      37
+     ],
+     "stream": [
+      38,
+      136,
+      230
+     ],
+     "events": [
+      39
+     ],
+     "promptly": [
+      41
+     ],
+     "react": [
+      42
+     ],
+     "certain": [
+      44
+     ],
+     "data": [
+      45,
+      381,
+      411,
+      442
+     ],
+     "conditions.": [
+      46
+     ],
+     "These": [
+      47
+     ],
+     "demand": [
+      49
+     ],
+     "responsive": [
+      50
+     ],
+     "even": [
+      52,
+      287
+     ],
+     "when": [
+      53,
+      358
+     ],
+     "faced": [
+      54
+     ],
+     "with": [
+      55
+     ],
+     "high": [
+      56,
+      147
+     ],
+     "volume": [
+      57
+     ],
+     "velocity": [
+      59
+     ],
+     "incoming": [
+      61
+     ],
+     "changes,": [
+      62
+     ],
+     "large": [
+      63
+     ],
+     "numbers": [
+      64
+     ],
+     "users,": [
+      66
+     ],
+     "complex": [
+      68,
+      93,
+      102
+     ],
+     "processing": [
+      69,
+      91,
+      108,
+      137,
+      188,
+      396,
+      406
+     ],
+     "requirements.": [
+      70
+     ],
+     "Developing": [
+      71
+     ],
+     "suitable": [
+      72
+     ],
+     "online": [
+      73,
+      90,
+      385
+     ],
+     "engine": [
+      75
+     ],
+     "that": [
+      76,
+      130,
+      139,
+      162,
+      404
+     ],
+     "meets": [
+      77
+     ],
+     "these": [
+      78,
+      356
+     ],
+     "requirements": [
+      79
+     ],
+     "is": [
+      80,
+      156
+     ],
+     "challenging.": [
+      81
+     ],
+     "this": [
+      83
+     ],
+     "thesis,": [
+      84
+     ],
+     "we": [
+      85,
+      111,
+      193
+     ],
+     "study": [
+      86,
+      180,
+      238
+     ],
+     "techniques": [
+      87,
+      321,
+      357
+     ],
+     "for": [
+      88,
+      120,
+      198,
+      207,
+      219,
+      242,
+      265
+     ],
+     "efficient": [
+      89,
+      117
+     ],
+     "analytical": [
+      94
+     ],
+     "queries,": [
+      95
+     ],
+     "ranging": [
+      96
+     ],
+     "from": [
+      97
+     ],
+     "standard": [
+      98,
+      361
+     ],
+     "database": [
+      99,
+      121,
+      228
+     ],
+     "queries": [
+      100,
+      133,
+      224,
+      243
+     ],
+     "machine": [
+      103,
+      253
+     ],
+     "learning": [
+      104,
+      254
+     ],
+     "digital": [
+      106
+     ],
+     "signal": [
+      107,
+      395,
+      410
+     ],
+     "workflows.": [
+      109
+     ],
+     "First,": [
+      110
+     ],
+     "focus": [
+      112
+     ],
+     "on": [
+      113,
+      323
+     ],
+     "the": [
+      114,
+      151,
+      181,
+      239,
+      292,
+      301,
+      305,
+      353,
+      369,
+      430
+     ],
+     "problem": [
+      115
+     ],
+     "incremental": [
+      118,
+      187,
+      240,
+      309,
+      334
+     ],
+     "computation": [
+      119,
+      241
+     ],
+     "queries.": [
+      122
+     ],
+     "We": [
+      123,
+      179,
+      236,
+      258,
+      319,
+      347,
+      389,
+      402
+     ],
+     "have": [
+      124,
+      259
+     ],
+     "developed": [
+      125,
+      260
+     ],
+     "system,": [
+      127
+     ],
+     "called": [
+      128,
+      263
+     ],
+     "DBToaster,": [
+      129
+     ],
+     "compiles": [
+      131
+     ],
+     "declarative": [
+      132
+     ],
+     "into": [
+      134,
+      203
+     ],
+     "high-performance": [
+      135
+     ],
+     "engines": [
+      138,
+      231
+     ],
+     "keep": [
+      140
+     ],
+     "query": [
+      141,
+      159,
+      373,
+      400,
+      415
+     ],
+     "results": [
+      142,
+      303
+     ],
+     "(views)": [
+      143
+     ],
+     "fresh": [
+      144
+     ],
+     "at": [
+      145,
+      429
+     ],
+     "very": [
+      146,
+      288
+     ],
+     "update": [
+      148
+     ],
+     "rates.": [
+      149
+     ],
+     "At": [
+      150
+     ],
+     "heart": [
+      152
+     ],
+     "our": [
+      154
+     ],
+     "system": [
+      155,
+      427
+     ],
+     "recursive": [
+      158
+     ],
+     "compilation": [
+      160
+     ],
+     "algorithm": [
+      161
+     ],
+     "materializes": [
+      163
+     ],
+     "set": [
+      165
+     ],
+     "supporting": [
+      167
+     ],
+     "higher-order": [
+      168
+     ],
+     "delta": [
+      169
+     ],
+     "views": [
+      170
+     ],
+     "achieve": [
+      172
+     ],
+     "substantially": [
+      174,
+      343
+     ],
+     "lower": [
+      175
+     ],
+     "view": [
+      176,
+      200,
+      215,
+      310,
+      335
+     ],
+     "maintenance": [
+      177,
+      201,
+      311,
+      336
+     ],
+     "cost.": [
+      178,
+      276
+     ],
+     "trade-offs": [
+      182
+     ],
+     "between": [
+      183
+     ],
+     "single-tuple": [
+      184
+     ],
+     "batch": [
+      186
+     ],
+     "in": [
+      189,
+      383
+     ],
+     "local": [
+      190,
+      289
+     ],
+     "execution,": [
+      191
+     ],
+     "present": [
+      194
+     ],
+     "novel": [
+      196
+     ],
+     "approach": [
+      197
+     ],
+     "compiling": [
+      199
+     ],
+     "code": [
+      202
+     ],
+     "data-parallel": [
+      204
+     ],
+     "programs": [
+      205,
+      271
+     ],
+     "optimized": [
+      206
+     ],
+     "distributed": [
+      208
+     ],
+     "execution.": [
+      209
+     ],
+     "DBToaster": [
+      210
+     ],
+     "supports": [
+      211
+     ],
+     "millions": [
+      212
+     ],
+     "complete": [
+      214
+     ],
+     "refreshes": [
+      216
+     ],
+     "per": [
+      217
+     ],
+     "second": [
+      218
+     ],
+     "broad": [
+      221
+     ],
+     "range": [
+      222
+     ],
+     "outperforms": [
+      226
+     ],
+     "commercial": [
+      227
+     ],
+     "by": [
+      232
+     ],
+     "orders": [
+      233,
+      434
+     ],
+     "magnitude.": [
+      235
+     ],
+     "also": [
+      237
+     ],
+     "written": [
+      244
+     ],
+     "as": [
+      245
+     ],
+     "iterative": [
+      246
+     ],
+     "linear": [
+      247,
+      269,
+      338
+     ],
+     "algebra,": [
+      248
+     ],
+     "which": [
+      249
+     ],
+     "can": [
+      250
+     ],
+     "capture": [
+      251
+     ],
+     "many": [
+      252
+     ],
+     "scientific": [
+      256
+     ],
+     "calculations.": [
+      257
+     ],
+     "framework,": [
+      262
+     ],
+     "LINVIEW,": [
+      264
+     ],
+     "capturing": [
+      266
+     ],
+     "deltas": [
+      267
+     ],
+     "algebra": [
+      270,
+      278,
+      339
+     ],
+     "understanding": [
+      273
+     ],
+     "their": [
+      274
+     ],
+     "computational": [
+      275
+     ],
+     "Linear": [
+      277
+     ],
+     "operations": [
+      279,
+      377,
+      397
+     ],
+     "tend": [
+      280
+     ],
+     "cause": [
+      282
+     ],
+     "an": [
+      283
+     ],
+     "avalanche": [
+      284
+     ],
+     "effect": [
+      285
+     ],
+     "where": [
+      286
+     ],
+     "changes": [
+      290
+     ],
+     "input": [
+      293
+     ],
+     "matrices": [
+      294
+     ],
+     "spread": [
+      295
+     ],
+     "out": [
+      296
+     ],
+     "infect": [
+      298
+     ],
+     "all": [
+      299
+     ],
+     "intermediate": [
+      302
+     ],
+     "final": [
+      306
+     ],
+     "view,": [
+      307
+     ],
+     "causing": [
+      308
+     ],
+     "lose": [
+      313
+     ],
+     "its": [
+      314
+     ],
+     "performance": [
+      315,
+      438
+     ],
+     "benefit": [
+      316
+     ],
+     "re-evaluation.": [
+      318,
+      346
+     ],
+     "develop": [
+      320
+     ],
+     "based": [
+      322
+     ],
+     "matrix": [
+      324
+     ],
+     "factorizations": [
+      325
+     ],
+     "contain": [
+      327
+     ],
+     "such": [
+      328
+     ],
+     "epidemics": [
+      329
+     ],
+     "change": [
+      331
+     ],
+     "make": [
+      333
+     ],
+     "practical": [
+      340
+     ],
+     "usually": [
+      342
+     ],
+     "cheaper": [
+      344
+     ],
+     "than": [
+      345,
+      439
+     ],
+     "show,": [
+      348
+     ],
+     "both": [
+      349,
+      384
+     ],
+     "analytically": [
+      350
+     ],
+     "experimentally,": [
+      352
+     ],
+     "usefulness": [
+      354
+     ],
+     "applied": [
+      359
+     ],
+     "tasks.": [
+      363
+     ],
+     "Our": [
+      364
+     ],
+     "last": [
+      365
+     ],
+     "research": [
+      366
+     ],
+     "question": [
+      367
+     ],
+     "concerns": [
+      368
+     ],
+     "integration": [
+      370,
+      393
+     ],
+     "general-purpose": [
+      372,
+      399
+     ],
+     "processors": [
+      374
+     ],
+     "domain-specific": [
+      376
+     ],
+     "enable": [
+      379
+     ],
+     "deep": [
+      380,
+      392
+     ],
+     "exploration": [
+      382
+     ],
+     "offline": [
+      387
+     ],
+     "analysis.": [
+      388
+     ],
+     "advocate": [
+      390
+     ],
+     "processors.": [
+      401
+     ],
+     "demonstrate": [
+      403
+     ],
+     "in-situ": [
+      405
+     ],
+     "tempo-relational": [
+      408
+     ],
+     "through": [
+      412
+     ],
+     "unified": [
+      414
+     ],
+     "language": [
+      416
+     ],
+     "empowers": [
+      417
+     ],
+     "users": [
+      418
+     ],
+     "express": [
+      420
+     ],
+     "end-to-end": [
+      421
+     ],
+     "workflows": [
+      422
+     ],
+     "more": [
+      423
+     ],
+     "succinctly": [
+      424
+     ],
+     "inside": [
+      425
+     ],
+     "one": [
+      426
+     ],
+     "while": [
+      428
+     ],
+     "same": [
+      431
+     ],
+     "time": [
+      432
+     ],
+     "offering": [
+      433
+     ],
+     "magnitude": [
+      436
+     ],
+     "better": [
+      437
+     ],
+     "existing": [
+      440
+     ],
+     "popular": [
+      441
+     ],
+     "management": [
+      443
+     ],
+     "systems.": [
+      444
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "query": "incremental search no path certificate reuse negative",
+  "results": [
+   {
+    "title": "Privacy-Preserving & Incrementally-Deployable Support for Certificate Transparency in Tor",
+    "year": 2021,
+    "doi": "https://doi.org/10.2478/popets-2021-0024",
+    "abstract": {
+     "The": [
+      0,
+      176,
+      214,
+      266
+     ],
+     "security": [
+      1,
+      36,
+      105
+     ],
+     "of": [
+      2,
+      11,
+      16,
+      25,
+      106,
+      170,
+      191,
+      208,
+      279
+     ],
+     "the": [
+      3,
+      8,
+      17,
+      40,
+      52,
+      60,
+      103,
+      107,
+      112,
+      141,
+      188,
+      237,
+      251,
+      258,
+      280
+     ],
+     "web": [
+      4,
+      18,
+      28,
+      84,
+      259
+     ],
+     "improved": [
+      5
+     ],
+     "greatly": [
+      6
+     ],
+     "throughout": [
+      7
+     ],
+     "last": [
+      9
+     ],
+     "couple": [
+      10
+     ],
+     "years.": [
+      12
+     ],
+     "A": [
+      13,
+      47,
+      69
+     ],
+     "large": [
+      14
+     ],
+     "majority": [
+      15
+     ],
+     "is": [
+      19,
+      45,
+      159,
+      255
+     ],
+     "now": [
+      20
+     ],
+     "served": [
+      21
+     ],
+     "encrypted": [
+      22
+     ],
+     "as": [
+      23
+     ],
+     "part": [
+      24
+     ],
+     "HTTPS,": [
+      26,
+      162
+     ],
+     "and": [
+      27,
+      89,
+      111,
+      127,
+      166,
+      196,
+      229,
+      262,
+      298
+     ],
+     "browsers": [
+      29,
+      85
+     ],
+     "accordingly": [
+      30
+     ],
+     "moved": [
+      31
+     ],
+     "from": [
+      32,
+      285
+     ],
+     "positive": [
+      33
+     ],
+     "to": [
+      34,
+      65,
+      72,
+      95,
+      101,
+      118,
+      182,
+      244,
+      292,
+      297
+     ],
+     "negative": [
+      35
+     ],
+     "indicators": [
+      37
+     ],
+     "that": [
+      38,
+      51,
+      58,
+      130,
+      146,
+      155,
+      224,
+      236
+     ],
+     "warn": [
+      39
+     ],
+     "user": [
+      41,
+      154
+     ],
+     "if": [
+      42,
+      75,
+      152,
+      246
+     ],
+     "a": [
+      43,
+      55,
+      66,
+      78,
+      153,
+      184,
+      206,
+      272,
+      276
+     ],
+     "connection": [
+      44,
+      49
+     ],
+     "insecure.": [
+      46
+     ],
+     "secure": [
+      48
+     ],
+     "requires": [
+      50
+     ],
+     "server": [
+      53
+     ],
+     "presents": [
+      54
+     ],
+     "valid": [
+      56,
+      74
+     ],
+     "certificate": [
+      57,
+      70
+     ],
+     "binds": [
+      59
+     ],
+     "domain": [
+      61
+     ],
+     "name": [
+      62
+     ],
+     "in": [
+      63,
+      135,
+      187,
+      260
+     ],
+     "question": [
+      64
+     ],
+     "public": [
+      67
+     ],
+     "key.": [
+      68
+     ],
+     "used": [
+      71
+     ],
+     "be": [
+      73
+     ],
+     "signed": [
+      76
+     ],
+     "by": [
+      77,
+      203,
+      250
+     ],
+     "trusted": [
+      79
+     ],
+     "Certificate": [
+      80,
+      97
+     ],
+     "Authority": [
+      81
+     ],
+     "(CA),": [
+      82
+     ],
+     "but": [
+      83
+     ],
+     "like": [
+      86
+     ],
+     "Google": [
+      87
+     ],
+     "Chrome": [
+      88
+     ],
+     "Apple’s": [
+      90
+     ],
+     "Safari": [
+      91
+     ],
+     "have": [
+      92,
+      116
+     ],
+     "additionally": [
+      93
+     ],
+     "started": [
+      94
+     ],
+     "mandate": [
+      96
+     ],
+     "Transparency": [
+      98
+     ],
+     "(CT)": [
+      99
+     ],
+     "logging": [
+      100
+     ],
+     "overcome": [
+      102
+     ],
+     "weakest-link": [
+      104
+     ],
+     "CA": [
+      108,
+      171
+     ],
+     "ecosystem.": [
+      109
+     ],
+     "Tor": [
+      110,
+      114,
+      157,
+      181,
+      270
+     ],
+     "Firefox-based": [
+      113
+     ],
+     "Browser": [
+      115,
+      158
+     ],
+     "yet": [
+      117
+     ],
+     "enforce": [
+      119
+     ],
+     "CT.": [
+      120
+     ],
+     "In": [
+      121
+     ],
+     "this": [
+      122,
+      202
+     ],
+     "paper,": [
+      123
+     ],
+     "we": [
+      124,
+      163,
+      300
+     ],
+     "present": [
+      125
+     ],
+     "privacy-preserving": [
+      126
+     ],
+     "incrementally-deployable": [
+      128
+     ],
+     "designs": [
+      129,
+      138
+     ],
+     "add": [
+      131
+     ],
+     "support": [
+      132
+     ],
+     "for": [
+      133,
+      257,
+      274
+     ],
+     "CT": [
+      134,
+      144,
+      173,
+      212,
+      219,
+      239,
+      281
+     ],
+     "Tor.": [
+      136,
+      265,
+      302
+     ],
+     "Our": [
+      137
+     ],
+     "go": [
+      139
+     ],
+     "beyond": [
+      140
+     ],
+     "currently": [
+      142
+     ],
+     "deployed": [
+      143
+     ],
+     "enforcements": [
+      145
+     ],
+     "are": [
+      147,
+      227
+     ],
+     "based": [
+      148
+     ],
+     "on": [
+      149
+     ],
+     "blind": [
+      150
+     ],
+     "trust:": [
+      151
+     ],
+     "uses": [
+      156
+     ],
+     "man-in-the-middled": [
+      160
+     ],
+     "over": [
+      161
+     ],
+     "probabilistically": [
+      164
+     ],
+     "detect": [
+      165,
+      193
+     ],
+     "disclose": [
+      167
+     ],
+     "cryptographic": [
+      168
+     ],
+     "evidence": [
+      169
+     ],
+     "and/or": [
+      172
+     ],
+     "log": [
+      174,
+      247,
+      282
+     ],
+     "misbehavior.": [
+      175
+     ],
+     "first": [
+      177
+     ],
+     "design": [
+      178,
+      268
+     ],
+     "increment": [
+      179,
+      289
+     ],
+     "allows": [
+      180
+     ],
+     "play": [
+      183,
+      249
+     ],
+     "vital": [
+      185
+     ],
+     "role": [
+      186
+     ],
+     "overall": [
+      189
+     ],
+     "goal": [
+      190
+     ],
+     "CT:": [
+      192
+     ],
+     "mis-issued": [
+      194
+     ],
+     "certificates": [
+      195,
+      209
+     ],
+     "hold": [
+      197,
+      217
+     ],
+     "CAs": [
+      198
+     ],
+     "accountable.": [
+      199
+     ],
+     "We": [
+      200
+     ],
+     "achieve": [
+      201
+     ],
+     "randomly": [
+      204
+     ],
+     "cross-logging": [
+      205
+     ],
+     "subset": [
+      207
+     ],
+     "into": [
+      210,
+      271
+     ],
+     "other": [
+      211
+     ],
+     "logs.": [
+      213
+     ],
+     "final": [
+      215
+     ],
+     "increments": [
+      216
+     ],
+     "misbehaving": [
+      218
+     ],
+     "logs": [
+      220,
+      226
+     ],
+     "accountable,": [
+      221
+     ],
+     "initially": [
+      222
+     ],
+     "assuming": [
+      223
+     ],
+     "some": [
+      225
+     ],
+     "benign": [
+      228
+     ],
+     "then": [
+      230
+     ],
+     "without": [
+      231
+     ],
+     "any": [
+      232
+     ],
+     "such": [
+      233
+     ],
+     "assumption.": [
+      234
+     ],
+     "Given": [
+      235
+     ],
+     "current": [
+      238
+     ],
+     "deployment": [
+      240
+     ],
+     "lacks": [
+      241
+     ],
+     "strong": [
+      242
+     ],
+     "mechanisms": [
+      243
+     ],
+     "verify": [
+      245
+     ],
+     "operators": [
+      248
+     ],
+     "rules,": [
+      252
+     ],
+     "exposing": [
+      253
+     ],
+     "misbehavior": [
+      254
+     ],
+     "important": [
+      256
+     ],
+     "general": [
+      261
+     ],
+     "not": [
+      263
+     ],
+     "just": [
+      264
+     ],
+     "full": [
+      267
+     ],
+     "turns": [
+      269
+     ],
+     "system": [
+      273
+     ],
+     "maintaining": [
+      275
+     ],
+     "probabilistically-verified": [
+      277
+     ],
+     "view": [
+      278
+     ],
+     "ecosystem": [
+      283
+     ],
+     "available": [
+      284
+     ],
+     "Tor’s": [
+      286
+     ],
+     "consensus.": [
+      287
+     ],
+     "Each": [
+      288
+     ],
+     "leading": [
+      290
+     ],
+     "up": [
+      291
+     ],
+     "it": [
+      293
+     ],
+     "preserves": [
+      294
+     ],
+     "privacy": [
+      295
+     ],
+     "due": [
+      296
+     ],
+     "how": [
+      299
+     ],
+     "use": [
+      301
+     ]
+    }
+   },
+   {
+    "title": "MUC-G4: Accelerating Incremental Verification of Compressed Neural Networks via Minimal UNSAT Core Reuse",
+    "year": 2026,
+    "doi": "https://doi.org/10.1145/3820060",
+    "abstract": {
+     "The": [
+      0
+     ],
+     "optimization": [
+      1
+     ],
+     "of": [
+      2,
+      80,
+      91,
+      123,
+      125,
+      137,
+      235
+     ],
+     "Deep": [
+      3
+     ],
+     "Neural": [
+      4
+     ],
+     "Networks": [
+      5
+     ],
+     "(DNNs)": [
+      6
+     ],
+     "for": [
+      7,
+      28,
+      114,
+      231
+     ],
+     "resource-constrained": [
+      8
+     ],
+     "environments": [
+      9
+     ],
+     "through": [
+      10,
+      199
+     ],
+     "quantization": [
+      11
+     ],
+     "and": [
+      12,
+      32,
+      94,
+      141,
+      156,
+      165,
+      182
+     ],
+     "pruning": [
+      13
+     ],
+     "necessitates": [
+      14
+     ],
+     "efficient": [
+      15
+     ],
+     "re-verification": [
+      16
+     ],
+     "to": [
+      17,
+      35,
+      163
+     ],
+     "ensure": [
+      18
+     ],
+     "safety.": [
+      19,
+      115
+     ],
+     "However,": [
+      20
+     ],
+     "existing": [
+      21
+     ],
+     "incremental": [
+      22,
+      73
+     ],
+     "verification": [
+      23,
+      74
+     ],
+     "methods": [
+      24
+     ],
+     "are": [
+      25,
+      134,
+      211
+     ],
+     "primarily": [
+      26
+     ],
+     "designed": [
+      27
+     ],
+     "numerical": [
+      29
+     ],
+     "parameter": [
+      30
+     ],
+     "perturbations": [
+      31
+     ],
+     "often": [
+      33,
+      135
+     ],
+     "struggle": [
+      34
+     ],
+     "handle": [
+      36
+     ],
+     "the": [
+      37,
+      55,
+      61,
+      78,
+      89,
+      110,
+      121,
+      128,
+      138,
+      152,
+      171,
+      179,
+      194,
+      232
+     ],
+     "discrete": [
+      38
+     ],
+     "structural": [
+      39,
+      191
+     ],
+     "changes": [
+      40
+     ],
+     "introduced": [
+      41
+     ],
+     "by": [
+      42,
+      88,
+      144
+     ],
+     "network": [
+      43,
+      225
+     ],
+     "pruning.": [
+      44,
+      86
+     ],
+     "Moreover,": [
+      45
+     ],
+     "traditional": [
+      46
+     ],
+     "approaches": [
+      47
+     ],
+     "verify": [
+      48
+     ],
+     "each": [
+      49
+     ],
+     "model": [
+      50
+     ],
+     "variant": [
+      51
+     ],
+     "from": [
+      52,
+      151
+     ],
+     "scratch,": [
+      53
+     ],
+     "discarding": [
+      54
+     ],
+     "significant": [
+      56
+     ],
+     "computational": [
+      57
+     ],
+     "effort": [
+      58
+     ],
+     "invested": [
+      59
+     ],
+     "in": [
+      60,
+      120,
+      170
+     ],
+     "original": [
+      62,
+      153
+     ],
+     "model’s": [
+      63
+     ],
+     "proof.": [
+      64
+     ],
+     "In": [
+      65
+     ],
+     "this": [
+      66
+     ],
+     "paper,": [
+      67
+     ],
+     "we": [
+      68
+     ],
+     "present": [
+      69
+     ],
+     "MUC-G4": [
+      70,
+      98,
+      147
+     ],
+     ",": [
+      71,
+      97
+     ],
+     "an": [
+      72
+     ],
+     "framework": [
+      75,
+      195
+     ],
+     "that": [
+      76,
+      108,
+      131,
+      186,
+      205,
+      217
+     ],
+     "accelerates": [
+      77
+     ],
+     "certification": [
+      79,
+      234
+     ],
+     "compressed": [
+      81,
+      172
+     ],
+     "DNNs": [
+      82
+     ],
+     "via": [
+      83
+     ],
+     "search": [
+      84,
+      174,
+      209
+     ],
+     "space": [
+      85
+     ],
+     "Inspired": [
+      87
+     ],
+     "principles": [
+      90
+     ],
+     "residual": [
+      92,
+      201
+     ],
+     "reasoning": [
+      93
+     ],
+     "conflict-driven": [
+      95
+     ],
+     "learning": [
+      96,
+      238
+     ],
+     "identifies": [
+      99
+     ],
+     "Minimal": [
+      100
+     ],
+     "UNSAT": [
+      101
+     ],
+     "Cores": [
+      102
+     ],
+     "(MUCs)": [
+      103
+     ],
+     "as": [
+      104,
+      159
+     ],
+     "robust": [
+      105
+     ],
+     "proof": [
+      106,
+      155
+     ],
+     "artifacts": [
+      107
+     ],
+     "capture": [
+      109
+     ],
+     "local": [
+      111
+     ],
+     "logical": [
+      112,
+      129
+     ],
+     "reasons": [
+      113
+     ],
+     "Our": [
+      116,
+      214
+     ],
+     "work": [
+      117
+     ],
+     "is": [
+      118
+     ],
+     "grounded": [
+      119
+     ],
+     "insight": [
+      122
+     ],
+     "Locality": [
+      124
+     ],
+     "Conflicts": [
+      126
+     ],
+     ":": [
+      127
+     ],
+     "contradictions": [
+      130
+     ],
+     "guarantee": [
+      132
+     ],
+     "safety": [
+      133,
+      187
+     ],
+     "independent": [
+      136
+     ],
+     "redundant": [
+      139
+     ],
+     "neurons": [
+      140
+     ],
+     "connections": [
+      142
+     ],
+     "targeted": [
+      143
+     ],
+     "compression": [
+      145
+     ],
+     "algorithms.": [
+      146
+     ],
+     "extracts": [
+      148
+     ],
+     "these": [
+      149
+     ],
+     "MUCs": [
+      150
+     ],
+     "network’s": [
+      154,
+      173
+     ],
+     "utilizes": [
+      157
+     ],
+     "them": [
+      158
+     ],
+     "a": [
+      160,
+      200,
+      228
+     ],
+     "warm-start": [
+      161
+     ],
+     "mechanism": [
+      162
+     ],
+     "identify": [
+      164
+     ],
+     "prune": [
+      166
+     ],
+     "stable": [
+      167
+     ],
+     "infeasible": [
+      168
+     ],
+     "regions": [
+      169
+     ],
+     "space.": [
+      175
+     ],
+     "Experimental": [
+      176
+     ],
+     "results": [
+      177
+     ],
+     "on": [
+      178
+     ],
+     "ACAS": [
+      180
+     ],
+     "Xu": [
+      181
+     ],
+     "MNIST": [
+      183
+     ],
+     "benchmarks": [
+      184
+     ],
+     "demonstrate": [
+      185
+     ],
+     "proofs": [
+      188,
+      219
+     ],
+     "exhibit": [
+      189
+     ],
+     "high": [
+      190
+     ],
+     "resilience.": [
+      192
+     ],
+     "Crucially,": [
+      193
+     ],
+     "maintains": [
+      196
+     ],
+     "full": [
+      197
+     ],
+     "completeness": [
+      198
+     ],
+     "solving": [
+      202
+     ],
+     "phase,": [
+      203
+     ],
+     "ensuring": [
+      204
+     ],
+     "all": [
+      206
+     ],
+     "newly": [
+      207
+     ],
+     "exposed": [
+      208
+     ],
+     "paths": [
+      210
+     ],
+     "rigorously": [
+      212
+     ],
+     "verified.": [
+      213
+     ],
+     "findings": [
+      215
+     ],
+     "suggest": [
+      216
+     ],
+     "formal": [
+      218
+     ],
+     "can": [
+      220
+     ],
+     "effectively": [
+      221
+     ],
+     "evolve": [
+      222
+     ],
+     "alongside": [
+      223
+     ],
+     "optimized": [
+      224
+     ],
+     "variants,": [
+      226
+     ],
+     "providing": [
+      227
+     ],
+     "scalable": [
+      229
+     ],
+     "foundation": [
+      230
+     ],
+     "continuous": [
+      233
+     ],
+     "safety-critical": [
+      236
+     ],
+     "machine": [
+      237
+     ],
+     "systems.": [
+      239
+     ]
+    }
+   },
+   {
+    "title": "Construction-Reuse Trade-offs for Exact Certificates in Fixed-Rank Threshold Screening",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2609.34424",
+    "abstract": {
+     "Repeated": [
+      0
+     ],
+     "threshold": [
+      1
+     ],
+     "queries": [
+      2
+     ],
+     "may": [
+      3
+     ],
+     "reuse": [
+      4
+     ],
+     "selected": [
+      5
+     ],
+     "identities": [
+      6
+     ],
+     "without": [
+      7
+     ],
+     "reusing": [
+      8
+     ],
+     "stale": [
+      9
+     ],
+     "reports,": [
+      10
+     ],
+     "but": [
+      11
+     ],
+     "cheaper": [
+      12
+     ],
+     "certificates": [
+      13,
+      25
+     ],
+     "need": [
+      14
+     ],
+     "not": [
+      15,
+      133,
+      227
+     ],
+     "shorten": [
+      16
+     ],
+     "the": [
+      17,
+      208,
+      213
+     ],
+     "complete": [
+      18,
+      88,
+      190
+     ],
+     "response.": [
+      19
+     ],
+     "We": [
+      20
+     ],
+     "study": [
+      21
+     ],
+     "selected-lower,": [
+      22
+     ],
+     "atomic-upper": [
+      23
+     ],
+     "(SLA)": [
+      24
+     ],
+     "for": [
+      26
+     ],
+     "fixed-rank": [
+      27
+     ],
+     "conjunctive": [
+      28
+     ],
+     "screening": [
+      29
+     ],
+     "with": [
+      30,
+      94
+     ],
+     "explicit": [
+      31
+     ],
+     "missing-information": [
+      32
+     ],
+     "semantics.": [
+      33
+     ],
+     "An": [
+      34,
+      99
+     ],
+     "endpoint": [
+      35
+     ],
+     "characterization": [
+      36
+     ],
+     "and": [
+      37,
+      75,
+      110,
+      125,
+      146,
+      159,
+      169,
+      193,
+      205,
+      218
+     ],
+     "a": [
+      38,
+      194,
+      223
+     ],
+     "counterexample": [
+      39
+     ],
+     "separate": [
+      40
+     ],
+     "same-source": [
+      41
+     ],
+     "containment": [
+      42
+     ],
+     "from": [
+      43,
+      144
+     ],
+     "policy-dependent": [
+      44
+     ],
+     "online": [
+      45
+     ],
+     "behavior.": [
+      46
+     ],
+     "The": [
+      47,
+      200
+     ],
+     "original": [
+      48
+     ],
+     "320-session": [
+      49
+     ],
+     "experiment": [
+      50
+     ],
+     "reduces": [
+      51
+     ],
+     "summed": [
+      52,
+      80
+     ],
+     "construction": [
+      53,
+      106,
+      142,
+      202
+     ],
+     "medians": [
+      54
+     ],
+     "by": [
+      55
+     ],
+     "31.18%": [
+      56
+     ],
+     "against": [
+      57,
+      123,
+      127
+     ],
+     "an": [
+      58,
+      154
+     ],
+     "exclusion-cover": [
+      59
+     ],
+     "certificate,": [
+      60
+     ],
+     "yet": [
+      61
+     ],
+     "its": [
+      62
+     ],
+     "Cover/SLA": [
+      63,
+      95
+     ],
+     "full-API": [
+      64
+     ],
+     "geometric": [
+      65
+     ],
+     "time": [
+      66,
+      81
+     ],
+     "ratio": [
+      67
+     ],
+     "is": [
+      68,
+      118,
+      222
+     ],
+     "0.9682": [
+      69
+     ],
+     "(95%": [
+      70
+     ],
+     "conditional": [
+      71
+     ],
+     "blocked": [
+      72
+     ],
+     "interval": [
+      73
+     ],
+     "0.9593-0.9769),": [
+      74
+     ],
+     "SLA": [
+      76,
+      117,
+      201
+     ],
+     "takes": [
+      77
+     ],
+     "12.94%": [
+      78
+     ],
+     "more": [
+      79
+     ],
+     "than": [
+      82
+     ],
+     "uncached": [
+      83
+     ],
+     "Bitmap.": [
+      84
+     ],
+     "Three": [
+      85
+     ],
+     "separately": [
+      86
+     ],
+     "launched": [
+      87
+     ],
+     "repeats": [
+      89
+     ],
+     "preserve": [
+      90
+     ],
+     "this": [
+      91
+     ],
+     "adverse": [
+      92
+     ],
+     "ordering,": [
+      93
+     ],
+     "ratios": [
+      96
+     ],
+     "of": [
+      97
+     ],
+     "0.9665-0.9718.": [
+      98
+     ],
+     "additional": [
+      100
+     ],
+     "720-configuration": [
+      101
+     ],
+     "exploration": [
+      102
+     ],
+     "varies": [
+      103
+     ],
+     "catalogue": [
+      104
+     ],
+     "size,": [
+      105
+     ],
+     "period,": [
+      107
+     ],
+     "requested": [
+      108
+     ],
+     "count": [
+      109
+     ],
+     "query": [
+      111
+     ],
+     "locality": [
+      112
+     ],
+     "on": [
+      113
+     ],
+     "empirically": [
+      114
+     ],
+     "resampled": [
+      115
+     ],
+     "tables.": [
+      116
+     ],
+     "faster": [
+      119
+     ],
+     "in": [
+      120
+     ],
+     "295": [
+      121
+     ],
+     "configurations": [
+      122
+     ],
+     "Cover": [
+      124
+     ],
+     "271": [
+      126
+     ],
+     "Bitmap,": [
+      128
+     ],
+     "descriptive": [
+      129
+     ],
+     "counts": [
+      130
+     ],
+     "that": [
+      131
+     ],
+     "do": [
+      132
+     ],
+     "establish": [
+      134
+     ],
+     "universal": [
+      135,
+      232
+     ],
+     "superiority.": [
+      136
+     ],
+     "Separately": [
+      137
+     ],
+     "instrumented": [
+      138
+     ],
+     "additive": [
+      139
+     ],
+     "costs": [
+      140
+     ],
+     "distinguish": [
+      141
+     ],
+     "savings": [
+      143
+     ],
+     "retrieval": [
+      145
+     ],
+     "report": [
+      147
+     ],
+     "costs.": [
+      148
+     ],
+     "A": [
+      149,
+      176
+     ],
+     "plane-stress": [
+      150
+     ],
+     "component": [
+      151
+     ],
+     "case": [
+      152
+     ],
+     "adds": [
+      153
+     ],
+     "independent": [
+      155
+     ],
+     "analytical": [
+      156
+     ],
+     "displacement": [
+      157
+     ],
+     "check": [
+      158
+     ],
+     "4,608": [
+      160
+     ],
+     "boundary-challenging": [
+      161
+     ],
+     "queries:": [
+      162
+     ],
+     "five": [
+      163
+     ],
+     "implementations": [
+      164
+     ],
+     "agree": [
+      165
+     ],
+     "exactly,": [
+      166
+     ],
+     "while": [
+      167
+     ],
+     "medium-": [
+      168
+     ],
+     "fine-mesh": [
+      170
+     ],
+     "selections": [
+      171
+     ],
+     "differ": [
+      172
+     ],
+     "at": [
+      173
+     ],
+     "459": [
+      174
+     ],
+     "positions.": [
+      175
+     ],
+     "state-stratified": [
+      177
+     ],
+     "public": [
+      178
+     ],
+     "bolt-record": [
+      179
+     ],
+     "exercise": [
+      180
+     ],
+     "preserves": [
+      181
+     ],
+     "185": [
+      182
+     ],
+     "incomplete": [
+      183
+     ],
+     "positions": [
+      184
+     ],
+     "among": [
+      185
+     ],
+     "1,479": [
+      186
+     ],
+     "requests.": [
+      187
+     ],
+     "Raw": [
+      188
+     ],
+     "timings,": [
+      189
+     ],
+     "configuration": [
+      191
+     ],
+     "results": [
+      192
+     ],
+     "tested": [
+      195
+     ],
+     "clean-environment": [
+      196
+     ],
+     "package": [
+      197
+     ],
+     "support": [
+      198
+     ],
+     "reproducibility.": [
+      199
+     ],
+     "was": [
+      203
+     ],
+     "explored": [
+      204
+     ],
+     "refined": [
+      206
+     ],
+     "through": [
+      207
+     ],
+     "self-evolving": [
+      209
+     ],
+     "AI": [
+      210
+     ],
+     "system": [
+      211
+     ],
+     "ZiYor;": [
+      212
+     ],
+     "named": [
+      214
+     ],
+     "authors": [
+      215
+     ],
+     "specified,": [
+      216
+     ],
+     "implemented": [
+      217
+     ],
+     "evaluated": [
+      219
+     ],
+     "it.": [
+      220
+     ],
+     "This": [
+      221
+     ],
+     "bounded": [
+      224
+     ],
+     "mechanics-to-query": [
+      225
+     ],
+     "study,": [
+      226
+     ],
+     "physical": [
+      228
+     ],
+     "joint": [
+      229
+     ],
+     "qualification": [
+      230
+     ],
+     "or": [
+      231
+     ],
+     "speedup.": [
+      233
+     ]
+    }
+   },
+   {
+    "title": "Knowledge Molecules in AI Knowledge Assistants: Task–State Boundary Certificates for Evidence Reuse",
+    "year": 2024,
+    "doi": "https://doi.org/10.30534/ijiscs/2024/021352024",
+    "abstract": {
+     "Retrieval-augmented": [
+      0
+     ],
+     "AI": [
+      1,
+      175
+     ],
+     "assistants": [
+      2
+     ],
+     "may": [
+      3
+     ],
+     "reuse": [
+      4,
+      89,
+      95,
+      173
+     ],
+     "evidence": [
+      5,
+      44,
+      56,
+      172
+     ],
+     "after": [
+      6
+     ],
+     "the": [
+      7,
+      16,
+      110,
+      141,
+      145,
+      148
+     ],
+     "task,": [
+      8
+     ],
+     "provenance": [
+      9
+     ],
+     "status,": [
+      10
+     ],
+     "or": [
+      11
+     ],
+     "source": [
+      12,
+      179
+     ],
+     "authority": [
+      13,
+      47
+     ],
+     "changes,": [
+      14
+     ],
+     "making": [
+      15
+     ],
+     "boundary": [
+      17,
+      32
+     ],
+     "of": [
+      18,
+      157
+     ],
+     "a": [
+      19,
+      23,
+      30,
+      38,
+      42,
+      80,
+      129,
+      155
+     ],
+     "reusable": [
+      20
+     ],
+     "knowledge": [
+      21,
+      176
+     ],
+     "item": [
+      22
+     ],
+     "con-sequential": [
+      24
+     ],
+     "design": [
+      25
+     ],
+     "decision.": [
+      26
+     ],
+     "This": [
+      27
+     ],
+     "study": [
+      28,
+      161
+     ],
+     "introduces": [
+      29
+     ],
+     "task–state": [
+      31
+     ],
+     "certificate": [
+      33,
+      151
+     ],
+     "for": [
+      34,
+      171,
+      186
+     ],
+     "Knowledge": [
+      35
+     ],
+     "Molecules": [
+      36
+     ],
+     "(KMol):": [
+      37
+     ],
+     "verifiable": [
+      39
+     ],
+     "contract": [
+      40
+     ],
+     "linking": [
+      41
+     ],
+     "purpose-relative": [
+      43
+     ],
+     "wit-ness,": [
+      45
+     ],
+     "an": [
+      46,
+      104
+     ],
+     "snapshot,": [
+      48
+     ],
+     "and": [
+      49,
+      58,
+      64,
+      167,
+      181
+     ],
+     "events": [
+      50
+     ],
+     "that": [
+      51
+     ],
+     "trigger": [
+      52
+     ],
+     "revalidation.": [
+      53
+     ],
+     "We": [
+      54
+     ],
+     "formalize": [
+      55
+     ],
+     "ad-mission": [
+      57
+     ],
+     "counterfactual": [
+      59
+     ],
+     "minimality": [
+      60
+     ],
+     "as": [
+      61
+     ],
+     "separate": [
+      62
+     ],
+     "checks": [
+      63
+     ],
+     "evaluate": [
+      65
+     ],
+     "them": [
+      66
+     ],
+     "in": [
+      67,
+      147,
+      174
+     ],
+     "reproducible": [
+      68
+     ],
+     "finite-state": [
+      69
+     ],
+     "simulations.": [
+      70
+     ],
+     "Across": [
+      71
+     ],
+     "400": [
+      72
+     ],
+     "constructed": [
+      73
+     ],
+     "cases,": [
+      74
+     ],
+     "1,600": [
+      75
+     ],
+     "task": [
+      76
+     ],
+     "certificates": [
+      77
+     ],
+     "were": [
+      78
+     ],
+     "derived;": [
+      79
+     ],
+     "cross-task": [
+      81
+     ],
+     "audit": [
+      82,
+      116
+     ],
+     "identified": [
+      83
+     ],
+     "3,900": [
+      84
+     ],
+     "decision": [
+      85
+     ],
+     "mismatches": [
+      86
+     ],
+     "among": [
+      87
+     ],
+     "4,800": [
+      88
+     ],
+     "trials.": [
+      90
+     ],
+     "In": [
+      91
+     ],
+     "11,200": [
+      92
+     ],
+     "source-event": [
+      93
+     ],
+     "trials,": [
+      94
+     ],
+     "without": [
+      96,
+      124
+     ],
+     "revalidation": [
+      97
+     ],
+     "produced": [
+      98
+     ],
+     "3,000": [
+      99
+     ],
+     "unjustified": [
+      100
+     ],
+     "ALLOW": [
+      101
+     ],
+     "decisions,": [
+      102
+     ],
+     "which": [
+      103
+     ],
+     "event-aware": [
+      105
+     ],
+     "verification": [
+      106
+     ],
+     "gate": [
+      107
+     ],
+     "prevented": [
+      108
+     ],
+     "under": [
+      109
+     ],
+     "modeled": [
+      111,
+      126
+     ],
+     "rules.": [
+      112
+     ],
+     "A": [
+      113,
+      136
+     ],
+     "further": [
+      114
+     ],
+     "2,400-update": [
+      115
+     ],
+     "reduced": [
+      117
+     ],
+     "rule-evaluator": [
+      118
+     ],
+     "calls": [
+      119
+     ],
+     "from": [
+      120
+     ],
+     "9,600": [
+      121
+     ],
+     "to": [
+      122
+     ],
+     "5,200": [
+      123
+     ],
+     "missing": [
+      125
+     ],
+     "deci-sion": [
+      127
+     ],
+     "changes;": [
+      128
+     ],
+     "matched": [
+      130,
+      137
+     ],
+     "generic": [
+      131
+     ],
+     "dependency": [
+      132
+     ],
+     "index": [
+      133
+     ],
+     "tied": [
+      134
+     ],
+     "KMol.": [
+      135
+     ],
+     "metadata-aware": [
+      138
+     ],
+     "comparator": [
+      139
+     ],
+     "achieved": [
+      140
+     ],
+     "same": [
+      142
+     ],
+     "outcomes,": [
+      143
+     ],
+     "locating": [
+      144
+     ],
+     "contribution": [
+      146
+     ],
+     "explicit,": [
+      149
+     ],
+     "auditable": [
+      150
+     ],
+     "protocol": [
+      152
+     ],
+     "rather": [
+      153
+     ],
+     "than": [
+      154
+     ],
+     "claim": [
+      156
+     ],
+     "superior": [
+      158
+     ],
+     "prediction.": [
+      159
+     ],
+     "The": [
+      160
+     ],
+     "provides": [
+      162
+     ],
+     "operational": [
+      163
+     ],
+     "definitions,": [
+      164
+     ],
+     "executable": [
+      165
+     ],
+     "algorithms,": [
+      166
+     ],
+     "testable": [
+      168
+     ],
+     "validity": [
+      169
+     ],
+     "conditions": [
+      170
+     ],
+     "assistants.": [
+      177
+     ],
+     "Independent": [
+      178
+     ],
+     "corpora": [
+      180
+     ],
+     "end-to-end": [
+      182
+     ],
+     "generation": [
+      183
+     ],
+     "are": [
+      184
+     ],
+     "priorities": [
+      185
+     ],
+     "subsequent": [
+      187
+     ],
+     "validation": [
+      188
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "query": "dynamic graph reachability insertion deletion certificate",
+  "results": [
+   {
+    "title": "Graph certificates, lookahead in dynamic graph problems, and assembly planning in robotics",
+    "year": 1994,
+    "doi": null,
+    "abstract": {
+     "Despite": [
+      0
+     ],
+     "intensive": [
+      1
+     ],
+     "efforts": [
+      2
+     ],
+     "in": [
+      3,
+      140,
+      147,
+      166
+     ],
+     "the": [
+      4,
+      16,
+      46,
+      55,
+      58,
+      76,
+      99,
+      114,
+      135,
+      143,
+      162,
+      172,
+      176,
+      195
+     ],
+     "area": [
+      5
+     ],
+     "of": [
+      6,
+      19,
+      38,
+      50,
+      57,
+      75,
+      79,
+      85,
+      106,
+      121,
+      128,
+      137,
+      145,
+      175,
+      184
+     ],
+     "dynamic": [
+      7,
+      17,
+      65,
+      81,
+      122,
+      154,
+      177,
+      199
+     ],
+     "graph": [
+      8,
+      22,
+      66,
+      82,
+      107,
+      123,
+      178
+     ],
+     "algorithms,": [
+      9,
+      67
+     ],
+     "no": [
+      10
+     ],
+     "efficient": [
+      11,
+      197
+     ],
+     "algorithms": [
+      12,
+      200
+     ],
+     "are": [
+      13,
+      88
+     ],
+     "known": [
+      14,
+      60
+     ],
+     "for": [
+      15,
+      35,
+      63,
+      94,
+      103,
+      201
+     ],
+     "versions": [
+      18
+     ],
+     "some": [
+      20,
+      33
+     ],
+     "basic": [
+      21
+     ],
+     "problems": [
+      23,
+      136
+     ],
+     "such": [
+      24,
+      51,
+      80
+     ],
+     "as": [
+      25
+     ],
+     "strong": [
+      26,
+      47,
+      100,
+      155,
+      202
+     ],
+     "connectivity": [
+      27,
+      156,
+      203
+     ],
+     "and": [
+      28,
+      142,
+      157,
+      190,
+      204
+     ],
+     "transitive": [
+      29,
+      158,
+      205
+     ],
+     "closure.": [
+      30,
+      159,
+      206
+     ],
+     "We": [
+      31,
+      160,
+      180
+     ],
+     "provide": [
+      32,
+      73
+     ],
+     "explanation": [
+      34
+     ],
+     "this": [
+      36
+     ],
+     "lack": [
+      37
+     ],
+     "success": [
+      39
+     ],
+     "by": [
+      40,
+      109
+     ],
+     "presenting": [
+      41
+     ],
+     "quadratic": [
+      42
+     ],
+     "lower": [
+      43,
+      96
+     ],
+     "bounds": [
+      44,
+      97
+     ],
+     "on": [
+      45,
+      90,
+      98
+     ],
+     "certificate": [
+      48,
+      101
+     ],
+     "complexity": [
+      49,
+      102,
+      174
+     ],
+     "problems,": [
+      52,
+      124
+     ],
+     "thereby": [
+      53
+     ],
+     "establishing": [
+      54,
+      110
+     ],
+     "inapplicability": [
+      56
+     ],
+     "only": [
+      59
+     ],
+     "general": [
+      61,
+      92
+     ],
+     "technique": [
+      62,
+      93
+     ],
+     "designing": [
+      64
+     ],
+     "viz.,": [
+      68,
+      186
+     ],
+     "sparsification.": [
+      69
+     ],
+     "These": [
+      70
+     ],
+     "results": [
+      71,
+      87
+     ],
+     "also": [
+      72
+     ],
+     "evidence": [
+      74
+     ],
+     "inherent": [
+      77,
+      173
+     ],
+     "intractability": [
+      78
+     ],
+     "problems.": [
+      83,
+      179
+     ],
+     "Some": [
+      84
+     ],
+     "our": [
+      86
+     ],
+     "based": [
+      89,
+      188
+     ],
+     "a": [
+      91,
+      104,
+      111,
+      125,
+      182
+     ],
+     "obtaining": [
+      95
+     ],
+     "class": [
+      105
+     ],
+     "properties": [
+      108
+     ],
+     "relationship": [
+      112
+     ],
+     "with": [
+      113
+     ],
+     "witness": [
+      115
+     ],
+     "complexity.": [
+      116
+     ],
+     "In": [
+      117
+     ],
+     "many": [
+      118
+     ],
+     "real": [
+      119
+     ],
+     "applications": [
+      120,
+      169
+     ],
+     "certain": [
+      126
+     ],
+     "amount": [
+      127
+     ],
+     "lookahead": [
+      129,
+      165,
+      187
+     ],
+     "is": [
+      130
+     ],
+     "available.": [
+      131
+     ],
+     "Specifically,": [
+      132
+     ],
+     "we": [
+      133
+     ],
+     "consider": [
+      134
+     ],
+     "assembly": [
+      138
+     ],
+     "planning": [
+      139
+     ],
+     "robotics": [
+      141
+     ],
+     "maintenance": [
+      144
+     ],
+     "relations": [
+      146
+     ],
+     "databases": [
+      148
+     ],
+     "which,": [
+      149
+     ],
+     "respectively,": [
+      150
+     ],
+     "give": [
+      151
+     ],
+     "rise": [
+      152
+     ],
+     "to": [
+      153,
+      170,
+      193
+     ],
+     "exploit": [
+      161
+     ],
+     "(naturally": [
+      163
+     ],
+     "available)": [
+      164
+     ],
+     "these": [
+      167
+     ],
+     "two": [
+      168
+     ],
+     "circumvent": [
+      171
+     ],
+     "propose": [
+      181
+     ],
+     "variant": [
+      183
+     ],
+     "sparsification,": [
+      185,
+      189
+     ],
+     "apply": [
+      191
+     ],
+     "it": [
+      192
+     ],
+     "obtain": [
+      194
+     ],
+     "first": [
+      196
+     ],
+     "fully": [
+      198
+     ]
+    }
+   },
+   {
+    "title": "On Fully Dynamic Graph Sparsifiers",
+    "year": 2016,
+    "doi": "https://doi.org/10.1109/focs.2016.44",
+    "abstract": {
+     "We": [
+      0
+     ],
+     "initiate": [
+      1
+     ],
+     "the": [
+      2,
+      32,
+      112,
+      115
+     ],
+     "study": [
+      3
+     ],
+     "of": [
+      4,
+      114
+     ],
+     "fast": [
+      5
+     ],
+     "dynamic": [
+      6,
+      15,
+      46,
+      67,
+      96,
+      103
+     ],
+     "algorithms": [
+      7
+     ],
+     "for": [
+      8,
+      48,
+      69,
+      105
+     ],
+     "graph": [
+      9,
+      123
+     ],
+     "sparsification": [
+      10
+     ],
+     "problems": [
+      11
+     ],
+     "and": [
+      12,
+      21
+     ],
+     "obtain": [
+      13,
+      100
+     ],
+     "fully": [
+      14,
+      45,
+      66,
+      102
+     ],
+     "algorithms,": [
+      16
+     ],
+     "allowing": [
+      17
+     ],
+     "both": [
+      18
+     ],
+     "edge": [
+      19,
+      22
+     ],
+     "insertions": [
+      20
+     ],
+     "deletions,": [
+      23
+     ],
+     "that": [
+      24
+     ],
+     "take": [
+      25
+     ],
+     "polylogarithmic": [
+      26
+     ],
+     "time": [
+      27,
+      58,
+      79,
+      127
+     ],
+     "after": [
+      28
+     ],
+     "each": [
+      29
+     ],
+     "update": [
+      30,
+      57,
+      78,
+      126
+     ],
+     "in": [
+      31,
+      118
+     ],
+     "graph.": [
+      33
+     ],
+     "Our": [
+      34
+     ],
+     "three": [
+      35
+     ],
+     "main": [
+      36
+     ],
+     "results": [
+      37
+     ],
+     "are": [
+      38
+     ],
+     "as": [
+      39
+     ],
+     "follows.": [
+      40
+     ],
+     "First,": [
+      41
+     ],
+     "we": [
+      42,
+      63,
+      93
+     ],
+     "give": [
+      43,
+      64
+     ],
+     "a": [
+      44,
+      50,
+      65,
+      71,
+      101,
+      107
+     ],
+     "algorithm": [
+      47,
+      68,
+      98,
+      104
+     ],
+     "maintaining": [
+      49,
+      70,
+      106
+     ],
+     "(1": [
+      51,
+      72,
+      108
+     ],
+     "±": [
+      52,
+      73
+     ],
+     "ϵ)-spectral": [
+      53
+     ],
+     "sparsifier": [
+      54,
+      75,
+      97
+     ],
+     "with": [
+      55,
+      76,
+      124
+     ],
+     "amortized": [
+      56,
+      125
+     ],
+     "poly(log": [
+      59,
+      80,
+      89,
+      128
+     ],
+     "n,": [
+      60,
+      81,
+      90,
+      129
+     ],
+     "ϵ-1).": [
+      61,
+      82,
+      91,
+      130
+     ],
+     "Second,": [
+      62
+     ],
+     "ϵ)-cut": [
+      74
+     ],
+     "worst-case": [
+      77
+     ],
+     "Both": [
+      83
+     ],
+     "sparsifiers": [
+      84
+     ],
+     "have": [
+      85
+     ],
+     "size": [
+      86
+     ],
+     "n": [
+      87
+     ],
+     "·": [
+      88
+     ],
+     "Third,": [
+      92
+     ],
+     "apply": [
+      94
+     ],
+     "our": [
+      95
+     ],
+     "to": [
+      99,
+      111
+     ],
+     "-": [
+      109
+     ],
+     "ϵ)-approximation": [
+      110
+     ],
+     "value": [
+      113
+     ],
+     "maximum": [
+      116
+     ],
+     "flow": [
+      117
+     ],
+     "an": [
+      119
+     ],
+     "unweighted,": [
+      120
+     ],
+     "undirected,": [
+      121
+     ],
+     "bipartite": [
+      122
+     ]
+    }
+   },
+   {
+    "title": "On Fully Dynamic Graph Sparsifiers",
+    "year": 2016,
+    "doi": null,
+    "abstract": {
+     "We": [
+      0
+     ],
+     "initiate": [
+      1
+     ],
+     "the": [
+      2,
+      31,
+      113,
+      116
+     ],
+     "study": [
+      3
+     ],
+     "of": [
+      4,
+      115
+     ],
+     "dynamic": [
+      5,
+      14,
+      45,
+      67,
+      97,
+      104
+     ],
+     "algorithms": [
+      6
+     ],
+     "for": [
+      7,
+      47,
+      69,
+      106
+     ],
+     "graph": [
+      8,
+      124
+     ],
+     "sparsification": [
+      9
+     ],
+     "problems": [
+      10
+     ],
+     "and": [
+      11,
+      20
+     ],
+     "obtain": [
+      12,
+      101
+     ],
+     "fully": [
+      13,
+      44,
+      66,
+      103
+     ],
+     "algorithms,": [
+      15
+     ],
+     "allowing": [
+      16
+     ],
+     "both": [
+      17
+     ],
+     "edge": [
+      18,
+      21
+     ],
+     "insertions": [
+      19
+     ],
+     "deletions,": [
+      22
+     ],
+     "that": [
+      23
+     ],
+     "take": [
+      24
+     ],
+     "polylogarithmic": [
+      25
+     ],
+     "time": [
+      26,
+      59,
+      81,
+      128
+     ],
+     "after": [
+      27
+     ],
+     "each": [
+      28
+     ],
+     "update": [
+      29,
+      58,
+      80,
+      127
+     ],
+     "in": [
+      30,
+      119
+     ],
+     "graph.": [
+      32
+     ],
+     "Our": [
+      33
+     ],
+     "three": [
+      34
+     ],
+     "main": [
+      35
+     ],
+     "results": [
+      36
+     ],
+     "are": [
+      37
+     ],
+     "as": [
+      38
+     ],
+     "follows.": [
+      39
+     ],
+     "First,": [
+      40
+     ],
+     "we": [
+      41,
+      63,
+      94
+     ],
+     "give": [
+      42,
+      64
+     ],
+     "a": [
+      43,
+      49,
+      65,
+      71,
+      102,
+      108
+     ],
+     "algorithm": [
+      46,
+      68,
+      99,
+      105
+     ],
+     "maintaining": [
+      48,
+      70,
+      107
+     ],
+     "$": [
+      50,
+      72,
+      88
+     ],
+     "(1": [
+      51,
+      73
+     ],
+     "\\\\pm": [
+      52,
+      74
+     ],
+     "\\\\epsilon)": [
+      53,
+      75
+     ],
+     "$-spectral": [
+      54
+     ],
+     "sparsifier": [
+      55,
+      77,
+      98
+     ],
+     "with": [
+      56,
+      78,
+      125
+     ],
+     "amortized": [
+      57,
+      126
+     ],
+     "$poly(\\\\log{n},": [
+      60,
+      82,
+      129
+     ],
+     "\\\\epsilon^{-1})$.": [
+      61,
+      83,
+      92,
+      130
+     ],
+     "Second,": [
+      62
+     ],
+     "$-cut": [
+      76
+     ],
+     "\\\\emph{worst-case}": [
+      79
+     ],
+     "Both": [
+      84
+     ],
+     "sparsifiers": [
+      85
+     ],
+     "have": [
+      86
+     ],
+     "size": [
+      87
+     ],
+     "n": [
+      89
+     ],
+     "\\\\cdot": [
+      90
+     ],
+     "poly(\\\\log{n},": [
+      91
+     ],
+     "Third,": [
+      93
+     ],
+     "apply": [
+      95
+     ],
+     "our": [
+      96
+     ],
+     "to": [
+      100,
+      112
+     ],
+     "$(1": [
+      109
+     ],
+     "+": [
+      110
+     ],
+     "\\\\epsilon)$-approximation": [
+      111
+     ],
+     "value": [
+      114
+     ],
+     "maximum": [
+      117
+     ],
+     "flow": [
+      118
+     ],
+     "an": [
+      120
+     ],
+     "unweighted,": [
+      121
+     ],
+     "undirected,": [
+      122
+     ],
+     "bipartite": [
+      123
+     ]
+    }
+   },
+   {
+    "title": "Dynamic framework for edge-connectivity maintenance of simple graphs",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2601.20137",
+    "abstract": {
+     "We": [
+      0
+     ],
+     "present": [
+      1
+     ],
+     "a": [
+      2,
+      22,
+      34,
+      89
+     ],
+     "framework": [
+      3
+     ],
+     "for": [
+      4
+     ],
+     "dynamically": [
+      5
+     ],
+     "maintaining": [
+      6
+     ],
+     "$k$-edge-connectivity": [
+      7,
+      59
+     ],
+     "of": [
+      8
+     ],
+     "an": [
+      9,
+      26,
+      48
+     ],
+     "undirected": [
+      10
+     ],
+     "simple": [
+      11
+     ],
+     "graph": [
+      12,
+      101
+     ],
+     "$G$": [
+      13
+     ],
+     "under": [
+      14
+     ],
+     "edge": [
+      15,
+      27,
+      37,
+      49
+     ],
+     "insertions": [
+      16
+     ],
+     "and": [
+      17,
+      32
+     ],
+     "deletions,": [
+      18
+     ],
+     "where": [
+      19
+     ],
+     "$k$": [
+      20
+     ],
+     "is": [
+      21,
+      102
+     ],
+     "fixed": [
+      23
+     ],
+     "constant.": [
+      24
+     ],
+     "After": [
+      25,
+      47
+     ],
+     "insertion,": [
+      28
+     ],
+     "the": [
+      29,
+      56,
+      68,
+      85,
+      94,
+      100
+     ],
+     "algorithm": [
+      30,
+      57
+     ],
+     "identifies": [
+      31
+     ],
+     "removes": [
+      33
+     ],
+     "distinct": [
+      35
+     ],
+     "redundant": [
+      36
+     ],
+     "to": [
+      38
+     ],
+     "maintain": [
+      39
+     ],
+     "sparsity,": [
+      40
+     ],
+     "in": [
+      41,
+      71
+     ],
+     "$O(k": [
+      42
+     ],
+     "\\log": [
+      43
+     ],
+     "n)$": [
+      44
+     ],
+     "amortized": [
+      45
+     ],
+     "time.": [
+      46,
+      74
+     ],
+     "deletion": [
+      50,
+      86
+     ],
+     "that": [
+      51
+     ],
+     "reduces": [
+      52
+     ],
+     "$λ(G)$": [
+      53
+     ],
+     "below": [
+      54
+     ],
+     "$k$,": [
+      55
+     ],
+     "restores": [
+      58
+     ],
+     "by": [
+      60
+     ],
+     "adding": [
+      61
+     ],
+     "at": [
+      62
+     ],
+     "most": [
+      63
+     ],
+     "two": [
+      64
+     ],
+     "new": [
+      65
+     ],
+     "edges": [
+      66
+     ],
+     "(excluding": [
+      67
+     ],
+     "deleted": [
+      69
+     ],
+     "edge),": [
+      70
+     ],
+     "$O(k^{3/2}": [
+      72
+     ],
+     "n^{3/2})$": [
+      73
+     ],
+     "The": [
+      75
+     ],
+     "insertion": [
+      76
+     ],
+     "procedure": [
+      77,
+      87
+     ],
+     "combines": [
+      78
+     ],
+     "Nagamochi-Ibaraki": [
+      79
+     ],
+     "sparse": [
+      80
+     ],
+     "certificates": [
+      81
+     ],
+     "with": [
+      82,
+      104
+     ],
+     "Link-Cut": [
+      83
+     ],
+     "Trees;": [
+      84
+     ],
+     "uses": [
+      88
+     ],
+     "single": [
+      90
+     ],
+     "maximum-flow": [
+      91
+     ],
+     "computation": [
+      92
+     ],
+     "on": [
+      93
+     ],
+     "sparsified": [
+      95
+     ],
+     "graph.": [
+      96
+     ],
+     "Throughout": [
+      97
+     ],
+     "all": [
+      98
+     ],
+     "updates,": [
+      99
+     ],
+     "maintained": [
+      103
+     ],
+     "$O(kn)$": [
+      105
+     ],
+     "edges.": [
+      106
+     ]
+    }
+   }
+  ]
+ }
+]

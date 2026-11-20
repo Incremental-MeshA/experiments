@@ -1,0 +1,392 @@
+[
+ {
+  "doi": "10.1609/aaai.v29i1.9355",
+  "title": [
+   "Reusing Previously Found A* Paths for Fast Goal-Directed Navigation in Dynamic Terrain"
+  ],
+  "authors": [
+   {
+    "given": "Carlos",
+    "family": "Hernandez",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Roberto",
+    "family": "Asin",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jorge",
+    "family": "Baier",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "year": {
+   "date-parts": [
+    [
+     2015,
+     2,
+     16
+    ]
+   ]
+  },
+  "url": "https://doi.org/10.1609/aaai.v29i1.9355",
+  "abstract": "<jats:p>\n      \n        Generalized Adaptive A* (GAA*) is an incremental algorithm that replans using A* when solving goal-directed navigation problems in dynamic terrain. Immediately after each A* search, it runs an efficient procedure that updates the heuristic values of states that were just expanded by A*, making them more informed.  Those updates allow GAA* to speed up subsequent A* searches. Being based on A*, it is simple to describe and communicate; however, it is outperformed by other incremental algorithms like the state-of-the-art D*Lite algorithm at goal-directed navigation. In this paper we show how GAA* can be modified to exploit more information from a previous search in addition to the updated heuristic function. Specifically, we show how GAA* can be modified to utilize the paths found by a previous A* search. Our algorithm — Multipath Generalized Adaptive A* (MPGAA*) — has the same theoretical properties of GAA* and differs from it by only a few lines of pseudocode. Arguably, MPGAA* is simpler to understand than D*Lite. We evaluate MPGAA* over various realistic dynamic terrain settings, and observed that it generally outperforms the state-of-the-art algorithm D*Lite in scenarios resembling outdoor and indoor navigation.\n      \n    </jats:p>"
+ },
+ {
+  "doi": "10.1609/aaai.v40i43.41004",
+  "title": [
+   "MeshA*: Efficient Path Planning with Motion Primitives"
+  ],
+  "authors": [
+   {
+    "given": "Marat",
+    "family": "Agranovskiy",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Konstantin",
+    "family": "Yakovlev",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "year": {
+   "date-parts": [
+    [
+     2026,
+     3,
+     14
+    ]
+   ]
+  },
+  "url": "https://doi.org/10.1609/aaai.v40i43.41004",
+  "abstract": "<jats:p>We study a path planning problem where the possible move actions are represented as a finite set of motion primitives aligned with the grid representation of the environment. That is, each primitive corresponds to a short kinodynamically-feasible motion of an agent and is represented as a sequence of the swept cells of a grid. Typically, heuristic search, i.e. A*, is conducted over the lattice induced by these primitives (lattice-based planning) to find a path. However, due to the large branching factor, such search may be inefficient in practice. To this end, we suggest a novel technique rooted in the idea of searching over the grid cells (as in vanilla A*) simultaneously fitting the possible sequences of the motion primitives into these cells. The resultant algorithm, MeshA*, provably preserves the guarantees on completeness and optimality, on the one hand, and is shown to notably outperform conventional lattice-based planning (x1.5-x2 decrease in the runtime), on the other hand.</jats:p>"
+ },
+ {
+  "doi": "10.1109/iros47612.2022.9981389",
+  "title": [
+   "Lazy Lifelong Planning for Efficient Replanning in Graphs with Expensive Edge Evaluation"
+  ],
+  "authors": [
+   {
+    "given": "Jaein",
+    "family": "Lim",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "School of Aerospace Engineering Georgia Institute of Technology,Atlanta,Georgia,30332-0150"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Siddhartha",
+    "family": "Srinivasa",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "School of Computer Science &#x0026; Engineering University of Washington,Seattle,WA,98195-2355"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Panagiotis",
+    "family": "Tsiotras",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "School of Aerospace Engineering Institute for Robotics &#x0026; Intelligent Machines Georgia Institute of Technology,Atlanta,Georgia,30332-0150"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "year": {
+   "date-parts": [
+    [
+     2022,
+     10,
+     23
+    ]
+   ]
+  },
+  "url": "https://doi.org/10.1109/iros47612.2022.9981389",
+  "abstract": null
+ },
+ {
+  "doi": "10.1177/02783649241227869",
+  "title": [
+   "Lazy incremental search for efficient replanning with bounded suboptimality guarantees"
+  ],
+  "authors": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-3057-7997",
+    "authenticated-orcid": false,
+    "given": "Jaein",
+    "family": "Lim",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "School of Aerospace Engineering, Georgia Institute of Technology, Atlanta, GA, USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Mahdi",
+    "family": "Ghanei",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Institute for Robotics and Intelligent Machines, Georgia Institute of Technology, Atlanta, GA, USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "R. Connor",
+    "family": "Lawson",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "School of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta, GA, USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Siddhartha",
+    "family": "Srinivasa",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "School of Computer Science & Engineering, University of Washington, Seattle, WA, USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Panagiotis",
+    "family": "Tsiotras",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "School of Aerospace Engineering, Georgia Institute of Technology, Atlanta, GA, USA"
+     },
+     {
+      "name": "Institute for Robotics and Intelligent Machines, Georgia Institute of Technology, Atlanta, GA, USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "year": {
+   "date-parts": [
+    [
+     2024,
+     1,
+     29
+    ]
+   ]
+  },
+  "url": "https://doi.org/10.1177/02783649241227869",
+  "abstract": "<jats:p>We present a lazy incremental search algorithm, Lifelong-GLS (L-GLS), along with its bounded suboptimal version, Bounded L-GLS (B-LGLS) that combine the search efficiency of incremental search algorithms with the evaluation efficiency of lazy search algorithms for fast replanning in problem domains where edge evaluations are more expensive than vertex expansions. The proposed algorithms generalize Lifelong Planning A* (LPA*) and its bounded suboptimal version, Truncated LPA* (TLPA*), within the Generalized Lazy Search (GLS) framework, so as to restrict expensive edge evaluations only to the current shortest subpath when the cost-to-come inconsistencies are propagated during repair. We also present dynamic versions of the L-GLS and B-LGLS algorithms, called Generalized D* (GD*) and Bounded Generalized D* (B-GD*), respectively, for efficient replanning with non-stationary queries, designed specifically for navigation of mobile robots. We prove that the proposed algorithms are complete and correct in finding a solution that is guaranteed not to exceed the optimal solution cost by a user-chosen factor. Our numerical and experimental results support the claim that the proposed integration of the incremental and lazy search frameworks can help find solutions faster compared to the regular incremental or regular lazy search algorithms when the underlying graph representation changes often.</jats:p>"
+ },
+ {
+  "doi": "10.1609/icaps.v29i1.3543",
+  "title": [
+   "Generalized Lazy Search for Robot Motion Planning:Interleaving Search and Edge Evaluation via Event-Based Toggles"
+  ],
+  "authors": [
+   {
+    "given": "Aditya",
+    "family": "Mandalika",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Sanjiban",
+    "family": "Choudhury",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Oren",
+    "family": "Salzman",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Siddhartha",
+    "family": "Srinivasa",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "year": {
+   "date-parts": [
+    [
+     2019,
+     7,
+     5
+    ]
+   ]
+  },
+  "url": "https://doi.org/10.1609/icaps.v29i1.3543",
+  "abstract": "<jats:p>Lazy search algorithms can efficiently solve problems where edge evaluation is the bottleneck in computation, as is the case for robotic motion planning. The optimal algorithm in this class, LazySP, lazily restricts edge evaluation to only the shortest path. Doing so comes at the expense of search effort, i.e., LazySP must recompute the search tree every time an edge is found to be invalid. This becomes prohibitively expensive when dealing with large graphs or highly cluttered environments. Our key insight is the need to balance both edge evaluation and search effort to minimize the total planning time. Our contribution is two-fold. First, we propose a framework, Generalized Lazy Search (GLS), that seamlessly toggles between search and evaluation to prevent wasted efforts. We show that for a choice of toggle, GLS is provably more efficient than LazySP. Second, we leverage prior experience of edge probabilities to derive GLS policies that minimize expected planning time. We show that GLS equipped with such priors significantly outperforms competitive baselines for many simulated environments in R2,SE(2) and 7-DoF manipulation.</jats:p>"
+ },
+ {
+  "doi": "10.1016/j.artint.2003.12.001",
+  "title": [
+   "Lifelong Planning A∗"
+  ],
+  "authors": [
+   {
+    "given": "Sven",
+    "family": "Koenig",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Maxim",
+    "family": "Likhachev",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "David",
+    "family": "Furcy",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "year": {
+   "date-parts": [
+    [
+     2004,
+     5
+    ]
+   ]
+  },
+  "url": "https://doi.org/10.1016/j.artint.2003.12.001",
+  "abstract": null
+ }
+]
