@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Generate a Russian experiment report and an English paper from validated data."""
-import argparse,json,math,re,subprocess
+import argparse,json,math,re,subprocess,sys
 from pathlib import Path
 import pandas as pd
 from analyze import HERE,ROOT,DEST,NEW,ABLATION,LABEL,gm,sha
@@ -37,6 +37,8 @@ toc-depth: 2
  return dict(markdown_sha256=sha(path),pdf_sha256=sha(path.with_suffix('.pdf')),command=command)
 
 def main(directory,frontier_directory,conditional_directory):
+ subprocess.run([sys.executable,str(ROOT/'cpp/mesh_probe_count/analyze.py')],cwd=ROOT,check=True)
+ probe_path=ROOT/'cpp/mesh_probe_count/results/analysis/analysis.json';pmeta=json.loads(probe_path.read_text());assert pmeta['status']=='passed'
  ad=directory/'analysis';a=json.loads((ad/'analysis.json').read_text());assert a['status']=='passed' and a['analysis_source_sha256']==sha(HERE/'analyze.py')
  for p,h in a['tables_sha256'].items():assert sha(ad/p)==h
  for p,h in json.loads((ad/'figures.json').read_text()).items():assert sha(ROOT/p)==h
@@ -116,7 +118,18 @@ def main(directory,frontier_directory,conditional_directory):
   rows.append(rr)
  add(table(['Модель','Кандидат','Baseline','Положительные × (N)','Нет пути × (N)'],rows))
  add('Эта таблица использует медианы запросов только replay. В одном эпизоде запросы зависимы; N показывает число пар запросов, а не независимых карт. Поскольку огибающая выбирается по эпизоду, она не подменяет приведённые прямые сравнения типов ответа.')
- add(fig('frontier_work','Online occupancy-проверки на одинаковых входах separator. Добавлена единица для показа нулей на логарифмической шкале; таблица хранит исходные целые значения.'))
+ add(fig('all_collision_probes','Отдельный счётный проход: все вызовы Grid.free внутри replan, включая предварительные проверки концов. Добавлена единица для логарифмической шкалы. Время этого бинарника не используется.'))
+ add('## Полный счётчик обращений к проверке занятости')
+ add(f"Старое поле checked_cells считает явные проверки трасс/узлов, но пропускает предварительные проверки конечных клеток в candidate и часть проверок условий входа. Его нельзя трактовать как полное число collision queries. Поэтому выполнен отдельный count-only проход на всех 184 replay-входах: {pmeta['counted_runs']} эпизодов с пятью методами, все вызовы Grid.free перехвачены в сгенерированной копии заголовков, измеряемые исходники не изменялись. {pmeta['logical_matched_rows']} строк совпали по всем прежним логическим полям с обычными траекториями. Инструментированный бинарник не используется для сравнения времени. Считаются логические вызовы API, включая проверки вне карты; прямые Grid.blocked в общей нормализации входа и эталонные/проверочные поиски исключены. Это не число физических CPU-чтений памяти.")
+ pw=pd.read_csv(probe_path.parent/'probe_work.csv');pp=pd.read_csv(probe_path.parent/'probe_pairs.csv');rr=[]
+ for (control,m),d in pw.groupby(['control','method']):
+  n=d.all_free_calls.sum();old=d.legacy_checks.sum();rr.append([control,'Conditional D* Lite' if m=='conditional_dstar' else LABEL[m],num(n/1e6),num(old/1e6),num(100*(n-old)/n)])
+ add(table(['Модель','Метод','Все Grid.free, млн','Legacy, млн','Пропущено legacy, %'],rr))
+ rr=[]
+ for (control,cohort,m,b),d in pp.groupby(['control','cohort','method','baseline']):
+  a=d[~d.online];o=d[d.online];rr.append([control,cohort,LABEL[m],'Conditional D* Lite' if b=='conditional_dstar' else LABEL[b],num(gm(a.ratio)),num(gm(o.ratio)),f'{int(a.complete.sum())}/{len(a)}'])
+ add(table(['Модель','Набор','Метод','Контроль','Probes F ×','Probes R ×','Пары'],rr))
+ add('Значения больше 1 означают меньше вызовов проверки занятости у кандидата. Если время улучшается без уменьшения этих вызовов, причина в других операциях; если число обращений меньше, но время хуже, сказывается обслуживание индексов, очередей и множеств. Полный legacy-счётчик сохранён для сопоставления с прежними отчётами, но вывод о суммарной геометрической работе опирается на этот отдельный проход.')
  add('# Число изменений, радиус, задержки и память')
  add(fig('edit_scaling','Ремонт по числу наблюдаемых правок в replay; контроль LBA* reuse. Корзины и число пар доступны в query_pairs.csv.'))
  add(fig('discovery_radius','Раскрытие полностью неизвестной карты: фиксированная цель, радиусы 8/16/32/64. Линии соединяют завершённые миссии; крестики показывают время незавершённых и не считаются выигрышами.'))
@@ -242,13 +255,15 @@ def main(directory,frontier_directory,conditional_directory):
  for _,v in cs.iterrows():rr.append([v.control,v.cohort,LABEL[v.method],num(v.full_speedup),num(v.repair_speedup),f'{int(v.pairs)}/{int(v.configurations)}'])
  put(table(['Model','Cohort','Candidate','Full speedup','Repair speedup','Pairs'],rr))
  put(fig('conditional_control','Fresh joint validation against conditional map-edge updates.'))
+ put('The inherited checked_cells field omits endpoint eligibility reads. We therefore ran a separate count-only pass over all184 replay inputs, instrumenting every Grid.free invocation inside replan in generated header copies. All previous logical fields match the unchanged trajectories; count-binary times are discarded. Reported total collision-API probes include endpoint gates and outside-grid probes, excluding direct Grid.blocked input normalization and all reference/verification calls. These are logical API invocations, not hardware load counts. See the accompanying report for totals and ratios against Lattice-Envelope and Conditional D* Lite.')
+ put(fig('all_collision_probes','Independent full collision-API probe counts; instrumented times are discarded.'))
  put('# Discussion and limitations')
  put('The primary falsifiable claim is that a shared mesh frontier can amortize repeated negative answers more cheaply than rebuilding or maintaining independent primitive witnesses. Remote edits alone do not establish mesh value: Lattice-Envelope is the decisive representation ablation. The first failure pays construction overhead; reconnection can trigger a conservative exact fallback because R is a superset. Positive-only navigation largely measures the backend and standard suffix rule, not the new negative certificate. The circuit variant must justify both its event work and larger local storage against conditional lattice D* Lite. Full per-map tables, latency percentiles, edit rates, memory maxima and completion failures are retained in the accompanying report.')
  put('This work uses cheap 2D occupancy tests and an unmerged prefix representation. It does not establish superiority over external Lifelong-GLS or Generalized D* implementations, which were not integrated. Incremental reachability, cut-based non-reachability arguments, D* Lite and suffix reuse are prior concepts. The novelty hypothesis is their specific mesh-compressed negative frontier with implicit endpoints; a broader full-text literature review and additional independent roots are required before a priority or top-conference readiness claim.')
  put('# References')
  put((DEST/'related_work.md').read_text().split('\n\n',2)[2])
  paper=render(DEST/'paper.md','\n\n'.join(article),'Repairing Negative Answers on Motion-Primitive Meshes','en-US')
- provenance=dict(status='passed',analysis_sha256=sha(ad/'analysis.json'),frontier_analysis_sha256=sha(frontier_path),conditional_analysis_sha256=sha(conditional_path),narrative_sha256={p.name:sha(p) for p in [DEST/'design.md',DEST/'related_work.md']},report=report,paper=paper,source_sha256=sha(Path(__file__)))
+ provenance=dict(status='passed',analysis_sha256=sha(ad/'analysis.json'),frontier_analysis_sha256=sha(frontier_path),conditional_analysis_sha256=sha(conditional_path),probe_analysis_sha256=sha(probe_path),narrative_sha256={p.name:sha(p) for p in [DEST/'design.md',DEST/'related_work.md']},report=report,paper=paper,source_sha256=sha(Path(__file__)))
  (ad/'report_provenance.json').write_text(json.dumps(provenance,indent=2)+'\n');print(json.dumps(provenance))
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--directory',type=Path,default=HERE/'results/full');p.add_argument('--frontier-directory',type=Path,default=HERE/'results/frontier');p.add_argument('--conditional-directory',type=Path,default=ROOT/'cpp/mesh_conditional/results/full');args=p.parse_args();main(args.directory,args.frontier_directory,args.conditional_directory)

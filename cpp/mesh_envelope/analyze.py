@@ -60,7 +60,7 @@ def main(directory):
     runs.append(row)
    memory.append(mc.groupby(['case','method'],as_index=False).agg(peak_heap_bytes=('peak_heap_bytes','max'),retained_heap_bytes=('retained_heap_bytes','last')))
   calls.append(tc.assign(job=stem))
- allruns=pd.DataFrame(runs);save(allruns,out/'runs.csv');calls=pd.concat(calls,ignore_index=True).merge(meta,on='case',validate='many_to_one',suffixes=('','_context'));save(calls,out/'calls.csv')
+ allruns=pd.DataFrame(runs);save(allruns,out/'runs.csv');calls=pd.concat(calls,ignore_index=True).merge(meta,on='case',validate='many_to_one',suffixes=('','_context'))
  memories=pd.concat(memory,ignore_index=True);assert not memories.duplicated(['case','method']).any()
  numeric=['full_s','initial_s','repair_s','setup_s','travel_cost','moves','plans',*COUNTERS]
  numeric=[c for c in dict.fromkeys(numeric) if c in allruns]
