@@ -6,6 +6,19 @@ compressed outgoing boundary of a closed state set, with blocked endpoints
 represented implicitly. Incremental reachability and graph cuts themselves are
 established concepts. A literature search does not establish priority.
 
+## Intended consumer of negative certificates
+
+The consumer must keep issuing planning queries after a temporary disconnection,
+for example a robot waiting for a door to reopen or a persistent planning service
+receiving external occupancy updates. If a mission terminates at its first
+NO_PATH, a newly built negative envelope cannot amortize its cost. In the
+inherited k-move dynamic model, no more moves after failure also means no later
+change phases; that model cannot demonstrate repeated-failure reuse. We retain
+it as a standard navigation control and separately use externally driven replay
+updates, including reconnection, to test the proposed mechanism. Synthetic fixed
+starts model waiting queries, not executed motion. Their gains must not be
+presented as gains in every navigation task.
+
 ## Definitions and invariant
 
 Let V consist of all in-grid primitive-boundary states (cell, heading). Let E_t

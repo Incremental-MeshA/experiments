@@ -7,6 +7,15 @@
 
 ## Дополнение: MD-A\*
 
+**Ремонт отрицательных ответов:** [Envelope-Mesh, Dual-Certificate Mesh и Bellman-Circuit Mesh D* Lite на C++17](cpp/mesh_envelope/README.md).
+Ветка: `research/mesh-envelope`. Отдельные абляции проверяют сохранение сертификата,
+общие mesh-префиксы и повторное использование положительного суффикса.
+[Отчёт по картам](docs/mesh_envelope/report.md) · [PDF](docs/mesh_envelope/report.pdf) ·
+[English paper](docs/mesh_envelope/paper.pdf) · [Notebook](docs/mesh_envelope/analysis.ipynb) ·
+[Доказательства и устройство](docs/mesh_envelope/design.md).
+Новизна сформулирована с учётом MeshA*, Lifelong-GLS/Generalized D* и IPC/IDPC;
+приоритет самой идеи отрицательных сертификатов не заявляется.
+
 **Stamp, Batch и Witness:** [три новых C++17-варианта mesh-MPGAA\*](cpp/mpgaa_lazy/README.md)
 с ленивыми версиями карты, выбором направления ремонта и компактным сечением препятствий.
 Ветка: `research/mpgaa-mesh-lazy`.

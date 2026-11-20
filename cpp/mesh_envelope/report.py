@@ -70,9 +70,10 @@ def main(directory):
  add(manifest['protocol'])
  add('Модель car16: 16 направлений, 284 примитива, суммарно 1 492 проверяемые клетки в исходных трассах, максимум 8 клеток после начала; префиксный forest содержит 572 узла вместе с 16 корнями, исходный configuration mesh — 412 конфигураций. Grid8: одно направление состояния, восемь одноклеточных переходов, forest из 9 узлов. У grid8 нет длинных общих префиксов; это необходимый отрицательный контроль структурной выгоды mesh.')
  add('Шесть car-карт: Berlin, AR0700, arena, MA_maze96, MA_room96, MA_random96. Первые три берутся в исходном размере, последние три — прежние фиксированные кропы Moving AI. В replay есть два корня и четыре семейства: препятствия на пути, вне пути, смешанные блокировки/освобождения, раскрытие неизвестной карты; добавлены четыре прежних history-эпизода. Grid replay — все 96 прежних сценариев random50 с четырьмя плотностями. Новые синтетические эпизоды: разделяющая полоса шириной 7 клеток, размеры 32 и 64, два варианта карты с разными seed и одинаковыми координатами концов, правки вдали, на границе и с периодическим открытием/закрытием прохода; 17 запросов. По этим данным оценивается окупаемость для 0, 1, 2, 4, 8, 16 ремонтов. Префиксы одного эпизода зависимы и не считаются отдельными независимыми запусками.')
- add('Для автономной навигации раскрытие карты проверено на всех шести car-картах с радиусами 8, 16, 32, 64 и одним прежним корнем. Динамика проверена на всех 16 картах в двух заранее выбранных точках (k,cr)=(2,5%), (32,20%); n=k. Это сокращённый новый срез прежней полной сетки k/cr, а не её повторное измерение. В навигации только один корень на точку, поэтому выводы по отдельной точке разведочные. Пути могут различаться при равной оптимальной стоимости, следовательно последующие наблюдения и динамические миры при различном ходе агента тоже могут различаться. Результаты replay дают более строгую проверку на одинаковых входах.')
+ add('Для автономной навигации раскрытие карты проверено на всех шести car-картах с радиусами 8, 16, 32, 64 и одним прежним корнем. Динамика проверена на всех 16 картах в двух заранее выбранных точках (k,cr)=(2,5%), (32,20%); n=k. Это сокращённый новый срез прежней полной сетки k/cr, а не её повторное измерение. В навигации только один корень на точку, поэтому выводы по отдельной точке разведочные. Один move означает один исходный примитив, а не одну клетку. Статический радиус — квадратная L∞-окрестность. Динамическая глубина n задаётся по свободной решётке примитивов с учётом направления; наблюдаются все клетки трасс дуг этой глубины без окклюзии препятствиями. Пути могут различаться при равной оптимальной стоимости, следовательно последующие наблюдения и динамические миры при различном ходе агента тоже могут различаться. Результаты replay дают более строгую проверку на одинаковых входах.')
  add(f"CPU: {state['cpu']}; {state['platform']}; один измерительный процесс, affinity {state['affinity']}. Компилятор и точные флаги сохранены в JSON каждого задания; все контроли собраны и измерены заново в том же запуске. Бюджет — {manifest['cap']:,} раскрытий на запрос, точность проверки стоимости $10^{{-6}}$. Три повтора выполняются последовательно со случайным порядком алгоритмов; память измеряется четвёртым отдельным проходом. Время проверки эталона не входит во время планировщика. Общая подготовка mesh-шаблонов вынесена из конструктора и отражена в JSON, включая собственную память. Peak heap — число запрошенных байтов C++ new, не RSS и не полный расход процесса.")
  add(f"Медиана относительного MAD полного времени эпизода: {100*a['repeat_relative_mad_median']:.2f}%; p95: {100*a['repeat_relative_mad_p95']:.2f}%. Три повтора недостаточны для сильных статистических утверждений; большие отношения на микросекундных запросах проверяются также полным временем и счётчиками.")
+ add(fig('map_atlas','Измеренные карты из замороженных входов: зелёный старт и красная цель первого инстанса. Дополнительно показаны синтетические разделители.'))
  add('# Результаты по картам')
  add(fig('map_replay','Полное время replay по картам относительно самого быстрого контроля; в ячейке отношение времён.'))
  for (cohort,control),d in maps[maps.baseline.eq('best_control')&maps.method.isin(NEW)].groupby(['cohort','control'],sort=False):
@@ -84,7 +85,17 @@ def main(directory):
     x=g[g.method.eq(m)].iloc[0];row.append(f"{num(x.full_speedup)} / {num(x.repair_speedup)} ({int(x.pairs)}/{int(x.configurations)})")
    rr.append(row)
   add(table(['Карта',*[LABEL[m] for m in NEW]],rr));add('Формат: полное / ремонт × (общие завершённые / конфигурации). Значения выше 1 выгодны новому методу. Для всех пар по каждому отдельному контролю см. `analysis/map_pairs.csv`.')
+ add('## Динамика: отдельные точки k/cr')
+ points=pd.read_csv(ad/'navigation_points.csv');rr=[]
+ for (control,name,k,cr),d in points.groupby(['control','map','k','cr']):
+  row=[control,name,f'{int(k)}/{int(cr)}']
+  for m in NEW:
+   v=d[d.method.eq(m)].iloc[0];row.append(f'{num(v.full_speedup)} / {num(v.repair_speedup)}' if v.complete else 'нет общей goal-пары')
+  rr.append(row)
+ add(table(['Модель','Карта','k/cr% (n=k)',*[LABEL[m] for m in NEW]],rr))
+ add('Полное / ремонт × к быстрейшему завершившемуся контролю в данной точке; одна seed-миссия на точку, три повтора времени. Отсутствие общей goal-пары не считается ни ускорением, ни успешным решением. Все завершения показаны отдельно ниже.')
  add('# Повторные отрицательные ответы и эффект mesh')
+ add('Миссии обычной навигации прекращаются при первом NoPath; сертификат, построенный в этот момент, не может окупиться. Кроме того, в динамической модели k moves без следующих движений не будет следующих фаз. Новый механизм предназначен для продолжения запросов после временного разрыва связности: агент ждёт открытия двери либо сервис получает внешние изменения. Синтетический replay с фиксированным стартом моделирует такие ожидающие запросы, но не исполненную поездку; reconnect проверяет возвращение к положительному точному поиску. Эти выигрыши нельзя переносить на все терминальные навигационные миссии.')
  rows=[]
  for (control,fam),d in family[family.cohort.eq('separator')&family.method.isin(NEW)&family.baseline.isin(['lba_reuse','dstar_lattice','lattice_envelope','mesh_reuse'])].groupby(['control','family']):
   for m in NEW:
@@ -107,8 +118,10 @@ def main(directory):
  add(fig('frontier_work','Online occupancy-проверки на одинаковых входах separator. Добавлена единица для показа нулей на логарифмической шкале; таблица хранит исходные целые значения.'))
  add('# Число изменений, радиус, задержки и память')
  add(fig('edit_scaling','Ремонт по числу наблюдаемых правок в replay; контроль LBA* reuse. Корзины и число пар доступны в query_pairs.csv.'))
- add(fig('discovery_radius','Раскрытие полностью неизвестной карты: фиксированная цель, радиусы 8/16/32/64, отдельная кривая на каждой карте.'))
+ add(fig('discovery_radius','Раскрытие полностью неизвестной карты: фиксированная цель, радиусы 8/16/32/64. Линии соединяют завершённые миссии; крестики показывают время незавершённых и не считаются выигрышами.'))
  add('Статическое раскрытие даёт только новые блокировки, поэтому отрицательный сертификат редко нужен до терминального отказа. Выигрыш Dual-Mesh в этом режиме может объясняться известным суффиксом и выбранным backend, а не новым механизмом отрицательной границы. Envelope-Mesh без положительного сертификата измерен отдельно именно для такого разделения.')
+ add(fig('travel_quality','Длина исполненного пути в статической неизвестной карте / оптимум по полной исходной truth-карте. Незавершённые миссии не получают значение.'))
+ add('Точность каждого replanning-запроса не означает оптимальность всего исполненного пути в неизвестной карте: агент мог сделать объезд до раскрытия препятствия. Для статического раскрытия нормированная длина обязана быть не меньше 1; это дополнительно проверяется анализом. Для динамических карт такое отношение к исходному статическому оптимуму не является мерой субоптимальности, поскольку препятствия меняются. Абсолютная длина, число moves и число планирований всех навигационных эпизодов сохранены в navigation_quality.csv.')
  add(fig('memory','Распределение пиков запрошенной C++ heap-памяти по конфигурациям. Выбросы скрыты только на рисунке; максимумы указаны в таблице.'))
  rows=[]
  for (control,m),d in metrics.groupby(['control','method']):
@@ -118,10 +131,10 @@ def main(directory):
  add('Число раскрытий у разных представлений относится к разным единицам: MeshA* раскрывает и внутренние конфигурации, новые методы — граничные состояния. Поэтому оно не является одинаковой операцией CPU. Старые D*-реализации не заполняют notify_probes для всех своих циклов; нули этого поля не означают отсутствие работы уведомлений. Время и occupancy-проверки интерпретируются отдельно.')
  add('# Фактический change rate и завершение навигации')
  rr=[]
- for (control,name),d in changes.groupby(['control','map']):
-  active=d[d.phases.gt(0)];rr.append([control,name,f'{len(active)}/{len(d)}',num(active.actual_cr_pct.min()),num(active.actual_cr_pct.max()),int(d.clamped_phases.sum())])
- add(table(['Модель','Карта','Ненулевые фазы / эпизоды','Мин cr %','Макс cr %','Ограниченных фаз'],rr))
- add('cr здесь — доля всех клеток, изменённых за фазу, то есть сумма блокировок и освобождений. Каждая сторона выбирается из своего исходного до фазы пула; число пар ограничивается доступными клетками и защитой текущих концов/исполняемого движения. Фактический cr равен 100·actual_changes/(число клеток·phases). Эпизоды без фаз показываются отдельно. Разные маршруты могут дать разное число фаз; clamped_phases суммированы по алгоритмам, не по независимым мирам.')
+ for (control,name,cr),d in changes.groupby(['control','map','requested_cr_pct']):
+  active=d[d.phases.gt(0)];rr.append([control,name,int(cr),f'{len(active)}/{len(d)}',num(active.actual_cr_pct.min()),num(active.actual_cr_pct.max()),int(d.clamped_phases.sum())])
+ add(table(['Модель','Карта','cr %','С фазами','Мин факт %','Макс факт %','Clamp фаз'],rr))
+ add('cr здесь — доля всех клеток, изменённых за фазу, то есть сумма блокировок и освобождений. Каждая сторона выбирается из своего исходного до фазы пула; число пар ограничивается доступными клетками и защитой клеток текущего положения агента и цели. Фактический cr равен 100·actual_changes/(число клеток·phases). Эпизоды без фаз показываются отдельно. Разные маршруты могут дать разное число фаз; clamped_phases суммированы по алгоритмам, не по независимым мирам.')
  rr=[]
  for _,r in completion[completion.cohort.str.startswith('navigation')].iterrows():rr.append([r.cohort,r.control,LABEL.get(r.method,r.method),f'{int(r.complete)}/{int(r.configurations)}'])
  add(table(['Сценарий','Модель','Метод','Цель / конфигурации'],rr))
@@ -170,6 +183,7 @@ def main(directory):
  put(f"We study exact replanning on directed motion-primitive lattices represented by shared collision-cell prefix meshes. We propose a negative certificate: a closed superset of boundary states whose outgoing invalid transitions are covered by mesh-prefix witnesses. Edge deletions preserve the superset certificate; insertions repair only its exposed frontier. Blocked endpoints are represented implicitly, avoiding per-primitive terminal subscriptions. A dual variant combines this certificate with standard optimal-suffix reuse. We also evaluate a Bellman-circuit mesh variant of D* Lite. Our frozen C++17 study covers {a['scenarios']} configurations and {a['timed_runs']:,} serial timing episodes, with a separate allocation pass and exact cost validation. Results are reported per map and include failure episodes, reconnection, map discovery, construction overhead and strong controls. We claim a mesh-specific frontier representation and its correctness, not a new general reachability theorem or universal planner superiority.")
  put('# Problem and motivation')
  put('A failed shortest-path query is useful information. Standard suffix reuse accelerates surviving positive paths, but may repeat a full failure proof after an irrelevant edge insertion. Maintaining the exact reachable component under deletions is considerably harder than maintaining a closed superset. We exploit this asymmetry and compress its outgoing invalid boundary using the same primitive-prefix mesh that shares collision checks in MeshA*.')
+ put('The intended consumer continues querying after temporary disconnection: e.g., a robot waiting for a door or a planning service receiving external map updates. Standard navigation in this study stops on its first NO_PATH. Under the k-move update model, stopping also prevents subsequent change phases. Negative-certificate construction cannot amortize in those terminal missions; they are retained as controls. Externally driven replay and reconnection isolate repeated-failure reuse. Fixed-start synthetic replay models waiting queries, not executed navigation.')
  put('# Method and correctness')
  put(fig('certificate_idea','A shared invalid prefix and a closed superset preserved under deletions.'))
  design=(DEST/'design.md').read_text();design=design[design.index('## Definitions and invariant'):design.index('## Variants and controls')];put(design)
@@ -190,7 +204,7 @@ def main(directory):
  for (model,fam,m),d in pairs[pairs.cohort.eq('separator')&pairs.method.isin(NEW)&pairs.baseline.isin(['lba_reuse','lattice_envelope','dstar_lattice'])].groupby(['control','family','method']):
   rr.append([model,fam,LABEL[m],*[num(gm(d[d.baseline.eq(b)].full_speedup)) for b in ['lba_reuse','lattice_envelope','dstar_lattice']]])
  put(table(['Model','Changes','Candidate','LBA reuse','Lattice envelope','D* Lite'],rr))
- put(fig('discovery_radius','Unknown-map navigation by map and sensing radius.'))
+ put(fig('discovery_radius','Unknown-map navigation by map and sensing radius; crosses are unsuccessful missions, not speedup evidence.'))
  put('# Structural complement: barrier width')
  put('Separately from the primary aggregate, we fixed a structural complement before inspecting aggregate primary times. A seven-cell separator can hide all outgoing free endpoints beyond the primitive span, so widths 1, 3 and 7 are all tested on 64x64 maps, two fixed-start map seeds, both control sets, with alternating one-column shifts. All widths, including conservative fallback failures, are retained. These twelve mechanism configurations are not pooled into the primary 228-case means.')
  put(fig('barrier_width','Separate structural complement: barrier-width sensitivity including cold construction.'))

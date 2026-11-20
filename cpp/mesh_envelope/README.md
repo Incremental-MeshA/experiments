@@ -41,3 +41,24 @@ Preflight runs are isolated under `results/preflight`, never pooled with times.
 The report evaluates novelty as a research hypothesis. Incremental reachability,
 cut certificates, suffix reuse and D* Lite are established concepts; the proposed
 contribution is the mesh-specific compressed negative frontier and its repair.
+
+The separately specified structural complement is under `frozen/frontier` and
+`results/frontier`: width 1/3/7 separators shifting one column, fixed size64,
+two map seeds and both models. These twelve configurations are not pooled with
+the primary228. It checks explicit mesh witnesses and conservative rebuilds
+which a thick separator can hide. All widths are retained.
+
+Rebuild the reports and notebook after both cohorts finish:
+
+```sh
+python cpp/mesh_envelope/analyze.py
+python cpp/mesh_envelope/analyze_frontier.py
+python cpp/mesh_envelope/report.py
+/workspace/md_tools_venv/bin/python cpp/mesh_envelope/notebook.py
+python cpp/mesh_envelope/validate.py
+```
+
+The measured kernels are frozen in commit `3fb2ce4`; analysis and prose are
+maintained independently. Source hashes and binary hashes are checked before
+measurement and on validation. Reports expose caps, completion failures,
+construction overhead, standard-map losses and the lattice frontier ablation.

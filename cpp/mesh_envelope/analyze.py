@@ -16,7 +16,7 @@ LABEL={'envelope_mesh':'Envelope-Mesh','dual_mesh':'Dual-Mesh','circuit_mesh':'C
        'md_astar':'MD-A*','boundary_mesh':'Boundary-Mesh','boundary_mpgaa':'Boundary-MPGAA*','delta_mpgaa':'Delta-MPGAA*',
        'batch_mpgaa':'Batch-MPGAA*','dstar_lattice':'D* Lite lattice','cmesh_dstar':'C-Mesh-D* Lite','octile_reuse':'Octile reuse','best_control':'Fastest control'}
 COLORS={'envelope_mesh':'#0072b2','dual_mesh':'#009e73','circuit_mesh':'#d55e00','lattice_envelope':'#cc79a7',
-        'mesh_cold':'#999999','mesh_reuse':'#e69f00','cut_mesh':'#56b4e9','lba_reuse':'#444444','dstar_lattice':'#332288'}
+        'batch_mpgaa':'#882255','mesh_cold':'#999999','mesh_reuse':'#e69f00','cut_mesh':'#56b4e9','lba_reuse':'#444444','dstar_lattice':'#332288'}
 COUNTERS=['expansions','checked_cells','notify_probes','heuristic_pops','backend_calls','certified','envelope_hits','envelope_builds','envelope_added','guard_installs','guard_events','frontier_tests','endpoint_tests','envelope_goal','circuit_nodes','circuit_stops','circuit_rows']
 INTKEY=['case','method','query']
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -37,7 +37,7 @@ def main(directory):
  for job in state['jobs'].values():
   assert job['status']=='passed'
   for p,h in job['outputs'].items():assert sha(directory/p)==h,p
- contexts=json.loads((HERE/'frozen/contexts.json').read_text());meta=pd.DataFrame([dict(case=k,cohort=v['cohort'],control=v['control'],map=v['map'],family=v['family'],seed=v.get('seed',0),radius=v.get('params',{}).get('radius',v.get('radius',0))) for k,v in contexts.items()])
+ contexts=json.loads((HERE/'frozen/contexts.json').read_text());meta=pd.DataFrame([dict(case=k,cohort=v['cohort'],control=v['control'],map=v['map'],family=v['family'],seed=v.get('seed',0),truth_optimum=v.get('truth_optimum',v.get('initial_optimum',np.nan)),radius=v.get('params',{}).get('radius',v.get('radius',0))) for k,v in contexts.items()])
  out=directory/'analysis';out.mkdir(exist_ok=True);runs=[];calls=[];memory=[];matched=0;alloc=[];normal=[]
  for job in manifest['plan']:
   stem=job['name'];nav=job['mode']=='navigation';tp=directory/('timing_'+stem);mp=directory/('memory_'+stem)
@@ -65,6 +65,10 @@ def main(directory):
  numeric=['full_s','initial_s','repair_s','setup_s','travel_cost','moves','plans',*COUNTERS]
  numeric=[c for c in dict.fromkeys(numeric) if c in allruns]
  metrics=allruns.groupby(['case','method'],as_index=False)[numeric].median();complete=allruns.groupby(['case','method'],as_index=False).complete.all();metrics=metrics.merge(complete).merge(memories,on=['case','method']).merge(meta,on='case',validate='many_to_one');save(metrics,out/'case_metrics.csv')
+ quality=metrics[metrics.cohort.str.startswith('navigation')][['case','method','cohort','control','map','radius','complete','travel_cost','moves','plans','truth_optimum']].copy()
+ quality['static_travel_stretch']=np.where(quality.cohort.eq('navigation_unknown')&quality.complete,quality.travel_cost/quality.truth_optimum,np.nan)
+ assert quality.static_travel_stretch.dropna().ge(1-1e-6).all()
+ save(quality,out/'navigation_quality.csv')
  status=calls.groupby(['cohort','control','map','method','status'],as_index=False).size();save(status,out/'statuses.csv')
  disagreement=calls[calls.status.isin(['ok','no_path']) & (calls.cost.notna()!=calls.expected.notna())]
  finite=calls.cost.notna()&calls.expected.notna();badcost=(calls.loc[finite,'cost']-calls.loc[finite,'expected']).abs().gt(1e-6).sum();assert len(disagreement)==0 and badcost==0
@@ -82,6 +86,10 @@ def main(directory):
        full_speedup=base.full_s/r.full_s if eligible and r.full_s>0 else np.nan,repair_speedup=base.repair_s/r.repair_s if eligible and r.repair_s>0 else np.nan,
        memory_multiplier=r.peak_heap_bytes/base.peak_heap_bytes if eligible and base.peak_heap_bytes>0 else np.nan))
  pairs=pd.DataFrame(pairs);save(pairs,out/'paired_cases.csv')
+ points=pairs[pairs.cohort.eq('navigation_dynamic')&pairs.baseline.eq('best_control')&pairs.method.isin(NEW)].copy()
+ for field in ['k','n','cr']:points[field]=points['case'].map(lambda x:contexts[x]['params'][field])
+ save(points,out/'navigation_points.csv')
+
  def aggregate(keys,name):
   rows=[]
   for key,d in pairs.groupby(keys,sort=False):
@@ -95,9 +103,9 @@ def main(directory):
  qmedian=qmedian.merge(meta,on='case',validate='many_to_one');save(qmedian,out/'queries.csv')
  qp=[]
  for base in ['lba_reuse','mesh_cold','mesh_reuse','cut_mesh','lattice_envelope','dstar_lattice','batch_mpgaa']:
-  b=qmedian[qmedian.method.eq(base)].set_index(['case','query'])
+  b=qmedian[qmedian.method.eq(base)&qmedian.cohort.isin(['replay','separator'])].set_index(['case','query'])
   for c in NEW:
-   a=qmedian[qmedian.method.eq(c)].set_index(['case','query']);ix=a.index.intersection(b.index);aa,bb=a.loc[ix],b.loc[ix]
+   a=qmedian[qmedian.method.eq(c)&qmedian.cohort.isin(['replay','separator'])].set_index(['case','query']);ix=a.index.intersection(b.index);aa,bb=a.loc[ix],b.loc[ix]
    good=~aa.status.isin(['capped','skipped_after_cap'])&~bb.status.isin(['capped','skipped_after_cap'])
    for k in ix[good]:
     x,y=aa.loc[k],bb.loc[k];qp.append(dict(case=k[0],query=k[1],method=c,baseline=base,time_s=x.time_s,base_time_s=y.time_s,speedup=y.time_s/x.time_s if x.time_s>0 else np.nan,answer='no_path' if pd.isna(x.cost) else 'path',edits=x.blocks+x.opens,blocks=x.blocks,opens=x.opens,cohort=x.cohort,control=x.control,map=x['map'],family=x.family))
@@ -147,6 +155,23 @@ def main(directory):
  for i in range(4):ax.annotate('',(i+1,0),(i,0),arrowprops=dict(arrowstyle='->',color='#d55e00' if i in [0,2] else '.4',linestyle='--' if i in [0,2] else '-'))
  ax.text(.5,.21,'new block',ha='center',fontsize=8);ax.text(2.5,.21,'old cut',ha='center',fontsize=8);ax.text(1,-.62,'Keep R = {s,a,b}; exact reachability shrinks to {s}',ha='center',fontsize=9);ax.set(xlim=(-.5,4.5),ylim=(-.9,.9),title='Deletion preserves a closed superset');ax.axis('off')
  figure(fig,'certificate_idea',figmanifest)
+ # Actual frozen maps, rather than a schematic or newly sampled illustration.
+ from prepare import split_suite
+ _,raw_maps,raw_cases=split_suite(HERE/'frozen/car16_replay.txt')
+ _,sep_maps,sep_cases=split_suite(HERE/'frozen/car16_separator.txt')
+ fig,axes=plt.subplots(2,4,figsize=(12,6));names=['Berlin','AR0700','arena','MA_maze96','MA_room96','MA_random96']
+ chosen=[]
+ for name in names:
+  c=next(v for v in contexts.values() if v['cohort']=='replay' and v['control']=='car16' and v['map']==name and v['family']=='on_path')
+  chosen.append((name,c,raw_maps[int(raw_cases[c['id']][2])]))
+ for size in [32,64]:
+  c=next(v for v in contexts.values() if v['cohort']=='separator' and v['control']=='car16' and v['map']==f'separator{size}' and v['family']=='remote')
+  chosen.append((f'Separator {size}',c,sep_maps[int(sep_cases[c['id']][2])]))
+ for ax,(name,c,record) in zip(axes.flat,chosen):
+  image=np.array([[x=='#' for x in row] for row in record[3:]],dtype=np.uint8);ax.imshow(image,cmap='gray_r',vmin=0,vmax=1,interpolation='nearest')
+  q=c['queries'][0];start,goal=q['start'],q['goal'];ax.scatter(start[1],start[0],c='#009e73',s=22,marker='o');ax.scatter(goal[1],goal[0],c='#d55e00',s=30,marker='x');ax.set_title(f'{name} ({image.shape[1]}x{image.shape[0]})',fontsize=9);ax.set_xticks([]);ax.set_yticks([])
+ figure(fig,'map_atlas',figmanifest)
+
 
  fig,axes=plt.subplots(1,2,figsize=(11,4))
  for ax,control in zip(axes,['car16','grid8']):
@@ -196,9 +221,16 @@ def main(directory):
  nav=metrics[metrics.cohort.eq('navigation_unknown')]
  for ax,(name,d) in zip(axes.flat,nav.groupby('map')):
   for m in ['lba_reuse','batch_mpgaa','dstar_lattice',*NEW]:
-   v=d[d.method.eq(m)].sort_values('radius');ax.plot(v.radius,1000*v.full_s,'o-',label=LABEL[m],color=COLORS.get(m))
+   v=d[d.method.eq(m)].sort_values('radius');ax.plot(v.radius,np.where(v.complete,1000*v.full_s,np.nan),'o-',label=LABEL[m],color=COLORS.get(m));failed=v[~v.complete];ax.scatter(failed.radius,1000*failed.full_s,marker='x',color=COLORS.get(m),s=35)
   ax.set(yscale='log',title=name,xlabel='Discovery radius, cells',ylabel='Total planner time, ms');ax.set_xticks([8,16,32,64])
  axes[0,0].legend(fontsize=7);figure(fig,'discovery_radius',figmanifest)
+ fig,axes=plt.subplots(2,3,figsize=(12,7),sharex=True)
+ for ax,(name,d) in zip(axes.flat,quality[quality.cohort.eq('navigation_unknown')].groupby('map')):
+  for m in ['lba_reuse','batch_mpgaa','dstar_lattice',*NEW]:
+   v=d[d.method.eq(m)].sort_values('radius');ax.plot(v.radius,v.static_travel_stretch,'o-',label=LABEL[m],color=COLORS.get(m))
+  ax.set(title=name,xlabel='Discovery radius, cells',ylabel='Travel / static truth optimum');ax.set_xticks([8,16,32,64]);ax.axhline(1,color='.7',ls=':')
+ axes[0,0].legend(fontsize=7);figure(fig,'travel_quality',figmanifest)
+
  # Separate positive / negative evidence: sum time ratios per fixed map.
  ans=[]
  for key,d in qp[qp['query'].gt(0)&qp.cohort.eq('replay')].groupby(['control','map','answer','method','baseline']):
@@ -219,7 +251,7 @@ def main(directory):
  figure(fig,'frontier_work',figmanifest)
  completion=metrics.groupby(['cohort','control','method'],as_index=False).agg(configurations=('complete','size'),complete=('complete','sum'));save(completion,out/'completion.csv')
  tables={p.name:sha(p) for p in out.glob('*.csv')};(out/'figures.json').write_text(json.dumps(figmanifest,indent=2)+'\n')
- result=dict(status='passed',scenarios=manifest['scenarios'],timed_runs=len(allruns),memory_runs=len(memories),timed_calls=len(calls),allocation_matched_rows=matched,exact_cost_disagreements=int(badcost+len(disagreement)),capped_calls=int(calls.status.eq('capped').sum()),repeat_relative_mad_median=dispersion.relative_mad.median(),repeat_relative_mad_p95=dispersion.relative_mad.quantile(.95),analysis_source_sha256=sha(Path(__file__)),tables_sha256=tables,figures=len(figmanifest),manifest_sha256=sha(HERE/'frozen/manifest.json'))
+ result=dict(status='passed',scenarios=manifest['scenarios'],timed_runs=len(allruns),memory_runs=len(memories),timed_calls=len(calls),allocation_matched_rows=matched,exact_cost_disagreements=int(badcost+len(disagreement)),capped_calls=int(calls.status.eq('capped').sum()),repeat_relative_mad_median=dispersion.relative_mad.median(),repeat_relative_mad_p95=dispersion.relative_mad.quantile(.95),analysis_versions=dict(numpy=np.__version__,pandas=pd.__version__,matplotlib=matplotlib.__version__),analysis_source_sha256=sha(Path(__file__)),tables_sha256=tables,figures=len(figmanifest),manifest_sha256=sha(HERE/'frozen/manifest.json'))
  assert result['timed_runs']==manifest['timed_runs'] and result['memory_runs']==manifest['memory_runs']
  (out/'analysis.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps({k:v for k,v in result.items() if not k.endswith('sha256')}))
 if __name__=='__main__':
