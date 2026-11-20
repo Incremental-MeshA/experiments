@@ -1,0 +1,1016 @@
+{
+  "status": "passed",
+  "utc": "2026-11-20T08:29:22.964101+00:00",
+  "cpu": "AMD EPYC 9V74 80-Core Processor",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "workers": 1,
+  "python": "3.12.14",
+  "git_parent": "b01d072ec20badc85ac96f8e4628280e43d14f50",
+  "manifest_sha256": "2bdaaabfe163a61d3d0acdc08cfbfd57d0492ef74997b4481cca798ea55d596d",
+  "selection_sha256": "cfce8f607439448317350964a3c721d9290a46107568fcf58eaa6d03d3bcf2a2",
+  "source_sha256": {
+    "cpp/navigation_sweeps/bench.cpp": "01dbbe2b3d62e2967631694b0a5c95198bd7b6fe32a5b5be56484b52d6859f1c",
+    "cpp/navigation_sweeps/factory.hpp": "ab3e11dd374743d5a96a703da410224b738231b88c6d52402b254be76f0ccc0a",
+    "cpp/navigation_sweeps/visibility.hpp": "5a5742a4151568896f406d8bf0e1096b7d43b8ca0870fe0e13ef4b1dfd302e48",
+    "cpp/navigation_sweeps/environment.hpp": "29efb87781682bdcdf424e5137b906c1e53c00966d35a839386a39a7cbd0b0d4",
+    "cpp/navigation_sweeps/Makefile": "2ed37ad9c6557fe4a060ad091b8ef514f68986398561df57a7439595e2ea836e",
+    "cpp/navigation_sweeps/prepare.py": "1b8c3f4031d1b5647478ab5c0edc6cda2b25bddd7ecebecaef7b4f0061402080",
+    "cpp/navigation_sweeps/run_all.py": "d97f52c563422122495a70eb03fd606b637a6258f37eee2b960d37464cbc40a8",
+    "cpp/navigation_sweeps/test_protocol.cpp": "48a5f5f529c07a565eadf9b76324b4111cc6fa960aa9fb031d16fb40efc0c374",
+    "cpp/experiments/memory.hpp": "16a8f7e99fc79b35c38086e1d632e8024a10e48e3b80eaf3547c83a2d2070b32",
+    "cpp/experiments/dstar_boundary.hpp": "959a21c8684f7890a200cbbbc14ea641ac8a0e7719000842f929b2ebdea60990",
+    "cpp/mesh_variants/variants.hpp": "163a3f17cabd4354c00edd38821aaf0fea8edd45d7345bf9501d161220d2b8d3",
+    "cpp/include/ima/adaptive.hpp": "5c54db0b176953927291f2ca476b26e769192571754819e2f66c3feb698c83a3",
+    "cpp/include/ima/deferred.hpp": "d4b47e481e323e1e202deeb2644b14b4d63fda6d8f974f641a77ca9d30e73530",
+    "cpp/include/ima/dstar.hpp": "c9e9b714fbf86da15bcea7078494b8dd0a0f4fbd43e38d6e8815748458dfca6a",
+    "cpp/include/ima/model.hpp": "ce03a8bbb71cb873bf546a8c51063e12b3102c9df05d96fc55902d7630c9bfbc",
+    "cpp/include/ima/planners.hpp": "b874588434c7bbb5666b4dc6b33d498d2d8b18ac45198b545c3899731292fa0d",
+    "cpp/include/ima/search.hpp": "cdc94b7a4a9897e4da868003998346acdf5af8f4011b4b566803cb79f36f78a2",
+    "cpp/experiments/prepare.py": "bbd9b1117e5f703dc81995a2bf1e4971198bd5725640facdc5f1dd73ec11a38b",
+    "mesha/primitives.py": "ea1d84ed317b10d66e726fc1678e9dc350b62e871d548b95b8305b4281532463",
+    "mesha/mesh.py": "ecd37c9a897137d57d6a95de384f35dc25fe7d6d847917bbeb636745537d326b",
+    "mesha/maps.py": "e7e47613b68141289602058ab1327eb69cd019ffc059ca1b8da940e23d31b15f"
+  },
+  "control_source_sha256": {
+    "cpp/navigation_controls/run_all.py": "ea2eaad8c9f3e699ae5f4e8d84addddf04f947f9ad6bddf1133c58ff5c4229a7",
+    "cpp/navigation_controls/bench.cpp": "7dbe01561e70786bc80e5956eb6313e8b3ca10af34e4f90f882193fed05d9d03",
+    "cpp/navigation_controls/factory.hpp": "a02086a4ebe4901848b41a5d8d4c71b253b0ea5da72eb2a2efe28e862eb83681",
+    "cpp/navigation_controls/strong_grid.hpp": "39dc7ae894c1a11cea8b8f1318a6930598f5ccf6fa4dfb5a290c63f5ed955150",
+    "cpp/navigation_controls/test.cpp": "0fba0a1e75c7e123496c3c7a46f531a16e2485f49e2bba2c0a4e9cab8b68cff3",
+    "cpp/navigation_controls/Makefile": "4351dbd427a4a3a7bf7466cae66b181fb3060fdf8daaeb4f7829eba8691e4d74"
+  },
+  "methods": [
+    "lba_reuse",
+    "mpgaa",
+    "md_astar",
+    "octile_astar",
+    "octile_reuse"
+  ],
+  "cases": 80,
+  "timed_runs": 1200,
+  "memory_runs": 400,
+  "plan": [
+    {
+      "name": "timing_grid8_AR0700_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/grid8_AR0700_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_AR0700_dynamic.specs.txt",
+      "contexts": "cpp/navigation_sweeps/frozen/grid8_AR0700_dynamic.contexts.json",
+      "expected_runs": 120
+    },
+    {
+      "name": "timing_grid8_Berlin_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/grid8_Berlin_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_Berlin_dynamic.specs.txt",
+      "contexts": "cpp/navigation_sweeps/frozen/grid8_Berlin_dynamic.contexts.json",
+      "expected_runs": 120
+    },
+    {
+      "name": "timing_grid8_MA_maze512_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/grid8_MA_maze512_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_MA_maze512_dynamic.specs.txt",
+      "contexts": "cpp/navigation_sweeps/frozen/grid8_MA_maze512_dynamic.contexts.json",
+      "expected_runs": 120
+    },
+    {
+      "name": "timing_grid8_MA_random512_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/grid8_MA_random512_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_MA_random512_dynamic.specs.txt",
+      "contexts": "cpp/navigation_sweeps/frozen/grid8_MA_random512_dynamic.contexts.json",
+      "expected_runs": 120
+    },
+    {
+      "name": "timing_grid8_MA_room512_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/grid8_MA_room512_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_MA_room512_dynamic.specs.txt",
+      "contexts": "cpp/navigation_sweeps/frozen/grid8_MA_room512_dynamic.contexts.json",
+      "expected_runs": 120
+    },
+    {
+      "name": "timing_grid8_arena_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/grid8_arena_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_arena_dynamic.specs.txt",
+      "contexts": "cpp/navigation_sweeps/frozen/grid8_arena_dynamic.contexts.json",
+      "expected_runs": 120
+    },
+    {
+      "name": "timing_grid8_random50_p10_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/grid8_random50_p10_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_random50_p10_dynamic.specs.txt",
+      "contexts": "cpp/navigation_sweeps/frozen/grid8_random50_p10_dynamic.contexts.json",
+      "expected_runs": 120
+    },
+    {
+      "name": "timing_grid8_random50_p20_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/grid8_random50_p20_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_random50_p20_dynamic.specs.txt",
+      "contexts": "cpp/navigation_sweeps/frozen/grid8_random50_p20_dynamic.contexts.json",
+      "expected_runs": 120
+    },
+    {
+      "name": "timing_grid8_random50_p30_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/grid8_random50_p30_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_random50_p30_dynamic.specs.txt",
+      "contexts": "cpp/navigation_sweeps/frozen/grid8_random50_p30_dynamic.contexts.json",
+      "expected_runs": 120
+    },
+    {
+      "name": "timing_grid8_random50_p40_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/grid8_random50_p40_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_random50_p40_dynamic.specs.txt",
+      "contexts": "cpp/navigation_sweeps/frozen/grid8_random50_p40_dynamic.contexts.json",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_grid8_AR0700_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/grid8_AR0700_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_AR0700_dynamic.specs.txt",
+      "contexts": "cpp/navigation_sweeps/frozen/grid8_AR0700_dynamic.contexts.json",
+      "expected_runs": 40
+    },
+    {
+      "name": "memory_grid8_Berlin_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/grid8_Berlin_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_Berlin_dynamic.specs.txt",
+      "contexts": "cpp/navigation_sweeps/frozen/grid8_Berlin_dynamic.contexts.json",
+      "expected_runs": 40
+    },
+    {
+      "name": "memory_grid8_MA_maze512_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/grid8_MA_maze512_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_MA_maze512_dynamic.specs.txt",
+      "contexts": "cpp/navigation_sweeps/frozen/grid8_MA_maze512_dynamic.contexts.json",
+      "expected_runs": 40
+    },
+    {
+      "name": "memory_grid8_MA_random512_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/grid8_MA_random512_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_MA_random512_dynamic.specs.txt",
+      "contexts": "cpp/navigation_sweeps/frozen/grid8_MA_random512_dynamic.contexts.json",
+      "expected_runs": 40
+    },
+    {
+      "name": "memory_grid8_MA_room512_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/grid8_MA_room512_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_MA_room512_dynamic.specs.txt",
+      "contexts": "cpp/navigation_sweeps/frozen/grid8_MA_room512_dynamic.contexts.json",
+      "expected_runs": 40
+    },
+    {
+      "name": "memory_grid8_arena_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/grid8_arena_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_arena_dynamic.specs.txt",
+      "contexts": "cpp/navigation_sweeps/frozen/grid8_arena_dynamic.contexts.json",
+      "expected_runs": 40
+    },
+    {
+      "name": "memory_grid8_random50_p10_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/grid8_random50_p10_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_random50_p10_dynamic.specs.txt",
+      "contexts": "cpp/navigation_sweeps/frozen/grid8_random50_p10_dynamic.contexts.json",
+      "expected_runs": 40
+    },
+    {
+      "name": "memory_grid8_random50_p20_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/grid8_random50_p20_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_random50_p20_dynamic.specs.txt",
+      "contexts": "cpp/navigation_sweeps/frozen/grid8_random50_p20_dynamic.contexts.json",
+      "expected_runs": 40
+    },
+    {
+      "name": "memory_grid8_random50_p30_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/grid8_random50_p30_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_random50_p30_dynamic.specs.txt",
+      "contexts": "cpp/navigation_sweeps/frozen/grid8_random50_p30_dynamic.contexts.json",
+      "expected_runs": 40
+    },
+    {
+      "name": "memory_grid8_random50_p40_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/grid8_random50_p40_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_random50_p40_dynamic.specs.txt",
+      "contexts": "cpp/navigation_sweeps/frozen/grid8_random50_p40_dynamic.contexts.json",
+      "expected_runs": 40
+    }
+  ],
+  "jobs": {
+    "timing_grid8_AR0700_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_controls/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_AR0700_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_AR0700_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_controls/results/full/timing_grid8_AR0700_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba_reuse,mpgaa,md_astar,octile_astar,octile_reuse",
+        "--anchors-only"
+      ],
+      "binary_sha256": "b8d4617c72f7fc76aae81cf36ac4610e6154486450a370960f3f0b4d66db614e",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 120,
+        "calls": 23292,
+        "caps": 0,
+        "wall_s": 45.651481919,
+        "preparation_s": 0.00325878,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"
+      },
+      "output_sha256": {
+        "cpp/navigation_controls/results/full/timing_grid8_AR0700_dynamic_runs.csv": "7ee0f5abecf00b944810eaa202501ab18a83af269d86dc500b8edd13379f2769",
+        "cpp/navigation_controls/results/full/timing_grid8_AR0700_dynamic_calls.csv": "fdfb0aa04392e0e0eb5a4ccceb08a4bd1efe249fdde01205bb573287edb58698",
+        "cpp/navigation_controls/results/full/timing_grid8_AR0700_dynamic_traces.csv": "2fddbb28390d49cf27ec590dbea165df44687cf6b2d02509a7b8b2753565bcfe",
+        "cpp/navigation_controls/results/full/timing_grid8_AR0700_dynamic.json": "cd6bce72a375e2b4d8cfca3e6b00d21cf53e24bd34b656fe266f5e222210deef"
+      }
+    },
+    "timing_grid8_Berlin_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_controls/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_Berlin_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_Berlin_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_controls/results/full/timing_grid8_Berlin_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba_reuse,mpgaa,md_astar,octile_astar,octile_reuse",
+        "--anchors-only"
+      ],
+      "binary_sha256": "b8d4617c72f7fc76aae81cf36ac4610e6154486450a370960f3f0b4d66db614e",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 120,
+        "calls": 19479,
+        "caps": 0,
+        "wall_s": 33.703069086,
+        "preparation_s": 0.002191317,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"
+      },
+      "output_sha256": {
+        "cpp/navigation_controls/results/full/timing_grid8_Berlin_dynamic_runs.csv": "92eb22233ad34cc23023647b1cbf5981e9fb7e3a1843ce38ff5d1dbc5cdf8798",
+        "cpp/navigation_controls/results/full/timing_grid8_Berlin_dynamic_calls.csv": "e7135835024743c4f6713cce485726e0a0875ee32bea306d369effba3ba5db70",
+        "cpp/navigation_controls/results/full/timing_grid8_Berlin_dynamic_traces.csv": "292caa6daddc1ac8925852cd37859e75e3199ec559722d52e07cd1084c9501a8",
+        "cpp/navigation_controls/results/full/timing_grid8_Berlin_dynamic.json": "e673b46faa08c262c225a4749178ddb3b6f1197faf920432e0b253161dbe5e38"
+      }
+    },
+    "timing_grid8_MA_maze512_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_controls/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_MA_maze512_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_MA_maze512_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_controls/results/full/timing_grid8_MA_maze512_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba_reuse,mpgaa,md_astar,octile_astar,octile_reuse",
+        "--anchors-only"
+      ],
+      "binary_sha256": "b8d4617c72f7fc76aae81cf36ac4610e6154486450a370960f3f0b4d66db614e",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 120,
+        "calls": 27777,
+        "caps": 0,
+        "wall_s": 400.845504169,
+        "preparation_s": 0.007426815,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"
+      },
+      "output_sha256": {
+        "cpp/navigation_controls/results/full/timing_grid8_MA_maze512_dynamic_runs.csv": "06c7f8c975cae820aedf14e74ef484b8f715406c8861cfde6c170165bbbc2096",
+        "cpp/navigation_controls/results/full/timing_grid8_MA_maze512_dynamic_calls.csv": "b785b8b4162035abb9f53e6d847673a3605efa62d062adcb4f4e0dc56b687ec1",
+        "cpp/navigation_controls/results/full/timing_grid8_MA_maze512_dynamic_traces.csv": "f4b43b604aaf396fc7ec9696d605bbe740d1dc5be8098b1498ecffee64233225",
+        "cpp/navigation_controls/results/full/timing_grid8_MA_maze512_dynamic.json": "acdce87e2d38cd5652dc6cb53c165cf2e5fc262519c12e4d475624853894e23c"
+      }
+    },
+    "timing_grid8_MA_random512_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_controls/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_MA_random512_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_MA_random512_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_controls/results/full/timing_grid8_MA_random512_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba_reuse,mpgaa,md_astar,octile_astar,octile_reuse",
+        "--anchors-only"
+      ],
+      "binary_sha256": "b8d4617c72f7fc76aae81cf36ac4610e6154486450a370960f3f0b4d66db614e",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 120,
+        "calls": 22518,
+        "caps": 0,
+        "wall_s": 98.493167164,
+        "preparation_s": 0.007823719,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"
+      },
+      "output_sha256": {
+        "cpp/navigation_controls/results/full/timing_grid8_MA_random512_dynamic_runs.csv": "acc665855964c1fdc842dd7b223a66b5758e8908bff69a8234f4b54713a39054",
+        "cpp/navigation_controls/results/full/timing_grid8_MA_random512_dynamic_calls.csv": "b841e80dfd21f23b6fe7207db8ca263f24273603ee09c07ba95313b7d6804c95",
+        "cpp/navigation_controls/results/full/timing_grid8_MA_random512_dynamic_traces.csv": "4afd0d504a7839ab8d87da2b19de7be2446a6d16ec21b1868ba6e960782edd7d",
+        "cpp/navigation_controls/results/full/timing_grid8_MA_random512_dynamic.json": "2315dc5e2adff0471aff6891d2aff09ba07d11d41ed031dd9eb64b3ddc804d75"
+      }
+    },
+    "timing_grid8_MA_room512_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_controls/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_MA_room512_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_MA_room512_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_controls/results/full/timing_grid8_MA_room512_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba_reuse,mpgaa,md_astar,octile_astar,octile_reuse",
+        "--anchors-only"
+      ],
+      "binary_sha256": "b8d4617c72f7fc76aae81cf36ac4610e6154486450a370960f3f0b4d66db614e",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 120,
+        "calls": 24594,
+        "caps": 0,
+        "wall_s": 254.591762321,
+        "preparation_s": 0.007806214,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"
+      },
+      "output_sha256": {
+        "cpp/navigation_controls/results/full/timing_grid8_MA_room512_dynamic_runs.csv": "7f7eb381a96d19553834e1364b6ee05efeb361815d8625d71dffdce636bf96af",
+        "cpp/navigation_controls/results/full/timing_grid8_MA_room512_dynamic_calls.csv": "49c105870579cceb08cb6e65132f11b3fa34e7e6a7986d0bdb08fd21fef07db5",
+        "cpp/navigation_controls/results/full/timing_grid8_MA_room512_dynamic_traces.csv": "6638a66509a7758151995f403a64f6945a59b45d031a6edc119f7a9658de1a01",
+        "cpp/navigation_controls/results/full/timing_grid8_MA_room512_dynamic.json": "9b25b44154fe9eac978ef16480f075c7a9494d8f621ff948b6dd1775c26bed57"
+      }
+    },
+    "timing_grid8_arena_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_controls/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_arena_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_arena_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_controls/results/full/timing_grid8_arena_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba_reuse,mpgaa,md_astar,octile_astar,octile_reuse",
+        "--anchors-only"
+      ],
+      "binary_sha256": "b8d4617c72f7fc76aae81cf36ac4610e6154486450a370960f3f0b4d66db614e",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 120,
+        "calls": 1347,
+        "caps": 0,
+        "wall_s": 0.129353858,
+        "preparation_s": 0.000834042,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"
+      },
+      "output_sha256": {
+        "cpp/navigation_controls/results/full/timing_grid8_arena_dynamic_runs.csv": "1ae229b64a11ae3f536673518f9facd709fc96d3d85f481db4326755e780eeb2",
+        "cpp/navigation_controls/results/full/timing_grid8_arena_dynamic_calls.csv": "fc7db65059125448fb875ee770788f1e497c8e73e119e8051b9df780037a969a",
+        "cpp/navigation_controls/results/full/timing_grid8_arena_dynamic_traces.csv": "4ff98ea0e5136f216db74036d488c5f463e4bc85bb6824e196b7e96a631bc29b",
+        "cpp/navigation_controls/results/full/timing_grid8_arena_dynamic.json": "01d9442921fb3c8fe585dd5133d5448272b459b26ace0f4121a365165069fe7b"
+      }
+    },
+    "timing_grid8_random50_p10_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_controls/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_random50_p10_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_random50_p10_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_controls/results/full/timing_grid8_random50_p10_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba_reuse,mpgaa,md_astar,octile_astar,octile_reuse",
+        "--anchors-only"
+      ],
+      "binary_sha256": "b8d4617c72f7fc76aae81cf36ac4610e6154486450a370960f3f0b4d66db614e",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 120,
+        "calls": 1317,
+        "caps": 0,
+        "wall_s": 0.080195773,
+        "preparation_s": 0.000806993,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"
+      },
+      "output_sha256": {
+        "cpp/navigation_controls/results/full/timing_grid8_random50_p10_dynamic_runs.csv": "a7c116c801a294250b4c0e3dbd32463e10188db7c19e83116d05f4912e268d62",
+        "cpp/navigation_controls/results/full/timing_grid8_random50_p10_dynamic_calls.csv": "09b093d54d5f34adb003337a7023842b11d82ef69fe6ac9702974c9093049bfb",
+        "cpp/navigation_controls/results/full/timing_grid8_random50_p10_dynamic_traces.csv": "e3a7edde98cbb2d3491b3edabe13356f7792e5ec056fb813bbc4396df44f83ba",
+        "cpp/navigation_controls/results/full/timing_grid8_random50_p10_dynamic.json": "a761cbc219cf79b0df13517212246a9d6015bcb200c7986bc3b2b042ccedc188"
+      }
+    },
+    "timing_grid8_random50_p20_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_controls/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_random50_p20_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_random50_p20_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_controls/results/full/timing_grid8_random50_p20_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba_reuse,mpgaa,md_astar,octile_astar,octile_reuse",
+        "--anchors-only"
+      ],
+      "binary_sha256": "b8d4617c72f7fc76aae81cf36ac4610e6154486450a370960f3f0b4d66db614e",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 120,
+        "calls": 1416,
+        "caps": 0,
+        "wall_s": 0.114985978,
+        "preparation_s": 0.000915245,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"
+      },
+      "output_sha256": {
+        "cpp/navigation_controls/results/full/timing_grid8_random50_p20_dynamic_runs.csv": "79888f38c46a0a30f30a4e5647bba619fa4ba49d776e9f7c248e5bb53e080dae",
+        "cpp/navigation_controls/results/full/timing_grid8_random50_p20_dynamic_calls.csv": "9bcfcd2788013383099b74f208c62c2e128613f9264a316427eee8f95b73a175",
+        "cpp/navigation_controls/results/full/timing_grid8_random50_p20_dynamic_traces.csv": "a8137604a8684dd85fd53fa9bde2150296198635143608da56920ab9b5fad826",
+        "cpp/navigation_controls/results/full/timing_grid8_random50_p20_dynamic.json": "b4b1f9c254d8df9b3566be0e81f974c11355a26e84d0e5d10f6b64f5190a3159"
+      }
+    },
+    "timing_grid8_random50_p30_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_controls/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_random50_p30_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_random50_p30_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_controls/results/full/timing_grid8_random50_p30_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba_reuse,mpgaa,md_astar,octile_astar,octile_reuse",
+        "--anchors-only"
+      ],
+      "binary_sha256": "b8d4617c72f7fc76aae81cf36ac4610e6154486450a370960f3f0b4d66db614e",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 120,
+        "calls": 1410,
+        "caps": 0,
+        "wall_s": 0.086795707,
+        "preparation_s": 0.000877027,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"
+      },
+      "output_sha256": {
+        "cpp/navigation_controls/results/full/timing_grid8_random50_p30_dynamic_runs.csv": "4800edfc8579744c79f1d5d2e81f4684a410bfbb47abb824caa23257f9979a11",
+        "cpp/navigation_controls/results/full/timing_grid8_random50_p30_dynamic_calls.csv": "e076156ce0646e5bf5167973d27131d6f06d100115938b7873c324a45bebc462",
+        "cpp/navigation_controls/results/full/timing_grid8_random50_p30_dynamic_traces.csv": "f071f2126f00721ddde2c8275cfc690f13b79c5914f867b4d4793ff4cf1a6829",
+        "cpp/navigation_controls/results/full/timing_grid8_random50_p30_dynamic.json": "e9ac7c071dba8c75479c56fd67a5859ffff665ac8ecad359a26752efef9ed55e"
+      }
+    },
+    "timing_grid8_random50_p40_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_controls/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_random50_p40_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_random50_p40_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_controls/results/full/timing_grid8_random50_p40_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba_reuse,mpgaa,md_astar,octile_astar,octile_reuse",
+        "--anchors-only"
+      ],
+      "binary_sha256": "b8d4617c72f7fc76aae81cf36ac4610e6154486450a370960f3f0b4d66db614e",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 120,
+        "calls": 1803,
+        "caps": 0,
+        "wall_s": 0.213643672,
+        "preparation_s": 0.001032106,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"
+      },
+      "output_sha256": {
+        "cpp/navigation_controls/results/full/timing_grid8_random50_p40_dynamic_runs.csv": "fe5ae785a7b84ce97b9f5106bae474d818a3c05b109218162a254665a2f54d6a",
+        "cpp/navigation_controls/results/full/timing_grid8_random50_p40_dynamic_calls.csv": "ba2f85635087ff52f1d90e4977f2eee3ca532720e891461f52fb7686b2facff9",
+        "cpp/navigation_controls/results/full/timing_grid8_random50_p40_dynamic_traces.csv": "62ee1ff85567c544dda23b66cb68abc95c5554415a8a61f994e8f6fa3fc15338",
+        "cpp/navigation_controls/results/full/timing_grid8_random50_p40_dynamic.json": "d6d254336197a039310a786d6fc459f7b1a9c87ebb7d07a69415ca37af67dca1"
+      }
+    },
+    "memory_grid8_AR0700_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_controls/build/experiment_memory",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_AR0700_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_AR0700_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_controls/results/full/memory_grid8_AR0700_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba_reuse,mpgaa,md_astar,octile_astar,octile_reuse",
+        "--anchors-only",
+        "--repeats",
+        "1"
+      ],
+      "binary_sha256": "95be42e2eb4dd3b802e3fb07f76ccd9801e6914f43aa79b38f2f396846908c67",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 40,
+        "calls": 7764,
+        "caps": 0,
+        "wall_s": 17.393369059,
+        "preparation_s": 0.003364964,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC"
+      },
+      "output_sha256": {
+        "cpp/navigation_controls/results/full/memory_grid8_AR0700_dynamic_runs.csv": "3fbe87f45f83ae67691351d4c57df7538801073927ec6620bd919af8dc82b22b",
+        "cpp/navigation_controls/results/full/memory_grid8_AR0700_dynamic_calls.csv": "bdde863cc745649fd1ded6e5868186537526c6ecdccb04897b1440cc8f3c6a13",
+        "cpp/navigation_controls/results/full/memory_grid8_AR0700_dynamic_traces.csv": "2fddbb28390d49cf27ec590dbea165df44687cf6b2d02509a7b8b2753565bcfe",
+        "cpp/navigation_controls/results/full/memory_grid8_AR0700_dynamic.json": "16ec5a64f11e521c2abd4eeebd58e6ebdcfe139a2a7a4b59b99c5de8df090507"
+      }
+    },
+    "memory_grid8_Berlin_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_controls/build/experiment_memory",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_Berlin_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_Berlin_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_controls/results/full/memory_grid8_Berlin_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba_reuse,mpgaa,md_astar,octile_astar,octile_reuse",
+        "--anchors-only",
+        "--repeats",
+        "1"
+      ],
+      "binary_sha256": "95be42e2eb4dd3b802e3fb07f76ccd9801e6914f43aa79b38f2f396846908c67",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 40,
+        "calls": 6493,
+        "caps": 0,
+        "wall_s": 12.449717571,
+        "preparation_s": 0.002324486,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC"
+      },
+      "output_sha256": {
+        "cpp/navigation_controls/results/full/memory_grid8_Berlin_dynamic_runs.csv": "52b4eb7557429879853f069ba742e9f68ddd9467e10aa4758c8cd50e1bf161bc",
+        "cpp/navigation_controls/results/full/memory_grid8_Berlin_dynamic_calls.csv": "ae53f948cb7c37cfbd5ea2960f035ddd34d1a47655f721d0d616b790b8b989dc",
+        "cpp/navigation_controls/results/full/memory_grid8_Berlin_dynamic_traces.csv": "292caa6daddc1ac8925852cd37859e75e3199ec559722d52e07cd1084c9501a8",
+        "cpp/navigation_controls/results/full/memory_grid8_Berlin_dynamic.json": "269a623de5a5ffe51b65d40414d58f515e19c64544eb6c61380fad183162fd70"
+      }
+    },
+    "memory_grid8_MA_maze512_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_controls/build/experiment_memory",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_MA_maze512_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_MA_maze512_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_controls/results/full/memory_grid8_MA_maze512_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba_reuse,mpgaa,md_astar,octile_astar,octile_reuse",
+        "--anchors-only",
+        "--repeats",
+        "1"
+      ],
+      "binary_sha256": "95be42e2eb4dd3b802e3fb07f76ccd9801e6914f43aa79b38f2f396846908c67",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 40,
+        "calls": 9259,
+        "caps": 0,
+        "wall_s": 160.532276291,
+        "preparation_s": 0.007828625,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC"
+      },
+      "output_sha256": {
+        "cpp/navigation_controls/results/full/memory_grid8_MA_maze512_dynamic_runs.csv": "e1a985716f119f2ed584f9191f90b4849303ac53787ee46b4273a073f232ae21",
+        "cpp/navigation_controls/results/full/memory_grid8_MA_maze512_dynamic_calls.csv": "371a09a2e93d3ed13f46404f2cae493d7036d7b482ab7aaf5adbe031958ea873",
+        "cpp/navigation_controls/results/full/memory_grid8_MA_maze512_dynamic_traces.csv": "f4b43b604aaf396fc7ec9696d605bbe740d1dc5be8098b1498ecffee64233225",
+        "cpp/navigation_controls/results/full/memory_grid8_MA_maze512_dynamic.json": "3580588ddfbd5f544221cbfebca274278642ec3ff4ebcf74dc27de039fdb808f"
+      }
+    },
+    "memory_grid8_MA_random512_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_controls/build/experiment_memory",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_MA_random512_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_MA_random512_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_controls/results/full/memory_grid8_MA_random512_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba_reuse,mpgaa,md_astar,octile_astar,octile_reuse",
+        "--anchors-only",
+        "--repeats",
+        "1"
+      ],
+      "binary_sha256": "95be42e2eb4dd3b802e3fb07f76ccd9801e6914f43aa79b38f2f396846908c67",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 40,
+        "calls": 7506,
+        "caps": 0,
+        "wall_s": 36.474610994,
+        "preparation_s": 0.007532221,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC"
+      },
+      "output_sha256": {
+        "cpp/navigation_controls/results/full/memory_grid8_MA_random512_dynamic_runs.csv": "b4006d1f82853d2f1ff24415d027821fe95e63d10e3fa43df099e5fd00307cc8",
+        "cpp/navigation_controls/results/full/memory_grid8_MA_random512_dynamic_calls.csv": "66aea1f7b45ccb2fcadcb608a2e09ddbda70c114ad3b6d43dac48d31c4925242",
+        "cpp/navigation_controls/results/full/memory_grid8_MA_random512_dynamic_traces.csv": "4afd0d504a7839ab8d87da2b19de7be2446a6d16ec21b1868ba6e960782edd7d",
+        "cpp/navigation_controls/results/full/memory_grid8_MA_random512_dynamic.json": "3f5614e8141b205678c3498808400ab8f52ea1ee99a00533f35a1db6279035b2"
+      }
+    },
+    "memory_grid8_MA_room512_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_controls/build/experiment_memory",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_MA_room512_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_MA_room512_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_controls/results/full/memory_grid8_MA_room512_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba_reuse,mpgaa,md_astar,octile_astar,octile_reuse",
+        "--anchors-only",
+        "--repeats",
+        "1"
+      ],
+      "binary_sha256": "95be42e2eb4dd3b802e3fb07f76ccd9801e6914f43aa79b38f2f396846908c67",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 40,
+        "calls": 8198,
+        "caps": 0,
+        "wall_s": 93.572786499,
+        "preparation_s": 0.008188028,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC"
+      },
+      "output_sha256": {
+        "cpp/navigation_controls/results/full/memory_grid8_MA_room512_dynamic_runs.csv": "06ac9e1399345d9640b71e719b287a5d620047c6fe5f6105f0bfdaa3e4dc205a",
+        "cpp/navigation_controls/results/full/memory_grid8_MA_room512_dynamic_calls.csv": "392165e6b41ef9a27ace0d00272403ec5313ab5f904751f439ea56c234ef32ce",
+        "cpp/navigation_controls/results/full/memory_grid8_MA_room512_dynamic_traces.csv": "6638a66509a7758151995f403a64f6945a59b45d031a6edc119f7a9658de1a01",
+        "cpp/navigation_controls/results/full/memory_grid8_MA_room512_dynamic.json": "2e31fdde98d15704618fb5c2f34516e0ae7f2afcc8118a9131cfde2f6e872bc9"
+      }
+    },
+    "memory_grid8_arena_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_controls/build/experiment_memory",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_arena_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_arena_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_controls/results/full/memory_grid8_arena_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba_reuse,mpgaa,md_astar,octile_astar,octile_reuse",
+        "--anchors-only",
+        "--repeats",
+        "1"
+      ],
+      "binary_sha256": "95be42e2eb4dd3b802e3fb07f76ccd9801e6914f43aa79b38f2f396846908c67",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 40,
+        "calls": 449,
+        "caps": 0,
+        "wall_s": 0.046500032,
+        "preparation_s": 0.000675037,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC"
+      },
+      "output_sha256": {
+        "cpp/navigation_controls/results/full/memory_grid8_arena_dynamic_runs.csv": "fcffb199fc6ea3c7d3cc08835da66c404ead417a9e5ad939fc5ea71b3bfd4921",
+        "cpp/navigation_controls/results/full/memory_grid8_arena_dynamic_calls.csv": "59f721cc536af1266b5d528769bf87d6307d3d9c089af033d385a9eeb065c126",
+        "cpp/navigation_controls/results/full/memory_grid8_arena_dynamic_traces.csv": "4ff98ea0e5136f216db74036d488c5f463e4bc85bb6824e196b7e96a631bc29b",
+        "cpp/navigation_controls/results/full/memory_grid8_arena_dynamic.json": "7edc9e14af0adab7ba37b0634f9203b5121359e703d7023e0d9ddd6ab98669f9"
+      }
+    },
+    "memory_grid8_random50_p10_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_controls/build/experiment_memory",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_random50_p10_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_random50_p10_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_controls/results/full/memory_grid8_random50_p10_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba_reuse,mpgaa,md_astar,octile_astar,octile_reuse",
+        "--anchors-only",
+        "--repeats",
+        "1"
+      ],
+      "binary_sha256": "95be42e2eb4dd3b802e3fb07f76ccd9801e6914f43aa79b38f2f396846908c67",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 40,
+        "calls": 439,
+        "caps": 0,
+        "wall_s": 0.030012603,
+        "preparation_s": 0.000814147,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC"
+      },
+      "output_sha256": {
+        "cpp/navigation_controls/results/full/memory_grid8_random50_p10_dynamic_runs.csv": "c3ef203fd151a9b564bd89d58ca684d750a93d46dc3c81e749d5e928699cf266",
+        "cpp/navigation_controls/results/full/memory_grid8_random50_p10_dynamic_calls.csv": "75dfb55b79e27f7838e955097df46972b57fc367b0db692565061bb589b69cb1",
+        "cpp/navigation_controls/results/full/memory_grid8_random50_p10_dynamic_traces.csv": "e3a7edde98cbb2d3491b3edabe13356f7792e5ec056fb813bbc4396df44f83ba",
+        "cpp/navigation_controls/results/full/memory_grid8_random50_p10_dynamic.json": "e4c00f1c2289cf37d4819800e07ddbb6b2b46353fd2c2b4eb8dddcb0614a64ae"
+      }
+    },
+    "memory_grid8_random50_p20_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_controls/build/experiment_memory",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_random50_p20_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_random50_p20_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_controls/results/full/memory_grid8_random50_p20_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba_reuse,mpgaa,md_astar,octile_astar,octile_reuse",
+        "--anchors-only",
+        "--repeats",
+        "1"
+      ],
+      "binary_sha256": "95be42e2eb4dd3b802e3fb07f76ccd9801e6914f43aa79b38f2f396846908c67",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 40,
+        "calls": 472,
+        "caps": 0,
+        "wall_s": 0.038791939,
+        "preparation_s": 0.0004909,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC"
+      },
+      "output_sha256": {
+        "cpp/navigation_controls/results/full/memory_grid8_random50_p20_dynamic_runs.csv": "955ce0d086adddde21ba7711d74b51119c48d0bf4b6861c18ed56b5a99d35cb5",
+        "cpp/navigation_controls/results/full/memory_grid8_random50_p20_dynamic_calls.csv": "4805cec1a2f67a85f6655875c1bd9804e6db577dca225facb67d69c12027bfcc",
+        "cpp/navigation_controls/results/full/memory_grid8_random50_p20_dynamic_traces.csv": "a8137604a8684dd85fd53fa9bde2150296198635143608da56920ab9b5fad826",
+        "cpp/navigation_controls/results/full/memory_grid8_random50_p20_dynamic.json": "ea9c9b78e9bc8b094eaf3e6491f870a60e90f368ef9633b563d28d138bf47791"
+      }
+    },
+    "memory_grid8_random50_p30_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_controls/build/experiment_memory",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_random50_p30_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_random50_p30_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_controls/results/full/memory_grid8_random50_p30_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba_reuse,mpgaa,md_astar,octile_astar,octile_reuse",
+        "--anchors-only",
+        "--repeats",
+        "1"
+      ],
+      "binary_sha256": "95be42e2eb4dd3b802e3fb07f76ccd9801e6914f43aa79b38f2f396846908c67",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 40,
+        "calls": 470,
+        "caps": 0,
+        "wall_s": 0.03429192,
+        "preparation_s": 0.00081705,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC"
+      },
+      "output_sha256": {
+        "cpp/navigation_controls/results/full/memory_grid8_random50_p30_dynamic_runs.csv": "a37b62314f25563d593edcdb24c96daf0a78ab844854f013ed6cf48aee265add",
+        "cpp/navigation_controls/results/full/memory_grid8_random50_p30_dynamic_calls.csv": "20882f1d335a2484e30e83f5d00e7c5eea2a01db764d10af2764896135cfd263",
+        "cpp/navigation_controls/results/full/memory_grid8_random50_p30_dynamic_traces.csv": "f071f2126f00721ddde2c8275cfc690f13b79c5914f867b4d4793ff4cf1a6829",
+        "cpp/navigation_controls/results/full/memory_grid8_random50_p30_dynamic.json": "89d2990477e0d8273fa1afcd6aa4b217fe85859a912a3dcda17f52e280a8b9ad"
+      }
+    },
+    "memory_grid8_random50_p40_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_controls/build/experiment_memory",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_random50_p40_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_random50_p40_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/grid8_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_controls/results/full/memory_grid8_random50_p40_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba_reuse,mpgaa,md_astar,octile_astar,octile_reuse",
+        "--anchors-only",
+        "--repeats",
+        "1"
+      ],
+      "binary_sha256": "95be42e2eb4dd3b802e3fb07f76ccd9801e6914f43aa79b38f2f396846908c67",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 40,
+        "calls": 601,
+        "caps": 0,
+        "wall_s": 0.076257789,
+        "preparation_s": 0.000813536,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC"
+      },
+      "output_sha256": {
+        "cpp/navigation_controls/results/full/memory_grid8_random50_p40_dynamic_runs.csv": "880b6e0e8b8add52fe103416d3b0dd4af8de70d49a83105de471e2744750e874",
+        "cpp/navigation_controls/results/full/memory_grid8_random50_p40_dynamic_calls.csv": "163d5a14363d0048bb185f3bfcd3305e43492373a88702534689ff873d6a710f",
+        "cpp/navigation_controls/results/full/memory_grid8_random50_p40_dynamic_traces.csv": "62ee1ff85567c544dda23b66cb68abc95c5554415a8a61f994e8f6fa3fc15338",
+        "cpp/navigation_controls/results/full/memory_grid8_random50_p40_dynamic.json": "ea1eb956b562ab41f4c0292492601e0bd6c9b0185ae4ba56aab57c3acf6dc637"
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"status":"passed","runs":120,"calls":1010,"caps":13,"wall_s":439.358679263,"preparation_s":0.0087512830000000003,"cap":1000000,"memory_profile":true,"compiler":"14.2.0","flags":"-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC"}

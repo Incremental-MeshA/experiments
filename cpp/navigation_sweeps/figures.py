@@ -115,7 +115,7 @@ def generate(directory,e,tables):
     selected=['lba_reuse','dstar_lattice','mpgaa','md_astar','cmesh_dstar','boundary_mesh']
     styles=['-','--','-.',':','-','--'];colors=plt.get_cmap('tab10').colors
     strata=[('car16','MA_room96'),('grid8','MA_room512'),('grid8','random50_p30')]
-    fig,axes=plt.subplots(3,3,figsize=(12,9),constrained_layout=True)
+    fig,axes=plt.subplots(3,3,figsize=(9.5,10.3),constrained_layout=True)
     for i,(control,name) in enumerate(strata):
         own=work[work.control.eq(control)&work['map'].eq(name)]
         for j,(field,title) in enumerate([('median_ms','Median query latency (ms)'),('expansions','Median expanded states'),('checked_cells','Median collision cell reads')]):
@@ -124,9 +124,9 @@ def generate(directory,e,tables):
                 values=own[own.method.eq(method)].set_index('change_bin')[field].reindex(bins)
                 ax.plot(range(len(bins)),values,styles[k],marker='o',markersize=3,linewidth=1.2,color=colors[k],label=LABELS[method])
             ax.set_yscale('symlog',linthresh=.01 if field=='median_ms' else 1);ax.grid(alpha=.25)
-            ax.set_xticks(range(len(bins)),bins,rotation=45,ha='right',fontsize=8)
+            ax.set_xticks(range(len(bins)),bins,rotation=45,ha='right',fontsize=10)
             ax.set_title(control+' / '+name+'\n'+title,fontsize=10)
-            if i==2:ax.set_xlabel('Observed blocked + opened cells per online query',fontsize=9)
+            if i==2:ax.set_xlabel('Observed cell edits\nper online query',fontsize=10)
     handles,labels=axes[0,0].get_legend_handles_labels();fig.legend(handles,labels,loc='outside upper center',ncol=6,fontsize=9)
     save(fig,'work_by_observed_changes')
     # Prior data retain their original timing cohorts and coverage.

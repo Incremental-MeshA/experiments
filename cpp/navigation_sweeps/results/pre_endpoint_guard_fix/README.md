@@ -1,0 +1,1 @@
+Interrupted before dynamic timings. Excluded from analysis. The phase guard incorrectly required distinct endpoint cells; car16 may occupy the goal cell with a different heading before arrival. Replacement cohort permits coincident protected cells and counts the protected pool once. Search kernels are unchanged. Full frozen inputs and measured source snapshot retained here.

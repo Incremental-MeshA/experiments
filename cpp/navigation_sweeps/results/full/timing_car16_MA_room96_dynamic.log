@@ -1,0 +1,9 @@
+45 runs; car16__MA_room96__dynamic__s48101__k2__cr5__n2; 102.74 s
+90 runs; car16__MA_room96__dynamic__s48101__k8__cr10__n8; 163.495 s
+135 runs; car16__MA_room96__dynamic__s48101__k32__cr20__n32; 175.975 s
+180 runs; car16__MA_room96__dynamic__s48101__k64__cr30__n64; 187.905 s
+225 runs; car16__MA_room96__dynamic__s48102__k2__cr5__n2; 220.946 s
+270 runs; car16__MA_room96__dynamic__s48102__k8__cr10__n8; 241.361 s
+315 runs; car16__MA_room96__dynamic__s48102__k32__cr20__n32; 244.988 s
+360 runs; car16__MA_room96__dynamic__s48102__k64__cr30__n64; 248.687 s
+passed 360 navigation runs; 15 query caps

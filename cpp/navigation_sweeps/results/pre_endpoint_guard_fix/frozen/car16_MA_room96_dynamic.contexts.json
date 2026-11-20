@@ -1,0 +1,5117 @@
+{
+ "control": "car16",
+ "cases": [
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k2__cr1__n2",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k2__cr5__n2",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k2__cr10__n2",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k2__cr15__n2",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k2__cr20__n2",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k2__cr30__n2",
+   "requested_half": 1382,
+   "actual_half": 1061,
+   "potential_actual_cr": 23.02517361111111,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k4__cr1__n4",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k4__cr5__n4",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k4__cr10__n4",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k4__cr15__n4",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k4__cr20__n4",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k4__cr30__n4",
+   "requested_half": 1382,
+   "actual_half": 1061,
+   "potential_actual_cr": 23.02517361111111,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k8__cr1__n8",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k8__cr5__n8",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 3,
+   "trace": true,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k8__cr10__n8",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k8__cr15__n8",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k8__cr20__n8",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k8__cr30__n8",
+   "requested_half": 1382,
+   "actual_half": 1061,
+   "potential_actual_cr": 23.02517361111111,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k16__cr1__n16",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k16__cr5__n16",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k16__cr10__n16",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k16__cr15__n16",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k16__cr20__n16",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k16__cr30__n16",
+   "requested_half": 1382,
+   "actual_half": 1061,
+   "potential_actual_cr": 23.02517361111111,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k32__cr1__n32",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k32__cr5__n32",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k32__cr10__n32",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k32__cr15__n32",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k32__cr20__n32",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k32__cr30__n32",
+   "requested_half": 1382,
+   "actual_half": 1061,
+   "potential_actual_cr": 23.02517361111111,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k64__cr1__n64",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k64__cr5__n64",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k64__cr10__n64",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k64__cr15__n64",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k64__cr20__n64",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    72,
+    53,
+    4
+   ],
+   "goal": [
+    21,
+    47,
+    4
+   ],
+   "initial_optimum": 77.23403677833821,
+   "initial_moves": 28,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 6278399812570201804,
+   "timing_repeats": 3,
+   "trace": true,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      72,
+      53,
+      4
+     ],
+     "goal": [
+      21,
+      47,
+      4
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 77.23403677833821,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48101__k64__cr30__n64",
+   "requested_half": 1382,
+   "actual_half": 1061,
+   "potential_actual_cr": 23.02517361111111,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k2__cr1__n2",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k2__cr5__n2",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k2__cr10__n2",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k2__cr15__n2",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k2__cr20__n2",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k2__cr30__n2",
+   "requested_half": 1382,
+   "actual_half": 1061,
+   "potential_actual_cr": 23.02517361111111,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k4__cr1__n4",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k4__cr5__n4",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k4__cr10__n4",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k4__cr15__n4",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k4__cr20__n4",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k4__cr30__n4",
+   "requested_half": 1382,
+   "actual_half": 1061,
+   "potential_actual_cr": 23.02517361111111,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k8__cr1__n8",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k8__cr5__n8",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k8__cr10__n8",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k8__cr15__n8",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k8__cr20__n8",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k8__cr30__n8",
+   "requested_half": 1382,
+   "actual_half": 1061,
+   "potential_actual_cr": 23.02517361111111,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k16__cr1__n16",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k16__cr5__n16",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k16__cr10__n16",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k16__cr15__n16",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k16__cr20__n16",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k16__cr30__n16",
+   "requested_half": 1382,
+   "actual_half": 1061,
+   "potential_actual_cr": 23.02517361111111,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k32__cr1__n32",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k32__cr5__n32",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k32__cr10__n32",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k32__cr15__n32",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k32__cr20__n32",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k32__cr30__n32",
+   "requested_half": 1382,
+   "actual_half": 1061,
+   "potential_actual_cr": 23.02517361111111,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k64__cr1__n64",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k64__cr5__n64",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k64__cr10__n64",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k64__cr15__n64",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k64__cr20__n64",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_room96",
+   "map_family": "room",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/16room_000.map",
+   "source_sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.11512586805555555,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    95,
+    88,
+    6
+   ],
+   "goal": [
+    57,
+    40,
+    6
+   ],
+   "initial_optimum": 71.31943296277802,
+   "initial_moves": 22,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 10240193603243629319,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      95,
+      88,
+      6
+     ],
+     "goal": [
+      57,
+      40,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 71.31943296277802,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_room96__dynamic__s48102__k64__cr30__n64",
+   "requested_half": 1382,
+   "actual_half": 1061,
+   "potential_actual_cr": 23.02517361111111,
+   "budget_clamped": true
+  }
+ ]
+}

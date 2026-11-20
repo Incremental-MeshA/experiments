@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "checks": "1152 normal and 1152 ASan/UBSan answer comparisons, plus query cap",
+  "log_sha256": "6c57ca94308b9dbc6d606f1bd7c87021fbaecf8cb09520f25e6473a6203eb726",
+  "source_sha256": {
+    "cpp/navigation_controls/test.cpp": "0fba0a1e75c7e123496c3c7a46f531a16e2485f49e2bba2c0a4e9cab8b68cff3",
+    "cpp/navigation_controls/strong_grid.hpp": "39dc7ae894c1a11cea8b8f1318a6930598f5ccf6fa4dfb5a290c63f5ed955150",
+    "cpp/navigation_controls/Makefile": "4351dbd427a4a3a7bf7466cae66b181fb3060fdf8daaeb4f7829eba8691e4d74"
+  }
+}

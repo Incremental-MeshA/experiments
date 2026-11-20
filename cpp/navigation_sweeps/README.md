@@ -51,7 +51,7 @@ Each native job writes four artifacts:
 
 The expansion counter counts popped search states, cell reads count collision probes, notification probes measure update work, and heuristic pops measure internal heuristic search. State representations differ, so raw expansion counts are not identical work units. Requested heap excludes shared immutable models and the common environment; it includes the planner and current returned path. It is neither RSS nor whole-process memory. Dynamic travel divided by the initial static optimum may be below 1 due to openings; it is not a competitive ratio.
 
-`work_by_observed_changes.csv` bins received cell edits (not requested cr) and reports query latency/work per map and method. `prior_by_map.csv` keeps the older 11-method and 15-method timing cohorts separate and includes their completion rates. The old car replay main panels are selected before comparing maps; sensitivity panels remain in the original artifacts.
+`work_by_observed_changes.csv` bins received cell edits (not requested cr) and reports query latency/work per map and method, pooling static radii and dynamic parameters for car16, and dynamic parameters for grid8. These are descriptive groups of first-repeat online queries, including failures and caps; raw call files retain `kind` for separate stratification. `prior_by_map.csv` keeps the older 11-method and 15-method timing cohorts separate and includes their completion rates. The old car replay main panels are selected before comparing maps; sensitivity panels remain in the original artifacts. Tested analysis/notebook package and document-tool versions are recorded in `results/software_environment.json`.
 
 ## Checks and limits
 

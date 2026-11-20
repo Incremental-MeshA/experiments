@@ -1,0 +1,5117 @@
+{
+ "control": "car16",
+ "cases": [
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k2__cr1__n2",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k2__cr5__n2",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k2__cr10__n2",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k2__cr15__n2",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k2__cr20__n2",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k2__cr30__n2",
+   "requested_half": 1382,
+   "actual_half": 939,
+   "potential_actual_cr": 20.377604166666668,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k4__cr1__n4",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k4__cr5__n4",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k4__cr10__n4",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k4__cr15__n4",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k4__cr20__n4",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k4__cr30__n4",
+   "requested_half": 1382,
+   "actual_half": 939,
+   "potential_actual_cr": 20.377604166666668,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k8__cr1__n8",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k8__cr5__n8",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 3,
+   "trace": true,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k8__cr10__n8",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k8__cr15__n8",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k8__cr20__n8",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k8__cr30__n8",
+   "requested_half": 1382,
+   "actual_half": 939,
+   "potential_actual_cr": 20.377604166666668,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k16__cr1__n16",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k16__cr5__n16",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k16__cr10__n16",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k16__cr15__n16",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k16__cr20__n16",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k16__cr30__n16",
+   "requested_half": 1382,
+   "actual_half": 939,
+   "potential_actual_cr": 20.377604166666668,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k32__cr1__n32",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k32__cr5__n32",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k32__cr10__n32",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k32__cr15__n32",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k32__cr20__n32",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k32__cr30__n32",
+   "requested_half": 1382,
+   "actual_half": 939,
+   "potential_actual_cr": 20.377604166666668,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k64__cr1__n64",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k64__cr5__n64",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k64__cr10__n64",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k64__cr15__n64",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k64__cr20__n64",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48101,
+   "start": [
+    39,
+    81,
+    10
+   ],
+   "goal": [
+    68,
+    43,
+    10
+   ],
+   "initial_optimum": 48.29588342226765,
+   "initial_moves": 19,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 14989839226860820563,
+   "timing_repeats": 3,
+   "trace": true,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      39,
+      81,
+      10
+     ],
+     "goal": [
+      68,
+      43,
+      10
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 48.29588342226765,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48101__k64__cr30__n64",
+   "requested_half": 1382,
+   "actual_half": 939,
+   "potential_actual_cr": 20.377604166666668,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k2__cr1__n2",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k2__cr5__n2",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k2__cr10__n2",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k2__cr15__n2",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k2__cr20__n2",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k2__cr30__n2",
+   "requested_half": 1382,
+   "actual_half": 939,
+   "potential_actual_cr": 20.377604166666668,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k4__cr1__n4",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k4__cr5__n4",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k4__cr10__n4",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k4__cr15__n4",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k4__cr20__n4",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k4__cr30__n4",
+   "requested_half": 1382,
+   "actual_half": 939,
+   "potential_actual_cr": 20.377604166666668,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k8__cr1__n8",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k8__cr5__n8",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k8__cr10__n8",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k8__cr15__n8",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k8__cr20__n8",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k8__cr30__n8",
+   "requested_half": 1382,
+   "actual_half": 939,
+   "potential_actual_cr": 20.377604166666668,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k16__cr1__n16",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k16__cr5__n16",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k16__cr10__n16",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k16__cr15__n16",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k16__cr20__n16",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k16__cr30__n16",
+   "requested_half": 1382,
+   "actual_half": 939,
+   "potential_actual_cr": 20.377604166666668,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k32__cr1__n32",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k32__cr5__n32",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k32__cr10__n32",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k32__cr15__n32",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k32__cr20__n32",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k32__cr30__n32",
+   "requested_half": 1382,
+   "actual_half": 939,
+   "potential_actual_cr": 20.377604166666668,
+   "budget_clamped": true
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 1,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k64__cr1__n64",
+   "requested_half": 46,
+   "actual_half": 46,
+   "potential_actual_cr": 0.9982638888888888,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 5,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k64__cr5__n64",
+   "requested_half": 230,
+   "actual_half": 230,
+   "potential_actual_cr": 4.991319444444445,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 10,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k64__cr10__n64",
+   "requested_half": 461,
+   "actual_half": 461,
+   "potential_actual_cr": 10.004340277777779,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 15,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k64__cr15__n64",
+   "requested_half": 691,
+   "actual_half": 691,
+   "potential_actual_cr": 14.995659722222221,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 20,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k64__cr20__n64",
+   "requested_half": 922,
+   "actual_half": 922,
+   "potential_actual_cr": 20.008680555555557,
+   "budget_clamped": false
+  },
+  {
+   "map": "MA_random96",
+   "map_family": "random",
+   "shape": [
+    96,
+    96
+   ],
+   "source": "cpp/experiments/maps/random512-10-0.map",
+   "source_sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654",
+   "original_shape": [
+    512,
+    512
+   ],
+   "crop": [
+    0,
+    0,
+    96
+   ],
+   "truth_density": 0.10188802083333333,
+   "control": "car16",
+   "seed": 48102,
+   "start": [
+    75,
+    82,
+    6
+   ],
+   "goal": [
+    36,
+    51,
+    6
+   ],
+   "initial_optimum": 50.51415823356734,
+   "initial_moves": 18,
+   "guaranteed_minimum_moves": null,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 30,
+    "max_moves": 384
+   },
+   "world_seed": 2458749563452074174,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      75,
+      82,
+      6
+     ],
+     "goal": [
+      36,
+      51,
+      6
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 50.51415823356734,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "car16__MA_random96__dynamic__s48102__k64__cr30__n64",
+   "requested_half": 1382,
+   "actual_half": 939,
+   "potential_actual_cr": 20.377604166666668,
+   "budget_clamped": true
+  }
+ ]
+}

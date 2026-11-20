@@ -1,0 +1,9 @@
+15 runs; car16__MA_maze96__dynamic__s48101__k2__cr5__n2; 84.2091 s
+30 runs; car16__MA_maze96__dynamic__s48101__k8__cr10__n8; 138.224 s
+45 runs; car16__MA_maze96__dynamic__s48101__k32__cr20__n32; 184.254 s
+60 runs; car16__MA_maze96__dynamic__s48101__k64__cr30__n64; 221.544 s
+75 runs; car16__MA_maze96__dynamic__s48102__k2__cr5__n2; 255.362 s
+90 runs; car16__MA_maze96__dynamic__s48102__k8__cr10__n8; 299.724 s
+105 runs; car16__MA_maze96__dynamic__s48102__k32__cr20__n32; 342.307 s
+120 runs; car16__MA_maze96__dynamic__s48102__k64__cr30__n64; 382.852 s
+passed 120 navigation runs; 24 query caps

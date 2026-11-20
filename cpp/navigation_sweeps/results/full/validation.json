@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "cases": 816,
+  "timed_runs": 17520,
+  "memory_runs": 2640,
+  "planner_calls": 1484116,
+  "figure_files": 62,
+  "controls": {
+    "status": "passed",
+    "cases": 80,
+    "timed_runs": 1200,
+    "memory_runs": 400,
+    "planner_calls": 124953,
+    "primary_decision_parity": "passed",
+    "smoke": false
+  },
+  "executed_notebook_cells": 8,
+  "frozen_source_files": 21,
+  "pdf_audits": [
+    {
+      "file": "navigation.pdf",
+      "pages": 28,
+      "outside_text_spans": 0,
+      "replacement_characters": 0
+    },
+    {
+      "file": "navigation_by_map.pdf",
+      "pages": 52,
+      "outside_text_spans": 0,
+      "replacement_characters": 0
+    },
+    {
+      "file": "report.pdf",
+      "pages": 81,
+      "outside_text_spans": 0,
+      "replacement_characters": 0
+    }
+  ],
+  "smoke": false
+}

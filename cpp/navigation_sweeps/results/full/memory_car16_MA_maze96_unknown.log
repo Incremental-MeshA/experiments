@@ -1,0 +1,9 @@
+15 runs; car16__MA_maze96__unknown__s48101__r8; 54.5413 s
+30 runs; car16__MA_maze96__unknown__s48101__r16; 140.42 s
+45 runs; car16__MA_maze96__unknown__s48101__r32; 290.387 s
+60 runs; car16__MA_maze96__unknown__s48101__r64; 355.474 s
+75 runs; car16__MA_maze96__unknown__s48102__r8; 552.024 s
+90 runs; car16__MA_maze96__unknown__s48102__r16; 792.199 s
+105 runs; car16__MA_maze96__unknown__s48102__r32; 1074.72 s
+120 runs; car16__MA_maze96__unknown__s48102__r64; 1107.08 s
+passed 120 navigation runs; 12 query caps

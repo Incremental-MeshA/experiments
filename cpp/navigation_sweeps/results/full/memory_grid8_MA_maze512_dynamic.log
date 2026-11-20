@@ -1,0 +1,9 @@
+15 runs; grid8__MA_maze512__dynamic__s68101__k2__cr5__n2; 66.9143 s
+30 runs; grid8__MA_maze512__dynamic__s68101__k8__cr10__n8; 146.648 s
+45 runs; grid8__MA_maze512__dynamic__s68101__k32__cr20__n32; 228.024 s
+60 runs; grid8__MA_maze512__dynamic__s68101__k64__cr30__n64; 309.991 s
+75 runs; grid8__MA_maze512__dynamic__s68102__k2__cr5__n2; 366.123 s
+90 runs; grid8__MA_maze512__dynamic__s68102__k8__cr10__n8; 410.763 s
+105 runs; grid8__MA_maze512__dynamic__s68102__k32__cr20__n32; 446.104 s
+120 runs; grid8__MA_maze512__dynamic__s68102__k64__cr30__n64; 453.012 s
+passed 120 navigation runs; 0 query caps

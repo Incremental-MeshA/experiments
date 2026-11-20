@@ -3,6 +3,7 @@
 import argparse
 import json
 import os
+import re
 from pathlib import Path
 import subprocess
 import tempfile
@@ -12,6 +13,7 @@ from analyze import HERE,ROOT,METHODS,LABELS,digest
 from study import read_manifest
 
 DEST=ROOT/'docs/experiments'
+LABELS={key:value.replace('≈',r'$\approx$') for key,value in LABELS.items()}
 def num(v,d=2):return '—' if pd.isna(v) else f'{v:.{d}f}'
 def table(headers,rows):return '\n'.join(['| '+' | '.join(headers)+' |','| '+' | '.join(['---']*len(headers))+' |',*['| '+' | '.join(map(str,row))+' |' for row in rows]])+'\n'
 def figure(name,caption):return f'![{caption}](navigation_figures/{name}.png){{width=100%}}\n'
@@ -47,11 +49,29 @@ def build(directory,make_pdf=True,controls_directory=None):
             if c['id'] in selected:contexts[c['id']]=c
     e=pd.read_csv(ad/'episode_metrics.csv');s=pd.read_csv(ad/'map_summary.csv');static=pd.read_csv(ad/'static_radius.csv');pairs=pd.read_csv(ad/'map_pairs.csv');dp=pd.read_csv(ad/'dynamic_pairs.csv')
     prior=pd.read_csv(ad/'prior_by_map.csv');out=[];atlas=[];add=out.append
+    control_front_path=(controls_directory or ROOT/'cpp/navigation_controls/results/full').resolve()/'analysis/analysis.json'
+    control_front=json.loads(control_front_path.read_text());assert control_front['status']=='passed'
+    control_points=pd.read_csv(control_front_path.parent/'parameter_pairs.csv')
+    control_wins=control_points[control_points.method.eq('md_astar')&control_points.baseline.eq('octile_reuse')&control_points.paired_online.eq(2)&control_points.online_min_speedup.ge(1.1)]
+    point_text='; '.join(f'{r.map}: (k,cr) = ({int(r.k)},{int(r.cr)})' for r in control_wins.itertuples()) or 'нет'
+    control_maps=pd.read_csv(control_front_path.parent/'map_pairs.csv');control_maps=control_maps[control_maps.method.eq('md_astar')&control_maps.baseline.eq('octile_reuse')&control_maps.online_speedup.notna()]
+    assert len(control_wins)==control_front['md_octile_wins_10pct_both_roots']
     add('# Раскрытие карты и глобальная динамика при n = k')
     add(f'''Новая серия проверяет все 15 реализаций на замкнутых проездах к неизменной цели. Заморожено {len(contexts):,} конфигураций: {m['static_cases']} статических и {m['dynamic_cases']} динамических. Выполнено **{a['timed_runs']:,} измеряемых проездов**, ещё **{a['memory_runs']:,} отдельных проездов для памяти**, проверено **{a['planner_calls']:,} вызовов планировщика**. Предыдущие серии сохраняют собственные времена и протокол; их нельзя объединять с этой серией в один временной рейтинг.
 
-Полный атлас всех карт и параметров: [navigation_by_map.pdf](navigation_by_map.pdf). Численные таблицы со всеми 15 методами: `cpp/navigation_sweeps/results/full/analysis/` — `episode_metrics.csv`, `static_radius.csv`, `dynamic_parameters.csv`, `map_summary.csv`, `map_pairs.csv`, `dynamic_pairs.csv`, `work_by_observed_changes.csv`. Предыдущие результаты по картам вынесены также в [prior_by_map.csv](prior_by_map.csv).''')
+Полный атлас всех карт и параметров: [navigation_by_map.pdf](navigation_by_map.pdf). Численные таблицы со всеми 15 методами находятся в каталоге `cpp/navigation_sweeps/results/full/analysis/`:
+
+- `episode_metrics.csv`: отдельные конфигурации и методы;
+- `static_radius.csv`: карты и радиусы раскрытия;
+- `dynamic_parameters.csv`: карты, k/cr и методы;
+- `map_summary.csv`: полнота, время и работа по картам;
+- `map_pairs.csv`: парные сравнения по картам;
+- `dynamic_pairs.csv`: парные сравнения по k/cr;
+- `work_by_observed_changes.csv`: нагрузка фактических пакетов.
+
+Предыдущие результаты по картам вынесены также в [prior_by_map.csv](prior_by_map.csv).''')
     add('В этой новой серии скорость больше 1 выгодна кандидату. Если не указано иное, ускорения агрегируются геометрическим средним отношений времени по общим допустимым конфигурациям, после медианы повторов внутри конфигурации. Предыдущие серии сохраняют свои определения агрегаторов. Число допустимых пар и полнота всегда рассматриваются вместе с отношением времени.')
+    add(f"Дополнительный контроль с более сильным обычным Octile A* reuse ограничивает общий вывод о MD-A*: online-выигрыш минимум 10% на каждом из двух корней получен на **{control_front['md_octile_wins_10pct_both_roots']} из {control_front['md_octile_eligible_points']} сопоставимых точек** карта/k/cr. Выигрышные точки: {point_text}. По геометрическому среднему online-отношений на допустимых опорных конфигурациях MD уступает этому бейзлайну на **{int(control_maps.online_speedup.lt(1).sum())}/{len(control_maps)} карт**. Поэтому таблицы выигрыша над D* lattice ниже показывают конкретную область применимости; универсальное преимущество MD не подтверждено. Подробный пятисторонний контроль и его отдельные времена приведены далее.")
     highlight_position=len(out)
     add('## Протокол и сопоставимость')
     add(r'''В статической серии использованы все шесть прежних car16-карт и те же два корня на карту. До наблюдения все клетки считаются свободными. Квадратный сенсор без окклюзии раскрывает радиус **8, 16, 32 или 64 клетки** перед каждым движением. Агент выполняет один примитив и перепланирует, когда изменились известные стоимости; иначе следует сохранённому суффиксу. Цель, включая курс, неизменна. Лимит — 512 выполненных примитивов.
@@ -162,6 +182,7 @@ def build(directory,make_pdf=True,controls_directory=None):
             for method in focus:cells.append('—' if method not in z.index else num(z.loc[method,'speedup'])+f'× ({int(z.loc[method,"queries"])})')
             rows.append([name,*cells])
         if rows:add('Динамический '+control+':');add(table(['Карта',*[LABELS[z] for z in focus]],rows))
+    add('Очень большие отношения на единичных no-path запросах следует читать отдельно: повторное использование ранее доказанной недостижимости и направление поиска могут менять стоимость доказательства на порядки. Внутренние истории не уравнены. Такие числа не доказывают выигрыш нового mesh-сертификата и не заменяют сравнение законченных проездов.')
     highlights=out[highlight_start:];del out[highlight_start:];out[highlight_position:highlight_position]=highlights
     add('## Дополнительные метрики: память, задержки и путь')
     add('Память измерялась отдельной сборкой на всей статической серии и четырёх опорных точках динамики. Ниже медиана пиковых запрошенных МиБ **по всем исходам** соответствующего поднабора; остановившиеся миссии тоже учитываются. Сравнивать эти числа следует совместно с долей целей. Подробные значения по каждой карте и конфигурации находятся в `episode_metrics.csv`; у неизмеренных точек значение отсутствует, а не равно нулю.')
@@ -173,7 +194,7 @@ def build(directory,make_pdf=True,controls_directory=None):
         memory_rows.append([LABELS[method],*values])
     add(table(['Метод','car16 static, МиБ','car16 dynamic, МиБ','grid8 dynamic, МиБ'],memory_rows))
     add('В `work_by_observed_changes.csv` работа поиска и p95 задержки сгруппированы по фактическому размеру полученного пакета: 0, 1, 2–4, 5–16, 17–64, 65–256, 257–1024 и больше 1024 клеток, отдельно по карте и методу. Это позволяет отличить увеличение глобального cr от увеличения нагрузки уведомлений. В `episode_metrics.csv` также сохранены раскрытия, чтения клеток, проверки уведомлений, работа эвристики, число вызовов, сертификации, фактические фазы, доставленные и наблюдённые изменения и длина проезда. `known_fraction` означает долю когда-либо известных клеток, а не свежесть их стоимости; в динамике она равна единице из-за полного начального знания. Поэтому отдельно записана `belief_accuracy = 1 - belief_mismatches / cells`, вычисленная по истинной карте вне планировщика. Группы описывают собственные траектории методов и не являются парными снимками мира.')
-    add(figure('work_by_observed_changes','Размер реально полученного пакета и нагрузка: медиана online-запроса по трём картам разных размеров и моделей. Для читаемости показаны шесть методов; таблица содержит все 15. Ось y симметрично-логарифмическая, нулевая работа сохранена. Объединены параметры k/cr и первый повтор, включая запросы без пути и остановки по лимиту. Это условные описательные группы, а не одинаковые запросы или изолированный причинный эффект размера пакета; пропуски не означают ноль.'))
+    add(figure('work_by_observed_changes','Размер реально полученного пакета и нагрузка: медиана online-запроса по трём картам разных размеров и моделей. Для читаемости показаны шесть методов; таблица содержит все 15. Ось y симметрично-логарифмическая, нулевая работа сохранена. На car16 объединены статические радиусы и динамические k/cr; на grid8 — динамические k/cr. Взят первый повтор, включая запросы без пути и остановки по лимиту. Это условные описательные группы, а не одинаковые запросы или изолированный причинный эффект размера пакета; пропуски не означают ноль.'))
     controls_directory=(controls_directory or ROOT/'cpp/navigation_controls/results/full').resolve()
     control_analysis=controls_directory/'analysis/analysis.json';control=json.loads(control_analysis.read_text())
     assert control['status']=='passed' and control['source_sha256']==digest(ROOT/'cpp/navigation_controls/analyze.py')
@@ -183,12 +204,20 @@ def build(directory,make_pdf=True,controls_directory=None):
     add('## Качество, остановки и ограничения')
     add(f'''По {a['episodes']:,} парам «конфигурация × метод» после объединения повторов получены: **{a['terminal_counts']}**. Остановок из-за устаревшей карты убеждений при существующем истинном пути: **{a['stale_dead_ends']}**. Успешных динамических проездов без фаз: **{a['dynamic_zero_phase_goals']}**; они не входят в сравнение ремонта.
 
-Расхождений оптимальной стоимости точных методов на неограниченных запросах: **0**. Максимальное отношение стоимости ответа Mesh/ParallA* к оптимуму: **{num(a['max_approximate_plan_ratio'],5)}**. Решения, хеши траекторий и миров, пути и счётчики совпали между повторами и отдельным проходом памяти. Пройдены ASan/UBSan и независимый прямой BFS для геометрии сенсора, проверены дофазные пулы, баланс, сохранение плотности и защита конечных клеток. Медиана относительного MAD полного времени на конфигурациях с тремя повторами: **{num(100*a['median_three_repeat_relative_mad'])}%**.
+Расхождений оптимальной стоимости точных методов на запросах, не остановленных по лимиту: **0**. Максимальное отношение стоимости ответа Mesh/ParallA* к оптимуму: **{num(a['max_approximate_plan_ratio'],5)}**. Решения, хеши траекторий и миров, пути и счётчики совпали между повторами и отдельным проходом памяти. Пройдены ASan/UBSan и независимый прямой BFS для геометрии сенсора, проверены дофазные пулы, баланс, сохранение плотности и защита конечных клеток. Медиана относительного MAD полного времени на конфигурациях с тремя повторами: **{num(100*a['median_three_repeat_relative_mad'])}%**.
 
 Возможность достижения цели зависит и от реальной динамики: случайные открытия/закрытия нарушают структуру комнат и коридоров, поэтому высокие cr на этих картах не моделируют только локально появившееся препятствие. Видимость n = k одновременно меняет объём уведомлений и частоту фаз. На car16 короткие миссии могут завершиться раньше первой фазы при большом k. Различия точных методов в успешности возможны из-за разных равностоимостных траекторий и зависимой от текущей клетки защиты мира; они сами по себе не означают нарушение оптимальности поиска.
 
 Длина динамического проезда делится на оптимум **начальной** карты только как описательная величина. Отношение может быть меньше единицы благодаря открытиям; это не competitive ratio. Два корня на карту и один полный временной проход вне опорных точек ограничивают статистическую силу выводов. Исследование устанавливает условия выигрыша и потерь в этой реализации, но не доказывает универсальное превосходство или мировой приоритет алгоритма. На grid8 C-Mesh и Suffix сводятся к исходной одношаговой структуре; там отсутствует отдельный эффект сжатия длинных примитивов.''')
     add('Инженерная часть проверена существенно сильнее, чем один демонстрационный замер: сохранены все остановки, заморожены входы и измеряемые исходники, каждый ответ проверяется эталоном, отдельно проверены память, повторяемость и геометрия наблюдений. Научная часть остаётся экспериментальным исследованием областей применимости: сравниваются C++ реализации этого артефакта, а не официальные оптимизированные бинарники всех авторов. Два корня и зависимость миров от политики ограничивают обобщение; само ускорение Boundary-Mesh не отделяет вклад кэширования от вклада обхода общего префикса. Поэтому результаты поддерживают конкретные условия выигрыша, но недостаточны для заявления о безусловном SOTA или доказанной мировой новизне.')
+    add('Общая подготовка моделей, представлений графа и сертификатов выполняется до создания планировщиков. Её длительность `preparation_s` сохранена в завершении каждого native-задания, но она не входит в сравнение эпизодов. Такой режим соответствует повторному использованию заранее подготовленной модели движения. Стоимость отдельного построения mesh/сертификата и её амортизация для одноразового запроса здесь не выделены; конструктор планировщика и его плотные либо разреженные рабочие структуры измерены.')
+    add('### Вклад оболочки MD относительно её общего ядра')
+    add('MD-A* и отдельный MPGAA* используют один класс поискового ядра. Следующая таблица показывает отношение времени MPGAA*/MD-A* и LBA* reuse/MD-A*, чтобы оценить добавленный сертификат отдельно от выбора ядра. В каждой ячейке ускорение MD и число общих достигнутых целей; для online дополнительно требуются изменения и ненулевой ремонт. Полное время включает конструктор и начальный поиск. Значения меньше единицы означают проигрыш MD. В статической постановке нет освобождений, поэтому этот срез не оценивает отсрочку уменьшений. Разные траектории по-прежнему ограничивают причинную интерпретацию.')
+    core_rows=[]
+    for (control,kind,name),group in pairs[pairs.method.eq('md_astar')].groupby(['control','kind','map'],sort=True):
+        z=group.set_index('baseline');core=z.loc['mpgaa'];reuse=z.loc['lba_reuse']
+        core_rows.append([control+' / '+kind+' / '+name,f'{num(core.episode_speedup)} ({int(core.paired_goals)})',f'{num(core.online_speedup)} ({int(core.paired_online)})',f'{num(reuse.episode_speedup)} ({int(reuse.paired_goals)})'])
+    add(table(['Граф / режим / карта','MPGAA/MD: полное','MPGAA/MD: online','Reuse/MD: полное'],core_rows))
     add('## Предыдущие серии: разбиение по картам')
     add('Предыдущие данные не смешиваются с новой динамикой: в старой grid8-серии пакет мог иметь неравные стороны и плотность могла дрейфовать; здесь обмены строго равны. Следующие два рисунка показывают старые car16 replay по карте и сценарию. В каждой ячейке сначала полнота, затем отношение медианного времени online к D* lattice только при полном завершении обоих методов. Это отношение медиан, а не новая парная оценка. Предыдущие 11 и современные 15 методов измерены в разных сериях. Детальные таблицы всех карт, методов и прежних сценариев помещены в атлас и `prior_by_map.csv`.')
     add(figure('prior_previous11','Прежняя серия из 11 методов: раздельные карта и сценарий.'))
@@ -205,7 +234,9 @@ python cpp/navigation_sweeps/finish.py --directory cpp/navigation_sweeps/results
 Для проверки сохранённого артефакта достаточно `python cpp/navigation_sweeps/validate_artifact.py --smoke`. `finish.py` согласованно строит анализ, отдельную главу, атлас, исполняемый notebook и объединённый отчёт, затем проверяет их; он обновляет генерируемые файлы в `docs/experiments`. Зависимости Python перечислены в `requirements.txt`; для notebook можно указать отдельный интерпретатор через `NAV_NOTEBOOK_PYTHON`. Большие сырые CSV хранятся также в gzip без потерь: `storage.py` восстанавливает исходные байты, проверяя исходные SHA-256; анализ и аудит делают это автоматически. Для продолжения сохранённого прогона после клонирования при необходимости сначала выполните `python cpp/navigation_sweeps/storage.py`.
 
 Повторная генерация замороженных входов не требуется. `prepare.py` прекращает работу при существующем манифесте; `run_requested.py` проверяет хеши, сохраняет команды и продолжает только целиком завершённые задания. `frozen/requested.json` определяет выполненный набор; полный исходный манифест сохраняет также подготовленные неисполненные car16-комбинации. Незавершённый проход нельзя незаметно перезаписать. Полностью завершённая статическая серия импортирована побайтно из первого запуска с проверкой тех же бинарников, входов, команд и машины; её времена не измерялись повторно. Частичный полный car16-перебор сохранён в `results/pre_car_full_sweep` и исключён. Поисковые ядра прежних серий не изменены.''')
-    body='\n\n'.join(out)+'\n';(DEST/'navigation_body.md').write_text(body)
+    # Asterisks in algorithm names are literal; retain Markdown **emphasis**.
+    literal_stars=lambda text:re.sub(r'(?<=\w)\*(?!\*)',r'\\*',text)
+    body=literal_stars('\n\n'.join(out)+'\n');(DEST/'navigation_body.md').write_text(body)
     main=header('Incremental MeshA*: движение, раскрытие карты и глобальные изменения')+body
     (DEST/'navigation.md').write_text(main)
     # Atlas exposes every map; data tables retain the full k × cr × method grid.
@@ -233,8 +264,10 @@ python cpp/navigation_sweeps/finish.py --directory cpp/navigation_sweeps/results
                 rows.append([LABELS[method],*cells])
             atlas.append(f'## {cohort} / {control} / {name} / {mode}')
             atlas.append(table(['Метод',*[f.replace('unknown_replay','unknown') for f in families]],rows))
-    atlas_md=header('Incremental MeshA*: атлас новых и предыдущих результатов по картам')+'\n\n'.join(atlas)+'\n'
-    atlas_md+='\n\n# Нагрузка наблюдённых изменений\n\n'+figure('work_by_observed_changes','Медианы задержки, раскрытий и чтений по фактическому пакету. Полные группы всех карт и 15 методов — work_by_observed_changes.csv; группы включают остановки, зависят от собственных траекторий и не являются парным контролем.')+'\n\n'+control_body.read_text()
+    atlas_header=header('Incremental MeshA*: атлас новых и предыдущих результатов по картам')
+    atlas_md=atlas_header+'\n\n'.join(atlas)+'\n'
+    atlas_md+='\n\n# Нагрузка наблюдённых изменений\n\n'+figure('work_by_observed_changes','Медианы задержки, раскрытий и чтений по фактическому пакету. На car16 объединены статическое раскрытие и динамика, на grid8 — динамика. Полные группы всех карт и 15 методов — work_by_observed_changes.csv; группы включают остановки, зависят от собственных траекторий и не являются парным контролем.')+'\n\n'+control_body.read_text()
+    atlas_md=(atlas_header+literal_stars(atlas_md[len(atlas_header):])).rstrip()+'\n'
     (DEST/'navigation_by_map.md').write_text(atlas_md)
     if make_pdf:pdf(main,'navigation.pdf');pdf(atlas_md,'navigation_by_map.pdf')
     provenance=dict(status='passed',source_sha256=digest(Path(__file__)),analysis_sha256=digest(ad/'analysis.json'),figures_manifest_sha256=digest(ad/'figures.json'),

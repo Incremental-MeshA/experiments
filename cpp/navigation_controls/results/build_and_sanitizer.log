@@ -1,0 +1,10 @@
+make: Entering directory '/workspace/introduction/cpp/navigation_controls'
+g++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic test.cpp -o build/test
+build/test ../navigation_sweeps/frozen/grid8_model.txt
+passed 1152 octile/reuse answers with moving starts, increases, decreases and no paths
+make: Leaving directory '/workspace/introduction/cpp/navigation_controls'
+make: Entering directory '/workspace/introduction/cpp/navigation_controls'
+g++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O1 -g -std=c++17 -fsanitize=address,undefined -fno-omit-frame-pointer -DIMA_TRACK_ALLOC test.cpp -o build/test_sanitize
+build/test_sanitize ../navigation_sweeps/frozen/grid8_model.txt
+passed 1152 octile/reuse answers with moving starts, increases, decreases and no paths
+make: Leaving directory '/workspace/introduction/cpp/navigation_controls'

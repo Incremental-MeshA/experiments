@@ -1,0 +1,4973 @@
+{
+ "control": "grid8",
+ "cases": [
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k2__cr1__n2",
+   "requested_half": 13,
+   "actual_half": 13,
+   "potential_actual_cr": 1.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k2__cr5__n2",
+   "requested_half": 63,
+   "actual_half": 63,
+   "potential_actual_cr": 5.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k2__cr10__n2",
+   "requested_half": 125,
+   "actual_half": 125,
+   "potential_actual_cr": 10.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k2__cr15__n2",
+   "requested_half": 188,
+   "actual_half": 188,
+   "potential_actual_cr": 15.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k2__cr20__n2",
+   "requested_half": 250,
+   "actual_half": 250,
+   "potential_actual_cr": 20.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k2__cr30__n2",
+   "requested_half": 375,
+   "actual_half": 375,
+   "potential_actual_cr": 30.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k4__cr1__n4",
+   "requested_half": 13,
+   "actual_half": 13,
+   "potential_actual_cr": 1.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k4__cr5__n4",
+   "requested_half": 63,
+   "actual_half": 63,
+   "potential_actual_cr": 5.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k4__cr10__n4",
+   "requested_half": 125,
+   "actual_half": 125,
+   "potential_actual_cr": 10.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k4__cr15__n4",
+   "requested_half": 188,
+   "actual_half": 188,
+   "potential_actual_cr": 15.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k4__cr20__n4",
+   "requested_half": 250,
+   "actual_half": 250,
+   "potential_actual_cr": 20.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k4__cr30__n4",
+   "requested_half": 375,
+   "actual_half": 375,
+   "potential_actual_cr": 30.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k8__cr1__n8",
+   "requested_half": 13,
+   "actual_half": 13,
+   "potential_actual_cr": 1.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k8__cr5__n8",
+   "requested_half": 63,
+   "actual_half": 63,
+   "potential_actual_cr": 5.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 3,
+   "trace": true,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k8__cr10__n8",
+   "requested_half": 125,
+   "actual_half": 125,
+   "potential_actual_cr": 10.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k8__cr15__n8",
+   "requested_half": 188,
+   "actual_half": 188,
+   "potential_actual_cr": 15.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k8__cr20__n8",
+   "requested_half": 250,
+   "actual_half": 250,
+   "potential_actual_cr": 20.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k8__cr30__n8",
+   "requested_half": 375,
+   "actual_half": 375,
+   "potential_actual_cr": 30.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k16__cr1__n16",
+   "requested_half": 13,
+   "actual_half": 13,
+   "potential_actual_cr": 1.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k16__cr5__n16",
+   "requested_half": 63,
+   "actual_half": 63,
+   "potential_actual_cr": 5.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k16__cr10__n16",
+   "requested_half": 125,
+   "actual_half": 125,
+   "potential_actual_cr": 10.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k16__cr15__n16",
+   "requested_half": 188,
+   "actual_half": 188,
+   "potential_actual_cr": 15.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k16__cr20__n16",
+   "requested_half": 250,
+   "actual_half": 250,
+   "potential_actual_cr": 20.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k16__cr30__n16",
+   "requested_half": 375,
+   "actual_half": 375,
+   "potential_actual_cr": 30.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k32__cr1__n32",
+   "requested_half": 13,
+   "actual_half": 13,
+   "potential_actual_cr": 1.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k32__cr5__n32",
+   "requested_half": 63,
+   "actual_half": 63,
+   "potential_actual_cr": 5.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k32__cr10__n32",
+   "requested_half": 125,
+   "actual_half": 125,
+   "potential_actual_cr": 10.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k32__cr15__n32",
+   "requested_half": 188,
+   "actual_half": 188,
+   "potential_actual_cr": 15.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k32__cr20__n32",
+   "requested_half": 250,
+   "actual_half": 250,
+   "potential_actual_cr": 20.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k32__cr30__n32",
+   "requested_half": 375,
+   "actual_half": 375,
+   "potential_actual_cr": 30.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k64__cr1__n64",
+   "requested_half": 13,
+   "actual_half": 13,
+   "potential_actual_cr": 1.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k64__cr5__n64",
+   "requested_half": 63,
+   "actual_half": 63,
+   "potential_actual_cr": 5.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k64__cr10__n64",
+   "requested_half": 125,
+   "actual_half": 125,
+   "potential_actual_cr": 10.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k64__cr15__n64",
+   "requested_half": 188,
+   "actual_half": 188,
+   "potential_actual_cr": 15.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k64__cr20__n64",
+   "requested_half": 250,
+   "actual_half": 250,
+   "potential_actual_cr": 20.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68101,
+   "start": [
+    37,
+    24,
+    0
+   ],
+   "goal": [
+    11,
+    35,
+    0
+   ],
+   "initial_optimum": 30.556349186104047,
+   "initial_moves": 26,
+   "guaranteed_minimum_moves": 26,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 517685813855259558,
+   "timing_repeats": 3,
+   "trace": true,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      37,
+      24,
+      0
+     ],
+     "goal": [
+      11,
+      35,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 30.556349186104047,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68101__k64__cr30__n64",
+   "requested_half": 375,
+   "actual_half": 375,
+   "potential_actual_cr": 30.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 26,
+    "initial_moves": 26,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 26
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k2__cr1__n2",
+   "requested_half": 13,
+   "actual_half": 13,
+   "potential_actual_cr": 1.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k2__cr5__n2",
+   "requested_half": 63,
+   "actual_half": 63,
+   "potential_actual_cr": 5.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k2__cr10__n2",
+   "requested_half": 125,
+   "actual_half": 125,
+   "potential_actual_cr": 10.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k2__cr15__n2",
+   "requested_half": 188,
+   "actual_half": 188,
+   "potential_actual_cr": 15.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k2__cr20__n2",
+   "requested_half": 250,
+   "actual_half": 250,
+   "potential_actual_cr": 20.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 2,
+    "n": 2,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k2__cr30__n2",
+   "requested_half": 375,
+   "actual_half": 375,
+   "potential_actual_cr": 30.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k4__cr1__n4",
+   "requested_half": 13,
+   "actual_half": 13,
+   "potential_actual_cr": 1.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k4__cr5__n4",
+   "requested_half": 63,
+   "actual_half": 63,
+   "potential_actual_cr": 5.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k4__cr10__n4",
+   "requested_half": 125,
+   "actual_half": 125,
+   "potential_actual_cr": 10.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k4__cr15__n4",
+   "requested_half": 188,
+   "actual_half": 188,
+   "potential_actual_cr": 15.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k4__cr20__n4",
+   "requested_half": 250,
+   "actual_half": 250,
+   "potential_actual_cr": 20.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 4,
+    "n": 4,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k4__cr30__n4",
+   "requested_half": 375,
+   "actual_half": 375,
+   "potential_actual_cr": 30.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k8__cr1__n8",
+   "requested_half": 13,
+   "actual_half": 13,
+   "potential_actual_cr": 1.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k8__cr5__n8",
+   "requested_half": 63,
+   "actual_half": 63,
+   "potential_actual_cr": 5.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k8__cr10__n8",
+   "requested_half": 125,
+   "actual_half": 125,
+   "potential_actual_cr": 10.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k8__cr15__n8",
+   "requested_half": 188,
+   "actual_half": 188,
+   "potential_actual_cr": 15.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k8__cr20__n8",
+   "requested_half": 250,
+   "actual_half": 250,
+   "potential_actual_cr": 20.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 8,
+    "n": 8,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k8__cr30__n8",
+   "requested_half": 375,
+   "actual_half": 375,
+   "potential_actual_cr": 30.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k16__cr1__n16",
+   "requested_half": 13,
+   "actual_half": 13,
+   "potential_actual_cr": 1.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k16__cr5__n16",
+   "requested_half": 63,
+   "actual_half": 63,
+   "potential_actual_cr": 5.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k16__cr10__n16",
+   "requested_half": 125,
+   "actual_half": 125,
+   "potential_actual_cr": 10.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k16__cr15__n16",
+   "requested_half": 188,
+   "actual_half": 188,
+   "potential_actual_cr": 15.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k16__cr20__n16",
+   "requested_half": 250,
+   "actual_half": 250,
+   "potential_actual_cr": 20.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 16,
+    "n": 16,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k16__cr30__n16",
+   "requested_half": 375,
+   "actual_half": 375,
+   "potential_actual_cr": 30.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k32__cr1__n32",
+   "requested_half": 13,
+   "actual_half": 13,
+   "potential_actual_cr": 1.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k32__cr5__n32",
+   "requested_half": 63,
+   "actual_half": 63,
+   "potential_actual_cr": 5.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k32__cr10__n32",
+   "requested_half": 125,
+   "actual_half": 125,
+   "potential_actual_cr": 10.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k32__cr15__n32",
+   "requested_half": 188,
+   "actual_half": 188,
+   "potential_actual_cr": 15.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k32__cr20__n32",
+   "requested_half": 250,
+   "actual_half": 250,
+   "potential_actual_cr": 20.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 32,
+    "n": 32,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k32__cr30__n32",
+   "requested_half": 375,
+   "actual_half": 375,
+   "potential_actual_cr": 30.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 1,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k64__cr1__n64",
+   "requested_half": 13,
+   "actual_half": 13,
+   "potential_actual_cr": 1.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 5,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k64__cr5__n64",
+   "requested_half": 63,
+   "actual_half": 63,
+   "potential_actual_cr": 5.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 10,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k64__cr10__n64",
+   "requested_half": 125,
+   "actual_half": 125,
+   "potential_actual_cr": 10.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 15,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k64__cr15__n64",
+   "requested_half": 188,
+   "actual_half": 188,
+   "potential_actual_cr": 15.04,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 20,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 1,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k64__cr20__n64",
+   "requested_half": 250,
+   "actual_half": 250,
+   "potential_actual_cr": 20.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  },
+  {
+   "map": "random50_p20",
+   "shape": [
+    50,
+    50
+   ],
+   "truth_density": 0.1972,
+   "source": "cpp/experiments/maps/random50_p20.map",
+   "source_sha256": "ecb2ac7e29c4c857a33286540ee25849c7dc36d507b84efe3104e3a84410e671",
+   "map_family": "paper_random50",
+   "control": "grid8",
+   "seed": 68102,
+   "start": [
+    16,
+    15,
+    0
+   ],
+   "goal": [
+    42,
+    46,
+    0
+   ],
+   "initial_optimum": 42.35533905932738,
+   "initial_moves": 32,
+   "guaranteed_minimum_moves": 31,
+   "long_route_stratum": false,
+   "kind": "dynamic",
+   "params": {
+    "k": 64,
+    "n": 64,
+    "cr": 30,
+    "max_moves": 512
+   },
+   "world_seed": 5651503540958697345,
+   "timing_repeats": 3,
+   "trace": false,
+   "family": "navigation_dynamic",
+   "queries": [
+    {
+     "start": [
+      16,
+      15,
+      0
+     ],
+     "goal": [
+      42,
+      46,
+      0
+     ],
+     "blocks": [],
+     "opens": [],
+     "expected": 42.35533905932738,
+     "category": "truth_only",
+     "event": "dynamic"
+    }
+   ],
+   "id": "grid8__random50_p20__dynamic__s68102__k64__cr30__n64",
+   "requested_half": 375,
+   "actual_half": 375,
+   "potential_actual_cr": 30.0,
+   "budget_clamped": false,
+   "root_selection": {
+    "selection_trial": 0,
+    "geometric_chebyshev": 31,
+    "initial_moves": 32,
+    "long_route_stratum": false,
+    "guaranteed_minimum_moves": 31
+   }
+  }
+ ]
+}

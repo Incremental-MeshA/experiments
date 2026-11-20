@@ -1,0 +1,9 @@
+15 runs; grid8__random50_p30__dynamic__s68101__k2__cr5__n2; 0.0179648 s
+30 runs; grid8__random50_p30__dynamic__s68101__k8__cr10__n8; 0.0310013 s
+45 runs; grid8__random50_p30__dynamic__s68101__k32__cr20__n32; 0.0350453 s
+60 runs; grid8__random50_p30__dynamic__s68101__k64__cr30__n64; 0.0389985 s
+75 runs; grid8__random50_p30__dynamic__s68102__k2__cr5__n2; 0.0636596 s
+90 runs; grid8__random50_p30__dynamic__s68102__k8__cr10__n8; 0.0784669 s
+105 runs; grid8__random50_p30__dynamic__s68102__k32__cr20__n32; 0.0826378 s
+120 runs; grid8__random50_p30__dynamic__s68102__k64__cr30__n64; 0.0867169 s
+passed 120 navigation runs; 0 query caps

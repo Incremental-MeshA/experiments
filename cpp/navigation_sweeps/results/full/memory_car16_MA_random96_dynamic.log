@@ -1,0 +1,9 @@
+15 runs; car16__MA_random96__dynamic__s48101__k2__cr5__n2; 34.482 s
+30 runs; car16__MA_random96__dynamic__s48101__k8__cr10__n8; 40.0568 s
+45 runs; car16__MA_random96__dynamic__s48101__k32__cr20__n32; 40.1128 s
+60 runs; car16__MA_random96__dynamic__s48101__k64__cr30__n64; 40.1692 s
+75 runs; car16__MA_random96__dynamic__s48102__k2__cr5__n2; 50.641 s
+90 runs; car16__MA_random96__dynamic__s48102__k8__cr10__n8; 57.4815 s
+105 runs; car16__MA_random96__dynamic__s48102__k32__cr20__n32; 57.5647 s
+120 runs; car16__MA_random96__dynamic__s48102__k64__cr30__n64; 57.6512 s
+passed 120 navigation runs; 4 query caps

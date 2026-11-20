@@ -1,0 +1,9 @@
+5 runs; grid8__arena__dynamic__s68101__k2__cr5__n2; 0.0111363 s
+10 runs; grid8__arena__dynamic__s68101__k8__cr10__n8; 0.0194181 s
+15 runs; grid8__arena__dynamic__s68101__k32__cr20__n32; 0.0216228 s
+20 runs; grid8__arena__dynamic__s68101__k64__cr30__n64; 0.0239352 s
+25 runs; grid8__arena__dynamic__s68102__k2__cr5__n2; 0.0342209 s
+30 runs; grid8__arena__dynamic__s68102__k8__cr10__n8; 0.0422853 s
+35 runs; grid8__arena__dynamic__s68102__k32__cr20__n32; 0.0443054 s
+40 runs; grid8__arena__dynamic__s68102__k64__cr30__n64; 0.0464166 s
+passed 40 navigation runs; 0 query caps

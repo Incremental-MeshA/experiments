@@ -1,9 +1,9 @@
 {
   "status": "passed",
   "analysis_sha256": "6e52ccde32d174c4d2930a8f237124973be34bd51506e0353859b6283dbf4c66",
-  "source_sha256": "cca31ce4319c810610dc089ac1bc015e4f31600f519d22b4f45033b1539b188c",
-  "markdown_sha256": "5356eeb043b5387173a618bde17249191a49a9b3a7cd60546e95c0b27a040a58",
-  "pdf_sha256": "e87b32b0e8288cc18ba28d03e755514019cb3ff2284bcf698d63da961eec234f",
+  "source_sha256": "64b8071392902116ec2147a4904d3678048e4a83239c8701cd4f377b82c5da8e",
+  "markdown_sha256": "2e186a4f41db7128e06b40b0ce994c23adbe67c5161a2b0b5b3b36a6da59df65",
+  "pdf_sha256": "f68d2ccff7cd4d524dd5e3cf77500e495df5a4ad1d3b1b250a06d00e45a82c08",
   "mesh_variants_supplement": {
     "status": "passed",
     "analysis_sha256": "2c25e8c8ff36cfa902e2157acf5e69f67df2f585121fadd3577f07d0cff02e16",
@@ -13,5 +13,19 @@
     "verification_sha256": "18d0a33a992d55464d4827187b7e51a9ca1dca35254e6b49d9bc909216a2873b",
     "markdown_sha256": "4c7a3077146c49a1f74996f43288c8d20be3506f68cb9d74157e3376571f3b34",
     "pdf_sha256": "bfef3fe6ecd9930f170d7ae7ea5f8a9a27a2e9994eb97437359cc57c439e6d9b"
+  },
+  "navigation_supplement": {
+    "status": "passed",
+    "source_sha256": "ce75ff5c2282a88d88af01738fc84ff52d59b6eb4563d9acdda99c31c65d1800",
+    "analysis_sha256": "edf03adcedf5a07b11c7f71c24b409e475c315b92615102c5ede435ede15bc0e",
+    "figures_manifest_sha256": "e9d4d7f2312ffa2749c0eaca28547c0f0486eaba973eca4479c33959b419f0e0",
+    "body_sha256": "d3ce35d0811b48151484de1702b39323320d754795fddbbfd92316addd4e7ba6",
+    "markdown_sha256": "c869141dccaee7ee94d38427b9f92669c70a902163f3c3b0c07558b16c45b160",
+    "atlas_markdown_sha256": "3ce4c4836c0cf23fdf8c373ab4603bdc451d5a1ca8b7b7f3502b2ebb7161997b",
+    "layout_sha256": "69a358f6e2ee0f5072b0531fbd836f749f2603007a1f19fa0202ce6e61db80be",
+    "controls_directory": "cpp/navigation_controls/results/full",
+    "controls_analysis_sha256": "bcbe1fb36e6d349c313a57f5031c463d62c68d34a84da28f2eef127c66d79a18",
+    "pdf_sha256": "0f6485858dea8ae0e72f9cf7c5c33f373696a28483dda276a8e3f716f2872748",
+    "atlas_pdf_sha256": "58a286aa888a01275488540f401598e750236dcd67c619ab47d8140cadd82962"
   }
 }

@@ -15,6 +15,7 @@ def validate(directory=HERE/'results/full',primary=HERE.parent/'navigation_sweep
     ad=directory/'analysis';a=json.loads((ad/'analysis.json').read_text())
     assert a['status']=='passed' and a['source_sha256']==digest(HERE/'analyze.py')
     assert a['primary_analyzer_sha256']==digest(HERE.parent/'navigation_sweeps/analyze.py')
+    assert a['verification_sha256']==digest(HERE/'results/verification.json')
     assert a['experiment_sha256']==digest(directory/'experiment.json') and a['raw_sha256']==raw and a['primary_run_sha256']==primary_hashes
     assert a['timed_runs']==len(runs)==1200 and a['memory_runs']==len(memory)==400 and a['planner_calls']==len(calls)
     assert a['exact_cost_disagreements']==0 and a['primary_decision_parity']==a['allocation_decision_parity']==a['repeat_decision_parity']=='passed'

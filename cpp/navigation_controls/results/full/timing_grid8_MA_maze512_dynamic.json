@@ -1,0 +1,1 @@
+{"status":"passed","runs":120,"calls":27777,"caps":0,"wall_s":400.84550416899998,"preparation_s":0.0074268149999999998,"cap":1000000,"memory_profile":false,"compiler":"14.2.0","flags":"-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"}

@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "entries": {
+    "timing_grid8_AR0700_dynamic_calls.csv": {
+      "gzip": "timing_grid8_AR0700_dynamic_calls.csv.gz",
+      "sha256": "d73d415b50208498484a74580dbcc49f793b7f4dcde205671bbe21955f17c3ba",
+      "gzip_sha256": "c20f4ed8b3d32eeb1d68c8c620aa8a4166e3f1571313f79b4e7091971a5c9e41",
+      "bytes": 73064120,
+      "gzip_bytes": 16569478
+    },
+    "timing_grid8_Berlin_dynamic_calls.csv": {
+      "gzip": "timing_grid8_Berlin_dynamic_calls.csv.gz",
+      "sha256": "788fd59aa2f3682f54f3f0b755577e5aa48203ee315ff537483f923afa73d42f",
+      "gzip_sha256": "497389b9e8c6cae2e902f89719c09bf5ff8cacbc6932128ff5be80fdae3587f9",
+      "bytes": 74826844,
+      "gzip_bytes": 17198947
+    },
+    "timing_grid8_MA_maze512_dynamic_calls.csv": {
+      "gzip": "timing_grid8_MA_maze512_dynamic_calls.csv.gz",
+      "sha256": "5c64e12078ee4f57ffd0b57a3ea4d0444d8052cad9a7a94266aed1276235dd39",
+      "gzip_sha256": "96c8148fa10880399c35404d72c6b075de8b71b91dbcfdad8089e124522a4e43",
+      "bytes": 111794204,
+      "gzip_bytes": 25894445
+    },
+    "timing_grid8_MA_random512_dynamic_calls.csv": {
+      "gzip": "timing_grid8_MA_random512_dynamic_calls.csv.gz",
+      "sha256": "8323038348efc2bb1c63ba6563b5c4ea889e9c04f97313fd7a46c31461f4d3f7",
+      "gzip_sha256": "903f7eb2d0cd6b71670c7bc349c88641a0d9795033842b9cf6cedd085b42176b",
+      "bytes": 87974304,
+      "gzip_bytes": 21074856
+    },
+    "timing_grid8_MA_room512_dynamic_calls.csv": {
+      "gzip": "timing_grid8_MA_room512_dynamic_calls.csv.gz",
+      "sha256": "66b5b441defc9baadd78546233f5414478761a200701c9ca9cf5731a5cedfdc6",
+      "gzip_sha256": "d16d7251887c1b25f8e46c713ce897ff67887847aa4c137b70871e95965df075",
+      "bytes": 96048891,
+      "gzip_bytes": 22679550
+    }
+  },
+  "source_sha256": "d6e6f0c936475b299b7d8b62458878131f95f4bcd541a651a0cc7bb4383cfab9"
+}

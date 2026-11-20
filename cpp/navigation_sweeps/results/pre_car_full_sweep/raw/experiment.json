@@ -1,0 +1,636 @@
+{
+  "status": "running",
+  "utc": "2026-11-19T21:30:21.246463+00:00",
+  "cpu": "AMD EPYC 9V74 80-Core Processor",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "workers": 1,
+  "python": "3.12.14",
+  "git_parent": "0d8f3ee854620323320047d702d5b8b5c8935f23",
+  "manifest_sha256": "2bdaaabfe163a61d3d0acdc08cfbfd57d0492ef74997b4481cca798ea55d596d",
+  "source_sha256": {
+    "cpp/navigation_sweeps/bench.cpp": "01dbbe2b3d62e2967631694b0a5c95198bd7b6fe32a5b5be56484b52d6859f1c",
+    "cpp/navigation_sweeps/factory.hpp": "ab3e11dd374743d5a96a703da410224b738231b88c6d52402b254be76f0ccc0a",
+    "cpp/navigation_sweeps/visibility.hpp": "5a5742a4151568896f406d8bf0e1096b7d43b8ca0870fe0e13ef4b1dfd302e48",
+    "cpp/navigation_sweeps/environment.hpp": "29efb87781682bdcdf424e5137b906c1e53c00966d35a839386a39a7cbd0b0d4",
+    "cpp/navigation_sweeps/Makefile": "2ed37ad9c6557fe4a060ad091b8ef514f68986398561df57a7439595e2ea836e",
+    "cpp/navigation_sweeps/prepare.py": "1b8c3f4031d1b5647478ab5c0edc6cda2b25bddd7ecebecaef7b4f0061402080",
+    "cpp/navigation_sweeps/run_all.py": "d97f52c563422122495a70eb03fd606b637a6258f37eee2b960d37464cbc40a8",
+    "cpp/navigation_sweeps/test_protocol.cpp": "48a5f5f529c07a565eadf9b76324b4111cc6fa960aa9fb031d16fb40efc0c374",
+    "cpp/experiments/memory.hpp": "16a8f7e99fc79b35c38086e1d632e8024a10e48e3b80eaf3547c83a2d2070b32",
+    "cpp/experiments/dstar_boundary.hpp": "959a21c8684f7890a200cbbbc14ea641ac8a0e7719000842f929b2ebdea60990",
+    "cpp/mesh_variants/variants.hpp": "163a3f17cabd4354c00edd38821aaf0fea8edd45d7345bf9501d161220d2b8d3",
+    "cpp/include/ima/adaptive.hpp": "5c54db0b176953927291f2ca476b26e769192571754819e2f66c3feb698c83a3",
+    "cpp/include/ima/deferred.hpp": "d4b47e481e323e1e202deeb2644b14b4d63fda6d8f974f641a77ca9d30e73530",
+    "cpp/include/ima/dstar.hpp": "c9e9b714fbf86da15bcea7078494b8dd0a0f4fbd43e38d6e8815748458dfca6a",
+    "cpp/include/ima/model.hpp": "ce03a8bbb71cb873bf546a8c51063e12b3102c9df05d96fc55902d7630c9bfbc",
+    "cpp/include/ima/planners.hpp": "b874588434c7bbb5666b4dc6b33d498d2d8b18ac45198b545c3899731292fa0d",
+    "cpp/include/ima/search.hpp": "cdc94b7a4a9897e4da868003998346acdf5af8f4011b4b566803cb79f36f78a2",
+    "cpp/experiments/prepare.py": "bbd9b1117e5f703dc81995a2bf1e4971198bd5725640facdc5f1dd73ec11a38b",
+    "mesha/primitives.py": "ea1d84ed317b10d66e726fc1678e9dc350b62e871d548b95b8305b4281532463",
+    "mesha/mesh.py": "ecd37c9a897137d57d6a95de384f35dc25fe7d6d847917bbeb636745537d326b",
+    "mesha/maps.py": "e7e47613b68141289602058ab1327eb69cd019ffc059ca1b8da940e23d31b15f"
+  },
+  "plan": [
+    {
+      "name": "timing_car16_AR0700_unknown",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/car16_AR0700_unknown.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_AR0700_unknown.specs.txt",
+      "control": "car16",
+      "expected_runs": 360
+    },
+    {
+      "name": "timing_car16_Berlin_unknown",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/car16_Berlin_unknown.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_Berlin_unknown.specs.txt",
+      "control": "car16",
+      "expected_runs": 360
+    },
+    {
+      "name": "timing_car16_MA_maze96_unknown",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/car16_MA_maze96_unknown.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_MA_maze96_unknown.specs.txt",
+      "control": "car16",
+      "expected_runs": 360
+    },
+    {
+      "name": "timing_car16_MA_random96_unknown",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/car16_MA_random96_unknown.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_MA_random96_unknown.specs.txt",
+      "control": "car16",
+      "expected_runs": 360
+    },
+    {
+      "name": "timing_car16_MA_room96_unknown",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/car16_MA_room96_unknown.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_MA_room96_unknown.specs.txt",
+      "control": "car16",
+      "expected_runs": 360
+    },
+    {
+      "name": "timing_car16_arena_unknown",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/car16_arena_unknown.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_arena_unknown.specs.txt",
+      "control": "car16",
+      "expected_runs": 360
+    },
+    {
+      "name": "timing_car16_AR0700_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/car16_AR0700_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_AR0700_dynamic.specs.txt",
+      "control": "car16",
+      "expected_runs": 1320
+    },
+    {
+      "name": "timing_car16_Berlin_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/car16_Berlin_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_Berlin_dynamic.specs.txt",
+      "control": "car16",
+      "expected_runs": 1320
+    },
+    {
+      "name": "timing_car16_MA_maze96_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/car16_MA_maze96_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_MA_maze96_dynamic.specs.txt",
+      "control": "car16",
+      "expected_runs": 1320
+    },
+    {
+      "name": "timing_car16_MA_random96_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/car16_MA_random96_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_MA_random96_dynamic.specs.txt",
+      "control": "car16",
+      "expected_runs": 1320
+    },
+    {
+      "name": "timing_car16_MA_room96_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/car16_MA_room96_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_MA_room96_dynamic.specs.txt",
+      "control": "car16",
+      "expected_runs": 1320
+    },
+    {
+      "name": "timing_car16_arena_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/car16_arena_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_arena_dynamic.specs.txt",
+      "control": "car16",
+      "expected_runs": 1320
+    },
+    {
+      "name": "timing_grid8_AR0700_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/grid8_AR0700_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_AR0700_dynamic.specs.txt",
+      "control": "grid8",
+      "expected_runs": 1320
+    },
+    {
+      "name": "timing_grid8_Berlin_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/grid8_Berlin_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_Berlin_dynamic.specs.txt",
+      "control": "grid8",
+      "expected_runs": 1320
+    },
+    {
+      "name": "timing_grid8_MA_maze512_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/grid8_MA_maze512_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_MA_maze512_dynamic.specs.txt",
+      "control": "grid8",
+      "expected_runs": 1320
+    },
+    {
+      "name": "timing_grid8_MA_random512_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/grid8_MA_random512_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_MA_random512_dynamic.specs.txt",
+      "control": "grid8",
+      "expected_runs": 1320
+    },
+    {
+      "name": "timing_grid8_MA_room512_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/grid8_MA_room512_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_MA_room512_dynamic.specs.txt",
+      "control": "grid8",
+      "expected_runs": 1320
+    },
+    {
+      "name": "timing_grid8_arena_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/grid8_arena_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_arena_dynamic.specs.txt",
+      "control": "grid8",
+      "expected_runs": 1320
+    },
+    {
+      "name": "timing_grid8_random50_p10_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/grid8_random50_p10_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_random50_p10_dynamic.specs.txt",
+      "control": "grid8",
+      "expected_runs": 1320
+    },
+    {
+      "name": "timing_grid8_random50_p20_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/grid8_random50_p20_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_random50_p20_dynamic.specs.txt",
+      "control": "grid8",
+      "expected_runs": 1320
+    },
+    {
+      "name": "timing_grid8_random50_p30_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/grid8_random50_p30_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_random50_p30_dynamic.specs.txt",
+      "control": "grid8",
+      "expected_runs": 1320
+    },
+    {
+      "name": "timing_grid8_random50_p40_dynamic",
+      "memory": false,
+      "input": "cpp/navigation_sweeps/frozen/grid8_random50_p40_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_random50_p40_dynamic.specs.txt",
+      "control": "grid8",
+      "expected_runs": 1320
+    },
+    {
+      "name": "memory_car16_AR0700_unknown",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/car16_AR0700_unknown.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_AR0700_unknown.specs.txt",
+      "control": "car16",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_car16_Berlin_unknown",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/car16_Berlin_unknown.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_Berlin_unknown.specs.txt",
+      "control": "car16",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_car16_MA_maze96_unknown",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/car16_MA_maze96_unknown.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_MA_maze96_unknown.specs.txt",
+      "control": "car16",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_car16_MA_random96_unknown",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/car16_MA_random96_unknown.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_MA_random96_unknown.specs.txt",
+      "control": "car16",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_car16_MA_room96_unknown",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/car16_MA_room96_unknown.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_MA_room96_unknown.specs.txt",
+      "control": "car16",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_car16_arena_unknown",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/car16_arena_unknown.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_arena_unknown.specs.txt",
+      "control": "car16",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_car16_AR0700_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/car16_AR0700_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_AR0700_dynamic.specs.txt",
+      "control": "car16",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_car16_Berlin_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/car16_Berlin_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_Berlin_dynamic.specs.txt",
+      "control": "car16",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_car16_MA_maze96_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/car16_MA_maze96_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_MA_maze96_dynamic.specs.txt",
+      "control": "car16",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_car16_MA_random96_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/car16_MA_random96_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_MA_random96_dynamic.specs.txt",
+      "control": "car16",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_car16_MA_room96_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/car16_MA_room96_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_MA_room96_dynamic.specs.txt",
+      "control": "car16",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_car16_arena_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/car16_arena_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/car16_arena_dynamic.specs.txt",
+      "control": "car16",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_grid8_AR0700_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/grid8_AR0700_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_AR0700_dynamic.specs.txt",
+      "control": "grid8",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_grid8_Berlin_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/grid8_Berlin_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_Berlin_dynamic.specs.txt",
+      "control": "grid8",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_grid8_MA_maze512_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/grid8_MA_maze512_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_MA_maze512_dynamic.specs.txt",
+      "control": "grid8",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_grid8_MA_random512_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/grid8_MA_random512_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_MA_random512_dynamic.specs.txt",
+      "control": "grid8",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_grid8_MA_room512_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/grid8_MA_room512_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_MA_room512_dynamic.specs.txt",
+      "control": "grid8",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_grid8_arena_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/grid8_arena_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_arena_dynamic.specs.txt",
+      "control": "grid8",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_grid8_random50_p10_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/grid8_random50_p10_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_random50_p10_dynamic.specs.txt",
+      "control": "grid8",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_grid8_random50_p20_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/grid8_random50_p20_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_random50_p20_dynamic.specs.txt",
+      "control": "grid8",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_grid8_random50_p30_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/grid8_random50_p30_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_random50_p30_dynamic.specs.txt",
+      "control": "grid8",
+      "expected_runs": 120
+    },
+    {
+      "name": "memory_grid8_random50_p40_dynamic",
+      "memory": true,
+      "input": "cpp/navigation_sweeps/frozen/grid8_random50_p40_dynamic.txt",
+      "specs": "cpp/navigation_sweeps/frozen/grid8_random50_p40_dynamic.specs.txt",
+      "control": "grid8",
+      "expected_runs": 120
+    }
+  ],
+  "jobs": {
+    "timing_car16_AR0700_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_sweeps/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_AR0700_unknown.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_AR0700_unknown.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_sweeps/results/full/timing_car16_AR0700_unknown",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba,lazy_lba,mesha,mesh_parall,dstar_lattice,dstar_mesh,mpgaa,md_astar,md64,md_scan,lba_reuse,prefix_positive,cmesh_dstar,suffix_mesh,boundary_mesh"
+      ],
+      "binary_sha256": "76b77eb7917b5f3c107e8058f7662b6f81e2b0151ac16ce91d4561f268d142b4",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 360,
+        "calls": 10296,
+        "caps": 0,
+        "wall_s": 120.488127636,
+        "preparation_s": 0.009537844,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"
+      },
+      "output_sha256": {
+        "cpp/navigation_sweeps/results/full/timing_car16_AR0700_unknown_runs.csv": "2796d2a11af804bf16bee2435b83137e3e7fa5d60b200b7812683d2ef891b40c",
+        "cpp/navigation_sweeps/results/full/timing_car16_AR0700_unknown_calls.csv": "f9b488c93a341583022d4165d17024f01e98b46484b3e2afb85970d4fa047f76",
+        "cpp/navigation_sweeps/results/full/timing_car16_AR0700_unknown_traces.csv": "72d14356604e7cc94e6e1901efc661c2711c13f52c4cb95f23c46828184cf092",
+        "cpp/navigation_sweeps/results/full/timing_car16_AR0700_unknown.json": "23dfbed55bef2abddc441b671afba143b86ecbe6d1bc2031e81672c30e3d6a82"
+      }
+    },
+    "timing_car16_Berlin_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_sweeps/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_Berlin_unknown.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_Berlin_unknown.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_sweeps/results/full/timing_car16_Berlin_unknown",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba,lazy_lba,mesha,mesh_parall,dstar_lattice,dstar_mesh,mpgaa,md_astar,md64,md_scan,lba_reuse,prefix_positive,cmesh_dstar,suffix_mesh,boundary_mesh"
+      ],
+      "binary_sha256": "76b77eb7917b5f3c107e8058f7662b6f81e2b0151ac16ce91d4561f268d142b4",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 360,
+        "calls": 9906,
+        "caps": 0,
+        "wall_s": 172.129971129,
+        "preparation_s": 0.01033838,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"
+      },
+      "output_sha256": {
+        "cpp/navigation_sweeps/results/full/timing_car16_Berlin_unknown_runs.csv": "452101a616564848033961aaff713136f0011b0ff2092f2b6c2581d93ebc7d3b",
+        "cpp/navigation_sweeps/results/full/timing_car16_Berlin_unknown_calls.csv": "9c799374761ed1df3e3f834599949176aae6bda097e5409a3c589b9ad3f0e529",
+        "cpp/navigation_sweeps/results/full/timing_car16_Berlin_unknown_traces.csv": "00d8fb57e93430fabef80b9e64fab9f75d1f6a805e3a88355d56cf77ac6aaef2",
+        "cpp/navigation_sweeps/results/full/timing_car16_Berlin_unknown.json": "9795425cab48fb711fbbef0bdb4d426cb1b0f067395404bc0f52c8358f17645a"
+      }
+    },
+    "timing_car16_MA_maze96_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_sweeps/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_MA_maze96_unknown.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_MA_maze96_unknown.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_sweeps/results/full/timing_car16_MA_maze96_unknown",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba,lazy_lba,mesha,mesh_parall,dstar_lattice,dstar_mesh,mpgaa,md_astar,md64,md_scan,lba_reuse,prefix_positive,cmesh_dstar,suffix_mesh,boundary_mesh"
+      ],
+      "binary_sha256": "76b77eb7917b5f3c107e8058f7662b6f81e2b0151ac16ce91d4561f268d142b4",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 360,
+        "calls": 25476,
+        "caps": 36,
+        "wall_s": 3073.161994475,
+        "preparation_s": 0.00586833,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"
+      },
+      "output_sha256": {
+        "cpp/navigation_sweeps/results/full/timing_car16_MA_maze96_unknown_runs.csv": "c41303267b83494c3b42190ddf2d8feef546da536b7b4a952004c259fe9e285b",
+        "cpp/navigation_sweeps/results/full/timing_car16_MA_maze96_unknown_calls.csv": "6c68c62db1e093c43b3873bf5969b3689a3306aed007519ce82eec96cccfb018",
+        "cpp/navigation_sweeps/results/full/timing_car16_MA_maze96_unknown_traces.csv": "13d37ea6cc8e14e12950966637be6ed6eed50ace0580309adb3111edf0d449ed",
+        "cpp/navigation_sweeps/results/full/timing_car16_MA_maze96_unknown.json": "133bb3a2cb5ce2d02366cc41495e71df7b056b40d7a08e479e159805f9adaeea"
+      }
+    },
+    "timing_car16_MA_random96_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_sweeps/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_MA_random96_unknown.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_MA_random96_unknown.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_sweeps/results/full/timing_car16_MA_random96_unknown",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba,lazy_lba,mesha,mesh_parall,dstar_lattice,dstar_mesh,mpgaa,md_astar,md64,md_scan,lba_reuse,prefix_positive,cmesh_dstar,suffix_mesh,boundary_mesh"
+      ],
+      "binary_sha256": "76b77eb7917b5f3c107e8058f7662b6f81e2b0151ac16ce91d4561f268d142b4",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 360,
+        "calls": 6177,
+        "caps": 0,
+        "wall_s": 15.534041865,
+        "preparation_s": 0.006167227,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"
+      },
+      "output_sha256": {
+        "cpp/navigation_sweeps/results/full/timing_car16_MA_random96_unknown_runs.csv": "ad39dda6614e588286b3b525a201ea9a08519f9caf63947920f9357a1f13aae8",
+        "cpp/navigation_sweeps/results/full/timing_car16_MA_random96_unknown_calls.csv": "182cbea04f213a53bea13c672b21eb03a7bd6f7fe902f4f541d1c53f743d1d5b",
+        "cpp/navigation_sweeps/results/full/timing_car16_MA_random96_unknown_traces.csv": "f81d37b28d83a110b44c767adf10d52cdf755d6fadcf7b9ad390338cbf2a9284",
+        "cpp/navigation_sweeps/results/full/timing_car16_MA_random96_unknown.json": "70a6701330390da7bf6de304b822ee8a9bec97d4171eb6092e581614cfcb476f"
+      }
+    },
+    "timing_car16_MA_room96_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_sweeps/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_MA_room96_unknown.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_MA_room96_unknown.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_sweeps/results/full/timing_car16_MA_room96_unknown",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba,lazy_lba,mesha,mesh_parall,dstar_lattice,dstar_mesh,mpgaa,md_astar,md64,md_scan,lba_reuse,prefix_positive,cmesh_dstar,suffix_mesh,boundary_mesh"
+      ],
+      "binary_sha256": "76b77eb7917b5f3c107e8058f7662b6f81e2b0151ac16ce91d4561f268d142b4",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 360,
+        "calls": 10806,
+        "caps": 0,
+        "wall_s": 305.110511215,
+        "preparation_s": 0.005799076,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"
+      },
+      "output_sha256": {
+        "cpp/navigation_sweeps/results/full/timing_car16_MA_room96_unknown_runs.csv": "c4d00d2cf2eacef793b4551117998c9ff83b9b0d1da898b915bd45182991fd52",
+        "cpp/navigation_sweeps/results/full/timing_car16_MA_room96_unknown_calls.csv": "fc441f9ef56ec2b3dee94b5b72234b3ab1a8b5f2125eed80e69fea58188f0aa5",
+        "cpp/navigation_sweeps/results/full/timing_car16_MA_room96_unknown_traces.csv": "5d5682dc41162092ec9a6a4ddbf32980f9390ead1d80f9eba0cfd1173a88a30e",
+        "cpp/navigation_sweeps/results/full/timing_car16_MA_room96_unknown.json": "b55ba84a8675a639ec6a3645fbe3844d57f54a8681046a80b2861196b99a00b9"
+      }
+    },
+    "timing_car16_arena_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction/cpp/navigation_sweeps/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_arena_unknown.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_arena_unknown.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_sweeps/results/full/timing_car16_arena_unknown",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba,lazy_lba,mesha,mesh_parall,dstar_lattice,dstar_mesh,mpgaa,md_astar,md64,md_scan,lba_reuse,prefix_positive,cmesh_dstar,suffix_mesh,boundary_mesh"
+      ],
+      "binary_sha256": "76b77eb7917b5f3c107e8058f7662b6f81e2b0151ac16ce91d4561f268d142b4",
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 360,
+        "calls": 4188,
+        "caps": 0,
+        "wall_s": 3.889141818,
+        "preparation_s": 0.005777948,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"
+      },
+      "output_sha256": {
+        "cpp/navigation_sweeps/results/full/timing_car16_arena_unknown_runs.csv": "b4d29d20d93107b7a9e7e41e92a3a7e21a0614c25f6f37053dab7eb6ad17b03f",
+        "cpp/navigation_sweeps/results/full/timing_car16_arena_unknown_calls.csv": "ef61a48915a271d6d4272aca098bec8e3ae617b176ee0184eca45eacc50a111f",
+        "cpp/navigation_sweeps/results/full/timing_car16_arena_unknown_traces.csv": "80b2d3b7092bd58e1784124ae4e2a56b16c933a6b8f88951e85f3beb0be2a45a",
+        "cpp/navigation_sweeps/results/full/timing_car16_arena_unknown.json": "ad8a46bf48bcfd8bf5cab864c923de2480769174bc3358f71b7d5a20193a5247"
+      }
+    },
+    "timing_car16_AR0700_dynamic": {
+      "status": "running",
+      "command": [
+        "/workspace/introduction/cpp/navigation_sweeps/build/experiment",
+        "--input",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_AR0700_dynamic.txt",
+        "--specs",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_AR0700_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction/cpp/navigation_sweeps/frozen/car16_visibility.txt",
+        "--output",
+        "/workspace/introduction/cpp/navigation_sweeps/results/full/timing_car16_AR0700_dynamic",
+        "--cap",
+        "1000000",
+        "--methods",
+        "lba,lazy_lba,mesha,mesh_parall,dstar_lattice,dstar_mesh,mpgaa,md_astar,md64,md_scan,lba_reuse,prefix_positive,cmesh_dstar,suffix_mesh,boundary_mesh"
+      ],
+      "binary_sha256": "76b77eb7917b5f3c107e8058f7662b6f81e2b0151ac16ce91d4561f268d142b4"
+    }
+  }
+}

@@ -154,7 +154,7 @@ def summarize(e,keys):
                  median_phases=finite(a.phases.median()),clamped_phases=int(a.clamped_phases.sum()))
         for col in ['episode_s','online_s','planner_and_sensor_s','p95_ms','online_p95_ms','max_deferred_cells','moves','plans','travel_ratio','known_fraction','belief_accuracy','expansions','checked_cells','notify_probes',
                     'online_expansions','online_checked_cells','observed_changes','actual_changes','sensing_s','peak_heap_bytes','retained_heap_bytes','repeat_relative_mad']:
-            r[col]=finite(g[col].median())
+            r[col]=finite(g[col].median()) if g[col].notna().any() else None
         # Total computational cost over every attempted episode is also retained.
         r['all_attempts_s']=float(a.episode_s.sum());r['goal_episode_sum_s']=float(g.episode_s.sum())
         result.append(r)
@@ -164,7 +164,7 @@ def pairs(e,keys):
     result=[]
     for vals,a in e.groupby(keys,sort=True):
         vals=vals if isinstance(vals,tuple) else (vals,);basekeys=dict(zip(keys,vals))
-        for baseline in ['lba','lba_reuse','dstar_lattice']:
+        for baseline in ['lba','lba_reuse','dstar_lattice','mpgaa']:
             b=a[a.method.eq(baseline)].set_index('case')
             for method in METHODS:
                 x=a[a.method.eq(method)].set_index('case');common=x.index.intersection(b.index)

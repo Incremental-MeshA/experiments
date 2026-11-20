@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "source_sha256": "ce75ff5c2282a88d88af01738fc84ff52d59b6eb4563d9acdda99c31c65d1800",
+  "analysis_sha256": "edf03adcedf5a07b11c7f71c24b409e475c315b92615102c5ede435ede15bc0e",
+  "figures_manifest_sha256": "e9d4d7f2312ffa2749c0eaca28547c0f0486eaba973eca4479c33959b419f0e0",
+  "body_sha256": "d3ce35d0811b48151484de1702b39323320d754795fddbbfd92316addd4e7ba6",
+  "markdown_sha256": "c869141dccaee7ee94d38427b9f92669c70a902163f3c3b0c07558b16c45b160",
+  "atlas_markdown_sha256": "3ce4c4836c0cf23fdf8c373ab4603bdc451d5a1ca8b7b7f3502b2ebb7161997b",
+  "layout_sha256": "69a358f6e2ee0f5072b0531fbd836f749f2603007a1f19fa0202ce6e61db80be",
+  "controls_directory": "cpp/navigation_controls/results/full",
+  "controls_analysis_sha256": "bcbe1fb36e6d349c313a57f5031c463d62c68d34a84da28f2eef127c66d79a18",
+  "pdf_sha256": "0f6485858dea8ae0e72f9cf7c5c33f373696a28483dda276a8e3f716f2872748",
+  "atlas_pdf_sha256": "58a286aa888a01275488540f401598e750236dcd67c619ab47d8140cadd82962"
+}
