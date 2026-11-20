@@ -46,9 +46,25 @@ def main(directory,tests):
  for p,h in fa['tables_sha256'].items():assert sha(supplement/'analysis'/p)==h,p
  for p,h in fa['figures_sha256'].items():assert sha(ROOT/p)==h,p
  assert fa['source_sha256']==sha(HERE/'analyze_frontier.py') and fa['timed_runs']==fm['timed_runs'] and fa['memory_runs']==fm['memory_runs']
+ cp=ROOT/'cpp/mesh_conditional';cm=json.loads((cp/'frozen/manifest.json').read_text());cs=json.loads((cp/'results/full/experiment.json').read_text());ca=json.loads((cp/'results/full/analysis/analysis.json').read_text())
+ assert cs['status']=='passed' and ca['status']=='passed' and ca['exact_cost_disagreements']==0
+ assert cs['manifest_sha256']==sha(cp/'frozen/manifest.json') and ca['manifest_sha256']==cs['manifest_sha256']
+ for p,h in {**cm['files'],**cm['sources']}.items():assert sha(ROOT/p)==h,p
+ for job in cs['jobs'].values():
+  assert job['status']=='passed'
+  for p,h in job['outputs'].items():assert sha(cp/'results/full'/p)==h,p
+ for p,h in ca['tables_sha256'].items():assert sha(cp/'results/full/analysis'/p)==h,p
+ for p,h in ca['figures_sha256'].items():assert sha(ROOT/p)==h,p
+ for p,h in cs['binaries'].items():assert sha(cp/'build'/p)==h,p
+ assert ca['source_sha256']==sha(cp/'analyze.py') and ca['timed_runs']==cm['timed_runs'] and ca['memory_runs']==cm['memory_runs']
+ assert prov['frontier_analysis_sha256']==sha(supplement/'analysis/analysis.json') and prov['conditional_analysis_sha256']==sha(cp/'results/full/analysis/analysis.json')
+ for p,h in prov['narrative_sha256'].items():assert sha(ROOT/'docs/mesh_envelope'/p)==h,p
+ if tests:
+  for model in ['grid8','car16']:
+   result=subprocess.run([str(cp/'build/test'),str(ROOT/f'cpp/experiments/frozen/{model}_model.txt')],cwd=ROOT,text=True,capture_output=True,check=True);x=json.loads(result.stdout);assert x['status']=='passed';runs.append(dict(x,cohort='conditional'))
  untouched=['cpp/include/ima','cpp/experiments','cpp/navigation_sweeps','cpp/navigation_controls','cpp/mesh_variants','cpp/mpgaa_mesh','cpp/mpgaa_lazy','docs/mpgaa_mesh','docs/mpgaa_lazy']
  diff=subprocess.run(['git','diff','--name-only',manifest['base_commit'],'HEAD','--',*untouched],cwd=ROOT,text=True,capture_output=True,check=True);assert not diff.stdout,diff.stdout
- result=dict(status='passed',scenarios=a['scenarios'],timed_runs=a['timed_runs'],memory_runs=a['memory_runs'],cost_disagreements=0,allocation_matched_rows=a['allocation_matched_rows'],tests=runs,documents=docs,executed_notebook_cells=len(code),old_sources_unchanged=True,structural_complement=dict(scenarios=fa['scenarios'],timed_runs=fa['timed_runs'],memory_runs=fa['memory_runs'],allocation_matched_rows=fa['allocation_matched_rows']))
+ result=dict(status='passed',scenarios=a['scenarios'],timed_runs=a['timed_runs'],memory_runs=a['memory_runs'],cost_disagreements=0,allocation_matched_rows=a['allocation_matched_rows'],tests=runs,documents=docs,executed_notebook_cells=len(code),old_sources_unchanged=True,structural_complement=dict(scenarios=fa['scenarios'],timed_runs=fa['timed_runs'],memory_runs=fa['memory_runs'],allocation_matched_rows=fa['allocation_matched_rows']),conditional_validation=dict(scenarios=ca['scenarios'],timed_runs=ca['timed_runs'],memory_runs=ca['memory_runs'],allocation_matched_rows=ca['allocation_matched_rows']))
  print(json.dumps(result,indent=2))
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--directory',type=Path,default=HERE/'results/full');p.add_argument('--skip-tests',action='store_true');args=p.parse_args();main(args.directory,not args.skip_tests)
