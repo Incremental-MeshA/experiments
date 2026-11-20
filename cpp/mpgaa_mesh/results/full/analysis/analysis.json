@@ -1,0 +1,90 @@
+{
+  "allocation_revision": {
+    "archived_experiment_sha256": "1edec11a9a5e5e32fa00bf0870aae1308cd294d388c86a76fcf82c251e371455",
+    "archived_manifest_sha256": "5a8b5ef9b25dc4830ca5287460f42edce9ea0eea82c4dd73e836115f22db7325",
+    "archived_source_sha256": "a5ef39366de7d2ccaaf0c9d1da1419c3644236689bea42d9b87fcbacd4b10eaf",
+    "reason": "Snapshot live counter before require() message allocation; compiled only under IMA_TRACK_ALLOC.",
+    "recovery_source_sha256": "8575f0a26b71ec6badad4ad006644ed5858fcaf71c8d4f30b52ee23aeaf565cf",
+    "unchanged_timing_binaries": {
+      "navigation": "0b156c88b47aa4a038ae4bdae29d551fb3ff97fff169d7e4fb08dfe393f73c7e",
+      "replay": "8cbd23db7c0beb4b0189acf8fa1671d20ae1c685fef1e5a1d43ef8afe9192a07"
+    }
+  },
+  "analysis_source_sha256": "585dc97758b64e059f9bec570fce5fa12ad71ac0fb9049a7110219a88b7631a7",
+  "asan_ubsan": "passed",
+  "boundary_search_parity_rows": 2957,
+  "capped_calls": 9,
+  "exact_completed_calls": 429303,
+  "exact_cost_disagreements": 0,
+  "experiment_sha256": "04b542a59780fe31bf4b7a1c414659dced1aad613f4b888d1ae6a43d3621777c",
+  "independent_dijkstra_comparisons": 6488,
+  "manifest_sha256": "341d7f3621c48b80a1549258ad64aa835e83c729f04252ae302bbe28bd49dc51",
+  "median_relative_mad": 0.022670000185364803,
+  "memory_matched_rows": 146512,
+  "memory_runs": 3974,
+  "p95_relative_mad": 0.11294986881521536,
+  "policy_extra_zero_expansion_replay_calls": 205,
+  "primary_methods": [
+    "boundary_mpgaa",
+    "selective_mpgaa",
+    "delta_mpgaa",
+    "policy_mpgaa"
+  ],
+  "scenarios": 378,
+  "software": {
+    "matplotlib": "3.10.8",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "source_sha256": {
+    "cpp/experiments/dstar_boundary.hpp": "959a21c8684f7890a200cbbbc14ea641ac8a0e7719000842f929b2ebdea60990",
+    "cpp/experiments/memory.hpp": "16a8f7e99fc79b35c38086e1d632e8024a10e48e3b80eaf3547c83a2d2070b32",
+    "cpp/include/ima/adaptive.hpp": "5c54db0b176953927291f2ca476b26e769192571754819e2f66c3feb698c83a3",
+    "cpp/include/ima/deferred.hpp": "d4b47e481e323e1e202deeb2644b14b4d63fda6d8f974f641a77ca9d30e73530",
+    "cpp/include/ima/dstar.hpp": "c9e9b714fbf86da15bcea7078494b8dd0a0f4fbd43e38d6e8815748458dfca6a",
+    "cpp/include/ima/model.hpp": "ce03a8bbb71cb873bf546a8c51063e12b3102c9df05d96fc55902d7630c9bfbc",
+    "cpp/include/ima/planners.hpp": "b874588434c7bbb5666b4dc6b33d498d2d8b18ac45198b545c3899731292fa0d",
+    "cpp/include/ima/search.hpp": "cdc94b7a4a9897e4da868003998346acdf5af8f4011b4b566803cb79f36f78a2",
+    "cpp/mesh_variants/variants.hpp": "163a3f17cabd4354c00edd38821aaf0fea8edd45d7345bf9501d161220d2b8d3",
+    "cpp/mpgaa_mesh/Makefile": "3328c74d3a389feba707ec1a7244837cb486b4fb5123a98d09b389e9d7fc70de",
+    "cpp/mpgaa_mesh/algorithms.hpp": "ad7e2cf1f7e2421738cfe05e698d42571832003d12514c57fdc15bc03ac05e03",
+    "cpp/mpgaa_mesh/factory.hpp": "11eca6dacf4cc488ac37031d56011e6ec447db0ec7231a7fd17f87037adeebf1",
+    "cpp/mpgaa_mesh/navigation.cpp": "709a2da0baf594d02b591448ac8aff5f0aa4762ce3cc891e07a456bdc9eaccc3",
+    "cpp/mpgaa_mesh/replay.cpp": "1d141cc9470a8a636be3d976a23f3d9956879916f1cb4b186053ec73f8b1290c",
+    "cpp/mpgaa_mesh/test.cpp": "5c0c49d486f94bcbfda1e0975cb95b74854f6a1ba7ff6a659dbc9b7546e630b6",
+    "cpp/navigation_controls/factory.hpp": "a02086a4ebe4901848b41a5d8d4c71b253b0ea5da72eb2a2efe28e862eb83681",
+    "cpp/navigation_controls/strong_grid.hpp": "39dc7ae894c1a11cea8b8f1318a6930598f5ccf6fa4dfb5a290c63f5ed955150",
+    "cpp/navigation_sweeps/environment.hpp": "29efb87781682bdcdf424e5137b906c1e53c00966d35a839386a39a7cbd0b0d4",
+    "cpp/navigation_sweeps/factory.hpp": "ab3e11dd374743d5a96a703da410224b738231b88c6d52402b254be76f0ccc0a",
+    "cpp/navigation_sweeps/visibility.hpp": "5a5742a4151568896f406d8bf0e1096b7d43b8ca0870fe0e13ef4b1dfd302e48"
+  },
+  "status": "passed",
+  "tables_sha256": {
+    "case_metrics.csv": "d2dfd70c3918a0e42491b6974a6e7a05be23a4658ba10b754af7d2efd4170209",
+    "completion.csv": "0524bd44a6292b4201e344323970586aa86b03d68162fe58dcfe6b8290f512ac",
+    "completion_vs_controls.csv": "0ed8ce198d09fccbc3f34cac346b0fa545c0923f01514a472fda38794c4dd478",
+    "episode_metrics.csv": "d208313e0751b92d78f3864f781f6f8a6c525fbbfd149eb10c2b578ba30de934",
+    "family_pairs.csv": "676cc6bfa34670776f8fd721b978a599e454d9fbf8583aa5587a09c75f57856e",
+    "latency.csv": "660da3dfad4d6b12daf4f39cf491aee9485ea2a0ea82151ea198ce8ed3de9805",
+    "map_pairs.csv": "a2fb62ad0f30a83df5389154e0c78a9733b74a5f16f03a974e294b8661289da8",
+    "memory_metrics.csv": "e4aa5e0105b098c2dbed4b0b79034a7caa64584e7d99a1fe605be515397c5228",
+    "model_costs.csv": "12cac446600a43c10007831c3026f56dcc9e80e55f853acd31cd090a279f2de8",
+    "navigation_points.csv": "ea60d23b0046d18e9d61dd10e04ad26f81edb735a6ba3cef8a410b0cf49d495d",
+    "paired_cases.csv": "3de3c6cd321163c9332c5139194dd8462b034c7fe562df12e5fc3bdbd520f45d",
+    "policy_extra_certificates.csv": "6c01fff4a03d2f8bde1c231aca0317714c1827b03286fd3c42d69b92390b69f5",
+    "radius_pairs.csv": "696998a8c6c9ad1e8fa7b8189181ad25c888bfc16504ba531cde5839b7a7d918",
+    "received_changes.csv": "158ce6ed541a94f213d096661564063ca6940791001a126f1bad6ebf4da18994",
+    "repeat_variation.csv": "a7d8cae4c780866246240309d34739766f45043f5d8f138cf771606e60a5fbf8",
+    "statuses.csv": "a753aa5a24037c75240cd3e85f135d8b8dce8dabb6b9b6eb7ef9a40986665985",
+    "strong_control_wins.csv": "7b58eaea519a44446a615157362e1a1536b7cf9b46cf11cab0dbe0260d39d284",
+    "summary.csv": "1b31fdc13fa10806505c94312c7b2e607861d4ec544c93aed104c69bbebfdde7",
+    "work.csv": "fd258da0f09dc0a2921eafe83ac392c3f49bdd2f47c5be35d84aed136c3507ec"
+  },
+  "timed_planner_calls": 429312,
+  "timed_runs": 11922,
+  "verification_sha256": {
+    "build.log": "b7f4f3bf139fb728b069e94c70484729f203812b45c63c434dc30e465045584f",
+    "sanitize.log": "a037ac5f8b58f64e05f1b22e9bff2a27f6a713217db78f2ee421928da1ad6af4",
+    "tests.log": "1449de23c10311cca02b537b28caba0186d89eff42bbb18a276cec339d483ac1"
+  }
+}

@@ -25,9 +25,12 @@ def main(output):
     assert actual==expected
     ad=HERE/'results/full/analysis';before=json.loads((ad/'analysis.json').read_text())['tables_sha256']
     analysis=json.loads((ad/'analysis.json').read_text());assert analysis['analysis_source_sha256']==digest(HERE/'analyze.py')
+    for name,sha in before.items():assert digest(ad/name)==sha,name
+    original_analysis_sha=digest(ad/'analysis.json');original_figures_sha=digest(ad/'figures.json')
     report=json.loads((ad/'report_provenance.json').read_text());dest=ROOT/'docs/mpgaa_mesh'
     assert report['analysis_sha256']==digest(ad/'analysis.json')
     assert report['source_sha256']==digest(HERE/'report.py') and report['layout_sha256']==digest(ROOT/'docs/experiments/layout.tex')
+    assert report['vector_filter_sha256']==digest(HERE/'vector_images.lua')
     assert report['markdown_sha256']==digest(dest/'report.md') and report['pdf_sha256']==digest(dest/'report.pdf')
     assert report['figures_manifest_sha256']==digest(ad/'figures.json')
     figures=json.loads((ad/'figures.json').read_text());assert len(figures)==18
@@ -50,6 +53,8 @@ def main(output):
     assert not outside,outside[:10];assert replacements==0,replacements
     subprocess.run([sys.executable,str(HERE/'analyze.py')],cwd=ROOT,check=True,stdout=subprocess.DEVNULL)
     after=json.loads((ad/'analysis.json').read_text())['tables_sha256'];assert before==after
+    assert digest(ad/'analysis.json')==original_analysis_sha,'Analysis metadata is not reproducible'
+    assert digest(ad/'figures.json')==original_figures_sha,'Figure files are not reproducible'
     result=dict(status='passed',binaries_reproduced=binaries,independent_comparisons=sum(r['comparisons'] for r in actual),
                 identical_analysis_tables=before,unchanged_baseline_directories=unchanged,
                 manifest_sha256=digest(HERE/'frozen/manifest.json'),pdf_pages=len(document),outside_text_spans=0,replacement_characters=0,executed_notebook_cells=4)

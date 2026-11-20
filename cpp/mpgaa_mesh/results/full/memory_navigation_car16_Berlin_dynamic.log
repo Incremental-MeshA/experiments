@@ -1,0 +1,9 @@
+9 runs; car16__Berlin__dynamic__s48101__k2__cr5__n2; 31.5705 s
+18 runs; car16__Berlin__dynamic__s48101__k8__cr10__n8; 186.31 s
+27 runs; car16__Berlin__dynamic__s48101__k32__cr20__n32; 211.905 s
+36 runs; car16__Berlin__dynamic__s48101__k64__cr30__n64; 212.213 s
+45 runs; car16__Berlin__dynamic__s48102__k2__cr5__n2; 250.913 s
+54 runs; car16__Berlin__dynamic__s48102__k8__cr10__n8; 251.375 s
+63 runs; car16__Berlin__dynamic__s48102__k32__cr20__n32; 251.559 s
+72 runs; car16__Berlin__dynamic__s48102__k64__cr30__n64; 251.74 s
+passed 72 navigation runs; 1 query caps

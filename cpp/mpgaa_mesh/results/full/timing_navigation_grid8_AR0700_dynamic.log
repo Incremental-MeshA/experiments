@@ -1,0 +1,9 @@
+30 runs; grid8__AR0700__dynamic__s68101__k2__cr5__n2; 22.395 s
+60 runs; grid8__AR0700__dynamic__s68101__k8__cr10__n8; 38.6184 s
+90 runs; grid8__AR0700__dynamic__s68101__k32__cr20__n32; 50.8256 s
+120 runs; grid8__AR0700__dynamic__s68101__k64__cr30__n64; 56.4425 s
+150 runs; grid8__AR0700__dynamic__s68102__k2__cr5__n2; 88.4255 s
+180 runs; grid8__AR0700__dynamic__s68102__k8__cr10__n8; 97.8421 s
+210 runs; grid8__AR0700__dynamic__s68102__k32__cr20__n32; 104.048 s
+240 runs; grid8__AR0700__dynamic__s68102__k64__cr30__n64; 107.456 s
+passed 240 navigation runs; 0 query caps

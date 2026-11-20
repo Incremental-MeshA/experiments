@@ -11,6 +11,7 @@ Path(os.environ['XDG_CACHE_HOME']).mkdir(parents=True,exist_ok=True)
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from matplotlib.ticker import LogLocator,FuncFormatter,NullFormatter
 import numpy as np
 import pandas as pd
 from pandas.testing import assert_frame_equal
@@ -27,6 +28,7 @@ LABELS={'boundary_mpgaa':'Boundary-MPGAA*','selective_mpgaa':'Selective-Mesh-MPG
 WORK=['mesh_nodes','bound_evals','pruned_branches','pruned_primitives','watch_hits','validity_flips','witness_stops','policy_probes','policy_hits','alternate_uses']
 COUNTERS=['expansions','checked_cells','notify_probes','heuristic_pops','backend_calls','certified','activated_cells','refined_cells']+WORK
 COLORS=['#166e90','#d57c20','#37834e','#964872']
+PLOT_LABELS=dict(zip(NEW,['Boundary','Selective','Delta','Policy']))
 
 def read(path):
     return pd.read_csv(path,dtype={k:str for k in ['path_hash','world_hash','belief_hash','fingerprint']})
@@ -36,7 +38,8 @@ def check_profile(timing,memory):
     a=timing[timing.repeat.eq(0)].set_index(keys).sort_index()
     b=memory.set_index(keys).sort_index()
     fields=[c for c in ['status','planned','cost','expected','blocks','opens','known','known_cells','newly_seen','belief_mismatches',
-            'travel_cost','path_hash','world_hash','belief_hash','start_i','start_j','start_theta','next_i','next_j','next_theta','deferred_cells']+COUNTERS if c in a and c in b]
+            'travel_cost','path_hash','world_hash','belief_hash','start_i','start_j','start_theta','next_i','next_j','next_theta','deferred_cells',
+            'truth_cost','step','phase','k','n','radius','cr','global_changes']+COUNTERS if c in a and c in b]
     assert not a.index.has_duplicates and not b.index.has_duplicates
     assert_frame_equal(a[fields],b[fields],check_dtype=False,check_exact=True)
     return len(a)
@@ -137,49 +140,52 @@ def figures(ad,metrics,pair_data,summary,map_pairs,latency,received):
             path=dest/(name+'.'+ext);fig.savefig(path,dpi=160,**({'metadata':{'CreationDate':None,'ModDate':None}} if ext=='pdf' else {}));outputs.append(str(path.relative_to(ROOT)))
         plt.close(fig)
     groups=list(metrics[['cohort','control']].drop_duplicates().itertuples(index=False,name=None))
-    labels=[a.replace('navigation_','nav / ')+' / '+b for a,b in groups]
-    fig,axes=plt.subplots(1,2,figsize=(11,4.5),sharey=True)
+    labels=[a.replace('navigation_','nav ')+' / '+b for a,b in groups]
+    fig,axes=plt.subplots(1,2,figsize=(8.1,4.8),sharey=True)
     for ax,base in zip(axes,['mpgaa','best_control']):
         for k,candidate in enumerate(NEW):
             values=[]
             for a,b in groups:
                 s=summary[summary.cohort.eq(a)&summary.control.eq(b)&summary.method.eq(candidate)&summary.baseline.eq(base)]
                 values.append(s.episode_speedup.iloc[0] if len(s) else math.nan)
-            ax.plot(values,np.arange(len(groups))+(k-1.5)*.13,'o',color=COLORS[k],label=LABELS[candidate].split('-Mesh')[0])
-        ax.axvline(1,color='gray',lw=.9);ax.set_xscale('log');ax.set_title('Baseline: '+('MPGAA*' if base=='mpgaa' else 'fastest completed control'))
+            ax.plot(values,np.arange(len(groups))+(k-1.5)*.13,'o',color=COLORS[k],label=PLOT_LABELS[candidate])
+        ax.axvline(1,color='gray',lw=.9);ax.set_xscale('log');ax.set_title('Baseline:\n'+('MPGAA*' if base=='mpgaa' else 'fastest completed control'))
+        ax.xaxis.set_major_locator(LogLocator(base=10,subs=[1,2,5]))
+        ax.xaxis.set_major_formatter(FuncFormatter(lambda value,_:f'{value:g}'))
+        ax.xaxis.set_minor_formatter(NullFormatter())
         ax.set_xlabel('Full-episode speedup (>1 favors candidate)');ax.grid(axis='x',alpha=.2)
-    axes[0].set_yticks(range(len(groups)),labels);axes[0].invert_yaxis();axes[1].legend(fontsize=7,loc='lower right');fig.tight_layout();save('episode_speedup',fig)
+    axes[0].set_yticks(range(len(groups)),labels);axes[0].invert_yaxis();axes[1].legend(fontsize=8.5,loc='lower right');fig.tight_layout();save('episode_speedup',fig)
     car=pair_data[pair_data.cohort.eq('replay')&pair_data.control.eq('car16')&pair_data.baseline.eq('mpgaa')]
     families=sorted(car.family.unique());fig,ax=plt.subplots(figsize=(8,3.5))
     for k,c in enumerate(NEW):
         x=[gm(car[car.family.eq(f)&car.method.eq(c)].episode_speedup) for f in families]
-        ax.plot(x,np.arange(len(families))+(k-1.5)*.14,'o',color=COLORS[k],label=LABELS[c].split('-Mesh')[0])
-    ax.set_yticks(range(len(families)),families);ax.axvline(1,color='gray');ax.set_xscale('log');ax.set_xlabel('Full-episode speedup vs MPGAA*; completed pairs');ax.legend(fontsize=7);fig.tight_layout();save('replay_families',fig)
+        ax.plot(x,np.arange(len(families))+(k-1.5)*.14,'o',color=COLORS[k],label=PLOT_LABELS[c])
+    ax.set_yticks(range(len(families)),families);ax.axvline(1,color='gray');ax.set_xscale('log');ax.set_xlabel('Full-episode speedup vs MPGAA*; completed pairs');ax.legend(fontsize=8.5);fig.tight_layout();save('replay_families',fig)
     nav=map_pairs[map_pairs.cohort.eq('navigation_dynamic')&map_pairs.baseline.eq('best_control')]
     pivot=nav[nav.method.isin(NEW)].pivot(index=['control','map'],columns='method',values='episode_speedup').reindex(columns=NEW)
     fig,ax=plt.subplots(figsize=(8,6.5));values=pivot.to_numpy();valid=np.isfinite(values)&(values>0)
     show=np.full(values.shape,np.nan);show[valid]=np.log2(values[valid]);im=ax.imshow(show,aspect='auto',cmap='RdBu',vmin=-2,vmax=2)
     for i in range(len(pivot)):
-        for j in range(4):ax.text(j,i,f'{values[i,j]:.2f}' if valid[i,j] else '—',ha='center',va='center',fontsize=8)
+        for j in range(4):ax.text(j,i,f'{values[i,j]:.2f}' if valid[i,j] else '—',ha='center',va='center',fontsize=9,color='white' if valid[i,j] and abs(show[i,j])>1.2 else 'black')
     ax.set_xticks(range(4),['Boundary','Selective','Delta','Policy']);ax.set_yticks(range(len(pivot)),[' / '.join(v) for v in pivot.index]);fig.colorbar(im,ax=ax,label='log2(full-episode speedup vs fastest control)');fig.tight_layout();save('navigation_maps',fig)
-    fig,axes=plt.subplots(2,2,figsize=(9,6.2))
+    fig,axes=plt.subplots(2,2,figsize=(8,6.5))
     for ax,candidate,color in zip(axes.flat,NEW,COLORS):
         d=pair_data[pair_data.baseline.eq('mpgaa')&pair_data.method.eq(candidate)]
         for control,marker in [('car16','o'),('grid8','x')]:
             v=d[d.control.eq(control)];ax.scatter(v.episode_speedup,v.online_speedup,s=11,alpha=.5,c=color,marker=marker,label=control)
         ax.set_xscale('log');ax.set_yscale('log');ax.axhline(1,color='gray',lw=.7);ax.axvline(1,color='gray',lw=.7)
-        ax.set_title(LABELS[candidate],fontsize=9);ax.set_xlabel('Full episode / MPGAA*');ax.set_ylabel('Online / MPGAA*');ax.legend(fontsize=7)
+        ax.set_title(LABELS[candidate],fontsize=9);ax.set_xlabel('Full-episode speedup\nvs MPGAA*');ax.set_ylabel('Online speedup\nvs MPGAA*');ax.legend(fontsize=8.5)
     fig.tight_layout();save('online_vs_episode',fig)
     mem=summary[summary.baseline.eq('mpgaa')&summary.method.isin(NEW)].copy()
-    fig,ax=plt.subplots(figsize=(9,4))
+    fig,ax=plt.subplots(figsize=(8.1,4.8))
     for k,c in enumerate(NEW):
         vals=[]
         for a,b in groups:
             d=mem[mem.cohort.eq(a)&mem.control.eq(b)&mem.method.eq(c)];vals.append(d.memory_ratio.iloc[0] if len(d) else math.nan)
-        ax.plot(np.arange(len(groups))+(k-1.5)*.13,vals,'o',color=COLORS[k],label=LABELS[c].split('-Mesh')[0])
-    ax.set_xticks(range(len(groups)),labels,rotation=30,ha='right');ax.axhline(1,color='gray');ax.set_yscale('log');ax.set_ylabel('MPGAA* peak heap / candidate peak heap');ax.legend(fontsize=7);fig.tight_layout();save('memory',fig)
+        ax.plot(np.arange(len(groups))+(k-1.5)*.13,vals,'o',color=COLORS[k],label=PLOT_LABELS[c])
+    ax.set_xticks(range(len(groups)),labels,rotation=40,ha='right');ax.axhline(1,color='gray');ax.set_yscale('log');ax.set_ylabel('MPGAA* peak heap / candidate peak heap');ax.legend(fontsize=8.5);fig.tight_layout();save('memory',fig)
     ab=pair_data[pair_data.cohort.eq('replay')&pair_data.method.eq('selective_mpgaa')&pair_data.baseline.isin(['boundary_mpgaa','selective_no_prune','selective_geom'])]
-    fig,axes=plt.subplots(1,2,figsize=(9,3.5),sharey=True)
+    fig,axes=plt.subplots(1,2,figsize=(8,3.8),sharey=True)
     bases=['boundary_mpgaa','selective_no_prune','selective_geom']
     for ax,control in zip(axes,['car16','grid8']):
         data=[ab[ab.control.eq(control)&ab.baseline.eq(b)].episode_speedup.dropna().to_numpy() for b in bases]
@@ -190,20 +196,20 @@ def figures(ad,metrics,pair_data,summary,map_pairs,latency,received):
     fig,ax=plt.subplots(figsize=(9,6.5));im=ax.imshow(comp.to_numpy(),aspect='auto',cmap='Blues',vmin=0,vmax=1)
     for i in range(len(comp)):
         for j in range(len(comp.columns)):
-            value=comp.iloc[i,j];ax.text(j,i,f'{value:.0%}' if pd.notna(value) else '—',ha='center',va='center',fontsize=8)
+            value=comp.iloc[i,j];ax.text(j,i,f'{value:.0%}' if pd.notna(value) else '—',ha='center',va='center',fontsize=9,color='white' if pd.notna(value) and value>.6 else 'black')
     ax.set_xticks(range(6),['MPGAA*','LBA* reuse','Boundary','Selective','Delta','Policy']);ax.set_yticks(range(len(comp)),[' / '.join(v) for v in comp.index]);fig.colorbar(im,ax=ax,label='Goal fraction (configured scenarios)');fig.tight_layout();save('completion',fig)
     # case_metrics already contains one row per case/method, with deterministic
     # work counters aggregated across repeats; it has no repeat column.
     first=metrics[metrics.cohort.eq('replay')]
-    fig,axes=plt.subplots(1,2,figsize=(9,3.5))
+    fig,axes=plt.subplots(1,2,figsize=(8,3.8))
     for ax,field,title in zip(axes,['checked_cells','notify_probes'],['Collision-cell probes','Instrumented notifications']):
         for k,control in enumerate(['car16','grid8']):
             sums=first[first.control.eq(control)].groupby('method')[field].sum();base=sums.get('mpgaa',math.nan)
             vals=[sums.get(c,math.nan)/base if base else math.nan for c in NEW]
             ax.plot(range(4),vals,'o-',label=control)
-        ax.axhline(1,color='gray');ax.set_yscale('log');ax.set_xticks(range(4),['Boundary','Selective','Delta','Policy']);ax.set_title(title);ax.set_ylabel('Candidate / MPGAA* (sum of replay work)');ax.legend(fontsize=8)
+        ax.axhline(1,color='gray');ax.set_yscale('log');ax.set_xticks(range(4),['Boundary','Selective','Delta','Policy']);ax.set_title(title);ax.set_ylabel('Candidate / MPGAA*\n(sum of replay work)');ax.legend(fontsize=8.5)
     fig.tight_layout();save('mechanisms',fig)
-    fig,axes=plt.subplots(1,2,figsize=(10,4))
+    fig,axes=plt.subplots(2,1,figsize=(8,6.8))
     bins=['0','1','2–4','5–16','17–64','65–256','257–1024','>1024']
     shown=['mpgaa','lba_reuse']+NEW
     for ax,control,mp in zip(axes,['car16','grid8'],['Berlin','MA_maze512']):
@@ -213,7 +219,7 @@ def figures(ad,metrics,pair_data,summary,map_pairs,latency,received):
             ax.plot(range(len(bins)),1000*v.median_s,'o-',ms=3,label=LABELS[method].replace('-Mesh',''))
         ax.set_xticks(range(len(bins)),bins,rotation=35,ha='right');ax.set_yscale('log');ax.set_title(control+' / '+mp)
         ax.set_xlabel('Received blocks + opens');ax.set_ylabel('Median online latency, ms');ax.grid(axis='y',alpha=.2)
-    axes[1].legend(fontsize=6.5);fig.tight_layout();save('received_changes',fig)
+    axes[1].legend(fontsize=8.5,loc='upper left');fig.tight_layout();save('received_changes',fig)
     (ad/'figures.json').write_text(json.dumps({path:digest(ROOT/path) for path in outputs},indent=2)+'\n')
 
 def main(directory):
@@ -241,6 +247,9 @@ def main(directory):
     for job in manifest['plan']:
         nav=job['mode']=='navigation';suffix='_calls.csv' if nav else '.csv'
         timing=read(directory/('timing_'+job['name']+suffix));memory=read(directory/('memory_'+job['name']+suffix))
+        for repeat in [1,2]:check_profile(timing,timing[timing.repeat.eq(repeat)])
+        assert (memory.peak_heap_bytes>=memory.retained_heap_bytes).all(),job['name']
+        assert memory.retained_heap_bytes.ge(0).all() and memory.peak_heap_bytes.lt(2**48).all(),job['name']
         matched+=check_profile(timing,memory)
         for frame in [timing,memory]:
             assert len(frame.groupby(['case','method','repeat']))==job['cases']*len(job['methods'])*(3 if frame is timing else 1)
@@ -271,6 +280,7 @@ def main(directory):
     numeric=['episode_s','online_s','initial_s','setup_s','plans','online_plans','travel_cost']+COUNTERS
     metrics=ep.groupby(keys,as_index=False).agg(**{k:(k,'median') for k in numeric},complete=('complete','all'),repeats=('repeat','size'))
     metrics=metrics.merge(mem[keys+['peak_heap_bytes','retained_heap_bytes']],on=keys,validate='one_to_one')
+    assert metrics.peak_heap_bytes.ge(metrics.retained_heap_bytes).all() and metrics.peak_heap_bytes.gt(0).all()
     assert metrics.repeats.eq(3).all();metrics.to_csv(ad/'case_metrics.csv',index=False)
     control_success=metrics[metrics.method.isin(CONTROL)].groupby(['case','job']).complete.any().rename('any_control_complete')
     exclusive=metrics[metrics.method.isin(NEW)].merge(control_success,on=['case','job'],validate='many_to_one')
@@ -278,9 +288,14 @@ def main(directory):
     exclusive['control_only']=~exclusive.complete&exclusive.any_control_complete
     exclusive.to_csv(ad/'completion_vs_controls.csv',index=False)
     pair_data=pairs(metrics);pair_data.to_csv(ad/'paired_cases.csv',index=False)
+    strong_wins=pair_data[pair_data.method.isin(NEW)&pair_data.baseline.eq('best_control')&pair_data.episode_speedup.ge(1.1)]
+    strong_wins.to_csv(ad/'strong_control_wins.csv',index=False)
     summary=summarize(pair_data,['cohort','control','method','baseline'],bootstrap=True);summary.to_csv(ad/'summary.csv',index=False)
     map_pairs=summarize(pair_data,['cohort','control','map','method','baseline']);map_pairs.to_csv(ad/'map_pairs.csv',index=False)
     families=summarize(pair_data,['cohort','control','family','method','baseline']);families.to_csv(ad/'family_pairs.csv',index=False)
+    radii=pair_data[pair_data.cohort.eq('navigation_unknown')].copy()
+    radii['radius']=radii['case'].map(lambda case:contexts[case]['params']['radius'])
+    summarize(radii,['control','map','radius','method','baseline']).to_csv(ad/'radius_pairs.csv',index=False)
     completion=metrics.groupby(['cohort','control','map','method'],as_index=False).agg(cases=('case','size'),completed=('complete','sum'))
     completion['completion_fraction']=completion.completed/completion.cases;completion.to_csv(ad/'completion.csv',index=False)
     completed_calls=calls[calls.planned.eq(1)&calls.online&~calls.status.eq('capped')]
@@ -326,12 +341,12 @@ def main(directory):
                   median_relative_mad=float(variation.relative_mad.median()),p95_relative_mad=float(variation.relative_mad.quantile(.95)),
                   software=dict(numpy=np.__version__,pandas=pd.__version__,matplotlib=matplotlib.__version__),
                   independent_dijkstra_comparisons=sum(r['comparisons'] for r in test_records),asan_ubsan='passed',policy_extra_zero_expansion_replay_calls=len(policy_extra),
-                  verification_sha256={p.name:digest(p) for p in verification.glob('*.log')},
+                  verification_sha256={p.name:digest(p) for p in sorted(verification.glob('*.log'))},
                   primary_methods=NEW,manifest_sha256=digest(manifest_path),experiment_sha256=digest(directory/'experiment.json'),
-                  source_sha256=manifest['sources'],tables_sha256={p.name:digest(p) for p in ad.glob('*.csv')})
+                  source_sha256=manifest['sources'],tables_sha256={p.name:digest(p) for p in sorted(ad.glob('*.csv'))})
     findings['analysis_source_sha256']=digest(Path(__file__))
     findings['allocation_revision']=revision
-    (ad/'analysis.json').write_text(json.dumps(findings,indent=2,ensure_ascii=False)+'\n');print(json.dumps(findings,ensure_ascii=False,indent=2))
+    (ad/'analysis.json').write_text(json.dumps(findings,indent=2,ensure_ascii=False,sort_keys=True)+'\n');print(json.dumps(findings,ensure_ascii=False,indent=2))
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--directory',type=Path,default=HERE/'results/full');main(p.parse_args().directory)

@@ -1,0 +1,3097 @@
+{
+  "utc": "2026-11-20T09:47:16.760746+00:00",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "cpu": "AMD EPYC 9V74 80-Core Processor",
+  "affinity": [
+    0,
+    1,
+    2
+  ],
+  "workers": 1,
+  "status": "passed",
+  "binaries": {
+    "replay": "8cbd23db7c0beb4b0189acf8fa1671d20ae1c685fef1e5a1d43ef8afe9192a07",
+    "navigation_memory": "3033e3f043081a7fd7afe70e78e38636aea618b30ba85cabe8ef27bbafb007c8",
+    "replay_memory": "faefbaa5eff1729fca34c8c7772f11e4e63fd636e68c7de6c04ea1bba827d806",
+    "navigation": "0b156c88b47aa4a038ae4bdae29d551fb3ff97fff169d7e4fb08dfe393f73c7e"
+  },
+  "manifest_sha256": "341d7f3621c48b80a1549258ad64aa835e83c729f04252ae302bbe28bd49dc51",
+  "jobs": {
+    "timing_replay_car16": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/replay",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/experiments/frozen/car16_replay.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_replay_car16.csv",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,selective_no_prune,selective_geom",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--mode",
+        "replay",
+        "--seed",
+        "48101"
+      ],
+      "expected_runs": 2970,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "replay",
+        "runs": 2970,
+        "rows": 27555,
+        "capped_queries": 3,
+        "step_limited_missions": 0,
+        "repeats": 3,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 160,
+        "preparation_s": 0.01668833,
+        "certificate_s": 5.3711e-05,
+        "wall_s": 1449.224713801,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000130698,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0,
+        "variant_compile_s": 0.002484619,
+        "variant_model_heap_retained_bytes": 0,
+        "variant_model_heap_peak_bytes": 0,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 412,
+            "edges": 680,
+            "support_groups": 968,
+            "delta": 0.03125
+          },
+          "cmesh": {
+            "configurations": 188,
+            "edges": 456,
+            "support_groups": 728,
+            "delta": 0.03125
+          },
+          "suffix_mesh": {
+            "configurations": 428,
+            "edges": 696,
+            "support_groups": 860,
+            "delta": 0.03125
+          },
+          "boundary_mesh": {
+            "configurations": 16,
+            "edges": 284,
+            "support_groups": 424,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "timing_replay_car16.csv.json": "b388764c8304b09bd55a65def465b9af3c47bc1b4e05a1eef9ca7bbfe6c39328",
+        "timing_replay_car16.csv": "913c7b7088c1cd511f8b845cfb889eda3599b3e023748b55e21698af31513547"
+      }
+    },
+    "timing_replay_grid8": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/replay",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/experiments/frozen/grid8_replay.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_replay_grid8.csv",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,selective_no_prune,selective_geom,octile_reuse",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--mode",
+        "replay",
+        "--seed",
+        "48101"
+      ],
+      "expected_runs": 3456,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "replay",
+        "runs": 3456,
+        "rows": 76392,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 3,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 160,
+        "preparation_s": 0.004249645,
+        "certificate_s": 1.2478e-05,
+        "wall_s": 7.924870375,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 3.415e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0,
+        "variant_compile_s": 6.2892e-05,
+        "variant_model_heap_retained_bytes": 0,
+        "variant_model_heap_peak_bytes": 0,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "cmesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "suffix_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "boundary_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "timing_replay_grid8.csv.json": "c5ae0305676e286ad4183c80f48650f60ea8a0f7e9af2ce2e35e513c7411889e",
+        "timing_replay_grid8.csv": "e599c0b3aa5c298455e349d23fe5badf7b210c33f1a329617c323e2ab2d8229f"
+      }
+    },
+    "timing_mission_car16_r8": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/replay",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/experiments/frozen/car16_missions_r8.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_mission_car16_r8.csv",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--mode",
+        "mission",
+        "--seed",
+        "48101",
+        "--radius",
+        "8",
+        "--max-steps",
+        "160"
+      ],
+      "expected_runs": 216,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "mission",
+        "runs": 216,
+        "rows": 13599,
+        "capped_queries": 0,
+        "step_limited_missions": 27,
+        "repeats": 3,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 160,
+        "preparation_s": 0.004707344,
+        "certificate_s": 5.4832e-05,
+        "wall_s": 88.612965566,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000132137,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0,
+        "variant_compile_s": 0.001962518,
+        "variant_model_heap_retained_bytes": 0,
+        "variant_model_heap_peak_bytes": 0,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 412,
+            "edges": 680,
+            "support_groups": 968,
+            "delta": 0.03125
+          },
+          "cmesh": {
+            "configurations": 188,
+            "edges": 456,
+            "support_groups": 728,
+            "delta": 0.03125
+          },
+          "suffix_mesh": {
+            "configurations": 428,
+            "edges": 696,
+            "support_groups": 860,
+            "delta": 0.03125
+          },
+          "boundary_mesh": {
+            "configurations": 16,
+            "edges": 284,
+            "support_groups": 424,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "timing_mission_car16_r8.csv.json": "81d1d9416a984686588c4985a486a2161b7a110f09c523d13fa53d64db7a85e5",
+        "timing_mission_car16_r8.csv": "155529cff70aedaae7f38e07fa347231875f93691aa0b9fa16dc970a31f9b3fd"
+      }
+    },
+    "timing_mission_car16_r16": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/replay",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/experiments/frozen/car16_missions_r16.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_mission_car16_r16.csv",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--mode",
+        "mission",
+        "--seed",
+        "48101",
+        "--radius",
+        "16",
+        "--max-steps",
+        "160"
+      ],
+      "expected_runs": 216,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "mission",
+        "runs": 216,
+        "rows": 11202,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 3,
+        "cap": 1000000,
+        "radius": 16,
+        "max_steps": 160,
+        "preparation_s": 0.004807583,
+        "certificate_s": 5.2228e-05,
+        "wall_s": 137.323962661,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000122734,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0,
+        "variant_compile_s": 0.002054257,
+        "variant_model_heap_retained_bytes": 0,
+        "variant_model_heap_peak_bytes": 0,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 412,
+            "edges": 680,
+            "support_groups": 968,
+            "delta": 0.03125
+          },
+          "cmesh": {
+            "configurations": 188,
+            "edges": 456,
+            "support_groups": 728,
+            "delta": 0.03125
+          },
+          "suffix_mesh": {
+            "configurations": 428,
+            "edges": 696,
+            "support_groups": 860,
+            "delta": 0.03125
+          },
+          "boundary_mesh": {
+            "configurations": 16,
+            "edges": 284,
+            "support_groups": 424,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "timing_mission_car16_r16.csv.json": "d075f2852b19c8d254f57b5285132ab317af9d84e36105bb379c3b8045a32f16",
+        "timing_mission_car16_r16.csv": "6b9e07b62afbea3e79b4d2b5d0711bf1514c1263e1e864c616f146edb62d3f00"
+      }
+    },
+    "timing_mission_grid8_r1": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/replay",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/experiments/frozen/grid8_missions_r1.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_mission_grid8_r1.csv",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--mode",
+        "mission",
+        "--seed",
+        "48101",
+        "--radius",
+        "1",
+        "--max-steps",
+        "256"
+      ],
+      "expected_runs": 240,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "mission",
+        "runs": 240,
+        "rows": 12051,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 3,
+        "cap": 1000000,
+        "radius": 1,
+        "max_steps": 256,
+        "preparation_s": 0.000861827,
+        "certificate_s": 4.467e-06,
+        "wall_s": 1.153473988,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 2.323e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0,
+        "variant_compile_s": 3.4962e-05,
+        "variant_model_heap_retained_bytes": 0,
+        "variant_model_heap_peak_bytes": 0,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "cmesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "suffix_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "boundary_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "timing_mission_grid8_r1.csv.json": "f0723fa9f0a8b4bb378c43de560235f54310f57d5550e4749547ba15964d80c3",
+        "timing_mission_grid8_r1.csv": "f6af86835d0642d0533dff0c37aa4a5114ea6b61b354b36f2a59e3296da20617"
+      }
+    },
+    "timing_mission_grid8_r4": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/replay",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/experiments/frozen/grid8_missions_r4.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_mission_grid8_r4.csv",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--mode",
+        "mission",
+        "--seed",
+        "48101",
+        "--radius",
+        "4",
+        "--max-steps",
+        "256"
+      ],
+      "expected_runs": 240,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "mission",
+        "runs": 240,
+        "rows": 10701,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 3,
+        "cap": 1000000,
+        "radius": 4,
+        "max_steps": 256,
+        "preparation_s": 0.000707235,
+        "certificate_s": 4.837e-06,
+        "wall_s": 1.425146424,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 2.363e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0,
+        "variant_compile_s": 3.4261e-05,
+        "variant_model_heap_retained_bytes": 0,
+        "variant_model_heap_peak_bytes": 0,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "cmesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "suffix_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "boundary_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "timing_mission_grid8_r4.csv.json": "9f1ba3e98fb8748e9de09a53b2ecf90291dade3e118d8b85ff1844ebe88fedf5",
+        "timing_mission_grid8_r4.csv": "b374836255121982039056795a8db8ed79ac79dd47434316ac90d9cf06f9c398"
+      }
+    },
+    "timing_mission_grid8_r8": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/replay",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/experiments/frozen/grid8_missions_r8.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_mission_grid8_r8.csv",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--mode",
+        "mission",
+        "--seed",
+        "48101",
+        "--radius",
+        "8",
+        "--max-steps",
+        "256"
+      ],
+      "expected_runs": 240,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "mission",
+        "runs": 240,
+        "rows": 10491,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 3,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 256,
+        "preparation_s": 0.000676739,
+        "certificate_s": 4.086e-06,
+        "wall_s": 1.22128484,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 2.353e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0,
+        "variant_compile_s": 3.4342e-05,
+        "variant_model_heap_retained_bytes": 0,
+        "variant_model_heap_peak_bytes": 0,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "cmesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "suffix_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "boundary_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "timing_mission_grid8_r8.csv.json": "e0ef6e91c8b410ecdfd15e8365225ff34dd55f30913890de9d8815c0610d9331",
+        "timing_mission_grid8_r8.csv": "1ef46cae4c5c49c3edb06e902b028038fcfcbdef11e9600b4470cf3b17adbc81"
+      }
+    },
+    "timing_navigation_car16_AR0700_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_AR0700_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_car16_AR0700_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_AR0700_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 216,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 216,
+        "calls": 1350,
+        "caps": 3,
+        "wall_s": 466.113760897,
+        "preparation_s": 0.01015894,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000111448,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_AR0700_dynamic.json": "9b51724e96c144d0650fcd4ac54eeabc7f3da85df2f57694e0a05759f2423b51",
+        "timing_navigation_car16_AR0700_dynamic_runs.csv": "64da7a8d4816a0c701fb7edad8a376146b71f0c8e4397969ced49e38f71ef004",
+        "timing_navigation_car16_AR0700_dynamic_calls.csv": "01cd37bfb881580d7bbf63bcc62c3f8c9f5916d495f47b0b4b18f8363bc3dbba",
+        "timing_navigation_car16_AR0700_dynamic_traces.csv": "a335d9892b19aff8e8937783fe44829d5fb54e580f698a1e9d54be508645be4c"
+      }
+    },
+    "timing_navigation_car16_AR0700_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_AR0700_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_car16_AR0700_unknown",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_AR0700_unknown.specs.txt"
+      ],
+      "expected_runs": 108,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 108,
+        "calls": 3039,
+        "caps": 0,
+        "wall_s": 6.156040945,
+        "preparation_s": 0.007057149,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000339993,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_AR0700_unknown.json": "1aa8d6810df75fc63702c4f6d7acfec70ca2d1af5a7ccdfcb07abab67b2201d4",
+        "timing_navigation_car16_AR0700_unknown_runs.csv": "531aa2c88a8405896e23fcfedc4f1945d520b23f5cd2c34c4f44413b226f3e01",
+        "timing_navigation_car16_AR0700_unknown_calls.csv": "eaaf46ad8e840ff49ab91b9ab80d414fd966d76228d0ad477dfc2e5a2143ce64",
+        "timing_navigation_car16_AR0700_unknown_traces.csv": "6c03e13aa0968408e34357afc1f1f5037d5e726fc93d9c1ed6ecf1572ebbf6e5"
+      }
+    },
+    "timing_navigation_car16_Berlin_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_Berlin_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_car16_Berlin_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_Berlin_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 216,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 216,
+        "calls": 1830,
+        "caps": 3,
+        "wall_s": 636.968844985,
+        "preparation_s": 0.012318664,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000108033,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_Berlin_dynamic.json": "608b4cab71590c245b209abd0072f5fcf3203ce45d63b25d57683b2d55b58c43",
+        "timing_navigation_car16_Berlin_dynamic_runs.csv": "f364ad409e95a57cc6efed1bd9a528a5bd57ae0762e6736e202796cdd303c504",
+        "timing_navigation_car16_Berlin_dynamic_calls.csv": "901b98006e07ccafc0cf568cd2db0ccdf94e8abc0e905dd85a434ca42211a873",
+        "timing_navigation_car16_Berlin_dynamic_traces.csv": "b873c9d551916426d5a7a3000edbca6276860ede820c98f9fe9bb90a0bf6b787"
+      }
+    },
+    "timing_navigation_car16_Berlin_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_Berlin_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_car16_Berlin_unknown",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_Berlin_unknown.specs.txt"
+      ],
+      "expected_runs": 108,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 108,
+        "calls": 2883,
+        "caps": 0,
+        "wall_s": 10.873715681,
+        "preparation_s": 0.006933163,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000208564,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_Berlin_unknown.json": "3d80a9c7d172cd053284c9c958942495f8f985633c30b4666ac2f6f4239c256b",
+        "timing_navigation_car16_Berlin_unknown_runs.csv": "d3ec47f3f1e9ea24f3f2ebde6cc934b7879336ab6adf6ae59b3d425725d9b339",
+        "timing_navigation_car16_Berlin_unknown_calls.csv": "eb79b34c85b77e145707283621a9548a5450a8b109d753f9fb8cbd6d4b19bf0c",
+        "timing_navigation_car16_Berlin_unknown_traces.csv": "8f1629f1ff4632551961c094dfca29f595c6581993e988f76556dc98c499bb9b"
+      }
+    },
+    "timing_navigation_car16_MA_maze96_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_maze96_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_car16_MA_maze96_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_MA_maze96_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 216,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 216,
+        "calls": 2874,
+        "caps": 0,
+        "wall_s": 422.026047157,
+        "preparation_s": 0.01370203,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000379911,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_MA_maze96_dynamic.json": "7ae4926dc19327a0faf6be1f29b80aeefd34b68ff817e7e8c0fccba38f8ceda1",
+        "timing_navigation_car16_MA_maze96_dynamic_runs.csv": "ff8ce850d830019b0b1b8a924cbad5bf670b4605fa52d9b659c11aa5d96b1e08",
+        "timing_navigation_car16_MA_maze96_dynamic_calls.csv": "00b31d1b970ce7ced987c1501f871c14756700604d7559d1e3008ca1a8288442",
+        "timing_navigation_car16_MA_maze96_dynamic_traces.csv": "4ef6bc4158e707899be89cb5a20486b458da84cc42d7d3a393952dddc75b50b1"
+      }
+    },
+    "timing_navigation_car16_MA_maze96_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_maze96_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_car16_MA_maze96_unknown",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_MA_maze96_unknown.specs.txt"
+      ],
+      "expected_runs": 108,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 108,
+        "calls": 5967,
+        "caps": 0,
+        "wall_s": 244.113122627,
+        "preparation_s": 0.008905631,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000213671,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_MA_maze96_unknown.json": "06a58f01de74542b6c0346cff6794c0873a7c8fadc91966b9b02ec87ac6e20fd",
+        "timing_navigation_car16_MA_maze96_unknown_runs.csv": "79bee9d7fcbca4b35686e9ee5150ff65e8ff4d4045f4c178b5bab6c2a337e446",
+        "timing_navigation_car16_MA_maze96_unknown_calls.csv": "8c8d8e8c31cbeb921cf1d2ebe45fa5743c1b80b5bd0f44e66d3440a11f292b77",
+        "timing_navigation_car16_MA_maze96_unknown_traces.csv": "84c0c0e05c24e2b8dd0d07db726700922a3604874e6c3b068fe730af432cfcc2"
+      }
+    },
+    "timing_navigation_car16_MA_random96_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_random96_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_car16_MA_random96_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_MA_random96_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 216,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 216,
+        "calls": 1674,
+        "caps": 0,
+        "wall_s": 21.685192364,
+        "preparation_s": 0.007762211,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000122705,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_MA_random96_dynamic.json": "0f5ecdad5e8f22536526d755d38a795828c5864a9d9d36115298bd3ce1ab20dd",
+        "timing_navigation_car16_MA_random96_dynamic_runs.csv": "910115c1ad0c60fe44f12a7dfd75d9267ee97ffeef98d996fe164317b15688e2",
+        "timing_navigation_car16_MA_random96_dynamic_calls.csv": "43ad6656a8483c8ead2daf05591a5c8d6b0a8db3598b32e5194ca2fbd1001a2b",
+        "timing_navigation_car16_MA_random96_dynamic_traces.csv": "48e07da52cd908be80bb2daaca34a13ffaf0a537b1d7819e2854a383d7371bfa"
+      }
+    },
+    "timing_navigation_car16_MA_random96_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_random96_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_car16_MA_random96_unknown",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_MA_random96_unknown.specs.txt"
+      ],
+      "expected_runs": 108,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 108,
+        "calls": 1617,
+        "caps": 0,
+        "wall_s": 1.807502023,
+        "preparation_s": 0.004582928,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000112549,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_MA_random96_unknown.json": "43babe40b65d79dd48c274885f79fd09fcf7c7c51a35d090aec07799c58ea6af",
+        "timing_navigation_car16_MA_random96_unknown_runs.csv": "4cc7463db578192089cf0d86a1b552cb9adcedfce2cf0e056c080db4f583e3e1",
+        "timing_navigation_car16_MA_random96_unknown_calls.csv": "11ad855d2fe82c6cfd36ddf4f178071ef14ee10f938f0e5ea790d704b5a7a509",
+        "timing_navigation_car16_MA_random96_unknown_traces.csv": "048a568db495eaba3ee71b297046391787da5a8f2d02ce8e6bd6f06b1b7f8dfe"
+      }
+    },
+    "timing_navigation_car16_MA_room96_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_room96_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_car16_MA_room96_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_MA_room96_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 216,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 216,
+        "calls": 1944,
+        "caps": 0,
+        "wall_s": 45.804466339,
+        "preparation_s": 0.00767309,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000352441,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_MA_room96_dynamic.json": "b4b929609177fc11f6cddf93863fae142048ba1b0932e0015570d30819c64286",
+        "timing_navigation_car16_MA_room96_dynamic_runs.csv": "13b2cb747c4eeea6ac052833af999491ace3362bd689f65db9a2072b38792836",
+        "timing_navigation_car16_MA_room96_dynamic_calls.csv": "7a27f5b76614c32311fe3168fbff377b2e92a5c34401cd247bd632a2ceb11402",
+        "timing_navigation_car16_MA_room96_dynamic_traces.csv": "2ee7eb4d5ff685d615f80f5f0ec30b731309868ddc74b3b3d01e1f4c7d8d4cf2"
+      }
+    },
+    "timing_navigation_car16_MA_room96_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_room96_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_car16_MA_room96_unknown",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_MA_room96_unknown.specs.txt"
+      ],
+      "expected_runs": 108,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 108,
+        "calls": 2430,
+        "caps": 0,
+        "wall_s": 20.601098983,
+        "preparation_s": 0.004381285,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000109876,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_MA_room96_unknown.json": "f4d613d1fc15030083fb9ca19151db7c9a43b3b4a94822a751b3367262d810b9",
+        "timing_navigation_car16_MA_room96_unknown_runs.csv": "9c711cf6e71bd974e374730ff55ce7e163a9b04060d9ea4b47c38c336048bce6",
+        "timing_navigation_car16_MA_room96_unknown_calls.csv": "8f1b0ff8faa69fa6b721562d9bdf1d0e2aea2909c358981b4f5e73c655ee6d34",
+        "timing_navigation_car16_MA_room96_unknown_traces.csv": "b8461d2596522783f557930e6d129c4293fa5bb1b1bdf306db18cbcd56cf0f5a"
+      }
+    },
+    "timing_navigation_car16_arena_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_arena_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_car16_arena_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_arena_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 216,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 216,
+        "calls": 1344,
+        "caps": 0,
+        "wall_s": 3.410311512,
+        "preparation_s": 0.006313202,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000106811,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_arena_dynamic.json": "de22b17566bc06279e1e2e806222ac7982fda504be799abec2620cfbdf8522f9",
+        "timing_navigation_car16_arena_dynamic_runs.csv": "091555d69cf55eb9114edc5f95d02472effae115d2f985f6157100f954036a13",
+        "timing_navigation_car16_arena_dynamic_calls.csv": "3bad7d462a7f75225f4f49adda3ca3f9b26a12a361a0b862f2b679b75a3068ce",
+        "timing_navigation_car16_arena_dynamic_traces.csv": "fc53eba2fb0884c08ca41f5283ec63b998d98b7a89f02d2330fd99c82d097f5b"
+      }
+    },
+    "timing_navigation_car16_arena_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_arena_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_car16_arena_unknown",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_arena_unknown.specs.txt"
+      ],
+      "expected_runs": 108,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 108,
+        "calls": 1323,
+        "caps": 0,
+        "wall_s": 0.345818685,
+        "preparation_s": 0.004313893,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000109615,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_arena_unknown.json": "de1af1a4c00040d9799e5b1fece5186842ee6a596396ac4505ef8526d034e858",
+        "timing_navigation_car16_arena_unknown_runs.csv": "df1e66263cb802af80a0ee5f6a8926694fb5619626bb154d4253e98ffc6d1be8",
+        "timing_navigation_car16_arena_unknown_calls.csv": "dd7f16c9ed937a367a364ef5ad027f328344e84c4910218597eb9628f0abbf72",
+        "timing_navigation_car16_arena_unknown_traces.csv": "a438ff11af80eabc59feabceb8973311f3e75f0cc9f5af1a7c0159adee08ac55"
+      }
+    },
+    "timing_navigation_grid8_AR0700_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_AR0700_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_grid8_AR0700_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/grid8_AR0700_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_visibility.txt"
+      ],
+      "expected_runs": 240,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 240,
+        "calls": 44595,
+        "caps": 0,
+        "wall_s": 107.456680124,
+        "preparation_s": 0.003476843,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 2.864e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_grid8_AR0700_dynamic.json": "2333093c69834d7d8fe65d36c0f9f1ac4563342d1527305951215b4df67a1df5",
+        "timing_navigation_grid8_AR0700_dynamic_runs.csv": "2b4952013486cffaf9c6954ccc9d194effc82e1ddf0ee7ce2a659a5a9d49df49",
+        "timing_navigation_grid8_AR0700_dynamic_calls.csv": "60096f9bcddd4a2b1f0aea8c259e781f554908c3eca9c7f38ee70401ac0738bd",
+        "timing_navigation_grid8_AR0700_dynamic_traces.csv": "1909d37f9279bf0b72e7205e198cd2bf67bc04412f2f9e392f79e2ea0a76e206"
+      }
+    },
+    "timing_navigation_grid8_Berlin_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_Berlin_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_grid8_Berlin_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/grid8_Berlin_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_visibility.txt"
+      ],
+      "expected_runs": 240,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 240,
+        "calls": 39048,
+        "caps": 0,
+        "wall_s": 78.129866142,
+        "preparation_s": 0.002517612,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 3.164e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_grid8_Berlin_dynamic.json": "9d4039b22432ea9dd55815308f2bca72e481cda5fceca6b6a699d7df878a2469",
+        "timing_navigation_grid8_Berlin_dynamic_runs.csv": "3937a6a5e06742f605fb4621beb43239aeed87d2ec094c6471a5496ef619a47b",
+        "timing_navigation_grid8_Berlin_dynamic_calls.csv": "e300dcda6d8d3336a6edfc8193226619e76a87a86e7b4422e16f3ded1650d453",
+        "timing_navigation_grid8_Berlin_dynamic_traces.csv": "193a233e7764b25b9ed7a3744cd87e42a3320e9f35e47a2da0267b8b978feb21"
+      }
+    },
+    "timing_navigation_grid8_MA_maze512_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_MA_maze512_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_grid8_MA_maze512_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/grid8_MA_maze512_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_visibility.txt"
+      ],
+      "expected_runs": 240,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 240,
+        "calls": 56106,
+        "caps": 0,
+        "wall_s": 968.778732788,
+        "preparation_s": 0.007465243,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 6.56e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_grid8_MA_maze512_dynamic.json": "22678f9f8d6e73eb9459f5e976ae2b862113a3a0a15ca36ee824b0880e555904",
+        "timing_navigation_grid8_MA_maze512_dynamic_runs.csv": "a20ef98e53ec54cbd859919129b26b05b4f0acbcd0bc5ce13d5b3680f16b46af",
+        "timing_navigation_grid8_MA_maze512_dynamic_calls.csv": "b3e47f7748f2c09630f9bc0c987721bcd29f40a75e37492589fae2357df02383",
+        "timing_navigation_grid8_MA_maze512_dynamic_traces.csv": "5c5205fbf60af78ce22ffce5f5a517d8ef919a2d2c605a245f859ce226519462"
+      }
+    },
+    "timing_navigation_grid8_MA_random512_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_MA_random512_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_grid8_MA_random512_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/grid8_MA_random512_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_visibility.txt"
+      ],
+      "expected_runs": 240,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 240,
+        "calls": 45201,
+        "caps": 0,
+        "wall_s": 209.624925228,
+        "preparation_s": 0.008259077,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 6.42e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_grid8_MA_random512_dynamic.json": "3915190f76c8a62a92a4b5e07ba5c0a5f0d64dcb8904002df88c59ca0a33b5ff",
+        "timing_navigation_grid8_MA_random512_dynamic_runs.csv": "77ec0b07a139a3e03fd268f5aa77a37d1ca659df46561c85d55cb7f394e86ce0",
+        "timing_navigation_grid8_MA_random512_dynamic_calls.csv": "d9d6e4d821506cf6ebcc7929e88f91fc4d098995885c06df08b24461dd6818d5",
+        "timing_navigation_grid8_MA_random512_dynamic_traces.csv": "73e882cdc698c49f72a3932818266c651fae5391bcba0117db539795c57acf54"
+      }
+    },
+    "timing_navigation_grid8_MA_room512_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_MA_room512_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_grid8_MA_room512_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/grid8_MA_room512_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_visibility.txt"
+      ],
+      "expected_runs": 240,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 240,
+        "calls": 49629,
+        "caps": 0,
+        "wall_s": 547.89912104,
+        "preparation_s": 0.007167955,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 6.62e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_grid8_MA_room512_dynamic.json": "6c65149b7c995a38b1f3867d2dc1d440d82a977a26ea6eb22169b8aea8ffd168",
+        "timing_navigation_grid8_MA_room512_dynamic_runs.csv": "134a0b661a3c323928808b7a98cdf4050427bb7ec7f7632c6ddf78b27a0ad924",
+        "timing_navigation_grid8_MA_room512_dynamic_calls.csv": "b4bc668fbc4147814979852e77906fa90d7fdd7826ede2f0ac5b730c27ca75c5",
+        "timing_navigation_grid8_MA_room512_dynamic_traces.csv": "3ae8b17a1719f8d6350e8a39b87016b2ef80e1d36d5d4390fc400e2872e6b2cb"
+      }
+    },
+    "timing_navigation_grid8_arena_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_arena_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_grid8_arena_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/grid8_arena_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_visibility.txt"
+      ],
+      "expected_runs": 240,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 240,
+        "calls": 2730,
+        "caps": 0,
+        "wall_s": 0.328447362,
+        "preparation_s": 0.001111053,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 2.163e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_grid8_arena_dynamic.json": "c4076f639894ed91aedd3fe6699195dd1362c428b5d2e5bdfa0be7a168687c30",
+        "timing_navigation_grid8_arena_dynamic_runs.csv": "6f1beb9215bec87be20365b520819122aff901f70e2563788823a4477a40699f",
+        "timing_navigation_grid8_arena_dynamic_calls.csv": "ead779b2574937006195124f06085c6196b7f730260b39e46bf19f10900c5dfd",
+        "timing_navigation_grid8_arena_dynamic_traces.csv": "2952e88c5e36133727a53ead99a3bd66655d8bca3ddce8627e63ebec3641abf2"
+      }
+    },
+    "timing_navigation_grid8_random50_p10_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_random50_p10_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_grid8_random50_p10_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/grid8_random50_p10_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_visibility.txt"
+      ],
+      "expected_runs": 240,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 240,
+        "calls": 2640,
+        "caps": 0,
+        "wall_s": 0.206834708,
+        "preparation_s": 0.001095599,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 1.973e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_grid8_random50_p10_dynamic.json": "4cf87e6a781397053206a282b2898f4ed2011732eb48001a5ec4ce9576871af4",
+        "timing_navigation_grid8_random50_p10_dynamic_runs.csv": "32f2761fe43171b6f807274e510a33e16a4549c5b2bf8f437fbe9e883bce57e1",
+        "timing_navigation_grid8_random50_p10_dynamic_calls.csv": "8960d8cfddf0af3d33b1da975f3d893e0ac3e209a428a084f56b338bfc9b68c2",
+        "timing_navigation_grid8_random50_p10_dynamic_traces.csv": "0a7ba35c40bb3c70a4a5aabd213fe5878b9b1a8dc46f58c92b7f693701d34999"
+      }
+    },
+    "timing_navigation_grid8_random50_p20_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_random50_p20_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_grid8_random50_p20_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/grid8_random50_p20_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_visibility.txt"
+      ],
+      "expected_runs": 240,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 240,
+        "calls": 2871,
+        "caps": 0,
+        "wall_s": 0.275531283,
+        "preparation_s": 0.00085023,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 2.013e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_grid8_random50_p20_dynamic.json": "eb45b450728caa019c08d7237540a5ebea2c5d0ebf685dfe51bc3b4b5355dc31",
+        "timing_navigation_grid8_random50_p20_dynamic_runs.csv": "68c3a7ec3e182eecb57b1031461d9d143b3b60cbd1cac1f29c1d3b89448aace4",
+        "timing_navigation_grid8_random50_p20_dynamic_calls.csv": "7bbbe4bef57cc702780abbc3ff488b75e925db6a8c56e8741a5702f57553e037",
+        "timing_navigation_grid8_random50_p20_dynamic_traces.csv": "7829cce6fc49e51866f1e05ef0cc6901143202485a31805672173907c0dfa2b4"
+      }
+    },
+    "timing_navigation_grid8_random50_p30_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_random50_p30_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_grid8_random50_p30_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/grid8_random50_p30_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_visibility.txt"
+      ],
+      "expected_runs": 240,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 240,
+        "calls": 2817,
+        "caps": 0,
+        "wall_s": 0.225831024,
+        "preparation_s": 0.000789298,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 1.822e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_grid8_random50_p30_dynamic.json": "82b54013ac1c614734672f7c64c0f2606ebe2f488e528d3c02886ef8c4fd91fd",
+        "timing_navigation_grid8_random50_p30_dynamic_runs.csv": "7f874b6f8d2dcc145f03131dcc2f22bd30a281e512419687c948d25e9cf12192",
+        "timing_navigation_grid8_random50_p30_dynamic_calls.csv": "ec18f561ed649e4e20f0df90502017685e02b9b29bb634bab204c61ce68844a7",
+        "timing_navigation_grid8_random50_p30_dynamic_traces.csv": "058989b4e947038cb001dd81ebb4814d6baeefb9331cfbff57f0fcb117497b4b"
+      }
+    },
+    "timing_navigation_grid8_random50_p40_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_random50_p40_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/timing_navigation_grid8_random50_p40_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/grid8_random50_p40_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_visibility.txt"
+      ],
+      "expected_runs": 240,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 240,
+        "calls": 3633,
+        "caps": 0,
+        "wall_s": 0.52070809,
+        "preparation_s": 0.000798672,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 1.862e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_grid8_random50_p40_dynamic.json": "d2b215419db17c5543ee9577c4efd73088822be1f4156e32c4548d9606423c82",
+        "timing_navigation_grid8_random50_p40_dynamic_runs.csv": "02baa3c93b929b72e3934ab44669c01f533a765dc19b437a8f1f89e8bf60efcb",
+        "timing_navigation_grid8_random50_p40_dynamic_calls.csv": "e8069fbd9e2796cfd0f3afb6d79828255bb190c400df687da64a6e6b8adfecd8",
+        "timing_navigation_grid8_random50_p40_dynamic_traces.csv": "3e0a9158c639a90748e26b16f6224fb1ae2d633f00413456c6c0e400fd4df54f"
+      }
+    },
+    "memory_replay_car16": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/replay_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/experiments/frozen/car16_replay.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_replay_car16.csv",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,selective_no_prune,selective_geom",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--mode",
+        "replay",
+        "--seed",
+        "48101"
+      ],
+      "expected_runs": 990,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "replay",
+        "runs": 990,
+        "rows": 9185,
+        "capped_queries": 1,
+        "step_limited_missions": 0,
+        "repeats": 1,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 160,
+        "preparation_s": 0.016923293,
+        "certificate_s": 6.0611e-05,
+        "wall_s": 545.707532572,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000178618,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 108048,
+        "mesh_index_heap_peak_bytes": 110736,
+        "variant_compile_s": 0.0022527,
+        "variant_model_heap_retained_bytes": 879664,
+        "variant_model_heap_peak_bytes": 882352,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 412,
+            "edges": 680,
+            "support_groups": 968,
+            "delta": 0.03125
+          },
+          "cmesh": {
+            "configurations": 188,
+            "edges": 456,
+            "support_groups": 728,
+            "delta": 0.03125
+          },
+          "suffix_mesh": {
+            "configurations": 428,
+            "edges": 696,
+            "support_groups": 860,
+            "delta": 0.03125
+          },
+          "boundary_mesh": {
+            "configurations": 16,
+            "edges": 284,
+            "support_groups": 424,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "memory_replay_car16.csv.json": "9302e77b1d1ae81efe2f4e126c8f26c9e78bf163b35013ab49dfc7e0cf602a79",
+        "memory_replay_car16.csv": "e60d392471ffffed9ed0fc5f68d5344af0e13d2cbe1bad9580669345d5709ec1"
+      }
+    },
+    "memory_replay_grid8": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/replay_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/experiments/frozen/grid8_replay.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_replay_grid8.csv",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,selective_no_prune,selective_geom,octile_reuse",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--mode",
+        "replay",
+        "--seed",
+        "48101"
+      ],
+      "expected_runs": 1152,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "replay",
+        "runs": 1152,
+        "rows": 25464,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 1,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 160,
+        "preparation_s": 0.00386122,
+        "certificate_s": 5.168e-06,
+        "wall_s": 2.738350636,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 2.274e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 1816,
+        "mesh_index_heap_peak_bytes": 2508,
+        "variant_compile_s": 3.6024e-05,
+        "variant_model_heap_retained_bytes": 9352,
+        "variant_model_heap_peak_bytes": 10044,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "cmesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "suffix_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "boundary_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "memory_replay_grid8.csv.json": "55262e12cadd8bba1ccb5c3a415db475703669a186223ae60ef89fde19997d61",
+        "memory_replay_grid8.csv": "ebb95fb70282e35e5cdb9cb5eba5b57cc9e585e17b0172654476ff6efcd64424"
+      }
+    },
+    "memory_mission_car16_r8": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/replay_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/experiments/frozen/car16_missions_r8.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_mission_car16_r8.csv",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--mode",
+        "mission",
+        "--seed",
+        "48101",
+        "--radius",
+        "8",
+        "--max-steps",
+        "160"
+      ],
+      "expected_runs": 72,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "mission",
+        "runs": 72,
+        "rows": 4533,
+        "capped_queries": 0,
+        "step_limited_missions": 9,
+        "repeats": 1,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 160,
+        "preparation_s": 0.008281762,
+        "certificate_s": 5.6655e-05,
+        "wall_s": 33.932770377,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000124167,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 108048,
+        "mesh_index_heap_peak_bytes": 110736,
+        "variant_compile_s": 0.005439148,
+        "variant_model_heap_retained_bytes": 879664,
+        "variant_model_heap_peak_bytes": 882352,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 412,
+            "edges": 680,
+            "support_groups": 968,
+            "delta": 0.03125
+          },
+          "cmesh": {
+            "configurations": 188,
+            "edges": 456,
+            "support_groups": 728,
+            "delta": 0.03125
+          },
+          "suffix_mesh": {
+            "configurations": 428,
+            "edges": 696,
+            "support_groups": 860,
+            "delta": 0.03125
+          },
+          "boundary_mesh": {
+            "configurations": 16,
+            "edges": 284,
+            "support_groups": 424,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "memory_mission_car16_r8.csv.json": "fde92ba37a25e41f530d96becc690b6c0a90d6d78b73f2d5ebc10dcfdab43cb4",
+        "memory_mission_car16_r8.csv": "237c0285b30132605c10d450a93fa922333c55ccf0f140bb0cc9e060cd528bca"
+      }
+    },
+    "memory_mission_car16_r16": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/replay_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/experiments/frozen/car16_missions_r16.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_mission_car16_r16.csv",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--mode",
+        "mission",
+        "--seed",
+        "48101",
+        "--radius",
+        "16",
+        "--max-steps",
+        "160"
+      ],
+      "expected_runs": 72,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "mission",
+        "runs": 72,
+        "rows": 3734,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 1,
+        "cap": 1000000,
+        "radius": 16,
+        "max_steps": 160,
+        "preparation_s": 0.005566696,
+        "certificate_s": 0.000111729,
+        "wall_s": 51.940562241,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000153561,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 108048,
+        "mesh_index_heap_peak_bytes": 110736,
+        "variant_compile_s": 0.00244591,
+        "variant_model_heap_retained_bytes": 879664,
+        "variant_model_heap_peak_bytes": 882352,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 412,
+            "edges": 680,
+            "support_groups": 968,
+            "delta": 0.03125
+          },
+          "cmesh": {
+            "configurations": 188,
+            "edges": 456,
+            "support_groups": 728,
+            "delta": 0.03125
+          },
+          "suffix_mesh": {
+            "configurations": 428,
+            "edges": 696,
+            "support_groups": 860,
+            "delta": 0.03125
+          },
+          "boundary_mesh": {
+            "configurations": 16,
+            "edges": 284,
+            "support_groups": 424,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "memory_mission_car16_r16.csv.json": "533daab6dfb7cf8639118f96138a05ce90b514603fe0d5d52938b842b7ea4e6d",
+        "memory_mission_car16_r16.csv": "bf43ceed9f60d19ee9e85978611aa73dedf2e78a4bfbfd8068dfad3eb332d856"
+      }
+    },
+    "memory_mission_grid8_r1": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/replay_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/experiments/frozen/grid8_missions_r1.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_mission_grid8_r1.csv",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--mode",
+        "mission",
+        "--seed",
+        "48101",
+        "--radius",
+        "1",
+        "--max-steps",
+        "256"
+      ],
+      "expected_runs": 80,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "mission",
+        "runs": 80,
+        "rows": 4017,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 1,
+        "cap": 1000000,
+        "radius": 1,
+        "max_steps": 256,
+        "preparation_s": 0.000702007,
+        "certificate_s": 4.036e-06,
+        "wall_s": 0.434324622,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 3.314e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 1816,
+        "mesh_index_heap_peak_bytes": 2508,
+        "variant_compile_s": 3.6545e-05,
+        "variant_model_heap_retained_bytes": 9352,
+        "variant_model_heap_peak_bytes": 10044,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "cmesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "suffix_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "boundary_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "memory_mission_grid8_r1.csv.json": "99fee518c961a624ddea5c8d261060e15f32f2987055ddc1409fbbde06a2e9c9",
+        "memory_mission_grid8_r1.csv": "172efd964e2eb261a738d3f967b2dc9d29a2e3d5303f221492f596dc3dd76342"
+      }
+    },
+    "memory_mission_grid8_r4": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/replay_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/experiments/frozen/grid8_missions_r4.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_mission_grid8_r4.csv",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--mode",
+        "mission",
+        "--seed",
+        "48101",
+        "--radius",
+        "4",
+        "--max-steps",
+        "256"
+      ],
+      "expected_runs": 80,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "mission",
+        "runs": 80,
+        "rows": 3567,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 1,
+        "cap": 1000000,
+        "radius": 4,
+        "max_steps": 256,
+        "preparation_s": 0.000708606,
+        "certificate_s": 4.426e-06,
+        "wall_s": 0.426171781,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 3.124e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 1816,
+        "mesh_index_heap_peak_bytes": 2508,
+        "variant_compile_s": 5.6926e-05,
+        "variant_model_heap_retained_bytes": 9352,
+        "variant_model_heap_peak_bytes": 10044,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "cmesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "suffix_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "boundary_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "memory_mission_grid8_r4.csv.json": "bad094b4740f9b0511e4592ce6c598181cb95e9f38065e0c6d6698f9ea47fd41",
+        "memory_mission_grid8_r4.csv": "4583b5c4402e8e67ae117fb10bf4a37bcb07298ce88360ded5739a17b5897168"
+      }
+    },
+    "memory_mission_grid8_r8": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/replay_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/experiments/frozen/grid8_missions_r8.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_mission_grid8_r8.csv",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--mode",
+        "mission",
+        "--seed",
+        "48101",
+        "--radius",
+        "8",
+        "--max-steps",
+        "256"
+      ],
+      "expected_runs": 80,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "mission",
+        "runs": 80,
+        "rows": 3497,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 1,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 256,
+        "preparation_s": 0.000738081,
+        "certificate_s": 4.216e-06,
+        "wall_s": 0.462423877,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 3.315e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 1816,
+        "mesh_index_heap_peak_bytes": 2508,
+        "variant_compile_s": 3.4763e-05,
+        "variant_model_heap_retained_bytes": 9352,
+        "variant_model_heap_peak_bytes": 10044,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "cmesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "suffix_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "boundary_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "memory_mission_grid8_r8.csv.json": "6dccca32aeaad6a8a2d7100647f1cfdef607ab35484ecf20765e3cf2f9ce8e03",
+        "memory_mission_grid8_r8.csv": "5dce994f1aa8c2ecc805953847b7cd2c835511019fc22b9f69fc9014d47277a7"
+      }
+    },
+    "memory_navigation_car16_AR0700_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_AR0700_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_car16_AR0700_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_AR0700_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 72,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 72,
+        "calls": 450,
+        "caps": 1,
+        "wall_s": 174.280795626,
+        "preparation_s": 0.012758019,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000108904,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 108048,
+        "mesh_index_heap_peak_bytes": 110736
+      },
+      "outputs": {
+        "memory_navigation_car16_AR0700_dynamic.json": "9202c01e8ea58dc992121e7000767702b790d8f0a05abd5839a46c2973ca9a35",
+        "memory_navigation_car16_AR0700_dynamic_runs.csv": "fee5d86004b3484373c0ce18923cf1c5d6885801a925bb188e0d2630190a9b36",
+        "memory_navigation_car16_AR0700_dynamic_calls.csv": "737b82fdfda62b6825fe6805f4092bf2d27ccf1649c6adcd040be6ba8bcbdd65",
+        "memory_navigation_car16_AR0700_dynamic_traces.csv": "a335d9892b19aff8e8937783fe44829d5fb54e580f698a1e9d54be508645be4c"
+      }
+    },
+    "memory_navigation_car16_AR0700_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_AR0700_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_car16_AR0700_unknown",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_AR0700_unknown.specs.txt"
+      ],
+      "expected_runs": 36,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 36,
+        "calls": 1013,
+        "caps": 0,
+        "wall_s": 2.241132805,
+        "preparation_s": 0.007908412,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000110216,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 108048,
+        "mesh_index_heap_peak_bytes": 110736
+      },
+      "outputs": {
+        "memory_navigation_car16_AR0700_unknown.json": "eed93b181f9f0f75f04113aa0cc3f89c0326371f03708d6c0d021a6b248e4446",
+        "memory_navigation_car16_AR0700_unknown_runs.csv": "6826b64f8f689214f4ea9749429855406a61c260ac4583efb56b7f4ad12c94b2",
+        "memory_navigation_car16_AR0700_unknown_calls.csv": "3425138c65fa242f2849044c2cc6f060ae3eaa554c809caf9dff909760f4f96e",
+        "memory_navigation_car16_AR0700_unknown_traces.csv": "6c03e13aa0968408e34357afc1f1f5037d5e726fc93d9c1ed6ecf1572ebbf6e5"
+      }
+    },
+    "memory_navigation_car16_Berlin_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_Berlin_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_car16_Berlin_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_Berlin_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 72,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 72,
+        "calls": 610,
+        "caps": 1,
+        "wall_s": 251.741030422,
+        "preparation_s": 0.008652621,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000108393,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 108048,
+        "mesh_index_heap_peak_bytes": 110736
+      },
+      "outputs": {
+        "memory_navigation_car16_Berlin_dynamic.json": "7603b0abf166c75d51d525a0f70c1076c85d6886ff8f2db46a7818866ae91d00",
+        "memory_navigation_car16_Berlin_dynamic_runs.csv": "f86590db0480bbf4d13593a0f6eef9a007fc54f12605a254117d6cd247182854",
+        "memory_navigation_car16_Berlin_dynamic_calls.csv": "fa08831a3898eece25cfbcf2ea421b08ad908f655abdac3f81873596834528fd",
+        "memory_navigation_car16_Berlin_dynamic_traces.csv": "b873c9d551916426d5a7a3000edbca6276860ede820c98f9fe9bb90a0bf6b787"
+      }
+    },
+    "memory_navigation_car16_Berlin_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_Berlin_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_car16_Berlin_unknown",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_Berlin_unknown.specs.txt"
+      ],
+      "expected_runs": 36,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 36,
+        "calls": 961,
+        "caps": 0,
+        "wall_s": 3.537902603,
+        "preparation_s": 0.005866466,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.00010572,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 108048,
+        "mesh_index_heap_peak_bytes": 110736
+      },
+      "outputs": {
+        "memory_navigation_car16_Berlin_unknown.json": "dd3970969f85dc6af472df1658bb0d7da25b30e56801dde2708ddccfc708bbe4",
+        "memory_navigation_car16_Berlin_unknown_runs.csv": "8075d6740fc251fd5e34e5be0c64b10c05b0a73f667f4155e59475d60b170ef1",
+        "memory_navigation_car16_Berlin_unknown_calls.csv": "a45f188e00b47990405bc55d904c01452ba8dd2b2774769db616b3a1f77b9d93",
+        "memory_navigation_car16_Berlin_unknown_traces.csv": "8f1629f1ff4632551961c094dfca29f595c6581993e988f76556dc98c499bb9b"
+      }
+    },
+    "memory_navigation_car16_MA_maze96_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_maze96_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_car16_MA_maze96_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_MA_maze96_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 72,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 72,
+        "calls": 958,
+        "caps": 0,
+        "wall_s": 125.189483617,
+        "preparation_s": 0.007507612,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.00010629,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 108048,
+        "mesh_index_heap_peak_bytes": 110736
+      },
+      "outputs": {
+        "memory_navigation_car16_MA_maze96_dynamic.json": "94014456c3408dc9cd289a823416be8b88ffc259187c2e18a191688b92dd5eba",
+        "memory_navigation_car16_MA_maze96_dynamic_runs.csv": "16531c22cfae3491cb851acfd8ba10d32e1e617f3b36d8aa7e5bcf473595da34",
+        "memory_navigation_car16_MA_maze96_dynamic_calls.csv": "a7ba5792c12b7746c1ab05787b0c94d7ba505f5a4a914babb5565a8792c3bf26",
+        "memory_navigation_car16_MA_maze96_dynamic_traces.csv": "4ef6bc4158e707899be89cb5a20486b458da84cc42d7d3a393952dddc75b50b1"
+      }
+    },
+    "memory_navigation_car16_MA_maze96_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_maze96_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_car16_MA_maze96_unknown",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_MA_maze96_unknown.specs.txt"
+      ],
+      "expected_runs": 36,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 36,
+        "calls": 1989,
+        "caps": 0,
+        "wall_s": 78.275405386,
+        "preparation_s": 0.004398219,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000117446,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 108048,
+        "mesh_index_heap_peak_bytes": 110736
+      },
+      "outputs": {
+        "memory_navigation_car16_MA_maze96_unknown.json": "26758cf366dbc0da8857a31c00254803193ad97a2447c6c1eebc7634af1a158e",
+        "memory_navigation_car16_MA_maze96_unknown_runs.csv": "2ffbedc8a02bcf20c899b4c182fa011b9a1db4d6cbcff1f1304cb40ed4482f06",
+        "memory_navigation_car16_MA_maze96_unknown_calls.csv": "d233e56984f5224cd514073081f8deb41ad728d93b880ca50ce911b36080363c",
+        "memory_navigation_car16_MA_maze96_unknown_traces.csv": "84c0c0e05c24e2b8dd0d07db726700922a3604874e6c3b068fe730af432cfcc2"
+      }
+    },
+    "memory_navigation_car16_MA_random96_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_random96_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_car16_MA_random96_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_MA_random96_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 72,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 72,
+        "calls": 558,
+        "caps": 0,
+        "wall_s": 6.175765141,
+        "preparation_s": 0.006889341,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000105919,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 108048,
+        "mesh_index_heap_peak_bytes": 110736
+      },
+      "outputs": {
+        "memory_navigation_car16_MA_random96_dynamic.json": "0c38f8d47de994721929e8d4605b6ae7492c05fabccd5e85814adae78c014228",
+        "memory_navigation_car16_MA_random96_dynamic_runs.csv": "49d312e25d20cff1b822b2a8303886de03f8e7a6937b424cf197d905adeff6d5",
+        "memory_navigation_car16_MA_random96_dynamic_calls.csv": "a2d811843c12e320eb8a8da3cdcafb169614576fdd4ef8908f12af1b5b2d461d",
+        "memory_navigation_car16_MA_random96_dynamic_traces.csv": "48e07da52cd908be80bb2daaca34a13ffaf0a537b1d7819e2854a383d7371bfa"
+      }
+    },
+    "memory_navigation_car16_MA_random96_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_random96_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_car16_MA_random96_unknown",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_MA_random96_unknown.specs.txt"
+      ],
+      "expected_runs": 36,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 36,
+        "calls": 539,
+        "caps": 0,
+        "wall_s": 0.57720096,
+        "preparation_s": 0.008449688,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000118226,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 108048,
+        "mesh_index_heap_peak_bytes": 110736
+      },
+      "outputs": {
+        "memory_navigation_car16_MA_random96_unknown.json": "b279e2f69c4fcdde8fa36abf0469872345c26111aaf3b7e56e0178538e41a371",
+        "memory_navigation_car16_MA_random96_unknown_runs.csv": "9f7f7a41764594ede5fd208c3aa0e0d52a76ba25adbd5c95b47eb4907a8d3d79",
+        "memory_navigation_car16_MA_random96_unknown_calls.csv": "91c7c117e9fd56e639800bccd9e0b046112480a38a1b0cb2276def15f35de9a2",
+        "memory_navigation_car16_MA_random96_unknown_traces.csv": "048a568db495eaba3ee71b297046391787da5a8f2d02ce8e6bd6f06b1b7f8dfe"
+      }
+    },
+    "memory_navigation_car16_MA_room96_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_room96_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_car16_MA_room96_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_MA_room96_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 72,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 72,
+        "calls": 648,
+        "caps": 0,
+        "wall_s": 14.511899563,
+        "preparation_s": 0.007092053,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000107181,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 108048,
+        "mesh_index_heap_peak_bytes": 110736
+      },
+      "outputs": {
+        "memory_navigation_car16_MA_room96_dynamic.json": "28c8b3a503a4ad327e4c53266d3a3e36cfa67ceaf308b9e2bd94400284898ef5",
+        "memory_navigation_car16_MA_room96_dynamic_runs.csv": "1d84b6eb12ce81182c427d3f90473c6782eeabe3f7f36c72a798d2d7794434bd",
+        "memory_navigation_car16_MA_room96_dynamic_calls.csv": "2eec9ebb88181aab35317355d13b85779b79bede2cea7c58a5401e2c4dbea4a3",
+        "memory_navigation_car16_MA_room96_dynamic_traces.csv": "2ee7eb4d5ff685d615f80f5f0ec30b731309868ddc74b3b3d01e1f4c7d8d4cf2"
+      }
+    },
+    "memory_navigation_car16_MA_room96_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_room96_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_car16_MA_room96_unknown",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_MA_room96_unknown.specs.txt"
+      ],
+      "expected_runs": 36,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 36,
+        "calls": 810,
+        "caps": 0,
+        "wall_s": 7.915603509,
+        "preparation_s": 0.00501934,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000107901,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 108048,
+        "mesh_index_heap_peak_bytes": 110736
+      },
+      "outputs": {
+        "memory_navigation_car16_MA_room96_unknown.json": "07138fb05c9da2baded192e94eef77956b65636dd0e377460ba775442c2e5d24",
+        "memory_navigation_car16_MA_room96_unknown_runs.csv": "70f6f13241670375ed777ee3dad985234a0c13a4d57e6e1d9ff2019862b39f5c",
+        "memory_navigation_car16_MA_room96_unknown_calls.csv": "4a0f28630e573c4947f25a2cf29c976a6252297092590958ea07416c80f9f4d0",
+        "memory_navigation_car16_MA_room96_unknown_traces.csv": "b8461d2596522783f557930e6d129c4293fa5bb1b1bdf306db18cbcd56cf0f5a"
+      }
+    },
+    "memory_navigation_car16_arena_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_arena_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_car16_arena_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_arena_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 72,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 72,
+        "calls": 448,
+        "caps": 0,
+        "wall_s": 1.175152577,
+        "preparation_s": 0.010608896,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.00010637,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 108048,
+        "mesh_index_heap_peak_bytes": 110736
+      },
+      "outputs": {
+        "memory_navigation_car16_arena_dynamic.json": "3a0d91b4cac41c2d9dd570977e2b5db193599b12ad3090eb959845b634dfcef3",
+        "memory_navigation_car16_arena_dynamic_runs.csv": "c4c383227984c149cfe095f98164280b34b2bb7acfb66eb8fe2e011b12b52747",
+        "memory_navigation_car16_arena_dynamic_calls.csv": "33f00ef01b1a1254d7be853a11652e5e6bdd9e8fe760429027d5866e11efeba3",
+        "memory_navigation_car16_arena_dynamic_traces.csv": "fc53eba2fb0884c08ca41f5283ec63b998d98b7a89f02d2330fd99c82d097f5b"
+      }
+    },
+    "memory_navigation_car16_arena_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_arena_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_car16_arena_unknown",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/car16_arena_unknown.specs.txt"
+      ],
+      "expected_runs": 36,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 36,
+        "calls": 441,
+        "caps": 0,
+        "wall_s": 0.118487581,
+        "preparation_s": 0.004174608,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000112819,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 108048,
+        "mesh_index_heap_peak_bytes": 110736
+      },
+      "outputs": {
+        "memory_navigation_car16_arena_unknown.json": "1bc594576e0196385c3601197e9707b10d1a5cc9a579956059522edeb7ebbb6f",
+        "memory_navigation_car16_arena_unknown_runs.csv": "958d136f71280ef5558ab27a4e24e0105975b746f1f9bda3bd738393fd7606fc",
+        "memory_navigation_car16_arena_unknown_calls.csv": "1363fc2c4a17a56b5ddff8cb552f722c17f1ccb7dfa7f9c9b0e7fbcbf6337c69",
+        "memory_navigation_car16_arena_unknown_traces.csv": "a438ff11af80eabc59feabceb8973311f3e75f0cc9f5af1a7c0159adee08ac55"
+      }
+    },
+    "memory_navigation_grid8_AR0700_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_AR0700_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_grid8_AR0700_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/grid8_AR0700_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_visibility.txt"
+      ],
+      "expected_runs": 80,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 80,
+        "calls": 14865,
+        "caps": 0,
+        "wall_s": 39.61162783,
+        "preparation_s": 0.003790452,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 2.273e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 1816,
+        "mesh_index_heap_peak_bytes": 2508
+      },
+      "outputs": {
+        "memory_navigation_grid8_AR0700_dynamic.json": "e5ac0a1c434c1fa6d2c68e3a8246d64e7cce7c23ad007ed343b8909d05ca5084",
+        "memory_navigation_grid8_AR0700_dynamic_runs.csv": "a80e2a36a45090fe2af5394a7f112ccbc115b03dc58cf67a6245779e4c1ca21d",
+        "memory_navigation_grid8_AR0700_dynamic_calls.csv": "11a509a3b7cd9d50056fcf6b2f1e25c7ffbdf37ff3602bb1d2eb923cbf5ac3dc",
+        "memory_navigation_grid8_AR0700_dynamic_traces.csv": "1909d37f9279bf0b72e7205e198cd2bf67bc04412f2f9e392f79e2ea0a76e206"
+      }
+    },
+    "memory_navigation_grid8_Berlin_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_Berlin_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_grid8_Berlin_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/grid8_Berlin_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_visibility.txt"
+      ],
+      "expected_runs": 80,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 80,
+        "calls": 13016,
+        "caps": 0,
+        "wall_s": 27.84443231,
+        "preparation_s": 0.002207222,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 2.153e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 1816,
+        "mesh_index_heap_peak_bytes": 2508
+      },
+      "outputs": {
+        "memory_navigation_grid8_Berlin_dynamic.json": "16ef3e87619fb7ab6067f451acd39d6f989b969764cc4690574304fb8d439d3a",
+        "memory_navigation_grid8_Berlin_dynamic_runs.csv": "efc383bd330a3265a318cff80f6171bfc729f74cae815585ce5821b28f8c99b6",
+        "memory_navigation_grid8_Berlin_dynamic_calls.csv": "6372afef68024347510b09da35c6665fe9a6b02e9eb5098839edc9faeaf8eba8",
+        "memory_navigation_grid8_Berlin_dynamic_traces.csv": "193a233e7764b25b9ed7a3744cd87e42a3320e9f35e47a2da0267b8b978feb21"
+      }
+    },
+    "memory_navigation_grid8_MA_maze512_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_MA_maze512_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_grid8_MA_maze512_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/grid8_MA_maze512_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_visibility.txt"
+      ],
+      "expected_runs": 80,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 80,
+        "calls": 18702,
+        "caps": 0,
+        "wall_s": 387.240246451,
+        "preparation_s": 0.007628482,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 3.455e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 1816,
+        "mesh_index_heap_peak_bytes": 2508
+      },
+      "outputs": {
+        "memory_navigation_grid8_MA_maze512_dynamic.json": "37a8d410966cf68a980e95b9336330ac6c8b6be758994514d455f80edbac4eb2",
+        "memory_navigation_grid8_MA_maze512_dynamic_runs.csv": "4cab5ef4e5b63bb475bb2a61207553273e2c3ed62a195d1206926cf597717725",
+        "memory_navigation_grid8_MA_maze512_dynamic_calls.csv": "87c7425470532522fd78c855eb6e4a34e5fa1c57f0252af4f4cee9bd4851bc19",
+        "memory_navigation_grid8_MA_maze512_dynamic_traces.csv": "5c5205fbf60af78ce22ffce5f5a517d8ef919a2d2c605a245f859ce226519462"
+      }
+    },
+    "memory_navigation_grid8_MA_random512_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_MA_random512_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_grid8_MA_random512_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/grid8_MA_random512_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_visibility.txt"
+      ],
+      "expected_runs": 80,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 80,
+        "calls": 15067,
+        "caps": 0,
+        "wall_s": 79.001768138,
+        "preparation_s": 0.008908598,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 3.305e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 1816,
+        "mesh_index_heap_peak_bytes": 2508
+      },
+      "outputs": {
+        "memory_navigation_grid8_MA_random512_dynamic.json": "9e73d66e0e05b584deb6a19517ab4bfc49103b0838091cd757aba58d49198db7",
+        "memory_navigation_grid8_MA_random512_dynamic_runs.csv": "d4cc69c345ce609324c7e8dab97c1ab3c19f7d172e268b56c9379e2d52496c32",
+        "memory_navigation_grid8_MA_random512_dynamic_calls.csv": "f2671fcf338967bc1eb0c1d49069c1ba6639a774213b1142dc8823309489ae66",
+        "memory_navigation_grid8_MA_random512_dynamic_traces.csv": "73e882cdc698c49f72a3932818266c651fae5391bcba0117db539795c57acf54"
+      }
+    },
+    "memory_navigation_grid8_MA_room512_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_MA_room512_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_grid8_MA_room512_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/grid8_MA_room512_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_visibility.txt"
+      ],
+      "expected_runs": 80,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 80,
+        "calls": 16543,
+        "caps": 0,
+        "wall_s": 222.455504073,
+        "preparation_s": 0.008294921,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 3.265e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 1816,
+        "mesh_index_heap_peak_bytes": 2508
+      },
+      "outputs": {
+        "memory_navigation_grid8_MA_room512_dynamic.json": "5488c8794ce5f521a61e5b2d068cd4df53729cc23d20d69d878695b303375b37",
+        "memory_navigation_grid8_MA_room512_dynamic_runs.csv": "b113d5810136c52ead9e853b9976bbd9e49ac306f6d8597041f09374fbdefbaf",
+        "memory_navigation_grid8_MA_room512_dynamic_calls.csv": "20c27b3f0f11ddf45cda7675dd9cebc763d48886a72aa8aef1b98eab88811bf5",
+        "memory_navigation_grid8_MA_room512_dynamic_traces.csv": "3ae8b17a1719f8d6350e8a39b87016b2ef80e1d36d5d4390fc400e2872e6b2cb"
+      }
+    },
+    "memory_navigation_grid8_arena_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_arena_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_grid8_arena_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/grid8_arena_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_visibility.txt"
+      ],
+      "expected_runs": 80,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 80,
+        "calls": 910,
+        "caps": 0,
+        "wall_s": 0.110831553,
+        "preparation_s": 0.000786784,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 3.205e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 1816,
+        "mesh_index_heap_peak_bytes": 2508
+      },
+      "outputs": {
+        "memory_navigation_grid8_arena_dynamic.json": "f3773a9cadad2c4bc3d1df9167b563e36af6632dc1d05864ecbed50e94f52e5e",
+        "memory_navigation_grid8_arena_dynamic_runs.csv": "7673fb5a33985358fedcd28f59d8705be074d84bc25a09348c7f2a635560f01a",
+        "memory_navigation_grid8_arena_dynamic_calls.csv": "76eb2e6e6f77eed4318919ab33f7a746b4d973663a1539798afede186953032f",
+        "memory_navigation_grid8_arena_dynamic_traces.csv": "2952e88c5e36133727a53ead99a3bd66655d8bca3ddce8627e63ebec3641abf2"
+      }
+    },
+    "memory_navigation_grid8_random50_p10_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_random50_p10_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_grid8_random50_p10_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/grid8_random50_p10_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_visibility.txt"
+      ],
+      "expected_runs": 80,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 80,
+        "calls": 880,
+        "caps": 0,
+        "wall_s": 0.079903056,
+        "preparation_s": 0.000715247,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 3.566e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 1816,
+        "mesh_index_heap_peak_bytes": 2508
+      },
+      "outputs": {
+        "memory_navigation_grid8_random50_p10_dynamic.json": "c040967d9e12c928a994db67d8c2034d60481088e93e4029db13344c40b9c7fc",
+        "memory_navigation_grid8_random50_p10_dynamic_runs.csv": "072964c881afa56ffef329bc47849b0ef03e48138a655a9b9927edf6385d6443",
+        "memory_navigation_grid8_random50_p10_dynamic_calls.csv": "22dbdbaca17973dfef7d24134de29f539ed84a9e747b1e1ae5cd92edf6dcc2e8",
+        "memory_navigation_grid8_random50_p10_dynamic_traces.csv": "0a7ba35c40bb3c70a4a5aabd213fe5878b9b1a8dc46f58c92b7f693701d34999"
+      }
+    },
+    "memory_navigation_grid8_random50_p20_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_random50_p20_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_grid8_random50_p20_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/grid8_random50_p20_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_visibility.txt"
+      ],
+      "expected_runs": 80,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 80,
+        "calls": 957,
+        "caps": 0,
+        "wall_s": 0.097377184,
+        "preparation_s": 0.000767946,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 3.115e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 1816,
+        "mesh_index_heap_peak_bytes": 2508
+      },
+      "outputs": {
+        "memory_navigation_grid8_random50_p20_dynamic.json": "cff354ce16c1058aefe583587223bf6f5309ab9e4fff41ed82bda77c4f2ed6a2",
+        "memory_navigation_grid8_random50_p20_dynamic_runs.csv": "803b381bcaa26f698afc91c7c9501ed9789583b1137cf94809521c9d7b4b7d58",
+        "memory_navigation_grid8_random50_p20_dynamic_calls.csv": "3c2af16a2a9de5c1fe5e16145a0c2bbbbc8b54737b8df58b39055f92c318744e",
+        "memory_navigation_grid8_random50_p20_dynamic_traces.csv": "7829cce6fc49e51866f1e05ef0cc6901143202485a31805672173907c0dfa2b4"
+      }
+    },
+    "memory_navigation_grid8_random50_p30_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_random50_p30_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_grid8_random50_p30_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/grid8_random50_p30_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_visibility.txt"
+      ],
+      "expected_runs": 80,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 80,
+        "calls": 939,
+        "caps": 0,
+        "wall_s": 0.07689588,
+        "preparation_s": 0.000884291,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 2.824e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 1816,
+        "mesh_index_heap_peak_bytes": 2508
+      },
+      "outputs": {
+        "memory_navigation_grid8_random50_p30_dynamic.json": "ff5b57244fcc6c23d9a571fa0d05d415d33b407d77acc10694b5110cfe16a523",
+        "memory_navigation_grid8_random50_p30_dynamic_runs.csv": "8c0c24238b7d2f2853b209af16170c31a58bf43c3066007ee0ef84a67c7617af",
+        "memory_navigation_grid8_random50_p30_dynamic_calls.csv": "d26d5f851fcffdb1d26d14c3b9c11513209669f1d0feb89f90cac52facae6700",
+        "memory_navigation_grid8_random50_p30_dynamic_traces.csv": "058989b4e947038cb001dd81ebb4814d6baeefb9331cfbff57f0fcb117497b4b"
+      }
+    },
+    "memory_navigation_grid8_random50_p40_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_random50_p40_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/results/full/memory_navigation_grid8_random50_p40_dynamic",
+        "--methods",
+        "lba,lba_reuse,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,selective_mpgaa,delta_mpgaa,policy_mpgaa,octile_reuse",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/frozen/grid8_random50_p40_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/grid8_visibility.txt"
+      ],
+      "expected_runs": 80,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 80,
+        "calls": 1211,
+        "caps": 0,
+        "wall_s": 0.200711794,
+        "preparation_s": 0.001009264,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 2.945e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 1816,
+        "mesh_index_heap_peak_bytes": 2508
+      },
+      "outputs": {
+        "memory_navigation_grid8_random50_p40_dynamic.json": "f4726ade20b86981b28bfe89a3e6f757ec4a8689bff0410bfed456516c7fa034",
+        "memory_navigation_grid8_random50_p40_dynamic_runs.csv": "a983a2ef3b8283dbe28aa837470313342eb4154d825f7e202bd4bd9e1d05ff5a",
+        "memory_navigation_grid8_random50_p40_dynamic_calls.csv": "86c0afa8f4a150d20aca3c77635b2e04e8928668a39338b97ea4bea97ec3b8a2",
+        "memory_navigation_grid8_random50_p40_dynamic_traces.csv": "3e0a9158c639a90748e26b16f6224fb1ae2d633f00413456c6c0e400fd4df54f"
+      }
+    }
+  },
+  "imported_timing": {
+    "archived_manifest_sha256": "5a8b5ef9b25dc4830ca5287460f42edce9ea0eea82c4dd73e836115f22db7325",
+    "archived_experiment_sha256": "1edec11a9a5e5e32fa00bf0870aae1308cd294d388c86a76fcf82c251e371455",
+    "normal_binary_identity": "passed",
+    "jobs": [
+      "timing_replay_car16",
+      "timing_replay_grid8",
+      "timing_mission_car16_r8",
+      "timing_mission_car16_r16",
+      "timing_mission_grid8_r1",
+      "timing_mission_grid8_r4",
+      "timing_mission_grid8_r8",
+      "timing_navigation_car16_AR0700_dynamic",
+      "timing_navigation_car16_AR0700_unknown",
+      "timing_navigation_car16_Berlin_dynamic",
+      "timing_navigation_car16_Berlin_unknown",
+      "timing_navigation_car16_MA_maze96_dynamic",
+      "timing_navigation_car16_MA_maze96_unknown",
+      "timing_navigation_car16_MA_random96_dynamic",
+      "timing_navigation_car16_MA_random96_unknown",
+      "timing_navigation_car16_MA_room96_dynamic",
+      "timing_navigation_car16_MA_room96_unknown",
+      "timing_navigation_car16_arena_dynamic",
+      "timing_navigation_car16_arena_unknown",
+      "timing_navigation_grid8_AR0700_dynamic",
+      "timing_navigation_grid8_Berlin_dynamic",
+      "timing_navigation_grid8_MA_maze512_dynamic",
+      "timing_navigation_grid8_MA_random512_dynamic",
+      "timing_navigation_grid8_MA_room512_dynamic",
+      "timing_navigation_grid8_arena_dynamic",
+      "timing_navigation_grid8_random50_p10_dynamic",
+      "timing_navigation_grid8_random50_p20_dynamic",
+      "timing_navigation_grid8_random50_p30_dynamic",
+      "timing_navigation_grid8_random50_p40_dynamic"
+    ]
+  },
+  "memory_pass_environment": {
+    "cpu": "AMD EPYC 9V74 80-Core Processor",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "affinity": [
+      0,
+      1,
+      2
+    ]
+  }
+}

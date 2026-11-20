@@ -1,0 +1,9 @@
+10 runs; grid8__MA_room512__dynamic__s68101__k2__cr5__n2; 32.1952 s
+20 runs; grid8__MA_room512__dynamic__s68101__k8__cr10__n8; 64.0107 s
+30 runs; grid8__MA_room512__dynamic__s68101__k32__cr20__n32; 92.7276 s
+40 runs; grid8__MA_room512__dynamic__s68101__k64__cr30__n64; 115.282 s
+50 runs; grid8__MA_room512__dynamic__s68102__k2__cr5__n2; 143.061 s
+60 runs; grid8__MA_room512__dynamic__s68102__k8__cr10__n8; 178.42 s
+70 runs; grid8__MA_room512__dynamic__s68102__k32__cr20__n32; 207.879 s
+80 runs; grid8__MA_room512__dynamic__s68102__k64__cr30__n64; 222.455 s
+passed 80 navigation runs; 0 query caps

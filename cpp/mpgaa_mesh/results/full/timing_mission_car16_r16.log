@@ -1,0 +1,9 @@
+27 runs; car16__arena__mission__s48101__r16; 0.0929004 s
+54 runs; car16__arena__mission__s48102__r16; 0.257581 s
+81 runs; car16__MA_room96__mission__s48101__r16; 8.29061 s
+108 runs; car16__MA_room96__mission__s48102__r16; 9.98899 s
+135 runs; car16__MA_random96__mission__s48101__r16; 10.3547 s
+162 runs; car16__MA_random96__mission__s48102__r16; 10.7863 s
+189 runs; car16__MA_maze96__mission__s48101__r16; 59.3011 s
+216 runs; car16__MA_maze96__mission__s48102__r16; 137.324 s
+passed 216 runs, 11202 rows, 0 capped queries

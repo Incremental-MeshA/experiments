@@ -1,0 +1,9 @@
+10 runs; grid8__Berlin__dynamic__s68101__k2__cr5__n2; 4.49871 s
+20 runs; grid8__Berlin__dynamic__s68101__k8__cr10__n8; 8.92294 s
+30 runs; grid8__Berlin__dynamic__s68101__k32__cr20__n32; 13.5781 s
+40 runs; grid8__Berlin__dynamic__s68101__k64__cr30__n64; 17.7833 s
+50 runs; grid8__Berlin__dynamic__s68102__k2__cr5__n2; 20.8758 s
+60 runs; grid8__Berlin__dynamic__s68102__k8__cr10__n8; 23.6707 s
+70 runs; grid8__Berlin__dynamic__s68102__k32__cr20__n32; 26.4154 s
+80 runs; grid8__Berlin__dynamic__s68102__k64__cr30__n64; 27.8443 s
+passed 80 navigation runs; 0 query caps
