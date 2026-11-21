@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "manifest_sha256": "71755d0b18ea15c23a73ecae25e4f5f57884808f7f10527c702f8104a73e6926",
+  "binaries": {
+    "replay": "fc8fc2d5e33fcd2f7163e4b86da05056525afe6015f17fb312276ef05d583191",
+    "navigation_memory": "129aaabd4a7042398d46ac650db2db3a71c3f3d124fa73feddbdcd0df5088028",
+    "replay_memory": "04c8b64607926e5c1f67917e7e7006c2c145a33137dab398cb2d08818bb0f9a5",
+    "navigation": "a4a26783c47ccccbe8fc9a449b405b220792cdaa5f8cb7df359bce7948c0f869"
+  },
+  "preflight_rows": 16443
+}

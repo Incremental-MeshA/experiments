@@ -1,0 +1,9 @@
+NAV_SPEC 1 8
+"car16__MA_random96__unknown__s48101__r8" unknown 8 0 0 0 512 3 14989839226860820563 1
+"car16__MA_random96__unknown__s48101__r16" unknown 16 0 0 0 512 3 14989839226860820563 0
+"car16__MA_random96__unknown__s48101__r32" unknown 32 0 0 0 512 3 14989839226860820563 0
+"car16__MA_random96__unknown__s48101__r64" unknown 64 0 0 0 512 3 14989839226860820563 1
+"car16__MA_random96__unknown__s48102__r8" unknown 8 0 0 0 512 3 2458749563452074174 0
+"car16__MA_random96__unknown__s48102__r16" unknown 16 0 0 0 512 3 2458749563452074174 0
+"car16__MA_random96__unknown__s48102__r32" unknown 32 0 0 0 512 3 2458749563452074174 0
+"car16__MA_random96__unknown__s48102__r64" unknown 64 0 0 0 512 3 2458749563452074174 0

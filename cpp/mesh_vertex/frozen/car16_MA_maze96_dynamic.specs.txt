@@ -1,0 +1,7 @@
+NAV_SPEC 1 6
+"car16__MA_maze96__dynamic__s48101__k2__cr5__n2" dynamic 0 2 5 2 384 3 7389365774532235145 0
+"car16__MA_maze96__dynamic__s48101__k8__cr10__n8" dynamic 0 8 10 8 384 3 7389365774532235145 1
+"car16__MA_maze96__dynamic__s48101__k32__cr20__n32" dynamic 0 32 20 32 384 3 7389365774532235145 0
+"car16__MA_maze96__dynamic__s48102__k2__cr5__n2" dynamic 0 2 5 2 384 3 15834541667152222905 0
+"car16__MA_maze96__dynamic__s48102__k8__cr10__n8" dynamic 0 8 10 8 384 3 15834541667152222905 0
+"car16__MA_maze96__dynamic__s48102__k32__cr20__n32" dynamic 0 32 20 32 384 3 15834541667152222905 0

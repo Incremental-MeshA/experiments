@@ -1,0 +1,1463 @@
+[
+  {
+    "query": "Fringe Search Beating A at Pathfinding on Game Maps",
+    "url": "https://api.openalex.org/works?search=Fringe%20Search%20Beating%20A%20at%20Pathfinding%20on%20Game%20Maps&per-page=3",
+    "results": [
+      {
+        "id": "https://openalex.org/W4260767",
+        "display_name": "Fringe Search: Beating A* at Pathfinding on Game Maps.",
+        "publication_year": 2005,
+        "doi": null,
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5026895150",
+              "display_name": "Yngvi Bj\u00f6rnsson",
+              "orcid": "https://orcid.org/0000-0001-5366-2639",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-5366-2639"
+              ]
+            },
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Yngvi Bj\u00f6rnsson",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5091841806",
+              "display_name": "Markus Enzenberger",
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Markus Enzenberger",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5077149145",
+              "display_name": "Robert C. Holte",
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Robert C. Holte",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5018637996",
+              "display_name": "Jonathan Schaeffer",
+              "orcid": "https://orcid.org/0009-0007-3735-5947",
+              "observed_orcids": [
+                "https://orcid.org/0009-0007-3735-5947"
+              ]
+            },
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Jonathan Schaeffer",
+            "raw_affiliation_strings": [],
+            "raw_orcid": "https://orcid.org/0000-0002-2447-7394",
+            "affiliations": []
+          }
+        ],
+        "primary_location": {
+          "id": "mag:4260767",
+          "doi": null,
+          "is_oa": false,
+          "landing_page_url": "http://papersdb.cs.ualberta.ca/~papersdb/uploaded_files/424/paper_cig2005.pdf",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306417932",
+            "display_name": "Computational Intelligence and Games",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "conference"
+          },
+          "license": null,
+          "license_id": null,
+          "version": null,
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "Computational Intelligence and Games",
+          "raw_type": null
+        }
+      },
+      {
+        "id": "https://openalex.org/W2104321672",
+        "display_name": "Video game pathfinding and improvements to discrete search on grid-based maps",
+        "publication_year": 2011,
+        "doi": null,
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5082518654",
+              "display_name": "Bobby Anguelov",
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I69552723",
+                "display_name": "University of Pretoria",
+                "ror": "https://ror.org/00g0p6g84",
+                "country_code": "ZA",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I69552723"
+                ]
+              }
+            ],
+            "countries": [
+              "ZA"
+            ],
+            "is_corresponding": true,
+            "contributor_roles": [],
+            "raw_author_name": "Bobby Anguelov",
+            "raw_affiliation_strings": [
+              "Faculty of Engineering, Built Environment and Information Technology, University of Pretoria"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Faculty of Engineering, Built Environment and Information Technology, University of Pretoria",
+                "institution_ids": [
+                  "https://openalex.org/I69552723"
+                ]
+              }
+            ]
+          }
+        ],
+        "primary_location": {
+          "id": "pmh:oai:repository.up.ac.za:2263/22940",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://hdl.handle.net/2263/22940",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306401870",
+            "display_name": "UpSpace Institutional Repository (University of Pretoria)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I69552723",
+            "host_organization_name": "University of Pretoria",
+            "host_organization_lineage": [
+              "https://openalex.org/I69552723"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "",
+          "raw_type": "Dissertation"
+        }
+      },
+      {
+        "id": "https://openalex.org/W2512285581",
+        "display_name": "Pathfinding in Strategy Games and Maze Solving Using A* Search Algorithm",
+        "publication_year": 2016,
+        "doi": "https://doi.org/10.4236/jcc.2016.411002",
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5029202170",
+              "display_name": "Nawaf Hazim Barnouti",
+              "orcid": "https://orcid.org/0000-0002-3446-9128",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-3446-9128"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I3131981612",
+                "display_name": "Al Mansour University College",
+                "ror": "https://ror.org/02pk0yz95",
+                "country_code": "IQ",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I3131981612"
+                ]
+              }
+            ],
+            "countries": [
+              "IQ"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Nawaf Hazim Barnouti",
+            "raw_affiliation_strings": [
+              "Al-Mansour University College, Baghdad, Iraq"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Al-Mansour University College, Baghdad, Iraq",
+                "institution_ids": [
+                  "https://openalex.org/I3131981612"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5052533380",
+              "display_name": "Sinan Sameer Mahmood Al-Dabbagh",
+              "orcid": "https://orcid.org/0009-0009-9093-4475",
+              "observed_orcids": [
+                "https://orcid.org/0009-0009-9093-4475"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I3131981612",
+                "display_name": "Al Mansour University College",
+                "ror": "https://ror.org/02pk0yz95",
+                "country_code": "IQ",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I3131981612"
+                ]
+              }
+            ],
+            "countries": [
+              "IQ"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Sinan Sameer Mahmood Al-Dabbagh",
+            "raw_affiliation_strings": [
+              "Al-Mansour University College, Baghdad, Iraq"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Al-Mansour University College, Baghdad, Iraq",
+                "institution_ids": [
+                  "https://openalex.org/I3131981612"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5059157482",
+              "display_name": "Mustafa Abdul Sahib Naser",
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I3131981612",
+                "display_name": "Al Mansour University College",
+                "ror": "https://ror.org/02pk0yz95",
+                "country_code": "IQ",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I3131981612"
+                ]
+              }
+            ],
+            "countries": [
+              "IQ"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Mustafa Abdul Sahib Naser",
+            "raw_affiliation_strings": [
+              "Al-Mansour University College, Baghdad, Iraq"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Al-Mansour University College, Baghdad, Iraq",
+                "institution_ids": [
+                  "https://openalex.org/I3131981612"
+                ]
+              }
+            ]
+          }
+        ],
+        "primary_location": {
+          "id": "doi:10.4236/jcc.2016.411002",
+          "doi": "https://doi.org/10.4236/jcc.2016.411002",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.4236/jcc.2016.411002",
+          "pdf_url": "https://content.scirp.org/pdf/jcc_2016090815023801.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210198603",
+            "display_name": "Journal of Computer and Communications",
+            "issn_l": "2327-5219",
+            "issn": [
+              "2327-5219",
+              "2327-5227"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core"
+            ],
+            "host_organization": "https://openalex.org/P4310320480",
+            "host_organization_name": "Scientific Research Publishing",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320480"
+            ],
+            "host_organization_lineage_names": [
+              "Scientific Research Publishing"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of Computer and Communications",
+          "raw_type": "journal-article"
+        }
+      }
+    ]
+  },
+  {
+    "query": "A with Partial Expansion for Large Branching Factor Problems",
+    "url": "https://api.openalex.org/works?search=A%20with%20Partial%20Expansion%20for%20Large%20Branching%20Factor%20Problems&per-page=3",
+    "results": [
+      {
+        "id": "https://openalex.org/W1603934459",
+        "display_name": "A* with Partial Expansion for Large Branching Factor Problems",
+        "publication_year": 2000,
+        "doi": null,
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5043478105",
+              "display_name": "Takayuki Yoshizumi",
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I22299242",
+                "display_name": "Kyoto University",
+                "ror": "https://ror.org/02kpeqv85",
+                "country_code": "JP",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I22299242"
+                ]
+              }
+            ],
+            "countries": [
+              "JP"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Takayuki Yoshizumi",
+            "raw_affiliation_strings": [
+              "Kyoto univ"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Kyoto univ",
+                "institution_ids": [
+                  "https://openalex.org/I22299242"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5113491174",
+              "display_name": "Teruhisa Miura",
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Teruhisa Miura",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5100678332",
+              "display_name": "Toru Ishida",
+              "orcid": "https://orcid.org/0000-0002-0479-4990",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-0479-4990"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I22299242",
+                "display_name": "Kyoto University",
+                "ror": "https://ror.org/02kpeqv85",
+                "country_code": "JP",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I22299242"
+                ]
+              }
+            ],
+            "countries": [
+              "JP"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Toru Ishida",
+            "raw_affiliation_strings": [
+              "Kyoto univ"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0002-0479-4990",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Kyoto univ",
+                "institution_ids": [
+                  "https://openalex.org/I22299242"
+                ]
+              }
+            ]
+          }
+        ],
+        "primary_location": {
+          "id": "mag:1603934459",
+          "doi": null,
+          "is_oa": false,
+          "landing_page_url": "https://www.aaai.org/Papers/AAAI/2000/AAAI00-142.pdf",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306420577",
+            "display_name": "National Conference on Artificial Intelligence",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "conference"
+          },
+          "license": null,
+          "license_id": null,
+          "version": null,
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "National Conference on Artificial Intelligence",
+          "raw_type": null
+        }
+      },
+      {
+        "id": "https://openalex.org/W2155992093",
+        "display_name": "Enhanced Partial Expansion A*",
+        "publication_year": 2014,
+        "doi": "https://doi.org/10.1613/jair.4171",
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": null,
+              "display_name": "M. Goldenberg",
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I124227911",
+                "display_name": "Ben-Gurion University of the Negev",
+                "ror": "https://ror.org/05tkyf982",
+                "country_code": "IL",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I124227911"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I131651094",
+                "display_name": "University of Denver",
+                "ror": "https://ror.org/04w7skc03",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I131651094"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I154425047",
+                "display_name": "University of Alberta",
+                "ror": "https://ror.org/0160cpw27",
+                "country_code": "CA",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I154425047"
+                ]
+              }
+            ],
+            "countries": [
+              "CA",
+              "IL",
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "M. Goldenberg",
+            "raw_affiliation_strings": [
+              "Ben-Gurion University of the Negev Beer-Sheva, Israel",
+              "The University of Alberta Edmonton, Canada",
+              "The University of Denver, Denver, USA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Ben-Gurion University of the Negev Beer-Sheva, Israel",
+                "institution_ids": [
+                  "https://openalex.org/I124227911"
+                ]
+              },
+              {
+                "raw_affiliation_string": "The University of Alberta Edmonton, Canada",
+                "institution_ids": [
+                  "https://openalex.org/I154425047"
+                ]
+              },
+              {
+                "raw_affiliation_string": "The University of Denver, Denver, USA",
+                "institution_ids": [
+                  "https://openalex.org/I131651094"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5011195666",
+              "display_name": "Ariel Felner",
+              "orcid": "https://orcid.org/0000-0003-0065-2757",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-0065-2757"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I124227911",
+                "display_name": "Ben-Gurion University of the Negev",
+                "ror": "https://ror.org/05tkyf982",
+                "country_code": "IL",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I124227911"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I131651094",
+                "display_name": "University of Denver",
+                "ror": "https://ror.org/04w7skc03",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I131651094"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I154425047",
+                "display_name": "University of Alberta",
+                "ror": "https://ror.org/0160cpw27",
+                "country_code": "CA",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I154425047"
+                ]
+              }
+            ],
+            "countries": [
+              "CA",
+              "IL",
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "A. Felner",
+            "raw_affiliation_strings": [
+              "Ben-Gurion University of the Negev Beer-Sheva, Israel",
+              "The University of Alberta Edmonton, Canada",
+              "The University of Denver, Denver, USA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Ben-Gurion University of the Negev Beer-Sheva, Israel",
+                "institution_ids": [
+                  "https://openalex.org/I124227911"
+                ]
+              },
+              {
+                "raw_affiliation_string": "The University of Alberta Edmonton, Canada",
+                "institution_ids": [
+                  "https://openalex.org/I154425047"
+                ]
+              },
+              {
+                "raw_affiliation_string": "The University of Denver, Denver, USA",
+                "institution_ids": [
+                  "https://openalex.org/I131651094"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5085970582",
+              "display_name": "Roni Stern",
+              "orcid": "https://orcid.org/0000-0003-0043-8179",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-0043-8179"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I124227911",
+                "display_name": "Ben-Gurion University of the Negev",
+                "ror": "https://ror.org/05tkyf982",
+                "country_code": "IL",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I124227911"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I131651094",
+                "display_name": "University of Denver",
+                "ror": "https://ror.org/04w7skc03",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I131651094"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I154425047",
+                "display_name": "University of Alberta",
+                "ror": "https://ror.org/0160cpw27",
+                "country_code": "CA",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I154425047"
+                ]
+              }
+            ],
+            "countries": [
+              "CA",
+              "IL",
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "R. Stern",
+            "raw_affiliation_strings": [
+              "Ben-Gurion University of the Negev Beer-Sheva, Israel",
+              "The University of Alberta Edmonton, Canada",
+              "The University of Denver, Denver, USA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Ben-Gurion University of the Negev Beer-Sheva, Israel",
+                "institution_ids": [
+                  "https://openalex.org/I124227911"
+                ]
+              },
+              {
+                "raw_affiliation_string": "The University of Alberta Edmonton, Canada",
+                "institution_ids": [
+                  "https://openalex.org/I154425047"
+                ]
+              },
+              {
+                "raw_affiliation_string": "The University of Denver, Denver, USA",
+                "institution_ids": [
+                  "https://openalex.org/I131651094"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": null,
+              "display_name": "G. Sharon",
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I124227911",
+                "display_name": "Ben-Gurion University of the Negev",
+                "ror": "https://ror.org/05tkyf982",
+                "country_code": "IL",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I124227911"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I131651094",
+                "display_name": "University of Denver",
+                "ror": "https://ror.org/04w7skc03",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I131651094"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I154425047",
+                "display_name": "University of Alberta",
+                "ror": "https://ror.org/0160cpw27",
+                "country_code": "CA",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I154425047"
+                ]
+              }
+            ],
+            "countries": [
+              "CA",
+              "IL",
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "G. Sharon",
+            "raw_affiliation_strings": [
+              "Ben-Gurion University of the Negev Beer-Sheva, Israel",
+              "The University of Alberta Edmonton, Canada",
+              "The University of Denver, Denver, USA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Ben-Gurion University of the Negev Beer-Sheva, Israel",
+                "institution_ids": [
+                  "https://openalex.org/I124227911"
+                ]
+              },
+              {
+                "raw_affiliation_string": "The University of Alberta Edmonton, Canada",
+                "institution_ids": [
+                  "https://openalex.org/I154425047"
+                ]
+              },
+              {
+                "raw_affiliation_string": "The University of Denver, Denver, USA",
+                "institution_ids": [
+                  "https://openalex.org/I131651094"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5041415709",
+              "display_name": "Nathan Sturtevant",
+              "orcid": "https://orcid.org/0000-0003-4318-2791",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-4318-2791"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I124227911",
+                "display_name": "Ben-Gurion University of the Negev",
+                "ror": "https://ror.org/05tkyf982",
+                "country_code": "IL",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I124227911"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I131651094",
+                "display_name": "University of Denver",
+                "ror": "https://ror.org/04w7skc03",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I131651094"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I154425047",
+                "display_name": "University of Alberta",
+                "ror": "https://ror.org/0160cpw27",
+                "country_code": "CA",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I154425047"
+                ]
+              }
+            ],
+            "countries": [
+              "CA",
+              "IL",
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "N. Sturtevant",
+            "raw_affiliation_strings": [
+              "Ben-Gurion University of the Negev Beer-Sheva, Israel",
+              "The University of Alberta Edmonton, Canada",
+              "The University of Denver, Denver, USA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Ben-Gurion University of the Negev Beer-Sheva, Israel",
+                "institution_ids": [
+                  "https://openalex.org/I124227911"
+                ]
+              },
+              {
+                "raw_affiliation_string": "The University of Alberta Edmonton, Canada",
+                "institution_ids": [
+                  "https://openalex.org/I154425047"
+                ]
+              },
+              {
+                "raw_affiliation_string": "The University of Denver, Denver, USA",
+                "institution_ids": [
+                  "https://openalex.org/I131651094"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5077149145",
+              "display_name": "Robert C. Holte",
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I124227911",
+                "display_name": "Ben-Gurion University of the Negev",
+                "ror": "https://ror.org/05tkyf982",
+                "country_code": "IL",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I124227911"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I131651094",
+                "display_name": "University of Denver",
+                "ror": "https://ror.org/04w7skc03",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I131651094"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I154425047",
+                "display_name": "University of Alberta",
+                "ror": "https://ror.org/0160cpw27",
+                "country_code": "CA",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I154425047"
+                ]
+              }
+            ],
+            "countries": [
+              "CA",
+              "IL",
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "R. C. Holte",
+            "raw_affiliation_strings": [
+              "Ben-Gurion University of the Negev Beer-Sheva, Israel",
+              "The University of Alberta Edmonton, Canada",
+              "The University of Denver, Denver, USA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Ben-Gurion University of the Negev Beer-Sheva, Israel",
+                "institution_ids": [
+                  "https://openalex.org/I124227911"
+                ]
+              },
+              {
+                "raw_affiliation_string": "The University of Alberta Edmonton, Canada",
+                "institution_ids": [
+                  "https://openalex.org/I154425047"
+                ]
+              },
+              {
+                "raw_affiliation_string": "The University of Denver, Denver, USA",
+                "institution_ids": [
+                  "https://openalex.org/I131651094"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5018637996",
+              "display_name": "Jonathan Schaeffer",
+              "orcid": "https://orcid.org/0009-0007-3735-5947",
+              "observed_orcids": [
+                "https://orcid.org/0009-0007-3735-5947"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I124227911",
+                "display_name": "Ben-Gurion University of the Negev",
+                "ror": "https://ror.org/05tkyf982",
+                "country_code": "IL",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I124227911"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I131651094",
+                "display_name": "University of Denver",
+                "ror": "https://ror.org/04w7skc03",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I131651094"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I154425047",
+                "display_name": "University of Alberta",
+                "ror": "https://ror.org/0160cpw27",
+                "country_code": "CA",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I154425047"
+                ]
+              }
+            ],
+            "countries": [
+              "CA",
+              "IL",
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "J. Schaeffer",
+            "raw_affiliation_strings": [
+              "The University of Alberta Edmonton, Canada",
+              "Ben-Gurion University of the Negev Beer-Sheva, Israel",
+              "The University of Denver, Denver, USA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "The University of Alberta Edmonton, Canada",
+                "institution_ids": [
+                  "https://openalex.org/I154425047"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Ben-Gurion University of the Negev Beer-Sheva, Israel",
+                "institution_ids": [
+                  "https://openalex.org/I124227911"
+                ]
+              },
+              {
+                "raw_affiliation_string": "The University of Denver, Denver, USA",
+                "institution_ids": [
+                  "https://openalex.org/I131651094"
+                ]
+              }
+            ]
+          }
+        ],
+        "primary_location": {
+          "id": "doi:10.1613/jair.4171",
+          "doi": "https://doi.org/10.1613/jair.4171",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1613/jair.4171",
+          "pdf_url": "https://www.jair.org/index.php/jair/article/download/10882/25958",
+          "source": {
+            "id": "https://openalex.org/S139930977",
+            "display_name": "Journal of Artificial Intelligence Research",
+            "issn_l": "1076-9757",
+            "issn": [
+              "1076-9757",
+              "1943-5037"
+            ],
+            "is_oa": true,
+            "is_in_doaj": true,
+            "is_core": true,
+            "listed_in": [
+              "anvur-scientific",
+              "ccf-b",
+              "cwts-core",
+              "doaj",
+              "dongbi-b",
+              "erih-plus",
+              "jufo-3",
+              "norway-2",
+              "oarl",
+              "poland-140",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310315760",
+            "host_organization_name": "AI Access Foundation",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310315760"
+            ],
+            "host_organization_lineage_names": [
+              "AI Access Foundation"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of Artificial Intelligence Research",
+          "raw_type": "journal-article"
+        }
+      },
+      {
+        "id": "https://openalex.org/W2293119400",
+        "display_name": "Partial-Expansion A* with Selective Node Generation",
+        "publication_year": 2021,
+        "doi": "https://doi.org/10.1609/aaai.v26i1.8137",
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5011195666",
+              "display_name": "Ariel Felner",
+              "orcid": "https://orcid.org/0000-0003-0065-2757",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-0065-2757"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I124227911",
+                "display_name": "Ben-Gurion University of the Negev",
+                "ror": "https://ror.org/05tkyf982",
+                "country_code": "IL",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I124227911"
+                ]
+              }
+            ],
+            "countries": [
+              "IL"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Ariel Felner",
+            "raw_affiliation_strings": [
+              "Ben-Gurion University"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Ben-Gurion University",
+                "institution_ids": [
+                  "https://openalex.org/I124227911"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5040207485",
+              "display_name": "Meir Goldenberg",
+              "orcid": "https://orcid.org/0009-0006-2792-5603",
+              "observed_orcids": [
+                "https://orcid.org/0009-0006-2792-5603"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I124227911",
+                "display_name": "Ben-Gurion University of the Negev",
+                "ror": "https://ror.org/05tkyf982",
+                "country_code": "IL",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I124227911"
+                ]
+              }
+            ],
+            "countries": [
+              "IL"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Meir Goldenberg",
+            "raw_affiliation_strings": [
+              "Ben-Gurion University"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Ben-Gurion University",
+                "institution_ids": [
+                  "https://openalex.org/I124227911"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5088017068",
+              "display_name": "Guni Sharon",
+              "orcid": "https://orcid.org/0000-0001-9306-369X",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-9306-369X"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I124227911",
+                "display_name": "Ben-Gurion University of the Negev",
+                "ror": "https://ror.org/05tkyf982",
+                "country_code": "IL",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I124227911"
+                ]
+              }
+            ],
+            "countries": [
+              "IL"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Guni Sharon",
+            "raw_affiliation_strings": [
+              "Ben-Gurion University"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Ben-Gurion University",
+                "institution_ids": [
+                  "https://openalex.org/I124227911"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5085970582",
+              "display_name": "Roni Stern",
+              "orcid": "https://orcid.org/0000-0003-0043-8179",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-0043-8179"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I124227911",
+                "display_name": "Ben-Gurion University of the Negev",
+                "ror": "https://ror.org/05tkyf982",
+                "country_code": "IL",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I124227911"
+                ]
+              }
+            ],
+            "countries": [
+              "IL"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Roni Stern",
+            "raw_affiliation_strings": [
+              "Ben-Gurion University"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Ben-Gurion University",
+                "institution_ids": [
+                  "https://openalex.org/I124227911"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5090431075",
+              "display_name": "Tal Beja",
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I124227911",
+                "display_name": "Ben-Gurion University of the Negev",
+                "ror": "https://ror.org/05tkyf982",
+                "country_code": "IL",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I124227911"
+                ]
+              }
+            ],
+            "countries": [
+              "IL"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Tal Beja",
+            "raw_affiliation_strings": [
+              "Ben-Gurion University"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Ben-Gurion University",
+                "institution_ids": [
+                  "https://openalex.org/I124227911"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5041415709",
+              "display_name": "Nathan Sturtevant",
+              "orcid": "https://orcid.org/0000-0003-4318-2791",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-4318-2791"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I131651094",
+                "display_name": "University of Denver",
+                "ror": "https://ror.org/04w7skc03",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I131651094"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Nathan Sturtevant",
+            "raw_affiliation_strings": [
+              "University of Denver"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "University of Denver",
+                "institution_ids": [
+                  "https://openalex.org/I131651094"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5018637996",
+              "display_name": "Jonathan Schaeffer",
+              "orcid": "https://orcid.org/0009-0007-3735-5947",
+              "observed_orcids": [
+                "https://orcid.org/0009-0007-3735-5947"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I154425047",
+                "display_name": "University of Alberta",
+                "ror": "https://ror.org/0160cpw27",
+                "country_code": "CA",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I154425047"
+                ]
+              }
+            ],
+            "countries": [
+              "CA"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Jonathan Schaeffer",
+            "raw_affiliation_strings": [
+              "University of Alberta"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "University of Alberta",
+                "institution_ids": [
+                  "https://openalex.org/I154425047"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5077149145",
+              "display_name": "Robert C. Holte",
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I154425047",
+                "display_name": "University of Alberta",
+                "ror": "https://ror.org/0160cpw27",
+                "country_code": "CA",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I154425047"
+                ]
+              }
+            ],
+            "countries": [
+              "CA"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Robert Holte",
+            "raw_affiliation_strings": [
+              "University of Alberta"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "University of Alberta",
+                "institution_ids": [
+                  "https://openalex.org/I154425047"
+                ]
+              }
+            ]
+          }
+        ],
+        "primary_location": {
+          "id": "doi:10.1609/aaai.v26i1.8137",
+          "doi": "https://doi.org/10.1609/aaai.v26i1.8137",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1609/aaai.v26i1.8137",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210191458",
+            "display_name": "Proceedings of the AAAI Conference on Artificial Intelligence",
+            "issn_l": "2159-5399",
+            "issn": [
+              "2159-5399",
+              "2374-3468"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [
+              "jufo-2",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310320058",
+            "host_organization_name": "Association for the Advancement of Artificial Intelligence",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320058"
+            ],
+            "host_organization_lineage_names": [
+              "Association for the Advancement of Artificial Intelligence"
+            ],
+            "type": "conference"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Proceedings of the AAAI Conference on Artificial Intelligence",
+          "raw_type": "journal-article"
+        }
+      }
+    ]
+  }
+]
