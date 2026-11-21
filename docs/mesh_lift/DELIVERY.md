@@ -19,6 +19,7 @@ To reconstruct from the two bundles:
     git fetch /workspace/introduction-mesh-vertex-mpgaa.bundle research/mesh-vertex-mpgaa:research/mesh-vertex-mpgaa
     git switch research/mesh-vertex-mpgaa
     make -C cpp/mesh_lift all
+    python3 cpp/mesh_lift/probe.py --build-only
     python3 cpp/mesh_lift/validate.py
 
 The external /workspace/mesh_vertex_delivery_validation.json records the

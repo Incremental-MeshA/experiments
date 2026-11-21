@@ -32,6 +32,10 @@ suffix certificate and is not a novelty claim.
     python3 cpp/mesh_lift/probe.py --directory /tmp/lift-fresh --output /tmp/lift-counts
     python3 cpp/mesh_lift/analyze.py --directory /tmp/lift-fresh --probes /tmp/lift-counts
 
+To validate an existing canonical checkout after building, first run
+python3 cpp/mesh_lift/probe.py --build-only to restore the generated
+count-only binary, then python3 cpp/mesh_lift/validate.py.
+
 Canonical data are results/full and results/probes; never overwrite them
 with a new timing cohort. Canonical report.py, notebook.py and validate.py
 read those locations. The count-only binary is generated from copied
