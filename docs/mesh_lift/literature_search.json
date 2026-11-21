@@ -1,0 +1,140 @@
+{
+  "query": "Inconsistent heuristics in theory and practice",
+  "source": "https://api.crossref.org/works?query.title=Inconsistent%20heuristics%20in%20theory%20and%20practice&rows=2",
+  "results": [
+    {
+      "title": [
+        "Inconsistent heuristics in theory and practice"
+      ],
+      "doi": "10.1016/j.artint.2011.02.001",
+      "authors": [
+        {
+          "given": "Ariel",
+          "family": "Felner",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Uzi",
+          "family": "Zahavi",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Robert",
+          "family": "Holte",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Jonathan",
+          "family": "Schaeffer",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Nathan",
+          "family": "Sturtevant",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Zhifu",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2011,
+            6
+          ]
+        ]
+      },
+      "venue": [
+        "Artificial Intelligence"
+      ]
+    },
+    {
+      "title": [
+        "Heuristics-in-use: Toward a practice theory of organizational heuristics"
+      ],
+      "doi": "10.1016/j.techfore.2020.120517",
+      "authors": [
+        {
+          "given": "Matthias",
+          "family": "Wenzel",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Iben Sandal",
+          "family": "Stjerne",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2021,
+            3
+          ]
+        ]
+      },
+      "venue": [
+        "Technological Forecasting and Social Change"
+      ]
+    }
+  ]
+}
