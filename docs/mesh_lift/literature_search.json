@@ -136,5 +136,11 @@
         "Technological Forecasting and Social Change"
       ]
     }
-  ]
+  ],
+  "full_text_check": {
+    "url": "https://arxiv.org/html/2412.10320v2",
+    "read_section": "Mesh graph search; Definitions 6 and 7 and the following terminal-pruning paragraph",
+    "finding": "The original article already states that a non-initial mesh vertex can be pruned after all its terminal endpoints have been expanded. Terminal pruning and its basic consistent-heuristic justification are prior work, not this contribution.",
+    "local_text_sha256": "a0d9732fa670e6adf19bff71dc296f5cff47fe1003c9dc75d0ea19ab50c79b3a"
+  }
 }
