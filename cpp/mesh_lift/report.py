@@ -138,6 +138,10 @@ def main(directory):
  rows=[]
  for _,r in summary[summary.baseline.isin(['best_control','best_mesh','cascade_mesh','mesha_reuse'])&summary.panel.ne('history')].iterrows():rows.append([r.cohort,r.control,LABEL[r.method],LABEL[r.baseline],f'{int(r.pairs)}/{int(r.configurations)}',n(r.full_speedup),n(r.repair_speedup)])
  put(table(['Cohort','Model','Candidate','Control','Pairs','Episode ×','Repair ×'],rows))
+ ini=data['initial_summary'];rows=[]
+ for _,r in ini[ini.cohort.eq('replay')&ini.control.eq('car16')&ini.panel.eq('main')&ini.baseline.isin(['cascade_mesh','mesha_reuse','cascade_cold','lift_noprune'])].iterrows():rows.append([LABEL[r.method],LABEL[r.baseline],f'{int(r.pairs)}/{int(r.configurations)}',n(r.initial_speedup)])
+ put(table(['Candidate','First-search control','Solved initial pairs','Initial ×'],rows))
+ put('This table conditions only on completion of the initial search, including an exact NoPath answer, and retains episodes that later cap during repair. Initial ratios in the episode-level table instead condition on whole-episode completion.')
  put(fig('completion','Completion is reported separately from conditional speedups.'))
  put(fig('mechanism','Work on the balanced car panel, including executed prefixes of capped runs.'))
  put(fig('maps','Per-map episode speedup on the balanced panel.'))
