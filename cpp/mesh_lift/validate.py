@@ -27,7 +27,7 @@ def main(skip_tests):
  for name in ['report','paper']:
   f=ROOT/f'docs/mesh_lift/{name}.pdf';assert sha(f)==p[name]['pdf_sha256'] and sha(f.with_suffix('.md'))==p[name]['markdown_sha256'];pdf=fitz.open(f);text='\n'.join(pg.get_text() for pg in pdf);assert len(pdf)>=4 and len(text)>10000 and '\ufffd' not in text
   for pg in pdf:
-   for b in pg.get_text('blocks'):assert b[0]>=-1 and b[2]<=pg.rect.width+1,(name,pg.number,b[:4])
+   for b in pg.get_text('blocks'):assert b[0]>=-1 and b[1]>=-1 and b[2]<=pg.rect.width+1 and b[3]<=pg.rect.height+1,(name,pg.number,b[:4])
   docs.append(dict(path=str(f.relative_to(ROOT)),pages=len(pdf),sha256=sha(f)))
  nb=json.loads((ROOT/'docs/mesh_lift/analysis.ipynb').read_text());assert nb['metadata']['mesh_lift_artifact']['source_sha256']==sha(HERE/'notebook.py') and nb['metadata']['mesh_lift_artifact']['analysis_sha256']==sha(HERE/'results/full/analysis/analysis.json');code=[c for c in nb['cells'] if c['cell_type']=='code'];assert len(code)==4 and all(c.get('execution_count') for c in code);assert not any(o.get('output_type')=='error' for c in code for o in c.get('outputs',[]))
  runs=[]
