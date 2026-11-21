@@ -163,6 +163,14 @@ def main(directory,probes):
   d=metrics[metrics.control.eq('car16')&metrics.cohort.eq(cohort)];methods=[m for m in ['cascade_mesh','lift_mesh','cascade_lift','lift_cold','cascade_cold','mesha_reuse','batch_mpgaa','conditional_dstar'] if d.method.eq(m).any()];vals=[d[d.method.eq(m)].complete.mean() for m in methods]
   ax.bar(range(len(methods)),vals,color=[colors.get(m,'#999999') for m in methods]);ax.set_xticks(range(len(methods)),[LABEL[m] for m in methods],rotation=40,ha='right',fontsize=7);ax.set(ylim=(0,1.08),title=cohort,ylabel='Completed fraction')
  figure(fig,'completion',figs)
+ from matplotlib.patches import FancyArrowPatch
+ fig,ax=plt.subplots(figsize=(10,3.3));positions={'s':(0,.7),'u':(1,0),'w':(2,0),'v':(3,.7),'t':(4.4,.7)}
+ for u,v,c in [('s','v','2'),('s','u','1'),('u','w','0.5'),('w','v','1.5'),('v','t','10')]:
+  x,y=positions[u];xx,yy=positions[v];arrow=FancyArrowPatch((x,y),(xx,yy),arrowstyle='-|>',mutation_scale=14,shrinkA=16,shrinkB=16,lw=1.4,color='#444444');ax.add_patch(arrow);ax.text((x+xx)/2,(y+yy)/2+.10,c,ha='center',fontsize=11)
+ labels={'s':'0 to 12','u':'2 to 11','w':'1.5 to 10.5','v':'0 to 10','t':'0 to 0'}
+ for name,(x,y) in positions.items():
+  ax.scatter([x],[y],s=900,color='#e69f00' if name=='w' else '#56b4e9' if name=='u' else '#dddddd',edgecolor='#444444',zorder=3);ax.text(x,y,name,ha='center',va='center',zorder=4,fontsize=12);ax.text(x,y-.32,'h: '+labels[name],ha='center',fontsize=10)
+ ax.text(1,-.65,'u is pruned after v is CLOSED',ha='center',fontsize=10);ax.text(3,-.65,'Lift raises skipped w; v is unchanged',ha='center',fontsize=10);ax.set(xlim=(-.6,4.9),ylim=(-.9,1.2),title='Consistency closure in a skipped mesh prefix');ax.axis('off');figure(fig,'lift_example',figs)
  assert len(r)==manifest['timed_runs'] and len(metrics)==manifest['memory_runs']
  result=dict(status='passed',scenarios=manifest['scenarios'],timed_runs=len(r),memory_runs=len(metrics),timed_calls=len(calls),allocation_matched_rows=matched,exact_cost_disagreements=bad,capped_calls=int(calls.status.eq('capped').sum()),mutation_detected=True,terminal_prunes=int(native.lift_terminal_prunes.sum()),lift_writes=int(native.lift_writes.sum()),count_only_runs=sum(j['runs'] for j in ps['jobs']),count_only_matched_rows=probe_matches,relative_mad_median=float(dispersion.relative_mad.median()),relative_mad_p95=float(dispersion.relative_mad.quantile(.95)),analysis_versions=dict(numpy=np.__version__,pandas=pd.__version__,matplotlib=plt.matplotlib.__version__),manifest_sha256=common.sha(HERE/'frozen/manifest.json'),source_sha256=common.sha(Path(__file__)),probe_experiment_sha256=common.sha(probes/'experiment.json'),tables_sha256={p.name:common.sha(p) for p in sorted(out.glob('*.csv'))},figures_sha256=figs)
  (out/'analysis.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps({k:v for k,v in result.items() if not k.endswith('sha256')}))
