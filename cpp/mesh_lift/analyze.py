@@ -131,26 +131,26 @@ def main(directory,probes):
  for key,d in r.groupby(['case','method']):
   v=d.full_s.median();dispersion.append(dict(case=key[0],method=key[1],relative_mad=float((d.full_s-v).abs().median()/v)))
  dispersion=pd.DataFrame(dispersion);common.save(dispersion,out/'dispersion.csv')
- figs={};plt.rcParams.update({'font.size':9,'pdf.fonttype':42,'axes.spines.top':False,'axes.spines.right':False})
+ figs={};plt.rcParams.update({'font.size':13,'pdf.fonttype':42,'axes.spines.top':False,'axes.spines.right':False})
  colors={'lift_mesh':'#e69f00','cascade_lift':'#0072b2','mesha_reuse':'#882255','lift_cold':'#999999','cascade_cold':'#56b4e9','lift_noprune':'#cc79a7','mesh_mpgaa':'#777777','trigger_mesh':'#e69f00','cascade_mesh':'#0072b2','lba_reuse':'#444444','batch_mpgaa':'#009e73','conditional_dstar':'#cc79a7','cmesh_dstar':'#d55e00','contour_only':'#56b4e9','cascade_heap':'#882255'}
  fig,axes=plt.subplots(1,2,figsize=(11,4))
  for ax,control in zip(axes,['car16','grid8']):
   for method in NEW:
    for baseline,ls in [('best_control','-'),('cascade_mesh','--')]:
     v=np.sort(pairs[pairs.control.eq(control)&pairs.cohort.eq('replay')&pairs.panel.eq('main')&pairs.method.eq(method)&pairs.baseline.eq(baseline)].full_speedup.dropna());ax.step(v,np.arange(1,len(v)+1)/len(v),where='post',color=colors[method],ls=ls,label=LABEL[method]+' / '+LABEL[baseline])
-  ax.axvline(1,color='.5',ls=':');ax.set(xscale='log',title=control,xlabel='Episode speedup',ylabel='Fraction of common completed cases');ax.legend(fontsize=7)
+  ax.axvline(1,color='.5',ls=':');ax.set(xscale='log',title=control,xlabel='Episode speedup',ylabel='Fraction of common completed cases');ax.legend(fontsize=10)
  figure(fig,'profile',figs)
  fig,axes=plt.subplots(1,2,figsize=(11,4))
  for ax,baseline in zip(axes,['best_control','cascade_mesh']):
   d=maps[maps.cohort.eq('replay')&maps.control.eq('car16')&maps.panel.eq('main')&maps.baseline.eq(baseline)];names=sorted(d['map'].unique());x=np.arange(len(names))
   for i,method in enumerate(NEW):ax.barh(x+(i-.5)*.35,[d[d['map'].eq(n)&d.method.eq(method)].iloc[0].full_speedup for n in names],.35,label=LABEL[method],color=colors[method])
-  ax.set_yticks(x,names);ax.axvline(1,color='.5',ls=':');ax.set(xscale='log',title=LABEL[baseline],xlabel='Episode speedup');ax.legend(fontsize=8)
+  ax.set_yticks(x,names);ax.axvline(1,color='.5',ls=':');ax.set(xscale='log',title=LABEL[baseline],xlabel='Episode speedup');ax.legend(fontsize=11)
  figure(fig,'maps',figs)
  fig,axes=plt.subplots(1,2,figsize=(11,4))
  d=maps[maps.cohort.eq('replay')&maps.control.eq('car16')&maps.panel.eq('main')&maps.baseline.eq('mesha_reuse')];names=sorted(d['map'].unique());x=np.arange(len(names))
  for ax,column,title in zip(axes,['full_speedup','repair_speedup'],['Whole episode vs MeshA* reuse','Repair vs MeshA* reuse']):
   for i,method in enumerate(NEW):ax.barh(x+(i-.5)*.35,[d[d['map'].eq(name)&d.method.eq(method)].iloc[0][column] for name in names],.35,label=LABEL[method],color=colors[method])
-  ax.set_yticks(x,names);ax.axvline(1,color='.5',ls=':');ax.set(xscale='log',title=title,xlabel='Speedup on common completed pairs');ax.legend(fontsize=8)
+  ax.set_yticks(x,names);ax.axvline(1,color='.5',ls=':');ax.set(xscale='log',title=title,xlabel='Speedup on common completed pairs');ax.legend(fontsize=11)
  figure(fig,'mesh_comparisons',figs)
  fig,axes=plt.subplots(1,3,figsize=(12,4))
  car=work[work.control.eq('car16')&work.cohort.eq('replay')&work.family.ne('history')]
@@ -162,16 +162,16 @@ def main(directory,probes):
   for method in ['cascade_lift','lift_mesh','mesha_reuse','batch_mpgaa','conditional_dstar']:
    v=d[d.method.eq(method)];g=v[v.complete].groupby('radius').full_s.apply(common.gm);ax.plot(g.index,1000*g,'o-',label=LABEL[method],color=colors[method]);f=v[~v.complete];ax.scatter(f.radius,1000*f.full_s,marker='x',color=colors[method])
   ax.set(yscale='log',title=name,xlabel='Discovery radius, cells',ylabel='Planner time, ms');ax.set_xticks([8,16,32,64])
- axes[0,0].legend(fontsize=7);figure(fig,'radius',figs)
+ axes[0,0].legend(fontsize=10);figure(fig,'radius',figs)
  fig,axes=plt.subplots(1,2,figsize=(11,4))
  for ax,control in zip(axes,['car16','grid8']):
   for method in ['lift_mesh','cascade_lift','mesha_reuse','lba_reuse','batch_mpgaa']:
    d=edit[edit.control.eq(control)&edit.cohort.eq('replay')&edit.method.eq(method)];ax.plot(d.edit_bin,d.median_ms,'o-',label=LABEL[method],color=colors[method])
-  ax.set(yscale='log',title=control,xlabel='Observed edits per repair query',ylabel='Median time, ms');ax.legend(fontsize=7)
+  ax.set(yscale='log',title=control,xlabel='Observed edits per repair query',ylabel='Median time, ms');ax.legend(fontsize=10)
  figure(fig,'edits',figs)
  fig,axes=plt.subplots(1,2,figsize=(11,4))
  for ax,control in zip(axes,['car16','grid8']):
-  methods=['lift_mesh','cascade_lift','mesha_reuse','batch_mpgaa','conditional_dstar','cmesh_dstar'];d=metrics[metrics.control.eq(control)];ax.boxplot([d[d.method.eq(m)].peak_heap_bytes/2**20 for m in methods],tick_labels=[LABEL[m] for m in methods],showfliers=False);ax.tick_params(axis='x',rotation=35,labelsize=8);ax.set(yscale='log',title=control,ylabel='Requested peak heap, MiB')
+  methods=['lift_mesh','cascade_lift','mesha_reuse','batch_mpgaa','conditional_dstar','cmesh_dstar'];d=metrics[metrics.control.eq(control)];ax.boxplot([d[d.method.eq(m)].peak_heap_bytes/2**20 for m in methods],tick_labels=[LABEL[m] for m in methods],showfliers=False);ax.tick_params(axis='x',rotation=35,labelsize=11);ax.set(yscale='log',title=control,ylabel='Requested peak heap, MiB')
  figure(fig,'memory',figs)
  fig,axes=plt.subplots(1,2,figsize=(11,4))
  for ax,control in zip(axes,['car16','grid8']):
@@ -180,13 +180,15 @@ def main(directory,probes):
    for n,d in amort[amort.control.eq(control)&amort.family.ne('history')].groupby('repairs'):
     a=d[d.method.eq(method)].set_index('case');b=d[d.method.eq('cascade_mesh')].set_index('case');good=a.complete&b.complete;rows.append((n,common.gm(b.loc[good,'seconds']/a.loc[good,'seconds'])))
    ax.plot([p[0] for p in rows],[p[1] for p in rows],'o-',label=LABEL[method],color=colors[method])
-  ax.axhline(1,color='.5',ls=':');ax.set(title=control,xlabel='Number of repairs after initial search',ylabel='Cumulative speedup vs previous Cascade-Mesh');ax.legend(fontsize=8)
+  ax.axhline(1,color='.5',ls=':');ax.set(title=control,xlabel='Number of repairs after initial search',ylabel='Cumulative speedup vs previous Cascade-Mesh');ax.legend(fontsize=11)
  figure(fig,'amortization',figs)
- fig,axes=plt.subplots(1,3,figsize=(12,4))
- for ax,cohort in zip(axes,['replay','navigation_unknown','navigation_dynamic']):
-  d=metrics[metrics.control.eq('car16')&metrics.cohort.eq(cohort)];methods=[m for m in ['cascade_mesh','lift_mesh','cascade_lift','lift_cold','cascade_cold','mesha_reuse','batch_mpgaa','conditional_dstar'] if d.method.eq(m).any()];vals=[d[d.method.eq(m)].complete.mean() for m in methods]
-  ax.bar(range(len(methods)),vals,color=[colors.get(m,'#999999') for m in methods]);ax.set_xticks(range(len(methods)),[LABEL[m] for m in methods],rotation=40,ha='right',fontsize=7);ax.set(ylim=(0,1.08),title=cohort,ylabel='Completed fraction')
- figure(fig,'completion',figs)
+ methods=['cascade_mesh','lift_mesh','cascade_lift','lift_cold','cascade_cold','mesha_reuse','batch_mpgaa','conditional_dstar'];cohorts=['replay','navigation_unknown','navigation_dynamic'];matrix=np.zeros((len(methods),len(cohorts)));counts={}
+ for i,method in enumerate(methods):
+  for j,cohort in enumerate(cohorts):
+   d=metrics[metrics.control.eq('car16')&metrics.cohort.eq(cohort)&metrics.method.eq(method)];matrix[i,j]=d.complete.mean();counts[(i,j)]=(int(d.complete.sum()),len(d))
+ fig,ax=plt.subplots(figsize=(8,5));heat=ax.imshow(matrix,vmin=0,vmax=1,cmap='Blues',aspect='auto')
+ for (i,j),(finished,total) in counts.items():ax.text(j,i,f'{finished}/{total}',ha='center',va='center',color='white' if matrix[i,j]>.6 else 'black',fontsize=12)
+ ax.set_xticks(range(3),['Replay','Unknown map','Dynamic']);ax.set_yticks(range(len(methods)),[LABEL[m] for m in methods],fontsize=11);ax.set(title='car16: completed episodes');fig.colorbar(heat,ax=ax,label='Completed fraction',shrink=.9);figure(fig,'completion',figs)
  from matplotlib.patches import FancyArrowPatch
  fig,ax=plt.subplots(figsize=(10,3.3));positions={'s':(0,.7),'u':(1,0),'w':(2,0),'v':(3,.7),'t':(4.4,.7)}
  for u,v,c in [('s','v','2'),('s','u','1'),('u','w','0.5'),('w','v','1.5'),('v','t','10')]:
