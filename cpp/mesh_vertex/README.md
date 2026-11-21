@@ -57,7 +57,9 @@ python cpp/mesh_vertex/validate.py
 Source/fixture hashes, commands, binaries, logical allocation matching, exact
 cost checks, caps, completion failures and per-map metrics are retained.
 `mv_records` and `mv_active_watches` are snapshots, not additive work; use their
-per-case maxima. `mv_trace_hash` is an audit fingerprint. Expansion units differ
+per-case maxima. `mv_trace_hash` is an audit fingerprint. Fields `mv_*` are
+instrumented only in the new native engine; zeros in old controls mean unavailable.
+Expansion units differ
 between primitive-lattice controls and full-mesh searches; their counts are
 shown with that distinction. No earlier timing seconds are pooled.
 

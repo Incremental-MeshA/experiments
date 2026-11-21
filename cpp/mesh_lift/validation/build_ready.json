@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "manifest_sha256": "a08cc49019fd56cc3419b3933494ebbed877ea91878f3619d75aa46221fac945",
+  "binaries": {
+    "replay": "240b37a7d8fa4ca6cb7630a9feec8fb50e3d15f1bfbc1bbda43dc713dd787c12",
+    "navigation_memory": "c764142785fd40329949220f5c4a399ca89d8701404eb0cf4e4147295f5135e5",
+    "replay_memory": "00310aebbf94c64f8cba92cc8fa22dce24976ba424379f1094bea0d581bf3a1f",
+    "navigation": "cda0c4bdf114bb9d0b01b92a0604f7de400a81e22c02c07fc8d505d9ec8d3552"
+  },
+  "preflight_rows": 14696,
+  "test_scope": "All five new native modes passed Dijkstra/ASan; added MeshA reuse control passed the extended preflight."
+}

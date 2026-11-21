@@ -1,0 +1,1 @@
+{"status":"passed","model":"car16","comparisons":2405,"interior_expansions":2512592,"watch_inserts":71788,"local_steps":906224,"terminal_prunes":676834,"lift_writes":22422,"interior_joins":18}

@@ -103,6 +103,11 @@ def main(directory):
   assert actual[actual.index.get_level_values('method').isin(NATIVE)].all_free_calls.eq(actual.loc[actual.index.get_level_values('method').isin(NATIVE),'checked_cells']).all()
   probe.append(actual.reset_index())
  probe=pd.concat(probe,ignore_index=True);probe['online_calls']=np.where(probe['query'].gt(0),probe.all_free_calls,0);pw=probe.groupby(['case','method'],as_index=False)[['all_free_calls','online_calls']].sum().merge(meta,on='case');common.save(pw,out/'collision_probes.csv')
+ lookup=pw.set_index(['case','method']);probe_pairs=[]
+ for _,v in pairs[pairs.cohort.eq('replay')].iterrows():
+  aa_probe=lookup.loc[(v['case'],v.method)];bb_probe=lookup.loc[(v['case'],v.selected_control)] if v.selected_control!='none' else None
+  probe_pairs.append(dict(case=v['case'],control=v.control,panel=v.panel,method=v.method,baseline=v.baseline,complete=v.complete,full_api_ratio=bb_probe.all_free_calls/aa_probe.all_free_calls if v.complete and bb_probe is not None and aa_probe.all_free_calls>0 else np.nan,repair_api_ratio=bb_probe.online_calls/aa_probe.online_calls if v.complete and bb_probe is not None and aa_probe.online_calls>0 else np.nan))
+ common.save(pd.DataFrame(probe_pairs),out/'collision_pairs.csv')
  dispersion=[]
  for key,d in r.groupby(['case','method']):
   v=d.full_s.median();dispersion.append(dict(case=key[0],method=key[1],relative_mad=float((d.full_s-v).abs().median()/v)))

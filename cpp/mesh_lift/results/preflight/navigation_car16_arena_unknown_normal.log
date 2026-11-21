@@ -1,0 +1,9 @@
+11 runs; car16__arena__unknown__s48101__r8; 0.0289165 s
+22 runs; car16__arena__unknown__s48101__r16; 0.0875876 s
+33 runs; car16__arena__unknown__s48101__r32; 0.140064 s
+44 runs; car16__arena__unknown__s48101__r64; 0.176368 s
+55 runs; car16__arena__unknown__s48102__r8; 0.202979 s
+66 runs; car16__arena__unknown__s48102__r16; 0.282151 s
+77 runs; car16__arena__unknown__s48102__r32; 0.34112 s
+88 runs; car16__arena__unknown__s48102__r64; 0.389528 s
+passed 88 navigation runs; 0 query caps

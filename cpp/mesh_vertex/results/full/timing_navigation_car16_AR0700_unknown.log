@@ -1,0 +1,9 @@
+24 runs; car16__AR0700__unknown__s48101__r8; 2.56328 s
+48 runs; car16__AR0700__unknown__s48101__r16; 5.85607 s
+72 runs; car16__AR0700__unknown__s48101__r32; 10.2766 s
+96 runs; car16__AR0700__unknown__s48101__r64; 16.5091 s
+120 runs; car16__AR0700__unknown__s48102__r8; 22.0976 s
+144 runs; car16__AR0700__unknown__s48102__r16; 23.2464 s
+168 runs; car16__AR0700__unknown__s48102__r32; 25.8794 s
+192 runs; car16__AR0700__unknown__s48102__r64; 31.9777 s
+passed 192 navigation runs; 0 query caps

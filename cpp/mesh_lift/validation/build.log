@@ -1,0 +1,7 @@
+make: Entering directory '/workspace/introduction-mpgaa-mesh/cpp/mesh_lift'
+g++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic '-DIMA_EXPERIMENT_FLAGS="-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"' replay.cpp -o build/replay
+g++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC '-DIMA_EXPERIMENT_FLAGS="-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC"' replay.cpp -o build/replay_memory
+g++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic '-DNAV_FLAGS="-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"' navigation.cpp -o build/navigation
+g++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC '-DNAV_FLAGS="-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC"' navigation.cpp -o build/navigation_memory
+g++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic test.cpp -o build/test
+make: Leaving directory '/workspace/introduction-mpgaa-mesh/cpp/mesh_lift'

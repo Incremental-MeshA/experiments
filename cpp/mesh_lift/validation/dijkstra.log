@@ -1,0 +1,11 @@
+make: Entering directory '/workspace/introduction-mpgaa-mesh/cpp/mesh_lift'
+g++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic '-DIMA_EXPERIMENT_FLAGS="-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"' replay.cpp -o build/replay
+g++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC '-DIMA_EXPERIMENT_FLAGS="-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC"' replay.cpp -o build/replay_memory
+g++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic '-DNAV_FLAGS="-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"' navigation.cpp -o build/navigation
+g++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC '-DNAV_FLAGS="-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC"' navigation.cpp -o build/navigation_memory
+g++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic test.cpp -o build/test
+build/test ../experiments/frozen/grid8_model.txt
+{"status":"passed","model":"grid8","comparisons":2405,"interior_expansions":0,"watch_inserts":3976,"local_steps":5330,"terminal_prunes":0,"lift_writes":0,"interior_joins":0}
+build/test ../experiments/frozen/car16_model.txt
+{"status":"passed","model":"car16","comparisons":2405,"interior_expansions":2512592,"watch_inserts":71788,"local_steps":906224,"terminal_prunes":676834,"lift_writes":22422,"interior_joins":18}
+make: Leaving directory '/workspace/introduction-mpgaa-mesh/cpp/mesh_lift'

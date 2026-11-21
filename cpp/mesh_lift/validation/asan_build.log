@@ -1,0 +1,3 @@
+make: Entering directory '/workspace/introduction-mpgaa-mesh/cpp/mesh_lift'
+g++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O1 -g1 -std=c++17 -fsanitize=address,undefined -fno-omit-frame-pointer test.cpp -o build/test_sanitize
+make: Leaving directory '/workspace/introduction-mpgaa-mesh/cpp/mesh_lift'

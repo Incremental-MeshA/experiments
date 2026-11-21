@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "original_source_sha256": "3f5622c3665309098b1f270196476dd8ae821a02d6e4bcf71e3a4d04afaf8e0d",
+  "script_sha256": "e678eddb81c2ced0ca14e4fe6da4c12c253fdd27e1f38b5f0db45db7b3978847",
+  "mutant_header_sha256": "348e91ddc54e2579c57a56a6f1142b6bb1da3829b259ca96c59614fdd6ce4ed9",
+  "mutant_source_sha256": "dad4ca188ad99efe0f27e6f16d96797b9364be15c9e0428f5a12e8ce90719667",
+  "command": [
+    "g++",
+    "-O2",
+    "-DNDEBUG",
+    "-std=c++17",
+    "-I/workspace/introduction-mpgaa-mesh/cpp/include",
+    "-I/workspace/introduction-mpgaa-mesh/cpp/experiments",
+    "-I/workspace/introduction-mpgaa-mesh/cpp/mesh_variants",
+    "-I/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps",
+    "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/mutant/mutant.cpp",
+    "-o",
+    "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/mutant/mutant"
+  ],
+  "result": {
+    "status": "mutant_detected",
+    "seed": 0,
+    "terminal_prunes": 93
+  }
+}

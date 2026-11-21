@@ -1,0 +1,1 @@
+{"status":"passed","runs":80,"calls":930,"caps":0,"wall_s":0.32931137300000002,"preparation_s":0.0045388199999999998,"cap":1000000,"memory_profile":false,"compiler":"14.2.0","flags":"-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic","mesh_index_compile_s":0.000168393,"mesh_index_nodes":412,"mesh_index_heap_retained_bytes":0,"mesh_index_heap_peak_bytes":0}

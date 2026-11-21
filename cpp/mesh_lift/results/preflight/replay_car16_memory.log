@@ -1,0 +1,9 @@
+6 runs; car16__Berlin__on_path__s48101__b8__k2__r8; 0.178341 s
+12 runs; car16__Berlin__off_path__s48101__b8__k2__r8; 0.307774 s
+18 runs; car16__Berlin__churn__s48101__b8__k2__r8; 0.507402 s
+24 runs; car16__Berlin__unknown_replay__s48101__b8__k1__r8; 0.690507 s
+30 runs; car16__Berlin__on_path__s48102__b8__k2__r8; 0.743785 s
+36 runs; car16__Berlin__off_path__s48102__b8__k2__r8; 0.793873 s
+42 runs; car16__Berlin__churn__s48102__b8__k2__r8; 21.0328 s
+48 runs; car16__Berlin__unknown_replay__s48102__b8__k1__r8; 21.1021 s
+passed 48 runs, 396 rows, 6 capped queries

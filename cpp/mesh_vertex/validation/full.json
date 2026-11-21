@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "scenarios": 232,
+  "timed_runs": 8964,
+  "memory_runs": 2988,
+  "count_only_runs": 2316,
+  "allocation_matched_rows": 57001,
+  "count_only_matched_rows": 42292,
+  "contour_equivalence_queries": 2678,
+  "capped_calls": 393,
+  "exact_cost_disagreements": 0,
+  "old_sources_unchanged": true,
+  "tests": [
+    {
+      "status": "passed",
+      "model": "grid8",
+      "comparisons": 3367,
+      "interior_expansions": 0,
+      "watch_inserts": 7952,
+      "local_steps": 4392,
+      "interior_joins": 0
+    },
+    {
+      "status": "passed",
+      "model": "car16",
+      "comparisons": 3367,
+      "interior_expansions": 5096285,
+      "watch_inserts": 143576,
+      "local_steps": 1074020,
+      "interior_joins": 36
+    }
+  ],
+  "documents": [
+    {
+      "path": "docs/mesh_vertex/report.pdf",
+      "pages": 23,
+      "sha256": "b5144efa5fa1779ae06f174236e1c218b2d221a6a671b76d156e73e6cbd06379"
+    },
+    {
+      "path": "docs/mesh_vertex/paper.pdf",
+      "pages": 5,
+      "sha256": "2cc3c8602f7dd8a181d3943ff9c35b9413d04804b0cfa3ed3e26e5d4a866a506"
+    }
+  ],
+  "executed_notebook_cells": 4
+}

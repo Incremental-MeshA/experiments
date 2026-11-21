@@ -63,7 +63,7 @@ def main(directory):
   d=work[work.control.eq('car16')&work.cohort.eq('replay')&work.panel.eq('main')&work.method.eq(method)]
   rows.append([short[method],int(d.mv_boundary_expansions.sum()),int(d.mv_interior_expansions.sum()),int(d.notify_probes.sum()),int(d.mv_heap_pushes.sum()),int(d.mv_repair_heap_pushes.sum()),int(d.mv_repair_local_steps.sum())])
  put(table(['Метод','Boundary','Interior','Notify','Search heap','Repair heap','Repair local'],rows))
- put('Все единицы этой таблицы относятся к одному native mesh-графу. Contour only сохраняет точный поисковый порядок Trigger, поэтому разница поисковой кучи изолирует прямое продолжение. Cascade heap изолирует обратный каскад без прямого продолжения; Cascade scan показывает стоимость отсутствия подписок. Взаимодействующие эффекты нельзя складывать как независимые ускорения. mv_records и mv_active_watches — снимки; их максимумы доступны в max_state.csv, а не в сумме work.csv. Хеш порядка не является счётчиком работы.')
+ put('Все единицы этой таблицы относятся к одному native mesh-графу. Contour only сохраняет точный поисковый порядок Trigger, поэтому разница поисковой кучи изолирует прямое продолжение. Cascade heap изолирует обратный каскад без прямого продолжения; Cascade scan показывает стоимость отсутствия подписок. Взаимодействующие эффекты нельзя складывать как независимые ускорения. mv_records и mv_active_watches — снимки; их максимумы доступны в max_state.csv, а не в сумме work.csv. Хеш порядка не является счётчиком работы. Поля mv_* инструментированы только в новом движке; нули у старых контролей означают отсутствие этой инструментации.')
  put(fig('edits','Медиана времени ремонта по числу наблюдаемых правок; только replay. Это описательные группы запросов, а не дополнительные независимые эпизоды.'))
  put(fig('amortization','Окупаемость относительно того же native MPGAA*: конструктор, первый поиск и первые N ремонтов. Префиксы одного эпизода зависимы.'))
  put('# Полный collision-API счётчик')
@@ -71,6 +71,10 @@ def main(directory):
  rows=[]
  for (control,method),d in probes.groupby(['control','method']):rows.append([control,LABEL[method],int(d.all_free_calls.sum()),int(d.online_calls.sum())])
  put(table(['Модель','Метод','Все Grid.free','Grid.free ремонта'],rows))
+ put('Эти сырые суммы включают выполненные префиксы capped-эпизодов и не являются парным сравнением завершённых задач. Для оценки выигрыша используются следующие отношения только на общих завершённых конфигурациях; пары и недостающие ремонты сохранены в collision_pairs.csv.')
+ cp=pd.read_csv(ad/'collision_pairs.csv');rows=[]
+ for key,d in cp[cp.panel.eq('main')&cp.baseline.isin(['best_control','mesh_mpgaa','batch_mpgaa','cmesh_dstar'])].groupby(['control','method','baseline']):rows.append([key[0],LABEL[key[1]],LABEL[key[2]],n(common.gm(d.full_api_ratio)),n(common.gm(d.repair_api_ratio)),f'{int(d.complete.sum())}/{len(d)}'])
+ put(table(['Модель','Кандидат','Контроль','Все API ×','Ремонт API ×','Пары'],rows))
  put('Это логические вызовы API, включая обращения за границей карты. Исключены конструктор, прямые Grid.blocked при нормализации правок и эталонная проверка путей. Это не число аппаратных чтений памяти и не эксперимент с дорогими геометрическими коллизиями.')
  put('# Радиус раскрытия, динамика и качество движения')
  put(fig('radius','Время планирования по радиусу на каждой карте. Линии — геометрическое среднее успешных корней; крестики — незавершённые миссии, а не доказательство ускорения.'))
@@ -137,9 +141,9 @@ def main(directory):
  put('# Scope and related work')
  put('MeshA* supplies the configuration representation; MPGAA* supplies adaptive learning and policy reuse. Potential reweighting and watched dependencies are established techniques. Fringe Search and partial-expansion A* already reduce queue/generation costs; our forward contour mechanism preserves the exact valid-vertex queue order and is not a claim of generic novelty in fringe processing. The proposed research contribution is the cell-triggered violation frontier combined with zero-base mesh repair cascades in a fully vertex-level adaptive planner. Priority requires a broader full-text review. Official external MPGAA*/Lifelong-GLS implementations were not integrated. Cheap 2D occupancy checks, a repository Hermite control set, fixed map crops and two roots limit external validity. Stronger claims require broader independent inputs and external implementations.')
  put('# References')
- put((DEST/'related_work.md').read_text().split('\n\n',1)[1])
+ put((DEST/'references.md').read_text())
  paper=writer.render(DEST/'paper.md','\n\n'.join(p),'Trigger and Cascade Mesh-MPGAA*: Exact Incremental Search on Configuration Meshes','en-US')
- provenance=dict(status='passed',analysis_sha256=common.sha(ad/'analysis.json'),source_sha256=common.sha(Path(__file__)),design_sha256=common.sha(DEST/'design.md'),related_work_sha256=common.sha(DEST/'related_work.md'),render_dependencies={p:common.sha(ROOT/p) for p in ['cpp/mesh_envelope/report.py','cpp/mpgaa_mesh/vector_images.lua','docs/experiments/layout.tex']},report=report,paper=paper)
+ provenance=dict(status='passed',analysis_sha256=common.sha(ad/'analysis.json'),source_sha256=common.sha(Path(__file__)),design_sha256=common.sha(DEST/'design.md'),related_work_sha256=common.sha(DEST/'related_work.md'),render_dependencies={p:common.sha(ROOT/p) for p in ['cpp/mesh_envelope/report.py','cpp/mpgaa_mesh/vector_images.lua','docs/experiments/layout.tex','docs/mesh_vertex/references.md']},report=report,paper=paper)
  (ad/'report_provenance.json').write_text(json.dumps(provenance,indent=2)+'\n');print(DEST/'report.pdf')
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--directory',type=Path,default=HERE/'results/full');main(p.parse_args().directory)
