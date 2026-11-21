@@ -1,0 +1,1362 @@
+{
+  "status": "passed",
+  "utc": "2026-11-21T13:57:51.717221+00:00",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "cpu": "AMD EPYC 9V74 80-Core Processor",
+  "affinity": [
+    0,
+    1,
+    2
+  ],
+  "workers": 1,
+  "binaries": {
+    "replay": "240b37a7d8fa4ca6cb7630a9feec8fb50e3d15f1bfbc1bbda43dc713dd787c12",
+    "navigation_memory": "c764142785fd40329949220f5c4a399ca89d8701404eb0cf4e4147295f5135e5",
+    "replay_memory": "00310aebbf94c64f8cba92cc8fa22dce24976ba424379f1094bea0d581bf3a1f",
+    "navigation": "cda0c4bdf114bb9d0b01b92a0604f7de400a81e22c02c07fc8d505d9ec8d3552"
+  },
+  "manifest_sha256": "a08cc49019fd56cc3419b3933494ebbed877ea91878f3619d75aa46221fac945",
+  "jobs": {
+    "timing_replay_car16": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/replay",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_envelope/frozen/car16_replay.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/timing_replay_car16.csv",
+        "--methods",
+        "lift_mesh,cascade_lift,lift_cold,lift_noprune,cascade_cold,lba_reuse,mesha,mesha_reuse,mpgaa,batch_mpgaa,md_astar,boundary_mesh,conditional_dstar,cmesh_dstar,cascade_mesh",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--mode",
+        "replay",
+        "--seed",
+        "982313"
+      ],
+      "expected_runs": 2340,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "replay",
+        "runs": 2340,
+        "rows": 25020,
+        "capped_queries": 120,
+        "step_limited_missions": 0,
+        "repeats": 3,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 160,
+        "preparation_s": 0.01627136,
+        "certificate_s": 0.000194654,
+        "wall_s": 1974.18297862,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.00032285699999999996,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0,
+        "variant_compile_s": 0.004272637,
+        "variant_model_heap_retained_bytes": 0,
+        "variant_model_heap_peak_bytes": 0,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 412,
+            "edges": 680,
+            "support_groups": 968,
+            "delta": 0.03125
+          },
+          "cmesh": {
+            "configurations": 188,
+            "edges": 456,
+            "support_groups": 728,
+            "delta": 0.03125
+          },
+          "suffix_mesh": {
+            "configurations": 428,
+            "edges": 696,
+            "support_groups": 860,
+            "delta": 0.03125
+          },
+          "boundary_mesh": {
+            "configurations": 16,
+            "edges": 284,
+            "support_groups": 424,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "timing_replay_car16.csv.json": "35bb3a44950ce32551e7f8ebef3f97ea7056124286954951208a148ab97a3bfd",
+        "timing_replay_car16.csv": "0e3f79cb87726bc1ee2073efebd31d11f7034c7eee24fb2e17bfd18ac46d7331"
+      }
+    },
+    "timing_replay_grid8": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/replay",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_envelope/frozen/grid8_replay.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/timing_replay_grid8.csv",
+        "--methods",
+        "lift_mesh,cascade_lift,lift_cold,lift_noprune,cascade_cold,lba_reuse,mesha,mesha_reuse,mpgaa,batch_mpgaa,md_astar,boundary_mesh,conditional_dstar,cmesh_dstar,cascade_mesh,octile_reuse",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--mode",
+        "replay",
+        "--seed",
+        "982313"
+      ],
+      "expected_runs": 4608,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "replay",
+        "runs": 4608,
+        "rows": 101856,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 3,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 160,
+        "preparation_s": 0.004329666,
+        "certificate_s": 4.276e-06,
+        "wall_s": 9.104771565,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 6.62e-06,
+        "mesh_index_nodes": 1,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0,
+        "variant_compile_s": 3.7086e-05,
+        "variant_model_heap_retained_bytes": 0,
+        "variant_model_heap_peak_bytes": 0,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "cmesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "suffix_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "boundary_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "timing_replay_grid8.csv.json": "ee58a074c6b6108c242f76050a8e579fa5e217f9dee9e8d303935fe5414d2443",
+        "timing_replay_grid8.csv": "29d96d5f90e15d9d5d3934756df325512d2fffe3aeae92e8b0891beb2d484ba3"
+      }
+    },
+    "timing_navigation_car16_AR0700_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_AR0700_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/timing_navigation_car16_AR0700_dynamic",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_AR0700_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 198,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 198,
+        "calls": 1800,
+        "caps": 27,
+        "wall_s": 310.320071017,
+        "preparation_s": 0.018631115,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.00021388799999999997,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_AR0700_dynamic.json": "3d30b1c7bcafe2a41c9a073ae57fa92f3ceedc9d6ffa2a610969bcc05f9a82d1",
+        "timing_navigation_car16_AR0700_dynamic_runs.csv": "6277279e2f8c9e144f8d407b973d272016038e71eb8921ad66dbc73e3835b438",
+        "timing_navigation_car16_AR0700_dynamic_calls.csv": "1962e3985ec1553542ab3fa4c1f6155687a2124e181dea91170fd77dc139fe02",
+        "timing_navigation_car16_AR0700_dynamic_traces.csv": "17e4db44cebd715e79daaea5d50f803313486bb679a8c932224a6e13c3e01c49"
+      }
+    },
+    "timing_navigation_car16_AR0700_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_AR0700_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/timing_navigation_car16_AR0700_unknown",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_AR0700_unknown.specs.txt"
+      ],
+      "expected_runs": 264,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 264,
+        "calls": 7506,
+        "caps": 0,
+        "wall_s": 27.824465249,
+        "preparation_s": 0.006992507,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000174413,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_AR0700_unknown.json": "f5283e4d7406df1ef3a1cf461c464394676286415c4a56a6a28b0fa8491e09f9",
+        "timing_navigation_car16_AR0700_unknown_runs.csv": "f6e1579a6ff58e0a92d74409b4d8005651c15909b03b5c9b00b12284f16dc1ca",
+        "timing_navigation_car16_AR0700_unknown_calls.csv": "f56e18998a833c870e71325c234e5c08d6a8516b60ec4bc1529ae044e9407850",
+        "timing_navigation_car16_AR0700_unknown_traces.csv": "39af3c32df17271b3ac8ee462d5b86525d4d178dde26bb8e31370e7a27ade261"
+      }
+    },
+    "timing_navigation_car16_Berlin_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_Berlin_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/timing_navigation_car16_Berlin_dynamic",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_Berlin_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 198,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 198,
+        "calls": 2136,
+        "caps": 27,
+        "wall_s": 393.335440234,
+        "preparation_s": 0.008435635,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000211979,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_Berlin_dynamic.json": "d55f17d294b8ef96aa8c313a7021a674dae2aecac9c306b565b56fab80fdc28a",
+        "timing_navigation_car16_Berlin_dynamic_runs.csv": "3639070aafba65d7f1264688ad39c434e76e1e8d2b55981d36f493a3e65e0798",
+        "timing_navigation_car16_Berlin_dynamic_calls.csv": "453a50ea623cd2805cecd0a615e10aa02ee707c413c9b05ad5e9cd8708241faa",
+        "timing_navigation_car16_Berlin_dynamic_traces.csv": "5e263fb732c917324ea3919ccc2fd0dd48733512f9738d9045c935c793421171"
+      }
+    },
+    "timing_navigation_car16_Berlin_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_Berlin_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/timing_navigation_car16_Berlin_unknown",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_Berlin_unknown.specs.txt"
+      ],
+      "expected_runs": 264,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 264,
+        "calls": 6681,
+        "caps": 0,
+        "wall_s": 47.227266904,
+        "preparation_s": 0.005443513,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000176076,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_Berlin_unknown.json": "7d67e47450b9174c15ca3f6523959b424c96f164a6ab1902319e4b687811dd50",
+        "timing_navigation_car16_Berlin_unknown_runs.csv": "eeb6e4f197fd75293e9e769dcf735913360cd16742e1b6a9dd47bd38dfe3a7b5",
+        "timing_navigation_car16_Berlin_unknown_calls.csv": "2b7cc5d2487b942c23f804a4f133f560f357d316a7a7b42afc0f562df9948516",
+        "timing_navigation_car16_Berlin_unknown_traces.csv": "4ae80d0a60f998d2295c090ec70832d14e6911c84baa1d5b46973cb41d0a6c06"
+      }
+    },
+    "timing_navigation_car16_MA_maze96_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_maze96_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/timing_navigation_car16_MA_maze96_dynamic",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_MA_maze96_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 198,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 198,
+        "calls": 3261,
+        "caps": 18,
+        "wall_s": 570.134943821,
+        "preparation_s": 0.007016421,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000174473,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_MA_maze96_dynamic.json": "628aca03b66c0ecc444efd2397ab4a3b8546623cb562383060a8e92c82725944",
+        "timing_navigation_car16_MA_maze96_dynamic_runs.csv": "67367539ff35357e1b83736294435f556fd69cd319215c403d09393d480ca0e2",
+        "timing_navigation_car16_MA_maze96_dynamic_calls.csv": "f066cb9a02c1de6fda13c851d1e524ebc5f2103eda07448b64882f802cc07dfc",
+        "timing_navigation_car16_MA_maze96_dynamic_traces.csv": "9f859bb831a89735266ecc0772e531fc69f353b2cbc0ec9e8b94cb5ee7595eed"
+      }
+    },
+    "timing_navigation_car16_MA_maze96_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_maze96_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/timing_navigation_car16_MA_maze96_unknown",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_MA_maze96_unknown.specs.txt"
+      ],
+      "expected_runs": 264,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 264,
+        "calls": 19569,
+        "caps": 9,
+        "wall_s": 1203.605691207,
+        "preparation_s": 0.004661145,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000174793,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_MA_maze96_unknown.json": "1bee5ba30253f26692e42314b560e8bb17b2898dd36178f963fba7df030fb451",
+        "timing_navigation_car16_MA_maze96_unknown_runs.csv": "86ec4a8cc3bf915dd54b7fede962deb6b6794c34b113a7a902f56a0cd67eb1fc",
+        "timing_navigation_car16_MA_maze96_unknown_calls.csv": "d57d9646a0d6581d7adeb176e19e1b81cdfc2d82f609fafb21ed423398ea5641",
+        "timing_navigation_car16_MA_maze96_unknown_traces.csv": "5d08e52a2da734db490b7a99d5c646bf2fe33335e55b99bc42ee9fafde52712a"
+      }
+    },
+    "timing_navigation_car16_MA_random96_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_random96_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/timing_navigation_car16_MA_random96_dynamic",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_MA_random96_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 198,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 198,
+        "calls": 1980,
+        "caps": 3,
+        "wall_s": 30.67983903,
+        "preparation_s": 0.011897427,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.00018644999999999998,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_MA_random96_dynamic.json": "b8d36855d176766f0fa20627b2d309bee437ee699832434e8fc8481a75999060",
+        "timing_navigation_car16_MA_random96_dynamic_runs.csv": "b79c0caa23bedf7be4ab056aa4a205513ceb6a45bca0b9c003b03e05fa2077ba",
+        "timing_navigation_car16_MA_random96_dynamic_calls.csv": "e953907665d8c7b68ed1e1d44639983093548d3daee4a45a50a3660611052301",
+        "timing_navigation_car16_MA_random96_dynamic_traces.csv": "a51b20c602470d2ead7e93450cea6f71f927b0ca0b84dc4f851404d3b3bf38f9"
+      }
+    },
+    "timing_navigation_car16_MA_random96_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_random96_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/timing_navigation_car16_MA_random96_unknown",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_MA_random96_unknown.specs.txt"
+      ],
+      "expected_runs": 264,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 264,
+        "calls": 4548,
+        "caps": 0,
+        "wall_s": 5.14777522,
+        "preparation_s": 0.005417145,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000170917,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_MA_random96_unknown.json": "0cc30e07021fb73c2326c15d53d0426421f2f81af2c654be38bae05e8aca81c8",
+        "timing_navigation_car16_MA_random96_unknown_runs.csv": "1461b6785f192b498241595a3226ed428faaceed4ee6eec94b8cb8f0afa99080",
+        "timing_navigation_car16_MA_random96_unknown_calls.csv": "5e1140cecee3e7bfa2076189d8d7d42443061cef33b97436f6a3bb40eff46a1c",
+        "timing_navigation_car16_MA_random96_unknown_traces.csv": "67b35c8bc3aa0898f6e5b188fc64905e03d2a933e7ea9b8012a719794416d864"
+      }
+    },
+    "timing_navigation_car16_MA_room96_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_room96_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/timing_navigation_car16_MA_room96_dynamic",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_MA_room96_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 198,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 198,
+        "calls": 2307,
+        "caps": 3,
+        "wall_s": 68.65299598,
+        "preparation_s": 0.006950832,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000181233,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_MA_room96_dynamic.json": "264433e9c034aec9683b22f77a7dad7b57ab9c5f1042e557db75c9aa606846c1",
+        "timing_navigation_car16_MA_room96_dynamic_runs.csv": "fc02ca6217071aa10f94caa4ff712a28ee820a19cca089e1abc2dc8e5f339e97",
+        "timing_navigation_car16_MA_room96_dynamic_calls.csv": "faebe0079bb0e16ef8c6ae2c5d2f6b50bffd60c15ba60fc72cf6298c04ebc54d",
+        "timing_navigation_car16_MA_room96_dynamic_traces.csv": "b1219a264d90d3209f5acd912e0b5127f78ed194b44a232ce11afac43e346d04"
+      }
+    },
+    "timing_navigation_car16_MA_room96_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_room96_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/timing_navigation_car16_MA_room96_unknown",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_MA_room96_unknown.specs.txt"
+      ],
+      "expected_runs": 264,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 264,
+        "calls": 7944,
+        "caps": 0,
+        "wall_s": 90.505613051,
+        "preparation_s": 0.00438566,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000170826,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_MA_room96_unknown.json": "db237f267077135ca618cb6127de3fe83d989e34618881c228113b9f3673a702",
+        "timing_navigation_car16_MA_room96_unknown_runs.csv": "19da3b98adcc6c9f5d3d7b0406edca424ca92aae647cec92a19683142bfd2d18",
+        "timing_navigation_car16_MA_room96_unknown_calls.csv": "d7d7f87f4728a757de8afe3acb042a77cdeee169257087f0aef8c83279afe140",
+        "timing_navigation_car16_MA_room96_unknown_traces.csv": "b4c0d4fb88bf2eddef65f40e4985943c55f65f332a3b223cc784b7c5bea69fe3"
+      }
+    },
+    "timing_navigation_car16_arena_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_arena_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/timing_navigation_car16_arena_dynamic",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_arena_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 198,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 198,
+        "calls": 1635,
+        "caps": 0,
+        "wall_s": 8.265258203,
+        "preparation_s": 0.008481448,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.00017253,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_arena_dynamic.json": "0a0419a14ff0aef1c96dcff58820278ca9fcec0d6e034ee7bc18f376e34228be",
+        "timing_navigation_car16_arena_dynamic_runs.csv": "b0129b40d9e233aee5f1d190444a914fbc00e8303dd2967735ab20b168966f3c",
+        "timing_navigation_car16_arena_dynamic_calls.csv": "88a59966d0c3c8fc3aa58caa6a5cdb85d0fd31c58896ff26c2bba406e79e75fd",
+        "timing_navigation_car16_arena_dynamic_traces.csv": "bd3af69e98c107bcb53609ec173c8453931672878d98a56faee939176f700ea8"
+      }
+    },
+    "timing_navigation_car16_arena_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_arena_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/timing_navigation_car16_arena_unknown",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_arena_unknown.specs.txt"
+      ],
+      "expected_runs": 264,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 264,
+        "calls": 3069,
+        "caps": 0,
+        "wall_s": 1.197485936,
+        "preparation_s": 0.004101747,
+        "cap": 1000000,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.00017559500000000002,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0
+      },
+      "outputs": {
+        "timing_navigation_car16_arena_unknown.json": "1878bd1c14081b1179dd9290d23a814750bd913996a3f5ef2be1e99ee59751e8",
+        "timing_navigation_car16_arena_unknown_runs.csv": "d9b6d967a78002732a4f9e5413621270f87ca72d2fefc28615f228b80e7835d7",
+        "timing_navigation_car16_arena_unknown_calls.csv": "f061d6a5c551900b60e969b4fbaaeb70ce9d5ee6c847ec75c5e1a58590034c7b",
+        "timing_navigation_car16_arena_unknown_traces.csv": "19c75b45e3effba012248e39828ae87ba65ed6a572b95210a0239c18a64a10e2"
+      }
+    },
+    "memory_replay_car16": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/replay_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_envelope/frozen/car16_replay.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/memory_replay_car16.csv",
+        "--methods",
+        "lift_mesh,cascade_lift,lift_cold,lift_noprune,cascade_cold,lba_reuse,mesha,mesha_reuse,mpgaa,batch_mpgaa,md_astar,boundary_mesh,conditional_dstar,cmesh_dstar,cascade_mesh",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--mode",
+        "replay",
+        "--seed",
+        "982313"
+      ],
+      "expected_runs": 780,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "replay",
+        "runs": 780,
+        "rows": 8340,
+        "capped_queries": 40,
+        "step_limited_missions": 0,
+        "repeats": 1,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 160,
+        "preparation_s": 0.019917058,
+        "certificate_s": 8.8511e-05,
+        "wall_s": 761.302436693,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000210131,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 144976,
+        "mesh_index_heap_peak_bytes": 145040,
+        "variant_compile_s": 0.002758515,
+        "variant_model_heap_retained_bytes": 916592,
+        "variant_model_heap_peak_bytes": 916656,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 412,
+            "edges": 680,
+            "support_groups": 968,
+            "delta": 0.03125
+          },
+          "cmesh": {
+            "configurations": 188,
+            "edges": 456,
+            "support_groups": 728,
+            "delta": 0.03125
+          },
+          "suffix_mesh": {
+            "configurations": 428,
+            "edges": 696,
+            "support_groups": 860,
+            "delta": 0.03125
+          },
+          "boundary_mesh": {
+            "configurations": 16,
+            "edges": 284,
+            "support_groups": 424,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "memory_replay_car16.csv.json": "b4e0c3122b87314ffe9f1b0385c8a260aeec943069e9b2d2184ef68ac3d376a5",
+        "memory_replay_car16.csv": "507cadb9911eddb0977927307bed74e44f4eb8994e1a3f580ccee928df10b03a"
+      }
+    },
+    "memory_replay_grid8": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/replay_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_envelope/frozen/grid8_replay.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/memory_replay_grid8.csv",
+        "--methods",
+        "lift_mesh,cascade_lift,lift_cold,lift_noprune,cascade_cold,lba_reuse,mesha,mesha_reuse,mpgaa,batch_mpgaa,md_astar,boundary_mesh,conditional_dstar,cmesh_dstar,cascade_mesh,octile_reuse",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--mode",
+        "replay",
+        "--seed",
+        "982313"
+      ],
+      "expected_runs": 1536,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "replay",
+        "runs": 1536,
+        "rows": 33952,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 1,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 160,
+        "preparation_s": 0.004424071,
+        "certificate_s": 5.358e-06,
+        "wall_s": 2.996079016,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 6.33e-06,
+        "mesh_index_nodes": 1,
+        "mesh_index_heap_retained_bytes": 2264,
+        "mesh_index_heap_peak_bytes": 2904,
+        "variant_compile_s": 9.7968e-05,
+        "variant_model_heap_retained_bytes": 9800,
+        "variant_model_heap_peak_bytes": 10440,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "cmesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "suffix_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "boundary_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "memory_replay_grid8.csv.json": "2d9d997a78b6ef3a4ef0dfd88624ed8198f6bfdca5c6e39506f86b39e7049407",
+        "memory_replay_grid8.csv": "0ca10829eb77f40dac9a3933e21e72dba7b44908afd45e447ccf8143d5261fe0"
+      }
+    },
+    "memory_navigation_car16_AR0700_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_AR0700_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/memory_navigation_car16_AR0700_dynamic",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_AR0700_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 66,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 66,
+        "calls": 600,
+        "caps": 9,
+        "wall_s": 121.927337047,
+        "preparation_s": 0.01114537,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000184919,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 144976,
+        "mesh_index_heap_peak_bytes": 145040
+      },
+      "outputs": {
+        "memory_navigation_car16_AR0700_dynamic.json": "ebf75b1af9486dc553d81be1373b06e1d29bfa561095b833cd776dc48574d639",
+        "memory_navigation_car16_AR0700_dynamic_runs.csv": "2feab0c85b3984c33c0dda8322c7338ddf59d1dd4deafdf456dcfbc05273ec89",
+        "memory_navigation_car16_AR0700_dynamic_calls.csv": "cbfd3a0df94ab8b982eb17a90733df911bc9177f4f319c4c8fbc7e1ba0f28691",
+        "memory_navigation_car16_AR0700_dynamic_traces.csv": "17e4db44cebd715e79daaea5d50f803313486bb679a8c932224a6e13c3e01c49"
+      }
+    },
+    "memory_navigation_car16_AR0700_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_AR0700_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/memory_navigation_car16_AR0700_unknown",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_AR0700_unknown.specs.txt"
+      ],
+      "expected_runs": 88,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 88,
+        "calls": 2502,
+        "caps": 0,
+        "wall_s": 10.885171813,
+        "preparation_s": 0.007317897,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000262736,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 144976,
+        "mesh_index_heap_peak_bytes": 145040
+      },
+      "outputs": {
+        "memory_navigation_car16_AR0700_unknown.json": "33a1aaa447d21f63960a646a7d2e3f2327ee0da88d0d6ef950ab8140179f1b31",
+        "memory_navigation_car16_AR0700_unknown_runs.csv": "392e43249b4ddebf4e60d7cc95249c4003ca1aa73c1869586997d986c96925fc",
+        "memory_navigation_car16_AR0700_unknown_calls.csv": "4626a807881fd99f9342b1b66d412dffb070537646aae8db08652be0b7a3e861",
+        "memory_navigation_car16_AR0700_unknown_traces.csv": "39af3c32df17271b3ac8ee462d5b86525d4d178dde26bb8e31370e7a27ade261"
+      }
+    },
+    "memory_navigation_car16_Berlin_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_Berlin_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/memory_navigation_car16_Berlin_dynamic",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_Berlin_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 66,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 66,
+        "calls": 712,
+        "caps": 9,
+        "wall_s": 146.088901835,
+        "preparation_s": 0.012626806,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000190307,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 144976,
+        "mesh_index_heap_peak_bytes": 145040
+      },
+      "outputs": {
+        "memory_navigation_car16_Berlin_dynamic.json": "5c88e644e1264093ed6ef2e964c1a4f8e61c80f61b85ec1480160b86549c6052",
+        "memory_navigation_car16_Berlin_dynamic_runs.csv": "2b74e61ee8dae3d6c77ba5b73703600c943050f4d45ffb7e619380e556463d08",
+        "memory_navigation_car16_Berlin_dynamic_calls.csv": "61195aa382b4dc815320a216c1749a034a8fa3ba91918eab88cb3e44e7cc4a55",
+        "memory_navigation_car16_Berlin_dynamic_traces.csv": "5e263fb732c917324ea3919ccc2fd0dd48733512f9738d9045c935c793421171"
+      }
+    },
+    "memory_navigation_car16_Berlin_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_Berlin_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/memory_navigation_car16_Berlin_unknown",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_Berlin_unknown.specs.txt"
+      ],
+      "expected_runs": 88,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 88,
+        "calls": 2227,
+        "caps": 0,
+        "wall_s": 17.269523116,
+        "preparation_s": 0.006397147,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.00018513900000000002,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 144976,
+        "mesh_index_heap_peak_bytes": 145040
+      },
+      "outputs": {
+        "memory_navigation_car16_Berlin_unknown.json": "1b029f2712603608cea548a8b46ae4a0e4f19e83261ee49907f5fbd4a406599e",
+        "memory_navigation_car16_Berlin_unknown_runs.csv": "503b0e44a873728e89918f850651af4eb7f33f8ef8f83836228cc49bb0efcd59",
+        "memory_navigation_car16_Berlin_unknown_calls.csv": "96ec1a68db64949829af075be1a8d56bca810100401977d39bd8e09a6fe209e5",
+        "memory_navigation_car16_Berlin_unknown_traces.csv": "4ae80d0a60f998d2295c090ec70832d14e6911c84baa1d5b46973cb41d0a6c06"
+      }
+    },
+    "memory_navigation_car16_MA_maze96_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_maze96_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/memory_navigation_car16_MA_maze96_dynamic",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_MA_maze96_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 66,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 66,
+        "calls": 1087,
+        "caps": 6,
+        "wall_s": 209.234913473,
+        "preparation_s": 0.007039808,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000185249,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 144976,
+        "mesh_index_heap_peak_bytes": 145040
+      },
+      "outputs": {
+        "memory_navigation_car16_MA_maze96_dynamic.json": "5edb25fd8101cf39b7b949464757306fe1d25862a89a67c874b147072b740b9e",
+        "memory_navigation_car16_MA_maze96_dynamic_runs.csv": "352f115ff824046998f531cfa0635227c059ece73b19bcdd5b945c1e401b3e2a",
+        "memory_navigation_car16_MA_maze96_dynamic_calls.csv": "3ec109269c49e1fc528264030df1d67638193d9fd5e22491da5bf055d9bceffd",
+        "memory_navigation_car16_MA_maze96_dynamic_traces.csv": "9f859bb831a89735266ecc0772e531fc69f353b2cbc0ec9e8b94cb5ee7595eed"
+      }
+    },
+    "memory_navigation_car16_MA_maze96_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_maze96_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/memory_navigation_car16_MA_maze96_unknown",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_MA_maze96_unknown.specs.txt"
+      ],
+      "expected_runs": 88,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 88,
+        "calls": 6523,
+        "caps": 3,
+        "wall_s": 430.372461874,
+        "preparation_s": 0.00461804,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000195044,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 144976,
+        "mesh_index_heap_peak_bytes": 145040
+      },
+      "outputs": {
+        "memory_navigation_car16_MA_maze96_unknown.json": "1f9120c42b642ac29a643c938e6367e3da0622b709855ace7f0faa7d7f0bb1df",
+        "memory_navigation_car16_MA_maze96_unknown_runs.csv": "16011fab8f2ea668601f8be34c961cc7f68e133c5050edd6d592b9874317a3e4",
+        "memory_navigation_car16_MA_maze96_unknown_calls.csv": "3cd11329e1ab36f0bd28930f660cc323c18683d1c74a6ec118e3e5ab8bae2e9b",
+        "memory_navigation_car16_MA_maze96_unknown_traces.csv": "5d08e52a2da734db490b7a99d5c646bf2fe33335e55b99bc42ee9fafde52712a"
+      }
+    },
+    "memory_navigation_car16_MA_random96_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_random96_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/memory_navigation_car16_MA_random96_dynamic",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_MA_random96_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 66,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 66,
+        "calls": 660,
+        "caps": 1,
+        "wall_s": 11.221785161,
+        "preparation_s": 0.007206908,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000235651,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 144976,
+        "mesh_index_heap_peak_bytes": 145040
+      },
+      "outputs": {
+        "memory_navigation_car16_MA_random96_dynamic.json": "1147b3e9a07b416857c0771a077f9f407ad21e09d5bab10bbf452cb9d1254729",
+        "memory_navigation_car16_MA_random96_dynamic_runs.csv": "76113b78906302a6edbc5747876b262be8543d551570c8868aa0ad203335217d",
+        "memory_navigation_car16_MA_random96_dynamic_calls.csv": "89b978591b31eb35d8026f6cd3f6975e425ba9c459b0bc5250279e9fc907d80e",
+        "memory_navigation_car16_MA_random96_dynamic_traces.csv": "a51b20c602470d2ead7e93450cea6f71f927b0ca0b84dc4f851404d3b3bf38f9"
+      }
+    },
+    "memory_navigation_car16_MA_random96_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_random96_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/memory_navigation_car16_MA_random96_unknown",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_MA_random96_unknown.specs.txt"
+      ],
+      "expected_runs": 88,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 88,
+        "calls": 1516,
+        "caps": 0,
+        "wall_s": 1.738176961,
+        "preparation_s": 0.004955733,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.00019067599999999997,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 144976,
+        "mesh_index_heap_peak_bytes": 145040
+      },
+      "outputs": {
+        "memory_navigation_car16_MA_random96_unknown.json": "c9f640307d65c3160f4b47608903db87dec02c9e3be04667ab92c45ee2141a70",
+        "memory_navigation_car16_MA_random96_unknown_runs.csv": "f8f6d3a06d104ac796ada85a47ab253a528171bcdd42b46522f7543da07a599f",
+        "memory_navigation_car16_MA_random96_unknown_calls.csv": "59c615e9af440c37f6e8141fd5c0fdc08544102cc34bd57abae89e88d54767bc",
+        "memory_navigation_car16_MA_random96_unknown_traces.csv": "67b35c8bc3aa0898f6e5b188fc64905e03d2a933e7ea9b8012a719794416d864"
+      }
+    },
+    "memory_navigation_car16_MA_room96_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_room96_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/memory_navigation_car16_MA_room96_dynamic",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_MA_room96_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 66,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 66,
+        "calls": 769,
+        "caps": 1,
+        "wall_s": 26.309025368,
+        "preparation_s": 0.007069654,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000185899,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 144976,
+        "mesh_index_heap_peak_bytes": 145040
+      },
+      "outputs": {
+        "memory_navigation_car16_MA_room96_dynamic.json": "51887fcdb2b5651e1103bbdf70bcee9ae98397d2f16f77049a07f1aed79caaac",
+        "memory_navigation_car16_MA_room96_dynamic_runs.csv": "a6a13a82f29c01fdb4a377faa45c9668057898c37b7e589a3af51a2e251a1bb9",
+        "memory_navigation_car16_MA_room96_dynamic_calls.csv": "1af188c1610250a4c05b13fcfd18cc6c258c38dbd300cfc43e5a5d72a981b1e0",
+        "memory_navigation_car16_MA_room96_dynamic_traces.csv": "b1219a264d90d3209f5acd912e0b5127f78ed194b44a232ce11afac43e346d04"
+      }
+    },
+    "memory_navigation_car16_MA_room96_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_MA_room96_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/memory_navigation_car16_MA_room96_unknown",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_MA_room96_unknown.specs.txt"
+      ],
+      "expected_runs": 88,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 88,
+        "calls": 2648,
+        "caps": 0,
+        "wall_s": 32.742674263,
+        "preparation_s": 0.00463987,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.00026797400000000003,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 144976,
+        "mesh_index_heap_peak_bytes": 145040
+      },
+      "outputs": {
+        "memory_navigation_car16_MA_room96_unknown.json": "264a323c42bec9f2c73f146e1caaf86cf2562f67baf0fc7b37e1b5fc6abc5186",
+        "memory_navigation_car16_MA_room96_unknown_runs.csv": "aa2a54abc4f3c4cb39d0824a2584c2b935106374fbe33c0427a8ac7401088b54",
+        "memory_navigation_car16_MA_room96_unknown_calls.csv": "d0598bb3b3b3d88427b4fd6a91e1a7fa96b2815e46debfdd16337884d4e9eb72",
+        "memory_navigation_car16_MA_room96_unknown_traces.csv": "b4c0d4fb88bf2eddef65f40e4985943c55f65f332a3b223cc784b7c5bea69fe3"
+      }
+    },
+    "memory_navigation_car16_arena_dynamic": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_arena_dynamic.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/memory_navigation_car16_arena_dynamic",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_arena_dynamic.specs.txt",
+        "--visibility",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_visibility.txt"
+      ],
+      "expected_runs": 66,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 66,
+        "calls": 545,
+        "caps": 0,
+        "wall_s": 3.025179915,
+        "preparation_s": 0.007899344,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.00020613,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 144976,
+        "mesh_index_heap_peak_bytes": 145040
+      },
+      "outputs": {
+        "memory_navigation_car16_arena_dynamic.json": "2132b3c1b99eed322380cac610389ca943a12de02606eb21725b4a3f98943898",
+        "memory_navigation_car16_arena_dynamic_runs.csv": "2fc507cb067af60efb367c4a5b0d20f400cff0928b44fa6931665a607034d69b",
+        "memory_navigation_car16_arena_dynamic_calls.csv": "bdd62400f7217f0cd39f98b99875e3eaaf23b9bcf67bf0722d63524fc1ec2a7d",
+        "memory_navigation_car16_arena_dynamic_traces.csv": "bd3af69e98c107bcb53609ec173c8453931672878d98a56faee939176f700ea8"
+      }
+    },
+    "memory_navigation_car16_arena_unknown": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/navigation_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps/frozen/car16_arena_unknown.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/full/memory_navigation_car16_arena_unknown",
+        "--methods",
+        "lift_mesh,cascade_lift,cascade_mesh,lift_cold,cascade_cold,mesha_reuse,lba_reuse,batch_mpgaa,md_astar,conditional_dstar,cmesh_dstar",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--specs",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_vertex/frozen/car16_arena_unknown.specs.txt"
+      ],
+      "expected_runs": 88,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "runs": 88,
+        "calls": 1023,
+        "caps": 0,
+        "wall_s": 0.400676915,
+        "preparation_s": 0.004521225,
+        "cap": 1000000,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.000189935,
+        "mesh_index_nodes": 412,
+        "mesh_index_heap_retained_bytes": 144976,
+        "mesh_index_heap_peak_bytes": 145040
+      },
+      "outputs": {
+        "memory_navigation_car16_arena_unknown.json": "3e39ba323ea9bec45fe4bb7ecfb1f9cf553ecb8377e8dcca9a75538ef785cc64",
+        "memory_navigation_car16_arena_unknown_runs.csv": "95eefc5a95f9f525ad44c769df6884dc1a8cf6261fecd1dbba311a265a5cb6d7",
+        "memory_navigation_car16_arena_unknown_calls.csv": "5db5ddc1a708cdf67aa5cfadea18c0c951cba2c7d907063be4fa15079c9d4591",
+        "memory_navigation_car16_arena_unknown_traces.csv": "19c75b45e3effba012248e39828ae87ba65ed6a572b95210a0239c18a64a10e2"
+      }
+    }
+  }
+}

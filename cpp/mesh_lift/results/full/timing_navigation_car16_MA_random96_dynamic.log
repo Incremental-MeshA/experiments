@@ -1,0 +1,7 @@
+33 runs; car16__MA_random96__dynamic__s48101__k2__cr5__n2; 23.2239 s
+66 runs; car16__MA_random96__dynamic__s48101__k8__cr10__n8; 24.5621 s
+99 runs; car16__MA_random96__dynamic__s48101__k32__cr20__n32; 24.6445 s
+132 runs; car16__MA_random96__dynamic__s48102__k2__cr5__n2; 29.1032 s
+165 runs; car16__MA_random96__dynamic__s48102__k8__cr10__n8; 30.5575 s
+198 runs; car16__MA_random96__dynamic__s48102__k32__cr20__n32; 30.6782 s
+passed 198 navigation runs; 3 query caps

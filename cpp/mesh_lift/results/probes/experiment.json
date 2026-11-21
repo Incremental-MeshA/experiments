@@ -1,0 +1,70 @@
+{
+  "status": "passed",
+  "source_sha256": "db690022aa14bed226ff65aed4db90b99bc39248bf6293e4c55fc7d3aec41788",
+  "manifest_sha256": "a08cc49019fd56cc3419b3933494ebbed877ea91878f3619d75aa46221fac945",
+  "binary_sha256": "ecd653be289295950cbebadd4c2a207fded17c2a45792c8f3f67512ddcb934ae",
+  "patched_source_sha256": "b45364b4ee10769a99c51291c438c1ebf498a1cb70fc8a0d3a821eb9456fb9c1",
+  "patched_model_sha256": "842413c5bdefd9690f0bc3db09b5b003176c6c5766ee8d503150cca028dd5b1b",
+  "command": [
+    "g++",
+    "-O3",
+    "-DNDEBUG",
+    "-std=c++17",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-I/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/count_overlay/cpp/include",
+    "-I/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/count_overlay/cpp/experiments",
+    "-I/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/count_overlay/cpp/mesh_variants",
+    "-I/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/count_overlay/cpp/navigation_sweeps",
+    "-DIMA_EXPERIMENT_FLAGS=\"count-only -O3 -std=c++17\"",
+    "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/count_overlay/cpp/mesh_lift/replay_count.cpp",
+    "-o",
+    "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/replay_count"
+  ],
+  "jobs": [
+    {
+      "name": "replay_car16",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/replay_count",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_envelope/frozen/car16_replay.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/probes/replay_car16.csv",
+        "--methods",
+        "lift_mesh,cascade_lift,lift_cold,lift_noprune,cascade_cold,lba_reuse,mesha,mesha_reuse,mpgaa,batch_mpgaa,md_astar,boundary_mesh,conditional_dstar,cmesh_dstar,cascade_mesh",
+        "--repeats",
+        "1",
+        "--seed",
+        "982313",
+        "--cap",
+        "1000000"
+      ],
+      "runs": 780,
+      "csv_sha256": "cbd0140fa646125185f4febd1b5db39154214b97bd8621ffc8774789d5cd9f0d",
+      "metadata_sha256": "eaae4e717efcd96690ade5e4c783749ceae6099330ceebef71971b87f953b5fc"
+    },
+    {
+      "name": "replay_grid8",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/replay_count",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_envelope/frozen/grid8_replay.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/results/probes/replay_grid8.csv",
+        "--methods",
+        "lift_mesh,cascade_lift,lift_cold,lift_noprune,cascade_cold,lba_reuse,mesha,mesha_reuse,mpgaa,batch_mpgaa,md_astar,boundary_mesh,conditional_dstar,cmesh_dstar,cascade_mesh,octile_reuse",
+        "--repeats",
+        "1",
+        "--seed",
+        "982313",
+        "--cap",
+        "1000000"
+      ],
+      "runs": 1536,
+      "csv_sha256": "19657d80875c1a24113038fb9ec003352d9fadba940aa2b85c556b1bfd07956f",
+      "metadata_sha256": "1ebe423c448f26cf0f33c701cf4d6f583724a59d4bf925b5910f07f31d956352"
+    }
+  ],
+  "definition": "All Grid.free invocations strictly inside replan, including eligibility gates and outside-map probes; excludes direct Grid.blocked normalization, constructor, and reference/path verification. Logical API calls, not hardware loads. Times discarded."
+}

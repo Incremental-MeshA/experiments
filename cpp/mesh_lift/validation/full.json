@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "scenarios": 232,
+  "timed_runs": 9720,
+  "memory_runs": 3240,
+  "count_only_runs": 2316,
+  "allocation_matched_rows": 63104,
+  "count_only_matched_rows": 42292,
+  "terminal_prunes": 87286228,
+  "lift_writes": 39677366,
+  "mutation_detected": true,
+  "opening_counterexample": {
+    "status": "passed",
+    "model": "formal_prefix_opening_counterexample",
+    "configurations": 8,
+    "initial_cost": 12,
+    "oracle_after_openings": 4,
+    "lift_cost": 4,
+    "cascade_lift_cost": 4,
+    "no_closure_cost": 5,
+    "no_learned_mark_cost": 5
+  },
+  "capped_calls": 207,
+  "exact_cost_disagreements": 0,
+  "old_sources_unchanged": true,
+  "tests": [
+    {
+      "status": "passed",
+      "model": "grid8",
+      "comparisons": 2405,
+      "interior_expansions": 0,
+      "watch_inserts": 3976,
+      "local_steps": 5330,
+      "terminal_prunes": 0,
+      "lift_writes": 0,
+      "interior_joins": 0
+    },
+    {
+      "status": "passed",
+      "model": "car16",
+      "comparisons": 2405,
+      "interior_expansions": 2512592,
+      "watch_inserts": 71788,
+      "local_steps": 906224,
+      "terminal_prunes": 676834,
+      "lift_writes": 22422,
+      "interior_joins": 18
+    }
+  ],
+  "documents": [
+    {
+      "path": "docs/mesh_lift/report.pdf",
+      "pages": 40,
+      "sha256": "6da8e20993c71ccc72c067e7791d08a0e7a07e0dfe59a6b730899b2d7643c7cd"
+    },
+    {
+      "path": "docs/mesh_lift/paper.pdf",
+      "pages": 8,
+      "sha256": "f1fbaf3ffa5f69aa48b3b96a961f024a3edb12627cd91d50a7097b8922fbf55b"
+    }
+  ],
+  "executed_notebook_cells": 4
+}
