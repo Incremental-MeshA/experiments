@@ -29,7 +29,7 @@ def main(directory,tests):
    for b in page.get_text('blocks'):
     assert b[0]>=-1 and b[2]<=page.rect.width+1,(name,page.number,b[:4])
   docs.append(dict(file=str(p.relative_to(ROOT)),pages=len(pdf),text_chars=len(text),sha256=sha(p)))
- notebook=json.loads((ROOT/'docs/mesh_envelope/analysis.ipynb').read_text());assert notebook['metadata']['mesh_envelope_artifact']['source_sha256']==sha(HERE/'notebook.py');assert notebook['metadata']['mesh_envelope_artifact']['analysis_sha256']==sha(ad/'analysis.json');code=[c for c in notebook['cells'] if c['cell_type']=='code'];assert len(code)==4 and all(c.get('execution_count') for c in code)
+ notebook=json.loads((ROOT/'docs/mesh_envelope/analysis.ipynb').read_text());assert notebook['metadata']['mesh_envelope_artifact']['source_sha256']==sha(HERE/'notebook.py');assert notebook['metadata']['mesh_envelope_artifact']['analysis_sha256']==sha(ad/'analysis.json');code=[c for c in notebook['cells'] if c['cell_type']=='code'];assert len(code)==5 and all(c.get('execution_count') for c in code)
  assert not any(o.get('output_type')=='error' for c in code for o in c.get('outputs',[]))
  runs=[]
  if tests:
@@ -64,6 +64,8 @@ def main(directory,tests):
    result=subprocess.run([str(cp/'build/test'),str(ROOT/f'cpp/experiments/frozen/{model}_model.txt')],cwd=ROOT,text=True,capture_output=True,check=True);x=json.loads(result.stdout);assert x['status']=='passed';runs.append(dict(x,cohort='conditional'))
  pp=ROOT/'cpp/mesh_probe_count';ps=json.loads((pp/'results/experiment.json').read_text());pa=json.loads((pp/'results/analysis/analysis.json').read_text())
  assert ps['status']=='passed' and pa['status']=='passed' and ps['patcher_sha256']==sha(pp/'run.py')
+ assert ps['original_replay_sha256']==sha(cp/'replay.cpp') and ps['binary_sha256']==sha(pp/'build/replay_count')
+ for key,path in [('patched_model_sha256','cpp/include/ima/model.hpp'),('patched_algorithm_sha256','cpp/mesh_envelope/algorithms.hpp'),('patched_replay_sha256','cpp/mesh_conditional/replay_count.cpp')]:assert ps[key]==sha(pp/'build/overlay'/path),path
  assert pa['source_sha256']==sha(pp/'analyze.py') and pa['experiment_sha256']==sha(pp/'results/experiment.json')
  assert prov['probe_analysis_sha256']==sha(pp/'results/analysis/analysis.json')
  for p,h in ps['original_sources'].items():assert sha(ROOT/p)==h,p
@@ -71,9 +73,35 @@ def main(directory,tests):
   path=pp/'results'/(name+'.csv');assert sha(path)==job['csv_sha256'] and sha(Path(str(path)+'.json'))==job['json_sha256']
  for p,h in pa['tables_sha256'].items():assert sha(pp/'results/analysis'/p)==h,p
  for p,h in pa['figures_sha256'].items():assert sha(ROOT/p)==h,p
+ sp=ROOT/'cpp/mesh_symmetric';sm=json.loads((sp/'frozen/manifest.json').read_text());st=json.loads((sp/'results/full/experiment.json').read_text());sa=json.loads((sp/'results/full/analysis/analysis.json').read_text());sr=json.loads((sp/'results/full/analysis/report_provenance.json').read_text())
+ assert st['status']=='passed' and sa['status']=='passed' and sa['exact_cost_disagreements']==0
+ assert st['manifest_sha256']==sha(sp/'frozen/manifest.json') and sa['manifest_sha256']==st['manifest_sha256']
+ for p,h in {**sm['files'],**sm['sources']}.items():assert sha(ROOT/p)==h,p
+ for job in st['jobs'].values():
+  assert job['status']=='passed'
+  for p,h in job['outputs'].items():assert sha(sp/'results/full'/p)==h,p
+ for p,h in sa['tables_sha256'].items():assert sha(sp/'results/full/analysis'/p)==h,p
+ for p,h in sa['figures_sha256'].items():assert sha(ROOT/p)==h,p
+ for p,h in st['binaries'].items():assert sha(sp/'build'/p)==h,p
+ assert sa['source_sha256']==sha(sp/'analyze.py') and sa['timed_runs']==sm['timed_runs'] and sa['memory_runs']==sm['memory_runs']
+ assert sr['analysis_sha256']==sha(sp/'results/full/analysis/analysis.json') and sr['source_sha256']==sha(sp/'report.py')
+ assert sr['design_sha256']==sha(ROOT/'docs/mesh_symmetric/design.md') and sr['related_work_sha256']==sha(ROOT/'docs/mesh_envelope/related_work.md')
+ assert prov['symmetric_analysis_sha256']==sha(sp/'results/full/analysis/analysis.json') and prov['symmetric_report_sha256']==sha(sp/'results/full/analysis/report_provenance.json')
+ assert notebook['metadata']['mesh_envelope_artifact']['symmetric_analysis_sha256']==sha(sp/'results/full/analysis/analysis.json')
+ for name in ['report','paper']:
+  p=ROOT/f'docs/mesh_symmetric/{name}.pdf';assert sha(p)==sr[name]['pdf_sha256'] and sha(p.with_suffix('.md'))==sr[name]['markdown_sha256']
+  pdf=fitz.open(p);text='\n'.join(page.get_text() for page in pdf);assert len(pdf)>3 and len(text)>10000 and '\ufffd' not in text
+  for page in pdf:
+   for b in page.get_text('blocks'):assert b[0]>=-1 and b[2]<=page.rect.width+1,(name,page.number,b[:4])
+  docs.append(dict(file=str(p.relative_to(ROOT)),pages=len(pdf),text_chars=len(text),sha256=sha(p)))
+ if tests:
+  for model in ['grid8','car16']:
+   result=subprocess.run([str(sp/'build/test'),str(ROOT/f'cpp/experiments/frozen/{model}_model.txt')],cwd=ROOT,text=True,capture_output=True,check=True);x=json.loads(result.stdout);assert x['status']=='passed';runs.append(dict(x,cohort='symmetric'))
  untouched=['cpp/include/ima','cpp/experiments','cpp/navigation_sweeps','cpp/navigation_controls','cpp/mesh_variants','cpp/mpgaa_mesh','cpp/mpgaa_lazy','docs/mpgaa_mesh','docs/mpgaa_lazy']
  diff=subprocess.run(['git','diff','--name-only',manifest['base_commit'],'HEAD','--',*untouched],cwd=ROOT,text=True,capture_output=True,check=True);assert not diff.stdout,diff.stdout
  result=dict(status='passed',scenarios=a['scenarios'],timed_runs=a['timed_runs'],memory_runs=a['memory_runs'],cost_disagreements=0,allocation_matched_rows=a['allocation_matched_rows'],tests=runs,documents=docs,executed_notebook_cells=len(code),old_sources_unchanged=True,structural_complement=dict(scenarios=fa['scenarios'],timed_runs=fa['timed_runs'],memory_runs=fa['memory_runs'],allocation_matched_rows=fa['allocation_matched_rows']),conditional_validation=dict(scenarios=ca['scenarios'],timed_runs=ca['timed_runs'],memory_runs=ca['memory_runs'],allocation_matched_rows=ca['allocation_matched_rows']),collision_probe_validation=dict(counted_runs=pa['counted_runs'],logical_matched_rows=pa['logical_matched_rows']))
+ result['symmetric_validation']=dict(scenarios=sa['scenarios'],timed_runs=sa['timed_runs'],memory_runs=sa['memory_runs'],allocation_matched_rows=sa['allocation_matched_rows'])
+ result['total_timed_runs']=sum(x['timed_runs'] for x in [a,fa,ca,sa]);result['total_memory_runs']=sum(x['memory_runs'] for x in [a,fa,ca,sa]);result['unique_configurations']=a['scenarios']+fa['scenarios']+36
  print(json.dumps(result,indent=2))
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--directory',type=Path,default=HERE/'results/full');p.add_argument('--skip-tests',action='store_true');args=p.parse_args();main(args.directory,not args.skip_tests)

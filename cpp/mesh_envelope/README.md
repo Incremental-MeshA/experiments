@@ -11,7 +11,9 @@ New C++17 algorithms, in the independent branch `research/mesh-envelope`:
 
 Ablations: `mesh_cold`, `mesh_reuse` (identical exact search backend),
 `cut_mesh` (discard negative envelope on any opening), `lattice_envelope`
-(same envelope, independent primitive witnesses). The latter isolates the mesh.
+(same envelope, independent primitive witnesses). The latter is the mesh-representation
+ablation; its endpoint rechecks and short-circuit order also differ, so small
+timing differences cannot be attributed solely to prefix sharing.
 All original primitive costs, ordered collision cells and headings are retained.
 No method uses truth-map occupancy beyond the observation supplied by the harness.
 
@@ -78,3 +80,12 @@ counts every `Grid.free` call around replan on the184 replay inputs, validates
 old logical fields against unmodified trajectories, and discards instrumented
 binary times. All probe claims in the report use this complete collision-API
 counter; direct `Grid.blocked` input normalization is outside its definition.
+
+The [second stage, SMD-A*](../mesh_symmetric/README.md), follows the lack of a
+useful standard-map envelope benefit. It tests two-sided cell deferral and an
+incumbent-gap certificate on an unchanged Batch backend, with one-sided and
+eager-open controls. Across all serial cohorts there are 276 unique configurations,
+19,326 timing episodes, 6,442 allocation episodes and 920 count-only episodes.
+Repeated inputs are never counted as independent new cases or pooled in timing
+ratios. The negative overall result and the limited successful regimes are
+documented in both reports.

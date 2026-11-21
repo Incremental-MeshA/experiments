@@ -1,0 +1,7 @@
+54 runs; grid8__shifted_separator64__w1__s48101; 1.22631 s
+108 runs; grid8__shifted_separator64__w1__s48102; 2.52592 s
+162 runs; grid8__shifted_separator64__w3__s48101; 3.55057 s
+216 runs; grid8__shifted_separator64__w3__s48102; 4.58922 s
+270 runs; grid8__shifted_separator64__w7__s48101; 5.55822 s
+324 runs; grid8__shifted_separator64__w7__s48102; 6.55294 s
+passed 324 runs, 5508 rows, 0 capped queries

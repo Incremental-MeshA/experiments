@@ -28,7 +28,7 @@ toc-depth: 2
 '''
  parts=re.split(r'(```[\s\S]*?```|`[^`\n]*`)',body)
  body=''.join(p if i%2 else re.sub(r'(?<=\w)\*(?!\*)',r'\\*',p) for i,p in enumerate(parts)).replace('A***','A\\***')
- path.write_text(header+body+'\n')
+ path.write_text(header+body.rstrip()+'\n')
  command=['pandoc',str(path),'-o',str(path.with_suffix('.pdf')),'--pdf-engine=xelatex','--resource-path='+str(DEST),
           '--include-in-header='+str(ROOT/'docs/experiments/layout.tex'),'--lua-filter='+str(ROOT/'cpp/mpgaa_mesh/vector_images.lua')]
  result=subprocess.run(command,cwd=ROOT,text=True,capture_output=True,check=True)
@@ -38,6 +38,9 @@ toc-depth: 2
 
 def main(directory,frontier_directory,conditional_directory):
  subprocess.run([sys.executable,str(ROOT/'cpp/mesh_probe_count/analyze.py')],cwd=ROOT,check=True)
+ subprocess.run([sys.executable,str(ROOT/'cpp/mesh_symmetric/report.py')],cwd=ROOT,check=True)
+ symmetric_path=ROOT/'cpp/mesh_symmetric/results/full/analysis/analysis.json';smeta=json.loads(symmetric_path.read_text());assert smeta['status']=='passed'
+ ss=pd.read_csv(symmetric_path.parent/'summary.csv')
  probe_path=ROOT/'cpp/mesh_probe_count/results/analysis/analysis.json';pmeta=json.loads(probe_path.read_text());assert pmeta['status']=='passed'
  ad=directory/'analysis';a=json.loads((ad/'analysis.json').read_text());assert a['status']=='passed' and a['analysis_source_sha256']==sha(HERE/'analyze.py')
  for p,h in a['tables_sha256'].items():assert sha(ad/p)==h
@@ -45,6 +48,11 @@ def main(directory,frontier_directory,conditional_directory):
  manifest=json.loads((HERE/'frozen/manifest.json').read_text());state=json.loads((directory/'experiment.json').read_text())
  metrics=pd.read_csv(ad/'case_metrics.csv');pairs=pd.read_csv(ad/'paired_cases.csv');summary=pd.read_csv(ad/'summary.csv');maps=pd.read_csv(ad/'map_pairs.csv');family=pd.read_csv(ad/'family_pairs.csv');work=pd.read_csv(ad/'work.csv');answers=pd.read_csv(ad/'answer_types.csv');queries=pd.read_csv(ad/'queries.csv');qp=pd.read_csv(ad/'query_pairs.csv');changes=pd.read_csv(ad/'actual_changes.csv');completion=pd.read_csv(ad/'completion.csv');statuses=pd.read_csv(ad/'statuses.csv')
  out=[];add=out.append
+ add('# Общий результат двух итераций')
+ add(f"Разработаны четыре новых алгоритма: Envelope-Mesh, Dual-Mesh, Circuit-Mesh и SMD-A*. Сначала проверены три идеи отрицательных сертификатов и Bellman-схем; после отсутствия убедительного mesh-выигрыша на обычных картах разработан SMD-A* для положительного перепланирования. Всего в отдельных сериях выполнено {a['timed_runs']+630+2208+smeta['timed_runs']:,} временных эпизодов, {a['memory_runs']+210+736+smeta['memory_runs']:,} эпизодов памяти и 920 счётных эпизодов. Повторно измеренные входы не считаются новыми независимыми картами.")
+ add('Отдельный отчёт второй итерации: [SMD-A*: результаты по картам и абляции](../mesh_symmetric/report.pdf); рукопись [Exact Mesh Replanning with Two-Sided Update Deferral](../mesh_symmetric/paper.pdf). Ниже подробно сохранён первый этап, включая отрицательные результаты; секунды разных серий не смешиваются.')
+ for _,v in ss[ss.cohort.eq('replay')&ss.control.eq('car16')&ss.panel.eq('main')&ss.baseline.isin(['best_control','md_batch','lazy_blocks_batch'])].iterrows():
+  add(f"SMD-A*, balanced car16 replay: относительно {v.baseline} — {num(v.full_speedup)}× по полному времени, {num(v.repair_speedup)}× по ремонту, {int(v.wins10)}/{int(v.pairs)} выигрышей от 10%. Это новая совместная серия с тем же Batch-backend и eager-open абляцией; подробная оценка пригодности для статьи находится в отчёте SMD.")
  add('# Проверяемый результат')
  add(f"Добавлены три алгоритма C++17: **Envelope-Mesh**, **Dual-Certificate Mesh** и **Bellman-Circuit Mesh D* Lite**, а также четыре контрольных варианта. Выполнены {a['timed_runs']:,} временных эпизодов, {a['memory_runs']:,} отдельных эпизодов памяти на {a['scenarios']} конфигурациях; получено {a['timed_calls']:,} временных вызовов. Расхождений достижимости или стоимости у завершённых ответов: {a['exact_cost_disagreements']}; остановок по лимиту: {a['capped_calls']}. Независимые тесты проверили 10 852 ответа через прямой Dijkstra. ASan/UBSan прошли. Логические результаты обычного и allocation-прогонов совпали в {a['allocation_matched_rows']:,} строках.")
  cap=statuses[statuses.status.eq('capped')].groupby('method')['size'].sum()
@@ -53,7 +61,7 @@ def main(directory,frontier_directory,conditional_directory):
  for m in NEW:
   d=pairs[pairs.method.eq(m)&pairs.baseline.eq('best_control')];mtr=metrics[metrics.method.eq(m)]
   rows.append([LABEL[m],f'{int(mtr.complete.sum())}/{len(mtr)}',num(gm(d.full_speedup)),num(gm(d.repair_speedup)),num(gm(d.memory_multiplier)),f'{int(d.full_speedup.ge(1.1).sum())}/{int(d.full_speedup.notna().sum())}'])
- add(table(['Алгоритм','Завершено','Эпизод ×','Ремонт ×','Память / baseline','Выигрыш ≥10%'],rows))
+ add(table(['Алгоритм','Завершено','Эпизод ×','Ремонт ×','Память / baseline','Выигрыш от 10%'],rows))
  add('Эта общая строка описывает именно смесь выбранных конфигураций: 96 небольших grid replay представлены чаще, чем отдельные большие карты. Основные выводы следует читать по отдельным картам и семействам ниже. Геометрические средние рассчитаны по общим завершённым конфигурациям. В replay точный ответ «пути нет» считается завершением; в навигации требуется достичь цели. Память / baseline меньше 1 выгодна кандидату. Время включает конструктор планировщика и первый поиск; ремонт исключает только конструктор и запрос 0.')
  add('`best_control` — описательная огибающая: для каждой конфигурации после измерений выбран прежний завершившийся контроль с минимальной медианой полного времени эпизода. Его время ремонта может не быть минимальным. В огибающую входят '+', '.join(LABEL[x] for x in manifest['controls'])+'. Прямые парные сравнения с каждым методом сохранены в CSV. Новые абляции в эту огибающую не входят.')
  add(fig('performance_profile','Распределение выигрышей и проигрышей полного эпизода относительно самой быстрой реализации контроля.'))
@@ -129,7 +137,7 @@ def main(directory,frontier_directory,conditional_directory):
  add(table(['Модель','Метод','Все Grid.free, млн','Legacy, млн','Концы, млн','Пропущено, %'],rr))
  rr=[]
  for (control,cohort,m,b),d in pp.groupby(['control','cohort','method','baseline']):
-  a=d[~d.online];o=d[d.online];rr.append([control,cohort,LABEL[m],'Conditional D* Lite' if b=='conditional_dstar' else LABEL[b],num(gm(a.ratio)),num(gm(o.ratio)),f'{int(a.complete.sum())}/{len(a)}'])
+  full=d[~d.online];online=d[d.online];rr.append([control,cohort,LABEL[m],'Conditional D* Lite' if b=='conditional_dstar' else LABEL[b],num(gm(full.ratio)),num(gm(online.ratio)),f'{int(full.complete.sum())}/{len(full)}'])
  add(table(['Модель','Набор','Метод','Контроль','Probes F ×','Probes R ×','Пары'],rr))
  add('Столбец «Концы» отдельно учитывает проверки в candidate. Реализации mesh/lattice различаются также порядком обхода и ранним выходом из входящего соединения; небольшие различия нельзя приписывать только числу общих префиксов. Полный счётчик включает и эти накладные обращения.')
  add('Значения больше 1 означают меньше вызовов проверки занятости у кандидата. Если время улучшается без уменьшения этих вызовов, причина в других операциях; если число обращений меньше, но время хуже, может сказываться обслуживание индексов, очередей и множеств; аппаратный профиль здесь не измерялся. Полный legacy-счётчик сохранён для сопоставления с прежними отчётами, но вывод о суммарной геометрической работе опирается на этот отдельный проход.')
@@ -200,7 +208,7 @@ def main(directory,frontier_directory,conditional_directory):
  add(table(['Модель','Набор','Карта',*[LABEL[m] for m in NEW]],rr))
  add('В этом контроле, как и в исходном valid_edge, допустимость вспомогательной дуги проверяет клетки после начала. Исходящие дуги заблокированного состояния могут оставаться во вспомогательном графе, но свободный старт не может попасть в него через заблокированную конечную клетку. Текущие старт и цель проверяются отдельно. Таким образом физические пути и стоимости совпадают с постановкой; блокировки концов и перенос старта дополнительно проверены независимым Dijkstra. Подробности и код: cpp/mesh_conditional/README.md.')
  add('# Оценка научного результата')
- add('Для статьи наиболее содержательна гипотеза о ремонтируемом отрицательном mesh-сертификате. Она проста: хранить безопасное замкнутое надмножество, а не пытаться поддерживать точную компоненту после удалений. Новая часть в рамках этого репозитория — общая префиксная граница и неявные конечные свидетели. Доказательство отсутствия пути через замкнутое множество, инкрементальная достижимость, D* Lite и повторное использование суффикса давно известны. Проверенный набор источников ограничен; литературный приоритет сочетания не доказан.')
+ add('Исходная гипотеза первого этапа — ремонтируемый отрицательный mesh-сертификат: хранить безопасное замкнутое надмножество, а не пытаться поддерживать точную компоненту после удалений. Новая часть в рамках этого репозитория — общая префиксная граница и неявные конечные свидетели. Эксперименты ниже показывают границы её пользы; второй этап с SMD-A* рассматривается в отдельном отчёте. Доказательство отсутствия пути через замкнутое множество, инкрементальная достижимость, D* Lite и повторное использование суффикса давно известны. Проверенный набор источников ограничен; литературный приоритет сочетания не доказан.')
  # Give a concrete, falsifiable verdict using case-level evidence.
  for model in ['car16','grid8']:
   for m in NEW:
@@ -225,6 +233,8 @@ def main(directory,frontier_directory,conditional_directory):
  article=[];put=article.append
  put('# Abstract')
  put(f"We study exact replanning on directed motion-primitive lattices represented by shared collision-cell prefix meshes. We propose a negative certificate: a closed superset of boundary states whose outgoing invalid transitions are covered by mesh-prefix witnesses. Edge deletions preserve the superset certificate; insertions repair only its exposed frontier. Blocked endpoints are represented implicitly, avoiding per-primitive terminal subscriptions. A dual variant combines this certificate with standard optimal-suffix reuse. We also evaluate a Bellman-circuit mesh variant of D* Lite. Our frozen C++17 study covers {a['scenarios']} configurations and {a['timed_runs']:,} serial timing episodes, with a separate allocation pass and exact cost validation. Results are reported per map and include failure episodes, reconnection, map discovery, construction overhead and strong controls. We claim a mesh-specific frontier representation and its correctness, not a new general reachability theorem or universal planner superiority.")
+ rates=[gm(pairs[pairs.control.eq('car16')&pairs.cohort.eq('replay')&pairs.method.eq(m)&pairs.baseline.eq('best_control')].full_speedup) for m in NEW]
+ put(f"On the 52 car replay configurations, whole-episode speedups against the fastest completed control are {', '.join(num(x) for x in rates)} for Envelope, Dual and Circuit respectively. Repeated negative queries on synthetic separated maps benefit substantially from certificate reuse, but the independent lattice-witness ablation achieves almost the same time. These results delimit the mechanism's usefulness and do not establish an overall mesh-specific speed advantage.")
  put('# Problem and motivation')
  put('Updates are occupancy cells, not a precomputed list of changed primitive edges. One cell may occur in many translated swept traces. A generic dynamic graph method must first generate those arc changes. Our proposed contribution is a cell-to-family repair representation: subscriptions to blocked mesh-prefix witnesses, with implicit blocked endpoints, around a closed negative region. Unrelated cell updates need not materialize all affected arcs or repair weighted cost labels.')
  put('A failed shortest-path query is useful information. Standard suffix reuse accelerates surviving positive paths, but may repeat a full failure proof after an irrelevant edge insertion. Maintaining the exact reachable component under deletions is considerably harder than maintaining a closed superset. We exploit this asymmetry and compress its outgoing invalid boundary using the same primitive-prefix mesh that shares collision checks in MeshA*.')
@@ -271,7 +281,7 @@ def main(directory,frontier_directory,conditional_directory):
  put('# References')
  put((DEST/'related_work.md').read_text().split('\n\n',2)[2])
  paper=render(DEST/'paper.md','\n\n'.join(article),'Repairing Negative Answers on Motion-Primitive Meshes','en-US')
- provenance=dict(status='passed',analysis_sha256=sha(ad/'analysis.json'),frontier_analysis_sha256=sha(frontier_path),conditional_analysis_sha256=sha(conditional_path),probe_analysis_sha256=sha(probe_path),narrative_sha256={p.name:sha(p) for p in [DEST/'design.md',DEST/'related_work.md']},report=report,paper=paper,source_sha256=sha(Path(__file__)))
+ provenance=dict(status='passed',analysis_sha256=sha(ad/'analysis.json'),frontier_analysis_sha256=sha(frontier_path),conditional_analysis_sha256=sha(conditional_path),probe_analysis_sha256=sha(probe_path),symmetric_analysis_sha256=sha(symmetric_path),symmetric_report_sha256=sha(symmetric_path.parent/'report_provenance.json'),narrative_sha256={p.name:sha(p) for p in [DEST/'design.md',DEST/'related_work.md']},report=report,paper=paper,source_sha256=sha(Path(__file__)))
  (ad/'report_provenance.json').write_text(json.dumps(provenance,indent=2)+'\n');print(json.dumps(provenance))
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--directory',type=Path,default=HERE/'results/full');p.add_argument('--frontier-directory',type=Path,default=HERE/'results/frontier');p.add_argument('--conditional-directory',type=Path,default=ROOT/'cpp/mesh_conditional/results/full');args=p.parse_args();main(args.directory,args.frontier_directory,args.conditional_directory)

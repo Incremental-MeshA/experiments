@@ -1,0 +1,5 @@
+24 runs; car16__Berlin__unknown__s48102__r8; 12.7432 s
+48 runs; car16__Berlin__unknown__s48102__r16; 13.8761 s
+72 runs; car16__Berlin__unknown__s48102__r32; 15.0452 s
+96 runs; car16__Berlin__unknown__s48102__r64; 17.622 s
+passed 96 navigation runs; 0 query caps

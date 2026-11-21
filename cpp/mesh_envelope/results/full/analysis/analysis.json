@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "scenarios": 228,
+  "timed_runs": 11340,
+  "memory_runs": 3780,
+  "timed_calls": 293487,
+  "allocation_matched_rows": 97829,
+  "exact_cost_disagreements": 0,
+  "capped_calls": 36,
+  "repeat_relative_mad_median": 0.017777121075045164,
+  "repeat_relative_mad_p95": 0.09896412900333672,
+  "analysis_versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.8"
+  },
+  "analysis_source_sha256": "f12bcd8c6de4389bc2fbfa8cd73f5e70ef535426060fcf5b2ad2b0a1f745ae6a",
+  "tables_sha256": {
+    "actual_changes.csv": "fbf6c9b7d8775dcf4b3e7dfcde9e242338aa8ed2c284fcd5c0882d0124ca5f23",
+    "amortization.csv": "5bb239ad1080e62c3d48a6c414932fa4678932c14b398fa00d5ba3c9e79438c0",
+    "answer_types.csv": "d338f7a7f2ae149303c6b35b0bf76e6fef484ace7b7e907d93a81fddfaec3377",
+    "case_metrics.csv": "c3230737144c21cffd52359755c84385b8cff7b28b84517471baca1ee35e6ec5",
+    "completion.csv": "91bb1339fbcdc3e897c42132808bc947b5e31316c56b667a351a4ad439ac1a9c",
+    "failure_diagnostics.csv": "63e69e27c0f543a0d54b9b2b0057731af9bf497f9986ddaaa1b0c8775fcb46ad",
+    "family_pairs.csv": "c085f1b119fe65033e89814ae36f6e59f0e513afd22f5b91df59e0e79b379fbc",
+    "latency.csv": "8a58b5d744e5bd7dc840b8bf45411ad7ee5dd2d492cb987e984cebdd384b19c7",
+    "map_pairs.csv": "2e29ab36f0ef5005747108c024cee3e2dbd4b1ec0cdcfb80176e730667e4b49a",
+    "navigation_points.csv": "2b8e4458f6ddca5abb5ddf9fe7fcf8edc42e6230e269eb4ca46bce63dfc12394",
+    "navigation_quality.csv": "a79ad0138f7754e4232eba3292e7f4d64559f982be9025a83954d2832d22c55b",
+    "paired_cases.csv": "8afdd203b9eb12a57b963627202972993fa88a8a6aa9f0decb7adb42da730bf8",
+    "queries.csv": "b9af36582abc8a6787b920e4b7c7e819010fcb51ad38542dfc4c041ef016d7a2",
+    "query_pairs.csv": "eeb81986a23f7aed8b6d75f7dae71c6f4ab0b7ae9741ff77022f4901ffd1ebba",
+    "repeat_dispersion.csv": "d786f8c9fbe2aaa2ded2a71b810436abb05224d7015c0091d0e1cfb0e58e56db",
+    "runs.csv": "3674864b45c50fc15acb202b1ee31c2a5d8d01928fa3103782632ca357e5bd6d",
+    "separator_work.csv": "0b77832d93794b1d6012e7c6fd37ff965b5b92eadf19f5b226168ed12f2f97fa",
+    "statuses.csv": "2e905d29f75ec8a7749268dabeef3d7c55af48a71b4727187ab72d7ffa4f9827",
+    "summary.csv": "76abdc93c53b18f28727408be581b19992192ef4804a0d01cafca82ded78679b",
+    "work.csv": "6ba92ad146132780b9d1d395987a394a78d3c2dd96265fe7693b71da36b979b1"
+  },
+  "figures": 20,
+  "manifest_sha256": "2362c4ac4e051ea45b7ab23e058cf0c615ab309698ea55ece6ad4b04033e7c47"
+}

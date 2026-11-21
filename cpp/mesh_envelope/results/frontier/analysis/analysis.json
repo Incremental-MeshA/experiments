@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "scenarios": 12,
+  "timed_runs": 630,
+  "memory_runs": 210,
+  "allocation_matched_rows": 3570,
+  "exact_cost_disagreements": 0,
+  "capped_calls": 0,
+  "protocol": "Separate structural complement specified before inspecting aggregate primary times: fixed 64x64 maps, widths 1/3/7, two fixed-start map seeds, alternating one-column barrier shift, both control sets, 17 queries. All three widths retained, including conservative-certificate fallbacks. Three serial randomized timings and a separate allocation pass; same immutable kernel binaries as primary. Not pooled with primary summary.",
+  "manifest_sha256": "723a89b80baddb31383f6277c91986c18ecc5aea6d27a9ddffc9182b9356f773",
+  "tables_sha256": {
+    "amortization.csv": "d40bc93954992a7df810a7497cd617939b3fa79c04f93e88b10f345100c4f7c3",
+    "case_metrics.csv": "8809ec5df4269986f8b4ef9995826960a0cb7537639955c3b1a2a5bc45081a7f",
+    "paired_cases.csv": "4ed6585281cce7950e179e46f10474e08b0728c8857c6affa1dac861c5ad6205",
+    "summary.csv": "b6b57476abb19e7fb60c021768c545de11dede1086d46cddfd3502daa8e88a84"
+  },
+  "figures_sha256": {
+    "docs/mesh_envelope/figures/barrier_width.png": "5104a08a6f035a9660e767195407bed74927a2f07714474b1fb5663547f66344",
+    "docs/mesh_envelope/figures/barrier_width.pdf": "0b4f9ff276c3d70272ec3eddb126008ce8e8f64fe3b8fe114e96d3e308dd2b37"
+  },
+  "source_sha256": "534f84e542f7b5f62897e9d82829f0747cf17ce6fac45370f1e6a3bb51065f80"
+}

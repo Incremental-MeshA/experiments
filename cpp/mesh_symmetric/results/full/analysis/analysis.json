@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "scenarios": 184,
+  "timed_runs": 5148,
+  "memory_runs": 1716,
+  "timed_calls": 96522,
+  "allocation_matched_rows": 32174,
+  "exact_cost_disagreements": 0,
+  "capped_calls": 18,
+  "relative_mad_median": 0.018341744249283143,
+  "relative_mad_p95": 0.11029253041660957,
+  "manifest_sha256": "cbe0cfdf28e605f98f45cae5ed49a5ee4559f14410baab7c57254398c97250d8",
+  "source_sha256": "d317d78efbd529d014e02e96790a9966b04f0f4938d092042afcc40aa262fe07",
+  "tables_sha256": {
+    "actual_changes.csv": "8234559d5e6beb801fcd92e38e473e6b3c1064a567eaf4b6ffe665c86d7063e7",
+    "caps.csv": "c278b6cd888ef5092cee9e5f414addd3e0905a99ce03a1f2ed11202750cbf14c",
+    "case_metrics.csv": "0251b1b99088ae8ed6a221c37f977015c9904e51614446e29f03c37995c21643",
+    "completion.csv": "6def7ff3c22f09fc33b0f2d172a412bbdeeb5deeb75b9ac96bd4c65d367b9210",
+    "dispersion.csv": "2f571ebaf214a4d356337f731510963b5fa4957e3dc554ee9f5123aee7c51ca0",
+    "failure_diagnostics.csv": "6f015765324e897d6fcb6d0893a81ff486552f100fae5bc5d776ae0e2a323337",
+    "family_pairs.csv": "673fcb40177042a86acf75175e133f794de7816e732e683d1a531de764d225bc",
+    "latency.csv": "39247fd3173f8dcd476b41fd1085341e8696f58f9d3131b97ce2cd8323877d56",
+    "map_pairs.csv": "ec3e35bd0824542e82efbf2892129bcd115413e17f3c852922d097261786260d",
+    "max_deferred_blocks.csv": "e659d722ab0a2c5437c5bde3bb9c77b130540aeb46e052522c5a037b61190cb7",
+    "navigation_quality.csv": "0d897ce20ec24d26ee2b6dd0d86bd82fde666c354269c10d4a6d9068565e2d51",
+    "paired_cases.csv": "02f807dce895eaa300db14660dc59bd02722c46726b4cda7ae7bc50a030c2427",
+    "summary.csv": "583e0a9d5c6aff6c634f1661747c5a0f01a66b3b243446b05dc70939196db863",
+    "work.csv": "a9d5e4b66d375f6834055449dda1e9293e42ac3ab89fcfbf76d7cbd4b2a204ad"
+  },
+  "figures_sha256": {
+    "docs/mesh_symmetric/figures/profile.png": "0faf2e913a7dad66c6044f23440de72113200d412828973c25a0898c8bdef09c",
+    "docs/mesh_symmetric/figures/profile.pdf": "4cf4632e37539ff157ffa3ee831a3588ff5c19d18231c97bc9502df80143ef51",
+    "docs/mesh_symmetric/figures/by_map.png": "918ab609fa22c26528bb5c04bef40094cbeeb97805255175974f3803e4524e42",
+    "docs/mesh_symmetric/figures/by_map.pdf": "eaa8c5a04ea0c68b0b14d8f9b67d75f8f933702c5b23542b01c8808fbdc6c324",
+    "docs/mesh_symmetric/figures/activation.png": "1262c5a6e0aa28c64854919d2dfa231c38df6b218a43f436e7c673df7cd0a819",
+    "docs/mesh_symmetric/figures/activation.pdf": "3ba6c635443f7f7649fbe5219214596ba37fe80be7fce488d9fdcb7e84962f1f",
+    "docs/mesh_symmetric/figures/holdout_radius.png": "bf60354ec37a56182b655fe6f018abbe4cd8ecfb52e8e6080354bbc745e49ce7",
+    "docs/mesh_symmetric/figures/holdout_radius.pdf": "c750778c9d4ca85aa05fca21dafaf0e15b3a0cc792a0d2fe711b4a59f2be537a",
+    "docs/mesh_symmetric/figures/memory.png": "e07a792016d44b991f69226c6a3cd0cefac366fe10290ac4f80270b2e6151c8d",
+    "docs/mesh_symmetric/figures/memory.pdf": "56d622d6ce77441246d96c12a8d8e6be04deb69a9ac4fc0fff64f8b6eedf08f9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "analysis_sha256": "2b9bc0fc17c545226efbee17b517f4df15e61a65a2b16c6e03a44348bab56c3d",
+  "source_sha256": "aadf62991a217b1622813ef963f842988569aa3b3f99310e6cc0cb18b768be20",
+  "design_sha256": "7b85323c8ede63b9f0082360fbb9d991a323a24f5300e958f9f5ebebf6893dc9",
+  "related_work_sha256": "4ec8e4e1c3f591ad12eb3dcfc03cb9c1da569f54c3cfbaa0de0170541e8c98c2",
+  "report": {
+    "markdown_sha256": "4382118000534c5fb5529dd2469ee9bbe71312a05d783edf0ca8df516a1eec38",
+    "pdf_sha256": "9e780fc3b08a93d62e7c6c9bb55aa50d47d474af7542bd1d7e20f2de7ae2e0a5",
+    "command": [
+      "pandoc",
+      "/workspace/introduction-mpgaa-mesh/docs/mesh_symmetric/report.md",
+      "-o",
+      "/workspace/introduction-mpgaa-mesh/docs/mesh_symmetric/report.pdf",
+      "--pdf-engine=xelatex",
+      "--resource-path=/workspace/introduction-mpgaa-mesh/docs/mesh_symmetric",
+      "--include-in-header=/workspace/introduction-mpgaa-mesh/docs/experiments/layout.tex",
+      "--lua-filter=/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/vector_images.lua"
+    ]
+  },
+  "paper": {
+    "markdown_sha256": "c5aa423ba9efd43d9a19256ff24ed957c13ebcd5f940716334f859fb281efaec",
+    "pdf_sha256": "23d83ae67d48c2f5b0cbbdeae604bc89bad2298b117ac7e0350ba8aad1775dab",
+    "command": [
+      "pandoc",
+      "/workspace/introduction-mpgaa-mesh/docs/mesh_symmetric/paper.md",
+      "-o",
+      "/workspace/introduction-mpgaa-mesh/docs/mesh_symmetric/paper.pdf",
+      "--pdf-engine=xelatex",
+      "--resource-path=/workspace/introduction-mpgaa-mesh/docs/mesh_symmetric",
+      "--include-in-header=/workspace/introduction-mpgaa-mesh/docs/experiments/layout.tex",
+      "--lua-filter=/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/vector_images.lua"
+    ]
+  }
+}

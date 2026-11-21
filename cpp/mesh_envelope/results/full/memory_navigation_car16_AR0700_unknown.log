@@ -1,0 +1,5 @@
+13 runs; car16__AR0700__unknown__s48101__r8; 1.42453 s
+26 runs; car16__AR0700__unknown__s48101__r16; 3.18647 s
+39 runs; car16__AR0700__unknown__s48101__r32; 5.26959 s
+52 runs; car16__AR0700__unknown__s48101__r64; 8.54719 s
+passed 52 navigation runs; 0 query caps

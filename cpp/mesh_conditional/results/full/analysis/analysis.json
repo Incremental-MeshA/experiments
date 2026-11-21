@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "scenarios": 184,
+  "timed_runs": 2208,
+  "memory_runs": 736,
+  "allocation_matched_rows": 13160,
+  "capped_calls": 0,
+  "exact_cost_disagreements": 0,
+  "protocol": "Additional fresh randomized joint timing cohort specified from source review, before aggregate primary comparisons. Conditional D* Lite handles map-edge decreases directly and backs up on increases only when the changed edge can support rhs; g propagation is conditional, queue synchronization suppresses identical keys. All three unchanged candidates remeasured in the SAME binary on all 184 replay configurations (52 car,96 grid,24 separators,12 width complement). No navigation in this validation cohort. Three timing repeats and one separate allocation pass. These are repeated inputs, not additional independent maps; times are not mixed with primary.",
+  "manifest_sha256": "9664ee15af0bf32b9151cfcc83f810815986b5eefb4698c9a0ab57cafa474ca9",
+  "tables_sha256": {
+    "caps.csv": "75807b039374851627abada55be93f995a614b57d7153400f0f98e57c99c853e",
+    "case_metrics.csv": "15b947e346238ba38e9fc982056dbd9f826b722cbc267d4e3993be6c583c0798",
+    "map_pairs.csv": "5e83ef81012811cdfff3f6cb576a49aef1acc7ad36eb4a7a2e0471aeceae003f",
+    "paired_cases.csv": "751d423a618b22ad02b315ca6cfeb17e268d733582194ee1ea4f0346efabd015",
+    "summary.csv": "8042d775d8ccbe38983891634fa238c8f901b89c74ce930dd87c3b4549cd84c6"
+  },
+  "figures_sha256": {
+    "docs/mesh_envelope/figures/conditional_control.png": "89b794f517ef5202cecf33576b87cc2c59936f19bc0bb44dce73f542adf1cea0",
+    "docs/mesh_envelope/figures/conditional_control.pdf": "ba8c3cfe0bed2f8b0a76a0709a07c345049691cba370310992fb966a981baa35"
+  },
+  "source_sha256": "e4d7b800bcb9d8ce71aa4fb69bd456a220d50a0cb04f03e65a84a58bbdc22c8f"
+}

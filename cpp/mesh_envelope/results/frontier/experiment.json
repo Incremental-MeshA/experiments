@@ -1,0 +1,330 @@
+{
+  "status": "passed",
+  "utc": "2026-11-20T23:29:26.345586+00:00",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "cpu": "AMD EPYC 9V74 80-Core Processor",
+  "affinity": [
+    0,
+    1,
+    2
+  ],
+  "workers": 1,
+  "binaries": {
+    "replay": "284007eee65637dfbcafda0d79969c17a4de290216d2249d37d601d03ee5bded",
+    "navigation_memory": "8a4743671fa414967130621726ce7cee5917e3ec719eac1008632ab370dafd5a",
+    "replay_memory": "18ad465668541d855ecde5955ee1de72159886648d01b175709fef202ffd81ee",
+    "navigation": "e31a95f7e9683e08dc65b302f291b95b1460d093c3cd26e573f1ad1785ea3e89"
+  },
+  "manifest_sha256": "723a89b80baddb31383f6277c91986c18ecc5aea6d27a9ddffc9182b9356f773",
+  "jobs": {
+    "timing_frontier_car16": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_envelope/build/replay",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_envelope/frozen/frontier/car16.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_envelope/results/frontier/timing_frontier_car16.csv",
+        "--methods",
+        "lba_reuse,mesha,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,delta_mpgaa,batch_mpgaa,dstar_lattice,cmesh_dstar,envelope_mesh,dual_mesh,circuit_mesh,mesh_cold,mesh_reuse,cut_mesh,lattice_envelope",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--mode",
+        "replay",
+        "--seed",
+        "731021"
+      ],
+      "expected_runs": 306,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "replay",
+        "runs": 306,
+        "rows": 5202,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 3,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 160,
+        "preparation_s": 0.005293007,
+        "certificate_s": 8.4227e-05,
+        "wall_s": 619.752376479,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 0.000156685,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0,
+        "variant_compile_s": 0.002288931,
+        "variant_model_heap_retained_bytes": 0,
+        "variant_model_heap_peak_bytes": 0,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 412,
+            "edges": 680,
+            "support_groups": 968,
+            "delta": 0.03125
+          },
+          "cmesh": {
+            "configurations": 188,
+            "edges": 456,
+            "support_groups": 728,
+            "delta": 0.03125
+          },
+          "suffix_mesh": {
+            "configurations": 428,
+            "edges": 696,
+            "support_groups": 860,
+            "delta": 0.03125
+          },
+          "boundary_mesh": {
+            "configurations": 16,
+            "edges": 284,
+            "support_groups": 424,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "timing_frontier_car16.csv.json": "9e6be10aace0e0b71dbc4ee6128fec8a4c0d49fa6005444024958b3c8fcb9db9",
+        "timing_frontier_car16.csv": "a96179ce8b7a4aa13186208ee5d82693eae0ea1a179f28e109cbfb4d12e611eb"
+      }
+    },
+    "timing_frontier_grid8": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_envelope/build/replay",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_envelope/frozen/frontier/grid8.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_envelope/results/frontier/timing_frontier_grid8.csv",
+        "--methods",
+        "lba_reuse,mesha,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,delta_mpgaa,batch_mpgaa,dstar_lattice,cmesh_dstar,envelope_mesh,dual_mesh,circuit_mesh,mesh_cold,mesh_reuse,cut_mesh,lattice_envelope,octile_reuse",
+        "--repeats",
+        "3",
+        "--cap",
+        "1000000",
+        "--mode",
+        "replay",
+        "--seed",
+        "731021"
+      ],
+      "expected_runs": 324,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "replay",
+        "runs": 324,
+        "rows": 5508,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 3,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 160,
+        "preparation_s": 0.00166037,
+        "certificate_s": 4.346e-06,
+        "wall_s": 6.553256277,
+        "memory_profile": false,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic",
+        "mesh_index_compile_s": 5.248e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 0,
+        "mesh_index_heap_peak_bytes": 0,
+        "variant_compile_s": 3.4412e-05,
+        "variant_model_heap_retained_bytes": 0,
+        "variant_model_heap_peak_bytes": 0,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "cmesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "suffix_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "boundary_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "timing_frontier_grid8.csv.json": "b57832f302936d333b8998cf7a6850337a9ed706e72639cbedfcd0dc90331be9",
+        "timing_frontier_grid8.csv": "d2a22230d518e47c6c3e694f94efffbf2537e600a37338dc7362814809944f22"
+      }
+    },
+    "memory_frontier_car16": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_envelope/build/replay_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_envelope/frozen/frontier/car16.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_envelope/results/frontier/memory_frontier_car16.csv",
+        "--methods",
+        "lba_reuse,mesha,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,delta_mpgaa,batch_mpgaa,dstar_lattice,cmesh_dstar,envelope_mesh,dual_mesh,circuit_mesh,mesh_cold,mesh_reuse,cut_mesh,lattice_envelope",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--mode",
+        "replay",
+        "--seed",
+        "731021"
+      ],
+      "expected_runs": 102,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "replay",
+        "runs": 102,
+        "rows": 1734,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 1,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 160,
+        "preparation_s": 0.008701533,
+        "certificate_s": 6.7501e-05,
+        "wall_s": 246.494477124,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 0.0001594,
+        "mesh_index_nodes": 572,
+        "mesh_index_heap_retained_bytes": 113648,
+        "mesh_index_heap_peak_bytes": 113840,
+        "variant_compile_s": 0.002652335,
+        "variant_model_heap_retained_bytes": 885264,
+        "variant_model_heap_peak_bytes": 885456,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 412,
+            "edges": 680,
+            "support_groups": 968,
+            "delta": 0.03125
+          },
+          "cmesh": {
+            "configurations": 188,
+            "edges": 456,
+            "support_groups": 728,
+            "delta": 0.03125
+          },
+          "suffix_mesh": {
+            "configurations": 428,
+            "edges": 696,
+            "support_groups": 860,
+            "delta": 0.03125
+          },
+          "boundary_mesh": {
+            "configurations": 16,
+            "edges": 284,
+            "support_groups": 424,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "memory_frontier_car16.csv.json": "11469679147aa72f6e3986baec2bf99977fcbf735db9a6ba11d2c248699dd78e",
+        "memory_frontier_car16.csv": "98c72afc61f2089d39d1bbcd536955cada395419af8ef94c105f6cc20a43239a"
+      }
+    },
+    "memory_frontier_grid8": {
+      "status": "passed",
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_envelope/build/replay_memory",
+        "--input",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_envelope/frozen/frontier/grid8.txt",
+        "--output",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_envelope/results/frontier/memory_frontier_grid8.csv",
+        "--methods",
+        "lba_reuse,mesha,mpgaa,md_astar,boundary_mesh,boundary_mpgaa,delta_mpgaa,batch_mpgaa,dstar_lattice,cmesh_dstar,envelope_mesh,dual_mesh,circuit_mesh,mesh_cold,mesh_reuse,cut_mesh,lattice_envelope,octile_reuse",
+        "--repeats",
+        "1",
+        "--cap",
+        "1000000",
+        "--mode",
+        "replay",
+        "--seed",
+        "731021"
+      ],
+      "expected_runs": 108,
+      "returncode": 0,
+      "completion": {
+        "status": "passed",
+        "mode": "replay",
+        "runs": 108,
+        "rows": 1836,
+        "capped_queries": 0,
+        "step_limited_missions": 0,
+        "repeats": 1,
+        "cap": 1000000,
+        "radius": 8,
+        "max_steps": 160,
+        "preparation_s": 0.001742984,
+        "certificate_s": 3.986e-06,
+        "wall_s": 2.29667367,
+        "memory_profile": true,
+        "compiler": "14.2.0",
+        "flags": "-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC",
+        "mesh_index_compile_s": 7.061e-06,
+        "mesh_index_nodes": 9,
+        "mesh_index_heap_retained_bytes": 1952,
+        "mesh_index_heap_peak_bytes": 2508,
+        "variant_compile_s": 3.7156e-05,
+        "variant_model_heap_retained_bytes": 9488,
+        "variant_model_heap_peak_bytes": 10044,
+        "variant_models": {
+          "positive_prefix": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "cmesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "suffix_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0.25
+          },
+          "boundary_mesh": {
+            "configurations": 1,
+            "edges": 8,
+            "support_groups": 9,
+            "delta": 0
+          }
+        }
+      },
+      "outputs": {
+        "memory_frontier_grid8.csv.json": "9e6a413b43ad5041778b0f948a6e4a65ee3844b6a5e49b8a88c4c074f686527d",
+        "memory_frontier_grid8.csv": "55100096ccc4a05c4168a9c05693f77169ddaf3c4609314e0de7f03bac69e6f6"
+      }
+    }
+  }
+}

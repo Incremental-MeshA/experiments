@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "counted_runs": 920,
+  "logical_matched_rows": 16450,
+  "definition": "Number of Grid.free calls during replan, including endpoint gates and outside-grid probes; excludes direct Grid.blocked calls in common input normalization and all verification/reference calls. Count-only binary; timings discarded.",
+  "source_sha256": "fb031695a46d71b71123d5bab9ee16212eba6b10bb067a604913ef78e0686bdb",
+  "experiment_sha256": "9316a35eb26ac410928360aacfb4ecf37d2589d34f136c215d2ec0c6ca270c1c",
+  "tables_sha256": {
+    "probe_pairs.csv": "c0e484a601938f30729620a894010b3f2816b1f6758bb2d9d1cf3e99475dc2dc",
+    "probe_work.csv": "9396b02ae0918f3be9b4031ec32b9a35f07a63a3b2dd106654fdd67a394ce51f"
+  },
+  "figures_sha256": {
+    "docs/mesh_envelope/figures/all_collision_probes.png": "f2781ce2e9699db6df4118641b89cfdd10c59a3d0e950338eca1d98a39c81345",
+    "docs/mesh_envelope/figures/all_collision_probes.pdf": "14d8934604516860d78b1b0d099e99d56407ada84e337bd3971eb242d3bfcf12"
+  }
+}

@@ -1,0 +1,7 @@
+17 runs; car16__shifted_separator64__w1__s48101; 45.5252 s
+34 runs; car16__shifted_separator64__w1__s48102; 90.6517 s
+51 runs; car16__shifted_separator64__w3__s48101; 130.797 s
+68 runs; car16__shifted_separator64__w3__s48102; 172.091 s
+85 runs; car16__shifted_separator64__w7__s48101; 209.069 s
+102 runs; car16__shifted_separator64__w7__s48102; 246.494 s
+passed 102 runs, 1734 rows, 0 capped queries

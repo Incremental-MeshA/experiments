@@ -27,6 +27,7 @@ be checked against Lifelong-GLS/GD* and broader lazy incremental search literatu
 make -C cpp/mesh_symmetric all test
 python cpp/mesh_symmetric/run_all.py --output cpp/mesh_symmetric/results/reproduction
 python cpp/mesh_symmetric/analyze.py
+python cpp/mesh_symmetric/report.py
 ```
 
 The new protocol is fixed before SMD timings: all52 car and96 grid replay inputs
@@ -36,3 +37,13 @@ alternate navigation root was not used in the first stage, though the maps/specs
 already existed in the repository; this is not a hidden benchmark. Fresh timings
 are never pooled with first-stage seconds. Three serial randomized repeats and a
 separate allocation pass compare strong controls and the shared-backend ablations.
+
+Measured result: on the balanced 48-case car replay panel, the geometric-mean
+whole-episode speedup is 0.44 against the fastest completed control and 0.99
+against eager-open lazy blocking. The shared-backend one-sided control is also
+faster overall (SMD ratio 0.80, 47 common completed pairs). Deferred activation
+reduces delivered edits, but does not establish a useful general mesh-specific
+runtime advantage. Per-map results, exactness, caps, memory, alternate-root
+navigation and all losses are retained in [the report](../../docs/mesh_symmetric/report.pdf).
+The manuscript is a research draft with explicit limitations, not a submission-ready
+claim of priority or superiority.

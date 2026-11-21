@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "analysis_sha256": "cdd017263b16bc95b17242fda742678fd1581c8af0cccb0a29443f4ba194ee6e",
+  "frontier_analysis_sha256": "04c80b1c414cf62af79803dbeabd28791a0940eb15a2317d8909758984741a98",
+  "conditional_analysis_sha256": "4ab4caaebdf03e171ecfc045d8ce97a7e54111005b084e700937b488fd578814",
+  "probe_analysis_sha256": "1cccf001a392c9d6c52a24fa6e564ce262e6abdb06246121788f391039eb7ed4",
+  "symmetric_analysis_sha256": "2b9bc0fc17c545226efbee17b517f4df15e61a65a2b16c6e03a44348bab56c3d",
+  "symmetric_report_sha256": "22596cb9bbbf989f5c2d39047f68e0461d4f0dbb440a3ff3374f710d2b71827a",
+  "narrative_sha256": {
+    "design.md": "44538bd49047d0358e6e9a1949e1084efc81f5861326adce372a1b7821c7a8ed",
+    "related_work.md": "4ec8e4e1c3f591ad12eb3dcfc03cb9c1da569f54c3cfbaa0de0170541e8c98c2"
+  },
+  "report": {
+    "markdown_sha256": "479e0df7e75a3a072be01c5c87dd5e62c9b48d26c79b9d6ac7dd0755f8353172",
+    "pdf_sha256": "6e2bd726306b7135584ff2b423855a41d3e6885e4471bc31eb11bec7783e9618",
+    "command": [
+      "pandoc",
+      "/workspace/introduction-mpgaa-mesh/docs/mesh_envelope/report.md",
+      "-o",
+      "/workspace/introduction-mpgaa-mesh/docs/mesh_envelope/report.pdf",
+      "--pdf-engine=xelatex",
+      "--resource-path=/workspace/introduction-mpgaa-mesh/docs/mesh_envelope",
+      "--include-in-header=/workspace/introduction-mpgaa-mesh/docs/experiments/layout.tex",
+      "--lua-filter=/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/vector_images.lua"
+    ]
+  },
+  "paper": {
+    "markdown_sha256": "f8448281c3503cfb9299f34ab9f83529d54af9e99fb0c74e0ad3ca09db34b1e6",
+    "pdf_sha256": "fbdc7ccd4d3e3fef625979adb6d23c7a390c665c05b37ff37056877863e6795a",
+    "command": [
+      "pandoc",
+      "/workspace/introduction-mpgaa-mesh/docs/mesh_envelope/paper.md",
+      "-o",
+      "/workspace/introduction-mpgaa-mesh/docs/mesh_envelope/paper.pdf",
+      "--pdf-engine=xelatex",
+      "--resource-path=/workspace/introduction-mpgaa-mesh/docs/mesh_envelope",
+      "--include-in-header=/workspace/introduction-mpgaa-mesh/docs/experiments/layout.tex",
+      "--lua-filter=/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/vector_images.lua"
+    ]
+  },
+  "source_sha256": "3c0893198bbb306d6002e6be0dfe6d9fc607fca5db91ed1fda21efff69569083"
+}

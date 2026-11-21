@@ -37,7 +37,7 @@ def main(directory):
    a=g[g.method.eq(candidate)];b=g[g.method.eq(baseline)]
    for online in [False,True]:
     aa=a[a['query'].gt(0)] if online else a;bb=b[b['query'].gt(0)] if online else b
-    pairs.append(dict(case=case,method=candidate,baseline=baseline,online=online,cohort=aa.cohort.iloc[0],control=aa.control.iloc[0],map=aa['map'].iloc[0],family=aa.family.iloc[0],free_calls=int(aa.all_free_calls.sum()),base_free_calls=int(bb.all_free_calls.sum()),complete=not aa.status.isin(['capped','skipped_after_cap']).any() and not bb.status.isin(['capped','skipped_after_cap']).any(),ratio=bb.all_free_calls.sum()/aa.all_free_calls.sum() if aa.all_free_calls.sum()>0 and not aa.status.isin(['capped','skipped_after_cap']).any() and not bb.status.isin(['capped','skipped_after_cap']).any() else np.nan))
+    pairs.append(dict(case=case,method=candidate,baseline=baseline,online=online,cohort=a.cohort.iloc[0],control=a.control.iloc[0],map=a['map'].iloc[0],family=a.family.iloc[0],free_calls=int(aa.all_free_calls.sum()),base_free_calls=int(bb.all_free_calls.sum()),complete=not aa.status.isin(['capped','skipped_after_cap']).any() and not bb.status.isin(['capped','skipped_after_cap']).any(),ratio=bb.all_free_calls.sum()/aa.all_free_calls.sum() if aa.all_free_calls.sum()>0 and not aa.status.isin(['capped','skipped_after_cap']).any() and not bb.status.isin(['capped','skipped_after_cap']).any() else np.nan))
  pairs=pd.DataFrame(pairs);base.save(pairs,out/'probe_pairs.csv')
  fig,axes=plt.subplots(1,2,figsize=(11,4));figures={}
  for ax,control in zip(axes,['car16','grid8']):

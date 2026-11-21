@@ -1,0 +1,13 @@
+5 runs; grid8__separator32__remote__s48101; 0.00496707 s
+10 runs; grid8__separator32__frontier__s48101; 0.0115958 s
+15 runs; grid8__separator32__reconnect__s48101; 0.0178431 s
+20 runs; grid8__separator32__remote__s48102; 0.0226582 s
+25 runs; grid8__separator32__frontier__s48102; 0.0297486 s
+30 runs; grid8__separator32__reconnect__s48102; 0.0364899 s
+35 runs; grid8__separator64__remote__s48101; 0.0487793 s
+40 runs; grid8__separator64__frontier__s48101; 0.0595098 s
+45 runs; grid8__separator64__reconnect__s48101; 0.0827797 s
+50 runs; grid8__separator64__remote__s48102; 0.0949764 s
+55 runs; grid8__separator64__frontier__s48102; 0.105252 s
+60 runs; grid8__separator64__reconnect__s48102; 0.129445 s
+passed 60 runs, 1020 rows, 0 capped queries

@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "base_commit": "7b8876cdfd798c0ee3768f701379e2dff33b416b",
+  "repeats": 3,
+  "cap": 1000000,
+  "seed": 831015,
+  "primary_methods": [
+    "envelope_mesh",
+    "dual_mesh",
+    "circuit_mesh"
+  ],
+  "controls": [
+    "conditional_dstar"
+  ],
+  "plan": [
+    {
+      "name": "replay_car16",
+      "mode": "replay",
+      "input": "cpp/mesh_envelope/frozen/car16_replay.txt",
+      "cases": 52,
+      "methods": [
+        "conditional_dstar",
+        "envelope_mesh",
+        "dual_mesh",
+        "circuit_mesh"
+      ]
+    },
+    {
+      "name": "separator_car16",
+      "mode": "replay",
+      "input": "cpp/mesh_envelope/frozen/car16_separator.txt",
+      "cases": 12,
+      "methods": [
+        "conditional_dstar",
+        "envelope_mesh",
+        "dual_mesh",
+        "circuit_mesh"
+      ]
+    },
+    {
+      "name": "replay_grid8",
+      "mode": "replay",
+      "input": "cpp/mesh_envelope/frozen/grid8_replay.txt",
+      "cases": 96,
+      "methods": [
+        "conditional_dstar",
+        "envelope_mesh",
+        "dual_mesh",
+        "circuit_mesh"
+      ]
+    },
+    {
+      "name": "separator_grid8",
+      "mode": "replay",
+      "input": "cpp/mesh_envelope/frozen/grid8_separator.txt",
+      "cases": 12,
+      "methods": [
+        "conditional_dstar",
+        "envelope_mesh",
+        "dual_mesh",
+        "circuit_mesh"
+      ]
+    },
+    {
+      "name": "frontier_car16",
+      "mode": "replay",
+      "input": "cpp/mesh_envelope/frozen/frontier/car16.txt",
+      "cases": 6,
+      "methods": [
+        "conditional_dstar",
+        "envelope_mesh",
+        "dual_mesh",
+        "circuit_mesh"
+      ]
+    },
+    {
+      "name": "frontier_grid8",
+      "mode": "replay",
+      "input": "cpp/mesh_envelope/frozen/frontier/grid8.txt",
+      "cases": 6,
+      "methods": [
+        "conditional_dstar",
+        "envelope_mesh",
+        "dual_mesh",
+        "circuit_mesh"
+      ]
+    }
+  ],
+  "files": {
+    "cpp/mesh_envelope/frozen/car16_replay.txt": "e1f48bffcc132f02312b904389318fe6399716658d0ef983cbeed898f204094c",
+    "cpp/mesh_envelope/frozen/car16_separator.txt": "a28b297f3ba40ffae7d36a46b0bea30f74e29ddf74c4ffde41f5913c2271b87d",
+    "cpp/mesh_envelope/frozen/grid8_replay.txt": "c0ee6270afb77d7b95ffd419670588ab213331b716c54e8c83c80fdfef2fb467",
+    "cpp/mesh_envelope/frozen/grid8_separator.txt": "5740dea86059d33f5dc63d01ae0778e9245c4c7e9a4c4ebd4bf1832641f49033",
+    "cpp/mesh_envelope/frozen/frontier/car16.txt": "eaeb4861bd4a08b5be109e779b33cdb95a7c8ca632c0130b0bdb527388e781c7",
+    "cpp/mesh_envelope/frozen/frontier/grid8.txt": "9901c7bf408febaac3bd5c285c22e6ef501e563824eee9fb73c9123226fa841f",
+    "cpp/mesh_conditional/frozen/contexts.json": "9722f5658d5ce70cd4b214bd4533d5836176dfa001952c55fe2f25f16ad06625"
+  },
+  "sources": {
+    "cpp/include/ima/dstar.hpp": "c9e9b714fbf86da15bcea7078494b8dd0a0f4fbd43e38d6e8815748458dfca6a",
+    "cpp/include/ima/adaptive.hpp": "5c54db0b176953927291f2ca476b26e769192571754819e2f66c3feb698c83a3",
+    "cpp/include/ima/planners.hpp": "b874588434c7bbb5666b4dc6b33d498d2d8b18ac45198b545c3899731292fa0d",
+    "cpp/include/ima/deferred.hpp": "d4b47e481e323e1e202deeb2644b14b4d63fda6d8f974f641a77ca9d30e73530",
+    "cpp/include/ima/search.hpp": "cdc94b7a4a9897e4da868003998346acdf5af8f4011b4b566803cb79f36f78a2",
+    "cpp/include/ima/model.hpp": "ce03a8bbb71cb873bf546a8c51063e12b3102c9df05d96fc55902d7630c9bfbc",
+    "cpp/mesh_variants/variants.hpp": "163a3f17cabd4354c00edd38821aaf0fea8edd45d7345bf9501d161220d2b8d3",
+    "cpp/navigation_controls/factory.hpp": "a02086a4ebe4901848b41a5d8d4c71b253b0ea5da72eb2a2efe28e862eb83681",
+    "cpp/navigation_controls/strong_grid.hpp": "39dc7ae894c1a11cea8b8f1318a6930598f5ccf6fa4dfb5a290c63f5ed955150",
+    "cpp/navigation_sweeps/factory.hpp": "ab3e11dd374743d5a96a703da410224b738231b88c6d52402b254be76f0ccc0a",
+    "cpp/navigation_sweeps/environment.hpp": "29efb87781682bdcdf424e5137b906c1e53c00966d35a839386a39a7cbd0b0d4",
+    "cpp/navigation_sweeps/visibility.hpp": "5a5742a4151568896f406d8bf0e1096b7d43b8ca0870fe0e13ef4b1dfd302e48",
+    "cpp/mpgaa_mesh/algorithms.hpp": "ad7e2cf1f7e2421738cfe05e698d42571832003d12514c57fdc15bc03ac05e03",
+    "cpp/mpgaa_mesh/factory.hpp": "11eca6dacf4cc488ac37031d56011e6ec447db0ec7231a7fd17f87037adeebf1",
+    "cpp/mpgaa_lazy/algorithms.hpp": "15ab0439a9613784883a2eeae108378145d143a609e309129769a4df3c979660",
+    "cpp/mpgaa_lazy/factory.hpp": "c483cceda171b215a8b7e19c5dc2342ee8dd106ff427937d0ca6e9757c47f1e8",
+    "cpp/mesh_envelope/algorithms.hpp": "3de5c7284afab27186be5cb119b858c3396d2e062922a4f7ad8668c0660df030",
+    "cpp/mesh_envelope/factory.hpp": "49594dffbd7b980de2eb6eb914a01130a217081bb9a0338e2426e52caff0681c",
+    "cpp/mesh_envelope/circuit.hpp": "381bb6c2b47ebfc38ad4d7ea0a240fb9d8d6bba88ede2f3f90459c2814bffe65",
+    "cpp/experiments/memory.hpp": "16a8f7e99fc79b35c38086e1d632e8024a10e48e3b80eaf3547c83a2d2070b32",
+    "cpp/experiments/dstar_boundary.hpp": "959a21c8684f7890a200cbbbc14ea641ac8a0e7719000842f929b2ebdea60990",
+    "cpp/mesh_envelope/Makefile": "d4279e6cd97cee091b6efda73cb96d013abcaec7b8b0981e210f48409128b6a6",
+    "cpp/mesh_envelope/test.cpp": "61749b145a5ea4507321ee0de7ce7ace7cd0b971f6cdbdfae3c8fe37d1264553",
+    "cpp/mesh_envelope/replay.cpp": "e190bfcac8b8bc680f92fdc6136a59e6c74461d21b351ba129cc6e68740e6fcf",
+    "cpp/mesh_envelope/navigation.cpp": "1920288234790f0a679926cfc5ff582b636c81c0c9ca7be48e9f7cdf83d5e7fe",
+    "cpp/mesh_envelope/prepare.py": "75bf215ded137952c37251fd6e42bb04639b5c15889a2e1351408f7f37d26a72",
+    "cpp/mesh_envelope/run_all.py": "5bf5cbf3d5b3ff38a541a8b6b515fecca881e97f7493e142c767cb440e6f920a",
+    "cpp/mesh_conditional/factory.hpp": "2ad921215f768842ad35cd971a31dd73d519d130fdbeee02c634de8db7e4ff7a",
+    "cpp/mesh_conditional/conditional.hpp": "9cf1014eb67448a267c3e7010c1d11d9e7f176567740524edd5b78391d55adbb",
+    "cpp/mesh_conditional/Makefile": "07224dbb29fc039942d42d71e3fc42dbd8de8c2cd639be8c1c893ccf6811319a",
+    "cpp/mesh_conditional/replay.cpp": "c72ef97546b8d74c030deae864b764b2019ec756b6a4fc4beeba860ec804d975",
+    "cpp/mesh_conditional/navigation.cpp": "cf158d6d5af27da4a362349f77c4802be9ba22ccc4497d438e0bf0b7982217f8",
+    "cpp/mesh_conditional/test.cpp": "408d712c243c76f55e40010534074373fd9adc4247949fa4058d324b33df89bb",
+    "cpp/mesh_conditional/prepare.py": "5735a6a6fe5032b13a278eebf8d3c300114a5a573dd56518d20361848a60d5ce",
+    "cpp/mesh_conditional/run_all.py": "5bf5cbf3d5b3ff38a541a8b6b515fecca881e97f7493e142c767cb440e6f920a"
+  },
+  "contexts_file": "cpp/mesh_conditional/frozen/contexts.json",
+  "protocol": "Additional fresh randomized joint timing cohort specified from source review, before aggregate primary comparisons. Conditional D* Lite handles map-edge decreases directly and backs up on increases only when the changed edge can support rhs; g propagation is conditional, queue synchronization suppresses identical keys. All three unchanged candidates remeasured in the SAME binary on all 184 replay configurations (52 car,96 grid,24 separators,12 width complement). No navigation in this validation cohort. Three timing repeats and one separate allocation pass. These are repeated inputs, not additional independent maps; times are not mixed with primary.",
+  "scenarios": 184,
+  "timed_runs": 2208,
+  "memory_runs": 736
+}

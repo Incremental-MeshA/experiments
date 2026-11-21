@@ -25,13 +25,13 @@ def main(directory):
   assert (m.peak_heap_bytes>=m.retained_heap_bytes).all() and (m.peak_heap_bytes<2**48).all();frames.append(d);mem.append(m.groupby(['case','method'],as_index=False).peak_heap_bytes.max())
   for key,g in d.groupby(['case','method','repeat']):
    runs.append(dict(zip(['case','method','repeat'],key))|dict(full_s=g.time_s.sum()+g.setup_s.sum(),repair_s=g.loc[g['query'].gt(0),'time_s'].sum(),complete=not g.status.isin(['capped','skipped_after_cap']).any()))
- d=pd.concat(frames,ignore_index=True);finite=d.cost.notna()&d.expected.notna();bad=int((d.loc[finite,'cost']-d.loc[finite,'expected']).abs().gt(1e-6).sum());assert not bad
+ d=pd.concat(frames,ignore_index=True);finite=d.cost.notna()&d.expected.notna();bad=int((d.loc[finite,'cost']-d.loc[finite,'expected']).abs().gt(1e-6).sum());bad+=int(((d.cost.notna()!=d.expected.notna())&~d.status.isin(['capped','skipped_after_cap'])).sum());assert not bad
  r=pd.DataFrame(runs);metrics=r.groupby(['case','method'],as_index=False)[['full_s','repair_s']].median().merge(r.groupby(['case','method'],as_index=False).complete.all()).merge(pd.concat(mem),on=['case','method']).merge(meta,on='case')
  pairs=[]
  for case,g in metrics.groupby('case'):
   b=g[g.method.eq('conditional_dstar')].iloc[0]
   for _,v in g[g.method.isin(NEW)].iterrows():
-   ok=bool(v.complete and b.complete);pairs.append(dict(case=case,method=v.method,baseline='conditional_dstar',control=v.control,cohort=v.cohort,map=v['map'],family=v.family,complete=ok,full_speedup=b.full_s/v.full_s if ok else np.nan,repair_speedup=b.repair_s/v.repair_s if ok else np.nan,memory_multiplier=v.peak_heap_bytes/b.peak_heap_bytes))
+   ok=bool(v.complete and b.complete);pairs.append(dict(case=case,method=v.method,baseline='conditional_dstar',control=v.control,cohort=v.cohort,map=v['map'],family=v.family,complete=ok,full_speedup=b.full_s/v.full_s if ok else np.nan,repair_speedup=b.repair_s/v.repair_s if ok and v.repair_s>0 else np.nan,memory_multiplier=v.peak_heap_bytes/b.peak_heap_bytes))
  pairs=pd.DataFrame(pairs);summary=[]
  for key,g in pairs.groupby(['control','cohort','method']):summary.append(dict(zip(['control','cohort','method'],key))|dict(configurations=len(g),pairs=int(g.complete.sum()),full_speedup=base.gm(g.full_speedup),repair_speedup=base.gm(g.repair_speedup),memory_multiplier=base.gm(g.memory_multiplier),wins_10pct=int(g.full_speedup.ge(1.1).sum())))
  maprows=[]

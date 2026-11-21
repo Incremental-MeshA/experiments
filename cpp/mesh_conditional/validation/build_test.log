@@ -1,0 +1,12 @@
+make: Entering directory '/workspace/introduction-mpgaa-mesh/cpp/mesh_conditional'
+mkdir -p build
+g++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic '-DIMA_EXPERIMENT_FLAGS="-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"' replay.cpp -o build/replay
+g++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC '-DIMA_EXPERIMENT_FLAGS="-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC"' replay.cpp -o build/replay_memory
+g++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic '-DNAV_FLAGS="-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic"' navigation.cpp -o build/navigation
+g++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC '-DNAV_FLAGS="-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC"' navigation.cpp -o build/navigation_memory
+g++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic test.cpp -o build/test
+build/test ../experiments/frozen/grid8_model.txt
+{"status":"passed","model":"grid8","comparisons":6204,"hits":24,"guard_events":0}
+build/test ../experiments/frozen/car16_model.txt
+{"status":"passed","model":"car16","comparisons":6204,"hits":648,"guard_events":282964}
+make: Leaving directory '/workspace/introduction-mpgaa-mesh/cpp/mesh_conditional'

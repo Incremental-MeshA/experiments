@@ -12,7 +12,11 @@ from pandas.testing import assert_frame_equal
 NEW='smd_batch';LABEL={**base.LABEL,'smd_batch':'SMD-A*','smd_plain':'SMD no gap','md_batch':'MD + Batch','lazy_blocks_batch':'Lazy blocks, eager opens','conditional_dstar':'Conditional D* Lite'}
 COLORS={**base.COLORS,'smd_batch':'#0072b2','smd_plain':'#56b4e9','md_batch':'#e69f00','lazy_blocks_batch':'#cc79a7','batch_mpgaa':'#009e73','conditional_dstar':'#332288','md_astar':'#999999'}
 EXTRA=['activated_blocks','deferred_block_cells','optimistic_rounds','path_probes','gap_hits']
-COUNTERS=[*base.COUNTERS,*EXTRA]
+COUNTERS=list(dict.fromkeys([*base.COUNTERS,'activated_cells','deferred_cells','refined_cells',
+ 'mesh_nodes','bound_evals','pruned_branches','pruned_primitives','watch_hits','validity_flips',
+ 'witness_stops','policy_probes','policy_hits','alternate_uses','stamp_writes','tile_reads',
+ 'mask_refreshes','mask_hits','cut_checks','cut_reuses','cut_primitives','edit_batches',
+ 'scan_batches','seed_tests','arrow_checks','cover_tests',*EXTRA]))
 def figure(fig,name,manifest):
  old=base.DEST;base.DEST=DEST
  try:base.figure(fig,name,manifest)

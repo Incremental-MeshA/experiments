@@ -1,0 +1,110 @@
+{
+  "status": "passed",
+  "scenarios": 228,
+  "timed_runs": 11340,
+  "memory_runs": 3780,
+  "cost_disagreements": 0,
+  "allocation_matched_rows": 97829,
+  "tests": [
+    {
+      "status": "passed",
+      "model": "grid8",
+      "comparisons": 5426,
+      "hits": 24,
+      "guard_events": 0
+    },
+    {
+      "status": "passed",
+      "model": "car16",
+      "comparisons": 5426,
+      "hits": 648,
+      "guard_events": 282964
+    },
+    {
+      "status": "passed",
+      "model": "grid8",
+      "comparisons": 6204,
+      "hits": 24,
+      "guard_events": 0,
+      "cohort": "conditional"
+    },
+    {
+      "status": "passed",
+      "model": "car16",
+      "comparisons": 6204,
+      "hits": 648,
+      "guard_events": 282964,
+      "cohort": "conditional"
+    },
+    {
+      "status": "passed",
+      "model": "grid8",
+      "comparisons": 8546,
+      "hits": 24,
+      "guard_events": 0,
+      "cohort": "symmetric"
+    },
+    {
+      "status": "passed",
+      "model": "car16",
+      "comparisons": 8540,
+      "hits": 648,
+      "guard_events": 282964,
+      "cohort": "symmetric"
+    }
+  ],
+  "documents": [
+    {
+      "file": "docs/mesh_envelope/report.pdf",
+      "pages": 24,
+      "text_chars": 60010,
+      "sha256": "6e2bd726306b7135584ff2b423855a41d3e6885e4471bc31eb11bec7783e9618"
+    },
+    {
+      "file": "docs/mesh_envelope/paper.pdf",
+      "pages": 11,
+      "text_chars": 27086,
+      "sha256": "fbdc7ccd4d3e3fef625979adb6d23c7a390c665c05b37ff37056877863e6795a"
+    },
+    {
+      "file": "docs/mesh_symmetric/report.pdf",
+      "pages": 11,
+      "text_chars": 25338,
+      "sha256": "9e780fc3b08a93d62e7c6c9bb55aa50d47d474af7542bd1d7e20f2de7ae2e0a5"
+    },
+    {
+      "file": "docs/mesh_symmetric/paper.pdf",
+      "pages": 6,
+      "text_chars": 16526,
+      "sha256": "23d83ae67d48c2f5b0cbbdeae604bc89bad2298b117ac7e0350ba8aad1775dab"
+    }
+  ],
+  "executed_notebook_cells": 5,
+  "old_sources_unchanged": true,
+  "structural_complement": {
+    "scenarios": 12,
+    "timed_runs": 630,
+    "memory_runs": 210,
+    "allocation_matched_rows": 3570
+  },
+  "conditional_validation": {
+    "scenarios": 184,
+    "timed_runs": 2208,
+    "memory_runs": 736,
+    "allocation_matched_rows": 13160
+  },
+  "collision_probe_validation": {
+    "counted_runs": 920,
+    "logical_matched_rows": 16450
+  },
+  "symmetric_validation": {
+    "scenarios": 184,
+    "timed_runs": 5148,
+    "memory_runs": 1716,
+    "allocation_matched_rows": 32174
+  },
+  "total_timed_runs": 19326,
+  "total_memory_runs": 6442,
+  "unique_configurations": 276,
+  "tests_reused_from_previous_pass": "Only report whitespace changed; measured kernels and test binaries are unchanged."
+}

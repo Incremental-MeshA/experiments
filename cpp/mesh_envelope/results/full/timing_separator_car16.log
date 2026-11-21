@@ -1,0 +1,13 @@
+51 runs; car16__separator32__remote__s48101; 12.4478 s
+102 runs; car16__separator32__frontier__s48101; 20.733 s
+153 runs; car16__separator32__reconnect__s48101; 25.2987 s
+204 runs; car16__separator32__remote__s48102; 36.5112 s
+255 runs; car16__separator32__frontier__s48102; 44.7117 s
+306 runs; car16__separator32__reconnect__s48102; 48.5286 s
+357 runs; car16__separator64__remote__s48101; 120.098 s
+408 runs; car16__separator64__frontier__s48101; 206.178 s
+459 runs; car16__separator64__reconnect__s48101; 248.339 s
+510 runs; car16__separator64__remote__s48102; 325.167 s
+561 runs; car16__separator64__frontier__s48102; 406.073 s
+612 runs; car16__separator64__reconnect__s48102; 446.885 s
+passed 612 runs, 10404 rows, 0 capped queries
