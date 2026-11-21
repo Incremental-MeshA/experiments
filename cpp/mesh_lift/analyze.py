@@ -75,6 +75,22 @@ def main(directory,probes):
    rows.append(dict(zip(keys,key))|dict(configurations=len(d),pairs=int(d.complete.sum()),full_speedup=common.gm(d.full_speedup),initial_speedup=common.gm(d.initial_speedup),repair_speedup=common.gm(d.repair_speedup),memory_multiplier=common.gm(d.memory_multiplier),wins10=int(d.full_speedup.ge(1.1).sum())))
   frame=pd.DataFrame(rows);common.save(frame,out/name);return frame
  summary=aggregate(['cohort','control','panel','method','baseline'],'summary.csv');maps=aggregate(['cohort','control','panel','map','method','baseline'],'map_pairs.csv');aggregate(['cohort','control','family','method','baseline'],'family_pairs.csv');aggregate(['cohort','control','map','radius','k','cr','method','baseline'],'parameter_pairs.csv')
+ # Initial-search comparisons use initial completion only; a later cap must
+ # not silently remove a difficult but solved first search from this panel.
+ initial=metrics.merge(q[q['query'].eq(0)][['case','method','status','cost','expected','expansions','lift_terminal_prunes']],on=['case','method']);initial['initial_complete']=~initial.status.isin(['capped','skipped_after_cap']);common.save(initial,out/'initial_cases.csv')
+ ip=[]
+ for case,g in initial.groupby('case'):
+  for method in NEW:
+   v=g[g.method.eq(method)].iloc[0]
+   for baseline in dict.fromkeys([*manifest['controls'],*manifest['ablations']]):
+    b=g[g.method.eq(baseline)]
+    if b.empty:continue
+    b=b.iloc[0];ok=bool(v.initial_complete and b.initial_complete)
+    ip.append(dict(case=case,cohort=v.cohort,control=v.control,panel=v.panel,map=v['map'],method=method,baseline=baseline,complete=ok,speedup=b.initial_s/v.initial_s if ok else np.nan))
+ ip=pd.DataFrame(ip);common.save(ip,out/'initial_pairs.csv');rows=[]
+ for key,d in ip.groupby(['cohort','control','panel','method','baseline']):rows.append(dict(zip(['cohort','control','panel','method','baseline'],key))|dict(configurations=len(d),pairs=int(d.complete.sum()),initial_speedup=common.gm(d.speedup)))
+ common.save(pd.DataFrame(rows),out/'initial_summary.csv')
+ capq=q[q.status.eq('capped')].copy();capq['phase']=np.where(capq['query'].eq(0),'initial','repair');common.save(capq.groupby(['cohort','control','method','phase'],as_index=False).agg(configurations=('case','nunique'),calls=('case','size')),out/'cap_summary.csv')
  querytimes=calls[~calls.status.isin(['capped','skipped_after_cap'])&calls.planned.eq(1)].groupby(['case','method','query'],as_index=False).agg(time_s=('time_s','median'),blocks=('blocks','first'),opens=('opens','first')).merge(meta,on='case');latency=[]
  for key,d in querytimes[querytimes['query'].gt(0)].groupby(['cohort','control','map','method']):latency.append(dict(zip(['cohort','control','map','method'],key))|dict(queries=len(d),p50_ms=1000*d.time_s.quantile(.5),p95_ms=1000*d.time_s.quantile(.95),p99_ms=1000*d.time_s.quantile(.99)))
  common.save(pd.DataFrame(latency),out/'latency.csv')

@@ -23,7 +23,7 @@ def main(directory):
  for p,h in a['tables_sha256'].items():assert common.sha(ad/p)==h,p
  for p,h in a['figures_sha256'].items():assert common.sha(ROOT/p)==h,p
  manifest=json.loads((HERE/'frozen/manifest.json').read_text());state=json.loads((directory/'experiment.json').read_text())
- data={x:pd.read_csv(ad/(x+'.csv')) for x in ['summary','paired_cases','map_pairs','family_pairs','parameter_pairs','case_metrics','completion','work','max_state','navigation_quality','actual_changes','collision_pairs','latency','edits_latency','caps']}
+ data={x:pd.read_csv(ad/(x+'.csv')) for x in ['summary','paired_cases','map_pairs','family_pairs','parameter_pairs','case_metrics','completion','work','max_state','navigation_quality','actual_changes','collision_pairs','latency','edits_latency','caps','initial_summary','cap_summary']}
  summary=data['summary'];pairs=data['paired_cases'];metrics=data['case_metrics'];work=data['work'];quality=data['navigation_quality'];changes=data['actual_changes']
  main=summary[summary.cohort.eq('replay')&summary.control.eq('car16')&summary.panel.eq('main')]
  primary=main[main.baseline.eq('best_control')].sort_values(['pairs','full_speedup'],ascending=False).iloc[0];candidate=primary.method
@@ -58,6 +58,12 @@ def main(directory):
  for _,r in summary[summary.cohort.eq('replay')&summary.panel.eq('main')].iterrows():
   rows.append([r.control,LABEL[r.method],LABEL[r.baseline],f'{int(r.pairs)}/{int(r.configurations)}',n(r.full_speedup),n(r.initial_speedup),n(r.repair_speedup),n(r.memory_multiplier)])
  put(table(['Модель','Метод','Контроль','Пары','Full ×','Init ×','Repair ×','Heap new/base'],rows))
+ put('## Первый поиск отдельно от последующих ремонтов')
+ rows=[]
+ ini=data['initial_summary'];ini=ini[ini.cohort.eq('replay')&ini.panel.eq('main')&ini.baseline.isin(['cascade_mesh','mesha_reuse','lift_cold','cascade_cold','lift_noprune'])]
+ for _,r in ini.iterrows():rows.append([r.control,LABEL[r.method],LABEL[r.baseline],f'{int(r.pairs)}/{int(r.configurations)}',n(r.initial_speedup)])
+ put(table(['Модель','Метод','Контроль','Завершённых первых пар','Init ×'],rows))
+ put('Эта таблица требует завершения только первого поиска: эпизод с поздним cap здесь сохраняется. Init в общей таблице выше условен на завершении всего эпизода. В обоих случаях конструктор включён; точный первый NoPath считается завершённым ответом.')
  put(fig('profile','Распределение полного ускорения основной replay-панели; только общие завершённые пары.'))
  put(fig('maps','Основная car-панель по картам; отсутствие общей завершённой пары не является выигрышем.'))
  put('## По каждой карте и семейству')
@@ -105,6 +111,9 @@ def main(directory):
  rows=[]
  for _,r in data['completion'].iterrows():rows.append([r.cohort,r.control,LABEL[r.method],f'{int(r.complete)}/{int(r.configurations)}'])
  put(table(['Cohort','Модель','Метод','Завершено'],rows))
+ rows=[]
+ for _,r in data['cap_summary'].iterrows():rows.append([r.cohort,r.control,LABEL[r.method],r.phase,int(r.configurations),int(r.calls)])
+ put(table(['Cohort','Модель','Метод','Фаза cap','Конфигурации','Вызовы (repeat 0)'],rows))
  put('Все cap-вызовы и их queries сохранены в caps.csv; static NoPath дополнительно сверяется с truth reachability. Большой лимит moves и остановка при первом NoPath — свойства контроллера, а не доказательство способности переждать временное закрытие прохода. На основных replay одинаковые входы; в навигации даже точные алгоритмы могут выбирать разные оптимальные пути.')
  put('Сильные стороны: поиск действительно на полном mesh; небольшой локальный механизм; проверяемый инвариант и воспроизводимая мутация; сравнение с cold, reuse и no-prune; учёт первого поиска, cap, памяти, столкновений и траекторий. Ограничения: выбранные ранее открытые карты, два корня и один control set; корреляция семейств; три временных повтора; дешёвые occupancy-проверки; одинаковый лимит expansions не равен CPU-бюджету; внешние официальные MPGAA*/Lifelong-GLS не интегрированы. Независимый holdout и более широкий обзор нужны перед сильной конференционной заявкой.')
  put((DEST/'related_work.md').read_text())
