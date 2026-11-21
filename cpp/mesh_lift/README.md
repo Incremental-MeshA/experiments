@@ -19,6 +19,7 @@ queue cascades. The closure is directed pathmax, not a new generic operator.
     make -C cpp/mesh_lift sanitize
     ASAN_OPTIONS=detect_leaks=1 cpp/mesh_lift/build/test_sanitize cpp/experiments/frozen/car16_model.txt
     python3 cpp/mesh_lift/mutation.py
+    python3 cpp/mesh_lift/repair_counterexample.py
 
 Modes: lift_mesh, cascade_lift, lift_cold, cascade_cold, lift_noprune.
 Controls: earlier cascade_mesh, mesha, mesha_reuse, lba_reuse, mpgaa,

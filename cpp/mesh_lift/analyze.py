@@ -49,6 +49,8 @@ def main(directory,probes):
  assert native[native.control.eq('car16')].mv_interior_expansions.sum()>0
  replay=q[q.cohort.eq('replay')]
  mutation=json.loads((HERE/'validation/mutation.json').read_text());assert mutation['status']=='passed'
+ opening_fixture=json.loads((HERE/'validation/repair_counterexample.json').read_text());assert opening_fixture['status']=='passed' and opening_fixture['original_source_sha256']==common.sha(HERE/'algorithms.hpp') and opening_fixture['script_sha256']==common.sha(HERE/'repair_counterexample.py')
+ assert opening_fixture['result']['oracle_after_openings']==opening_fixture['result']['lift_cost']==opening_fixture['result']['cascade_lift_cost']==4 and opening_fixture['result']['no_closure_cost']==opening_fixture['result']['no_learned_mark_cost']==5
  assert native.lift_terminal_prunes.sum()>0 and native.lift_writes.sum()>0
  work=q.groupby(['case','method'],as_index=False)[['blocks','opens','observed_edits',*counters]].sum().merge(meta,on='case');common.save(work,out/'work.csv')
  snapshots=q.groupby(['case','method'],as_index=False)[SNAP].max();common.save(snapshots.merge(meta,on='case'),out/'max_state.csv')
@@ -109,7 +111,7 @@ def main(directory,probes):
   if job['mode']!='navigation' or not job['name'].endswith('dynamic'):continue
   d=read(directory/('timing_'+job['name']+'_runs.csv'));d=d[d.repeat.eq(0)]
   for _,v in d.iterrows():
-   c=ctx[v['case']];n=int(np.prod(c['shape']));changes.append(dict(case=v['case'],method=v.method,map=c['map'],k=c['params']['k'],n=c['params']['n'],requested_cr=c['params']['cr'],phases=v.phases,clamped=v.clamped_phases,actual_cr=100*v.actual_changes/(n*v.phases) if v.phases else 0))
+   c=ctx[v['case']];n=int(np.prod(c['shape']));changes.append(dict(case=v['case'],method=v.method,map=c['map'],k=c['params']['k'],n=c['params']['n'],requested_cr=c['params']['cr'],phases=v.phases,clamped=v.clamped_phases,actual_cr=100*v.actual_changes/(n*v.phases) if v.phases else np.nan))
  common.save(pd.DataFrame(changes),out/'actual_changes.csv')
  failures=q[q.cohort.ne('replay')&q.status.eq('no_path')].copy();failures['truth_reachable']=failures.truth_cost.notna();assert not failures.loc[failures.cohort.eq('navigation_unknown'),'truth_reachable'].any();common.save(failures[['case','method','cohort','map','step','truth_reachable','truth_cost']],out/'failure_diagnostics.csv')
  # A separate counter binary measures every Grid.free API invocation for all
@@ -144,6 +146,12 @@ def main(directory,probes):
   for i,method in enumerate(NEW):ax.barh(x+(i-.5)*.35,[d[d['map'].eq(n)&d.method.eq(method)].iloc[0].full_speedup for n in names],.35,label=LABEL[method],color=colors[method])
   ax.set_yticks(x,names);ax.axvline(1,color='.5',ls=':');ax.set(xscale='log',title=LABEL[baseline],xlabel='Episode speedup');ax.legend(fontsize=8)
  figure(fig,'maps',figs)
+ fig,axes=plt.subplots(1,2,figsize=(11,4))
+ d=maps[maps.cohort.eq('replay')&maps.control.eq('car16')&maps.panel.eq('main')&maps.baseline.eq('mesha_reuse')];names=sorted(d['map'].unique());x=np.arange(len(names))
+ for ax,column,title in zip(axes,['full_speedup','repair_speedup'],['Whole episode vs MeshA* reuse','Repair vs MeshA* reuse']):
+  for i,method in enumerate(NEW):ax.barh(x+(i-.5)*.35,[d[d['map'].eq(name)&d.method.eq(method)].iloc[0][column] for name in names],.35,label=LABEL[method],color=colors[method])
+  ax.set_yticks(x,names);ax.axvline(1,color='.5',ls=':');ax.set(xscale='log',title=title,xlabel='Speedup on common completed pairs');ax.legend(fontsize=8)
+ figure(fig,'mesh_comparisons',figs)
  fig,axes=plt.subplots(1,3,figsize=(12,4))
  car=work[work.control.eq('car16')&work.cohort.eq('replay')&work.family.ne('history')]
  for ax,column,title in zip(axes,['mv_interior_expansions','mv_heap_pushes','lift_writes'],['Internal mesh expansions','Search heap insertions','Local h writes']):
@@ -188,7 +196,7 @@ def main(directory,probes):
   ax.scatter([x],[y],s=900,color='#e69f00' if name=='w' else '#56b4e9' if name=='u' else '#dddddd',edgecolor='#444444',zorder=3);ax.text(x,y,name,ha='center',va='center',zorder=4,fontsize=12);ax.text(x,y-.32,'h: '+labels[name],ha='center',fontsize=10)
  ax.text(1,-.65,'u is pruned after v is CLOSED',ha='center',fontsize=10);ax.text(3,-.65,'Lift raises skipped w; v is unchanged',ha='center',fontsize=10);ax.set(xlim=(-.6,4.9),ylim=(-.9,1.2),title='Consistency closure in a skipped mesh prefix');ax.axis('off');figure(fig,'lift_example',figs)
  assert len(r)==manifest['timed_runs'] and len(metrics)==manifest['memory_runs']
- result=dict(status='passed',scenarios=manifest['scenarios'],timed_runs=len(r),memory_runs=len(metrics),timed_calls=len(calls),allocation_matched_rows=matched,exact_cost_disagreements=bad,capped_calls=int(calls.status.eq('capped').sum()),mutation_detected=True,terminal_prunes=int(native.lift_terminal_prunes.sum()),lift_writes=int(native.lift_writes.sum()),count_only_runs=sum(j['runs'] for j in ps['jobs']),count_only_matched_rows=probe_matches,relative_mad_median=float(dispersion.relative_mad.median()),relative_mad_p95=float(dispersion.relative_mad.quantile(.95)),analysis_versions=dict(numpy=np.__version__,pandas=pd.__version__,matplotlib=plt.matplotlib.__version__),manifest_sha256=common.sha(HERE/'frozen/manifest.json'),source_sha256=common.sha(Path(__file__)),probe_experiment_sha256=common.sha(probes/'experiment.json'),tables_sha256={p.name:common.sha(p) for p in sorted(out.glob('*.csv'))},figures_sha256=figs)
+ result=dict(status='passed',scenarios=manifest['scenarios'],timed_runs=len(r),memory_runs=len(metrics),timed_calls=len(calls),allocation_matched_rows=matched,exact_cost_disagreements=bad,capped_calls=int(calls.status.eq('capped').sum()),mutation_detected=True,opening_counterexample=opening_fixture['result'],repair_counterexample_sha256=common.sha(HERE/'validation/repair_counterexample.json'),terminal_prunes=int(native.lift_terminal_prunes.sum()),lift_writes=int(native.lift_writes.sum()),count_only_runs=sum(j['runs'] for j in ps['jobs']),count_only_matched_rows=probe_matches,relative_mad_median=float(dispersion.relative_mad.median()),relative_mad_p95=float(dispersion.relative_mad.quantile(.95)),analysis_versions=dict(numpy=np.__version__,pandas=pd.__version__,matplotlib=plt.matplotlib.__version__),manifest_sha256=common.sha(HERE/'frozen/manifest.json'),source_sha256=common.sha(Path(__file__)),probe_experiment_sha256=common.sha(probes/'experiment.json'),tables_sha256={p.name:common.sha(p) for p in sorted(out.glob('*.csv'))},figures_sha256=figs)
  (out/'analysis.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps({k:v for k,v in result.items() if not k.endswith('sha256')}))
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--directory',type=Path,default=HERE/'results/full');p.add_argument('--probes',type=Path,default=HERE/'results/probes');args=p.parse_args();main(args.directory,args.probes)

@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "original_source_sha256": "3f5622c3665309098b1f270196476dd8ae821a02d6e4bcf71e3a4d04afaf8e0d",
+  "script_sha256": "a6c94378e374110305be03900d04ca77dacd98792dac072c38390aa878e396c9",
+  "binary_sha256": "3975c6b619ea8dcd3ce544cc09e784889bd47e81325e47573102b8b7466a57a7",
+  "generated_sources_sha256": {
+    "no_closure.hpp": "a179d0f9117e990dc6bc75f87c17c799a169614ae181f98587a16fbd884a6bdf",
+    "no_learned_mark.hpp": "97ff7074dc73ee3be672b6300db7b60f3b1cbe8d5d63a1cefc7b4c13c7f05998",
+    "fixture.cpp": "e09c4b5547f66a5f6bbb00a68a9d768169fcba158efd554b9759c3413b6c37df"
+  },
+  "command": [
+    "g++",
+    "-O2",
+    "-DNDEBUG",
+    "-std=c++17",
+    "-I/workspace/introduction-mpgaa-mesh/cpp/include",
+    "-I/workspace/introduction-mpgaa-mesh/cpp/experiments",
+    "-I/workspace/introduction-mpgaa-mesh/cpp/mesh_variants",
+    "-I/workspace/introduction-mpgaa-mesh/cpp/navigation_sweeps",
+    "-I/workspace/introduction-mpgaa-mesh/cpp/mesh_lift",
+    "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/repair_counterexample/fixture.cpp",
+    "-o",
+    "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift/build/repair_counterexample/fixture"
+  ],
+  "result": {
+    "status": "passed",
+    "model": "formal_prefix_opening_counterexample",
+    "configurations": 8,
+    "initial_cost": 12,
+    "oracle_after_openings": 4,
+    "lift_cost": 4,
+    "cascade_lift_cost": 4,
+    "no_closure_cost": 5,
+    "no_learned_mark_cost": 5
+  },
+  "scope": "A formal non-kinematic prefix fixture using repeated cells and heading states; tests exact C++ learning/repair/search. It is not an additional car16 benchmark or a timing sample."
+}

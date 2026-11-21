@@ -23,6 +23,8 @@ def main(skip_tests):
  for job in ps['jobs']:
   f=HERE/'results/probes'/(job['name']+'.csv');assert sha(f)==job['csv_sha256'] and sha(Path(str(f)+'.json'))==job['metadata_sha256']
  mutation=json.loads((HERE/'validation/mutation.json').read_text());assert mutation['status']=='passed' and mutation['result']['status']=='mutant_detected' and mutation['original_source_sha256']==sha(HERE/'algorithms.hpp') and mutation['script_sha256']==sha(HERE/'mutation.py')
+ opening=json.loads((HERE/'validation/repair_counterexample.json').read_text());assert opening['status']=='passed' and opening['script_sha256']==sha(HERE/'repair_counterexample.py') and opening['original_source_sha256']==sha(HERE/'algorithms.hpp') and a['repair_counterexample_sha256']==sha(HERE/'validation/repair_counterexample.json') and a['opening_counterexample']==opening['result']
+ assert opening['result']['oracle_after_openings']==opening['result']['lift_cost']==opening['result']['cascade_lift_cost']==4 and opening['result']['no_closure_cost']==opening['result']['no_learned_mark_cost']==5
  docs=[]
  for name in ['report','paper']:
   f=ROOT/f'docs/mesh_lift/{name}.pdf';assert sha(f)==p[name]['pdf_sha256'] and sha(f.with_suffix('.md'))==p[name]['markdown_sha256'];pdf=fitz.open(f);text='\n'.join(pg.get_text() for pg in pdf);assert len(pdf)>=4 and len(text)>10000 and '\ufffd' not in text
@@ -37,7 +39,7 @@ def main(skip_tests):
  for model in ['grid8','car16']:assert json.loads((HERE/f'validation/asan_{model}.log').read_text())['status']=='passed'
  old=['cpp/include/ima','cpp/experiments','cpp/navigation_sweeps','cpp/navigation_controls','cpp/mesh_variants','cpp/mpgaa_mesh','cpp/mpgaa_lazy','cpp/mesh_envelope','cpp/mesh_conditional','cpp/mesh_symmetric','cpp/mesh_probe_count','docs/mesh_envelope','docs/mesh_symmetric']
  diff=subprocess.run(['git','diff','--name-only',m['base_commit'],'--',*old],cwd=ROOT,text=True,capture_output=True,check=True);assert not diff.stdout,diff.stdout
- result=dict(status='passed',scenarios=a['scenarios'],timed_runs=a['timed_runs'],memory_runs=a['memory_runs'],count_only_runs=a['count_only_runs'],allocation_matched_rows=a['allocation_matched_rows'],count_only_matched_rows=a['count_only_matched_rows'],terminal_prunes=a['terminal_prunes'],lift_writes=a['lift_writes'],mutation_detected=a['mutation_detected'],capped_calls=a['capped_calls'],exact_cost_disagreements=0,old_sources_unchanged=True,tests=runs,documents=docs,executed_notebook_cells=len(code))
+ result=dict(status='passed',scenarios=a['scenarios'],timed_runs=a['timed_runs'],memory_runs=a['memory_runs'],count_only_runs=a['count_only_runs'],allocation_matched_rows=a['allocation_matched_rows'],count_only_matched_rows=a['count_only_matched_rows'],terminal_prunes=a['terminal_prunes'],lift_writes=a['lift_writes'],mutation_detected=a['mutation_detected'],opening_counterexample=a['opening_counterexample'],capped_calls=a['capped_calls'],exact_cost_disagreements=0,old_sources_unchanged=True,tests=runs,documents=docs,executed_notebook_cells=len(code))
  (HERE/'validation/full.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--skip-tests',action='store_true');a=p.parse_args();main(a.skip_tests)
