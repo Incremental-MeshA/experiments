@@ -46,7 +46,7 @@ toc-depth: 2
                    for i, part in enumerate(parts))
     path.write_text(header+body.rstrip()+'\n')
     command = ['pandoc', str(path), '-o', str(path.with_suffix('.pdf')), '--pdf-engine=xelatex',
-               '--resource-path='+str(DEST), '--include-in-header='+str(ROOT/'docs/experiments/layout.tex'),
+               '--resource-path='+str(DEST), '--include-in-header='+str(DEST/'layout.tex'),
                '--lua-filter='+str(ROOT/'cpp/mpgaa_mesh/vector_images.lua')]
     result = subprocess.run(command, cwd=ROOT, text=True, capture_output=True, check=True)
     if 'Missing character' in result.stderr:
@@ -96,11 +96,16 @@ def main(directory):
         f"к прежнему Cascade ({int(fast_cascade.pairs)}/48). Здесь и далее ускорение — время "
         'контроля, делённое на время указанного кандидата; больше 1 выгодно кандидату.')
     put(f"Контроль только без потенциала: Lift **{number(zero_lift.full_speedup)}× full / "
-        f"{number(zero_lift.repair_speedup)}× repair**, Cascade **{number(zero_cascade.full_speedup)}× / "
-        f"{number(zero_cascade.repair_speedup)}×**. Эти отношения не включают остальные "
+        f"{number(zero_lift.repair_speedup)}× repair** ({int(zero_lift.pairs)}/48), Cascade **{number(zero_cascade.full_speedup)}× / "
+        f"{number(zero_cascade.repair_speedup)}×** ({int(zero_cascade.pairs)}/48). Эти отношения не включают остальные "
         'оптимизации fast и не означают сохранения прежнего порядка раскрытия.')
+    if all(.95 <= v.full_speedup <= 1.05 for v in [zero_lift, zero_cascade]):
+        put('В основной car16-панели удаление потенциала оказалось практически нейтральным по времени. Его польза — упрощение формулировки, численного представления и подготовки графа. Измеренное ускорение полного fast относится ко всему пакету изменений.')
+    def repair_requests(method):
+        return allocation.loc[allocation.panel.eq('main') & allocation.control.eq('car16') & allocation.phase.eq('repair') & allocation.method.eq(method), 'allocation_calls'].sum()
+    put(f"Число запросов allocation внутри ремонта основной car16-панели уменьшилось в {number(repair_requests('lift_mesh')/repair_requests('fast_lift'))} и {number(repair_requests('cascade_lift')/repair_requests('fast_cascade'))} раза соответственно (суммы по всем 48 случаям, включая лимитированные). Пиковая рабочая память на общих завершённых парах составляет {number(fast_lift.memory_multiplier)} и {number(fast_cascade.memory_multiplier)} от старой: изменение {100*(fast_lift.memory_multiplier-1):+.1f}% и {100*(fast_cascade.memory_multiplier-1):+.1f}% в этой серии. Общий индекс измерен отдельно ниже.")
     put(f"Новая серия содержит {validation['unique_scenarios']} уникальные конфигурации и "
-        f"{validation['scheduled_scenarios']} запланированных случаев с учётом отдельной повторной "
+        f"{validation['scheduled_scenarios']} запланированных случая с учётом отдельной повторной "
         f"абляционной панели: {validation['timed_runs']:,} временных эпизодов и "
         f"{validation['memory_runs']:,} отдельных эпизодов памяти. Расхождений завершённых "
         f"стоимостей с точным эталоном: **{validation['exact_cost_disagreements']}**. "
@@ -150,7 +155,9 @@ $(f,-g,seq)$, а fast — $(f,-g,-depth,seq)$. Последний ключ яв�
 
 Сам бит learned избыточен при наличии неизменной initial: достаточно $h>initial$.
 Смысл прежнего инварианта остаётся: поднятый без раскрытия узел обязан участвовать
-в ремонте. Если оценка уменьшилась до initial, она всё ещё распространяет уменьшение
+в ремонте. Если $h(u)=initial(u)$, согласованность initial и $h(v)\ge initial(v)$
+дают $h(u)\le c(u,v)+h(v)$: такой предшественник не требует понижения.
+Если оценка уменьшилась до initial, она всё ещё распространяет уменьшение
 назад как элемент очереди; пропускаются только предшественники, которые сами равны base.
 На детерминированном C++-контрпримере после двух освобождений все шесть проверяемых
 вариантов дают оптимальную цену 4. Прежние мутации без closure или без участия поднятых
@@ -190,16 +197,16 @@ $(f,-g,seq)$, а fast — $(f,-g,-depth,seq)$. Последний ключ яв�
         'есть в JSON. Три последовательных повтора со случайным порядком методов и '
         'отдельный allocation-проход. Эталон и проверка пути не входят во время поиска.')
     put('Full включает конструктор планировщика и все запросы; initial — конструктор '
-        'и запрос 0; repair — запросы после 0. Общая подготовка шаблонов исключена '
+        'и запрос 0; repair — запросы после 0. В навигации время sensing хранится отдельно и не включено в full: здесь сравнивается работа планировщика. Общая подготовка шаблонов исключена '
         'из этих часов одинаково для всех методов и измерена отдельным микробенчмарком. '
         'Таблицы используют медиану трёх времён каждой конфигурации, затем геометрическое '
         'среднее парных отношений по общим завершённым конфигурациям. В replay точное '
         '«пути нет» — завершённый ответ; в навигации завершение требует достичь цели. '
-        'Разная политика равностоимостных путей меняет наблюдения и иногда последующую '
+        'В столбцах памяти меньше 1 выгодно fast. Число пар относится к full; для repair используются только случаи с ненулевым последующим временем у обеих сторон (число repair_pairs и флаги нулевой работы сохранены в CSV). Разная политика равностоимостных путей меняет наблюдения и иногда последующую '
         'динамику: навигационные времена не являются сравнением на одинаковых запросах.')
     put(f"Бюджет — {manifest['cap']:,} раскрытий на вызов; допуск стоимости $10^{{-6}}$. "
         f"Медиана относительного MAD полных времён — {100*validation['repeat_relative_mad_median']:.2f}%, "
-        f"p95 — {100*validation['repeat_relative_mad_p95']:.2f}%. Три повтора характеризуют "
+        f"p95 — {100*validation['repeat_relative_mad_p95']:.2f}%. У mesh и primitive-контролей раскрытия относятся к разным вершинам; этот порог не равен единому лимиту процессорного времени. Fast и прежние Lift используют одни и те же mesh-конфигурации. Три повтора характеризуют "
         'шум этой машины, а не независимые карты или доверительный интервал переносимости.')
     put('# Результаты по времени')
     rows = []
@@ -225,12 +232,12 @@ $(f,-g,seq)$, а fast — $(f,-g,-depth,seq)$. Последний ключ яв�
     for control in ['car16', 'grid8']:
         d = maps[maps.cohort.eq('replay') & maps.control.eq(control) & maps.panel.eq('main')]
         for name, group in d.groupby('map'):
-            for method, baseline in [('fast_lift','lift_mesh'), ('fast_cascade','cascade_lift')]:
+            for method, baseline in [('zero_lift','lift_mesh'), ('zero_cascade','cascade_lift'), ('fast_lift','lift_mesh'), ('fast_cascade','cascade_lift')]:
                 v = result(method, baseline, group)
-                rows.append([name, 'Lift' if method=='fast_lift' else 'Cascade',
+                rows.append([name, LABEL[method],
                              f'{int(v.pairs)}/{int(v.configurations)}', number(v.full_speedup),
                              number(v.repair_speedup), number(v.memory_multiplier)])
-    put(table(['Карта','Fast к old','Пары','Full ×','Repair ×','Peak / old'], rows))
+    put(table(['Карта','Кандидат к old','Пары','Full ×','Repair ×','Peak / old'], rows))
     put('## Сравнение с остальными контролями')
     rows = []
     for control, cohort in [('car16','replay'), ('grid8','replay'),
@@ -249,6 +256,26 @@ $(f,-g,seq)$, а fast — $(f,-g,-depth,seq)$. Последний ключ яв�
         'Преимущество над старой неоптимизированной реализацией не доказывает превосходство '
         'над Batch-MPGAA* или MeshA* reuse. Полные парные отношения, включая проигрыши, '
         'сохранены в `paired_cases.csv`; разбиение по семействам — в `family_pairs.csv`.')
+    put('## Контроли по car-картам')
+    d = maps[maps.cohort.eq('replay') & maps.control.eq('car16') & maps.panel.eq('main')]
+    for method in ['fast_lift', 'fast_cascade']:
+        put(LABEL[method]+': прямые сравнения с MeshA* reuse и Batch-MPGAA*. У каждого контроля своё множество общих завершённых случаев.')
+        rows = []
+        for name, g in d[d.method.eq(method)].groupby('map'):
+            a = g[g.baseline.eq('mesha_reuse')].iloc[0]
+            b = g[g.baseline.eq('batch_mpgaa')].iloc[0]
+            rows.append([name, f'{int(a.pairs)}/{int(a.configurations)}', number(a.full_speedup), number(a.repair_speedup),
+                         f'{int(b.pairs)}/{int(b.configurations)}', number(b.full_speedup), number(b.repair_speedup)])
+        put(table(['Карта','MeshA пары','Full ×','Repair ×','Batch пары','Full ×','Repair ×'], rows))
+    for method in ['fast_lift', 'fast_cascade']:
+        g = maps[maps.cohort.eq('replay') & maps.control.eq('car16') & maps.panel.eq('main') & maps.method.eq(method) & maps.baseline.eq('batch_mpgaa')]
+        win = g[g.full_speedup.ge(1.1)]
+        loss = g[g.full_speedup.le(.9)]
+        describe = lambda d: '; '.join(f"{v['map']}: {number(v.full_speedup)}×, {int(v.pairs)}/{int(v.configurations)} пар" for _,v in d.iterrows()) or 'нет'
+        put(f"Описательное разбиение после измерений, {LABEL[method]} к Batch: полный выигрыш от 10% — {describe(win)}; полный проигрыш от 10% — {describe(loss)}. Эти группы не являются независимой проверочной выборкой.")
+    v = result('fast_cascade', 'batch_mpgaa')
+    count = lambda method: int(metrics.loc[metrics.control.eq('car16') & metrics.cohort.eq('replay') & metrics.panel.eq('main') & metrics.method.eq(method), 'complete'].sum())
+    put(f"Batch-MPGAA* завершает {count('batch_mpgaa')}/48 car16 replay-случаев, упрощённый Cascade — {count('fast_cascade')}/48. Условное полное отношение к Batch {number(v.full_speedup)}× и ремонт {number(v.repair_speedup)}× не отменяют разницы завершения; requested peak у Cascade в {number(v.memory_multiplier)} раза больше. В автономной динамике общего преимущества над Batch по этим данным также не видно; её времена и завершение разобраны отдельно.")
     put('# Завершение и качество пути')
     put(figure('completion', 'Replay: точное решение или доказанное отсутствие пути. Навигация: достижение цели. Zero-only не запускался в автономной навигации; соответствующие клетки отмечены явно.'))
     rows = []
@@ -266,7 +293,7 @@ $(f,-g,seq)$, а fast — $(f,-g,-depth,seq)$. Последний ключ яв�
     put(figure('radius', 'Полное время планировщика по каждой карте и радиусу. Крестики означают незавершённую миссию; малое время такого случая не интерпретируется как ускорение решения.'))
     quality = data['navigation_quality']
     rows = []
-    for case, g in metrics[metrics.cohort.eq('navigation_unknown')].groupby('case'):
+    for case, g in metrics[metrics.cohort.eq('navigation_unknown')].sort_values(['map','radius']).groupby('case',sort=False):
         d = g.set_index('method');a, b = d.loc['fast_cascade'], d.loc['cascade_lift']
         qa = quality[quality['case'].eq(case) & quality.method.eq('fast_cascade')].iloc[0]
         rows.append([a['map'], int(a.radius), qa.status, number(1000*a.full_s),
@@ -278,7 +305,7 @@ $(f,-g,seq)$, а fast — $(f,-g,-depth,seq)$. Последний ключ яв�
         'не используется; абсолютные длины, шаги и статусы всех методов есть в `navigation_quality.csv`.')
     put('## Динамика при n=k и фактическом cr')
     rows = []
-    for case, g in metrics[metrics.cohort.eq('navigation_dynamic')].groupby('case'):
+    for case, g in metrics[metrics.cohort.eq('navigation_dynamic')].sort_values(['map','k','cr']).groupby('case',sort=False):
         d = g.set_index('method');a, b = d.loc['fast_cascade'], d.loc['cascade_lift']
         change = data['actual_changes'];v = change[change['case'].eq(case) & change.method.eq('fast_cascade')].iloc[0]
         qa = quality[quality['case'].eq(case) & quality.method.eq('fast_cascade')].iloc[0]
@@ -291,7 +318,7 @@ $(f,-g,seq)$, а fast — $(f,-g,-depth,seq)$. Последний ключ яв�
         'при таких остановках. В статической неизвестной карте ложных отказов при достижимой '
         'истинной цели не обнаружено.')
     put('# Абляции и работа алгоритмов')
-    put(figure('ablation', 'Одна компонента изменена относительно fast_cascade на отдельной панели из 12 повторных car-сценариев. Отношение выше 1 показывает пользу соответствующей оптимизации; tie-breaking может менять сам поиск.'))
+    put(figure('ablation', 'Одна компонента изменена относительно fast_cascade на отдельной панели из 12 повторных car-сценариев. Слева показана добавка времени в процентах, справа — отношение запросов allocation; положительная добавка показывает пользу удаления детали. Tie-breaking может менять сам поиск.'))
     rows = []
     d = summary[summary.panel.eq('ablation')]
     for _, v in d.iterrows():
@@ -305,17 +332,19 @@ $(f,-g,seq)$, а fast — $(f,-g,-depth,seq)$. Последний ключ яв�
         'целочисленного ключа, компактной ремонтной записи, ленивого сообщения ошибки и '
         'отсутствия learned-бита входят в общий пакет; их отдельный причинный вклад '
         'этой серией не оценивался.')
-    put(figure('work', 'Суммы событий только ремонта основной car16 replay-панели, один логический повтор. Единицы разных столбцов не взаимозаменяемы; к значениям добавлена 1 только для логарифмической оси.'))
+    cached = d[d.baseline.eq('fast_recompute_base')].iloc[0]
+    put(f"Пересчёт base вместо чтения сохранённого порога даёт отношение full {number(cached.full_speedup,3)}× и repair {number(cached.repair_speedup,3)}×. Отдельного ускорения от кэширования порога на этой панели не установлено. Поле initial сохраняется для простого критерия h > initial и численной нижней границы; абляция пересчитывает только порог ремонта, поэтому цену полного удаления поля из записи эта серия не измеряет. Остальные отдельные эффекты в несколько процентов следует читать с учётом трёх повторов и разброса времени.")
+    put(figure('work', 'Суммы событий только ремонта основной car16 replay-панели, один логический повтор. L/C означает Lift/Cascade; Old — weighted, Zero — только удаление потенциала, Fast — упрощённая версия. Единицы разных столбцов не взаимозаменяемы; к значениям добавлена 1 только для логарифмической оси.'))
     rows = []
     for method in ['lift_mesh','cascade_lift','zero_lift','zero_cascade','fast_lift','fast_cascade']:
         d = work[work.panel.eq('main') & work.control.eq('car16') & work.phase.eq('repair') & work.method.eq(method)]
         rows.append([LABEL[method], int(d.expansions.sum()), int(d.lift_edges.sum()),
                      int(d.lift_writes.sum()), int(d.mv_policy_tests.sum()), int(d.checked_cells.sum())])
-    put(table(['Метод','Раскрытия','Closure дуги','Подъёмы h','Policy tests','Grid.free'], rows))
+    put(table(['Метод','Раскрытия','Closure дуги','Подъёмы h','Policy loop','Grid.free'], rows))
     put('`checked_cells` у всех шести Lift/zero/fast считает каждый вызов Grid.free внутри '
         'replan, включая концы и внешние клетки. У MeshA* reuse и Batch-MPGAA* унаследованный '
         'счётчик покрывает лишь часть проверок, поэтому его межсемейное отношение здесь '
-        'не используется. Это логические вызовы API, не аппаратные чтения памяти. '
+        'не используется. mv_policy_tests считает итерации цикла цепочки; ранние проверки next/memo в fast в этот счётчик не входят. Это логические вызовы API, не аппаратные чтения памяти. Суммы работы включают лимитированные вызовы; при разном завершении число выполненных запросов может различаться. '
         'Показатели `fast_base_evaluations` и `fast_closure_seeds` инструментированы '
         'только для fast; нули в строках прежних контролей не означают отсутствия такой работы.')
     put('## Выделения памяти и общий индекс')
@@ -344,27 +373,14 @@ $(f,-g,seq)$, а fast — $(f,-g,-depth,seq)$. Последний ключ яв�
         'harness все индексы существуют для доступности контролей; производственный fast '
         'не имеет этой зависимости. Подготовка Model и чтение файла не входят в эти часы.')
     put('# Проверки и оценка работы')
-    put(f"Независимый primitive Dijkstra проверил **{correct['comparisons']:,}** ответов "
-        '(12 seed-карт на модель, 40 последовательных запросов, десять новых режимов): '
-        'движущийся старт, закрытые концы, повторные и смешанные правки, ограничение '
-        'по раскрытиям и последующее восстановление с увеличенным бюджетом. Аудируются '
-        'свободные неравенства согласованности, нижняя граница base и полнота подписок. '
-        'Дополнительный C++-пример проверяет ремонт после освобождений в шести режимах '
-        'и явный отказ от конфигурационного нулевого цикла вне класса prefix-DAG. '
-        'ASan/UBSan и проверка утечек пройдены для обеих моделей.')
+    put(f"Независимый primitive Dijkstra проверил **{correct['comparisons']:,}** ответов. Для каждой модели использованы 12 карт с разными seed и по 40 запросов; проверены десять режимов. Тесты включают движущийся старт, закрытые концы, дубликаты и смешанные правки. Проверен малый лимит раскрытий и повторный поиск после его увеличения. Аудируются свободные неравенства согласованности, нижняя граница base и полнота подписок. Дополнительный C++-пример проверяет ремонт после освобождений в шести режимах и отказ от нулевого цикла вне класса prefix-DAG. ASan/UBSan и проверка утечек пройдены для обеих моделей.")
     put(f"В полной серии обычный и allocation-бинарь совпали по логическим полям "
         f"в {validation['allocation_matched_rows']:,} строках вызовов и "
         f"{validation['allocation_matched_episodes']:,} навигационных эпизодах. "
         f"Счётчики подтверждают {validation['terminal_prunes']:,} терминальных отсечений "
         f"и {validation['lift_writes']:,} подъёмов h. Исходные файлы контролей не менялись; "
         'их хеши проверяются вместе с источниками новой версии.')
-    put('Корректность поддерживается доказательством для неотрицательного prefix-mesh, '
-        'независимыми тестами и эталоном на измеренных запросах. Практическая полезность '
-        'оценивается по свежим парным временам, завершению и памяти. Готовность к статье '
-        'улучшена за счёт более простой постановки и реализации, но сами эти оптимизации '
-        'не являются достаточным основанием заявлять новый SOTA-алгоритм. Сильное '
-        'сравнение с независимыми оптимизированными реализациями и более широким control set '
-        'остаётся отдельной исследовательской задачей.')
+    put('Для prefix-mesh доказана согласованность на исходных ценах. Тесты с независимым эталоном подтверждают результат на измеренных задачах. Практический результат — более быстрая и простая реализация точного Lift, с показанным выше увеличением рабочей памяти. В статье теперь можно описывать исходные нулевые дуги. Для сильного сравнения нужны независимые реализации и другие наборы примитивов. Литературная новизна самой чистки кода в этой работе не заявляется.')
     put('Ограничения: фиксированная цель, данный класс prefix-DAG и примитивов; шесть car-карт '
         'и один control set; один корень на автономную параметрическую точку; три временных '
         'повтора; повторное использование известных входов; дешёвые 2D-проверки клеток. '
@@ -372,12 +388,8 @@ $(f,-g,seq)$, а fast — $(f,-g,-depth,seq)$. Последний ключ яв�
         'геометрической проверки. Не все оптимизации аблированы отдельно. Результат '
         'показывает, какие детали реализации можно убрать при сохранении точности.')
     put('# Артефакт и воспроизведение')
-    put('Ветка `perf/lift-zero-cost`. Код: [алгоритмы](../../cpp/mesh_lift_fast/algorithms.hpp), '
-        '[индекс](../../cpp/mesh_lift_fast/index.hpp), [zero-only](../../cpp/mesh_lift_fast/zero_only.hpp). '
-        'Входы и хеши: `cpp/mesh_lift_fast/frozen/manifest.json`; сырые повторы: '
-        '`cpp/mesh_lift_fast/results/full`; производные таблицы: подкаталог `analysis`; '
-        'протокол проверки: `cpp/mesh_lift_fast/validation`. Полные команды приведены '
-        'в [README](../../cpp/mesh_lift_fast/README.md). Секунды предыдущих серий не смешиваются с этой.')
+    put('Ветка `perf/lift-zero-cost`. Код: [алгоритмы](../../cpp/mesh_lift_fast/algorithms.hpp), [индекс](../../cpp/mesh_lift_fast/index.hpp), [zero-only](../../cpp/mesh_lift_fast/zero_only.hpp). Полные команды приведены в [README](../../cpp/mesh_lift_fast/README.md). Секунды предыдущих серий с этой не смешиваются.')
+    put('Материалы:\n\n- [Входы и хеши](../../cpp/mesh_lift_fast/frozen/manifest.json).\n- [Протокол сырых прогонов](../../cpp/mesh_lift_fast/results/full/experiment.json).\n- [Таблицы по конфигурациям](../../cpp/mesh_lift_fast/results/full/analysis/case_metrics.csv).\n- [Попарные сравнения](../../cpp/mesh_lift_fast/results/full/analysis/paired_cases.csv).\n- [Проверки корректности](../../cpp/mesh_lift_fast/validation/correctness.json).')
     put('```bash\nmake -C cpp/mesh_lift_fast -j2 all\nmake -C cpp/mesh_lift_fast test\n'
         'python3 cpp/mesh_lift_fast/run_all.py --output /tmp/lift-fast-rerun\n'
         'python3 cpp/mesh_lift_fast/run_setup.py --output /tmp/lift-fast-setup-rerun\n'

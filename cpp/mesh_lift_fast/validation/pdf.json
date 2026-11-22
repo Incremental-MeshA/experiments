@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "files": [
+    {
+      "file": "docs/mesh_lift_fast/report.pdf",
+      "sha256": "ba471f3d13b6492e3e0c6cf99c3ecc1635959f993be6386f46f4c73de86d9d37",
+      "pages": 14,
+      "outside_spans": 0,
+      "replacement_characters": 0,
+      "minimum_font_pt": 6.194900035858154
+    },
+    {
+      "file": "docs/mesh_lift_fast/figures/ablation.pdf",
+      "sha256": "f848af518eb912869ad6f75e581a75a40bd05e5bcf47fd1068aff717347682a7",
+      "pages": 1,
+      "outside_spans": 0,
+      "replacement_characters": 0,
+      "minimum_font_pt": 16.0
+    },
+    {
+      "file": "docs/mesh_lift_fast/figures/completion.pdf",
+      "sha256": "b7f624f5a8ed8a14cef9d2c1dce4a2002463c2871c49a1e8f53948f2e6c751cd",
+      "pages": 1,
+      "outside_spans": 0,
+      "replacement_characters": 0,
+      "minimum_font_pt": 11.0
+    },
+    {
+      "file": "docs/mesh_lift_fast/figures/maps.pdf",
+      "sha256": "59a6b17300f9c842092183d1190e7e8f674ef91e62d523984afe640ccd6c4d58",
+      "pages": 1,
+      "outside_spans": 0,
+      "replacement_characters": 0,
+      "minimum_font_pt": 14.0
+    },
+    {
+      "file": "docs/mesh_lift_fast/figures/radius.pdf",
+      "sha256": "1d47afe89d41489c2f41f4a3a5f1255b31cd606fbdc5c60dc0e05f9b91675261",
+      "pages": 1,
+      "outside_spans": 0,
+      "replacement_characters": 0,
+      "minimum_font_pt": 11.199999809265137
+    },
+    {
+      "file": "docs/mesh_lift_fast/figures/work.pdf",
+      "sha256": "cd71b952301d8846d1b48d07de881512c14f7d1e7ab550e883d886c43b904e76",
+      "pages": 1,
+      "outside_spans": 0,
+      "replacement_characters": 0,
+      "minimum_font_pt": 11.199999809265137
+    }
+  ],
+  "visually_reviewed_report_pages": [
+    5,
+    9,
+    12,
+    14
+  ],
+  "visually_reviewed_figures": [
+    "maps",
+    "ablation",
+    "work",
+    "radius",
+    "completion"
+  ]
+}

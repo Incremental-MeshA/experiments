@@ -1,0 +1,4 @@
+18 runs; car16__MA_room96__unknown__s48101__r8; 7.43291 s
+36 runs; car16__MA_room96__unknown__s48101__r32; 13.2403 s
+54 runs; car16__MA_room96__unknown__s48101__r64; 16.8669 s
+passed 54 navigation runs; 0 query caps

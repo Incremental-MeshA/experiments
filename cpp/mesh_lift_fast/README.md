@@ -8,7 +8,7 @@ using the original costs, including zero-cost prefix arcs. It needs neither
 potentials nor contracted or primitive-level search graphs. Include
 `algorithms.hpp`, construct `Index(model)`, then `LiftMPGAA(index, grid, goal,
 cap, Options::plain())` or `Options::cascading()`. The index must outlive the
-planner. The goal is fixed for the planner's lifetime.
+planner, and the Model must outlive both. The goal is fixed for the planner's lifetime.
 
 The benchmark adapters retain the old controls and two distinct comparisons:
 
@@ -45,6 +45,9 @@ python3 cpp/mesh_lift_fast/run_setup.py --output /tmp/lift-fast-setup-rerun
 python3 cpp/mesh_lift_fast/analyze.py --directory /tmp/lift-fast-rerun --setup-directory /tmp/lift-fast-setup-rerun
 python3 cpp/mesh_lift_fast/report.py --directory /tmp/lift-fast-rerun
 ```
+
+Postprocessing needs Python 3 with NumPy, pandas and Matplotlib; PDF export needs
+Pandoc, XeLaTeX and Noto Serif / Noto Sans Mono fonts.
 
 Use a fresh output directory. The serial runner preserves failed/incomplete
 outputs and resumes only jobs whose output hashes still match. The allocation

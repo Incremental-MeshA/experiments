@@ -1,0 +1,61 @@
+starting timing_replay_car16 1152 runs
+passed timing_replay_car16 1152 runs 793.59 s
+starting timing_replay_grid8 1296 runs
+passed timing_replay_grid8 1296 runs 1.68 s
+starting timing_ablation_car16 252 runs
+passed timing_ablation_car16 252 runs 142.02 s
+starting timing_navigation_car16_AR0700_dynamic 54 runs
+passed timing_navigation_car16_AR0700_dynamic 54 runs 87.13 s
+starting timing_navigation_car16_AR0700_unknown 54 runs
+passed timing_navigation_car16_AR0700_unknown 54 runs 1.67 s
+starting timing_navigation_car16_Berlin_dynamic 54 runs
+passed timing_navigation_car16_Berlin_dynamic 54 runs 118.36 s
+starting timing_navigation_car16_Berlin_unknown 54 runs
+passed timing_navigation_car16_Berlin_unknown 54 runs 3.73 s
+starting timing_navigation_car16_MA_maze96_dynamic 54 runs
+passed timing_navigation_car16_MA_maze96_dynamic 54 runs 295.91 s
+starting timing_navigation_car16_MA_maze96_unknown 54 runs
+passed timing_navigation_car16_MA_maze96_unknown 54 runs 194.5 s
+starting timing_navigation_car16_MA_random96_dynamic 54 runs
+passed timing_navigation_car16_MA_random96_dynamic 54 runs 0.23 s
+starting timing_navigation_car16_MA_random96_unknown 54 runs
+passed timing_navigation_car16_MA_random96_unknown 54 runs 0.36 s
+starting timing_navigation_car16_MA_room96_dynamic 54 runs
+passed timing_navigation_car16_MA_room96_dynamic 54 runs 10.79 s
+starting timing_navigation_car16_MA_room96_unknown 54 runs
+passed timing_navigation_car16_MA_room96_unknown 54 runs 16.87 s
+starting timing_navigation_car16_arena_dynamic 54 runs
+passed timing_navigation_car16_arena_dynamic 54 runs 0.12 s
+starting timing_navigation_car16_arena_unknown 54 runs
+passed timing_navigation_car16_arena_unknown 54 runs 0.06 s
+starting memory_replay_car16 384 runs
+passed memory_replay_car16 384 runs 305.77 s
+starting memory_replay_grid8 432 runs
+passed memory_replay_grid8 432 runs 0.57 s
+starting memory_ablation_car16 84 runs
+passed memory_ablation_car16 84 runs 59.02 s
+starting memory_navigation_car16_AR0700_dynamic 18 runs
+passed memory_navigation_car16_AR0700_dynamic 18 runs 32.75 s
+starting memory_navigation_car16_AR0700_unknown 18 runs
+passed memory_navigation_car16_AR0700_unknown 18 runs 0.61 s
+starting memory_navigation_car16_Berlin_dynamic 18 runs
+passed memory_navigation_car16_Berlin_dynamic 18 runs 44.58 s
+starting memory_navigation_car16_Berlin_unknown 18 runs
+passed memory_navigation_car16_Berlin_unknown 18 runs 1.36 s
+starting memory_navigation_car16_MA_maze96_dynamic 18 runs
+passed memory_navigation_car16_MA_maze96_dynamic 18 runs 109.02 s
+starting memory_navigation_car16_MA_maze96_unknown 18 runs
+passed memory_navigation_car16_MA_maze96_unknown 18 runs 73.85 s
+starting memory_navigation_car16_MA_random96_dynamic 18 runs
+passed memory_navigation_car16_MA_random96_dynamic 18 runs 0.11 s
+starting memory_navigation_car16_MA_random96_unknown 18 runs
+passed memory_navigation_car16_MA_random96_unknown 18 runs 0.11 s
+starting memory_navigation_car16_MA_room96_dynamic 18 runs
+passed memory_navigation_car16_MA_room96_dynamic 18 runs 4.37 s
+starting memory_navigation_car16_MA_room96_unknown 18 runs
+passed memory_navigation_car16_MA_room96_unknown 18 runs 7.66 s
+starting memory_navigation_car16_arena_dynamic 18 runs
+passed memory_navigation_car16_arena_dynamic 18 runs 0.04 s
+starting memory_navigation_car16_arena_unknown 18 runs
+passed memory_navigation_car16_arena_unknown 18 runs 0.03 s
+ALL_PASSED

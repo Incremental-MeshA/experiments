@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "measured_source_commit": "85fb7062576ce7a7da1c9efa70bb454961801939",
+  "manifest_sha256": "fe26c3794c319d4ba23ec9bb32464fd601e8d3d2f163e47b0904bae06f023e0f",
+  "experiment_sha256": "29ba0e62c554c12c1f91a306560d09b38f49a9a1c43cf7d17efb6e998c79d73a",
+  "analysis_sha256": "355d8e83c59b43a09b20d1187b50911a032ddc7342c8f04306e34840973fa4b0",
+  "report_validation_sha256": "5ce15d6585f24e496e516edcf8639ac86e6cedca8ab42d4af729f42e46509ca5",
+  "correctness_sha256": "cf4dae8f4c87086d2c8334e52755899a5c5eaed2cce821cd537058e6483ea91f",
+  "pdf_validation_sha256": "bdc7e14b1d5351418c767d7f735ea78127bde2271e47733e09f15f6b8b899209",
+  "timed_runs": 3348,
+  "memory_runs": 1116,
+  "timed_calls": 55701,
+  "matched_profile_calls": 18567,
+  "exact_cost_disagreements": 0,
+  "frozen_sources_unchanged": true,
+  "new_branch": "perf/lift-zero-cost"
+}

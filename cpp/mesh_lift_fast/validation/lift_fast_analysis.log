@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "unique_scenarios": 132,
+  "scheduled_scenarios": 144,
+  "timed_runs": 3348,
+  "memory_runs": 1116,
+  "timed_calls": 55701,
+  "allocation_matched_rows": 18567,
+  "allocation_matched_episodes": 216,
+  "ablation_identical_path_rows": 430,
+  "exact_cost_disagreements": 0,
+  "capped_calls": 24,
+  "terminal_prunes": 60812730,
+  "lift_writes": 88300054,
+  "repeat_relative_mad_median": 0.017109031311974894,
+  "repeat_relative_mad_p95": 0.08920323104956429
+}

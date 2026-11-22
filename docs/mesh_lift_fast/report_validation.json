@@ -1,0 +1,17 @@
+{
+  "markdown_sha256": "57e50480353b2a7a0ab686c0143d60db7240c8feaa499f67444fc99ca4f74358",
+  "pdf_sha256": "ba471f3d13b6492e3e0c6cf99c3ecc1635959f993be6386f46f4c73de86d9d37",
+  "command": [
+    "pandoc",
+    "/workspace/introduction-mpgaa-mesh/docs/mesh_lift_fast/report.md",
+    "-o",
+    "/workspace/introduction-mpgaa-mesh/docs/mesh_lift_fast/report.pdf",
+    "--pdf-engine=xelatex",
+    "--resource-path=/workspace/introduction-mpgaa-mesh/docs/mesh_lift_fast",
+    "--include-in-header=/workspace/introduction-mpgaa-mesh/docs/mesh_lift_fast/layout.tex",
+    "--lua-filter=/workspace/introduction-mpgaa-mesh/cpp/mpgaa_mesh/vector_images.lua"
+  ],
+  "status": "passed",
+  "report_source_sha256": "43fbdd659212e0b379a5fc9f1f13acbb4d15be5bf76dd69e1e3760bdf8c66f54",
+  "analysis_sha256": "355d8e83c59b43a09b20d1187b50911a032ddc7342c8f04306e34840973fa4b0"
+}

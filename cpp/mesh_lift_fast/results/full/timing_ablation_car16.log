@@ -1,0 +1,13 @@
+21 runs; car16__Berlin__on_path__s48101__b8__k2__r8__optimization_ablation; 0.299682 s
+42 runs; car16__Berlin__churn__s48101__b8__k2__r8__optimization_ablation; 0.473426 s
+63 runs; car16__AR0700__on_path__s48101__b8__k2__r8__optimization_ablation; 0.592003 s
+84 runs; car16__AR0700__churn__s48101__b8__k2__r8__optimization_ablation; 0.634909 s
+105 runs; car16__arena__on_path__s48101__b8__k2__r8__optimization_ablation; 3.73891 s
+126 runs; car16__arena__churn__s48101__b8__k2__r8__optimization_ablation; 3.74311 s
+147 runs; car16__MA_room96__on_path__s48101__b8__k2__r8__optimization_ablation; 22.6919 s
+168 runs; car16__MA_room96__churn__s48101__b8__k2__r8__optimization_ablation; 24.8468 s
+189 runs; car16__MA_random96__on_path__s48101__b8__k2__r8__optimization_ablation; 39.6951 s
+210 runs; car16__MA_random96__churn__s48101__b8__k2__r8__optimization_ablation; 39.7227 s
+231 runs; car16__MA_maze96__on_path__s48101__b8__k2__r8__optimization_ablation; 116.431 s
+252 runs; car16__MA_maze96__churn__s48101__b8__k2__r8__optimization_ablation; 142.014 s
+passed 252 runs, 1806 rows, 0 capped queries

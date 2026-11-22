@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "utc": "2026-11-22T01:28:51.570043+00:00",
+  "source_sha256": "fd0f23d2246245d272f3eaa351c1c17c1029dbf1ee9ddb46a4c0b8e6cca70d0e",
+  "outputs": {
+    "grid8.csv": "ffd375f23b31bcc0b8061e5f55ac7e634b0381783028d16dcbc3ad0e9a580d77",
+    "grid8.log": "8594847c20371bf7e8d2a6e9f5bf569396bfac0f8cc357d32133e4b99ae64206",
+    "car16.csv": "b1c097056469e4b0af8add1cfb7cac3252e4cb0dac262dae507cceae1f7d9d4c",
+    "car16.log": "4c6f3bc8445186c0267941f06b25b4c750e6d2c59e13f1c6c121469c9dce6a09",
+    "grid8_memory.csv": "18375ffbfdb47a45b3006b0538433352249ac586df6f46f5e7e82fe249f3938b",
+    "grid8_memory.log": "2205044301a2e0d6e8f1d1e4ad80040700e0e50598dc1aba2ea3faa75133fd78",
+    "car16_memory.csv": "2d6136c05d334f2094d225f00af6007f309b26eb3e73b3665f3b38e2d8b56cfa",
+    "car16_memory.log": "5f817f7be54ac078a38c97fb356e05f53356205b73d13fe0085fd71eb5310ffd"
+  },
+  "jobs": {
+    "grid8": {
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift_fast/build/setup",
+        "/workspace/introduction-mpgaa-mesh/cpp/experiments/frozen/grid8_model.txt",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift_fast/results/setup/grid8.csv"
+      ],
+      "completion": {
+        "status": "passed",
+        "compiler": "14.2.0",
+        "runs": 300,
+        "checksum": 2700,
+        "memory_profile": false
+      }
+    },
+    "car16": {
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift_fast/build/setup",
+        "/workspace/introduction-mpgaa-mesh/cpp/experiments/frozen/car16_model.txt",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift_fast/results/setup/car16.csv"
+      ],
+      "completion": {
+        "status": "passed",
+        "compiler": "14.2.0",
+        "runs": 300,
+        "checksum": 327600,
+        "memory_profile": false
+      }
+    },
+    "grid8_memory": {
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift_fast/build/setup_memory",
+        "/workspace/introduction-mpgaa-mesh/cpp/experiments/frozen/grid8_model.txt",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift_fast/results/setup/grid8_memory.csv"
+      ],
+      "completion": {
+        "status": "passed",
+        "compiler": "14.2.0",
+        "runs": 300,
+        "checksum": 2700,
+        "memory_profile": true
+      }
+    },
+    "car16_memory": {
+      "command": [
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift_fast/build/setup_memory",
+        "/workspace/introduction-mpgaa-mesh/cpp/experiments/frozen/car16_model.txt",
+        "/workspace/introduction-mpgaa-mesh/cpp/mesh_lift_fast/results/setup/car16_memory.csv"
+      ],
+      "completion": {
+        "status": "passed",
+        "compiler": "14.2.0",
+        "runs": 300,
+        "checksum": 327600,
+        "memory_profile": true
+      }
+    }
+  },
+  "binaries": {
+    "setup": "28eea64c8b236fc9ac41e300d97f2ed30740b847346dfb36442ff0be5b0ffc23",
+    "setup_memory": "7e54265eaf47c1a41d88441aaa8000051e999549d2222f2a9e3d0c83f4f3e7e3"
+  },
+  "inputs": {
+    "cpp/experiments/frozen/grid8_model.txt": "e71e4715a7657d6ad355c9a11b6c9059996c5a2b36e18b96104b72715d84d5c5",
+    "cpp/experiments/frozen/car16_model.txt": "1de83153dc903a339dc32921130fde639c0419240dc85fb184f7cbc27357c215"
+  }
+}

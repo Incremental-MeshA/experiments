@@ -14,6 +14,7 @@ from pandas.testing import assert_frame_equal
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from matplotlib.ticker import FixedLocator, StrMethodFormatter, NullLocator
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
@@ -57,6 +58,7 @@ def main(directory, setup_directory):
     manifest = json.loads(manifest_path.read_text())
     state = json.loads((directory / 'experiment.json').read_text())
     assert state['status'] == 'passed' and state['manifest_sha256'] == sha(manifest_path)
+    assert not state['tracked_dirty'] and manifest['frozen_utc'] <= state['utc']
     for path, digest in {**manifest['files'], **manifest['sources']}.items():
         assert sha(ROOT / path) == digest, path
     for name, digest in state['binaries'].items():
@@ -171,7 +173,9 @@ def main(directory, setup_directory):
                 row = dict(case=case, method=method, baseline=baseline, complete=ok)
                 row.update({c: a[c] for c in ['cohort', 'control', 'map', 'family', 'panel', 'seed', 'radius', 'k', 'cr']})
                 for phase in ['full', 'initial', 'repair']:
-                    row[phase+'_speedup'] = b[phase+'_s']/a[phase+'_s'] if ok and a[phase+'_s'] > 0 else np.nan
+                    row[phase+'_speedup'] = b[phase+'_s']/a[phase+'_s'] if ok and a[phase+'_s'] > 0 and b[phase+'_s'] > 0 else np.nan
+                row['candidate_zero_repair'] = a.repair_s == 0
+                row['baseline_zero_repair'] = b.repair_s == 0
                 row['memory_multiplier'] = a.peak_heap_bytes/b.peak_heap_bytes if ok and b.peak_heap_bytes else np.nan
                 pairs.append(row)
     pairs = pd.DataFrame(pairs)
@@ -182,7 +186,7 @@ def main(directory, setup_directory):
             if not isinstance(key, tuple):
                 key = (key,)
             rows.append(dict(zip(keys, key)) | dict(
-                configurations=len(d), pairs=int(d.complete.sum()), wins10=int(d.full_speedup.ge(1.1).sum()),
+                configurations=len(d), pairs=int(d.complete.sum()), repair_pairs=int(d.repair_speedup.notna().sum()), wins10=int(d.full_speedup.ge(1.1).sum()),
                 full_speedup=gm(d.full_speedup), initial_speedup=gm(d.initial_speedup),
                 repair_speedup=gm(d.repair_speedup), memory_multiplier=gm(d.memory_multiplier)))
         result = pd.DataFrame(rows)
@@ -241,18 +245,26 @@ def main(directory, setup_directory):
         lambda v: float((v-v.median()).abs().median()/v.median())).rename('relative_mad').reset_index()
     save(dispersion, out / 'dispersion.csv')
     setup_state = json.loads((setup_directory / 'experiment.json').read_text())
-    assert setup_state['status'] == 'passed'
+    assert setup_state['status'] == 'passed' and setup_state['source_sha256'] == sha(HERE/'run_setup.py')
+    assert setup_state['utc'] >= max(v['finished_utc'] for k,v in state['jobs'].items() if k.startswith('timing_'))
+    for path, digest in setup_state['inputs'].items():
+        assert sha(ROOT/path) == digest, path
     for name, digest in setup_state['outputs'].items():
         assert sha(setup_directory / name) == digest
     for name, digest in setup_state['binaries'].items():
         assert sha(HERE / 'build' / name) == digest
     setups = pd.concat([read(setup_directory / (m+'.csv')) for m in ['grid8', 'car16']])
     setup_memory = pd.concat([read(setup_directory / (m+'_memory.csv')) for m in ['grid8', 'car16']])
+    assert len(setups) == len(setup_memory) == 600
+    assert setups.groupby(['model','method']).size().eq(100).all()
+    assert setup_memory.groupby(['model','method']).size().eq(100).all()
+    assert_frame_equal(setups[['model','method','repeat','configurations','edges']].sort_values(['model','method','repeat']).reset_index(drop=True),
+                       setup_memory[['model','method','repeat','configurations','edges']].sort_values(['model','method','repeat']).reset_index(drop=True))
     setup_summary = setups.groupby(['model', 'method'], as_index=False).time_s.median().merge(
         setup_memory.groupby(['model', 'method'], as_index=False)[['peak_heap_bytes', 'retained_heap_bytes', 'allocation_calls']].median())
     save(setup_summary, out / 'setup.csv')
     figures = {}
-    plt.rcParams.update({'font.size': 13, 'pdf.fonttype': 42, 'axes.spines.top': False, 'axes.spines.right': False})
+    plt.rcParams.update({'font.size': 16, 'pdf.fonttype': 42, 'axes.spines.top': False, 'axes.spines.right': False})
     colors = {'fast_lift': '#D55E00', 'fast_cascade': '#0072B2', 'zero_cascade': '#009E73',
               'lift_mesh': '#E69F00', 'cascade_lift': '#56B4E9', 'mesha_reuse': '#882255', 'batch_mpgaa': '#777777'}
     def figure(fig, name):
@@ -274,36 +286,40 @@ def main(directory, setup_directory):
         ax.axvline(1, ls=':', color='.4')
         ax.set_yticks(range(len(names)), names)
         ax.set(xscale='log', xlabel='Speedup vs matching weighted Lift', title=title)
-    axes[0].legend(fontsize=10, loc='best')
+        ax.xaxis.set_major_locator(FixedLocator([.25,.5,.75,1,1.25,1.5,2,3,4,8,16]))
+        ax.xaxis.set_major_formatter(StrMethodFormatter('{x:g}'))
+        ax.xaxis.set_minor_locator(NullLocator())
+    handles, labels = axes[0].get_legend_handles_labels()
+    fig.legend(handles, labels, fontsize=14, loc='upper center', bbox_to_anchor=(.5,1.08), ncol=3)
     figure(fig, 'maps')
     fig, axes = plt.subplots(1, 2, figsize=(12, 4.8))
     d = summary[summary.panel.eq('ablation')]
     names = [m for m in manifest['ablations'] if m != 'fast_cascade']
     values = [d[d.baseline.eq(m)].iloc[0].full_speedup for m in names]
-    axes[0].barh(range(len(names)), values, color='#0072B2')
+    axes[0].barh(range(len(names)), 100*(np.asarray(values)-1), color='#0072B2')
     axes[0].set_yticks(range(len(names)), [LABEL[m] for m in names])
-    axes[0].axvline(1, ls=':', color='.4')
-    axes[0].set(xlabel='Ablation time / simplified Cascade time', title='One component changed at a time')
+    axes[0].axvline(0, ls=':', color='.4')
+    axes[0].set(xlabel='Extra episode time vs simplified, %', title='One component changed at a time')
     allocation_lookup = alloc[alloc.panel.eq('ablation')].groupby('method').allocation_calls.sum()
     allocation_values = [allocation_lookup[m]/allocation_lookup['fast_cascade'] for m in names]
     axes[1].barh(range(len(names)), allocation_values, color='#009E73')
     axes[1].set_yticks(range(len(names)), [LABEL[m] for m in names])
     axes[1].axvline(1, ls=':', color='.4')
-    axes[1].set(xlabel='Ablation requests / simplified requests', title='Replay allocation requests')
+    axes[1].set(xlabel='Requests / simplified', title='Replay allocation requests')
     figure(fig, 'ablation')
-    fig, axes = plt.subplots(1, 3, figsize=(13, 4.8))
+    fig, axes = plt.subplots(1, 3, figsize=(11, 4.8))
     methods = NATIVE
     for ax, frame, column, title in [
         (axes[0], work, 'lift_edges', 'Closure arcs inspected'),
-        (axes[1], work, 'mv_policy_tests', 'Policy-node tests'),
+        (axes[1], work, 'mv_policy_tests', 'Policy-chain loop visits'),
         (axes[2], alloc, 'allocation_calls', 'Allocation requests')]:
         d = frame[frame.control.eq('car16') & frame.panel.eq('main') & frame.phase.eq('repair')]
         values = d.groupby('method')[column].sum()
         ax.bar(range(len(methods)), [values[m]+1 for m in methods], color=['#E69F00', '#56B4E9', '#999999', '#009E73', '#D55E00', '#0072B2'])
-        ax.set_xticks(range(len(methods)), [LABEL[m] for m in methods], rotation=50, ha='right', fontsize=10)
+        ax.set_xticks(range(len(methods)), ['Old L','Old C','Zero L','Zero C','Fast L','Fast C'], rotation=45, ha='right', fontsize=14)
         ax.set(yscale='log', ylabel='Events + 1', title=title)
     figure(fig, 'work')
-    fig, axes = plt.subplots(2, 3, figsize=(13, 8), sharex=True)
+    fig, axes = plt.subplots(3, 2, figsize=(10.5, 10), sharex=True)
     for ax, (name, d) in zip(axes.flat, metrics[metrics.cohort.eq('navigation_unknown')].groupby('map')):
         for method in ['lift_mesh', 'cascade_lift', 'fast_lift', 'fast_cascade', 'mesha_reuse', 'batch_mpgaa']:
             g = d[d.method.eq(method)].sort_values('radius')
@@ -313,7 +329,8 @@ def main(directory, setup_directory):
             ax.scatter(bad_cases.radius, 1000*bad_cases.full_s, marker='x', color=colors[method])
         ax.set(yscale='log', xlabel='Discovery radius, cells', ylabel='Planner episode, ms', title=name)
         ax.set_xticks([8, 32, 64])
-    axes[0, 0].legend(fontsize=9)
+    handles, labels = axes[0,0].get_legend_handles_labels()
+    fig.legend(handles, labels, fontsize=12, loc='upper center', bbox_to_anchor=(.5,1.06), ncol=3)
     figure(fig, 'radius')
     methods = ['lift_mesh', 'cascade_lift', 'zero_lift', 'zero_cascade', 'fast_lift', 'fast_cascade', 'mesha_reuse', 'batch_mpgaa']
     cohorts = ['replay', 'navigation_unknown', 'navigation_dynamic']
