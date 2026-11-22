@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "matched_rows": 10741,
+  "binaries": {
+    "replay": "31a91d8aa641f70e92e6ab693c06538b0763eb3c77c1b16bc9102e6ce46f8b46",
+    "replay_memory": "4a7cd80c015804cb88ea40b5bb402e8af14cd67615d9d3d59d235e8b69127338",
+    "navigation": "f4d7c53406bd796b3fa9762f1ddb9879ed6465a3330fdb8aa68f664817b082c0",
+    "navigation_memory": "9860329e588f8bc67a6c6fc48d59bfb5ffd793e23dd612f02b06487986dbe23c"
+  }
+}

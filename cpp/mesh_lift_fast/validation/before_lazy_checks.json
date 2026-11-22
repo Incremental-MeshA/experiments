@@ -1,0 +1,36 @@
+{
+  "lift_fast_build_final.log": {
+    "sha256": "c6eaf75b154a1096afce652e2d29decf90d038d31482428afd2ea5fa7fad4aca",
+    "log": "make: Entering directory '/workspace/introduction-mpgaa-mesh/cpp/mesh_lift_fast'\ng++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic '-DIMA_EXPERIMENT_FLAGS=\"-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic\"' replay.cpp -o build/replay\ng++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC '-DIMA_EXPERIMENT_FLAGS=\"-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC\"' replay.cpp -o build/replay_memory\ng++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic '-DNAV_FLAGS=\"-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic\"' navigation.cpp -o build/navigation\ng++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC '-DNAV_FLAGS=\"-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC\"' navigation.cpp -o build/navigation_memory\ng++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic test.cpp -o build/test\ng++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic counterexample.cpp -o build/counterexample\ng++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic setup.cpp -o build/setup\ng++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -DIMA_TRACK_ALLOC setup.cpp -o build/setup_memory\nmake: Leaving directory '/workspace/introduction-mpgaa-mesh/cpp/mesh_lift_fast'\n"
+  },
+  "lift_fast_tests_final.log": {
+    "sha256": "b06bbb833b1c35179bae13361ea7d2eb823d6a1788fca35777e1d4668bf6c324",
+    "log": "make: Entering directory '/workspace/introduction-mpgaa-mesh/cpp/mesh_lift_fast'\nbuild/test ../experiments/frozen/grid8_model.txt\n{\"status\":\"passed\",\"model\":\"grid8\",\"comparisons\":4820,\"interior_expansions\":0,\"watch_inserts\":15904,\"local_steps\":11712,\"terminal_prunes\":0,\"lift_writes\":0,\"interior_joins\":0}\nbuild/test ../experiments/frozen/car16_model.txt\n{\"status\":\"passed\",\"model\":\"car16\",\"comparisons\":4820,\"interior_expansions\":3631176,\"watch_inserts\":287145,\"local_steps\":1931178,\"terminal_prunes\":1265837,\"lift_writes\":112082,\"interior_joins\":60}\nbuild/counterexample\n{\"status\":\"passed\",\"correct_opening_variants\":6,\"cost_after_openings\":4,\"zero_cycle_rejected\":true}\nmake: Leaving directory '/workspace/introduction-mpgaa-mesh/cpp/mesh_lift_fast'\n"
+  },
+  "lift_fast_sanitize_build_final.log": {
+    "sha256": "b7ec27c4feb22c02807d223dae2482ec0f6b7e4a401abeca0f39040aa517b09b",
+    "log": "make: Entering directory '/workspace/introduction-mpgaa-mesh/cpp/mesh_lift_fast'\ng++ -I../include -I../experiments -I../mesh_variants -I../navigation_sweeps -O1 -g1 -std=c++17 -fsanitize=address,undefined -fno-omit-frame-pointer test.cpp -o build/test_sanitize\nmake: Leaving directory '/workspace/introduction-mpgaa-mesh/cpp/mesh_lift_fast'\n"
+  },
+  "lift_fast_asan_grid8_final.log": {
+    "sha256": "7a674dc26015a4c8143aedbbbdf6298be7c9ccb7ed0c7cea761418115af66ad4",
+    "log": "{\"status\":\"passed\",\"model\":\"grid8\",\"comparisons\":4820,\"interior_expansions\":0,\"watch_inserts\":15904,\"local_steps\":11712,\"terminal_prunes\":0,\"lift_writes\":0,\"interior_joins\":0}\n"
+  },
+  "lift_fast_asan_car16_final.log": {
+    "sha256": "e07726676f691e49036012af76852bddf2a84ef561973c05d4c470f2bf5272e8",
+    "log": "{\"status\":\"passed\",\"model\":\"car16\",\"comparisons\":4820,\"interior_expansions\":3631176,\"watch_inserts\":287145,\"local_steps\":1931178,\"terminal_prunes\":1265837,\"lift_writes\":112082,\"interior_joins\":60}\n"
+  },
+  "lift_fast_preflight.log": {
+    "sha256": "6748924fd146a9118a6dd68a0c9c287970c7cb2fc88cc3cc902296b7496aa1c0",
+    "log": "passed replay_car16 472\npassed replay_grid8 9909\npassed navigation_car16_arena_dynamic 162\npassed navigation_car16_arena_unknown 198\nPREFLIGHT_PASSED 10741\n"
+  },
+  "preflight_validation": {
+    "status": "passed",
+    "matched_rows": 10741,
+    "binaries": {
+      "replay": "03abbfd3b44307a70de9a839008550b170d9e6e15937c5d41f647eca01edb6d1",
+      "replay_memory": "60d2f02a978293b3ec15abf7585a17a09691cbb4a066b88a14653eb20a360d8f",
+      "navigation": "adb27967c26d970dc14fd55fe283d35372e7011680265f8c643bd7730251fb60",
+      "navigation_memory": "780d85f886627121140ad770820b2eaedd9b2bef8a6dfc4884b97c45789bd9a8"
+    }
+  }
+}

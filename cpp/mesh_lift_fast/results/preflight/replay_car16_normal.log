@@ -1,0 +1,9 @@
+8 runs; car16__arena__on_path__s48101__b8__k2__r8; 1.98891 s
+16 runs; car16__arena__off_path__s48101__b8__k2__r8; 1.99029 s
+24 runs; car16__arena__churn__s48101__b8__k2__r8; 1.9962 s
+32 runs; car16__arena__unknown_replay__s48101__b8__k1__r8; 1.99754 s
+40 runs; car16__arena__on_path__s48102__b8__k2__r8; 2.00001 s
+48 runs; car16__arena__off_path__s48102__b8__k2__r8; 2.00284 s
+56 runs; car16__arena__churn__s48102__b8__k2__r8; 2.01294 s
+64 runs; car16__arena__unknown_replay__s48102__b8__k1__r8; 2.01632 s
+passed 64 runs, 472 rows, 0 capped queries

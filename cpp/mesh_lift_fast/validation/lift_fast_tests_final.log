@@ -1,0 +1,8 @@
+make: Entering directory '/workspace/introduction-mpgaa-mesh/cpp/mesh_lift_fast'
+build/test ../experiments/frozen/grid8_model.txt
+{"status":"passed","model":"grid8","comparisons":4820,"interior_expansions":0,"watch_inserts":15904,"local_steps":11712,"terminal_prunes":0,"lift_writes":0,"interior_joins":0}
+build/test ../experiments/frozen/car16_model.txt
+{"status":"passed","model":"car16","comparisons":4820,"interior_expansions":3631176,"watch_inserts":287145,"local_steps":1931178,"terminal_prunes":1265837,"lift_writes":112082,"interior_joins":60}
+build/counterexample
+{"status":"passed","correct_opening_variants":6,"cost_after_openings":4,"zero_cycle_rejected":true}
+make: Leaving directory '/workspace/introduction-mpgaa-mesh/cpp/mesh_lift_fast'
